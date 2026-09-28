@@ -1,0 +1,243 @@
+import raw from './pact.json'
+import { formatDate } from './data'
+import type { PactActivity, PactDataset, PactRecord } from './types'
+
+// ECHA's Public Activities Coordination Tool, matched to substances at build
+// time. Two separate things travel in the same export: the activities, and
+// membership of hazard lists kept elsewhere — so they get a panel each.
+
+const dataset = raw as PactDataset
+
+export const pactMeta = dataset.meta
+
+export function pactFor(substanceId: string): PactRecord | null {
+  return dataset.bySubstance[substanceId] ?? null
+}
+
+/**
+ * The PACT areas that say something about the substance's hazard profile:
+ * substance evaluation, PBT/vPvB, endocrine disruption and SVHC
+ * identification. Each is an authority asking whether the molecule itself is a
+ * problem.
+ *
+ * The rest are procedure. A harmonised classification proposal *may* end in a
+ * hazard class and an assessment of regulatory needs *may* end in a proposal,
+ * but neither activity is a finding about the substance, so they are kept
+ * apart and shown neutrally.
+ */
+const HAZARD_AREAS = new Set(['SEv', 'PBT', 'ED', 'SVHC'])
+
+export function hazardActivities(activities: PactActivity[]): PactActivity[] {
+  return activities.filter(a => HAZARD_AREAS.has(a.area))
+}
+
+export function otherActivities(activities: PactActivity[]): PactActivity[] {
+  return activities.filter(a => !HAZARD_AREAS.has(a.area))
+}
+
+/**
+ * The areas whose activities become dated records.
+ *
+ * Wider than the hazard areas by one: an assessment of regulatory needs is
+ * shown as procedure, because it decides nothing about the substance, but its
+ * conclusions are still dated events on the file — "no EU risk management
+ * action needed" among them — and dropping them off the timeline would lose
+ * six real records to a change of container.
+ */
+const RECORDED_AREAS = new Set(['SEv', 'PBT', 'ED', 'SVHC', 'ARN'])
+
+export function recordedActivities(activities: PactActivity[]): PactActivity[] {
+  return activities.filter(a => RECORDED_AREAS.has(a.area))
+}
+
+/** The distinct areas with something recorded, in the order they appear. */
+export function pactAreas(activities: PactActivity[]): string[] {
+  return Array.from(new Set(activities.map(a => a.area)))
+}
+
+/** Activities grouped by area, newest area first. */
+export function byArea(activities: PactActivity[]): { area: string; label: string; items: PactActivity[] }[] {
+  const groups = new Map<string, { area: string; label: string; items: PactActivity[] }>()
+  for (const a of activities) {
+    const group = groups.get(a.area)
+    if (group) group.items.push(a)
+    else groups.set(a.area, { area: a.area, label: a.areaLabel, items: [a] })
+  }
+  return Array.from(groups.values())
+}
+
+/** The terminal states of an ECHA activity. "Opinion adopted" belongs here:
+ *  the committee has reported and ECHA's part is over, even though a Commission
+ *  decision may follow. Anything else is still being worked on. */
+const FINISHED = ['concluded', 'withdrawn', 'opinion adopted']
+
+export function isLive(status: string): boolean {
+  const s = status.trim().toLowerCase()
+  return !FINISHED.some(f => s.startsWith(f))
+}
+
+/** Words that mean the assessment closed without identifying anything. */
+const CLEARED = ['not ', 'inconclusive', 'no eu rrm', 'no hypothesis']
+
+/** True only where an assessment concluded that the criteria *are* met. */
+export function identified(status: string): boolean {
+  const s = status.trim().toLowerCase()
+  if (!s.startsWith('concluded')) return false
+  const inside = s.slice('concluded'.length).trim()
+  // A bare "Concluded" states no finding either way.
+  if (!inside.startsWith('(')) return false
+  return !CLEARED.some(word => inside.includes(word))
+}
+
+
+/**
+ * True where an assessment concluded that the criteria are *not* met, or that
+ * no action is needed — an authority looked and found nothing to act on.
+ *
+ * Not the same as "inconclusive", a bare "Concluded" or "Withdrawn": those
+ * state no finding either way and stay neutral. Only a conclusion that says
+ * the substance is not what was asked about counts here.
+ */
+/**
+ * Whether an activity is a potential hazard rather than a closed question.
+ *
+ * Running, or concluded having identified something. A withdrawn activity, or
+ * one that concluded without a finding, is neither — it is on the panel
+ * because knowing it happened is worth something, not because it counts
+ * against the substance.
+ */
+export function adverseActivity(status: string): boolean {
+  return isLive(status) || identified(status)
+}
+
+export function cleared(status: string): boolean {
+  const s = status.trim().toLowerCase()
+  if (!s.startsWith('concluded')) return false
+  const inside = s.slice('concluded'.length).trim()
+  if (!inside.startsWith('(')) return false
+  return inside.includes('not ') || inside.includes('no eu rrm')
+}
+
+/** Where each list is published. */
+const NPIC_CARCINOGEN = 'https://npic.orst.edu/chemicals_evaluated.pdf'
+const ED_LISTS = 'https://edlists.org/the-ed-lists'
+const ECHA_ED_ASSESSMENT = 'https://chem.echa.europa.eu/activity-lists/edAssessment'
+
+/**
+ * ECHA's own endocrine-disruptor assessment, where the row carries one.
+ *
+ * The export holds endocrine-disruptor information twice: as a PACT activity
+ * in the ED columns, and as a compiled entry in the endocrine-disruptor list
+ * columns at the far right. Where the first is present it is the one to use —
+ * it is ECHA's activity record, with its own status and dates — so the list
+ * entry is not shown as well and the same finding is not counted twice.
+ *
+ * Every row that carries any ED column carries a status, so the activity is a
+ * faithful test of "the ED columns say something".
+ */
+export function edAssessment(record: PactRecord): PactActivity | null {
+  return record.activities.find(a => a.area === 'ED') ?? null
+}
+
+export function hasEdAssessment(record: PactRecord): boolean {
+  return edAssessment(record) !== null
+}
+
+/** A hazard list the substance is on, or an assessment asking whether it
+ *  belongs on one. Both are shown the same way: the publication on top, what
+ *  it says beneath. */
+export interface HazardFlag {
+  /** The publication, which is also the card's heading. */
+  label: string
+  /** The same in the two or three words a tile note has room for. */
+  short: string
+  value: string
+  note: string
+  /** Where the value can be checked. */
+  url: string
+  /** Amber for a listing or an open question; plain where an assessment
+   *  concluded without identifying anything, because colouring that as a
+   *  hazard would invert what it reports. Nine of the sixteen endocrine
+   *  assessments concluded "not ED" or "inconclusive". */
+  adverse: boolean
+}
+
+export function flagList(record: PactRecord): HazardFlag[] {
+  const { flags } = record
+  const out: HazardFlag[] = []
+
+  if (flags.carcinogen) {
+    out.push({
+      label: 'US EPA carcinogen list',
+      short: 'Carcinogen',
+      value: flags.carcinogen,
+      note: flags.carcinogenYear ? `classified ${flags.carcinogenYear}` : '',
+      url: NPIC_CARCINOGEN,
+      adverse: true,
+    })
+  }
+
+  // ECHA's assessment where there is one, the compiled lists otherwise — and
+  // the source named on the card is whichever of the two it came from.
+  const ed = edAssessment(record)
+  if (ed) {
+    const open = adverseActivity(ed.status)
+    out.push({
+      label: 'ECHA endocrine disruptor assessment',
+      // Where it concluded without finding anything, the outcome is the useful
+      // thing to put on the tile — "ED assessment" alone would read as an open
+      // question. The brackets are ECHA's; flattening them keeps it one line.
+      short: open ? 'ED assessment' : ed.status.replace(/[()]/g, '').trim(),
+      value: ed.status,
+      note: [
+        ed.intention ? `intention ${formatDate(ed.intention)}` : '',
+        ed.updated ? `updated ${formatDate(ed.updated)}` : '',
+      ]
+        .filter(Boolean)
+        .join(' · '),
+      // The activity's own page where the export gives one, the list it sits
+      // on otherwise. Same publisher either way.
+      url: ed.url || ECHA_ED_ASSESSMENT,
+      adverse: open,
+    })
+  } else if (flags.edList) {
+    out.push({
+      label: 'Endocrine disruptor lists',
+      short: 'Endocrine disruptor',
+      value: flags.edList,
+      note: [flags.edStatus, flags.edEffects].filter(Boolean).join(' · '),
+      url: ED_LISTS,
+      adverse: true,
+    })
+  }
+
+  return out
+}
+
+/**
+ * How many potential hazards the substance actually has.
+ *
+ * Not the number of cards and rows on the panel: an assessment that concluded
+ * the substance is not an endocrine disruptor is shown, because knowing it was
+ * checked is worth something, but it is not a potential hazard and does not
+ * count as one.
+ */
+export function hazardTally(record: PactRecord): number {
+  return (
+    flagList(record).filter(f => f.adverse).length +
+    hazardAreaActivities(record).filter(a => adverseActivity(a.status)).length
+  )
+}
+
+/** Whether the panel has anything at all to show — including the assessments
+ *  that count for nothing. */
+export function hazardShown(record: PactRecord): number {
+  return flagList(record).length + hazardAreaActivities(record).length
+}
+
+/** The hazard assessments still shown as rows — everything flagList has not
+ *  already lifted onto a card. */
+export function hazardAreaActivities(record: PactRecord): PactActivity[] {
+  const lifted = hasEdAssessment(record)
+  return hazardActivities(record.activities).filter(a => !(lifted && a.area === 'ED'))
+}

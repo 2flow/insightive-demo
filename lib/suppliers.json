@@ -1,0 +1,1074 @@
+{
+  "meta": {
+    "source": "ECHA — Article 95 list of approved active substance suppliers",
+    "sourceFile": "article_95_list_pt18_19_25.09.26_simplified.xlsx",
+    "listDate": "2026-09-25",
+    "count": 59,
+    "supplierCount": 118,
+    "unmatchedGroups": 0
+  },
+  "bySubstance": {
+    "1299-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "37-PT18": [
+      {
+        "entity": "ADAMA Agriculture España S.A.",
+        "country": "Spain",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-01-09"
+      },
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "MYLVA S.A.",
+        "country": "Spain",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2023-01-23"
+      },
+      {
+        "entity": "Sharda Europe B.V.B.A",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Third Party Dossier",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "ZAPI S.p.A.",
+        "country": "Italy",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-07-16"
+      }
+    ],
+    "15-PT18": [
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-07-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1283-PT18": [
+      {
+        "entity": "Arysta LifeScience Benelux SPRL",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2015-10-19",
+        "listedSupplier": "2015-12-15"
+      },
+      {
+        "entity": "LIMARU NV (Acting for Tagros Chemicals India Private Limited)",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2015-10-19",
+        "listedSupplier": "2015-10-19"
+      }
+    ],
+    "24-PT18": [
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "LIMARU NV (Acting for Tagros Chemicals India Private Limited)",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-03-11"
+      },
+      {
+        "entity": "Sharda Europe B.V.B.A (Acting for Sharda Cropchem Limited (India))",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-05-26"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-11-02"
+      }
+    ],
+    "1284-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1282-PT18": [
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1314-PT18": [
+      {
+        "entity": "Corteva Agriscience International Sarl",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "2463-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1404-PT18": [
+      {
+        "entity": "2022 ENVIRONMENTAL SCIENCE FR SAS (Acting for Environmental Science US LLC (US))",
+        "country": "France",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2023-03-01"
+      },
+      {
+        "entity": "Endura S.p.A.",
+        "country": "Italy",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-12-11"
+      }
+    ],
+    "1344-PT18": [
+      {
+        "entity": "Endura S.p.A.",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-02-19"
+      }
+    ],
+    "1353-PT18": [
+      {
+        "entity": "Endura S.p.A.",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1342-PT18": [
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-10-22"
+      },
+      {
+        "entity": "LANXESS Deutschland GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-09-02"
+      },
+      {
+        "entity": "Limaru NV (Acting for Tagros Chemicals India Private Limited (India))",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-09-02"
+      },
+      {
+        "entity": "TANATEX Chemicals B.V.",
+        "country": "Netherlands",
+        "type": "Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-12-22"
+      }
+    ],
+    "59-PT18": [
+      {
+        "entity": "ENDURA S.p.A.",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2016-12-14"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "66-PT18": [
+      {
+        "entity": "BASF Agro B.V. Arnhem (NL) Freienbach Branch",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "61-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1238-PT18": [
+      {
+        "entity": "BASF Agro B.V. Arnhem (NL) Freienbach Branch",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sharda Cropchem España S.L. (Acting for Sharda Cropchem Limited (India))",
+        "country": "Spain",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2021-08-18",
+        "listedSupplier": "2021-08-18"
+      }
+    ],
+    "1318-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "4-PT18": [
+      {
+        "entity": "Detia Freyberg GmbH",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1244-PT18": [
+      {
+        "entity": "Sumitomo Chemical Agro Europe SAS",
+        "country": "France",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "5-PT18": [
+      {
+        "entity": "CERA",
+        "country": "France",
+        "type": "Product Supplier",
+        "reason": "Third Party Dossier",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2016-12-16"
+      },
+      {
+        "entity": "Sharda Europe B.V.B.A",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2025-12-09"
+      },
+      {
+        "entity": "Sumitomo Chemical Agro Europe SAS",
+        "country": "France",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1247-PT18": [
+      {
+        "entity": "Sumitomo Chemical Agro Europe SAS",
+        "country": "France",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "2643-PT18": [
+      {
+        "entity": "Andermatt Biocontrol Suisse AG",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2025-06-23",
+        "listedSupplier": "2025-06-23"
+      }
+    ],
+    "1983-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-03-11"
+      },
+      {
+        "entity": "exeo Strategic Consulting AG (Acting for Horizon Sopyrwa Ltd. (Rwanda))",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2017-05-17"
+      },
+      {
+        "entity": "Kenya Pyrethrum Information Company GmbH & Co. KG",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK))",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2020-01-23"
+      },
+      {
+        "entity": "VdG Consulting International Lda. (Acting for the Pyrethrum Processing Company of Kenya (PPCK) (Kenya))",
+        "country": "Portugal",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2018-06-13"
+      }
+    ],
+    "2003-PT18": [
+      {
+        "entity": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK))",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2020-01-23"
+      }
+    ],
+    "1293-PT18": [
+      {
+        "entity": "LKC Chem-Regs Ltd (Acting for Mitsui Chemicals Crop & Life Solutions, Inc. (Japan))",
+        "country": "Ireland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2023-08-30"
+      }
+    ],
+    "1445-PT18": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "60-PT18": [
+      {
+        "entity": "Lučební závody Draslovka a.s. Kolín",
+        "country": "Czech Republic",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1386-PT18": [
+      {
+        "entity": "Bábolna Bioenvironmental Centre Private Limited Company",
+        "country": "Hungary",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "DiReg Solutions GmbH [Acting for Central Garden & Pet Company (USA)",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2021-10-01"
+      }
+    ],
+    "1469-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-05-28"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-06-12"
+      },
+      {
+        "entity": "Terra Nostra",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "43-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-05-28"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-06-12"
+      },
+      {
+        "entity": "Terra Nostra",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1235-PT18": [
+      {
+        "entity": "NISSO CHEMICAL EUROPE GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1334-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-11-05"
+      },
+      {
+        "entity": "Elanco Animal Health Inc.",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2017-12-08"
+      },
+      {
+        "entity": "Hokochemie GmbH",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Hokochimie Sarl",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "41-PT18": [
+      {
+        "entity": "Syngenta Crop Protection AG",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "64-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-04-13"
+      },
+      {
+        "entity": "Sharda Europe B.V.B.A",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2025-10-10"
+      },
+      {
+        "entity": "Syngenta Crop Protection AG",
+        "country": "Switzerland",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1243-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1449-PT18": [
+      {
+        "entity": "Evonik Operations GmbH",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1418-PT18": [
+      {
+        "entity": "GRACE Silica GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2019-01-17",
+        "listedSupplier": "2019-01-17"
+      }
+    ],
+    "1377-PT18": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2015-07-31",
+        "listedSupplier": "2024-12-13"
+      },
+      {
+        "entity": "Biofa GmbH",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2015-07-31",
+        "listedSupplier": "2015-07-31"
+      }
+    ],
+    "1389-PT18": [
+      {
+        "entity": "Luxembourg Pamol (Cyprus) Ltd.",
+        "country": "Cyprus",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "49-PT18": [
+      {
+        "entity": "Corteva Agriscience France S.A.S.",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sharda Europe B.V.B.A",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2025-07-22"
+      },
+      {
+        "entity": "UPL Holdings Coöperatief U.A.",
+        "country": "Netherlands",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2025-07-25"
+      },
+      {
+        "entity": "Vebi Istituto Biochimico s.r.l.",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2022-06-09"
+      }
+    ],
+    "1400-PT18": [
+      {
+        "entity": "Endura S.p.A.",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "42-PT18": [
+      {
+        "entity": "Detia Freyberg GmbH",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "UPL Holdings Coöperatief U.A.",
+        "country": "Netherlands",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-03-11"
+      }
+    ],
+    "1923-PT19": [
+      {
+        "entity": "M2i Biocontrol",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2018-04-18",
+        "listedSupplier": "2018-04-18"
+      }
+    ],
+    "1316-PT19": [
+      {
+        "entity": "Saltigo GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "2463-PT19": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2023-04-21",
+        "listedSupplier": "2023-04-21"
+      }
+    ],
+    "45-PT19": [
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "AS not in the RP",
+        "listedAsPt": "2023-04-21",
+        "listedSupplier": "2023-04-21"
+      }
+    ],
+    "1320-PT19": [
+      {
+        "entity": "SUSONITY Commercial GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2025-08-06"
+      }
+    ],
+    "1983-PT19": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-03-11"
+      },
+      {
+        "entity": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK))",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2020-01-23"
+      }
+    ],
+    "2003-PT19": [
+      {
+        "entity": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK))",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2020-01-23"
+      }
+    ],
+    "65-PT19": [
+      {
+        "entity": "Denka REGISTRATIONS bv",
+        "country": "Netherlands",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Kerona Scientific Limited (Acting for Bedoukian Research Inc. (US))",
+        "country": "Ireland",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2024-04-05"
+      }
+    ],
+    "2083-PT19": [
+      {
+        "entity": "Chemian Technology SARL (acting for CHEMIAN TECHNOLOGY LIMITED (UK))",
+        "country": "Luxembourg",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2023-12-11",
+        "listedSupplier": "2023-12-11"
+      },
+      {
+        "entity": "Citrefine EU Ltd [Acting for Citrefine International Limited (United Kingdom)]",
+        "country": "Ireland",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2023-12-11",
+        "listedSupplier": "2026-04-22"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2023-12-11",
+        "listedSupplier": "2026-06-02"
+      }
+    ],
+    "1272-PT19": [
+      {
+        "entity": "Arthur Schopf Hygiene GmbH & Co. KG",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-02-19"
+      },
+      {
+        "entity": "Chemian Technology SARL (Acting for Chemian Technology Limited (UK))",
+        "country": "Luxembourg",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2016-03-29"
+      },
+      {
+        "entity": "Citrefine EU Ltd",
+        "country": "Ireland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Citrefine EU Ltd (Acting for Citrefine International Limited (UK))",
+        "country": "Ireland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2023-11-14"
+      },
+      {
+        "entity": "Fulltec GmbH",
+        "country": "Austria",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-03-20"
+      },
+      {
+        "entity": "Simdeo GmbH",
+        "country": "Austria",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-02-19"
+      }
+    ],
+    "1323-PT19": [
+      {
+        "entity": "Athenion GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-10-29"
+      },
+      {
+        "entity": "Dr. R. Pfleger Chemische Fabrik GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Gustav Heess GmbH",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "1469-PT19": [
+      {
+        "entity": "ARMOSA TECH SA",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-05-28"
+      },
+      {
+        "entity": "LIMARU NV",
+        "country": "Belgium",
+        "type": "Substance & Product Supplier",
+        "reason": "Art. 95(5) submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2026-06-12"
+      },
+      {
+        "entity": "Terra Nostra",
+        "country": "Italy",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "23-PT19": [
+      {
+        "entity": "Aurorium Belgium 2 NV (Acting for Aurorium LLC (United States))",
+        "country": "Belgium",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      },
+      {
+        "entity": "Clariant Produkte (Deutschland) GmbH (Acting for Clariant Corporation (United States))",
+        "country": "Germany",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24"
+      }
+    ],
+    "2203-PT19": [
+      {
+        "entity": "Oro Agri International Ltd.",
+        "country": "Netherlands",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2021-03-26",
+        "listedSupplier": "2021-03-26"
+      }
+    ],
+    "2503-PT19": [
+      {
+        "entity": "SWISSINNO SOLUTIONS AG",
+        "country": "Switzerland",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2024-01-18",
+        "listedSupplier": "2024-01-18"
+      }
+    ],
+    "2523-PT19": [
+      {
+        "entity": "W. Neudorff GmbH KG (Acting for Ecospray Limited (UK))",
+        "country": "Germany",
+        "type": "Substance & Product Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2020-04-29",
+        "listedSupplier": "2020-04-29"
+      }
+    ]
+  }
+}

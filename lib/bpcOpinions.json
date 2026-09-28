@@ -1,0 +1,487 @@
+{
+  "meta": {
+    "source": "ECHA — BPC opinions on active substance approval, with minority positions",
+    "sourceFile": "bpc opinions on active substance approval_and_minority_opinions.csv",
+    "rows": 40,
+    "skipped": 270,
+    "count": 39,
+    "minorityCount": 9,
+    "unmatched": 1
+  },
+  "bySubstance": {
+    "1923-PT19": [
+      {
+        "date": "2022-03-08",
+        "stage": "First approval",
+        "opinion": {
+          "label": "13Z-hexadec-13-en-11-yn-1-yl_acetate_pt19_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/5a69a2f6-d954-6809-f870-f76bd80a36ea"
+        },
+        "minority": []
+      }
+    ],
+    "1353-PT18": [
+      {
+        "date": "2024-02-26",
+        "stage": "First approval",
+        "opinion": {
+          "label": "prallethrin_pt_18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/7f243dd3-47c4-acb7-a61d-e14ae8b6e5aa"
+        },
+        "minority": []
+      }
+    ],
+    "1235-PT18": [
+      {
+        "date": "2017-12-14",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_acetamiprid_pt18_f_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/1b5993e4-27a3-b7e5-ac85-97c25fa9fa1b"
+        },
+        "minority": []
+      }
+    ],
+    "1238-PT18": [
+      {
+        "date": "2014-06-17",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_opinion_alphacypermethrin_pt8_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/072286c2-f204-4ff0-a3da-ead1238e56e3"
+        },
+        "minority": []
+      }
+    ],
+    "4-PT18": [
+      {
+        "date": "2026-05-27",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "aip_pt_18_final_bpc_opinion_en",
+          "url": "https://echa.europa.eu/documents/10162/975dab78-363d-9c71-48c4-15dd3641a6ac"
+        },
+        "minority": []
+      }
+    ],
+    "2249-PT18": [
+      {
+        "date": "2014-06-19",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_opinion_bacillus_sphaericus_pt18_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/9903c2d5-7fb7-4164-9ed2-905a44e18a4b"
+        },
+        "minority": []
+      }
+    ],
+    "1247-PT18": [
+      {
+        "date": "2016-02-16",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_btk_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/7faeee45-2cf8-43e3-8b86-96c1fe22e32d"
+        },
+        "minority": []
+      }
+    ],
+    "1246-PT18": [
+      {
+        "date": "2014-06-19",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_opinion_bacillus_thuringiensis_pt18_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/65acadc1-6402-45d3-bc76-d85f7c9fcf79"
+        },
+        "minority": []
+      }
+    ],
+    "1983-PT18": [
+      {
+        "date": "2022-11-22",
+        "stage": "First approval",
+        "opinion": {
+          "label": "chrysanthemum_hydrocarbonsolvents_pt18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/3504da94-5949-0377-fa57-99ab505d1282"
+        },
+        "minority": [
+          {
+            "label": "se_minority_opinion_chrysanthemum_hydrocarbonsolvents_pt18_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/3b8e3e67-a0e0-36e8-286c-50f04777ac29"
+          }
+        ]
+      }
+    ],
+    "1983-PT19": [
+      {
+        "date": "2021-12-03",
+        "stage": "First approval",
+        "opinion": {
+          "label": "chrysanthemum_hcs_pt19_ final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/3fc966da-7df6-934e-2031-c2f54d1283d1"
+        },
+        "minority": []
+      }
+    ],
+    "2003-PT19": [
+      {
+        "date": "2021-12-03",
+        "stage": "First approval",
+        "opinion": {
+          "label": "chrysanthemum_co2_pt19_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/0d70f0d8-8d58-85b7-a657-53f79fd2ae91"
+        },
+        "minority": []
+      }
+    ],
+    "2003-PT18": [
+      {
+        "date": "2022-11-22",
+        "stage": "First approval",
+        "opinion": {
+          "label": "chrysanthemum_co2_pt18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/cc93d424-2b3c-6870-0c6e-b0c58481cbf4"
+        },
+        "minority": [
+          {
+            "label": "se_minority_opinion_chrysanthemum_co2_pt18_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/414b2493-78dc-d990-29f2-8450e9493444"
+          }
+        ]
+      }
+    ],
+    "65-PT19": [
+      {
+        "date": "2025-11-27",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "muscalure_pt_19_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/039c1f27-5c51-092d-c27d-bf573de9d4d3"
+        },
+        "minority": []
+      }
+    ],
+    "15-PT18": [
+      {
+        "date": "2014-10-02",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_opinion_clothianidin_pt_18_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/c0ce9973-8e1c-4daf-a654-44673c4ca409"
+        },
+        "minority": []
+      }
+    ],
+    "1280-PT18": [
+      {
+        "date": "2021-11-30",
+        "stage": "First approval",
+        "opinion": {
+          "label": "cyanamide_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/0c97e426-a0a0-4030-a2ec-abdd80ef1396"
+        },
+        "minority": [
+          {
+            "label": "cyanamide_pt_3_18_minority_opinion_dk_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/36636499-3122-4f73-85e1-eeefc5767933"
+          }
+        ]
+      }
+    ],
+    "1282-PT18": [
+      {
+        "date": "2016-02-16",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_cyfluthrin_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/2cc27ef9-4234-4c79-b8fc-992645283e4d"
+        },
+        "minority": []
+      }
+    ],
+    "1283-PT18": [
+      {
+        "date": "2017-05-05",
+        "stage": "First approval",
+        "opinion": {
+          "label": "cypermethrin_pt-18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/c29cdde5-094c-0080-ee39-292d6fe44092"
+        },
+        "minority": []
+      }
+    ],
+    "1284-PT18": [
+      {
+        "date": "2017-12-14",
+        "stage": "First approval",
+        "opinion": {
+          "label": "cyphenothrin_pt-18_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/43faac83-6568-f216-dd7c-939476d6fb4b"
+        },
+        "minority": []
+      }
+    ],
+    "1334-PT18": [
+      {
+        "date": "2015-12-10",
+        "stage": "First approval",
+        "opinion": {
+          "label": "cyromazine_pt18_final_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/a281e819-013d-40f5-aae3-719aac9489b7"
+        },
+        "minority": [
+          {
+            "label": "minority_opinion_cyromazine_pt18_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/5202365b-8753-4c05-b832-bcf81312f3f1"
+          }
+        ]
+      }
+    ],
+    "1237-PT18": [
+      {
+        "date": "2021-10-12",
+        "stage": "First approval",
+        "opinion": {
+          "label": "d-allethrin_pt_18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/379cf41a-1090-d065-9f1d-2f3cba0c4bec"
+        },
+        "minority": [
+          {
+            "label": "cz_minority_opinion_d-allethrin_pt_18_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/8c15500f-8949-4ae0-8078-9e7acf28ffa3"
+          }
+        ]
+      }
+    ],
+    "1293-PT18": [
+      {
+        "date": "2024-05-28",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "bpc_opinion_dinotefuran_pt18_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/eaee10a8-c67f-4cd8-84ff-50ad59c0aa50"
+        },
+        "minority": [
+          {
+            "label": "se_minority_opinion_dinotefuran_pt18_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/f0994e4b-8cfb-f473-fa6f-988b9c956402"
+          }
+        ]
+      }
+    ],
+    "1300-PT18": [
+      {
+        "date": "2017-12-13",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_empenthrin_pt18_f_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/dcab8dfb-a720-32d1-4aa9-913e48573882"
+        },
+        "minority": []
+      }
+    ],
+    "2463-PT19": [
+      {
+        "date": "2024-11-25",
+        "stage": "First approval",
+        "opinion": {
+          "label": "epsilon-metofluthrin_pt_19_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/96405e47-e4b6-cdd1-b04c-c69c878d8a75"
+        },
+        "minority": []
+      }
+    ],
+    "2463-PT18": [
+      {
+        "date": "2024-11-25",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "epsilon-metofluthrin_pt_18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/29d651e1-119d-d623-fe4c-486c3331fccb"
+        },
+        "minority": []
+      }
+    ],
+    "1445-PT18": [
+      {
+        "date": "2016-06-16",
+        "stage": "First approval",
+        "opinion": {
+          "label": "epsilon_momfluorothrin_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/16a476f9-999b-4784-b6ea-becd608f0dff"
+        },
+        "minority": []
+      }
+    ],
+    "1301-PT18": [
+      {
+        "date": "2020-06-16",
+        "stage": "First approval",
+        "opinion": {
+          "label": "esbiothrin_pt_18_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/eb7c9cc7-55eb-4711-d838-41a164ce6788"
+        },
+        "minority": []
+      }
+    ],
+    "1314-PT18": [
+      {
+        "date": "2014-12-03",
+        "stage": "First approval",
+        "opinion": {
+          "label": "hexaflumuron_pt18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/a322cb19-54f3-4ead-8b3b-250cb0b1783b"
+        },
+        "minority": []
+      }
+    ],
+    "1316-PT19": [
+      {
+        "date": "2019-12-10",
+        "stage": "First approval",
+        "opinion": {
+          "label": "icaridin_pt_19_final_bc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/dd9931c7-d32e-ef8a-6815-279c22dd9d28"
+        },
+        "minority": []
+      }
+    ],
+    "1318-PT18": [
+      {
+        "date": "2017-06-27",
+        "stage": "First approval",
+        "opinion": {
+          "label": "imiprothrin_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/39eb4fc1-f1aa-5824-60da-58a26d1ee19a"
+        },
+        "minority": [
+          {
+            "label": "imiprothrin_pt_18_se_minority_opinion_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/4cd28f98-94db-5bff-7224-5f7b51006392"
+          }
+        ]
+      }
+    ],
+    "42-PT18": [
+      {
+        "date": "2026-05-27",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "magnesium_phosphide_pt18_final_bpc_opinion_en",
+          "url": "https://echa.europa.eu/documents/10162/6666d9ca-ff1f-cbbb-cb28-d0c6def2beee"
+        },
+        "minority": []
+      }
+    ],
+    "1469-PT19": [
+      {
+        "date": "2017-03-03",
+        "stage": "First approval",
+        "opinion": {
+          "label": "margosa_extract_pt_19_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/2ba6cd0e-cb2a-ec09-ae32-d0d44a125286"
+        },
+        "minority": []
+      }
+    ],
+    "2503-PT19": [
+      {
+        "date": "2026-05-27",
+        "stage": "First approval",
+        "opinion": {
+          "label": "peanut_butter_pt_19_final_bpc_opinion_en",
+          "url": "https://echa.europa.eu/documents/10162/ef82a8df-a507-3c0f-22b6-eb7ba0cdfaf0"
+        },
+        "minority": []
+      }
+    ],
+    "1342-PT18": [
+      {
+        "date": "2014-04-08",
+        "stage": "First approval",
+        "opinion": {
+          "label": "bpc_opinion_permethrin_pt18_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/6d4b72f7-1f53-4787-bded-78746cb1ec5f"
+        },
+        "minority": []
+      }
+    ],
+    "1344-PT18": [
+      {
+        "date": "2016-06-16",
+        "stage": "First approval",
+        "opinion": {
+          "label": "pbo_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/610a1218-bb3d-4ec7-935b-2ee581bf97c7"
+        },
+        "minority": [
+          {
+            "label": "pbo_pt_18_minority_opinion_dk_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/509f4a60-1924-4eab-8dab-f522aad3fa0f"
+          }
+        ]
+      }
+    ],
+    "1449-PT18": [
+      {
+        "date": "2016-10-11",
+        "stage": "First approval",
+        "opinion": {
+          "label": "silicon_dioxide_nano_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/0fdc6131-fc99-4b77-828c-4601724fb4ea"
+        },
+        "minority": [
+          {
+            "label": "silicon_dioxide_nano_pt_18_minority_position_de_en.pdf",
+            "url": "https://echa.europa.eu/documents/10162/2a65850d-77b7-4d2d-9110-283a44cb0209"
+          }
+        ]
+      }
+    ],
+    "1377-PT18": [
+      {
+        "date": "2016-10-11",
+        "stage": "First approval",
+        "opinion": {
+          "label": "silicon_dioxide_kieselguhr_pt_18_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/f87cbe06-0319-4286-8dc8-0e2b90d69f43"
+        },
+        "minority": []
+      }
+    ],
+    "50-PT18": [
+      {
+        "date": "2023-09-12",
+        "stage": "Renewal",
+        "opinion": {
+          "label": "sulfurylfluoride_pt_18_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/e1271a1e-dab4-c08c-7f39-9e852c825e7a"
+        },
+        "minority": []
+      }
+    ],
+    "2523-PT19": [
+      {
+        "date": "2023-06-05",
+        "stage": "First approval",
+        "opinion": {
+          "label": "thermally_treated_garlic_juice_pt19_final_bpc_opinion_en.pdf",
+          "url": "https://echa.europa.eu/documents/10162/38167449-4ba2-6c7c-8310-434d8e8b5456"
+        },
+        "minority": []
+      }
+    ],
+    "1407-PT18": [
+      {
+        "date": "2015-02-03",
+        "stage": "First approval",
+        "opinion": {
+          "label": "triflumuron_pt 18_final opinion.pdf",
+          "url": "https://echa.europa.eu/documents/10162/e9b939ff-ee85-4412-92e5-359011fe52da"
+        },
+        "minority": []
+      }
+    ]
+  }
+}

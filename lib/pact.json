@@ -1,0 +1,1913 @@
+{
+  "meta": {
+    "source": "ECHA — Public Activities Coordination Tool (PACT), with EPA and endocrine-disruptor list flags",
+    "sourceFile": "pact-export-filtered_updated_and_other_flags.csv",
+    "rows": 89,
+    "empty": 28,
+    "count": 70,
+    "unmatched": 0
+  },
+  "bySubstance": {
+    "1299-PT18": {
+      "name": "(1,3,4,5,6,7-hexahydro-1,3-dioxo-2H-isoindol-2-yl)methyl (1R-trans)-2,2-dimethyl-3-(2-methylprop-1-enyl)cyclopropanecarboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "2020-01-31",
+          "updated": "2026-04-27",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.013.290"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2013-12-17",
+          "updated": "2022-07-25",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.013.290"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1989",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "58-PT19": {
+      "name": "(9Z,12E)-Tetradeca-9, 12-dien-1-yl acetate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2010-04-13",
+          "updated": "2025-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.112.543"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "15-PT18": {
+      "name": "clothianidin (ISO); (E)-1-(2-chloro-1,3-thiazol-5-ylmethyl)-3-methyl-2-nitroguanidine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2017-11-03",
+          "updated": "2025-03-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.171"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1301-PT18": {
+      "name": "(RS)-3-Allyl-2-methyl-4-oxocyclopent-2- enyl (1R,3R)-2,2-dimethyl-3-(2-methyl- prop-1-enyl)-cyclopropanecarboxylate (mixture of 2 isomers 1R trans: 1R/S only 1:3) (Esbiothrin)",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Development",
+          "intention": "2016-04-08",
+          "updated": "2026-09-08",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.235.064"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1237-PT18": {
+      "name": "(RS)-3-Allyl-2-methyl-4-oxocyclopent-2- enyl-(1R,3R;1R,3S)-2,2-dimethyl-3-(2- methylprop-1-enyl)-cyclopropanecarboxy- late (mixture of 4 isomers 1R trans, 1R:1R trans, 1S: 1R cis, 1R: 1R cis,1S 4:4:1:1) (d-Allethrin)",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Consultation",
+          "intention": "2016-06-21",
+          "updated": "2026-08-25",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.665"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1283-PT18": {
+      "name": "(RS)-α-cyano-3phenoxybenzyl-(1RS)-cis, trans-3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropanecarboxylate (Cypermethrin)",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "",
+          "updated": "2026-09-01",
+          "url": ""
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-05-26",
+          "updated": "2025-07-28",
+          "url": ""
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "",
+          "updated": "2025-01-21",
+          "url": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1988",
+        "edList": "List II — under evaluation",
+        "edStatus": "CLH classification proposed (2025)",
+        "edEffects": "Health and environment"
+      }
+    },
+    "1314-PT18": {
+      "name": "hexaflumuron (ISO); 1-(3,5-dichloro-4-(1,1,2,2-tetrafluoroethoxy)phenyl)-3-(2,6-difluorobenzoyl)urea",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2014-02-21",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.333"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1300-PT18": {
+      "name": "empenthrin (ISO); 1-ethynyl-2-methylpent-2-enyl 2,2-dimethyl-3-(2-methylprop-1-enyl)cyclopropanecarboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2015-09-15",
+          "updated": "2025-10-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.672"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1344-PT18": {
+      "name": "2-(2-butoxyethoxy)ethyl 6-propylpiperonyl ether",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.000.070"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.000.070"
+        },
+        {
+          "area": "SEv",
+          "areaLabel": "Substance evaluation (CoRAP)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2020-03-18",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.000.070"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1995",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1407-PT18": {
+      "name": "2-chloro-N-[[[4-(trifluoromethoxy)phenyl]amino]carbonyl]benzamide",
+      "description": "",
+      "activities": [
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.059.055"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "66-PT18": {
+      "name": "chlorfenapyr (ISO); 4-bromo-2-(4-chlorophenyl)-1- ethoxymethyl-5-trifluoromethylpyrrole-3-carbonitrile",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "2024-03-07",
+          "updated": "2024-04-04",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.116.332"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2015-06-02",
+          "updated": "2019-04-02",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.116.332"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1238-PT18": {
+      "name": "[1.alpha.(S*),3.alpha.]-(.alpha.)-cyano-(3-phenoxyphenyl)methyl3-(2,2-dichlor-oethenyl)-2,2-dichlorovinyl)-2,2-dimethyl-cyclopropanecarboxylate (alpha-Cypermethrin)",
+      "description": "",
+      "activities": [],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1988",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1318-PT18": {
+      "name": "imiprothrin (ISO); reaction mass of [2,5-dioxo-3-(prop-2-yn-1-yl)imidazolidin-1-yl]methyl (1R,3S)-2,2-dimethyl-3-(2-methylprop-1-en-1-yl)cyclopropanecarboxylate and [2,5-dioxo-3-(prop-2-yn-1-yl)imidazolidin-1-yl]methyl (1R,3R)-2,2-dimethyl-3-(2-methylprop-1-en-1-yl)cyclopropanecarboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-07-13",
+          "updated": "2026-05-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.716"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1-PT18": {
+      "name": "Abamectin",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2009-01-23",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.113.437"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1235-PT18": {
+      "name": "acetamiprid (ISO); (1E)-N-[(6-chloropyridin-3-yl)methyl]-N'-cyano-N-methylethanimidamide; (E)-N1-[(6-chloro-3-pyridyl)methyl]-N2-cyano-N1-methylacetamidine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2017-09-06",
+          "updated": "2025-10-30",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.622"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "4-PT18": {
+      "name": "Aluminium phosphide",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "",
+          "updated": "2026-08-11",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-06-09",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2008-04-15",
+          "updated": "2025-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "7-PT18": {
+      "name": "Bendiocarb",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2011-11-24",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.041.091"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1983-PT19": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2003-PT18": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1983-PT18": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2003-PT19": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1268-PT18": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "65-PT19": {
+      "name": "cis-tricos-9-ene",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2025-03-12",
+          "updated": "2026-01-07",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2025-07-04",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1280-PT18": {
+      "name": "Cyanamide",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2011-06-14",
+          "updated": "2025-07-04",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.006.358"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (ED ENV | ED HH)",
+          "intention": "2019-04-02",
+          "updated": "2021-03-08",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.006.358"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1993",
+        "edList": "List I — identified ED",
+        "edStatus": "Concluded ED in BPC opinion (2021), legally adopted under BPR (2024)",
+        "edEffects": "Health and environment"
+      }
+    },
+    "1287-PT19": {
+      "name": "Decanoic acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-08-25",
+          "updated": "2026-09-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2026-05-25",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1287-PT18": {
+      "name": "Decanoic acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-08-25",
+          "updated": "2026-09-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2026-05-25",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "24-PT18": {
+      "name": "deltamethrin",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2026-02-20",
+          "updated": "2026-07-07",
+          "url": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "List II — under evaluation",
+        "edStatus": "On Commission EDC list, Cosmetics field (2019)",
+        "edEffects": "Health"
+      }
+    },
+    "1293-PT18": {
+      "name": "dinotefuran (ISO); 1-methyl-2-nitro-3-(tetrahydro-3-furylmethyl)guanidine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2022-05-06",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2017-10-13",
+          "updated": "2025-11-21",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED)",
+          "intention": "2022-02-07",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.111.831"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2463-PT19": {
+      "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2011-06-08",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2463-PT18": {
+      "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2011-06-08",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1445-PT18": {
+      "name": "2,3,5,6-Tetrafluoro-4-(methoxymethyl)benzyl (Z)-(1R,3R)-3-(2-cyanoprop-1-enyl)-2,2-dimethylcyclopropanecarboxylate; 1R-trans-Z-momfluorothrin",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2014-06-16",
+          "updated": "2025-06-19",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.249.276"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1302-PT18": {
+      "name": "esfenvalerate (ISO); (αS)-α-cyano-3-phenoxybenzyl (2S)-2-(4-chlorophenyl)-3-methylbutyrate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2017-11-02",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.118.804"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1320-PT19": {
+      "name": "Ethyl N-acetyl-N-butyl-β-alaninate",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "2024-09-30",
+          "updated": "2024-10-14",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.052.560"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "30-PT18": {
+      "name": "3-phenoxybenzyl-2-(4-ethoxyphenyl)-2-methylpropyl ether",
+      "description": "ETHOFENPROX; TREBON",
+      "activities": [
+        {
+          "area": "PBT",
+          "areaLabel": "PBT / vPvB assessment",
+          "status": "Concluded (inconclusive)",
+          "intention": "2025-02-04",
+          "updated": "2025-10-23",
+          "url": "https://www.echa.europa.eu/web/guest/pbt/-/dislist/substance/external/100.100.942"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-10-23",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.100.942"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.942"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1272-PT19": {
+      "name": "Eucalyptus citriodora oil, hydrated, cyclized",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2015-11-09",
+          "updated": "2023-09-04",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.226.893"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "33-PT18": {
+      "name": "fipronil (ISO); (±)-5-amino-1-(2,6-dichloro-α,α,α-trifluoro-para-tolyl)-4-trifluoromethylsulfinyl-pyrazole-3-carbonitrile",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2014-05-09",
+          "updated": "2025-06-19",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.312"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1995",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2144-PT19": {
+      "name": "Garlic, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Allium sativum, Liliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2022-08-30",
+          "updated": "2024-12-19",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.426"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1308-PT18": {
+      "name": "Geraniol",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (inconclusive)",
+          "intention": "2022-09-13",
+          "updated": "2025-12-18",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2024-09-18",
+          "updated": "2025-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Information requested",
+          "intention": "",
+          "updated": "2024-11-05",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2023-01-07",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-04-25",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1308-PT19": {
+      "name": "Geraniol",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (inconclusive)",
+          "intention": "2022-09-13",
+          "updated": "2025-12-18",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2024-09-18",
+          "updated": "2025-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Information requested",
+          "intention": "",
+          "updated": "2024-11-05",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2023-01-07",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-04-25",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "60-PT18": {
+      "name": "Hydrogen cyanide",
+      "description": "",
+      "activities": [
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Concluded (Currently no EU RRM action needed)",
+          "intention": "2024-03-25",
+          "updated": "2025-04-11",
+          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.000.747"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "37-PT18": {
+      "name": "imidacloprid (ISO); 1-(6-chloropyridin-3-ylmethyl)-N-nitroimidazolidin-2-ylidenamine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-09-10",
+          "updated": "2026-09-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "2025-01-28",
+          "updated": "2025-02-25",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.102.643"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-09-21",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "64-PT18": {
+      "name": "Indoxacarb",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2008-10-30",
+          "updated": "2025-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.108.182"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1323-PT19": {
+      "name": "Lauric acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.075"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1324-PT19": {
+      "name": "Lavender, Lavandula hybrida, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Lavandula hybrida, Labiatae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2017-02-23",
+          "updated": "2023-04-03",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.085.846"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "42-PT18": {
+      "name": "Trimagnesium diphosphide",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "",
+          "updated": "2026-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-06-08",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-02-23",
+          "updated": "2025-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1469-PT19": {
+      "name": "Margosa, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2025-10-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-10-30",
+          "updated": "2025-09-05",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-12-14",
+          "updated": "2022-11-29",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "43-PT18": {
+      "name": "Margosa, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2025-10-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-10-30",
+          "updated": "2025-09-05",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-12-14",
+          "updated": "2022-11-29",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1469-PT18": {
+      "name": "Margosa, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2025-10-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-10-30",
+          "updated": "2025-09-05",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-12-14",
+          "updated": "2022-11-29",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "44-PT19": {
+      "name": "methyl nonyl ketone",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2018-07-24",
+          "updated": "2023-01-24",
+          "url": ""
+        },
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Under development",
+          "intention": "2020-08-31",
+          "updated": "2021-12-08",
+          "url": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "45-PT19": {
+      "name": "Metofluthrin",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2011-06-08",
+          "updated": "2022-07-26",
+          "url": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "23-PT19": {
+      "name": "N,N-diethyl-m-toluamide",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2013-01-14",
+          "updated": "2022-07-26",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.682"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1334-PT18": {
+      "name": "N-cyclopropyl-1,3,5-triazine-2,4,6-triamine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2018-06-26",
+          "updated": "2023-08-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.060.215"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "46-PT18": {
+      "name": "Nitrogen",
+      "description": "",
+      "activities": [
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Concluded (Currently no EU RRM action needed)",
+          "intention": "2024-06-03",
+          "updated": "2025-06-24",
+          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.895"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "47-PT19": {
+      "name": "Nonanoic acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.574"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1336-PT18": {
+      "name": "Octanoic acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.253"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.004.253"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2203-PT19": {
+      "name": "Orange, sweet, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Citrus sinensis, Rutaceae.",
+      "activities": [
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2026-02-16",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2021-06-10",
+          "updated": "2024-07-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.480"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "2503-PT19": {
+      "name": "peanut butter, seeds of the groundnut (Arachis hypogaea L.) roasted, peeled and crushed",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2025-02-27",
+          "updated": "2026-05-05",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.371.393"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1342-PT18": {
+      "name": "m-phenoxybenzyl 3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropanecarboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2014-08-14",
+          "updated": "2025-05-27",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.771"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Suggestive Evidence of Carcinogenic Potential",
+        "carcinogenYear": "2020",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "61-PT18": {
+      "name": "4-phenoxyphenyl (RS)-2-(2- pyridyloxy)propyl ether",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2019-07-29",
+          "updated": "2024-08-19",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.814"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1449-PT18": {
+      "name": "Silanamine, 1,1,1-trimethyl-N-(trimethylsilyl)-, hydrolysis products with silica",
+      "description": "",
+      "activities": [
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Under development (Currently no EU RRM action needed)",
+          "intention": "2022-01-31",
+          "updated": "2024-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.066.069"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2017-03-03",
+          "updated": "2023-05-02",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.066.069"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1243-PT18": {
+      "name": "azamethiphos (ISO); S-[(6-chloro-2-oxooxazolo[4,5-b]pyridin-3(2H)-yl)methyl] O,O-dimethyl thiophosphate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-07-13",
+          "updated": "2023-04-28",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.047.827"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1386-PT18": {
+      "name": "Isopropyl-(2E,4E,7S)-11-methoxy-3,7,11-trimethyl-2,4-dodecadienoate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2013-12-04",
+          "updated": "2022-07-25",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.133.782"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1377-PT18": {
+      "name": "Silicium dioxide (Silicium dioxide/Kieselguhr)",
+      "description": "",
+      "activities": [
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Under development (Currently no EU RRM action needed)",
+          "intention": "2022-01-31",
+          "updated": "2024-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.122.196"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "49-PT18": {
+      "name": "spinosad (ISO); Reaction mass of Spinosyn A: (2R,3aS,5aR,5bS,9S,13S,14R,16aS,16bR)-2-(6-deoxy-2,3,4-tri-O-methyl-α-L-mannopyranosyloxy)-13-(4-dimethylamino-2,3,4,6-tetradeoxy-β-D-erythropyranosyloxy)-9-ethyl-2,3a,5a,6,7,9,10,11,12,13,14,15,16a,16b-hexadecahydro-14-methyl-1H-8-oxacyclododeaca[b]as-indacene-7,15-dione and Spinosyn D: (2R,3aS,5aR,5bS,9S,13S,14R,16aS,16bR)-2-(6-deoxy-2,3,4-tri-O-methyl-α-L-mannopyranosyloxy)-13-(4-dimethylamino-2.3.4.6-tetradeoxy-β-D-erythropyranosyloxy)-9-ethy-2,3,3a,5a,6,7,9,10,11,12,13,14,15,16a,16b-hexadecahydro-4,14-dimethyl-1H-8-oxacyclododeaca[b]as-indacene-7,15-dione",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2018-02-20",
+          "updated": "2025-05-12",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.254"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "50-PT18": {
+      "name": "Sulphuryl difluoride",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Development",
+          "intention": "",
+          "updated": "2026-06-15",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "2020-10-05",
+          "updated": "2023-10-03",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1378-PT18": {
+      "name": "Silicon dioxide",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2013-03-01",
+          "updated": "2025-12-17",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.678"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2025-11-21",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2024-10-25",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+        },
+        {
+          "area": "ARN",
+          "areaLabel": "Assessment of regulatory needs",
+          "status": "Under development (Currently no EU RRM action needed | No hypothesis yet)",
+          "intention": "2022-01-31",
+          "updated": "2024-09-09",
+          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.678"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Follow-up",
+          "intention": "",
+          "updated": "2024-04-05",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+        },
+        {
+          "area": "SEv",
+          "areaLabel": "Substance evaluation (CoRAP)",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2021-08-25",
+          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.028.678"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1400-PT18": {
+      "name": "Tetramethrin",
+      "description": "",
+      "activities": [
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Under development (Under development (BPR))",
+          "intention": "2020-01-31",
+          "updated": "2026-04-27",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.028.829"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2013-12-17",
+          "updated": "2022-07-25",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.829"
+        }
+      ],
+      "flags": {
+        "carcinogen": "Group C — Possible Human Carcinogen",
+        "carcinogenYear": "1989",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "54-PT18": {
+      "name": "thiamethoxam (ISO); 3-(2-chloro-thiazol-5-ylmethyl)-5-methyl[1,3,5]oxadiazinan-4-ylidene-N-nitroamine",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2017-11-08",
+          "updated": "2024-09-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.703"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1404-PT18": {
+      "name": "transfluthrin (ISO); 2,3,5,6-tetrafluorobenzyl (1R,3S)-3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropanecarboxylate",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2014-04-09",
+          "updated": "2025-03-10",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.666"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    },
+    "1282-PT18": {
+      "name": "α-cyano-4-fluoro-3-phenoxybenzyl3-(2,2-dichlorovinyl)-2,2-dimethylcyclo-propanecarboxylate (Cyfluthrin)",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-03-22",
+          "updated": "2025-07-04",
+          "url": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "substance": {
+    "name": "Clothianidin",
+    "ec_list_no": "433-460-1",
+    "cas_no": "210880-92-5"
+  },
+  "renewal": {
+    "started": "",
+    "track": "",
+    "postponements": 0
+  },
+  "records": [
+    {
+      "date": "2024-09-12",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "SchwabEX-Guard Union authorisation cancelled at Sumitomo's own request, for business reasons",
+      "summary": "Regulation (EU) 2024/2405, adopted under Article 49 BPR, records that Sumitomo Chemical Agro Europe SAS requested cancellation of EU-0025436-0000 on 21 March 2024, case BC-QP093655-06, and stated the request was made due to business reasons. Folded in: the product could no longer be made available from 3 April 2025 and existing stocks could not be used from 3 October 2025 under Article 52; the Iceland (03/04/2025), Norway (04/03/2025) and Switzerland (26/11/2024) entries ended earlier on separate EEA and Swiss timing not itemised in the act.",
+      "tags": [],
+      "signal": {
+        "direction": "NEGATIVE",
+        "strength": -2,
+        "label": "Strong",
+        "basis": "documented",
+        "rationale": "The only document in the file where a supporter states a position, and it is a withdrawal. Explicitly holder-initiated rather than regulatory action, which is what makes it read as commercial retreat rather than a safety event. It concerns one product, not the substance renewal."
+      },
+      "sources": [
+        {
+          "citation": "Commission Implementing Regulation (EU) 2024/2405 of 12 September 2024",
+          "pinpoint": "recitals",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2405",
+          "note": "States the cancellation request and its stated reason outright."
+        }
+      ]
+    }
+  ]
+}

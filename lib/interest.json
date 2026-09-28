@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "source": "ECHA — Expressions of interest in the renewal of active substances",
+    "sourceFile": "as-rnl_expressions_of_interest_PT18-PT19.xlsx",
+    "preparedAs": "2026-06-30",
+    "count": 43,
+    "unmatched": 1
+  },
+  "bySubstance": {
+    "15-PT18": {
+      "state": "none-received",
+      "deadline": "2025-03-29",
+      "companies": []
+    },
+    "1283-PT18": {
+      "state": "interested",
+      "deadline": "2028-11-27",
+      "companies": [
+        {
+          "name": "Arysta Lifescience Benelux srl",
+          "country": "Belgium"
+        },
+        {
+          "name": "Tagros Chemicals India Private Limited",
+          "country": "India"
+        }
+      ]
+    },
+    "1284-PT18": {
+      "state": "interested",
+      "deadline": "2028-07-30",
+      "companies": [
+        {
+          "name": "Sumitomo Chemical (UK) Ltd",
+          "country": "UK"
+        }
+      ]
+    },
+    "1282-PT18": {
+      "state": "",
+      "deadline": "2026-08-27",
+      "companies": []
+    },
+    "1314-PT18": {
+      "state": "submitted",
+      "deadline": "2023-03-30",
+      "companies": []
+    },
+    "59-PT18": {
+      "state": "submitted",
+      "deadline": "2024-02-28",
+      "companies": []
+    },
+    "1344-PT18": {
+      "state": "interested",
+      "deadline": "2026-12-28",
+      "companies": [
+        {
+          "name": "Endura S.p.A",
+          "country": "Italy"
+        }
+      ]
+    },
+    "1238-PT18": {
+      "state": "submitted",
+      "deadline": "2024-12-27",
+      "companies": []
+    },
+    "1318-PT18": {
+      "state": "interested",
+      "deadline": "2027-12-28",
+      "companies": [
+        {
+          "name": "Sumitomo Chemical (UK) Ltd",
+          "country": "UK"
+        }
+      ]
+    },
+    "1235-PT18": {
+      "state": "none-received",
+      "deadline": "2025-07-30",
+      "companies": []
+    },
+    "4-PT18": {
+      "state": "submitted",
+      "deadline": "2023-01-28",
+      "companies": []
+    },
+    "1244-PT18": {
+      "state": "submitted",
+      "deadline": "2024-12-27",
+      "companies": []
+    },
+    "5-PT18": {
+      "state": "submitted",
+      "deadline": "2022-03-29",
+      "companies": []
+    },
+    "1246-PT18": {
+      "state": "none-received",
+      "deadline": "2024-12-27",
+      "companies": []
+    },
+    "1247-PT18": {
+      "state": "submitted",
+      "deadline": "2025-08-27",
+      "companies": []
+    },
+    "1287-PT18": {
+      "state": "none-received",
+      "deadline": "2024-02-28",
+      "companies": []
+    },
+    "24-PT18": {
+      "state": "submitted",
+      "deadline": "2022-03-29",
+      "companies": []
+    },
+    "1293-PT18": {
+      "state": "submitted",
+      "deadline": "2023-05-30",
+      "companies": []
+    },
+    "60-PT18": {
+      "state": "submitted",
+      "deadline": "2023-03-30",
+      "companies": []
+    },
+    "37-PT18": {
+      "state": "submitted",
+      "deadline": "2021-12-27",
+      "companies": []
+    },
+    "64-PT18": {
+      "state": "submitted",
+      "deadline": "2022-12-28",
+      "companies": []
+    },
+    "41-PT18": {
+      "state": "submitted",
+      "deadline": "2022-03-29",
+      "companies": []
+    },
+    "42-PT18": {
+      "state": "submitted",
+      "deadline": "2023-01-28",
+      "companies": []
+    },
+    "2463-PT18": {
+      "state": "submitted",
+      "deadline": "2019-10-28",
+      "companies": []
+    },
+    "1334-PT18": {
+      "state": "submitted",
+      "deadline": "2026-06-29",
+      "companies": []
+    },
+    "1336-PT18": {
+      "state": "none-received",
+      "deadline": "2024-02-28",
+      "companies": []
+    },
+    "1342-PT18": {
+      "state": "submitted",
+      "deadline": "2024-10-27",
+      "companies": []
+    },
+    "61-PT18": {
+      "state": "submitted",
+      "deadline": "2023-07-31",
+      "companies": []
+    },
+    "1449-PT18": {
+      "state": "no-interest",
+      "deadline": "2027-04-30",
+      "companies": []
+    },
+    "1386-PT18": {
+      "state": "submitted",
+      "deadline": "2024-02-28",
+      "companies": []
+    },
+    "1377-PT18": {
+      "state": "interested",
+      "deadline": "2027-04-30",
+      "companies": [
+        {
+          "name": "Biofa GmbH",
+          "country": "Germany"
+        }
+      ]
+    },
+    "49-PT18": {
+      "state": "submitted",
+      "deadline": "2021-04-29",
+      "companies": []
+    },
+    "50-PT18": {
+      "state": "submitted",
+      "deadline": "2019-12-28",
+      "companies": []
+    },
+    "1378-PT18": {
+      "state": "none-received",
+      "deadline": "2024-04-29",
+      "companies": []
+    },
+    "54-PT18": {
+      "state": "none-received",
+      "deadline": "2023-07-31",
+      "companies": []
+    },
+    "1404-PT18": {
+      "state": "submitted",
+      "deadline": "2024-04-29",
+      "companies": []
+    },
+    "65-PT19": {
+      "state": "submitted",
+      "deadline": "2023-03-30",
+      "companies": []
+    },
+    "1287-PT19": {
+      "state": "none-received",
+      "deadline": "2024-02-28",
+      "companies": []
+    },
+    "1320-PT19": {
+      "state": "submitted",
+      "deadline": "2024-04-29",
+      "companies": []
+    },
+    "1323-PT19": {
+      "state": "submitted",
+      "deadline": "2024-04-29",
+      "companies": []
+    },
+    "1469-PT19": {
+      "state": "no-interest",
+      "deadline": "2027-09-28",
+      "companies": []
+    },
+    "23-PT19": {
+      "state": "submitted",
+      "deadline": "2023-07-31",
+      "companies": []
+    },
+    "1316-PT19": {
+      "state": "no-interest",
+      "deadline": "2030-07-30",
+      "companies": []
+    }
+  }
+}

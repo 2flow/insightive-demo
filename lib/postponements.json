@@ -1,0 +1,695 @@
+{
+  "meta": {
+    "source": "Commission decisions postponing the expiry date of an approval",
+    "sourceFiles": [
+      "PT18-postponements-open.csv",
+      "PT19-postponements-open.csv"
+    ],
+    "note": "Reason and inference are a Pelsis reading; the recital quote is the document's own words.",
+    "rows": 29,
+    "count": 18,
+    "unmatched": 0
+  },
+  "bySubstance": {
+    "49-PT18": {
+      "name": "Spinosad",
+      "authority": "Netherlands",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "27+28 Apr 2021",
+      "applicationSubmittedIso": "2021-04-27",
+      "status": "Open",
+      "currentExpiry": "2027-10-31",
+      "postponements": [
+        {
+          "decision": "2022/1489",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2022/1489/oj",
+          "sequence": "1st",
+          "adopted": "2022-09-07",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2022-10-31",
+          "expiryTo": "2025-04-30",
+          "extension": "2 yr 6 mo",
+          "authority": "Netherlands",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicants, the approval is likely to expire before a decision has been taken on its renewal. […] Taking into account the time-limits for the evaluation by the evaluating competent authority and for preparation and submission by the European Chemicals Agency of its opinion, […] the expiry date should be postponed to 30 April 2025.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        },
+        {
+          "decision": "2025/349",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/349/oj",
+          "sequence": "2nd",
+          "adopted": "2025-02-21",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-04-30",
+          "expiryTo": "2027-10-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Netherlands",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 26 September 2024, the evaluating competent authority informed the Commission that an additional extension of the approval is needed due to delays in the evaluation of the applications, proposing a further extension of the expiry date of the approval for additional 2,5 years.",
+          "retrieved": true,
+          "reason": "Unexplained delay",
+          "inference": "The Commission granted exactly the 2.5 years the Netherlands asked for, and no technical cause is identified anywhere in the decision. Cumulative slippage now stands at five years across the two decisions."
+        }
+      ]
+    },
+    "37-PT18": {
+      "name": "Imidacloprid",
+      "authority": "Germany",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "23+24 Dec 2021",
+      "applicationSubmittedIso": "2021-12-23",
+      "status": "Open",
+      "currentExpiry": "2027-12-31",
+      "postponements": [
+        {
+          "decision": "2023/460",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2023/460/oj",
+          "sequence": "1st",
+          "adopted": "2023-03-02",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2023-06-30",
+          "expiryTo": "2025-12-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Germany",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicants, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 December 2025.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        },
+        {
+          "decision": "2025/1791",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/1791/oj",
+          "sequence": "2nd",
+          "adopted": "2025-09-10",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-12-31",
+          "expiryTo": "2027-12-31",
+          "extension": "2 yr",
+          "authority": "Germany",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 26 February 2025, the evaluating competent authority informed the Commission that the evaluation is delayed due to the need for additional time to complete the assessment of endocrine-disrupting properties. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the first half of 2026.",
+          "retrieved": true,
+          "reason": "ED testing required",
+          "inference": ""
+        }
+      ]
+    },
+    "24-PT18": {
+      "name": "Deltamethrin",
+      "authority": "Sweden",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "27+29 Mar 2022",
+      "applicationSubmittedIso": "2022-03-27",
+      "status": "Open",
+      "currentExpiry": "2028-03-31",
+      "postponements": [
+        {
+          "decision": "2023/1088",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2023/1088/oj",
+          "sequence": "1st",
+          "adopted": "2023-06-02",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2023-09-30",
+          "expiryTo": "2026-03-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Sweden",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicants, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 March 2026.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        },
+        {
+          "decision": "2025/2301",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/2301/oj",
+          "sequence": "2nd",
+          "adopted": "2025-11-14",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-03-31",
+          "expiryTo": "2028-03-31",
+          "extension": "2 yr",
+          "authority": "Sweden",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 5 June 2025, the evaluating competent authority informed the Commission that the evaluation is delayed due to additional time needed linked with studies to assess the physicochemical properties of deltamethrin and the criteria for the determination of endocrine-disrupting properties. The evaluating competent authority expects to submit the renewal assessment report to the Agency in mid-2026.",
+          "retrieved": true,
+          "reason": "ED testing required; Specific data",
+          "inference": "The only decision in this set citing two distinct causes at once — physicochemical characterisation alongside the endocrine-disruptor criteria. Also the single text captured byte-for-byte, so its wording is certified where the others are not."
+        }
+      ]
+    },
+    "41-PT18": {
+      "name": "Lambda-cyhalothrin",
+      "authority": "Greece",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "24 Mar 2022",
+      "applicationSubmittedIso": "2022-03-24",
+      "status": "Open",
+      "currentExpiry": "2028-09-30",
+      "postponements": [
+        {
+          "decision": "2023/1087",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2023/1087/oj",
+          "sequence": "1st",
+          "adopted": "2023-06-02",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2023-09-30",
+          "expiryTo": "2026-03-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Greece",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 March 2026.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        },
+        {
+          "decision": "2025/2283",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/2283/oj",
+          "sequence": "2nd",
+          "adopted": "2025-11-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-03-31",
+          "expiryTo": "2028-09-30",
+          "extension": "2 yr 6 mo",
+          "authority": "Greece",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 6 June 2025, the evaluating competent authority informed the Commission that the evaluation is delayed due to additional time needed by the authority to assess certain endpoints of lambda-cyhalothrin. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the end of 2027.",
+          "retrieved": true,
+          "reason": "Specific data",
+          "inference": "The longest forward horizon in the set: Greece does not expect to hand its report to ECHA until the end of 2027, more than five years after the application. The endpoints in question are never named."
+        }
+      ]
+    },
+    "5-PT18": {
+      "name": "Bacillus thuringiensis subsp. israelensis H14, AM65-52",
+      "authority": "Italy",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "30 Mar 2022",
+      "applicationSubmittedIso": "2022-03-30",
+      "status": "Open",
+      "currentExpiry": "2028-03-31",
+      "postponements": [
+        {
+          "decision": "2023/1085",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2023/1085/oj",
+          "sequence": "1st",
+          "adopted": "2023-06-02",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2023-09-30",
+          "expiryTo": "2026-03-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Italy",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 March 2026.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        },
+        {
+          "decision": "2025/2299",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/2299/oj",
+          "sequence": "2nd",
+          "adopted": "2025-11-14",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-03-31",
+          "expiryTo": "2028-03-31",
+          "extension": "2 yr",
+          "authority": "Italy",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 13 June 2025, the evaluating competent authority informed the Commission that the evaluation is delayed due to additional studies needed by the authority to complete the evaluation. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the first quarter of 2026.",
+          "retrieved": true,
+          "reason": "Specific data",
+          "inference": ""
+        }
+      ]
+    },
+    "42-PT18": {
+      "name": "Magnesium phosphide releasing phosphine",
+      "authority": "Germany",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "28 Jul 2020",
+      "applicationSubmittedIso": "2020-07-28",
+      "status": "Open",
+      "currentExpiry": "2027-07-31",
+      "postponements": [
+        {
+          "decision": "2021/1285",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2021/1285/oj",
+          "sequence": "1st",
+          "adopted": "2021-01-01",
+          "adoptedPrecision": "year",
+          "expiryFrom": "2022-01-31",
+          "expiryTo": "2024-07-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Germany",
+          "recitalRef": "Not retrieved",
+          "recitalQuote": "",
+          "retrieved": false,
+          "reason": "Not retrieved",
+          "inference": "Dates from recital (6) of both 2024/787 and 2025/2284, which describe it only as allowing “sufficient time for the examination of the application”."
+        },
+        {
+          "decision": "2024/787",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/787/oj",
+          "sequence": "2nd",
+          "adopted": "2024-02-28",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2024-07-31",
+          "expiryTo": "2026-01-31",
+          "extension": "1 yr 6 mo",
+          "authority": "Germany",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 20 September 2023 the evaluating competent authority informed the Commission that an additional extension of the approval of magnesium phosphide for use in biocidal products of product-type 18 is needed in order to finalise its evaluation. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the second quarter of 2024.",
+          "retrieved": true,
+          "reason": "Unexplained delay",
+          "inference": ""
+        },
+        {
+          "decision": "2025/2284",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/2284/oj",
+          "sequence": "3rd",
+          "adopted": "2025-11-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-01-31",
+          "expiryTo": "2027-07-31",
+          "extension": "1 yr 6 mo",
+          "authority": "Germany",
+          "recitalRef": "Recital (8)",
+          "recitalQuote": "On 8 April 2025, the evaluating competent authority informed the Commission that it expects to submit the renewal assessment report to the Agency in the third quarter of 2025.",
+          "retrieved": true,
+          "reason": "Unexplained delay",
+          "inference": "Read against 2024/787, the clearest case of undisclosed slippage: Germany expected to file in Q2 2024, and a year later expected Q3 2025 — a slip of roughly five quarters that neither decision explains. Recital (7) here characterises the previous round only as “delays in the examination of the application”."
+        }
+      ]
+    },
+    "1314-PT18": {
+      "name": "Hexaflumuron",
+      "authority": "Greece",
+      "approvalOrigin": "Reg. (EU) 2015/1982",
+      "track": "Full evaluation",
+      "applicationSubmitted": "",
+      "applicationSubmittedIso": "",
+      "status": "Open",
+      "currentExpiry": "2027-03-31",
+      "postponements": [
+        {
+          "decision": "2021/1299",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2021/1299/oj",
+          "sequence": "1st",
+          "adopted": "2021-08-04",
+          "adoptedPrecision": "day",
+          "expiryFrom": "",
+          "expiryTo": "2024-09-30",
+          "extension": "",
+          "authority": "Greece",
+          "recitalRef": "Not retrieved",
+          "recitalQuote": "",
+          "retrieved": false,
+          "reason": "Not retrieved",
+          "inference": "Date from recital (6) of 2024/1285."
+        },
+        {
+          "decision": "2024/1285",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/1285/oj",
+          "sequence": "2nd",
+          "adopted": "2024-05-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2024-09-30",
+          "expiryTo": "2027-03-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Greece",
+          "recitalRef": "Recital (7)",
+          "recitalQuote": "On 2 May 2023 the evaluating competent authority informed the Commission that the evaluation is delayed due to the need of the evaluating competent authority to assess additional data on endocrine disruptor properties of the active substance. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the fourth quarter of 2024.",
+          "retrieved": true,
+          "reason": "ED testing required",
+          "inference": ""
+        }
+      ]
+    },
+    "64-PT18": {
+      "name": "Indoxacarb",
+      "authority": "France",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "",
+      "applicationSubmittedIso": "",
+      "status": "Open",
+      "currentExpiry": "2026-12-31",
+      "postponements": [
+        {
+          "decision": "2019/1030",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2019/1030/oj",
+          "sequence": "1st",
+          "adopted": "2019-01-01",
+          "adoptedPrecision": "year",
+          "expiryFrom": "",
+          "expiryTo": "2022-06-30",
+          "extension": "",
+          "authority": "France",
+          "recitalRef": "Not retrieved",
+          "recitalQuote": "",
+          "retrieved": false,
+          "reason": "Not retrieved",
+          "inference": "Date from recital (6) of 2024/731."
+        },
+        {
+          "decision": "2021/1287",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2021/1287/oj",
+          "sequence": "2nd",
+          "adopted": "2021-01-01",
+          "adoptedPrecision": "year",
+          "expiryFrom": "2022-06-30",
+          "expiryTo": "2024-06-30",
+          "extension": "2 yr",
+          "authority": "France",
+          "recitalRef": "Not retrieved",
+          "recitalQuote": "",
+          "retrieved": false,
+          "reason": "Not retrieved",
+          "inference": "Date from recital (7) of 2024/731. Indoxacarb runs the longest chain of any open substance here: three postponements."
+        },
+        {
+          "decision": "2024/731",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/731/oj",
+          "sequence": "3rd",
+          "adopted": "2024-02-28",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2024-06-30",
+          "expiryTo": "2026-12-31",
+          "extension": "2 yr 6 mo",
+          "authority": "France",
+          "recitalRef": "Recital (8)",
+          "recitalQuote": "On 19 September 2023, the evaluating competent authority of France informed the Commission that the evaluation is delayed due to the need to assess data on reference specifications and endocrine-disrupting properties. The evaluating competent authority expects to submit the renewal assessment report to the Agency in the second quarter of 2024.",
+          "retrieved": true,
+          "reason": "ED testing required; Specific data",
+          "inference": "The nearest expiry of any open substance in this table — 31 December 2026, now roughly fifteen months away, with no further postponement yet on record."
+        }
+      ]
+    },
+    "61-PT18": {
+      "name": "Pyriproxyfen",
+      "authority": "Netherlands",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "31 Jul 2023",
+      "applicationSubmittedIso": "2023-07-31",
+      "status": "Open",
+      "currentExpiry": "2027-07-31",
+      "postponements": [
+        {
+          "decision": "2024/2416",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/2416/oj",
+          "sequence": "1st and only",
+          "adopted": "2024-09-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-01-31",
+          "expiryTo": "2027-07-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Netherlands",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. It is therefore appropriate to postpone the expiry date of the approval for a period of time sufficient to enable the examination of the application. […] the expiry date should be postponed to 31 July 2027.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "A first postponement, so no cause had yet materialised. The drafting confirms it: “postpone” and “enable the examination”, where repeat rounds say “further postpone” and “finalise the examination”."
+        }
+      ]
+    },
+    "1404-PT18": {
+      "name": "Transfluthrin",
+      "authority": "Netherlands",
+      "approvalOrigin": "Reg. (EU) No 407/2014",
+      "track": "Full evaluation",
+      "applicationSubmitted": "26 Apr 2024",
+      "applicationSubmittedIso": "2024-04-26",
+      "status": "Open",
+      "currentExpiry": "2028-04-30",
+      "postponements": [
+        {
+          "decision": "2025/1806",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/1806/oj",
+          "sequence": "1st and only",
+          "adopted": "2025-09-11",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-10-31",
+          "expiryTo": "2028-04-30",
+          "extension": "2 yr 6 mo",
+          "authority": "Netherlands",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] Taking into account the time-limits for evaluation by the evaluating competent authority, for preparation and submission by the European Chemicals Agency of its opinion and the time needed for the Commission to decide whether to renew the approval, the expiry date should be postponed to 30 April 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        }
+      ]
+    },
+    "1386-PT18": {
+      "name": "S-methoprene",
+      "authority": "Ireland",
+      "approvalOrigin": "Reg. (EU) No 91/2014",
+      "track": "Full evaluation",
+      "applicationSubmitted": "28 Feb 2024",
+      "applicationSubmittedIso": "2024-02-28",
+      "status": "Open",
+      "currentExpiry": "2028-02-29",
+      "postponements": [
+        {
+          "decision": "2025/952",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/952/oj",
+          "sequence": "1st and only",
+          "adopted": "2025-05-22",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-08-31",
+          "expiryTo": "2028-02-29",
+          "extension": "2 yr 6 mo",
+          "authority": "Ireland",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 29 February 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": ""
+        }
+      ]
+    },
+    "59-PT18": {
+      "name": "1R-trans phenothrin",
+      "authority": "Ireland",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "27 Feb 2024",
+      "applicationSubmittedIso": "2024-02-27",
+      "status": "Open",
+      "currentExpiry": "2028-02-29",
+      "postponements": [
+        {
+          "decision": "2025/950",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/950/oj",
+          "sequence": "1st and only",
+          "adopted": "2025-05-22",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-08-31",
+          "expiryTo": "2028-02-29",
+          "extension": "2 yr 6 mo",
+          "authority": "Ireland",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 29 February 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "Same competent authority, same Article 14(1) notification date (19 June 2024) and the same grant as S-methoprene — Ireland appears to have processed the two files together."
+        }
+      ]
+    },
+    "1238-PT18": {
+      "name": "Alpha-cypermethrin",
+      "authority": "Belgium",
+      "approvalOrigin": "Reg. (EU) 2015/405",
+      "track": "Full evaluation",
+      "applicationSubmitted": "12 Dec 2024",
+      "applicationSubmittedIso": "2024-12-12",
+      "status": "Open",
+      "currentExpiry": "2028-12-31",
+      "postponements": [
+        {
+          "decision": "2026/337",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2026/337/oj",
+          "sequence": "1st and only",
+          "adopted": "2026-02-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-06-30",
+          "expiryTo": "2028-12-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Belgium",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 December 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "The most recent postponement in the set, and jointly the furthest-out expiry date."
+        }
+      ]
+    },
+    "1244-PT18": {
+      "name": "Bacillus sphaericus 2362 H5a5b, ABTS1743",
+      "authority": "Italy",
+      "approvalOrigin": "Reg. (EU) 2015/417",
+      "track": "Full evaluation",
+      "applicationSubmitted": "20 Dec 2024",
+      "applicationSubmittedIso": "2024-12-20",
+      "status": "Open",
+      "currentExpiry": "2028-12-31",
+      "postponements": [
+        {
+          "decision": "2026/377",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2026/377/oj",
+          "sequence": "1st and only",
+          "adopted": "2026-02-20",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2026-06-30",
+          "expiryTo": "2028-12-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Italy",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 December 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "Italy took about eight months from application to its Article 14(1) notification, roughly twice the gap seen for Belgium and Ireland on comparable files. The decision offers no explanation."
+        }
+      ]
+    },
+    "1323-PT19": {
+      "name": "Lauric acid",
+      "authority": "Germany",
+      "approvalOrigin": "Reg. (EU) No 405/2014",
+      "track": "Full evaluation",
+      "applicationSubmitted": "26 Apr 2024",
+      "applicationSubmittedIso": "2024-04-26",
+      "status": "Open",
+      "currentExpiry": "2028-04-30",
+      "postponements": [
+        {
+          "decision": "2025/1814",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/1814/oj",
+          "sequence": "1st and only",
+          "adopted": "2025-09-11",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-10-31",
+          "expiryTo": "2028-04-30",
+          "extension": "2 yr 6 mo",
+          "authority": "Germany",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 30 April 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "Adopted one day after the ethyl butylacetylaminopropionate decision, with identical dates: both approvals came from consecutive regulations (405/2014 and 406/2014), both expired 31 Oct 2025, both were pushed to 30 Apr 2028. Germany took about eight months from application to its Article 14(1) notification (16 Dec 2024), against about seven weeks for Belgium on the sister file."
+        }
+      ]
+    },
+    "1320-PT19": {
+      "name": "Ethyl butylacetylaminopropionate",
+      "authority": "Belgium",
+      "approvalOrigin": "Reg. (EU) No 406/2014",
+      "track": "Full evaluation",
+      "applicationSubmitted": "25 Apr 2024",
+      "applicationSubmittedIso": "2024-04-25",
+      "status": "Open",
+      "currentExpiry": "2028-04-30",
+      "postponements": [
+        {
+          "decision": "2025/1792",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2025/1792/oj",
+          "sequence": "1st and only",
+          "adopted": "2025-09-10",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-10-31",
+          "expiryTo": "2028-04-30",
+          "extension": "2 yr 6 mo",
+          "authority": "Belgium",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 30 April 2028.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "A first postponement, so no cause had yet materialised; the drafting confirms it (\"postpone\" and \"enable the examination\", not \"further postpone\" and \"finalise the examination\")."
+        }
+      ]
+    },
+    "65-PT19": {
+      "name": "cis-tricos-9-ene",
+      "authority": "Austria",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "6 Apr 2023",
+      "applicationSubmittedIso": "2023-04-06",
+      "status": "Open",
+      "currentExpiry": "2027-03-31",
+      "postponements": [
+        {
+          "decision": "2024/1283",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/1283/oj",
+          "sequence": "1st and only",
+          "adopted": "2024-05-13",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2024-09-30",
+          "expiryTo": "2027-03-31",
+          "extension": "2 yr 6 mo",
+          "authority": "Austria",
+          "recitalRef": "Recital (6)",
+          "recitalQuote": "Consequently, for reasons beyond the control of the applicant, the approval is likely to expire before a decision has been taken on its renewal. […] the expiry date should be postponed to 31 March 2027.",
+          "retrieved": true,
+          "reason": "No reason stated",
+          "inference": "Expiry is about six months away (31 Mar 2027) and no further postponement appears in this result set."
+        }
+      ]
+    },
+    "23-PT19": {
+      "name": "N,N-diethyl-meta-toluamide (DEET)",
+      "authority": "France",
+      "approvalOrigin": "Dir. 98/8/EC Ann. I",
+      "track": "Full evaluation",
+      "applicationSubmitted": "26 Jan 2021",
+      "applicationSubmittedIso": "2021-01-26",
+      "status": "Open",
+      "currentExpiry": "2027-01-31",
+      "postponements": [
+        {
+          "decision": "2021/2146",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2021/2146/oj",
+          "sequence": "1st",
+          "adopted": "2021-12-03",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2022-07-31",
+          "expiryTo": "2025-01-31",
+          "extension": "2 yr 6 mo",
+          "authority": "France",
+          "recitalRef": "Not retrieved",
+          "recitalQuote": "",
+          "retrieved": false,
+          "reason": "Not retrieved",
+          "inference": "Outside the source result set. Dates and adoption date from recital (7) and its footnote in 2024/2950, which describes it only as allowing \"sufficient time for the examination of the application\"."
+        },
+        {
+          "decision": "2024/2950",
+          "decisionUrl": "http://data.europa.eu/eli/dec_impl/2024/2950/oj",
+          "sequence": "2nd",
+          "adopted": "2024-11-29",
+          "adoptedPrecision": "day",
+          "expiryFrom": "2025-01-31",
+          "expiryTo": "2027-01-31",
+          "extension": "2 yr",
+          "authority": "France",
+          "recitalRef": "Recital (8)",
+          "recitalQuote": "On 26 June 2024, the evaluating competent authority informed the Commission that it expects to submit the renewal assessment report to the Agency in the third quarter of 2025.",
+          "retrieved": true,
+          "reason": "Unexplained delay",
+          "inference": "A timing update with no stated cause, the same terse formula used for magnesium phosphide in PT18. The nearest expiry of the four (31 Jan 2027, about four months away) and the oldest file: the application dates from January 2021. France expected to send its report to ECHA in Q3 2025; whether it did is not stated in any decision here."
+        }
+      ]
+    }
+  }
+}

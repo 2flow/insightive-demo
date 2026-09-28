@@ -1,0 +1,2746 @@
+/* ============================================================
+   Report styling — the same visual language as the Pelsis Market
+   Intelligence brief (tokens, bands, pills, expandable grid rows),
+   applied to the ECHA active-substance list.
+   Scoped under .report-surface so it never touches the app chrome.
+   ============================================================ */
+
+/* The palette is shared by the list's card surfaces and the feed page, which is
+   a full-width page rather than a card. The font tokens resolve against the
+   next/font variables set on <body>. */
+.report-surface,
+.feed-page,
+/* The dialog is portaled to <body>, so it is outside both — without this its
+   own chrome (the close button) resolves no tokens at all. */
+.fp-modal-back {
+  --ink: #0b0f1a;
+  --ink-2: #1f2937;
+  --body: #374151;
+  --muted: #6b7280;
+  --muted-2: #9ca3af;
+  --line: #e5e7eb;
+  --line-2: #f3f4f6;
+  --accent: #2563eb;
+  --accent-bg: #dbeafe;
+  --threat: #d94f50;
+  --threat-bg: #fde8e8;
+  --opport: #1ab38a;
+  --opport-bg: #e0f5ee;
+  --mixed: #b45309;
+  --mixed-bg: #fef3c7;
+  --grey-bg: #f3f4f6;
+  --sans: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
+  --mono: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.report-surface {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 30px 30px;
+  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.04);
+  font-family: var(--sans);
+}
+
+/* ---------- Section band (one per product type) ---------- */
+.report-surface .cust-band {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 12px;
+}
+.report-surface .cust-band-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.report-surface .cust-band-icon svg { width: 17px; height: 17px; }
+.report-surface .cust-band-label {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+.report-surface .cust-band-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-right: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.report-surface .cust-band-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+.report-surface .cust-band-icon.pt18 { background: #fef3c7; color: #b45309; }
+.report-surface .cust-band-icon.pt19 { background: #d1fae5; color: #047857; }
+
+/* Expand all / Collapse all — sits top-right of the band */
+.report-surface .cat-expand-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 12px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fbfcfe;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.12s, border-color 0.12s;
+}
+.report-surface .cat-expand-all:hover { background: #eef3fb; border-color: #cdddf7; }
+.report-surface .cat-expand-all-chev { width: 12px; height: 12px; transition: transform 0.15s; }
+.report-surface .cat-expand-all.is-open .cat-expand-all-chev { transform: rotate(180deg); }
+
+/* ---------- The substance grid: a header strip + rows whose cells align to
+   it; each row expands in place, its detail panel spanning from the substance
+   column to the card's right edge. ---------- */
+.report-surface .sub-grid { margin-top: 4px; }
+.report-surface .sub-grid-head,
+.report-surface .sub-row-head {
+  display: grid;
+  grid-template-columns: 18px [det-start] minmax(0, 1fr) 96px 104px 168px 206px 36px;
+  gap: 0 12px;
+  padding: 0 10px;
+  align-items: start;
+}
+.report-surface .sub-grid-head {
+  padding-bottom: 7px;
+  border-bottom: 1.5px solid #cbd2db;
+  align-items: end;
+}
+.report-surface .sub-grid-hcell {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 0;
+}
+
+/* Where a column comes from, on the column itself. A popover rather than a
+   tooltip, because the answer is a link. */
+.report-surface .src-note,
+.feed-page .src-note { position: relative; display: inline-flex; margin-left: 4px; }
+.report-surface .src-note-btn,
+.feed-page .src-note-btn {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--muted-2);
+  cursor: pointer;
+  transition: color 0.12s;
+  vertical-align: middle;
+}
+.report-surface .src-note-btn svg,
+.feed-page .src-note-btn svg { width: 11px; height: 11px; display: block; }
+.report-surface .src-note-btn:hover,
+.report-surface .src-note-btn.is-open,
+.feed-page .src-note-btn:hover,
+.feed-page .src-note-btn.is-open { color: var(--accent); }
+
+.report-surface .src-note-pop,
+.feed-page .src-note-pop {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: -10px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 268px;
+  padding: 11px 13px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.12);
+  text-transform: none;
+  letter-spacing: 0;
+  /* The date note that opens this is nowrap; the popover's prose is not. */
+  white-space: normal;
+  cursor: default;
+}
+.report-surface .src-note-head,
+.feed-page .src-note-head {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .src-note-link,
+.feed-page .src-note-link { display: block; text-decoration: none; }
+.report-surface .src-note-label,
+.feed-page .src-note-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accent);
+}
+.report-surface .src-note-label svg,
+.feed-page .src-note-label svg { width: 11px; height: 11px; flex-shrink: 0; }
+.report-surface .src-note-link:hover .src-note-label,
+.feed-page .src-note-link:hover .src-note-label { text-decoration: underline; }
+/* A source we can name but not link: same line, in ink rather than blue, so it
+   does not read as a link that fails to open. */
+.report-surface .src-note-link.is-plain .src-note-label,
+.feed-page .src-note-link.is-plain .src-note-label { color: var(--ink-2); }
+/* A sentence of explanation rather than a link. */
+.report-surface .src-note-text,
+.feed-page .src-note-text {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--body);
+}
+.report-surface .src-note-sub,
+.feed-page .src-note-sub {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.report-surface .sub-row { border-bottom: 1px solid var(--line); }
+.report-surface .sub-row:last-child { border-bottom: none; }
+.report-surface .sub-row-head { padding-top: 9px; padding-bottom: 9px; cursor: pointer; }
+/* The prospects box fills its column; every other cell still sits at the top. */
+.report-surface .gc-prospects { align-self: stretch; }
+.report-surface .sub-row-head:hover { background: #f8fafc; }
+/* Open, the whole row takes the darker blue; the detail below floats on it as
+   its own rounded card, so the row reads as wrapping around what it revealed
+   on the left, right and bottom. */
+.report-surface .sub-row.is-open { background: #f1f5fd; }
+.report-surface .sub-row.is-open .sub-row-head { background: transparent; }
+.report-surface .sub-row.is-watched .sub-row-head { box-shadow: inset 2px 0 0 #f59e0b; }
+
+.report-surface .sub-chev {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--muted-2);
+  transition: transform 0.15s, color 0.15s;
+}
+.report-surface .sub-row.is-open .sub-chev { transform: rotate(180deg); color: var(--accent); }
+
+.report-surface .gc { min-width: 0; overflow-wrap: break-word; }
+.report-surface .gc-actions { justify-self: end; display: inline-flex; align-items: center; }
+.report-surface .gc-empty { color: var(--muted-2); font-family: var(--mono); font-size: 10px; }
+
+/* ---------- Cells ---------- */
+.report-surface .pt-tag {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.report-surface .pt-tag.pt18 { background: #fef3c7; color: #92400e; }
+.report-surface .pt-tag.pt19 { background: #d1fae5; color: #046c50; }
+
+.report-surface .sub-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.report-surface .sub-idents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.report-surface .sub-idents .k { color: var(--muted-2); }
+
+.report-surface .date-val {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-2);
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  display: block;
+}
+.report-surface .date-val.none { color: var(--muted-2); }
+.report-surface .countdown {
+  display: inline-block;
+  margin-top: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.report-surface .countdown.critical { color: #b42318; }
+.report-surface .countdown.warning { color: #b45309; }
+.report-surface .countdown.neutral { color: var(--muted-2); }
+
+/* Approval status — the label always travels with the colour */
+.report-surface .status-pill {
+  display: inline-block;
+  padding: 2.5px 7px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.report-surface .status-pill.approved { background: #dcf3e8; color: #0a6b49; }
+.report-surface .status-pill.pending { background: var(--accent-bg); color: #1e40af; }
+.report-surface .status-pill.expired { background: #fee4e2; color: #b42318; }
+.report-surface .status-pill.not-approved { background: #fce7f3; color: #9d174d; }
+.report-surface .status-pill.no-longer-supported { background: #eef1f5; color: #475569; }
+
+/* Assessment sub-status — secondary, wraps rather than truncates */
+.report-surface .substatus {
+  display: block;
+  margin-top: 0;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--body);
+}
+.report-surface .substatus .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted-2);
+  margin-right: 5px;
+  vertical-align: 1px;
+}
+.report-surface .substatus.renewal .dot { background: var(--accent); }
+/* The renewal is decided, not running — green, and the only state in this
+   column that reports an outcome rather than a stage. */
+.report-surface .substatus.renewed { color: #0a6b49; font-weight: 600; }
+.report-surface .substatus.renewed .dot { background: var(--opport); }
+.report-surface .substatus.none { color: var(--muted); }
+
+/* Who intends to apply, from ECHA's expressions-of-interest list. */
+.report-surface .interest {
+  display: block;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--body);
+}
+.report-surface .interest::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted-2);
+  margin-right: 5px;
+  vertical-align: 1px;
+}
+.report-surface .interest.ok { color: #0a6b49; }
+.report-surface .interest.ok::before { background: var(--opport); }
+.report-surface .interest.warn { color: #b42318; }
+.report-surface .interest.warn::before { background: var(--threat); }
+.report-surface .substatus.none .dot { background: #dfe3e8; }
+
+/* Introduces the derived flags under the signals box. */
+.report-surface .prospect-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .substatus-sub {
+  display: block;
+  margin-top: 2px;
+  padding-left: 10px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+/* ---------- Row alerts (risk / substitution / BPC opinion) — own column ---------- */
+.report-surface .alert-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.report-surface .alert-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2.5px 6px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.report-surface .alert-chip svg { width: 10px; height: 10px; flex-shrink: 0; }
+.report-surface .alert-chip.risk { background: var(--threat-bg); color: var(--threat); }
+.report-surface .alert-chip.substitution { background: var(--mixed-bg); color: var(--mixed); }
+.report-surface .alert-chip.bpc { background: var(--opport-bg); color: var(--opport); }
+/* On a hazard list, or with a hazard question still open. */
+.report-surface .alert-chip.hazard { background: var(--threat-bg); color: var(--threat); }
+/* A company on the record as intending to apply — an intention, so a lighter
+   green than the BPC opinion, which is a judgement on the merits.
+
+   Named "interested", not "interest": the status column's `.interest` span
+   carries a ::before dot, and reusing that class put a stray dot on the chip.
+
+   The only chip that carries a name, so the only one allowed to wrap — the
+   rest are short enough for one line. */
+.report-surface .alert-chip.interested {
+  background: #eefaf5;
+  color: #0f8a63;
+  align-items: flex-start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.report-surface .alert-chip.interested svg { margin-top: 1px; }
+/* A failure under the plant-protection regulation. Slate rather than red or
+   amber: it happened in a different regime, so it is a precedent to read
+   rather than a warning about this approval. */
+.report-surface .alert-chip.ppp { background: #eef1f5; color: #475569; }
+/* Parked: the "Expiry date postponed (WIP)" flag is carried in the data but
+   not shown, pending a rule that can tell a postponement from a renewal.
+   Kept so re-enabling is a one-line change in SubstanceRow. */
+.report-surface .alert-chip.postponed { background: var(--accent-bg); color: #1e40af; }
+.report-surface a.alert-chip.bpc:hover { filter: brightness(0.92); text-decoration: underline; }
+
+/* Signals box — how much evidence exists and what shape it has. One bar per
+   record: hue is the direction it was tagged with, depth is its strength.
+   Nothing is summed; this is a distribution, not a score. */
+/* The whole prospects column, as one box: the signal count and strip at the
+   top, the top-signal chips beneath.
+
+   The hit area is an overlay button rather than a wrapper, because the BPC
+   chip inside is a link and a button cannot legally contain one — the same
+   pattern the dashboard tiles use. */
+.report-surface .sig-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 6px 8px 7px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  text-align: left;
+  transition: border-color 0.12s, background 0.12s;
+}
+.report-surface .sig-box-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 0;
+  border: none;
+  border-radius: inherit;
+  background: none;
+  cursor: pointer;
+}
+.report-surface .sig-box-hit:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.report-surface .sig-box:hover { border-color: #b9d2f4; background: #f7faff; }
+.report-surface .sig-box:hover .sig-box-head { color: var(--accent); }
+
+/* Only the chips go above the overlay — they hold a link and their own
+   tooltips. The head and the strip stay under it, so a click anywhere on them
+   reaches the button rather than landing on dead text. */
+.report-surface .sig-box-chips { position: relative; z-index: 2; }
+.report-surface .sig-box-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  margin-top: 1px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--line);
+}
+/* Inside a 206px box a chip has to wrap rather than run past the edge —
+   "Not approved as plant protection" is a few pixels too wide otherwise. */
+.report-surface .sig-box-chips .alert-chip {
+  align-items: flex-start;
+  max-width: 100%;
+  white-space: normal;
+}
+.report-surface .sig-box-chips .alert-chip svg { margin-top: 1.5px; }
+
+/* The chips area is clickable too, and goes where the box goes — see the
+   handler on it. Only the BPC chip, a real link, does something else. */
+.report-surface .sig-box-chips { cursor: pointer; }
+
+.report-surface .sig-box-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--body);
+  white-space: nowrap;
+  transition: color 0.12s;
+}
+.report-surface .sig-box-head { width: 100%; }
+.report-surface .sig-box-head svg { width: 10px; height: 10px; flex-shrink: 0; }
+
+/* Says the box opens something, rather than leaving the reader to discover it.
+   The arrow matches the dashboard tile that leaves for another page. */
+.report-surface .sig-box-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+  padding-left: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  transition: transform 0.12s;
+}
+.report-surface .sig-box-go svg { width: 9px; height: 9px; }
+.report-surface button.sig-box:hover .sig-box-go { transform: translateX(2px); }
+.report-surface .sig-box.is-empty .sig-box-go { color: var(--muted-2); }
+.report-surface button.sig-box.is-empty:hover .sig-box-go { color: var(--accent); }
+.report-surface .sig-box-head b {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 9.5px;
+}
+
+/* Nothing researched yet — stated plainly rather than left blank. */
+.report-surface .sig-box.is-empty {
+  border-style: dashed;
+  border-color: #e2e6ec;
+  background: #fafbfc;
+}
+.report-surface .sig-box.is-empty .sig-box-head { color: var(--muted-2); font-weight: 600; }
+
+.report-surface .sig-strip { display: inline-flex; align-items: center; gap: 2px; }
+.report-surface .sig-bar {
+  width: 5px;
+  height: 15px;
+  border-radius: 2px;
+  background: #cbd5e1;
+}
+/* Depth = strength. Weak readings stay pale so a run of them cannot look
+   like a strong finding. */
+.report-surface .sig-bar.tone-negative.w1 { background: #f3c2be; }
+.report-surface .sig-bar.tone-negative.w2 { background: #e8908c; }
+.report-surface .sig-bar.tone-negative.w3 { background: #d64a45; }
+.report-surface .sig-bar.tone-positive.w1 { background: #b8e3cf; }
+.report-surface .sig-bar.tone-positive.w2 { background: #7ccfae; }
+.report-surface .sig-bar.tone-positive.w3 { background: #14a37b; }
+.report-surface .sig-bar.tone-neutral.w0,
+.report-surface .sig-bar.tone-neutral { background: #d8dde3; }
+.report-surface .sig-more {
+  font-family: var(--mono);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--muted-2);
+  /* Sits at the tail of the strip, counting the older records that fell off. */
+  margin-left: 3px;
+}
+
+/* ---------- Expanded detail panel ----------
+   A sibling of the row head rather than a grid cell, so the links inside it
+   never sit within the row's clickable region.
+   A card in its own right: inset from the row's edges so the darker ground
+   shows on three sides, and the head above reads as the lid of the same
+   container rather than a separate strip. */
+.report-surface .sub-detail {
+  margin: 0 10px 12px;
+  padding: 16px 18px 18px;
+  border: 1px solid #e2eaf8;
+  border-radius: 12px;
+  background: #fcfdff;
+  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.03);
+}
+.report-surface .det-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  gap: 14px 26px;
+}
+/* Two levels of label inside an expanded row: the section heading, and the
+   column eyebrows nested under it. They must not look alike. */
+.report-surface .det-section {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 11px;
+}
+.report-surface .det-section-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.report-surface .det-section-meta {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+.report-surface .det-eyebrow {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: 6px;
+}
+.report-surface .det-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 2px 0;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.report-surface .det-key { flex: 0 0 96px; color: var(--muted); }
+.report-surface .det-val { flex: 1 1 auto; min-width: 0; color: var(--ink-2); font-weight: 500; overflow-wrap: break-word; }
+.report-surface .det-val.mono { font-family: var(--mono); font-size: 10px; font-weight: 400; }
+.report-surface .det-val.none { color: var(--muted-2); font-weight: 400; }
+
+.report-surface .det-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+.report-surface .flag-chip {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid #dbe3ec;
+  background: #f5f8fc;
+  color: #44546a;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.report-surface .flag-chip.cfs-yes { border-color: #f3ceab; background: var(--mixed-bg); color: #7c4a0e; }
+.report-surface .flag-chip.cfs-assessing { border-color: #e6dfd0; background: #faf6ec; color: #7a6a4a; }
+.report-surface .det-spacer { flex: 1 1 auto; }
+.report-surface .det-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--muted-2);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.report-surface .det-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.report-surface .det-link svg { width: 11px; height: 11px; }
+
+/* ---------- Article 95 suppliers (expanded row) ---------- */
+.report-surface .sup-block {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.report-surface .sup-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--ink-2);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+.report-surface .sup-empty {
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: 7px;
+  background: var(--grey-bg);
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.report-surface .sup-table { display: flex; flex-direction: column; }
+.report-surface .sup-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px 132px 132px 92px 92px;
+  gap: 0 12px;
+  padding: 7px 0;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line-2);
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+.report-surface .sup-row:last-child { border-bottom: none; }
+.report-surface .sup-row-head {
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.report-surface .sup-row > span { min-width: 0; overflow-wrap: break-word; }
+.report-surface .sup-entity { font-weight: 600; color: var(--ink); }
+.report-surface .sup-country { color: var(--body); }
+.report-surface .sup-type { color: var(--body); }
+.report-surface .sup-reason { color: var(--muted); }
+.report-surface .sup-date { font-family: var(--mono); font-size: 10px; color: var(--ink-2); }
+
+@media (max-width: 900px) {
+  /* Stack: the header strip goes, each field labels itself. */
+  .report-surface .sup-row-head { display: none; }
+  .report-surface .sup-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    padding: 9px 0;
+  }
+  .report-surface .sup-country::before { content: 'Country · '; color: var(--muted-2); }
+  .report-surface .sup-type::before { content: 'Type · '; color: var(--muted-2); }
+  .report-surface .sup-reason::before { content: 'Reason · '; color: var(--muted-2); }
+  .report-surface .sup-date:nth-of-type(5)::before { content: 'AS-PT since · '; color: var(--muted-2); }
+  .report-surface .sup-date:nth-of-type(6)::before { content: 'Supplier since · '; color: var(--muted-2); }
+}
+
+
+/* ---------- Product authorisations page ---------- */
+.feed-page .auth-note {
+  padding: 14px 16px;
+  border-radius: 9px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+.feed-page .auth-family {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.feed-page .auth-family.is-dead { border-color: #f2c4c0; }
+.feed-page .auth-family-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  background: #fbfcfe;
+  text-align: left;
+  cursor: pointer;
+}
+.feed-page .auth-family.is-dead .auth-family-head { background: #fdf1f1; }
+.feed-page .auth-family-head:hover { filter: brightness(0.985); }
+.feed-page .auth-family-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.feed-page .auth-family-name { font-size: 15px; font-weight: 650; color: var(--ink); line-height: 1.25; }
+.feed-page .auth-family.is-dead .auth-family-name { color: #a32b22; }
+.feed-page .auth-family-sub { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.feed-page .auth-family-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+.feed-page .auth-family-toggle {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.feed-page .fam-kind {
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--body);
+  white-space: nowrap;
+}
+.feed-page .fam-kind.union { border-color: #c3d9fb; background: var(--accent-bg); color: #1e40af; }
+
+.feed-page .auth-table { padding: 4px 16px 14px; }
+.feed-page .auth-row {
+  display: grid;
+  grid-template-columns: 116px 84px minmax(0, 1fr) 96px 96px 150px;
+  gap: 0 12px;
+  padding: 9px 0;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line-2);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.feed-page .auth-row:last-child { border-bottom: none; }
+.feed-page .auth-row-head {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.feed-page .auth-row > span { min-width: 0; overflow-wrap: break-word; }
+.feed-page .auth-market { font-weight: 600; color: var(--ink); }
+.feed-page .auth-status {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.feed-page .auth-status.live { color: #0a6b49; }
+.feed-page .auth-status.expired { color: #b42318; }
+.feed-page .auth-status.cancelled { color: #9d174d; }
+.feed-page .auth-names { color: var(--body); }
+.feed-page .auth-holder { display: block; font-size: 11px; color: var(--muted-2); margin-top: 2px; }
+.feed-page .auth-date { font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+.feed-page .auth-ref { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.feed-page .auth-use {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted-2);
+}
+.feed-page .auth-source { margin-top: 18px; font-size: 12px; }
+.feed-page .auth-source a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.feed-page .auth-source a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.feed-page .auth-source svg { width: 12px; height: 12px; }
+
+@media (max-width: 900px) {
+  .feed-page .auth-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .feed-page .auth-row-head { display: none; }
+  .feed-page .auth-date:nth-of-type(4)::before { content: 'Granted · '; color: var(--muted-2); }
+  .feed-page .auth-date:nth-of-type(5)::before { content: 'Ends · '; color: var(--muted-2); }
+}
+
+/* ---------- "Open feed" call-out in the expanded row ---------- */
+.report-surface .feed-open {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #dbe6f7;
+  border-radius: 10px;
+  background: #f7faff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+.report-surface .feed-open:hover { border-color: #b9d2f4; background: #eff5ff; }
+.report-surface .feed-open-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.report-surface .feed-open-icon svg { width: 16px; height: 16px; }
+.report-surface .feed-open-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.report-surface .feed-open-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.report-surface .feed-open-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+}
+.report-surface .feed-open-sub {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--muted);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.report-surface .feed-open-sub .tone-negative { color: #b42318; font-weight: 600; }
+.report-surface .feed-open-sub .tone-positive { color: #0a6b49; font-weight: 600; }
+.report-surface .feed-open-sub .tone-neutral { color: var(--muted); font-weight: 600; }
+.report-surface .feed-open-go {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Renewal-signal feed — its own page, set at reading scale.
+   Everything here is deliberately larger than the list view: this is
+   prose to be read, not a table to be scanned.
+   ============================================================ */
+.feed-page { font-family: var(--sans); color: var(--ink); }
+
+.feed-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px 5px 8px;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--body);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.feed-back:hover { border-color: #cdddf7; background: #f6f9fe; color: var(--accent); }
+.feed-back svg { width: 15px; height: 15px; }
+
+/* ---------- Page header ---------- */
+.feed-page-head { margin-bottom: 20px; }
+.feed-page-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.feed-page-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0;
+}
+.feed-page-systematic {
+  margin: 6px 0 0;
+  max-width: 70ch;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.feed-page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 14px;
+}
+/* Product type and approval status, as badges rather than loose words: they
+   are the two facts that frame everything below, and the status carries an
+   icon so it reads before the word does. */
+.feed-page .fp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.feed-page .fp-badge svg { width: 12px; height: 12px; flex-shrink: 0; }
+.feed-page .fp-badge.pt18 { background: var(--mixed-bg); color: #92400e; }
+.feed-page .fp-badge.pt19 { background: #d1fae5; color: #046c50; }
+.feed-page .fp-badge.approved { background: #dcf3e8; color: #0a6b49; }
+.feed-page .fp-badge.pending { background: var(--accent-bg); color: #1e40af; }
+.feed-page .fp-badge.expired { background: #fee4e2; color: #b42318; }
+.feed-page .fp-badge.not-approved { background: #fce7f3; color: #9d174d; }
+.feed-page .fp-badge.no-longer-supported { background: #eef1f5; color: #475569; }
+
+.feed-page-meta .ident {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.feed-page-meta .ident .k { color: var(--muted-2); margin-right: 3px; }
+.feed-page-meta .sep { width: 1px; height: 14px; background: var(--line); }
+
+/* ---------- Standing facts, above the record ---------- */
+.feed-page .fp-dash {
+  display: grid;
+  /* Line 1: the four renewal facts. Line 2 below is wider, since its tiles
+     carry names and counts rather than a single figure. */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/* A named group of tiles. The label is a quiet eyebrow rather than a heading:
+   it has to separate four bands without pushing the record further down the
+   page than the tiles themselves do. */
+/* Each band sits on its own ground: a shade below the #eceef1 canvas, so the
+   white tiles read as belonging to it and the group is legible as a group.
+   No colour and no border — the tint alone does it, and the tiles keep their
+   own edges.
+
+   Four bands, the last of them "Other": what other authorities are doing,
+   which bears on the substance without being part of its renewal file. */
+.feed-page .fp-band {
+  margin-bottom: 12px;
+  padding: 11px 13px 13px;
+  border-radius: 14px;
+  /* Deepest at the left, gone by two-thirds of the way across — close to
+     horizontal, with just enough tilt to carry the eye down the page. The band
+     is a ground the tiles sit on rather than a box drawn around them. */
+  background: linear-gradient(113deg, #d3dbe8 0%, #e1e6ee 30%, #eceef1 66%);
+}
+.feed-page .fp-band-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7c8798;
+}
+/* The tiles inside sit tight to their own ground rather than to the page. */
+.feed-page .fp-band .fp-dash { margin-bottom: 0; }
+
+.feed-page .fp-dash-wide {
+  /* Four again, now that plant-protection status joined the row — the page is
+     896px, so the tiles have to be narrower than the tallies above them. */
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  margin-bottom: 14px;
+}
+
+/* auto-fill, not auto-fit: a short last row keeps the tile width of the rows
+   above instead of stretching one or two tiles across the whole page. Declared
+   after .fp-dash-wide so it wins where a row carries both. */
+.feed-page .fp-dash-fill { grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); }
+
+/* A tile that does something: opens a table below, or leaves for another page.
+   The icon in the label says which.
+
+   The hit area is an overlay button rather than a wrapper, so the source note
+   — itself a button — can sit inside the tile without nesting. */
+.feed-page .fp-tile.is-action {
+  display: block;
+  width: 100%;
+  font-family: var(--sans);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+.feed-page .fp-tile-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 0;
+  border: none;
+  border-radius: inherit;
+  background: none;
+  cursor: pointer;
+}
+.feed-page .fp-tile-hit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+/* Above the overlay, so its own clicks land on it. */
+.feed-page .fp-tile .src-note { position: relative; z-index: 2; }
+/* A clickable tile has to look clickable at rest, not only on hover: a dashed
+   edge marks it apart from the tiles that only report a number, and the icon
+   sits in its own tinted button so it reads as a control rather than
+   decoration. */
+.feed-page .fp-tile.is-action {
+  border-style: dashed;
+  border-color: #c9d6e8;
+}
+.feed-page .fp-tile.is-action:hover,
+.feed-page .fp-tile.is-action:has(.fp-tile-hit:focus-visible) {
+  border-style: solid;
+  border-color: var(--accent);
+  background: #f7faff;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
+}
+.feed-page .fp-tile.is-action:hover .fp-tile-label { color: var(--accent); }
+.feed-page .fp-tile.is-action .fp-tile-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.12s;
+}
+.feed-page .fp-tile-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: -3px;
+  border-radius: 6px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  transition: background 0.12s, color 0.12s, transform 0.12s;
+}
+.feed-page .fp-tile-go svg { width: 11px; height: 11px; }
+.feed-page .fp-tile.is-action:hover .fp-tile-go {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+.feed-page .fp-tile.is-open .fp-tile-go { background: var(--accent); color: #fff; }
+
+/* ---------- The panel a tile opens ----------
+   Over the page, not under it: a panel that unfolded below could land two
+   bands of tiles away from the tile that asked for it. */
+.fp-modal-back {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 44px 20px;
+  overflow-y: auto;
+  background: rgba(11, 15, 26, 0.46);
+  animation: fp-modal-in 0.14s ease-out;
+}
+.fp-modal {
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  margin: auto;
+  animation: fp-modal-rise 0.16s ease-out;
+}
+.fp-modal .fp-modal-body {
+  max-height: calc(100vh - 88px);
+  overflow-y: auto;
+  padding: 26px 30px 30px;
+  box-shadow: 0 20px 60px rgba(11, 15, 26, 0.3);
+}
+.fp-modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--body);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(11, 15, 26, 0.22);
+  transition: background 0.12s, color 0.12s;
+}
+.fp-modal-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.fp-modal-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fp-modal-close svg { width: 14px; height: 14px; }
+
+@keyframes fp-modal-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fp-modal-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 720px) {
+  .fp-modal-back { padding: 16px 12px; }
+  .fp-modal-close { top: 6px; right: 6px; }
+  .fp-modal .fp-modal-body { padding: 22px 18px 24px; max-height: calc(100vh - 32px); }
+}
+.feed-page .fp-tile {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 15px 13px;
+}
+.feed-page .fp-tile-label { font-size: 11.5px; color: var(--muted); line-height: 1.25; }
+/* The source popover overflows its tile, so the tile must not clip it and has
+   to stack above its neighbours while open. */
+.feed-page .fp-tile { position: relative; }
+.feed-page .fp-tile:has(.src-note-pop) { z-index: 30; }
+.feed-page .fp-tile-value {
+  margin-top: 4px;
+  font-size: 23px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+/* Stood down: the tile asks a question that does not apply to this substance
+   yet — renewal facts before a first approval. Kept visible so the reader can
+   see it was considered, not silently dropped. */
+.feed-page .fp-tile.is-muted {
+  border-style: dashed;
+  background: #fafbfc;
+}
+.feed-page .fp-tile.is-muted .fp-tile-label,
+.feed-page .fp-tile.is-muted .fp-tile-value,
+.feed-page .fp-tile.is-muted .fp-tile-note {
+  color: var(--muted-2);
+}
+
+.feed-page .fp-tile-value.warn { color: #b42318; }
+/* Text values (a route, a Yes/No) need to sit smaller than the numerals. */
+.feed-page .fp-tile-value.sm { font-size: 15px; line-height: 1.25; letter-spacing: -0.01em; }
+.feed-page .fp-tile-value.ok { color: #0a6b49; }
+/* Worth reading rather than adverse — a recorded disagreement, not a finding
+   against the substance. Red would say more than the count does. */
+.feed-page .fp-tile-value.mixed { color: var(--mixed); }
+.feed-page .fp-tile-of {
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted-2);
+}
+.feed-page .fp-tile-note {
+  margin-top: 3px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feed-page .fp-tile-note.warn { color: #b42318; font-weight: 600; }
+
+/* ECHA's assessment status: that the renewal is running, and how far. Blue,
+   matching the dot the list column uses for the same field. */
+.feed-page .fp-tile-state {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px dashed var(--line);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1e40af;
+}
+.feed-page .fp-tile-substate {
+  display: block;
+  margin-top: 1px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* Who intends to apply — ECHA's expressions-of-interest list. */
+.feed-page .fp-tile-interest {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px dashed var(--line);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--body);
+}
+.feed-page .fp-tile-interest.ok { color: #0a6b49; }
+.feed-page .fp-tile-interest.warn { color: #b42318; }
+/* The BPC's published opinion, on the same tile: the one body whose view bears
+   directly on the decision. Links to the PDF where ECHA gives one. */
+.feed-page .fp-tile-bpc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px dashed var(--line);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #0a6b49;
+  text-decoration: none;
+}
+.feed-page a.fp-tile-bpc:hover { text-decoration: underline; }
+.feed-page .fp-tile-bpc svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.feed-page .fp-tile-bpc svg:last-child { width: 10px; height: 10px; opacity: 0.6; }
+
+
+/* A finding that could block or slow the renewal, on the record that names it. */
+.feed-page .feed-chip.blocker {
+  background: var(--mixed-bg);
+  color: #7c4a0e;
+  border: 1px solid #f3e0a8;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 9.5px;
+}
+
+/* Each panel opens with a rule, to divide it from the ECHA fields above it in
+   an expanded row. First in the dialog there is nothing to divide. */
+.fp-modal-body > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+/* A card holding one block that opens needs no padding below when it is shut. */
+
+/* ---------- Outlook strip ---------- */
+/* A note on the list, at its head — deliberately unlike the cards below it:
+   a shade off their white, no shadow, a dashed edge and a tighter frame, so it
+   reads as something said *about* the records rather than as one of them. */
+.feed-outlook {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 12px 16px 13px;
+  margin: 0 0 12px;
+  border: 1px dashed #ccd4e0;
+  border-radius: 10px;
+  background: #f7f8fa;
+}
+.feed-outlook-main { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.feed-outlook-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feed-outlook-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.feed-outlook-value.tone-negative { color: #b42318; }
+.feed-outlook-value.tone-positive { color: #0a6b49; }
+.feed-outlook-value.tone-neutral { color: var(--muted); }
+.feed-outlook-note {
+  max-width: 62ch;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.feed-tally { display: flex; gap: 7px; margin-left: auto; flex-shrink: 0; }
+.feed-tally-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.feed-tally-item b { font-size: 14px; font-weight: 700; letter-spacing: 0; }
+.feed-tally-item.tone-negative { background: var(--threat-bg); color: #b42318; }
+.feed-tally-item.tone-positive { background: var(--opport-bg); color: #0a6b49; }
+.feed-tally-item.tone-neutral { background: var(--grey-bg); color: var(--muted); }
+
+/* ---------- Section heading ---------- */
+/* No feed researched for this substance yet. The page above it still stands —
+   the standing facts come from the ECHA exports, which cover every substance.
+   Dashed and muted, to match the list's "Signals coming soon" box. */
+.feed-page .feed-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 22px 24px;
+  border: 1px dashed #e2e6ec;
+  border-radius: 12px;
+  background: #fafbfc;
+  text-align: center;
+}
+.feed-page .feed-empty-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feed-page .feed-empty-note {
+  max-width: 52ch;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Substitution consultations ----------
+   Opens from the substitution tile, whose finding these are the grounds for. */
+.report-surface .cons-note {
+  margin: 12px 0 14px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 96ch;
+}
+.report-surface .cons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.report-surface .cons-entry {
+  padding: 13px 15px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fcfdfe;
+}
+/* Still taking comments — the only one a reader can still act on. */
+.report-surface .cons-entry.is-open {
+  border-color: #f3e0a8;
+  background: #fffdf6;
+}
+.report-surface .cons-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-bottom: 10px;
+}
+.report-surface .cons-state {
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.report-surface .cons-state.open { background: var(--mixed-bg); color: #7c4a0e; }
+.report-surface .cons-state.closed { background: var(--grey-bg); color: var(--muted); }
+.report-surface .cons-scope {
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--ink);
+}
+.report-surface .cons-dates {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+.report-surface .cons-field { margin-top: 10px; }
+.report-surface .cons-field-key {
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .cons-field-val {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--body);
+}
+.report-surface .cons-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 10px;
+  margin-top: 11px;
+}
+.report-surface .cons-links-key {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .cons-link,
+.report-surface .cons-comment {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.report-surface .cons-link:hover { text-decoration: underline; }
+.report-surface .cons-link svg,
+.report-surface .cons-comment svg { width: 11px; height: 11px; flex-shrink: 0; }
+.report-surface .cons-comment {
+  margin-top: 12px;
+  padding: 5px 11px;
+  border: 1px solid #f3e0a8;
+  border-radius: 8px;
+  background: var(--mixed-bg);
+  color: #7c4a0e;
+  font-weight: 600;
+}
+.report-surface .cons-comment:hover { background: #fdf3d6; }
+
+/* ---------- PACT activities and hazard flags ---------- */
+.report-surface .pact-note,
+.report-surface .flag-list + .pact-note {
+  margin: 12px 0 16px;
+  max-width: 96ch;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.report-surface .pact-area { margin-top: 16px; }
+.report-surface .pact-area-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--line);
+}
+.report-surface .pact-area-label {
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--ink);
+}
+.report-surface .pact-area-code {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .pact-list { margin: 0; padding: 0; list-style: none; }
+.report-surface .pact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  padding: 8px 2px;
+  border-bottom: 1px solid var(--line-2);
+}
+.report-surface .pact-row:last-child { border-bottom: none; }
+.report-surface .pact-status {
+  padding: 2.5px 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+/* Still running, against concluded or withdrawn: the first can still land on
+   a renewal, the second already happened.
+
+   Amber only where the question is whether the molecule is a problem. A
+   classification proposal or a compliance check is procedure — blue for
+   running, grey for finished — because colouring it as a hazard would say more
+   than the activity does. */
+.report-surface .pact-status.hazard.live { background: var(--mixed-bg); color: #7c4a0e; }
+.report-surface .pact-status.hazard.done { background: var(--grey-bg); color: var(--body); }
+.report-surface .pact-status.plain.live { background: var(--accent-bg); color: #1e40af; }
+.report-surface .pact-status.plain.done { background: var(--grey-bg); color: var(--body); }
+.report-surface .pact-dates {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+}
+.report-surface .pact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.report-surface .pact-link:hover { text-decoration: underline; }
+.report-surface .pact-link svg { width: 10px; height: 10px; }
+
+.report-surface .flag-list {
+  margin-bottom: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.report-surface .flag-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px 13px;
+  border: 1px solid #f3e0a8;
+  border-radius: 10px;
+  background: var(--mixed-bg);
+}
+/* The publication, on top of the card and linking to it. */
+.report-surface .flag-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a6a2f;
+  text-decoration: none;
+}
+.report-surface .flag-label:hover { text-decoration: underline; }
+.report-surface .flag-label svg { width: 10px; height: 10px; flex-shrink: 0; opacity: 0.75; }
+.report-surface .flag-value {
+  font-size: 13.5px;
+  font-weight: 650;
+  line-height: 1.35;
+  color: #7c4a0e;
+}
+/* An assessment that concluded having found nothing: the same card, without
+   the colour that would read as a finding. */
+.report-surface .flag-card.is-cleared {
+  border-color: var(--line);
+  background: #fbfcfd;
+}
+.report-surface .flag-card.is-cleared .flag-label { color: var(--muted); }
+.report-surface .flag-card.is-cleared .flag-value { color: var(--ink-2); }
+.report-surface .flag-card.is-cleared .flag-note { color: var(--muted); }
+
+.report-surface .flag-note {
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #8a6a2f;
+}
+
+/* ---------- Approval data ----------
+   What the approving act said, quoted from it, then the committee opinions.
+   The candidate-for-substitution finding leads, in amber where the act states
+   one, because it is the finding that shortens the approval period and pulls
+   every product into comparative assessment. */
+.report-surface .apr-block .det-section { margin-top: 0; }
+.report-surface .apr-note {
+  margin: 12px 0 16px;
+  max-width: 96ch;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* A sub-heading inside the panel: the panel holds four sections and they need
+   separating without each claiming a heading of its own. */
+.report-surface .apr-sub {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 26px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.report-surface .apr-sub-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.report-surface .apr-sub-meta {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+/* ---- Candidate for substitution, and the properties behind it. */
+.report-surface .apr-cfs {
+  padding: 15px 17px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcfd;
+}
+.report-surface .apr-cfs.is-stated {
+  border-color: #f3e0a8;
+  background: var(--mixed-bg);
+}
+.report-surface .apr-cfs-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+}
+.report-surface .apr-cfs-label {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  width: 100%;
+}
+.report-surface .apr-cfs.is-stated .apr-cfs-label { color: #8a6a2f; }
+.report-surface .apr-cfs-state {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
+.report-surface .apr-cfs-state.warn { color: #7c4a0e; }
+.report-surface .apr-cfs-art {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--body);
+}
+.report-surface .apr-cfs.is-stated .apr-cfs-art { border-color: #e6cf8e; color: #7c4a0e; }
+.report-surface .apr-cfs-meaning {
+  margin: 7px 0 0;
+  max-width: 96ch;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--body);
+}
+.report-surface .apr-cfs.is-stated .apr-cfs-meaning { color: #7c4a0e; }
+
+/* The REACH Annex XIII codes, then the same properties spelled out. */
+.report-surface .apr-flags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 9px;
+  margin-top: 12px;
+}
+.report-surface .apr-flag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e6cf8e;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #7c4a0e;
+}
+.report-surface .apr-flag-spelled {
+  font-size: 12px;
+  color: #8a6a2f;
+}
+
+/* The act's own words, set apart from everything written about them. */
+.report-surface .apr-quote {
+  margin: 14px 0 0;
+  padding: 0 0 0 13px;
+  border-left: 2px solid #e6cf8e;
+}
+.report-surface .apr-cfs:not(.is-stated) .apr-quote,
+.report-surface .apr-prev .apr-quote { border-left-color: var(--line); }
+.report-surface .apr-quote-key {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .apr-quote p {
+  margin: 0 0 7px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.report-surface .apr-quote p:last-child { margin-bottom: 0; }
+.report-surface .apr-cfs-ed,
+.report-surface .apr-cfs-note {
+  margin: 14px 0 0;
+  max-width: 96ch;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.report-surface .apr-cfs-note strong { color: var(--body); font-weight: 650; }
+
+/* ---- The act itself. */
+.report-surface .apr-act { margin-top: 22px; }
+.report-surface .apr-act-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.report-surface .apr-act-kind {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .apr-act-name {
+  margin-top: 2px;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.report-surface .apr-act-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.report-surface .apr-act-link:hover { text-decoration: underline; }
+.report-surface .apr-act-link svg { width: 10px; height: 10px; }
+.report-surface .apr-act-title {
+  margin: 10px 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.report-surface .apr-act-head + .det-cols,
+.report-surface .apr-prev .apr-act-head + .det-cols { margin-top: 16px; }
+
+/* ---- Annex conditions, grouped by what kind of condition they are. */
+.report-surface .apr-bucket { margin-top: 14px; }
+.report-surface .apr-bucket-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.report-surface .apr-bucket-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--body);
+}
+.report-surface .apr-bucket-count {
+  min-width: 15px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--grey-bg);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--muted);
+}
+.report-surface .apr-cond-list { margin: 6px 0 0; padding: 0; list-style: none; }
+.report-surface .apr-cond {
+  padding: 8px 0 9px 12px;
+  border-left: 2px solid var(--line-2);
+}
+.report-surface .apr-cond-text {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.report-surface .apr-cond-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+.report-surface .apr-cond-tag {
+  padding: 1.5px 7px;
+  border-radius: 999px;
+  background: var(--grey-bg);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--muted);
+}
+/* The earlier act's conditions, under "Previous approval": set back, because
+   the act above replaced them. */
+.report-surface .apr-prev-key {
+  margin: 20px 0 0;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .apr-prev .apr-cond-text { color: var(--muted); }
+.report-surface .bpc-list { margin: 0; padding: 0; list-style: none; }
+.report-surface .bpc-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 12px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--line-2);
+}
+.report-surface .bpc-entry:last-child { border-bottom: none; }
+.report-surface .bpc-entry.has-minority {
+  margin: 4px 0;
+  padding: 11px 13px;
+  border: 1px solid #f3e0a8;
+  border-radius: 10px;
+  background: var(--mixed-bg);
+}
+.report-surface .bpc-head {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-right: auto;
+}
+.report-surface .bpc-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+.report-surface .bpc-entry.has-minority .bpc-date { color: #8a6a2f; }
+.report-surface .bpc-stage {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.report-surface .bpc-entry.has-minority .bpc-stage { color: #7c4a0e; }
+.report-surface .bpc-flag {
+  padding: 2.5px 9px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e6cf8e;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.3;
+  color: #7c4a0e;
+}
+.report-surface .bpc-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.report-surface .bpc-doc:hover { text-decoration: underline; }
+.report-surface .bpc-doc svg { width: 10px; height: 10px; flex-shrink: 0; }
+.report-surface .bpc-doc.minority { color: #7c4a0e; }
+
+/* ---------- Assessment methodology strip ----------
+   Which of today's methods existed when the substance was assessed: one
+   segment each, in force order, reading left to right like a progress bar.
+   Green is assessed under it, amber is a gap, grey does not apply. */
+.report-surface .apr-methods .apr-note { margin-bottom: 18px; }
+.report-surface .meth-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.report-surface .meth-seg {
+  position: relative;
+  flex: 1 1 64px;
+  min-width: 52px;
+  max-width: 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+}
+.report-surface .meth-bar {
+  display: block;
+  width: 100%;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background: var(--line);
+  cursor: help;
+  transition: filter 0.12s;
+}
+.report-surface .meth-seg:hover .meth-bar,
+.report-surface .meth-seg:focus-within .meth-bar { filter: brightness(0.92); }
+.report-surface .meth-short {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--muted);
+}
+
+.report-surface .meth-seg.tone-ok .meth-bar { background: var(--opport); }
+.report-surface .meth-seg.tone-gap .meth-bar { background: var(--mixed); }
+/* Partly covered: the same amber, broken, so it reads as neither. */
+.report-surface .meth-seg.tone-part .meth-bar {
+  background: repeating-linear-gradient(
+    90deg, var(--mixed) 0 5px, #f5d9a0 5px 10px
+  );
+}
+.report-surface .meth-seg.tone-na .meth-bar { background: var(--line); }
+.report-surface .meth-seg.tone-na .meth-short { color: var(--muted-2); }
+
+/* The tooltip: the method, when it came in, what the flag says, and the
+   workbook's reason where it gives one. */
+.report-surface .meth-pop {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: max-content;
+  max-width: 290px;
+  padding: 9px 12px 10px;
+  border-radius: 9px;
+  background: var(--ink);
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.22);
+  font-family: var(--sans);
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease, visibility 0.12s;
+}
+.report-surface .meth-seg:hover .meth-pop,
+.report-surface .meth-seg:focus-within .meth-pop { opacity: 1; visibility: visible; }
+/* The last two would run off the card, so they hang from the right instead. */
+.report-surface .meth-seg:nth-last-child(-n + 2) .meth-pop {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+.report-surface .meth-pop-head {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+.report-surface .meth-pop-state {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .meth-pop-note {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #e5e7eb;
+}
+
+/* ---------- Plant-protection panel ----------
+   Opens from its tile, into the same card the supplier table uses. */
+.report-surface .ppp-block .det-section { margin-top: 0; }
+.report-surface .ppp-name {
+  margin: -4px 0 14px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Kept visibly apart from the EU's own fields above it: this half is a reading
+   of the record, not the record. */
+.report-surface .ppp-ai {
+  margin-top: 18px;
+  padding: 15px 16px 16px;
+  border: 1px dashed #cdd7e5;
+  border-radius: 10px;
+  background: #fafbfd;
+}
+.report-surface .ppp-ai-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.report-surface .ppp-ai-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.report-surface .ppp-ai-confidence {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: #1e40af;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.report-surface .ppp-note { margin-top: 12px; }
+.report-surface .ppp-note-key {
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.report-surface .ppp-note-val {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--body);
+}
+/* A caveat about the row the analysis rests on — amber, like a blocker. */
+.report-surface .ppp-flag {
+  margin-top: 12px;
+  padding: 9px 12px;
+  border: 1px solid #f3e0a8;
+  border-radius: 8px;
+  background: var(--mixed-bg);
+  font-size: 12px;
+  line-height: 1.45;
+  color: #7c4a0e;
+}
+.report-surface .ppp-flag-key {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a6a2f;
+}
+.report-surface .ppp-ai .feed-card-sources { margin-top: 14px; }
+
+/* ---------- All-substances timeline ---------- */
+
+/* Whose record this is. Only on the timeline — on a substance's own page the
+   title already says it. */
+.feed-page .feed-card-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  margin-bottom: 9px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--sans);
+  cursor: pointer;
+  text-align: left;
+}
+.feed-page .feed-card-sub-name {
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--body);
+  overflow-wrap: anywhere;
+  transition: color 0.12s;
+}
+.feed-page .feed-card-sub:hover .feed-card-sub-name {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* The year turning, as a marker in the run of cards. */
+/* A month band between the cards, so a long run reads as a calendar rather
+   than an undifferentiated column. The rule carries the eye across. */
+.feed-page li.sig-month {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0 6px;
+}
+.feed-page li.sig-month:first-child { margin-top: 0; }
+.feed-page .sig-month-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.feed-page .sig-month-rule {
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--line);
+}
+
+/* Which signals the timeline is showing. Multi-select: nothing chosen means
+   everything, and each chip carries the count it would narrow to. */
+.feed-page .sig-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.feed-page .sig-filters-label {
+  margin-right: 2px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feed-page .sig-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4.5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--body);
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+}
+.feed-page .sig-chip:hover { border-color: var(--muted-2); }
+.feed-page .sig-chip.is-on {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: #1e40af;
+  font-weight: 600;
+}
+.feed-page .sig-chip-n {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted-2);
+}
+.feed-page .sig-chip.is-on .sig-chip-n { color: #1e40af; }
+
+/* "12 of 307" beside a filtered count. */
+.feed-page .ident-of {
+  margin-left: 5px;
+  font-family: var(--mono);
+  font-weight: 400;
+  color: var(--muted-2);
+}
+
+/* Flips the timeline. Sits at the end of the section head. */
+.feed-page .sig-order {
+  margin-left: auto;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--body);
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.feed-page .sig-order:hover { border-color: #b9d2f4; background: #f7faff; color: var(--accent); }
+
+/* The way in, from the list header. */
+.all-signals-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border: 1px solid #cdddf7;
+  border-radius: 8px;
+  background: #f7faff;
+  font-family: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+.all-signals-link:hover { border-color: #93b8f0; background: #eff5ff; }
+.all-signals-link svg { width: 14px; height: 14px; }
+.all-signals-go { opacity: 0.7; }
+
+.feed-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 52px;
+  padding-bottom: 9px;
+  margin-bottom: 14px;
+  border-bottom: 1.5px solid #cbd2db;
+}
+.feed-section-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.feed-section-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-left: auto;
+}
+
+/* ---------- One record = one card, direction on the left edge ---------- */
+.feed-cards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.feed-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--muted-2);
+  border-radius: 10px;
+  padding: 20px 24px 22px;
+  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.04);
+}
+.feed-card.tone-negative { border-left-color: var(--threat); }
+.feed-card.tone-positive { border-left-color: var(--opport); }
+
+.feed-card-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-bottom: 10px;
+}
+.feed-card-date {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-2);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.feed-chip {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 2.5px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.feed-chip.derived { background: var(--grey-bg); color: var(--muted); }
+.feed-chip.basis { border: 1px solid var(--line); color: var(--muted); }
+.feed-chip.tag { background: #eef2f7; color: #55647a; }
+.feed-chip.tag.is-marked { background: var(--mixed-bg); color: #7c4a0e; }
+.feed-chip.unchecked { background: var(--mixed-bg); color: #7c4a0e; }
+
+/* Signal badge: pips carry the weight, the words carry the direction. */
+.feed-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3.5px 9px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.feed-signal.tone-negative { background: var(--threat-bg); color: #b42318; }
+.feed-signal.tone-positive { background: var(--opport-bg); color: #0a6b49; }
+.feed-signal.tone-neutral { background: var(--grey-bg); color: var(--muted); }
+.sig-pips { display: inline-flex; gap: 2px; }
+.sig-pips i { width: 4px; height: 10px; border-radius: 1px; background: currentColor; opacity: 0.24; }
+.sig-pips i.on { opacity: 1; }
+
+.feed-card-title {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.feed-card-summary {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--body);
+}
+
+/* The AI's reading of a record, over the badge that states it.
+   It used to sit inline under every summary, which put a paragraph of
+   interpretation between each record and its sources. On the badge it is one
+   hover away and never in the way — and keeping it attached to the signal
+   makes plain that the reasoning belongs to the reading, not to the record. */
+.feed-why { position: relative; display: inline-flex; }
+.feed-signal.is-why {
+  border: none;
+  cursor: help;
+  /* A button, so the reading is reachable by keyboard and by tap, not only by
+     a mouse that happens to pass over it. */
+  font-family: var(--mono);
+  text-align: left;
+}
+.feed-signal.is-why::after {
+  content: '';
+  margin-left: 1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.55;
+}
+.feed-signal.is-why:hover,
+.feed-signal.is-why:focus-visible { filter: brightness(0.97); }
+
+.feed-why-pop {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  z-index: 30;
+  display: block;
+  width: 330px;
+  max-width: min(330px, 72vw);
+  padding: 11px 14px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.13);
+  /* The badge is nowrap and uppercase; the prose is neither. */
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  color: var(--body);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease, visibility 0.12s;
+}
+.feed-why:hover .feed-why-pop,
+.feed-why:focus-within .feed-why-pop { opacity: 1; visibility: visible; }
+.feed-why-key {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+/* The reason is a reading too, so the chip carries the same marker. */
+.feed-page .feed-chip.tag { text-transform: none; letter-spacing: 0.02em; }
+
+/* What the date stands for, where it is not the day the thing happened.
+   It carries the weight the date usually would, because on these records the
+   note is the part that is exactly true. */
+.feed-card-datenote {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--body);
+  white-space: nowrap;
+}
+/* ...and the date recedes, so it does not read as the day it happened. */
+.feed-card-date.is-approx { color: var(--muted-2); font-weight: 500; }
+
+.feed-card-sources { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
+.feed-sources-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: 8px;
+}
+.feed-src { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 9px; font-size: 13px; line-height: 1.5; }
+.feed-src + .feed-src { margin-top: 9px; }
+.feed-src .tier-badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  flex-shrink: 0;
+}
+.feed-src .tier-badge.primary { color: var(--accent); }
+.feed-src .tier-badge.secondary { color: var(--opport); }
+.feed-src a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--muted-2);
+}
+.feed-src a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.feed-src a svg { width: 12px; height: 12px; flex-shrink: 0; }
+.feed-src-text { color: var(--ink-2); }
+.feed-src-note {
+  flex-basis: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-2);
+}
+
+@media (max-width: 700px) {
+  .feed-page-title { font-size: 23px; }
+  .feed-card { padding: 16px 16px 18px; }
+  .feed-card-title { font-size: 16.5px; }
+  .feed-card-summary { font-size: 14px; }
+  .feed-tally { margin-left: 0; }
+}
+
+/* ---------- Follow / star toggle ---------- */
+.report-surface .star-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: color 0.12s, transform 0.12s;
+}
+.report-surface .star-btn:hover { color: #f59e0b; transform: scale(1.15); }
+.report-surface .star-btn.is-on { color: #f59e0b; }
+.report-surface .star-btn svg { width: 14px; height: 14px; }
+
+/* ---------- Empty state ---------- */
+.report-surface .report-empty {
+  padding: 48px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+}
+
+/* ---------- KPI row (headline numbers for the whole export) ---------- */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+.stat-tile {
+  background: #f7f8fa;
+  border: 1px dashed #ccd4e0;
+  border-radius: 10px;
+  padding: 11px 14px 12px;
+}
+/* Against the off-white ground the old greys went soft, so the label and the
+   figure each come down a step to hold their contrast. */
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5b6472;
+  line-height: 1.25;
+}
+.stat-label svg { width: 12px; height: 12px; flex-shrink: 0; }
+.stat-value {
+  margin-top: 5px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #2a313d;
+}
+.stat-note {
+  margin-top: 3px;
+  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b93a1;
+}
+.stat-tile.good .stat-label svg { color: #0a6b49; }
+.stat-tile.warning .stat-label svg { color: #b45309; }
+.stat-tile.accent .stat-label svg { color: #2563eb; }
+.stat-tile.neutral .stat-label svg { color: #6b7280; }
+
+/* ---------- Narrow screens: the grid stops pretending to be a table and the
+   date / status cells stack under the substance name. ---------- */
+@media (max-width: 900px) {
+  .report-surface { padding: 20px 16px 22px; }
+  .report-surface .cust-band-sub { display: none; }
+  .report-surface .cust-band-label { margin-right: auto; }
+  .report-surface .sub-grid-head { display: none; }
+  .report-surface .sub-row-head {
+    grid-template-columns: 18px [det-start] minmax(0, 1fr) 24px;
+    row-gap: 6px;
+  }
+  .report-surface .sub-row-head > .sub-chev { grid-area: 1 / 1; }
+  .report-surface .sub-row-head > .gc-name { grid-area: 1 / 2; }
+  .report-surface .sub-row-head > .gc-actions { grid-area: 1 / 3; }
+  .report-surface .sub-row-head > .gc-end,
+  .report-surface .sub-row-head > .gc-status,
+  .report-surface .sub-row-head > .gc-alerts,
+  .report-surface .sub-row-head > .gc-prospects {
+    grid-column: det-start / -1;
+  }
+  .report-surface .gc-end .date-val::before { content: 'Approval end · '; color: var(--muted-2); }
+  .report-surface .gc-end .date-val { display: inline; }
+  .report-surface .gc-end .countdown { margin: 0 0 0 8px; }
+  .report-surface .gc-alerts .alert-row,
+  .report-surface .gc-prospects .alert-row { flex-direction: row; flex-wrap: wrap; margin-top: 4px; }
+  .report-surface .sub-detail { padding-left: 30px; }
+  .report-surface .det-key { flex-basis: 88px; }
+}

@@ -1,0 +1,1239 @@
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10234
+C8  - EFSA-2026-0371
+TI  - Peer review of the pesticide risk assessment of the active substance 8-methyldecan-2-yl propanoate
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10234
+DO  - https://doi.org/10.2903/j.efsa.2026.10234
+SP  - e10234
+KW  - 8-methyldecan-2-yl propanoate
+KW  - insecticide
+KW  - peer review
+KW  - pesticide
+KW  - pheromone
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State Austria for the pesticide active substance 8-methyldecan-2-yl propanoate and the considerations as regards the inclusion of the substance in Annex IV of Regulation (EC) No 396/2005 are reported. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative uses of 8-methyldecan-2-yl propanoate as an insecticide (pheromone) on maize (grain and silage/forage) and sweet corn. The reliable endpoints, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Morte, Juan Manuel Parra
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Marchese, Adriana Scattareggia
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10235
+C8  - EFSA-2026-0385
+TI  - Peer review of the pesticide risk assessment of the active substance Trichoderma asperellum T34
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10235
+DO  - https://doi.org/10.2903/j.efsa.2026.10235
+SP  - e10235
+KW  - fungicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+KW  - Trichoderma asperellum T34
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Sweden and co-rapporteur Member State Italy for the pesticide active substance Trichoderma asperellum T34 are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2020/103. The conclusions were reached on the basis of the evaluation of the representative uses of T.?asperellum T34 as a fungicide on ornamentals, tomato, sweet pepper, aubergine, cucumber, melon, watermelon, zucchini and pumpkin. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Data gaps were identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Giner Santonja, German
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Scattareggia Marchese, Adriana
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10197
+C8  - EFSA-2026-0332
+TI  - Peer review of the pesticide risk assessment of the active substance Trichoderma harzianum T78
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10197
+DO  - https://doi.org/10.2903/j.efsa.2026.10197
+SP  - e10197
+KW  - fungicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+KW  - Trichoderma harzianum T78
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State, The Netherlands, for the pesticide active substance Trichoderma harzianum T78 and the considerations as regards the inclusion of the substance in Annex IV of Regulation (EC) No 396/2005 are reported. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative uses of Trichoderma harzianum T78 as a fungicide on lettuce. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Data gaps are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Batista Leite, Sofia
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Capilla Chavez, Teresa
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Giner Santonja, German
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Lopez Romano, Mariano
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Scattareggia Marchese, Adriana
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10149
+C8  - EFSA-2026-0290
+TI  - Peer review of the pesticide risk assessment of the active substance Trichoderma atroviride 77B
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10149
+DO  - https://doi.org/10.2903/j.efsa.2026.10149
+SP  - e10149
+KW  - fungicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+KW  - Trichoderma atroviride 77B
+PY  - 2026
+AB  - Abstract The conclusions of the EFSA following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State, the Netherlands, for the pesticide active substance Trichoderma atroviride 77B and the considerations as regards the inclusion of the substance in Annex IV of Regulation (EC) No 396/2005 are reported. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative uses of Trichoderma atroviride 77B as a fungicide on solanaceae (such as tomato and pepper), strawberry and grapevine. The reliable endpoints, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Data gaps were identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Dionysia, Athanasiou
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10194
+C8  - EFSA-2026-0357
+TI  - Peer review of the pesticide risk assessment of the active substance fluazaindolizine
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10194
+DO  - https://doi.org/10.2903/j.efsa.2026.10194
+SP  - e10194
+KW  - fluazaindolizine
+KW  - nematicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State, Malta, for the pesticide active substance fluazaindolizine. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative uses of fluazaindolizine as a nematicide on cucurbits with edible peel (cucumber, courgette) and carrot. The reliable endpoints, appropriate for use in regulatory risk assessment are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Becirovic, Amarela
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Morte, Juan Manuel Parra
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10185
+C8  - EFSA-2026-0308
+TI  - Peer review of the pesticide risk assessment of the active substance flurochloridone
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10185
+DO  - https://doi.org/10.2903/j.efsa.2026.10185
+SP  - e10185
+KW  - Article 12 confirmatory data
+KW  - flurochloridone
+KW  - herbicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Austria and co-rapporteur Member State Croatia for the pesticide active substance flurochloridone are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of flurochloridone as a herbicide on potato, sunflower and cotton. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10150
+C8  - EFSA-2026-0286
+TI  - Peer review of the pesticide risk assessment of the active substance cymoxanil
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10150
+DO  - https://doi.org/10.2903/j.efsa.2026.10150
+SP  - e10150
+KW  - cymoxanil
+KW  - fungicide
+KW  - MRL Article 10
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State, Lithuania, and the co-rapporteur Member State, Finland, for the pesticide active substance cymoxanil are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of cymoxanil as a fungicide on potatoes, tomatoes and grapes. Maximum residue levels (MRLs) were assessed in grapes. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are reported where identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10169
+C8  - EFSA-2026-0300
+TI  - Peer review of the pesticide risk assessment for the active substance bifenazate in light of confirmatory data submitted
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 7
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10169
+DO  - https://doi.org/10.2903/j.efsa.2026.10169
+SP  - e10169
+KW  - acaricide
+KW  - Bifenazate
+KW  - confirmatory data
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessment carried out by the competent authority of the rapporteur Member State Sweden, for the pesticide active substance bifenazate are reported. The context of the peer review was that requested by the European Commission following the submission and evaluation of confirmatory information with regard to the endocrine disruption potential of bifenazate for humans and wild mammals regarding EAS-modalities. The conclusions were reached on the basis of the evaluation of the representative uses of bifenazate as an acaricide on strawberry, fruiting vegetables (tomatoes, peppers, aubergines, cucumbers, courgettes, melons and watermelons), flowering and ornamental plants and nursery of ornamentals. The reliable endpoints concluded as being appropriate for use in regulatory risk assessment, derived from the available studies and/or literature in the dossier peer reviewed, are presented. Concerns are not identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e10063
+C8  - EFSA-2026-0215
+TI  - Peer review of the pesticide risk assessment of the active substance proquinazid
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 5
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.10063
+DO  - https://doi.org/10.2903/j.efsa.2026.10063
+SP  - e10063
+KW  - fungicide
+KW  - peer review
+KW  - pesticide
+KW  - Proquinazid
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Sweden and co-rapporteur Member State Lithuania for the pesticide active substance proquinazid are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of proquinazid as a fungicide on powdery mildew diseases on cereals and grapes. The reliable end points, appropriate for use in regulatory risk assessment are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are reported.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9971
+TI  - Peer review of the pesticide risk assessment of the active substance metyltetraprole
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 4
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.9971
+DO  - https://doi.org/10.2903/j.efsa.2026.9971
+SP  - e9971
+KW  - fungicide
+KW  - maximum residue level
+KW  - metyltetraprole
+KW  - MRL Article 10
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State France for the pesticide active substance metyltetraprole and the assessment of applications for maximum residue levels (MRLs) are reported. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative uses of metyltetraprole as a fungicide on wheat (spring and winter), barley (spring and winter) and cucumber in greenhouse (permanent). MRLs were assessed in gherkins, courgettes, oat and rye. The reliable endpoints, appropriate for use in regulatory risk assessment and the proposed MRLs, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Romano, Mariano Lopez
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Morte, Juan Manuel Parra
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9758
+C8  - EFSA-2025-0582
+TI  - Peer review of the pesticide risk assessment of the active substance diflufenican
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 2
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.9758
+DO  - https://doi.org/10.2903/j.efsa.2026.9758
+SP  - e9758
+KW  - Article 12 confirmatory data
+KW  - diflufenican
+KW  - herbicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State the United Kingdom and Czech Republic after Brexit, and co-rapporteur Member State Czech Republic for the pesticide active substance diflufenican and the assessment of the confirmatory data following the Article 12 maximum residue levels (MRLs) review are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of diflufenican as a herbicide on cereal crops (spring wheat and barley; winter wheat and barley; rye, triticale, spelt (spring and winter); durum wheat). The reliable end points, appropriate for use in regulatory risk assessment and the assessment of confirmatory data following the Article 12 MRL review, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are reported where identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Batista Leite, Sofia
+AU  - Becirovic, Amarela
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Giner Santonja, German
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Lopez Romano, Mariano
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9866
+C8  - EFSA-2026-0011
+TI  - Peer review of the pesticide risk assessment of the active substance paraffin oil (CAS 97862-82-3, chain lengths C16–C28)
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 2
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.9866
+DO  - https://doi.org/10.2903/j.efsa.2026.9866
+SP  - e9866
+KW  - acaricide
+KW  - carbon range C16–C28
+KW  - insecticide
+KW  - paraffin oil (CAS 97862-82-3)
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Greece and co-rapporteur Member State France for the pesticide active substance paraffin oil (CAS 97862-82-3) are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of paraffin oil (CAS 97862-82-3) as an acaricide and insecticide on pome fruit and stone fruit. The reliable end points, appropriate for use in regulatory risk assessment are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Batista Leite, Sofia
+AU  - Becirovic, Amarela
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Giner Santonja, German
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Lopez Romano, Mariano
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9867
+C8  - EFSA-2026-0010
+TI  - Peer review of the pesticide risk assessment of the active substance paraffin oil (CAS 72623-86-0, chain lengths C19–C28)
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 2
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.9867
+DO  - https://doi.org/10.2903/j.efsa.2026.9867
+SP  - e9867
+KW  - carbon range (C19–C28)
+KW  - insecticide
+KW  - paraffin oil (CAS 72623-86-0)
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State, Greece, and co-rapporteur Member State, France, for the pesticide active substance paraffin oil (CAS 72623-86-0) are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of paraffin oil (CAS 72623-86-0) as an insecticide on seed potatoes. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Batista Leite, Sofia
+AU  - Becirovic, Amarela
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Giner Santonja, German
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Lopez Romano, Mariano
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9868
+C8  - EFSA-2026-0009
+TI  - Peer review of the pesticide risk assessment of the active substance paraffin oil (CAS 64742-46-7, chain lengths C16–C25)
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 24
+IS  - 2
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2026.9868
+DO  - https://doi.org/10.2903/j.efsa.2026.9868
+SP  - e9868
+KW  - insecticide
+KW  - paraffin oil CAS 64742-46-7
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2026
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Greece and co-rapporteur Member State France for the pesticide active substance paraffin oil CAS 64742-46-7 are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012, as amended by Commission Implementing Regulation (EU) No 2018/1659. The conclusions were reached on the basis of the evaluation of the representative uses of paraffin oil CAS 64742-46-7 as an insecticide on citrus trees. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+C7  - 9826E
+C8  - EFSA-2025-0666
+TI  - Outcome of the Pesticides Peer Review meeting on recurring issues in mammalian toxicology
+JO  - EFSA Supporting Publications
+JA  - EFSA Supporting Publications
+VL  - 22
+IS  - 12
+SN  - 2397-8325
+UR  - https://doi.org/10.2903/sp.efsa.2025.EN-9826
+DO  - https://doi.org/10.2903/sp.efsa.2025.EN-9826
+SP  - 9826E
+PY  - 2025
+AB  - Abstract This technical report reflects the outcome of the 2024 mammalian toxicology experts? meeting on general recurring issues noted during the EFSA peer reviews of pesticide active substances under Regulation (EC) No 1107/2009. Development of harmonised approaches for testing and assessing pesticides for neurotoxicity potential and implementation of mechanistic information were agreed. General issues regarding the assessment of impurities and metabolites and the need to harmonise the extra uncertainty factors used for the derivation of health-based guidance values were discussed. Conclusions and further recommendations on these issues are reported.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Broussard, Monica Fittipaldi
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9711
+C8  - EFSA-2025-0508
+TI  - Peer review of the pesticide risk assessment of the active substance phenmedipham
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 23
+IS  - 11
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2025.9711
+DO  - https://doi.org/10.2903/j.efsa.2025.9711
+SP  - e9711
+KW  - herbicide
+KW  - peer review
+KW  - pesticide
+KW  - phenmedipham
+KW  - risk assessment
+PY  - 2025
+AB  - Abstract The conclusions of EFSA following the peer review of the initial risk assessments carried out by the competent authorities of the rapporteur Member State Finland and co-rapporteur Member State Denmark for the pesticide active substance phenmedipham are reported. The context of the peer review was that required by Commission Implementing Regulation (EU) No 844/2012. The conclusions were reached on the basis of the evaluation of the representative uses of phenmedipham as a herbicide on sugar beet/fodder beet. The conclusions were updated with regard to the endocrine disrupting properties and the genotoxicity assessment following a mandate received from the European Commission in January 2019 and its update in January 2024, respectively. The reliable end points, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+C7  - 9743E
+C8  - EFSA-2025-0569
+TI  - Outcome of the pesticides peer review meeting on general recurring issues in mammalian toxicology and ecotoxicology related to endocrine disruptors
+JO  - EFSA Supporting Publications
+JA  - EFSA Supporting Publications
+VL  - 22
+IS  - 11
+SN  - 2397-8325
+UR  - https://doi.org/10.2903/sp.efsa.2025.EN-9743
+DO  - https://doi.org/10.2903/sp.efsa.2025.EN-9743
+SP  - 9743E
+PY  - 2025
+AB  - Abstract This technical report reflects the outcome of the joint (toxicology and ecotoxicology) experts? meeting on general recurring issues related to the assessment of endocrine disruptors under Regulation (EC) No 1107/2009 noted during the EFSA peer review of pesticide active substances. General and specific issues related to the assessment of endocrine disruptors for humans and non-target organisms were identified and discussed. Conclusions and recommendations on these topics were drawn, as needed.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Athanasiou, Dionysia
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Broussard, Monica Fittipaldi
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mazzega, Silvia
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9703
+C8  - EFSA-2025-0472
+TI  - Peer review of the pesticide risk assessment of the active substance benzobicyclon
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 23
+IS  - 10
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2025.9703
+DO  - https://doi.org/10.2903/j.efsa.2025.9703
+SP  - e9703
+KW  - benzobicyclon
+KW  - herbicide
+KW  - peer review
+KW  - pesticide
+KW  - risk assessment
+PY  - 2025
+AB  - Abstract The conclusions of the EFSA following the peer review of the initial risk assessments carried out by the competent authority of the rapporteur Member State, Malta, for the pesticide active substance benzobicyclon are reported. The context of the peer review was that required by Regulation (EC) No 1107/2009 of the European Parliament and of the Council. The conclusions were reached on the basis of the evaluation of the representative use of benzobicyclon as a herbicide on rice. The reliable endpoints, appropriate for use in regulatory risk assessment, are presented. Missing information identified as being required by the regulatory framework is listed. Concerns are identified.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+C7  - 9596E
+C8  - EFSA-2025-0419
+TI  - Outcome of the pesticides peer review meeting on general recurring issues in physical and chemical properties and analytical methods
+JO  - EFSA Supporting Publications
+JA  - EFSA Supporting Publications
+VL  - 22
+IS  - 9
+SN  - 2397-8325
+UR  - https://doi.org/10.2903/sp.efsa.2025.EN-9596
+DO  - https://doi.org/10.2903/sp.efsa.2025.EN-9596
+SP  - 9596E
+PY  - 2025
+AB  - Abstract This technical report reflects the outcome of the physical-chemical properties experts? meeting on general recurring issues noted during the EFSA peer reviews of pesticide active substances under Regulation (EC) No 1107/2009. General and specific issues were identified and discussed related to the quality and level of details of the assessment reports and the adherence to the data requirements, in particular regarding analytical methods and issues related to the assessment of the impurity profiles and the proposed active substance and product specifications. Conclusions and further recommendations on these issues are reported.
+ER  - 
+
+TY  - JOUR
+AU  - European Food Safety Authority (EFSA)
+AU  - Álvarez, Fernando
+AU  - Arena, Maria
+AU  - Auteri, Domenica
+AU  - Leite, Sofia Batista
+AU  - Binaglia, Marco
+AU  - Castoldi, Anna Federica
+AU  - Chiusolo, Arianna
+AU  - Colagiorgi, Angelo
+AU  - Colas, Mathilde
+AU  - Crivellente, Federica
+AU  - De Lentdecker, Chloe
+AU  - De Magistris, Isabella
+AU  - Egsmose, Mark
+AU  - Fait, Gabriella
+AU  - Ferilli, Franco
+AU  - Broussard, Monica Fittipaldi
+AU  - Santonja, German Giner
+AU  - Gouliarmou, Varvara
+AU  - Halling, Katrin
+AU  - Ippolito, Alessio
+AU  - Istace, Frederique
+AU  - Jarrah, Samira
+AU  - Kardassi, Dimitra
+AU  - Kienzler, Aude
+AU  - Lanzoni, Anna
+AU  - Lava, Roberto
+AU  - Leuschner, Renata
+AU  - Linguadoca, Alberto
+AU  - Louisse, Jochem
+AU  - Lythgo, Christopher
+AU  - Magrans, Oriol
+AU  - Mangas, Iris
+AU  - Mioč, Andrea
+AU  - Miron, Ileana
+AU  - Molnar, Tunde
+AU  - Padovani, Laura
+AU  - Padricello, Vincenzo
+AU  - Panzarea, Martina
+AU  - Parra Morte, Juan Manuel
+AU  - Rizzuto, Simone
+AU  - Santos, Miguel
+AU  - Serafimova, Rositsa
+AU  - Sharp, Rachel
+AU  - Szentes, Csaba
+AU  - Theobald, Anne
+AU  - Tiramani, Manuela
+AU  - Vianello, Giorgia
+AU  - Villamar-Bouza, Laura
+C7  - e9622
+C8  - EFSA-2025-0427
+TI  - Peer review of the pesticide risk assessment for the active substance pinoxaden in light of confirmatory data submitted
+JO  - EFSA Journal
+JA  - EFSA Journal
+VL  - 23
+IS  - 9
+SN  - 1831-4732
+UR  - https://doi.org/10.2903/j.efsa.2025.9622
+DO  - https://doi.org/10.2903/j.efsa.2025.9622
+SP  - e9622
+KW  - confirmatory information
+KW  - herbicide
+KW  - peer review
+KW  - pesticide
+KW  - Pinoxaden
+KW  - risk assessment
+PY  - 2025
+AB  - Abstract The conclusions of the European Food Safety Authority (EFSA) following the peer review of the initial risk assessment carried out by the competent authority of the rapporteur Member State Austria, for the pesticide active substance pinoxaden are reported. The context of the peer review was that requested by the European Commission following the submission and evaluation of confirmatory information in the areas of environmental fate, mammalian toxicology and residues. The conclusions were reached on the basis of the evaluation of the representative uses of pinoxaden as a herbicide in winter and spring cereals. The reliable endpoints concluded as being appropriate for use in regulatory risk assessment, derived from the available studies and/or literature in the dossier peer reviewed, are presented. Concerns are identified.
+ER  - 

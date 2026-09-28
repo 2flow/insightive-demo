@@ -1,0 +1,223 @@
+{
+  "substance": {
+    "name": "Indoxacarb (enantiomeric reaction mass S:R 75:25)",
+    "ec_list_no": "604-398-2",
+    "cas_no": "144171-61-9",
+    "bas_no": "64",
+    "product_type": "PT18",
+    "regulation": "Regulation (EU) No 528/2012 (BPR)",
+    "evaluating_competent_authority": "France",
+    "current_approval_expiry": "2026-12-31",
+    "current_operative_act": "Commission Implementing Decision (EU) 2024/731 (CELEX 32024D0731)",
+    "r4bp_asset": "EU-0005416-0000",
+    "rml_id": "100.132.370",
+    "notes": "Signals are the analyst layer; summary and sources are the evidence layer. Plant-protection events under Reg. (EC) 1107/2009 are tagged 'ppp' and are a separate regime. Records merged by topic, so a single record may span several acts. Data pulls: active substances 2026-09-01 (db updated 2026-08-31), products 2026-09-03."
+  },
+  "renewal": {
+    "started": "2018-06-28",
+    "track": "Full Article 14(1) evaluation",
+    "postponements": 3
+  },
+  "signal_scale": {
+    "-3": "Decisive",
+    "-2": "Strong",
+    "-1": "Moderate",
+    "0": "Neutral or mixed",
+    "1": "Moderate",
+    "2": "Strong",
+    "3": "Decisive"
+  },
+  "records": [
+    {
+      "date": "2018-06-28",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "Renewal filed — but France routed it to full evaluation",
+      "summary": "Application under Article 13(1). On 12 November 2018 France decided a full Article 14(1) evaluation was necessary, triggering the 365-day Article 8(1) clock.",
+      "tags": [
+        "substance",
+        "renewal",
+        "conflict"
+      ],
+      "signal": {
+        "direction": "POSITIVE",
+        "strength": 1,
+        "label": "Moderate",
+        "basis": "documented",
+        "rationale": "Rules out lapse by non-application. Offset by the full-evaluation route."
+      },
+      "sources": [
+        {
+          "citation": "Commission Implementing Decision (EU) 2024/731, recitals 2–3; Decision (EU) 2019/1030, recitals 2–3; Decision (EU) 2021/1287, recitals 2–3",
+          "pinpoint": "Recitals on submission and on the Article 14(1) decision",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://eur-lex.europa.eu/eli/dec_impl/2024/731/oj",
+          "note": "CONFLICT between the Commission's own acts: 2019/1030 and 2024/731 both state 28 June 2018; 2021/1287 states 26 June 2018. Two primary acts to one, so 28 June adopted here. A secondary source (useforesight.io) also gives 28 June. The 26 June date used in earlier versions of this log was wrong."
+        }
+      ]
+    },
+    {
+      "date": "2021-11-26",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "PPP approval not renewed on mammal risk; reference values cut",
+      "summary": "Reg. (EU) 2021/2081, ground: high long-term risk to small herbivorous mammals. Withdrawal by 19/03/2022, grace to 19/09/2022. ADI cut from 0.006 to 0.005 mg/kg bw/day, ARfD from 0.125 to 0.005 mg/kg bw.",
+      "tags": [
+        "ppp",
+        "substance"
+      ],
+      "signal": {
+        "direction": "NEGATIVE",
+        "strength": -2,
+        "label": "Strong",
+        "basis": "documented",
+        "rationale": "Mammal risk is spray-specific and does not transfer to indoor baits. The lowered reference values are substance-level and do. No source shows the biocidal file citing either."
+      },
+      "sources": [
+        {
+          "citation": "EUR-Lex, CELEX 32021R2081",
+          "pinpoint": "Recitals and Articles 2–3",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://eur-lex.europa.eu/eli/reg_impl/2021/2081/oj",
+          "note": "Preceded by Directive 2006/10/EC inclusion and EFSA conclusions of 2018 (J. 5140) and 2019 (J. 5866)."
+        },
+        {
+          "citation": "EFSA Journal 2022;20(8):7527",
+          "pinpoint": "Revised ADI and ARfD",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://efsa.onlinelibrary.wiley.com/doi/full/10.2903/j.efsa.2022.7527",
+          "note": null
+        }
+      ]
+    },
+    {
+      "date": "2023-09-19",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "France names the blockers: substance identity and endocrine disruption testing needed",
+      "summary": "The eCA reported the evaluation delayed by the need to assess reference specifications and endocrine-disrupting properties, and expected to submit the renewal assessment report in Q2 2024.",
+      "tags": [
+        "substance",
+        "renewal",
+        "endocrine",
+        "isomer",
+        "key",
+        "conflict"
+      ],
+      "blockers": [
+        "Endocrine disruption \u2014 to be assessed",
+        "Substance identity / reference specification"
+      ],
+      "signal": {
+        "direction": "NEGATIVE",
+        "strength": -2,
+        "label": "Strong",
+        "basis": "documented",
+        "rationale": "Reference specifications go to the 75:25 identity; ED is both an exclusion ground and a substitution criterion. France did not treat EFSA's 2018 'ED unlikely' finding as settling it."
+      },
+      "sources": [
+        {
+          "citation": "Commission Implementing Decision (EU) 2024/731, recitals",
+          "pinpoint": "Recital recording the eCA notification of 19 September 2023",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://eur-lex.europa.eu/eli/dec_impl/2024/731/oj",
+          "note": null
+        },
+        {
+          "citation": "EFSA Journal 2018;16(1):5140",
+          "pinpoint": "Endocrine disruption section",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5140",
+          "note": "CONFLICT: PPP peer review concluded ED unlikely; the biocidal eCA is assessing it independently."
+        }
+      ]
+    },
+    {
+      "date": "2025-06-30",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "GB retains PT18 approval to 31/01/2027 — no biocidal divergence",
+      "summary": "GB expiry postponed to 30/06/2025, then covered by HSE's blanket extension of actives expiring 01/01/2024–31/12/2026 to 31 January 2027. GB separately moved to withdraw the PPP approval.",
+      "tags": [
+        "gb",
+        "substance"
+      ],
+      "signal": {
+        "direction": "POSITIVE",
+        "strength": 1,
+        "label": "Moderate",
+        "basis": "documented",
+        "rationale": "Both regimes keep biocidal and ended PPP. GB has a general instrument covering the gap; the EU has none."
+      },
+      "sources": [
+        {
+          "citation": "HSE, ministerial decisions under the GB Biocidal Products Regulation",
+          "pinpoint": "Indoxacarb (enantiomeric reaction mass S:R 75:25) row",
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://www.hse.gov.uk/Biocides/about/ministerial-decisions.htm",
+          "note": null
+        },
+        {
+          "citation": "HSE draft decision to withdraw GB plant protection approval (Article 21(1))",
+          "pinpoint": null,
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://www.hse.gov.uk/pesticides/assets/docs/pnas-aaln-0301.pdf",
+          "note": "PPP file; relies on Reg. 2021/2081 and the revised reference values."
+        }
+      ]
+    },
+    {
+      "date": "2022",
+      "date_precision": "year",
+      "date_derived": true,
+      "title": "Field resistance is eroding every bait active, indoxacarb included",
+      "summary": "102 German cockroach resistance studies across 23 countries and 60 actives. A California field study found increased survivorship toward fipronil, clothianidin, indoxacarb, emamectin benzoate and hydramethylnon alike. A VGSC V1848I strain showed 146-fold indoxacarb and 431-fold metaflumizone resistance.",
+      "tags": [
+        "market",
+        "substance",
+        "resistance",
+        "read-across"
+      ],
+      "signal": {
+        "direction": "MIXED",
+        "strength": 0,
+        "label": "Neutral or mixed",
+        "basis": "documented",
+        "rationale": "Efficacy is eroding, but indoxacarb's value as an IRAC 22A rotation partner is the standard retention argument. Neither is a renewal criterion."
+      },
+      "sources": [
+        {
+          "citation": "Rahayu et al., Trop. Life Sci. Res. 2025;36(3):15",
+          "pinpoint": null,
+          "tier": "PEER-REVIEWED",
+          "verified": true,
+          "url": "https://ejournal.usm.my/tlsr/article/view/tlsr_36_3_2025_15",
+          "note": null
+        },
+        {
+          "citation": "Lee, Choe, Rust & Lee, J. Econ. Entomol. 2022;115(1):259",
+          "pinpoint": null,
+          "tier": "PEER-REVIEWED",
+          "verified": true,
+          "url": "https://academic.oup.com/jee/article-abstract/115/1/259/6469283",
+          "note": null
+        },
+        {
+          "citation": "Liu et al., Insects 2024;15(10):777",
+          "pinpoint": null,
+          "tier": "PEER-REVIEWED",
+          "verified": true,
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11508211/",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

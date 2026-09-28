@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "source": "ECHA — consultations on potential candidates for substitution and on derogation conditions",
+    "sourceFiles": [
+      "consultations on potential candidates for substitution and on derogations conditions_Current.csv"
+    ],
+    "rows": 2,
+    "count": 1,
+    "unmatched": 1
+  },
+  "bySubstance": {
+    "1238-PT18": [
+      {
+        "scope": "CfS",
+        "state": "open",
+        "name": "[1α(S*),3α]-(α)-cyano-(3-phenoxyphenyl)methyl3-(2,2-dichlor-oethenyl)-2,2-dichlorovinyl)-2,2-dimethyl-cyclopropanecarboxylate αCypermethrin)",
+        "productTypes": [
+          "PT18"
+        ],
+        "start": "2026-08-06",
+        "deadline": "2026-10-05",
+        "intendedUse": "PT 18 – Urban pest control (indoor use in large/industrial/commercial buildings) by professional users. Other uses, if applicable (to be specified by the information submitters): Urban pest control by general public and arthropod control in animal houses/shelters by professional users and general public.",
+        "article10": "10(1)(d): meeting two of the PBT criteria. BE eCA proposes that the P criterion is fulfilled in addition to the T criterion. 10(1)(e): concern linked to critical effects. It fulfils the substitution criteria for ED ENV (Cat. 1)",
+        "article5": "None",
+        "additional": "",
+        "link": "https://comments.echa.europa.eu/comments_cms/SubtitutionCandidatesConsultation.aspx?RobjectId=0b0236e18b0c3005",
+        "received": [],
+        "attachments": []
+      }
+    ]
+  }
+}

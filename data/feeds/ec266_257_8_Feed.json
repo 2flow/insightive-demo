@@ -1,0 +1,39 @@
+{
+  "substance": {
+    "name": "Cyromazine",
+    "ec_list_no": "266-257-8",
+    "cas_no": "66215-27-8"
+  },
+  "renewal": {
+    "started": "",
+    "track": "",
+    "postponements": 0
+  },
+  "records": [
+    {
+      "date": "2025-02-06",
+      "date_precision": "day",
+      "date_derived": false,
+      "title": "Union authorisation granted for Neporex 2SG, valid to 2035",
+      "summary": "Elanco won an EU-wide authorisation for its cyromazine fly-control product, running to 31 January 2035. The expensive route, pursued since 2017 and cleared by the BPC in 2024.",
+      "tags": [],
+      "signal": {
+        "direction": "POSITIVE",
+        "strength": 2,
+        "label": "Strong",
+        "basis": "inference",
+        "rationale": "Best evidence against non-renewal, and the most recent substantive record. An authorisation to 2035 cannot outlive a substance approval expiring 2027."
+      },
+      "sources": [
+        {
+          "citation": "Commission Implementing Regulation (EU) 2025/221; authorisation EU-0032480-0000",
+          "pinpoint": null,
+          "tier": "PRIMARY",
+          "verified": true,
+          "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/221/oj/eng",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

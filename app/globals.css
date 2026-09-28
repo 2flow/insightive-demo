@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-canvas text-ink;
+    font-feature-settings: "ss01", "cv11", "liga";
+  }
+}
+
+/* Thin gradient hairline used under the brand header (matches Insightive template) */
+.brand-hairline {
+  height: 1px;
+  background: linear-gradient(to right, #60a5fa, #818cf8, #c084fc);
+  opacity: 0.6;
+}
+
+/* Subtle scrollbar for filter rails */
+.scroll-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 9999px; }
+
+/* The search input's native clear affordance duplicates our own button */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
