@@ -1,7 +1,7 @@
 import { formatDate } from '@/lib/data'
 import { byArea, flagList, hazardAreaActivities, hazardTally, isLive, otherActivities } from '@/lib/pact'
 import type { PactActivity, PactRecord } from '@/lib/types'
-import { ExternalIcon } from './icons'
+import { ExternalIcon, InfoIcon } from './icons'
 
 // What any EU authority is doing about the substance outside the biocides file,
 // split by what it means rather than by where it came from.
@@ -93,6 +93,41 @@ export function PactHazards({ record }: { record: PactRecord }) {
               </a>
               <span className="flag-value">{f.value}</span>
               {f.note && <span className="flag-note">{f.note}</span>}
+              {f.criteria && f.criteria.length > 0 && (
+                <ul className="flag-criteria" aria-label="Criteria met">
+                  {f.criteria.map(c => (
+                    <li key={c}>{c}</li>
+                  ))}
+                </ul>
+              )}
+              {f.quote && <p className="flag-quote">{f.quote}</p>}
+              {/* An aggregate list: what each of its criteria is read from.
+                  Inline rather than a popover — the panel scrolls, and a
+                  floating box inside it is cut off at the edge. */}
+              {f.sources && f.sources.length > 0 && (
+                <details className="flag-sources">
+                  <summary>
+                    <InfoIcon />
+                    Sources cited by the HHP list
+                    <span className="flag-sources-count">{f.sources.length}</span>
+                  </summary>
+                  <ul>
+                    {f.sources.map(s => (
+                      <li key={s.label}>
+                        {s.url ? (
+                          <a href={s.url} target="_blank" rel="noopener noreferrer">
+                            {s.label}
+                            <ExternalIcon />
+                          </a>
+                        ) : (
+                          <span className="flag-sources-plain">{s.label}</span>
+                        )}
+                        {s.note && <span className="flag-sources-note">{s.note}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
             </div>
           ))}
         </div>

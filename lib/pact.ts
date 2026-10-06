@@ -1,6 +1,6 @@
 import raw from './pact.json'
 import { formatDate } from './data'
-import type { PactActivity, PactDataset, PactRecord } from './types'
+import type { PactActivity, PactDataset, PactRecord, PanListing } from './types'
 
 // ECHA's Public Activities Coordination Tool, matched to substances at build
 // time. Two separate things travel in the same export: the activities, and
@@ -122,6 +122,53 @@ export function cleared(status: string): boolean {
 const NPIC_CARCINOGEN = 'https://npic.orst.edu/chemicals_evaluated.pdf'
 const ED_LISTS = 'https://edlists.org/the-ed-lists'
 const ECHA_ED_ASSESSMENT = 'https://chem.echa.europa.eu/activity-lists/edAssessment'
+const EPA_EDSP =
+  'https://www.epa.gov/endocrine-disruption/endocrine-disruptor-screening-program-tier-1-screening-determinations-and'
+
+/** The EDSP tags, and what each is short for on the tile. "No Tier 1 ED
+ *  indication" is EPA having looked and found nothing — shown, not counted. */
+const EDSP_SHORT: Record<string, string> = {
+  'Potential ED': 'EPA potential ED',
+  Unresolved: 'EPA ED unresolved',
+  'No Tier 1 ED indication': 'No EPA ED indication',
+}
+
+const PAN_HHP = 'https://pan-international.org/wp-content/uploads/PAN_HHP_List.pdf'
+
+/** "January 2009 (original list)" with the inference said out loud. */
+export function panAddedText(l: PanListing): string {
+  return l.added.inferred ? `${l.added.text}, assumed` : l.added.text
+}
+
+/**
+ * The publications behind the criteria a substance meets on the PAN list,
+ * each noting which of its criteria it supplies. The PAN list itself and the
+ * ECHA export are general sources, named on the tile instead. Read from the workbook's Sources
+ * sheet, so a source PAN uses for a criterion this substance does not meet is
+ * left out.
+ */
+export function panSources(listings: PanListing[]): { label: string; url: string; note?: string }[] {
+  const all = dataset.meta.pan?.sources ?? []
+  const supplies = new Map<number, string[]>()
+  for (const l of listings)
+    for (const c of l.criteria)
+      for (const i of c.sources) {
+        const labels = supplies.get(i) ?? []
+        if (!labels.includes(c.label)) labels.push(c.label)
+        supplies.set(i, labels)
+      }
+  return Array.from(supplies.keys())
+    .sort((a, b) => a - b)
+    .map(i => ({
+      label: all[i].source,
+      url: all[i].url,
+      note: [all[i].version, `for: ${supplies.get(i)!.join(', ')}`].filter(Boolean).join(' · '),
+    }))
+}
+
+export function edspAdverse(tag: string): boolean {
+  return !!tag && tag !== 'No Tier 1 ED indication'
+}
 
 /**
  * ECHA's own endocrine-disruptor assessment, where the row carries one.
@@ -155,6 +202,13 @@ export interface HazardFlag {
   note: string
   /** Where the value can be checked. */
   url: string
+  /** The publication's own conclusion, verbatim, where it gives one. */
+  quote?: string
+  /** The individual criteria behind the listing, where it is met on several
+   *  grounds — PAN's "Highly toxic to bees", "Fatal if inhaled" … */
+  criteria?: string[]
+  /** The publications those criteria are read from, for the ⓘ on the card. */
+  sources?: { label: string; url: string; note?: string }[]
   /** Amber for a listing or an open question; plain where an assessment
    *  concluded without identifying anything, because colouring that as a
    *  hazard would invert what it reports. Nine of the sixteen endocrine
@@ -207,6 +261,53 @@ export function flagList(record: PactRecord): HazardFlag[] {
       value: flags.edList,
       note: [flags.edStatus, flags.edEffects].filter(Boolean).join(' · '),
       url: ED_LISTS,
+      adverse: true,
+    })
+  }
+
+  // A different authority from ECHA's assessment, so it stands beside it rather
+  // than replacing it.
+  if (flags.edspTag) {
+    out.push({
+      label: 'US EPA EDSP Tier 1 screening',
+      short: EDSP_SHORT[flags.edspTag] ?? `EPA: ${flags.edspTag}`,
+      value: flags.edspTag,
+      note: 'weight-of-evidence conclusion, 2015 · tag read against the EU ED criteria',
+      url: EPA_EDSP,
+      quote: flags.edspConclusion,
+      adverse: edspAdverse(flags.edspTag),
+    })
+  }
+
+  // An NGO list rather than an authority's, but a published one with stated
+  // criteria. One card however many PAN entries name the substance — it is one
+  // list — with every criterion met across them.
+  const pan = record.pan ?? []
+  if (pan.length) {
+    const criteria = Array.from(new Set(pan.flatMap(l => l.criteria.map(c => c.label))))
+    const overall = dataset.meta.pan?.sources.find(s => s.group === 'Overall' && s.columns === 'All')
+    out.push({
+      label: 'PAN International HHP list',
+      short: 'PAN HHP',
+      value: 'Highly Hazardous Pesticide',
+      note: [
+        pan.length === 1
+          ? `added ${panAddedText(pan[0])}`
+          : pan.map(l => `as ${l.panName}, added ${panAddedText(l)}`).join(' · '),
+        dataset.meta.pan?.edition ? `list of ${dataset.meta.pan.edition}` : '',
+      ]
+        .filter(Boolean)
+        .join(' · '),
+      url: overall?.url || PAN_HHP,
+      // PAN's footnote, where the entry has one — pyrethrins came off the list
+      // in 2013 and went back on in 2019. Written lower-case after the name.
+      quote:
+        pan
+          .map(l => l.note && l.note[0].toUpperCase() + l.note.slice(1))
+          .filter(Boolean)
+          .join(' ') || undefined,
+      criteria,
+      sources: panSources(pan),
       adverse: true,
     })
   }

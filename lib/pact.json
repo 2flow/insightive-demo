@@ -4,8 +4,151 @@
     "sourceFile": "pact-export-filtered_updated_and_other_flags.csv",
     "rows": 89,
     "empty": 28,
-    "count": 70,
-    "unmatched": 0
+    "count": 74,
+    "unmatched": 0,
+    "edspSourceFile": "EPA_2015_EDSP_Tier1_WoE_Conclusions_x_ECHA_PT18-PT19_ED_tags.xlsx",
+    "pan": {
+      "sourceFile": "PAN_HHP_PT18_PT19.xlsx",
+      "edition": "December 2024",
+      "sources": [
+        {
+          "group": "Acute toxicity",
+          "columns": "WHO Ia, WHO Ib",
+          "source": "WHO Recommended Classification of Pesticides by Hazard",
+          "version": "2019 edition",
+          "url": "https://www.who.int/publications/i/item/9789240005662",
+          "note": ""
+        },
+        {
+          "group": "Acute toxicity / long-term effects",
+          "columns": "H330; GHS+ carc, muta, repro (1A,1B); GHS+ C2 & R2",
+          "source": "EU CLP Regulation (EC) No 1272/2008, Annex VI",
+          "version": "Consolidated version 1 Dec 2023",
+          "url": "https://eur-lex.europa.eu/eli/reg/2008/1272/2023-12-01",
+          "note": "PAN also uses Carc/Muta/Repr 1 classifications from EU non-approval decisions not yet in Annex VI"
+        },
+        {
+          "group": "Acute toxicity / long-term effects",
+          "columns": "H330; GHS+ carc, muta, repro (1A,1B); GHS+ C2 & R2",
+          "source": "GHS classification by the Japanese Government (NITE)",
+          "version": "2020",
+          "url": "https://www.chem-info.nite.go.jp/chem/english/ghs/r5_list_e.html",
+          "note": "Included since the 2021 update; link could not be verified"
+        },
+        {
+          "group": "Long-term effects",
+          "columns": "IARC carc, IARC prob carc",
+          "source": "IARC Monographs – agents classified (Vol. 1–123)",
+          "version": "2018",
+          "url": "https://monographs.iarc.who.int/agents-classified-by-the-iarc/",
+          "note": "Later IARC evaluations not reflected"
+        },
+        {
+          "group": "Long-term effects",
+          "columns": "EPA carc, EPA prob likel carc",
+          "source": "US EPA OPP – Chemicals Evaluated for Carcinogenic Potential (Annual Cancer Report)",
+          "version": "\"Up to 2018\"",
+          "url": "https://npic.orst.edu/chemicals_evaluated.pdf",
+          "note": "EPA reclassifications after 2018 (e.g. permethrin 2020) only picked up at next PAN update"
+        },
+        {
+          "group": "Long-term effects (ED)",
+          "columns": "EU EDC",
+          "source": "Regulation (EC) No 1107/2009 (interim ED criteria)",
+          "version": "2009",
+          "url": "https://eur-lex.europa.eu/eli/reg/2009/1107/oj",
+          "note": "Interim criterion = Carc 2 AND Repr 2"
+        },
+        {
+          "group": "Long-term effects (ED)",
+          "columns": "EU EDC",
+          "source": "Commission Regulation (EU) 2018/605 (ED criteria)",
+          "version": "2018",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32018R0605",
+          "note": ""
+        },
+        {
+          "group": "Long-term effects (ED)",
+          "columns": "EU EDC",
+          "source": "EFSA – Overview of ED assessment of pesticide active substances",
+          "version": "Accessed 11.10.2024",
+          "url": "https://www.efsa.europa.eu/sites/default/files/2023-12/overview-endocrine-disrupting-assessment-pesticide-active-substances.xlsx",
+          "note": ""
+        },
+        {
+          "group": "Long-term effects (ED)",
+          "columns": "(context)",
+          "source": "ECHA – New CLP hazard classes (ED, PBT, vPvB, PMT)",
+          "version": "2023",
+          "url": "https://echa.europa.eu/new-hazard-classes-2023",
+          "note": "Not yet used as a PAN criterion"
+        },
+        {
+          "group": "Environmental toxicity",
+          "columns": "very bioacc, very pers, very toxic to aq. organisms, highly toxic bees",
+          "source": "Pesticide Properties DataBase (PPDB), University of Hertfordshire",
+          "version": "Not stated",
+          "url": "https://sitem.herts.ac.uk/aeru/ppdb/",
+          "note": "Thresholds: P half-life >60 d water / >180 d soil; B BCF >5000 or log Kow >5; T Daphnia EC50 <0.1 mg/l; bees LD50 <2 µg/bee"
+        },
+        {
+          "group": "Environmental toxicity",
+          "columns": "very bioacc, very pers, very toxic to aq. organisms, highly toxic bees",
+          "source": "Lewis KA et al. – An international database for pesticide risk assessments and management",
+          "version": "2018 / 2020",
+          "url": "https://doi.org/10.1080/10807039.2015.1133242",
+          "note": ""
+        },
+        {
+          "group": "Environmental toxicity",
+          "columns": "highly toxic bees, very toxic to aq. organisms",
+          "source": "US EPA – Technical Overview of Ecological Risk Assessment (toxicity categories)",
+          "version": "2019",
+          "url": "https://www.epa.gov/pesticide-science-and-assessing-pesticide-risks/technical-overview-ecological-risk-assessment-0",
+          "note": "Source of the threshold definitions"
+        },
+        {
+          "group": "Conventions",
+          "columns": "POP",
+          "source": "Stockholm Convention (POPs)",
+          "version": "Not stated",
+          "url": "http://www.pops.int",
+          "note": "Includes pesticides meeting the criteria but not yet listed"
+        },
+        {
+          "group": "Conventions",
+          "columns": "PIC",
+          "source": "Rotterdam Convention (PIC), Annex III",
+          "version": "Not stated",
+          "url": "http://www.pic.int",
+          "note": "Includes pesticides meeting the criteria but not yet listed"
+        },
+        {
+          "group": "Conventions",
+          "columns": "Montreal Prot",
+          "source": "Montreal Protocol on ozone-depleting substances",
+          "version": "Not stated",
+          "url": "http://ozone.unep.org",
+          "note": ""
+        },
+        {
+          "group": "Overall",
+          "columns": "All",
+          "source": "PAN International List of Highly Hazardous Pesticides",
+          "version": "December 2024",
+          "url": "https://pan-international.org/wp-content/uploads/PAN_HHP_List.pdf",
+          "note": ""
+        },
+        {
+          "group": "Overall",
+          "columns": "BPR columns",
+          "source": "ECHA – Biocidal active substances export (PT18, PT19)",
+          "version": "Exported 01/09/2026",
+          "url": "https://echa.europa.eu/information-on-chemicals/biocidal-active-substances",
+          "note": ""
+        }
+      ]
+    }
   },
   "bySubstance": {
     "1299-PT18": {
@@ -34,7 +177,9 @@
         "carcinogenYear": "1989",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "58-PT19": {
@@ -55,7 +200,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "15-PT18": {
@@ -76,8 +223,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Clothianidin",
+          "cas": "210880-92-5",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1301-PT18": {
       "name": "(RS)-3-Allyl-2-methyl-4-oxocyclopent-2- enyl (1R,3R)-2,2-dimethyl-3-(2-methyl- prop-1-enyl)-cyclopropanecarboxylate (mixture of 2 isomers 1R trans: 1R/S only 1:3) (Esbiothrin)",
@@ -97,7 +272,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1237-PT18": {
@@ -118,7 +295,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1283-PT18": {
@@ -155,8 +334,36 @@
         "carcinogenYear": "1988",
         "edList": "List II — under evaluation",
         "edStatus": "CLH classification proposed (2025)",
-        "edEffects": "Health and environment"
-      }
+        "edEffects": "Health and environment",
+        "edspTag": "Potential ED",
+        "edspConclusion": "Cypermethrin demonstrates no convincing evidence of potential interaction with the estrogen or thyroid pathways. However there appears to be a potential for interaction with the androgen (anti-androgenic) pathway in mammals and fish."
+      },
+      "pan": [
+        {
+          "panName": "Cypermethrin",
+          "cas": "52315-07-8",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1314-PT18": {
       "name": "hexaflumuron (ISO); 1-(3,5-dichloro-4-(1,1,2,2-tetrafluoroethoxy)phenyl)-3-(2,6-difluorobenzoyl)urea",
@@ -176,8 +383,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Hexaflumuron",
+          "cas": "86479-06-3",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1300-PT18": {
       "name": "empenthrin (ISO); 1-ethynyl-2-methylpent-2-enyl 2,2-dimethyl-3-(2-methylprop-1-enyl)cyclopropanecarboxylate",
@@ -197,7 +432,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1344-PT18": {
@@ -234,7 +471,9 @@
         "carcinogenYear": "1995",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "No Tier 1 ED indication",
+        "edspConclusion": "The conclusion of the WoE evaluation is that PBO demonstrates no convincing evidence of potential interaction with the estrogen, androgen or thyroid pathways in mammals or wildlife."
       }
     },
     "1407-PT18": {
@@ -255,7 +494,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "66-PT18": {
@@ -284,8 +525,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Chlorfenapyr",
+          "cas": "122453-73-0",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1238-PT18": {
       "name": "[1.alpha.(S*),3.alpha.]-(.alpha.)-cyano-(3-phenoxyphenyl)methyl3-(2,2-dichlor-oethenyl)-2,2-dichlorovinyl)-2,2-dimethyl-cyclopropanecarboxylate (alpha-Cypermethrin)",
@@ -296,8 +565,36 @@
         "carcinogenYear": "1988",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Cypermethrin, alpha",
+          "cas": "67375-30-8",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1318-PT18": {
       "name": "imiprothrin (ISO); reaction mass of [2,5-dioxo-3-(prop-2-yn-1-yl)imidazolidin-1-yl]methyl (1R,3S)-2,2-dimethyl-3-(2-methylprop-1-en-1-yl)cyclopropanecarboxylate and [2,5-dioxo-3-(prop-2-yn-1-yl)imidazolidin-1-yl]methyl (1R,3R)-2,2-dimethyl-3-(2-methylprop-1-en-1-yl)cyclopropanecarboxylate",
@@ -317,8 +614,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Imiprothrin",
+          "cas": "72963-72-5",
+          "added": {
+            "text": "June 2013",
+            "date": "2013-06-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1-PT18": {
       "name": "Abamectin",
@@ -338,8 +663,53 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "No Tier 1 ED indication",
+        "edspConclusion": "Abamectin demonstrates no convincing evidence of potential interaction with the estrogen, androgen or thyroid pathways."
+      },
+      "pan": [
+        {
+          "panName": "Abamectin",
+          "cas": "71751-41-2",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "WHO Ib",
+              "label": "WHO Class Ib — highly hazardous",
+              "group": "Acute toxicity",
+              "sources": [
+                0
+              ]
+            },
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1235-PT18": {
       "name": "acetamiprid (ISO); (1E)-N-[(6-chloropyridin-3-yl)methyl]-N'-cyano-N-methylethanimidamide; (E)-N1-[(6-chloro-3-pyridyl)methyl]-N2-cyano-N1-methylacetamidine",
@@ -359,7 +729,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "4-PT18": {
@@ -396,8 +768,68 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Aluminum phosphide",
+          "cas": "20859-73-8",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        },
+        {
+          "panName": "Phosphine",
+          "cas": "7803-51-2",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "7-PT18": {
       "name": "Bendiocarb",
@@ -417,10 +849,38 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Bendiocarb",
+          "cas": "22781-23-3",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
-    "1983-PT19": {
+    "1268-PT18": {
       "name": "Chrysanthemum cinerariaefolium, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
       "activities": [
@@ -446,7 +906,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "2003-PT18": {
@@ -475,7 +937,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1983-PT18": {
@@ -504,7 +968,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "2003-PT19": {
@@ -533,10 +999,12 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
-    "1268-PT18": {
+    "1983-PT19": {
       "name": "Chrysanthemum cinerariaefolium, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
       "activities": [
@@ -562,7 +1030,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "65-PT19": {
@@ -591,7 +1061,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1280-PT18": {
@@ -620,8 +1092,35 @@
         "carcinogenYear": "1993",
         "edList": "List I — identified ED",
         "edStatus": "Concluded ED in BPC opinion (2021), legally adopted under BPR (2024)",
-        "edEffects": "Health and environment"
-      }
+        "edEffects": "Health and environment",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Cyanamide",
+          "cas": "420-04-2",
+          "added": {
+            "text": "December 2016",
+            "date": "2016-12-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "GHS+ C2 & R2",
+              "label": "Suspected carcinogen and reprotoxicant (Carc 2 + Repr 2)",
+              "group": "Long-term effects",
+              "sources": [
+                1,
+                2
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1287-PT19": {
       "name": "Decanoic acid",
@@ -657,7 +1156,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1287-PT18": {
@@ -694,7 +1195,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "24-PT18": {
@@ -715,8 +1218,45 @@
         "carcinogenYear": "",
         "edList": "List II — under evaluation",
         "edStatus": "On Commission EDC list, Cosmetics field (2019)",
-        "edEffects": "Health"
-      }
+        "edEffects": "Health",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Deltamethrin",
+          "cas": "52918-63-5",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "GHS+ C2 & R2",
+              "label": "Suspected carcinogen and reprotoxicant (Carc 2 + Repr 2)",
+              "group": "Long-term effects",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1293-PT18": {
       "name": "dinotefuran (ISO); 1-methyl-2-nitro-3-(tetrahydro-3-furylmethyl)guanidine",
@@ -752,8 +1292,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Dinotefuran",
+          "cas": "165252-70-0",
+          "added": {
+            "text": "2009–2011",
+            "date": "2011-01-01",
+            "precision": "year",
+            "inferred": false,
+            "range": true
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "2463-PT19": {
       "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
@@ -773,7 +1341,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "2463-PT18": {
@@ -794,7 +1364,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1445-PT18": {
@@ -815,7 +1387,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1302-PT18": {
@@ -836,8 +1410,45 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "Unresolved",
+        "edspConclusion": "The conclusion of the WoE evaluation is that esfenvalerate demonstrates no convincing evidence of potential interaction with the estrogen or androgen pathway in mammalian and wildlife species. Additionally, the available information indicates no convincing evidence of potential interaction with the thyroid pathway for mammals, but a conclusion for this pathway could not be determined for non-mammalian species."
+      },
+      "pan": [
+        {
+          "panName": "Esfenvalerate",
+          "cas": "66230-04-4",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1320-PT19": {
       "name": "Ethyl N-acetyl-N-butyl-β-alaninate",
@@ -857,7 +1468,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "30-PT18": {
@@ -894,8 +1507,55 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Etofenprox; Ethofenprox",
+          "cas": "80844-07-1",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "very pers water, soil or sediment",
+              "label": "Very persistent in water, soil or sediment",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10
+              ]
+            },
+            {
+              "key": "very toxic to aq. organisms",
+              "label": "Very toxic to aquatic organisms",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1272-PT19": {
       "name": "Eucalyptus citriodora oil, hydrated, cyclized",
@@ -915,7 +1575,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "33-PT18": {
@@ -936,8 +1598,36 @@
         "carcinogenYear": "1995",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Fipronil",
+          "cas": "120068-37-3",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "2144-PT19": {
       "name": "Garlic, ext.",
@@ -957,7 +1647,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1308-PT18": {
@@ -1018,7 +1710,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1308-PT19": {
@@ -1079,7 +1773,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "60-PT18": {
@@ -1100,8 +1796,43 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Hydrogen cyanide",
+          "cas": "74-90-8",
+          "added": {
+            "text": "March 2018",
+            "date": "2018-03-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "WHO Ia",
+              "label": "WHO Class Ia — extremely hazardous",
+              "group": "Acute toxicity",
+              "sources": [
+                0
+              ]
+            },
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "37-PT18": {
       "name": "imidacloprid (ISO); 1-(6-chloropyridin-3-ylmethyl)-N-nitroimidazolidin-2-ylidenamine",
@@ -1137,8 +1868,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "No Tier 1 ED indication",
+        "edspConclusion": "Imidacloprid demonstrates no convincing evidence of potential interaction with the estrogen, androgen or thyroid pathways in vivo in mammals or wildlife."
+      },
+      "pan": [
+        {
+          "panName": "Imidacloprid",
+          "cas": "138261-41-3",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "64-PT18": {
       "name": "Indoxacarb",
@@ -1158,8 +1917,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Indoxacarb",
+          "cas": "173584-44-6",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1323-PT19": {
       "name": "Lauric acid",
@@ -1179,7 +1966,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1324-PT19": {
@@ -1200,7 +1989,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "42-PT18": {
@@ -1237,8 +2028,58 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Magnesium phosphide",
+          "cas": "12057-74-8",
+          "added": {
+            "text": "June 2013",
+            "date": "2013-06-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            }
+          ],
+          "note": ""
+        },
+        {
+          "panName": "Phosphine",
+          "cas": "7803-51-2",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1469-PT19": {
       "name": "Margosa, ext.",
@@ -1274,44 +2115,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
-    },
-    "43-PT18": {
-      "name": "Margosa, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Withdrawn",
-          "intention": "",
-          "updated": "2025-10-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2015-10-30",
-          "updated": "2025-09-05",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2016-12-14",
-          "updated": "2022-11-29",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1469-PT18": {
@@ -1348,7 +2154,48 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "43-PT18": {
+      "name": "Margosa, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2025-10-13",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-10-30",
+          "updated": "2025-09-05",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-12-14",
+          "updated": "2022-11-29",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "44-PT19": {
@@ -1377,7 +2224,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "45-PT19": {
@@ -1398,7 +2247,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "23-PT19": {
@@ -1419,7 +2270,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1334-PT18": {
@@ -1440,7 +2293,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "46-PT18": {
@@ -1461,7 +2316,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "47-PT19": {
@@ -1482,7 +2339,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1336-PT18": {
@@ -1511,7 +2370,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "2203-PT19": {
@@ -1548,7 +2409,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "2503-PT19": {
@@ -1569,7 +2432,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1342-PT18": {
@@ -1590,7 +2455,9 @@
         "carcinogenYear": "2020",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "Potential ED",
+        "edspConclusion": "There is no convincing evidence of potential interaction with the estrogen or thyroid pathways in mammals or wildlife. There is evidence for potential interaction with the androgen pathway in mammals. There is no convincing evidence for a potential interaction with the androgen pathway in wildlife."
       }
     },
     "61-PT18": {
@@ -1611,7 +2478,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "Potential ED",
+        "edspConclusion": "There was no convincing evidence for potential interaction of pyriproxyfen with the estrogen pathway in mammals or wildlife. In mammals, there was limited evidence of potential interaction with the androgen and thyroid pathways. However, these effects were considered to be secondary to liver enzyme induction (CYP2B, CYP3A, CYP4A and UGT), increased liver weights and hepatocellular hypertrophy. The evidence suggests potential interaction with the androgen pathway in fish. There is no convincing evidence of potential interaction with the thyroid pathway in amphibians."
       }
     },
     "1449-PT18": {
@@ -1640,7 +2509,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1243-PT18": {
@@ -1661,8 +2532,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Azamethiphos",
+          "cas": "35575-96-3",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1386-PT18": {
       "name": "Isopropyl-(2E,4E,7S)-11-methoxy-3,7,11-trimethyl-2,4-dodecadienoate",
@@ -1682,7 +2581,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1377-PT18": {
@@ -1703,7 +2604,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "49-PT18": {
@@ -1724,8 +2627,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Spinosad",
+          "cas": "168316-95-8",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "50-PT18": {
       "name": "Sulphuryl difluoride",
@@ -1753,7 +2684,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1378-PT18": {
@@ -1814,7 +2747,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1400-PT18": {
@@ -1843,8 +2778,36 @@
         "carcinogenYear": "1989",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Tetramethrin",
+          "cas": "7696-12-0",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "54-PT18": {
       "name": "thiamethoxam (ISO); 3-(2-chloro-thiazol-5-ylmethyl)-5-methyl[1,3,5]oxadiazinan-4-ylidene-N-nitroamine",
@@ -1864,8 +2827,36 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Thiamethoxam",
+          "cas": "153719-23-4",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
     },
     "1404-PT18": {
       "name": "transfluthrin (ISO); 2,3,5,6-tetrafluorobenzyl (1R,3S)-3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropanecarboxylate",
@@ -1885,7 +2876,9 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
       }
     },
     "1282-PT18": {
@@ -1906,8 +2899,222 @@
         "carcinogenYear": "",
         "edList": "",
         "edStatus": "",
-        "edEffects": ""
-      }
+        "edEffects": "",
+        "edspTag": "No Tier 1 ED indication",
+        "edspConclusion": "Cyfluthrin demonstrates no convincing evidence of potential interaction with the estrogen, androgen or thyroid pathways."
+      },
+      "pan": [
+        {
+          "panName": "Cyfluthrin",
+          "cas": "68359-37-5",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "WHO Ib",
+              "label": "WHO Class Ib — highly hazardous",
+              "group": "Acute toxicity",
+              "sources": [
+                0
+              ]
+            },
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    "41-PT18": {
+      "name": "lambda-cyhalothrin",
+      "description": "",
+      "activities": [],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Lambda-cyhalothrin",
+          "cas": "91465-08-6",
+          "added": {
+            "text": "January 2009 (original list)",
+            "date": "2009-01-01",
+            "precision": "month",
+            "inferred": true,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "H330",
+              "label": "Fatal if inhaled (H330)",
+              "group": "Acute toxicity",
+              "sources": [
+                1,
+                2
+              ]
+            },
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    "1353-PT18": {
+      "name": "2-methyl-4-oxo-3-(prop-2-ynyl)cyclopent-2-en-1-yl 2,2-dimethyl-3-(2-methylprop-1-enyl)cyclopropanecarboxylate (Prallethrin)",
+      "description": "",
+      "activities": [],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Prallethrin",
+          "cas": "23031-36-9",
+          "added": {
+            "text": "2009–2011",
+            "date": "2011-01-01",
+            "precision": "year",
+            "inferred": false,
+            "range": true
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    "1356-PT18": {
+      "name": "Pyrethrins and Pyrethroids",
+      "description": "",
+      "activities": [],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Pyrethrins, Pyrethrum extract",
+          "cas": "8003-34-7",
+          "added": {
+            "text": "March 2019",
+            "date": "2019-03-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": "deleted from the list in 2013 and re-added March 2019."
+        }
+      ]
+    },
+    "1356-PT19": {
+      "name": "Pyrethrins and Pyrethroids",
+      "description": "",
+      "activities": [],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "pan": [
+        {
+          "panName": "Pyrethrins, Pyrethrum extract",
+          "cas": "8003-34-7",
+          "added": {
+            "text": "March 2019",
+            "date": "2019-03-01",
+            "precision": "month",
+            "inferred": false,
+            "range": false
+          },
+          "criteria": [
+            {
+              "key": "highly toxic bees",
+              "label": "Highly toxic to bees",
+              "group": "Environmental toxicity",
+              "sources": [
+                9,
+                10,
+                11
+              ]
+            }
+          ],
+          "note": "deleted from the list in 2013 and re-added March 2019."
+        }
+      ]
     }
   }
 }

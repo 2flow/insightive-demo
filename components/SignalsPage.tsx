@@ -2,9 +2,11 @@
 
 import { Fragment, useMemo, useState } from 'react'
 import { formatDate, substances } from '@/lib/data'
-import { DEFAULT_ORDER, RECORD_KINDS, allRecords, orderRecords, tallyRecords } from '@/lib/feeds'
+import { DEFAULT_ORDER, allRecords, orderRecords, tallyRecords } from '@/lib/feeds'
+import { BANDS, CATEGORIES, categoryOf } from '@/lib/categories'
+import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
-import RecordCard from './RecordCard'
+import RecordCard, { CATEGORY_ICON } from './RecordCard'
 import { ArrowLeftIcon } from './icons'
 
 // Every signal across every substance on one timeline, oldest first. The
@@ -35,7 +37,7 @@ export default function SignalsPage({
   onOpenSubstance: (id: string) => void
 }) {
   const [order, setOrder] = useState<RecordOrder>(DEFAULT_ORDER)
-  // Empty means everything. Selecting kinds narrows to those; the chips carry
+  // Empty means everything. Selecting categories narrows to those; the chips carry
   // their own counts so the reader can see what filtering would cost.
   const [kinds, setKinds] = useState<Set<string>>(new Set())
 
@@ -43,12 +45,15 @@ export default function SignalsPage({
 
   const perKind = useMemo(() => {
     const n = new Map<string, number>()
-    for (const r of all) n.set(r.record.kind ?? 'research', (n.get(r.record.kind ?? 'research') ?? 0) + 1)
+    for (const r of all) {
+      const c = categoryOf(r.record).key
+      n.set(c, (n.get(c) ?? 0) + 1)
+    }
     return n
   }, [all])
 
   const shown = useMemo(
-    () => (kinds.size === 0 ? all : all.filter(r => kinds.has(r.record.kind ?? 'research'))),
+    () => (kinds.size === 0 ? all : all.filter(r => kinds.has(categoryOf(r.record).key))),
     [all, kinds],
   )
   const rows = useMemo(() => orderRecords(shown, r => r.record.date, order), [shown, order])
@@ -66,6 +71,7 @@ export default function SignalsPage({
     })
 
   const counts = tallyRecords(shown.map(r => r.record))
+  const ngoCount = shown.filter(r => isNgo(r.record)).length
   const first = dated[0]
   const last = dated[dated.length - 1]
   const subjects = new Set(shown.map(r => r.substance.id)).size
@@ -114,18 +120,32 @@ export default function SignalsPage({
           Everything
           <span className="sig-chip-n">{all.length}</span>
         </button>
-        {RECORD_KINDS.filter(k => perKind.get(k.kind)).map(k => (
-          <button
-            type="button"
-            key={k.kind}
-            className={`sig-chip ${kinds.has(k.kind) ? 'is-on' : ''}`}
-            aria-pressed={kinds.has(k.kind)}
-            onClick={() => toggle(k.kind)}
-          >
-            {k.label}
-            <span className="sig-chip-n">{perKind.get(k.kind)}</span>
-          </button>
-        ))}
+        {BANDS.map(b => {
+          const cats = CATEGORIES.filter(c => c.band === b.band && perKind.get(c.key))
+          if (cats.length === 0) return null
+          return (
+            <span className={`sig-filter-band band-${b.band}`} key={b.band} title={b.note}>
+              <span className="sig-filter-band-label">{b.label}</span>
+              {cats.map(c => {
+                const Icon = CATEGORY_ICON[c.key]
+                return (
+                  <button
+                    type="button"
+                    key={c.key}
+                    className={`sig-chip ${kinds.has(c.key) ? 'is-on' : ''}`}
+                    aria-pressed={kinds.has(c.key)}
+                    title={c.covers}
+                    onClick={() => toggle(c.key)}
+                  >
+                    <Icon className="sig-chip-icon" />
+                    {c.label}
+                    <span className="sig-chip-n">{perKind.get(c.key)}</span>
+                  </button>
+                )
+              })}
+            </span>
+          )
+        })}
       </div>
 
       <div className="feed-section-head">
@@ -168,6 +188,15 @@ export default function SignalsPage({
           {counts.neutral > 0 && (
             <span className="feed-tally-item tone-neutral">
               <b>{counts.neutral}</b> neutral
+            </span>
+          )}
+          {/* NGO report items carry no reading, so they sit outside the tally. */}
+          {ngoCount > 0 && (
+            <span
+              className="feed-tally-item feed-outlook-ngo"
+              title="Items from NGO watch reports — indirect context, shown lighter and not tagged"
+            >
+              <b>{ngoCount}</b> NGO
             </span>
           )}
         </div>

@@ -237,3 +237,96 @@ export function StarIcon({ className, filled }: IconProps & { filled?: boolean }
     </svg>
   )
 }
+
+// ── Signal categories (see lib/categories.ts) ─────────────────
+
+export function CertificateIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <rect x="3" y="4" width="18" height="12" rx="1.5" />
+      <path d="M7 8h10M7 11h5" />
+      <circle cx="16" cy="14.5" r="2.5" />
+      <path d="m14.6 16.6-.6 4.4 2-1.2 2 1.2-.6-4.4" />
+    </svg>
+  )
+}
+
+export function RefreshIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M20 11a8 8 0 0 0-14.6-4.4L4 8" />
+      <path d="M4 3v5h5" />
+      <path d="M4 13a8 8 0 0 0 14.6 4.4L20 16" />
+      <path d="M20 21v-5h-5" />
+    </svg>
+  )
+}
+
+export function FactoryIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M3 21V10l5 3V10l5 3V4h4l1 17" />
+      <path d="M2 21h20" />
+      <path d="M7 17h1M11 17h1M15 17h1" />
+    </svg>
+  )
+}
+
+export function ScaleIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M12 3v18M7 21h10M5 7h14" />
+      <path d="m5 7-3 7a3.5 3.5 0 0 0 6 0Z" />
+      <path d="m19 7-3 7a3.5 3.5 0 0 0 6 0Z" />
+    </svg>
+  )
+}
+
+export function GlobeIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </svg>
+  )
+}
+
+export function MegaphoneIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M3 10v4a1 1 0 0 0 1 1h3l6 4V5L7 9H4a1 1 0 0 0-1 1Z" />
+      <path d="M17 9a4 4 0 0 1 0 6" />
+      <path d="m7 15 1.5 5h2.5L10 16" />
+    </svg>
+  )
+}
+
+export function FileTextIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z" />
+      <path d="M14 3v5h5M9 13h6M9 17h6" />
+    </svg>
+  )
+}
+
+export function SparkleIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <path d="M12 4 13.8 9.2 19 11l-5.2 1.8L12 18l-1.8-5.2L5 11l5.2-1.8Z" />
+      <path d="M19 3v3M17.5 4.5h3M5 17v3M3.5 18.5h3" />
+    </svg>
+  )
+}
+
+export function UserSearchIcon({ className }: IconProps) {
+  return (
+    <svg {...base(className)}>
+      <circle cx="9" cy="8" r="4" />
+      <path d="M2 21a7 7 0 0 1 10-6.3" />
+      <circle cx="17" cy="17" r="3" />
+      <path d="m21 21-1.8-1.8" />
+    </svg>
+  )
+}

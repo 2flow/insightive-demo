@@ -437,26 +437,38 @@
       }
     },
     "13-PT18": {
-      "name": "Carbon dioxide (basic substance)",
-      "euId": "1454",
-      "status": "Not approved",
-      "approvalDate": "",
-      "expiryDate": "",
+      "name": "Carbon dioxide (active substance)",
+      "euId": "509",
+      "status": "Approved",
+      "approvalDate": "2022-05-01",
+      "expiryDate": "2037-04-30",
       "substitution": "",
-      "legislation": "Reg. (EU) 2021/80",
-      "rms": "",
-      "authorised": [],
+      "legislation": "2008/127, Reg. (EU) 2017/195, Reg. (EU) 2020/1160, Reg. (EU) 2021/745, Reg. (EU) 2022/437, Reg. (EU) No 532/2013, Reg. (EU) No 540/2011",
+      "rms": "FR / AT",
+      "authorised": [
+        "AT",
+        "BE",
+        "CZ",
+        "DE",
+        "ES",
+        "FR",
+        "IT",
+        "NL",
+        "PL",
+        "PT",
+        "SI"
+      ],
       "classification": "",
       "ai": {
-        "mechanism": "Refused as a basic substance",
-        "safetyBased": "No - legal eligibility, not safety",
-        "primaryReason": "Legally barred from the basic-substance route",
-        "reasonDetail": "Article 23(1)(d) of Reg. 1107/2009 allows basic-substance approval only for a substance NOT placed on the market as a plant protection product. Food-grade CO2 is, and carbon dioxide has been approved as an ordinary active substance since 01/09/2009. The two statuses are mutually exclusive by design, so this is an eligibility refusal with no safety finding.",
-        "keyAct": "Reg. (EU) 2021/80 - non-approval as a basic substance",
-        "history": "Application 27/02/2018 (Dr Knoell Consult) -> refused 2021 on Art. 23(1)(d) grounds",
-        "confidence": "High",
-        "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R0080",
-        "qualityFlag": "Not contradictory with the approved 'Carbon dioxide (active substance)' row - do not deduplicate"
+        "mechanism": "n/a - currently approved",
+        "safetyBased": "",
+        "primaryReason": "",
+        "reasonDetail": "",
+        "keyAct": "",
+        "history": "",
+        "confidence": "",
+        "source": "",
+        "qualityFlag": ""
       }
     },
     "66-PT18": {
@@ -602,26 +614,51 @@
       }
     },
     "1283-PT18": {
-      "name": "zeta-Cypermethrin",
-      "euId": "198",
-      "status": "Not approved",
-      "approvalDate": "2009-12-01",
-      "expiryDate": "2020-12-01",
-      "substitution": "",
-      "legislation": "2009/37, Reg. (EU) 2020/1643, Reg. (EU) 2022/801, Reg. (EU) No 540/2011",
-      "rms": "AT / DE",
-      "authorised": [],
-      "classification": "",
+      "name": "Cypermethrin",
+      "euId": "834",
+      "status": "Approved",
+      "approvalDate": "2022-02-01",
+      "expiryDate": "2029-01-31",
+      "substitution": "non-active isomers",
+      "legislation": "05/53/EC, Reg (EU) 2020/1511, Reg. (EU) 2017/1511, Reg. (EU) 2018/1262, Reg. (EU) 2019/1589, Reg. (EU) 2021/1449, Reg. (EU) 2021/2049, Reg. (EU) No 533/2013, Reg. (EU) No 540/2011",
+      "rms": "CZ / DE",
+      "authorised": [
+        "AT",
+        "BE",
+        "BG",
+        "CY",
+        "CZ",
+        "DE",
+        "EE",
+        "EL",
+        "ES",
+        "FI",
+        "FR",
+        "HR",
+        "HU",
+        "IE",
+        "IT",
+        "LT",
+        "LU",
+        "LV",
+        "MT",
+        "NL",
+        "PL",
+        "PT",
+        "SI",
+        "SK"
+      ],
+      "classification": "--- - ---, Acute Tox. 4 - H302, Acute Tox. 4 - H332, Aquatic Acute 1 - H400, Aquatic Chronic 1 - H410, STOT SE 3 - H335",
       "ai": {
-        "mechanism": "Renewal application withdrawn, approval expired",
-        "safetyBased": "No - commercial",
-        "primaryReason": "Applicant withdrew support for renewal",
-        "reasonDetail": "The approval had been extended to 30/11/2021 pending renewal. The applicant then informed the Commission that it no longer supports the renewal application, so Reg. (EU) 2020/1643 found the extension no longer justified and reset expiry to the earliest possible date, 01/12/2020. No adverse scientific finding.",
-        "keyAct": "Reg. (EU) 2020/1643 - approval period cut short",
-        "history": "2009/37/EC inclusion -> 2017/555 extension -> 2020/1643 period cut after withdrawal -> 2022/801 entry deleted",
-        "confidence": "High",
-        "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32020R1643",
-        "qualityFlag": "Shares CAS 52315-07-8 with Cypermethrin in the source data (undefined chemistry)"
+        "mechanism": "n/a - currently approved",
+        "safetyBased": "",
+        "primaryReason": "",
+        "reasonDetail": "",
+        "keyAct": "",
+        "history": "",
+        "confidence": "",
+        "source": "",
+        "qualityFlag": ""
       }
     },
     "1334-PT18": {
@@ -850,7 +887,7 @@
         "qualityFlag": ""
       }
     },
-    "1308-PT18": {
+    "1308-PT19": {
       "name": "Geraniol",
       "euId": "1036",
       "status": "Approved",
@@ -889,7 +926,7 @@
         "qualityFlag": ""
       }
     },
-    "1308-PT19": {
+    "1308-PT18": {
       "name": "Geraniol",
       "euId": "1036",
       "status": "Approved",
@@ -1182,29 +1219,29 @@
       }
     },
     "1342-PT18": {
-      "name": "Phenothrin (aka Sumithrin)",
-      "euId": "974",
+      "name": "Permethrin",
+      "euId": "968",
       "status": "Not approved",
       "approvalDate": "",
       "expiryDate": "",
       "substitution": "",
-      "legislation": "2002/2076",
+      "legislation": "00/817/EC",
       "rms": "",
       "authorised": [],
-      "classification": "",
+      "classification": "Acute Tox. 4 - H302, Acute Tox. 4 - H332, Aquatic Acute 1 - H400, Aquatic Chronic 1 - H410, STOT SE 3 - H335",
       "ai": {
-        "mechanism": "Non-inclusion - no dossier submitted",
-        "safetyBased": "No - administrative",
-        "primaryReason": "No notifier supported a dossier",
-        "reasonDetail": "Struck off in the bulk non-inclusion annex of Reg. (EC) No 2076/2002 because no industry notifier committed to preparing a dossier. The act states an administrative ground only and makes no hazard finding; no evaluation of the substance was carried out.",
-        "keyAct": "Reg. (EC) No 2076/2002",
-        "history": "Art. 8(2) review programme, first/second stage - bulk administrative non-inclusion",
+        "mechanism": "Non-inclusion - support withdrawn",
+        "safetyBased": "No - data gaps left unaddressed",
+        "primaryReason": "All notifiers withdrew support",
+        "reasonDetail": "All notifiers informed the Commission and the RMS (Ireland) that they no longer wished to participate in the programme, so the further evidence needed was never supplied and the submitted information was insufficient to demonstrate compliance. This is the standard 'insufficient data because support withdrawn' formula, not a positive finding of unacceptable risk. Permethrin continued as a biocide and veterinary substance.",
+        "keyAct": "Decision 2000/817/EC",
+        "history": "First stage of the review programme (Reg. 3600/92), RMS Ireland, assessment report 10/06/1998",
         "confidence": "High",
-        "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32002R2076",
-        "qualityFlag": "Row carries Permethrin's CAS 52645-53-1 in the source data - likely a source error"
+        "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32000D0817",
+        "qualityFlag": ""
       }
     },
-    "1356-PT18": {
+    "1356-PT19": {
       "name": "Pyrethrins",
       "euId": "1092",
       "status": "Approved",
@@ -1253,7 +1290,7 @@
         "qualityFlag": ""
       }
     },
-    "1356-PT19": {
+    "1356-PT18": {
       "name": "Pyrethrins",
       "euId": "1092",
       "status": "Approved",

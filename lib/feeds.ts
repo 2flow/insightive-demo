@@ -1,9 +1,11 @@
 import { approvalRecords } from './approvalSignals'
+import { bpcMeetingRecords } from './bpcMeetingSignals'
 import { bpcRecords } from './bpcSignals'
 import { deadlineRecords } from './deadlineSignals'
 import { expiryRecords } from './expirySignals'
 import { filingRecords } from './filingSignals'
 import { interestRecords } from './interestSignals'
+import { isNgo, ngoRecords } from './ngoSignals'
 import { hazardRecords } from './hazardSignals'
 import { postponementRecords } from './postponementSignals'
 import { pppRecords } from './pppSignals'
@@ -32,6 +34,9 @@ interface RawFeedFile {
     postponements?: number | null
   }
   records?: {
+    /** Optional — one of the keys in lib/categories.ts. Without it the record
+     *  is placed from its tags. */
+    category?: string
     date?: string
     date_precision?: string
     date_derived?: boolean
@@ -74,6 +79,7 @@ function toFeed(raw: RawFeedFile, sourceFile: string): SubstanceFeed {
     // Everything in a feed file is hand-researched; the derived modules stamp
     // their own kind.
     kind: 'research',
+    category: (text(r.category) || undefined) as FeedRecord['category'],
     date: text(r.date),
     datePrecision: text(r.date_precision) || 'day',
     dateDerived: Boolean(r.date_derived),
@@ -159,11 +165,13 @@ export function recordsFor(s: Substance): FeedRecord[] {
     ...expiryRecords(s),
     ...postponementRecords(s),
     ...bpcRecords(s),
+    ...bpcMeetingRecords(s),
     ...hazardRecords(s),
     ...pppRecords(s),
     ...filingRecords(s),
     ...interestRecords(s),
     ...approvalRecords(s),
+    ...ngoRecords(s),
   ]
   if (derived.length === 0) return curated
   return [...curated, ...derived].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
@@ -198,6 +206,7 @@ export const RECORD_KINDS: { kind: string; label: string }[] = [
   { kind: 'hazard', label: 'Hazard list or assessment' },
   { kind: 'ppp', label: 'Plant-protection approval ended' },
   { kind: 'research', label: 'Researched record' },
+  { kind: 'ngo', label: 'NGO report' },
 ]
 
 const KIND_LABEL = new Map(RECORD_KINDS.map(k => [k.kind, k.label]))
@@ -258,11 +267,13 @@ export function allRecords(substances: Substance[]): DatedRecord[] {
     for (const record of expiryRecords(substance)) out.push({ record, substance })
     for (const record of postponementRecords(substance)) out.push({ record, substance })
     for (const record of bpcRecords(substance)) out.push({ record, substance })
+    for (const record of bpcMeetingRecords(substance)) out.push({ record, substance })
     for (const record of hazardRecords(substance)) out.push({ record, substance })
     for (const record of pppRecords(substance)) out.push({ record, substance })
     for (const record of filingRecords(substance)) out.push({ record, substance })
     for (const record of interestRecords(substance)) out.push({ record, substance })
     for (const record of approvalRecords(substance)) out.push({ record, substance })
+    for (const record of ngoRecords(substance)) out.push({ record, substance })
   }
 
   return out.sort((a, b) =>
@@ -301,7 +312,8 @@ export function directionTone(direction: string): SignalTone {
  */
 export function tallyRecords(records: FeedRecord[]): Record<SignalTone, number> {
   const out: Record<SignalTone, number> = { negative: 0, positive: 0, neutral: 0 }
-  for (const r of records) out[directionTone(r.signal.direction)]++
+  // NGO items carry no reading of their own — they are context, not signal.
+  for (const r of records) if (!isNgo(r)) out[directionTone(r.signal.direction)]++
   return out
 }
 

@@ -286,6 +286,10 @@ export interface FeedRecord {
   /** Which signal produced the record — the axis the timeline filters on.
    *  See RECORD_KINDS in lib/feeds.ts for the set and how each one reads. */
   kind?: string
+  /** What the record is about, where its kind does not settle it — e.g. a US
+   *  EPA listing, which is a hazard record from a non-EU authority. See
+   *  lib/categories.ts. */
+  category?: import('./categories').SignalCategory
   title: string
   summary: string
   tags: string[]
@@ -295,6 +299,25 @@ export interface FeedRecord {
   blockers: string[]
   signal: FeedSignal
   sources: FeedSource[]
+  /** Set on records taken from an NGO watch report (kind 'ngo'). These are
+   *  indirect, so they are drawn lighter and kept out of the tallies. */
+  ngo?: NgoMeta
+}
+
+export interface NgoMeta {
+  /** 1 = direct to the BPR file … 3 = weakest carry-over. Null when the report
+   *  ranked its items without tiers. */
+  tier: number | null
+  /** The tier as the report names it — "1" or "A". */
+  tierName: string
+  /** Position in the report's ranked list, 1 = most likely to matter. */
+  rank: number
+  /** The report's own heading for the tier, e.g. "Direct to the BPR file". */
+  tierLabel: string
+  /** The NGO(s) behind the item. */
+  org: string
+  /** ISO date the report was run. */
+  runDate: string
 }
 
 /** Standing facts about the renewal, carried on the feed rather than derived
@@ -460,6 +483,11 @@ export interface PactFlags {
   edStatus: string
   /** "Health", "Health and environment" … */
   edEffects: string
+  /** US EPA EDSP Tier 1 conclusion read against the EU ED criteria:
+   *  "Potential ED", "Unresolved" or "No Tier 1 ED indication". */
+  edspTag: string
+  /** EPA's weight-of-evidence conclusion, verbatim. */
+  edspConclusion: string
 }
 
 export interface PactRecord {
@@ -469,6 +497,55 @@ export interface PactRecord {
   /** Newest first. */
   activities: PactActivity[]
   flags: PactFlags
+  /** PAN International HHP listings. Usually one; aluminium and magnesium
+   *  phosphide are listed in their own name and again as phosphine. */
+  pan?: PanListing[]
+}
+
+/** When a pesticide went onto the PAN HHP list. */
+export interface PanAdded {
+  /** As the workbook gives it, e.g. "January 2009 (original list)". */
+  text: string
+  /** ISO date; a range is dated at its end. */
+  date: string
+  /** "month" | "year" */
+  precision: string
+  /** Not on PAN's list of additions since 2009, so assumed to be original. */
+  inferred: boolean
+  /** PAN gives a span of years, e.g. "2009–2011". */
+  range: boolean
+}
+
+export interface PanCriterion {
+  /** PAN's column, e.g. "highly toxic bees". */
+  key: string
+  /** The same spelled out, e.g. "Highly toxic to bees". */
+  label: string
+  /** PAN's criterion group: "Acute toxicity", "Long-term effects" … */
+  group: string
+  /** Indexes into meta.pan.sources: the publications behind the column. */
+  sources: number[]
+}
+
+export interface PanListing {
+  /** PAN's name for the pesticide, which may differ from ECHA's. */
+  panName: string
+  cas: string
+  added: PanAdded
+  /** The criteria met, in PAN's column order. */
+  criteria: PanCriterion[]
+  /** A footnote on this entry, e.g. a deletion and re-listing. */
+  note: string
+}
+
+export interface PanSource {
+  group: string
+  /** The PAN columns it supplies, as the Sources sheet names them. */
+  columns: string
+  source: string
+  version: string
+  url: string
+  note: string
 }
 
 export interface PactDataset {
@@ -479,6 +556,8 @@ export interface PactDataset {
     empty: number
     count: number
     unmatched: number
+    edspSourceFile?: string
+    pan?: { sourceFile: string; edition: string; sources: PanSource[] }
   }
   bySubstance: Record<string, PactRecord>
 }

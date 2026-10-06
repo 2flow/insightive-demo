@@ -1,5 +1,6 @@
 import { formatDate } from '@/lib/data'
 import { recordsFor } from '@/lib/feeds'
+import { isNgo } from '@/lib/ngoSignals'
 import { productsFor } from '@/lib/products'
 import type { Substance } from '@/lib/types'
 import { ArrowRightIcon, ExternalIcon, PulseIcon } from './icons'
@@ -32,7 +33,8 @@ export default function SubstanceDetail({
   onOpenFeed: (id: string) => void
   onOpenProducts: (id: string) => void
 }) {
-  const records = recordsFor(s)
+  // NGO report items are indirect context — never the headline or the count.
+  const records = recordsFor(s).filter(r => !isNgo(r))
   const headline = records[0] ?? null // newest record
   const products = productsFor(s.id)
   const flags = [

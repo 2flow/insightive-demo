@@ -16,7 +16,10 @@ import {
   interestTone,
   statesFiling,
 } from '@/lib/interest'
+import { BPC_MEETINGS_URL, bpcMeetingFor } from '@/lib/bpcMeetingSignals'
+import { isNgo } from '@/lib/ngoSignals'
 import { hasHazardCue } from '@/lib/hazardSignals'
+import { hazardTally, pactFor } from '@/lib/pact'
 import { approvalFor, renewalGranted } from '@/lib/approvals'
 import { pppApproved, pppFor } from '@/lib/ppp'
 import { suppliersFor } from '@/lib/suppliers'
@@ -121,24 +124,28 @@ function RenewalStatusChips({ s }: { s: Substance }) {
   )
 }
 
-/** One bar per signal, newest first — the same order as the page it opens, so
- *  the leftmost bar is the first card you land on. Hue carries the direction
- *  each record was tagged with, depth carries its strength. It shows the shape
- *  and volume of the evidence: not a score, and nothing is summed. */
+/** One bar per signal, in time order: the oldest on the left, the newest on
+ *  the right, so the strip reads as a timeline. Undated records stand at the
+ *  far left, before the run of dates. Hue carries the direction each record
+ *  was tagged with, depth carries its strength. It shows the shape and volume
+ *  of the evidence: not a score, and nothing is summed. */
 const MAX_BARS = 16
 
 function SignalStrip({ records }: { records: FeedRecord[] }) {
-  const shown = records.slice(0, MAX_BARS)
-  const older = records.length - shown.length
+  const ordered = [...records].sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+  // Where there are too many, the newest are kept and the older ones counted
+  // at the left, where they would have stood.
+  const shown = ordered.slice(-MAX_BARS)
+  const older = ordered.length - shown.length
   return (
     <span className="sig-strip" aria-hidden="true">
+      {older > 0 && <i className="sig-more">+{older}</i>}
       {shown.map((r, i) => (
         <i
           key={i}
           className={`sig-bar tone-${directionTone(r.signal.direction)} w${Math.min(3, Math.abs(r.signal.strength))}`}
         />
       ))}
-      {older > 0 && <i className="sig-more">+{older}</i>}
     </span>
   )
 }
@@ -152,6 +159,9 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
   const substitution = isSubstitutionCandidate(s)
   const risk = isRenewalAtRisk(s)
   const bpc = hasBpcRenewalOpinion(s)
+  // An opinion adopted at a BPC meeting, known from the meeting notes before
+  // the opinion document or ECHA's export carry it.
+  const meeting = bpcMeetingFor(s)
   // The same molecule refused, withdrawn or never included under the
   // plant-protection regulation. A separate regime, so it is a precedent and
   // not a verdict — which is why the chip says which regime it is about, and
@@ -161,6 +171,9 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
   // On a hazard list, or with a hazard question still open. An assessment that
   // closed having found nothing is not a potential hazard.
   const hazard = hasHazardCue(s)
+  // The same count as the hazard-lists tile on the substance's page.
+  const pact = pactFor(s.id)
+  const hazardCount = pact ? hazardTally(pact) : 0
   // A company on the record as intending to apply. Only where the list names
   // one — a bare "submitted" is the renewal's state, not a prospect.
   const interest = interestFor(s.id)
@@ -168,11 +181,20 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
     interest?.state === 'interested' && interest.companies.length > 0 ? interest : null
   // Curated research plus the Article 95 listings, which are records in their
   // own right — so a substance nobody has researched can still have signals.
-  const records = recordsFor(s)
+  // NGO report items are counted apart and kept off the strip: they are
+  // indirect context, and a run of them should not look like a busy file.
+  const all = recordsFor(s)
+  const records = all.filter(r => !isNgo(r))
+  const ngoCount = all.length - records.length
   const counts = tallyRecords(records)
 
-  const chips = substitution || risk || hazard || pppFailed || interested || bpc
-  const hasRecords = records.length > 0
+  // A renewal under way, repeated from the status column as a cue — until the
+  // BPC has adopted its renewal opinion, which says more and replaces it.
+  const renewing =
+    s.assessmentStatus === 'Renewal in progress' && !bpc && !(meeting && meeting.kind === 'renewal')
+
+  const chips = substitution || risk || hazard || pppFailed || interested || renewing || bpc || meeting
+  const hasRecords = all.length > 0
 
   // One box for the whole column: the signal count and strip at the top, the
   // top-signal chips beneath. The hit area is an overlay button rather than a
@@ -184,7 +206,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
         className="sig-box-hit"
         title={
           hasRecords
-            ? `${records.length} signals, newest first — ` +
+            ? `${records.length} signals, oldest to newest — ` +
               [
                 counts.negative && `${counts.negative} negative`,
                 counts.positive && `${counts.positive} positive`,
@@ -192,6 +214,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
               ]
                 .filter(Boolean)
                 .join(', ') +
+              (ngoCount ? `, plus ${ngoCount} NGO report item${ngoCount === 1 ? '' : 's'}` : '') +
               '. Opens the full record for this substance.'
             : "No renewal-signal research published yet — opens the substance's standing facts"
         }
@@ -208,6 +231,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
             <PulseIcon />
             Signals
             <b>{records.length}</b>
+            {ngoCount > 0 && <span className="sig-box-ngo">+{ngoCount} NGO</span>}
           </>
         ) : (
           'Signals coming soon'
@@ -218,7 +242,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
         </span>
       </span>
 
-      {hasRecords && <SignalStrip records={records} />}
+      {records.length > 0 && <SignalStrip records={records} />}
 
       {/* The chips keep their own pointer events, so their tooltips still work;
           the click is forwarded to the same place the box goes. The BPC chip is
@@ -253,10 +277,14 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
             {hazard && (
               <span
                 className="alert-chip hazard"
-                title="On a hazard list, or with a hazard assessment still open — see the substance's page"
+                title={
+                  `${hazardCount || 'On a'} hazard list${hazardCount === 1 ? '' : 's'} or open ` +
+                  "hazard assessment — see the substance's page"
+                }
               >
                 <AlertTriangleIcon />
-                Potential hazard list
+                Potential hazard list{hazardCount === 1 ? '' : 's'}
+                {hazardCount > 0 && <span className="alert-chip-count">{hazardCount}</span>}
               </span>
             )}
             {pppFailed && ppp && (
@@ -285,6 +313,18 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
                 {companyShortNames(interested)}
               </span>
             )}
+            {renewing && (
+              <span
+                className="alert-chip renewing"
+                title={
+                  'ECHA records a renewal in progress' +
+                  (s.assessmentSubStatus && s.assessmentSubStatus !== '-' ? ` — ${s.assessmentSubStatus}` : '')
+                }
+              >
+                <CheckCircleIcon />
+                Renewal in progress
+              </span>
+            )}
             {bpc &&
               (s.bpcOpinionUrl ? (
                 <a
@@ -304,6 +344,22 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
                   Renewal recommended by BPC
                 </span>
               ))}
+            {meeting && (
+              <a
+                className="alert-chip bpc"
+                href={BPC_MEETINGS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={
+                  `Adopted at ${meeting.meeting} on ${formatDate(meeting.date)} — from the BPC ` +
+                  'meeting notes. The opinion document is published separately and is not yet on this file.'
+                }
+                onClick={e => e.stopPropagation()}
+              >
+                <CheckCircleIcon />
+                {meeting.kind === 'renewal' ? 'Renewal' : 'Approval'} opinion adopted ({meeting.meeting})
+              </a>
+            )}
         </div>
       )}
     </div>

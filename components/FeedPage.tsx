@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { Fragment, useCallback, useState } from 'react'
 import { formatDate, hasBpcRenewalOpinion, isRenewalAtRisk, monthsUntil } from '@/lib/data'
 import { INTEREST_LABEL, INTEREST_SHORT, companyNames, interestFor, interestTone } from '@/lib/interest'
 import { consultationsFor, openConsultation } from '@/lib/consultations'
@@ -27,6 +27,7 @@ import { pppApproved, pppFor, pppTone } from '@/lib/ppp'
 import { suppliersFor, supplierShortNames } from '@/lib/suppliers'
 import { productsFor } from '@/lib/products'
 import { DEFAULT_ORDER, orderRecords, recordsFor, tallyRecords } from '@/lib/feeds'
+import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
 import type { FeedRecord, Substance, SubstanceFeed } from '@/lib/types'
 import ConsultationPanel from './ConsultationPanel'
@@ -105,6 +106,20 @@ const ECHA_ED_ASSESSMENT: Source = {
   label: 'ECHA — Endocrine disruptor assessment list',
   url: 'https://chem.echa.europa.eu/activity-lists/edAssessment',
   note: 'whether an ED assessment is running, and what it concluded',
+}
+const EPA_EDSP: Source = {
+  label: 'US EPA — EDSP Tier 1 screening determinations',
+  url:
+    'https://www.epa.gov/endocrine-disruption/' +
+    'endocrine-disruptor-screening-program-tier-1-screening-determinations-and',
+  note: 'the Tier 1 weight-of-evidence conclusion, read against the EU ED criteria',
+}
+const PAN_HHP: Source = {
+  label: 'PAN International — List of Highly Hazardous Pesticides',
+  url: 'https://pan-international.org/wp-content/uploads/PAN_HHP_List.pdf',
+  note:
+    'December 2024 edition: whether the pesticide is listed, on which criteria, and since ' +
+    'when — each card names the publications behind its criteria',
 }
 const ECHA_PACT: Source = {
   label: 'ECHA — Public Activities Coordination Tool (PACT)',
@@ -647,7 +662,7 @@ function Dashboard({
             label="Potential hazard lists"
             /* All three, on every substance — the reader needs to know what
                was searched, not only what it returned. */
-            sources={[EPA_CARCINOGEN, ED_LISTS, ECHA_ED_ASSESSMENT, ECHA_PACT]}
+            sources={[EPA_CARCINOGEN, ED_LISTS, ECHA_ED_ASSESSMENT, EPA_EDSP, PAN_HHP, ECHA_PACT]}
             sourcesIntro={
               'Every PT18 and PT19 substance is checked against each of the lists below. ' +
               'What the panel shows is what came back for this one; a list not named there ' +
@@ -749,6 +764,7 @@ export default function FeedPage({
   // derived ones without a curated feed at all.
   const records = orderRecords(recordsFor(substance), r => r.date, order)
   const counts = tallyRecords(records)
+  const ngoCount = records.filter(isNgo).length
   // The feed carries the common name; ECHA carries the systematic one. Show
   // both only when they actually differ.
   const showSystematic = feed?.name && feed.name !== substance.name
@@ -845,13 +861,37 @@ export default function FeedPage({
                 <b>{counts.neutral}</b> neutral
               </span>
             )}
+            {/* NGO report items carry no reading, so they sit outside the tally. */}
+            {ngoCount > 0 && (
+              <span
+                className="feed-tally-item feed-outlook-ngo"
+                title="Items from NGO watch reports — indirect context, shown lighter and not tagged"
+              >
+                <b>{ngoCount}</b> NGO
+              </span>
+            )}
           </div>
         </div>
 
           <ol className="feed-cards">
-            {records.map((r, i) => (
-              <RecordCard r={r} key={`${r.date}-${i}`} />
-            ))}
+            {records.map((r, i) => {
+              // A year marker each time the year turns, in whichever direction
+              // the list is running. Undated records lead the list.
+              const year = r.date ? r.date.slice(0, 4) : 'Undated'
+              const prev = records[i - 1]
+              const turned = !prev || (prev.date ? prev.date.slice(0, 4) : 'Undated') !== year
+              return (
+                <Fragment key={`${r.date}-${i}`}>
+                  {turned && (
+                    <li className="sig-month">
+                      <span className="sig-month-label">{year}</span>
+                      <span className="sig-month-rule" />
+                    </li>
+                  )}
+                  <RecordCard r={r} />
+                </Fragment>
+              )
+            })}
           </ol>
         </>
       ) : (

@@ -1,11 +1,25 @@
 'use client'
 
-import { useId } from 'react'
+import { useId, useState } from 'react'
 import { formatPartialDate } from '@/lib/data'
 import { directionTone, signalLabel } from '@/lib/feeds'
+import { EVIDENCE_LABEL, EVIDENCE_NOTE, categoryOf, evidenceOf } from '@/lib/categories'
+import type { Evidence, SignalCategory } from '@/lib/categories'
 import type { FeedRecord, FeedSource, Substance } from '@/lib/types'
 import InfoNote from './InfoNote'
-import { ExternalIcon } from './icons'
+import {
+  CertificateIcon,
+  ExternalIcon,
+  FactoryIcon,
+  FileTextIcon,
+  FlaskIcon,
+  GlobeIcon,
+  MegaphoneIcon,
+  RefreshIcon,
+  ScaleIcon,
+  SparkleIcon,
+  UserSearchIcon,
+} from './icons'
 
 // One signal record, set at reading scale. Shared by the per-substance page and
 // the all-substances timeline — the only difference is that the timeline names
@@ -53,6 +67,178 @@ function isMarked(tag: string): boolean {
   return MARKED_TAGS.has(tag) || MARKED_PATTERN.test(tag)
 }
 
+export const CATEGORY_ICON: Record<SignalCategory, (p: { className?: string }) => JSX.Element> = {
+  approval: CertificateIcon,
+  renewal: RefreshIcon,
+  industry: FactoryIcon,
+  hazard: FlaskIcon,
+  'other-eu': ScaleIcon,
+  'non-eu': GlobeIcon,
+  ngo: MegaphoneIcon,
+}
+
+const EVIDENCE_ICON: Record<Evidence, (p: { className?: string }) => JSX.Element> = {
+  documented: FileTextIcon,
+  derived: SparkleIcon,
+  researched: UserSearchIcon,
+}
+
+/** What the record is about, first on every card. */
+function CategoryTag({ r }: { r: FeedRecord }) {
+  const c = categoryOf(r)
+  const Icon = CATEGORY_ICON[c.key]
+  return (
+    <span className={`feed-cat band-${c.band}`} title={`${c.label} — ${c.covers}`}>
+      <Icon />
+      {c.label}
+    </span>
+  )
+}
+
+/** How the record is known. The record's own basis, where it says more than the
+ *  bucket does ("absence", "inference"), rides along in the tooltip. */
+function EvidenceChip({ r }: { r: FeedRecord }) {
+  const e = evidenceOf(r)
+  const Icon = EVIDENCE_ICON[e]
+  const extra = [
+    r.dateDerived && 'date worked out from context',
+    r.signal.basis && r.signal.basis !== 'documented' && `basis: ${r.signal.basis}`,
+  ].filter(Boolean)
+  return (
+    <span
+      className={`feed-evidence ev-${e}`}
+      title={EVIDENCE_NOTE[e] + (extra.length ? ` (${extra.join('; ')})` : '')}
+    >
+      <Icon />
+      {EVIDENCE_LABEL[e]}
+    </span>
+  )
+}
+
+/** Whose record it is, on the all-substances timeline — under the header, so
+ *  the category leads the card. */
+function SubstanceLine({ substance, onOpen }: { substance?: Substance; onOpen?: (id: string) => void }) {
+  if (!substance) return null
+  return (
+    <button
+      type="button"
+      className="feed-card-sub"
+      onClick={() => onOpen?.(substance.id)}
+      title={`Open ${substance.name}`}
+    >
+      <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
+      <span className="feed-card-sub-name">{substance.name}</span>
+    </button>
+  )
+}
+
+/** The summary, collapsed to its first line with a fade until opened, so the
+ *  list reads as a run of headlines. Header, title and sources stay visible. */
+function Summary({ text }: { text: string }) {
+  const [open, setOpen] = useState(false)
+  const id = useId()
+  return (
+    <div className={`feed-card-summary-wrap ${open ? 'is-open' : ''}`}>
+      <p className="feed-card-summary" id={id}>
+        {text}
+      </p>
+      <button
+        type="button"
+        className="feed-card-more"
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen(o => !o)}
+      >
+        {open ? 'Show less' : 'Show more'}
+      </button>
+    </div>
+  )
+}
+
+/**
+ * An item from an NGO watch report. Drawn as a lighter, smaller card than a
+ * regulatory record: what campaigners say is indirect and mostly about other
+ * regimes, so it is context to the record rather than part of it. It carries no
+ * reading of its own — the report's "why it matters" sits behind the tier chip
+ * where the reading would be.
+ */
+function NgoCard({
+  r,
+  substance,
+  onOpen,
+}: {
+  r: FeedRecord
+  substance?: Substance
+  onOpen?: (id: string) => void
+}) {
+  const whyId = useId()
+  const ngo = r.ngo!
+  // Reports ranked without tiers give each item its place in the list instead.
+  const tierChip = ngo.tier ? `Tier ${ngo.tierName || ngo.tier}` : `#${ngo.rank}`
+  return (
+    <li className={`feed-card is-ngo ${ngo.tier ? `ngo-t${ngo.tier}` : ''}`}>
+      <div className="feed-card-head">
+        <CategoryTag r={r} />
+        <span className="feed-card-date">{formatPartialDate(r.date, r.datePrecision)}</span>
+        {r.signal.rationale ? (
+          <span className="feed-why">
+            <button type="button" className="ngo-chip is-why" aria-describedby={whyId}>
+              {tierChip}
+            </button>
+            <span className="feed-why-pop" role="tooltip" id={whyId}>
+              <span className="feed-why-key">
+                {ngo.tier
+                  ? ngo.tierLabel
+                    ? `${tierChip} — ${ngo.tierLabel}`
+                    : tierChip
+                  : `${tierChip} in the report's ranking`}
+              </span>
+              <span className="feed-why-key">Why it matters (AI)</span>
+              {r.signal.rationale}
+            </span>
+          </span>
+        ) : (
+          <span className="ngo-chip" title={ngo.tier ? ngo.tierLabel : 'Rank in the report'}>
+            {tierChip}
+          </span>
+        )}
+        <EvidenceChip r={r} />
+        {ngo.org && <span className="ngo-org">{ngo.org}</span>}
+      </div>
+      {/* The report's own tags. The two that put an item squarely on the BPR
+          file — the regime itself, or a direct carry-over — are marked. */}
+      {r.tags.length > 0 && (
+        <div className="ngo-tags">
+          {r.tags.map(tag => (
+            <span className={`ngo-tag ${/^(bpr|direct)$/i.test(tag) ? 'is-marked' : ''}`} key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      <SubstanceLine substance={substance} onOpen={onOpen} />
+
+      <h3 className="feed-card-title">{r.title}</h3>
+      {r.summary && <Summary text={r.summary} />}
+
+      {r.sources.length > 0 && (
+        <div className="ngo-sources">
+          {r.sources.map((s, i) =>
+            s.url ? (
+              <a href={s.url} target="_blank" rel="noopener noreferrer" key={i} title={s.citation}>
+                {s.citation}
+                <ExternalIcon />
+              </a>
+            ) : (
+              <span key={i}>{s.citation}</span>
+            ),
+          )}
+        </div>
+      )}
+    </li>
+  )
+}
+
 export default function RecordCard({
   r,
   substance,
@@ -66,21 +252,11 @@ export default function RecordCard({
 }) {
   const tone = directionTone(r.signal.direction)
   const whyId = useId()
+  if (r.ngo) return <NgoCard r={r} substance={substance} onOpen={onOpen} />
   return (
     <li className={`feed-card tone-${tone}`}>
-      {substance && (
-        <button
-          type="button"
-          className="feed-card-sub"
-          onClick={() => onOpen?.(substance.id)}
-          title={`Open ${substance.name}`}
-        >
-          <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
-          <span className="feed-card-sub-name">{substance.name}</span>
-        </button>
-      )}
-
       <div className="feed-card-head">
+        <CategoryTag r={r} />
         {/* Where the date is not the day the thing happened, the emphasis
             swaps: the date recedes and the note that says what it stands for
             carries the weight. */}
@@ -92,11 +268,6 @@ export default function RecordCard({
           <span className="feed-card-datenote">
             ({r.dateNote})
             {r.dateNoteInfo && <InfoNote label={r.dateNote} text={r.dateNoteInfo} />}
-          </span>
-        )}
-        {r.dateDerived && (
-          <span className="feed-chip derived" title="Date worked out from context, not stated by a source">
-            derived
           </span>
         )}
         {/* The reading sits on the badge that states it: hover or focus the
@@ -128,16 +299,17 @@ export default function RecordCard({
             {bl}
           </span>
         ))}
-        {r.signal.basis && <span className="feed-chip basis">{r.signal.basis}</span>}
+        <EvidenceChip r={r} />
         {r.tags.map(t => (
           <span className={`feed-chip tag ${isMarked(t) ? 'is-marked' : ''}`} key={t}>
             {t}
           </span>
         ))}
       </div>
+      <SubstanceLine substance={substance} onOpen={onOpen} />
 
       <h3 className="feed-card-title">{r.title}</h3>
-      {r.summary && <p className="feed-card-summary">{r.summary}</p>}
+      {r.summary && <Summary text={r.summary} />}
 
       {r.sources.length > 0 && (
         <div className="feed-card-sources">

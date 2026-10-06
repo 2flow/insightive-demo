@@ -194,6 +194,33 @@ def convert(xlsx: Path) -> dict:
         )
 
     substances.sort(key=lambda s: (s["pt"], s["name"].lower()))
+
+    # ── Hand-researched updates from the BPC meeting notes ──────────
+    # ECHA publishes what each Biocidal Products Committee meeting adopted
+    # before the substance export catches up, so an adopted opinion moves the
+    # dossier on to the Commission weeks before this file shows it. Applied on
+    # top of the export; lib/bpcMeetingSignals.ts carries the same events as
+    # signals. Retire an entry once the export itself has caught up (the
+    # warning below says when). Source:
+    # https://echa.europa.eu/about-us/who-we-are/biocidal-products-committee/meetings-of-the-biocidal-products-committee/2026
+    bpc_meeting_updates = {
+        # BPC-59, 28 May 2026: approval opinion on peanut butter (PT19) adopted.
+        "2503-PT19": {"assessmentSubStatus": "Commission decision"},
+        # BPC-60, 10 Sep 2026: renewal opinion on Hexaflumuron (PT18) adopted.
+        "1314-PT18": {"assessmentSubStatus": "Commission decision"},
+    }
+    for s in substances:
+        fields = bpc_meeting_updates.get(s["id"])
+        if not fields:
+            continue
+        if s["assessmentSubStatus"] != "Opinion development by BPC":
+            print(
+                f'  ~ BPC meeting notes: {s["id"]} sub-status is already '
+                f'"{s["assessmentSubStatus"]}" in the export — the override may be stale, consider retiring it',
+                file=sys.stderr,
+            )
+        s.update(fields)
+
     return {
         "meta": {
             "source": "ECHA — Biocidal active substances (Search for Chemicals export)",
@@ -662,15 +689,28 @@ def convert_ppp(xlsx: Path, substances: dict) -> dict:
     by_cas: dict[str, list[str]] = {}
     by_name: dict[str, list[str]] = {}
     by_loose: dict[str, list[str]] = {}
+    forms_norm: dict[str, set] = {}
+    forms_loose: dict[str, set] = {}
     for s in substances["substances"]:
         if s["cas"]:
             by_cas.setdefault(norm_id(s["cas"]), []).append(s["id"])
+        forms_norm[s["id"]] = set()
+        forms_loose[s["id"]] = set()
         for form in (s["name"], strip_trailing_paren(s["name"]), trailing_paren(s["name"])):
             if form:
                 by_name.setdefault(norm_name(form), []).append(s["id"])
                 by_loose.setdefault(loose_name(form), []).append(s["id"])
+                forms_norm[s["id"]].add(norm_name(form))
+                forms_loose[s["id"]].add(loose_name(form))
 
     by_substance: dict[str, dict] = {}
+    # The file reuses CAS numbers across distinct rows (zeta-Cypermethrin and
+    # Cypermethrin genuinely share one; the Cyhalothrin and Phenothrin rows
+    # carry their sibling's; carbon dioxide is listed twice, as an active and
+    # as a basic substance). CAS stays the identifier, but a shared CAS is
+    # settled by name agreement, never by file order: for each substance the
+    # best-agreeing row wins.
+    picked: dict[str, tuple[int, str]] = {}  # substance id -> (agreement, row name)
     unmatched: list[str] = []
     for record in records:
         name = clean(record.get("Substance"))
@@ -713,7 +753,34 @@ def convert_ppp(xlsx: Path, substances: dict) -> dict:
             "classification": clean(record.get("Classification (Reg. 1272/2008)")),
             "ai": {key: clean(record.get(column)) for key, column in PPP_AI_FIELDS.items()},
         }
-        for substance_id in ids:
+        # 3 = the row's name is the substance's (any of the same name forms
+        # the lookups use), 2 = letters-and-digits only, 1 = CAS alone.
+        row_norm = {norm_name(f) for f in (name, strip_trailing_paren(name), trailing_paren(name)) if f}
+        row_loose = {loose_name(f) for f in (name, strip_trailing_paren(name)) if f}
+        for substance_id in set(ids):
+            if row_norm & forms_norm[substance_id]:
+                agreement = 3
+            elif row_loose & forms_loose[substance_id]:
+                agreement = 2
+            else:
+                agreement = 1
+            prev = picked.get(substance_id)
+            if prev is not None and prev[0] > agreement:
+                continue
+            if prev is not None and prev[0] == agreement:
+                # Both rows carry the substance's name (carbon dioxide, listed
+                # once as an active and once as a basic substance): the app's
+                # substances are active substances, so that listing wins.
+                if "(active substance)" in prev[1]:
+                    continue
+                if "(active substance)" not in name:
+                    print(
+                        f'  ! Pesticide DB: "{name[:45]}" and "{prev[1][:45]}" both match '
+                        f"{substance_id} (agreement {agreement}); keeping the first",
+                        file=sys.stderr,
+                    )
+                    continue
+            picked[substance_id] = (agreement, name)
             by_substance[substance_id] = entry
 
     return {
@@ -978,6 +1045,9 @@ def convert_pact(path: Path, substances: dict) -> dict:
                 "edList": clean(record.get("endo_disr_lists_list")),
                 "edStatus": clean(record.get("endo_disr_lists_status")),
                 "edEffects": clean(record.get("endo_disr_lists_effects")),
+                # Filled from the EPA EDSP workbook afterwards, where it has a row.
+                "edspTag": "",
+                "edspConclusion": "",
             }
             if not activities and not any(flags.values()):
                 # On the list with nothing recorded against it — most rows.
@@ -1020,6 +1090,236 @@ def convert_pact(path: Path, substances: dict) -> dict:
         },
         "bySubstance": by_substance,
     }
+
+
+# ── US EPA EDSP Tier 1 screening ─────────────────────────────
+# EPA's Endocrine Disruptor Screening Program weighed the Tier 1 assays for 52
+# pesticides and published a weight-of-evidence conclusion for each. The
+# workbook carries that conclusion verbatim (column J) and, for the substances
+# that are also PT18/PT19 actives, a tag reading it against the EU ED criteria
+# (column K). Only the tagged rows are ours; the rest are other pesticides.
+#
+# The tag joins the hazard flags on the PACT record, creating the record where
+# PACT had nothing to say, so it lands on the same panel as the other lists.
+
+EDSP_TAG_COL = 10
+EDSP_CONCLUSION_COL = 9
+EDSP_CAS_COL = 1
+
+
+def merge_edsp(xlsx: Path, pact: dict, substances: dict) -> int:
+    by_cas: dict[str, list[dict]] = {}
+    for s in substances["substances"]:
+        if s["cas"]:
+            by_cas.setdefault(norm_id(s["cas"]), []).append(s)
+
+    book = openpyxl.load_workbook(xlsx, data_only=True)
+    sheet = book.worksheets[0]
+    merged = 0
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        tag = clean(row[EDSP_TAG_COL]) if len(row) > EDSP_TAG_COL else ""
+        if not tag:
+            continue
+        cas = clean(row[EDSP_CAS_COL])
+        hits = by_cas.get(norm_id(cas), []) if cas else []
+        if not hits:
+            print(f'  ! EDSP: "{clean(row[0])}" (CAS {cas}) matches no substance', file=sys.stderr)
+            continue
+        for s in hits:
+            entry = pact["bySubstance"].setdefault(s["id"], empty_pact_entry(s))
+            entry["flags"]["edspTag"] = tag
+            entry["flags"]["edspConclusion"] = clean(row[EDSP_CONCLUSION_COL])
+            merged += 1
+
+    pact["meta"]["count"] = len(pact["bySubstance"])
+    pact["meta"]["edspSourceFile"] = xlsx.name
+    return merged
+
+
+# ── PAN International List of Highly Hazardous Pesticides ────
+# PAN's list, cut down to the pesticides that are also PT18/PT19 actives, with
+# PAN's criterion columns reproduced (1 = criterion met) and, at the right, the
+# BPR names and the date the pesticide was added to the list. A second sheet
+# names the publication behind each criterion column.
+#
+# Like the EDSP tag, a listing joins the PACT record — creating it where PACT
+# had nothing — so it lands on the same panel as the other lists. One PAN row
+# can name two ECHA substances ("Phosphine" covers both phosphide releasers),
+# and one ECHA substance can sit under two PAN rows (aluminium phosphide is
+# listed itself and as phosphine), so a substance carries a list of entries.
+
+# PAN column → what it means, and a fragment of the Sources sheet's "PAN
+# column(s)" cell that names it, which is how a criterion finds its sources.
+PAN_CRITERIA = [
+    ("WHO Ia", "WHO Class Ia — extremely hazardous", "Acute toxicity", "WHO Ia"),
+    ("WHO Ib", "WHO Class Ib — highly hazardous", "Acute toxicity", "WHO Ib"),
+    ("H330", "Fatal if inhaled (H330)", "Acute toxicity", "H330"),
+    ("EPA carc", "US EPA: known or likely human carcinogen", "Long-term effects", "EPA carc"),
+    ("IARC carc", "IARC: carcinogenic to humans", "Long-term effects", "IARC carc"),
+    ("GHS+ carc (1A,1B)", "Carcinogen, GHS Cat. 1A/1B", "Long-term effects", "GHS+ carc"),
+    ("IARC prob carc", "IARC: probably carcinogenic", "Long-term effects", "IARC prob carc"),
+    ("EPA prob likel carc", "US EPA: probable or likely carcinogen", "Long-term effects", "EPA prob likel carc"),
+    ("GHS+ muta (1A,1B)", "Mutagen, GHS Cat. 1A/1B", "Long-term effects", "muta"),
+    ("GHS+ repro (1A,1B)", "Reproductive toxicant, GHS Cat. 1A/1B", "Long-term effects", "repro"),
+    ("EU EDC", "EU endocrine disruptor", "Long-term effects", "EU EDC"),
+    ("GHS+ C2 & R2", "Suspected carcinogen and reprotoxicant (Carc 2 + Repr 2)", "Long-term effects", "C2 & R2"),
+    ("very bioacc", "Very bioaccumulative", "Environmental toxicity", "very bioacc"),
+    ("very pers water, soil or sediment", "Very persistent in water, soil or sediment", "Environmental toxicity", "very pers"),
+    ("very toxic to aq. organisms", "Very toxic to aquatic organisms", "Environmental toxicity", "very toxic to aq"),
+    ("highly toxic bees", "Highly toxic to bees", "Environmental toxicity", "highly toxic bees"),
+    ("Montreal Prot", "Montreal Protocol (ozone depleting)", "Conventions", "Montreal Prot"),
+    ("PIC", "Rotterdam Convention (PIC)", "Conventions", "PIC"),
+    ("POP", "Stockholm Convention (POP)", "Conventions", "POP"),
+]
+
+MONTH_NAMES = [
+    "january", "february", "march", "april", "may", "june",
+    "july", "august", "september", "october", "november", "december",
+]
+
+
+def pan_added(value: str) -> dict:
+    """ "January 2009 (original list)*", "December 2016", "2009–2011" → a date.
+
+    The asterisk is the workbook's own mark for an inference: the pesticide is
+    not on PAN's list of additions since January 2009, so it is taken to have
+    been on the original list. A range is dated at its end — the latest it can
+    have been added — and marked as such.
+    """
+    text = value.strip()
+    inferred = text.endswith("*")
+    m = re.match(r"([A-Za-z]+)\s+(\d{4})", text)
+    if m and m.group(1).lower() in MONTH_NAMES:
+        month = MONTH_NAMES.index(m.group(1).lower()) + 1
+        return {"text": text.rstrip("*").strip(), "date": f"{m.group(2)}-{month:02d}-01",
+                "precision": "month", "inferred": inferred, "range": False}
+    years = re.findall(r"\d{4}", text)
+    if years:
+        return {"text": text.rstrip("*").strip(), "date": f"{years[-1]}-01-01",
+                "precision": "year", "inferred": inferred, "range": len(years) > 1}
+    return {"text": text, "date": "", "precision": "", "inferred": inferred, "range": False}
+
+
+def empty_pact_entry(s: dict) -> dict:
+    return {
+        "name": s["name"],
+        "description": "",
+        "activities": [],
+        "flags": {
+            "carcinogen": "",
+            "carcinogenYear": "",
+            "edList": "",
+            "edStatus": "",
+            "edEffects": "",
+            "edspTag": "",
+            "edspConclusion": "",
+        },
+    }
+
+
+def merge_pan_hhp(xlsx: Path, pact: dict, substances: dict) -> int:
+    by_name: dict[tuple, list[dict]] = {}
+    by_cas: dict[tuple, list[dict]] = {}
+    for s in substances["substances"]:
+        for part in [s["name"], *s["name"].split(";")]:
+            if part.strip():
+                by_name.setdefault((loose_name(part), s["pt"]), []).append(s)
+        if s["cas"]:
+            by_cas.setdefault((norm_id(s["cas"]), s["pt"]), []).append(s)
+
+    book = openpyxl.load_workbook(xlsx, data_only=True)
+    sheet = book.worksheets[0]
+    rows = list(sheet.iter_rows(values_only=True))
+    header = [clean(h) for h in rows[0]]
+    col = {h: i for i, h in enumerate(header)}
+
+    # The Sources sheet, kept whole: the panel names the ones behind the
+    # criteria a substance meets, and the tile names them all.
+    sources = []
+    if len(book.worksheets) > 1:
+        src_rows = list(book.worksheets[1].iter_rows(values_only=True))
+        for r in src_rows[1:]:
+            if not clean(r[2]):
+                continue
+            sources.append(
+                {
+                    "group": clean(r[0]),
+                    "columns": clean(r[1]),
+                    "source": clean(r[2]),
+                    "version": clean(r[3]),
+                    "url": clean(r[4]),
+                    "note": clean(r[6]) if len(r) > 6 else "",
+                }
+            )
+
+    def sources_for(token: str) -> list[int]:
+        return [
+            i for i, src in enumerate(sources)
+            if src["columns"] != "All" and token in src["columns"]
+        ]
+
+    # Footnotes below the table: "Pyrethrins: deleted from the list in 2013 and
+    # re-added March 2019." Keyed by the name before the colon.
+    notes: dict[str, str] = {}
+    edition = ""
+    for r in rows[1:]:
+        if r[0] is None or isinstance(r[0], (int, float)):
+            continue
+        text = clean(r[0])
+        m = re.match(r"Source:\s*PAN International List of Highly Hazardous Pesticides,\s*([^;]+);", text)
+        if m:
+            edition = m.group(1).strip()
+        for sentence in re.split(r"(?<=\.)\s+", text):
+            m = re.match(r"([A-Z][A-Za-z ,-]+):\s*(.+)", sentence)
+            if m:
+                notes[m.group(1).strip().lower()] = m.group(2).strip()
+
+    merged = 0
+    for r in rows[1:]:
+        # Data rows carry PAN's own row number; the footnotes do not.
+        if not isinstance(r[0], (int, float)):
+            continue
+        pan_name = clean(r[col["Pesticide"]]).rstrip("*").strip()
+        cas = clean(r[col["CAS number"]])
+        pts = [p.strip() for p in clean(r[col["Product type (BPR)"]]).split(";") if p.strip()]
+        echa_names = [n.strip() for n in clean(r[col["BPR substance name (ECHA)"]]).split(";") if n.strip()]
+
+        criteria = []
+        for column, label, group, token in PAN_CRITERIA:
+            value = r[col[column]] if column in col else None
+            if value == 1 or clean(value) == "1":
+                criteria.append({"key": column, "label": label, "group": group, "sources": sources_for(token)})
+
+        note = next(
+            (text for key, text in notes.items() if pan_name.lower().startswith(key)),
+            "",
+        )
+        listing = {
+            "panName": pan_name,
+            "cas": cas,
+            "added": pan_added(clean(r[col["Added to PAN HHP list"]])),
+            "criteria": criteria,
+            "note": note,
+        }
+
+        hits: dict[str, dict] = {}
+        for pt in pts:
+            found = [s for n in echa_names for s in by_name.get((loose_name(n), pt), [])]
+            if not found and cas:
+                found = by_cas.get((norm_id(cas), pt), [])
+            for s in found:
+                hits[s["id"]] = s
+        if not hits:
+            print(f'  ! PAN HHP: "{pan_name}" (CAS {cas}, {"/".join(pts)}) matches no substance', file=sys.stderr)
+            continue
+        for s in hits.values():
+            entry = pact["bySubstance"].setdefault(s["id"], empty_pact_entry(s))
+            entry.setdefault("pan", []).append(listing)
+            merged += 1
+
+    pact["meta"]["count"] = len(pact["bySubstance"])
+    pact["meta"]["pan"] = {"sourceFile": xlsx.name, "edition": edition, "sources": sources}
+    return merged
 
 
 # ── Article 14(5) postponements ──────────────────────────────
@@ -1742,6 +2042,14 @@ def main() -> None:
     pact_files = sorted(DATA.glob("pact-export*.csv"))
     if pact_files:
         pact = convert_pact(pact_files[-1], substances)
+        edsp_files = sorted(DATA.glob("EPA_*EDSP*.xlsx"))
+        if edsp_files:
+            merged = merge_edsp(edsp_files[-1], pact, substances)
+            print(f"{merged} EPA EDSP Tier 1 conclusions merged into the hazard flags")
+        pan_files = sorted(DATA.glob("PAN_HHP*.xlsx"))
+        if pan_files:
+            merged = merge_pan_hhp(pan_files[-1], pact, substances)
+            print(f"{merged} PAN HHP listings merged into the hazard flags")
         PACT_OUT.write_text(json.dumps(pact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{pact["meta"]["rows"]} PACT rows ({pact["meta"]["empty"]} with nothing recorded)'

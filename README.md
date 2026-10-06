@@ -703,7 +703,7 @@ molecule is a problem, so they sit with the hazard lists:
 
 | Container | Holds | Colour | Opens |
 |---|---|---|---|
-| **Potential hazard lists** | the EPA carcinogen and endocrine-disruptor listings, plus PACT activity in `SEv`, `PBT`, `ED`, `ARN`, `SVHC` | amber while running, grey once concluded | **by default** — it is the part worth reading first |
+| **Potential hazard lists** | the EPA carcinogen and endocrine-disruptor listings, the US EPA EDSP Tier 1 conclusions, the PAN International HHP list (criteria met, with the sources behind each), plus PACT activity in `SEv`, `PBT`, `ED`, `ARN`, `SVHC` | amber while running, grey once concluded | **by default** — it is the part worth reading first |
 | **Regulatory activity** | the rest: `CLH`, `DEv` | blue while running, grey once concluded | on click |
 
 A harmonised classification proposal or a dossier compliance check is procedure.
@@ -998,6 +998,52 @@ fallback — a mis-named file still lands on the right substance.
 
 Records are re-sorted on load, so their order in the file doesn't matter. `pinpoint`, `url` and `note` may be `null`.
 
+## Signal categories
+
+Every record belongs to exactly one category, shown with its icon at the start
+of the card and used by the filter on the All signals page (`lib/categories.ts`):
+
+| Band | Category | Records |
+|---|---|---|
+| 1 · BPR renewal | Approval status | approval, expiry, postponement |
+| | Renewal progress | interest, filing, deadline, BPC opinion |
+| | Industry backing | Article 95 suppliers, product authorisations |
+| 2 · EU evidence | EU hazard findings | PACT hazard assessments and lists |
+| | Other EU laws | plant-protection approval, REACH |
+| 3 · Context | Non-EU authorities | US EPA carcinogen list, GB |
+| | NGO reports | `data/reports/` |
+
+Derived records map by their kind; a record can override with `category`
+(the US EPA listing does). Curated feed records can set `"category"` to one of
+`approval`, `renewal`, `industry`, `hazard`, `other-eu`, `non-eu`, `ngo`;
+without it they are placed from their tags.
+
+Every card also carries an evidence tag: **Documented** (stated by the source),
+**Derived** (worked out by a rule — a counted-back date, an absence, an
+inference) or **Researched** (curated research and NGO reports).
+
+## Adding an NGO watch report
+
+NGO reports live in **`data/reports/<slug>/<YYYY-MM-DD>_NGO_report.md`**, one
+folder per substance. Like the feeds, they are read **directly by the app**
+(`lib/ngoSignals.ts`; `next.config.mjs` bundles `.md` files as text), so there
+is no build step. Drop a new run in and the newest file in each folder is used:
+latest date first, then highest version (`…_NGO_report_2.md` or `…_v2…` beats
+`…_NGO_report.md`).
+
+- **Matching:** by the `cas:` in the front matter, falling back to the folder
+  slug against the ECHA name (for substances with no CAS, e.g. Bt strains).
+- **What is read:** only the dated items under `## 2. Top signals`, with their
+  tier (`### Tier N: …` or `**Tier N: …**`) and their `Summary`, `Why it matters`
+  and `NGO` lines. The summary, lower-relevance items, outlook and method notes
+  are not shown. Tier C (or 3) items — indirect, use-specific — are dropped
+  unless they are tagged `BPR` or `direct` (or, without tags, are about biocides).
+- **How they show:** as kind `ngo`, interleaved by date but drawn as lighter,
+  smaller, dashed cards, getting fainter from Tier 1 to Tier 3. "Why it
+  matters" sits behind the tier chip. They are left out of the
+  negative/positive/neutral tallies, the signal strip and the "most recent"
+  headline, and are counted separately as "+N NGO".
+
 ## Project structure
 
 ```
@@ -1026,6 +1072,7 @@ lib/
   suppliers.ts      supplier lookup by substance id
   products.ts       product summaries + on-demand detail fetch
   feeds.ts          reads data/feeds/*.json directly; lookup + strongest-signal
+  ngoSignals.ts     reads data/reports/*/…_NGO_report.md; Tier 1–3 items as 'ngo' records
   filters.ts        matching + sort orders
   types.ts          the data contract
 tools/
