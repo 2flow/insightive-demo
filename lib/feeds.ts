@@ -1,6 +1,8 @@
 import { approvalRecords } from './approvalSignals'
 import { bpcMeetingRecords } from './bpcMeetingSignals'
 import { bpcRecords } from './bpcSignals'
+import { changeRecords } from './changeSignals'
+import { cancellationRecords } from './productSignals'
 import { deadlineRecords } from './deadlineSignals'
 import { expiryRecords } from './expirySignals'
 import { filingRecords } from './filingSignals'
@@ -149,7 +151,8 @@ export function feedFor(s: Substance): SubstanceFeed | null {
 /**
  * Every record for one substance, newest first: the curated feed's, plus the
  * ones derived from the Article 95 list, the Article 13(1) deadline, the
- * approval's own expiry, each Article 14(5) postponement, the BPC opinion and
+ * approval's own expiry, each Article 14(5) postponement, a renewal granted or
+ * started between two ECHA exports, product authorisations cancelled, the BPC opinion and
  * the hazard listings and assessments, and a plant-protection approval that
  * ended.
  *
@@ -171,6 +174,8 @@ export function recordsFor(s: Substance): FeedRecord[] {
     ...filingRecords(s),
     ...interestRecords(s),
     ...approvalRecords(s),
+    ...changeRecords(s),
+    ...cancellationRecords(s),
     ...ngoRecords(s),
   ]
   if (derived.length === 0) return curated
@@ -198,11 +203,14 @@ export const RECORD_KINDS: { kind: string; label: string }[] = [
   { kind: 'approval', label: 'Approved' },
   { kind: 'interest', label: 'Interest in renewal' },
   { kind: 'filing', label: 'Renewal application submitted' },
+  { kind: 'renewal-start', label: 'Renewal started' },
   { kind: 'deadline', label: 'Filing deadline passed' },
   { kind: 'postponement', label: 'Expiry postponed' },
   { kind: 'bpc', label: 'BPC opinion' },
+  { kind: 'renewal', label: 'Approval renewed' },
   { kind: 'expiry', label: 'Approval expired' },
   { kind: 'supplier', label: 'Article 95 supplier' },
+  { kind: 'cancellation', label: 'Products cancelled' },
   { kind: 'hazard', label: 'Hazard list or assessment' },
   { kind: 'ppp', label: 'Plant-protection approval ended' },
   { kind: 'research', label: 'Researched record' },
@@ -273,6 +281,8 @@ export function allRecords(substances: Substance[]): DatedRecord[] {
     for (const record of filingRecords(substance)) out.push({ record, substance })
     for (const record of interestRecords(substance)) out.push({ record, substance })
     for (const record of approvalRecords(substance)) out.push({ record, substance })
+    for (const record of changeRecords(substance)) out.push({ record, substance })
+    for (const record of cancellationRecords(substance)) out.push({ record, substance })
     for (const record of ngoRecords(substance)) out.push({ record, substance })
   }
 

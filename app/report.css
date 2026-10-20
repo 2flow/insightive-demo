@@ -833,6 +833,35 @@
 .feed-page .auth-family-name { font-size: 15px; font-weight: 650; color: var(--ink); line-height: 1.25; }
 .feed-page .auth-family.is-dead .auth-family-name { color: #a32b22; }
 .feed-page .auth-family-sub { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+/* Changed in an export dated within the past 30 days — the timeline's
+   "New" marker, saying what changed. Cancellations and expiries read red. */
+.feed-page .auth-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+.feed-page .auth-change.cancelled,
+.feed-page .auth-change.expired { background: #b42318; }
+.feed-page .auth-change-note {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 0.85;
+}
+.feed-page .auth-row.is-changed { background: #f3f7ff; }
+.feed-page .auth-names .auth-change { display: flex; width: fit-content; margin: 0 0 3px; }
 .feed-page .auth-family-count {
   font-family: var(--mono);
   font-size: 10px;
@@ -1328,6 +1357,20 @@
   letter-spacing: 0;
   color: var(--muted-2);
 }
+/* Movement against an export at least 30 days older (ProductsPage). */
+.feed-page .fp-trend {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: 3px;
+}
+.feed-page .fp-trend.up { color: #0a6b49; background: #e6f4ee; }
+.feed-page .fp-trend.down { color: #b42318; background: #fdecea; }
+.feed-page .fp-trend.flat { color: var(--muted-2); background: #f1f3f6; }
 .feed-page .fp-tile-note {
   margin-top: 3px;
   font-family: var(--mono);
@@ -3161,7 +3204,7 @@
 .latest-list li + li { border-top: 1px solid #f3f4f6; }
 .latest-row {
   display: grid;
-  grid-template-columns: 8px 84px 150px minmax(0, 220px) minmax(0, 1fr);
+  grid-template-columns: 8px 84px minmax(0, 260px) minmax(0, 1fr);
   align-items: center;
   gap: 12px;
   width: 100%;
@@ -3183,18 +3226,6 @@
   color: #1f2937;
   white-space: nowrap;
 }
-.latest-cat {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: #1f2937;
-}
-.latest-cat.band-3 { color: var(--muted); }
-.latest-cat svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--muted); }
-.latest-cat-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .latest-sub { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
 .latest-sub .pt-tag {
   padding: 2px 5px;
@@ -3211,21 +3242,23 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 13px;
-  font-weight: 600;
-  color: #0b0f1a;
+  font-weight: 500;
+  color: #4b5563;
 }
+/* The update itself is what the row is for, so it carries the weight. */
 .latest-row-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 13px;
-  color: #374151;
+  font-size: 14px;
+  font-weight: 550;
+  color: #0b0f1a;
 }
 .latest-row.is-ngo .latest-row-title,
 .latest-row.is-ngo .latest-sub-name { color: var(--muted); font-weight: 500; }
 .latest-empty { padding: 12px 6px; font-size: 13px; color: var(--muted); }
 
-/* Phone: date, category and substance on one line, the title under them. */
+/* Phone: date and substance on one line, the title under them. */
 @media (max-width: 767px) {
   .latest-row {
     grid-template-columns: 8px auto minmax(0, 1fr);
@@ -3234,7 +3267,6 @@
   }
   .latest-tone { grid-area: tone; }
   .latest-date { grid-area: date; }
-  .latest-cat { display: none; }
   .latest-sub { grid-area: sub; }
   .latest-row-title { grid-area: title; white-space: normal; }
   .latest-all { margin-left: 0; }

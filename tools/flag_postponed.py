@@ -28,16 +28,11 @@ from pathlib import Path
 
 import openpyxl
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT = ROOT / "data" / "ECHA_all_PT18_PT19_active-substances-export.xlsx"
-HEADER_ROW = 3
-COLUMN = "Expiry date postponed (WIP)"
+from convert_export import HEADER_ROW, exceeds_cap, latest
 # Matched by prefix, so renaming the suffix (e.g. dropping "(WIP)") still finds it.
-COLUMN_PREFIX = "Expiry date postponed"
+from convert_export import POSTPONED_PREFIX as COLUMN_PREFIX
 
-MAX_YEARS = 10
-MAX_YEARS_SUBSTITUTION = 7
-DAYS_PER_YEAR = 365.2425
+COLUMN = "Expiry date postponed (WIP)"
 
 
 def parse(value) -> "datetime.date | None":
@@ -48,7 +43,7 @@ def parse(value) -> "datetime.date | None":
 
 
 def main() -> None:
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT
+    path = Path(sys.argv[1]) if len(sys.argv) > 1 else latest("substances")
     book = openpyxl.load_workbook(path)
     sheet = book["results"]
     header = [str(c.value).strip() if c.value else "" for c in sheet[HEADER_ROW]]
@@ -78,8 +73,7 @@ def main() -> None:
             blank += 1
             continue
         substitution = str(sheet.cell(row=row, column=col_substitution).value or "").strip() == "Yes"
-        cap = MAX_YEARS_SUBSTITUTION if substitution else MAX_YEARS
-        over = (end - start).days / DAYS_PER_YEAR > cap
+        over = exceeds_cap(start, end, substitution)
         sheet.cell(row=row, column=col_new, value="Yes" if over else "No")
         flagged += over
 

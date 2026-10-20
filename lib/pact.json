@@ -1,14 +1,14 @@
 {
   "meta": {
     "source": "ECHA — Public Activities Coordination Tool (PACT), with EPA and endocrine-disruptor list flags",
-    "sourceFile": "pact-export-filtered_updated_and_other_flags.csv",
+    "sourceFile": "pact-export-filtered_updated_and_other_flags_20_09_26.csv",
     "rows": 89,
     "empty": 28,
     "count": 74,
     "unmatched": 0,
-    "edspSourceFile": "EPA_2015_EDSP_Tier1_WoE_Conclusions_x_ECHA_PT18-PT19_ED_tags.xlsx",
+    "edspSourceFile": "EPA_2015_EDSP_Tier1_WoE_Conclusions_x_ECHA_PT18-PT19_ED_tags_20_09_26.xlsx",
     "pan": {
-      "sourceFile": "PAN_HHP_PT18_PT19.xlsx",
+      "sourceFile": "PAN_HHP_PT18_PT19_20_09_26.xlsx",
       "edition": "December 2024",
       "sources": [
         {
@@ -880,68 +880,6 @@
         }
       ]
     },
-    "1268-PT18": {
-      "name": "Chrysanthemum cinerariaefolium, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "",
-          "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
-        },
-        {
-          "area": "ED",
-          "areaLabel": "Endocrine disruptor assessment",
-          "status": "Concluded (not ED | inconclusive)",
-          "intention": "2019-04-02",
-          "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
-    "2003-PT18": {
-      "name": "Chrysanthemum cinerariaefolium, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "",
-          "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
-        },
-        {
-          "area": "ED",
-          "areaLabel": "Endocrine disruptor assessment",
-          "status": "Concluded (not ED | inconclusive)",
-          "intention": "2019-04-02",
-          "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
     "1983-PT18": {
       "name": "Chrysanthemum cinerariaefolium, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
@@ -974,6 +912,68 @@
       }
     },
     "2003-PT19": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "1268-PT18": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "2003-PT18": {
       "name": "Chrysanthemum cinerariaefolium, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
       "activities": [
@@ -1122,7 +1122,7 @@
         }
       ]
     },
-    "1287-PT19": {
+    "1287-PT18": {
       "name": "Decanoic acid",
       "description": "",
       "activities": [
@@ -1161,7 +1161,7 @@
         "edspConclusion": ""
       }
     },
-    "1287-PT18": {
+    "1287-PT19": {
       "name": "Decanoic acid",
       "description": "",
       "activities": [
@@ -1323,7 +1323,7 @@
         }
       ]
     },
-    "2463-PT19": {
+    "2463-PT18": {
       "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
       "description": "",
       "activities": [
@@ -1346,7 +1346,7 @@
         "edspConclusion": ""
       }
     },
-    "2463-PT18": {
+    "2463-PT19": {
       "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
       "description": "",
       "activities": [
@@ -1652,7 +1652,7 @@
         "edspConclusion": ""
       }
     },
-    "1308-PT18": {
+    "1308-PT19": {
       "name": "Geraniol",
       "description": "",
       "activities": [
@@ -1715,7 +1715,7 @@
         "edspConclusion": ""
       }
     },
-    "1308-PT19": {
+    "1308-PT18": {
       "name": "Geraniol",
       "description": "",
       "activities": [
@@ -2120,7 +2120,7 @@
         "edspConclusion": ""
       }
     },
-    "1469-PT18": {
+    "43-PT18": {
       "name": "Margosa, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
       "activities": [
@@ -2159,7 +2159,7 @@
         "edspConclusion": ""
       }
     },
-    "43-PT18": {
+    "1469-PT18": {
       "name": "Margosa, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
       "activities": [

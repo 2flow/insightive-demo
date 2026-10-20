@@ -20,7 +20,7 @@ import { BPC_MEETINGS_URL, bpcMeetingFor } from '@/lib/bpcMeetingSignals'
 import { isNgo } from '@/lib/ngoSignals'
 import { hasHazardCue } from '@/lib/hazardSignals'
 import { hazardTally, pactFor } from '@/lib/pact'
-import { approvalFor, renewalGranted } from '@/lib/approvals'
+import { recentlyRenewed, renewalFor, renewalGranted } from '@/lib/approvals'
 import { pppApproved, pppFor } from '@/lib/ppp'
 import { suppliersFor } from '@/lib/suppliers'
 import type { FeedRecord, Substance } from '@/lib/types'
@@ -54,8 +54,8 @@ function RenewalStatusChips({ s }: { s: Substance }) {
   const interest = interestFor(s.id)
   // A renewal already granted answers this column outright, and outranks the
   // interest list, which still reads "submitted" for the two it applies to.
-  const renewed = renewalGranted(s.id)
-  const renewalAct = renewed ? approvalFor(s.id)?.act : null
+  const renewal = renewalFor(s.id)
+  const renewed = !!renewal
   // An approval still in force with nothing recorded against it is worth
   // stating — but only where nothing else already says so. Where the interest
   // list answers the filing question itself, in ECHA's own words, this line
@@ -84,13 +84,13 @@ function RenewalStatusChips({ s }: { s: Substance }) {
         <span
           className="substatus renewed"
           title={
-            renewalAct
-              ? `Renewed by ${renewalAct.name}, adopted ${renewalAct.date}`
-              : 'The approval has been renewed'
+            renewal.firstSeen
+              ? `Renewed by ${renewal.act} — first shown in ECHA's export of ${formatDate(renewal.date)}`
+              : `Renewed by ${renewal.act}, adopted ${formatDate(renewal.date)}`
           }
         >
           <span className="dot" />
-          Renewal granted
+          {recentlyRenewed(s.id) ? 'Recently renewed' : 'Renewal granted'}
         </span>
       ) : s.assessmentStatus ? (
         <span className={`substatus ${s.assessmentStatus.startsWith('Renewal') ? 'renewal' : ''}`}>
@@ -158,10 +158,14 @@ function SignalStrip({ records }: { records: FeedRecord[] }) {
 function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id: string) => void }) {
   const substitution = isSubstitutionCandidate(s)
   const risk = isRenewalAtRisk(s)
-  const bpc = hasBpcRenewalOpinion(s)
+  // Once the renewal is granted, the opinion recommending it has been acted on:
+  // it stays in the record as history but is no longer a prospect.
+  const renewed = renewalGranted(s.id)
+  const bpc = hasBpcRenewalOpinion(s) && !renewed
   // An opinion adopted at a BPC meeting, known from the meeting notes before
   // the opinion document or ECHA's export carry it.
-  const meeting = bpcMeetingFor(s)
+  const adopted = bpcMeetingFor(s)
+  const meeting = adopted && !(renewed && adopted.kind === 'renewal') ? adopted : null
   // The same molecule refused, withdrawn or never included under the
   // plant-protection regulation. A separate regime, so it is a precedent and
   // not a verdict — which is why the chip says which regime it is about, and

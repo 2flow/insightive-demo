@@ -279,7 +279,7 @@ curated standing observations — so they have no place *in* a run of dates. Hol
 them out also means a reversal cannot shuffle them: they sit in the same place
 whichever way the list runs.
 
-**Each Article 14(5) postponement is a record** — `data/*postponements*.csv` into
+**Each Article 14(5) postponement is a record** — `PT##-postponements-open_*.csv` into
 `lib/postponements.json`, one Commission decision per row. **29 decisions across
 18 substances** — 14 under PT18, 4 under PT19 — from a single "1st and only" up to
 three each for Indoxacarb and magnesium phosphide.
@@ -287,8 +287,9 @@ three each for Indoxacarb and magnesium phosphide.
 **One export per product type, and the product type is only in the filename.** It
 is read from there and used in the match, because a PT18 decision must not attach
 to the PT19 row of the same molecule: the two run on separate timetables and are
-postponed by separate acts. Drop in another `PT##-postponements-*.csv` and it is
-picked up — the converter reads every file the glob finds, not just the last. The card gives the decision number and link, what the expiry
+postponed by separate acts. A new product type needs its own
+`postponementsPT##` entry in `SOURCES` in `tools/convert_export.py`; the converter
+reads the latest version of each. The card gives the decision number and link, what the expiry
 moved from and to, the extension granted, the evaluating authority, and the
 recital's own words about why.
 
@@ -587,10 +588,11 @@ reading either, which is why `reason not retrieved` carries no marker.
 ## How it's wired
 
 ```
-data/ECHA_*.xlsx       ─┐                       ┌─▶ lib/substances.json ─▶ lib/data.ts
-data/article_95_*.xlsx  ├▶ tools/convert_export.py─▶ lib/suppliers.json ─▶ lib/suppliers.ts
-data/biocidal-products- │  (Excel can't be read  └─▶ lib/products.json ──▶ lib/products.ts
-        export.xlsx    ─┘   in a browser)            + public/products/<id>.json (lazy)
+ECHA_active-substance-…  ─┐                       ┌─▶ lib/substances.json ─▶ lib/data.ts
+article_95_list_…         ├▶ tools/convert_export.py─▶ lib/suppliers.json ─▶ lib/suppliers.ts
+biocidal-products-export ─┘  (latest dated copy of  └─▶ lib/products.json ──▶ lib/products.ts
+  (data/baseline_*/,          each, Excel can't be      + public/products/<id>.json (lazy)
+   data/updates/*/)           read in a browser)
 
 data/feeds/*.json ─────────────────────────────────────────────────────▶ lib/feeds.ts
         (already JSON — read directly, NO build step, edit in place)
@@ -604,8 +606,8 @@ data/feeds/*.json ────────────────────�
                                               #products/<id> ▶ ProductsPage
 ```
 
-- **`data/`** — the raw ECHA "Search for Chemicals" export, kept so the dataset is
-  reproducible.
+- **`data/`** — the raw source files, every dated version kept, so the dataset is
+  reproducible and each update can be compared with the one before (see below).
 - **`tools/convert_export.py`** — turns that export into `lib/substances.json`:
   parses dates to ISO, normalises ECHA's `-` placeholders, labels the blank
   approval status as `Pending`, and precomputes the approval-end band.
@@ -623,12 +625,64 @@ data/feeds/*.json ────────────────────�
   scoped under `.report-surface`. `app/globals.css` is the app chrome (Tailwind).
 - **`lib/types.ts`** — the data contract.
 
-## Updating for a new ECHA export
+## Adding updated source files
 
-1. Drop the new `.xlsx` into **`data/`**.
-2. `npm run data` — or `python3 tools/convert_export.py data/<file>.xlsx`
-   (needs `openpyxl`: `pip install openpyxl`). It rewrites `lib/substances.json`
-   and `lib/feeds.json` and prints the counts.
+Source files are versioned by date, and only the files that changed are added:
+
+```
+data/
+  baseline_20_09_26/                 the first full snapshot (every source)
+  updates/
+    data_update_20_10_26/            only what changed that round
+      ECHA_active-substance-export_20_10_26.xlsx
+    data_update_DD_MM_YY/ …
+```
+
+- **Naming:** `<source name>_DD_MM_YY.<ext>`, the date being the download date —
+  e.g. `ECHA_active-substance-export_20_10_26.xlsx`. The source names are listed
+  in `SOURCES` at the top of `tools/convert_export.py`; a file whose name doesn't
+  match one exactly is ignored. A new kind of source needs a new entry there.
+- **Which version is used:** for each source, the most recent date wins, wherever
+  it sits under `data/`. A source with no file in the latest update folder keeps
+  its previous version. Two copies of one source with the same date stop the
+  build.
+- **Older versions are never deleted** — they are the record of what changed.
+
+1. Create **`data/updates/data_update_DD_MM_YY/`** and drop in the changed files,
+   renamed to the convention.
+2. `npm run data` — or `python3 tools/convert_export.py path/to/export.xlsx` to
+   force a specific ECHA export (needs `openpyxl`: `pip install openpyxl`). It
+   prints which ECHA file it used, rewrites `lib/*.json` and prints the counts.
+
+A fresh ECHA download arrives **without the columns Pelsis adds by hand**. The
+converter fills them in on its own and says so: the `Recent BPC Opinion` /
+`Recent BPC Opinion PDF` values are carried over from the latest earlier export
+that has them (matched by BAS number × product type; `bpcOpinionsFrom` in the
+JSON meta names the file), and the expiry-postponed flag is computed from the
+approval dates (next section). Add the columns to the new file whenever an
+opinion needs correcting.
+
+### What changed between exports → signals and status
+
+The converter also compares **every ECHA export with the one before it** and
+writes what moved to `lib/changes.json` (approval status, start/end date,
+assessment status and sub-status, legal act — per substance, with both export
+dates). Each change is classified:
+
+| Change | Rule | What the app does |
+| --- | --- | --- |
+| `renewal` | end date moved later under a new Regulation, or a running renewal closed | **"Approval renewed"** signal; status reads **"Recently renewed"** for `RECENTLY_RENEWED_DAYS` (365, in `lib/approvals.ts`), then "Renewal granted"; the BPC-recommendation chip, renewal track and postponement tiles clear |
+| `renewal-start` | assessment status became "Renewal in progress" | **"Renewal started"** signal — only when no "Renewal application submitted" signal (interest list or postponement Decision) already covers the renewal; otherwise status only |
+| `expiry` | approval status became "Expired" | nothing extra — `lib/expirySignals.ts` already raises "Approval expired" from the end date |
+| `extension` | end date moved later otherwise (e.g. postponement) | logged only |
+| other field moves, `added`, `removed` | — | logged only |
+
+ECHA gives no date for a change, so these signals are dated to the **first
+export that shows them** and say so ("First recorded date"). The signal
+records are built in `lib/changeSignals.ts`; the renewal status in
+`renewalFor()` in `lib/approvals.ts`, which takes whichever is later of a
+renewal act on file and a renewal seen between exports. Older exports must stay
+in `data/` for this to work.
 3. Check it locally: `npm run dev`.
 4. `npm run build` for a fresh static `out/`, or `./make-export.sh` for the
    hand-off folder.
@@ -648,8 +702,10 @@ below). Re-enabling it is a one-line change in
 still in place.
 
 The column is **not part of the ECHA export** — it is added to the spreadsheet
-by `tools/flag_postponed.py` and read straight from there, so any row can be
-corrected by hand and the app will honour the correction. The converter matches
+by `tools/flag_postponed.py` (latest ECHA export by default) and read straight
+from there, so any row can be corrected by hand and the app will honour the
+correction. When the latest export has no such column, the converter applies the
+same rule itself. The converter matches
 the column **by prefix**, so the "(WIP)" suffix can be dropped without breaking
 anything.
 
@@ -757,8 +813,8 @@ criteria.
 **Only `_Current` is converted** — the consultations still taking comments. A
 closed consultation's grounds are superseded by whatever was decided, and Pelsis
 holds those conclusions separately; showing grounds beside an answered question
-would only invite re-reading the question. The converter globs `*_Current.csv`, so
-dropping in a fresh pair of exports carries the change through on its own. The
+would only invite re-reading the question. The converter reads only the
+`…_Current_DD_MM_YY.csv` export. The
 `state` field and the closed rendering are left in place for when the conclusions
 are added alongside the historical rows.
 
@@ -884,10 +940,9 @@ Two rules follow, for feeds written from here on:
 
 ## Updating the Article 95 supplier list
 
-Drop the new `article_95_*.xlsx` into **`data/`** and re-run `npm run data`. If
-several are present the alphabetically last one wins, so the dated filenames
-ECHA uses sort correctly. The list's own date is read from that filename
-(`..._25.09.26_...` → 25 Sep 2026) and shown above the supplier table.
+Add the new list as `article_95_list_pt18_19_simplified_DD_MM_YY.xlsx` in an
+update folder and re-run `npm run data`. The list's own date is read from that
+filename (`…_25_09_26.xlsx` → 25 Sep 2026) and shown above the supplier table.
 
 Only the supplier columns are carried through — entity, country, type, inclusion
 reason and the two inclusion dates. The substance identity columns are used to
@@ -911,8 +966,30 @@ rows the source repeats verbatim.
 
 ## Updating the product export
 
-Drop the new `biocidal-products-export.xlsx` into **`data/`** and re-run
-`npm run data`.
+Add the new export as `biocidal-products-export_DD_MM_YY.xlsx` in an update
+folder and re-run `npm run data`.
+
+**Trends.** The Authorisations, Holder groups and Market areas tiles on the
+product page carry a badge (+N green, −N red, ±0) comparing each count with the
+newest product export at least 30 days older than the latest, by download date
+(`TREND_DAYS` in `tools/convert_export.py`; an ⓘ on each tile explains it). With
+no export that old, no badge is shown.
+
+**Cancellations** are the only signal raised from product updates. Every pair of
+consecutive product exports is compared on the R4BP asset number, and
+authorisations whose status became `Cancelled` are written to
+`lib/productChanges.json` — one entry per substance per update, which
+`lib/productSignals.ts` turns into **one** "N product authorisations cancelled"
+signal listing them (weak negative; strong when no live authorisation is left).
+The signal is raised **only for substances whose approval status is Approved** —
+after an expiry, cancellations are expected and stay in the log only.
+
+**Recent product changes.** Each authorisation in `public/products/<id>.json`
+carries its latest `change` between consecutive product exports (new, cancelled,
+expired, re-authorised), dated to the first export that shows it. On the product
+page, anything changed within the past 30 days (by the reader's date, like the
+timeline's "New" tag) is tagged, its family is tagged and opened, and all of
+them are listed together under **"Changed in the past 30 days"** at the top.
 
 The export is far too big to bundle — ~6,600 rows, ~3 MB of per-product detail —
 so the converter **splits it**:
@@ -1072,16 +1149,19 @@ lib/
   suppliers.ts      supplier lookup by substance id
   products.ts       product summaries + on-demand detail fetch
   feeds.ts          reads data/feeds/*.json directly; lookup + strongest-signal
+  changes.ts        changes between consecutive ECHA exports (lib/changes.json, generated)
+  changeSignals.ts  renewals granted / started between exports, as records
+  productSignals.ts product authorisations cancelled between exports (lib/productChanges.json)
   ngoSignals.ts     reads data/reports/*/…_NGO_report.md; Tier 1–3 items as 'ngo' records
   filters.ts        matching + sort orders
   types.ts          the data contract
 tools/
   convert_export.py the .xlsx exports -> substances/suppliers/products json
 data/
-  ECHA_all_PT18_PT19_active-substances-export.xlsx
-  article_95_list_pt18_19_25.09.26_simplified.xlsx   approved suppliers
-  biocidal-products-export.xlsx                      authorised products
+  baseline_20_09_26/<source>_DD_MM_YY.*              first full snapshot
+  updates/data_update_DD_MM_YY/<source>_DD_MM_YY.*   only what changed that round
   feeds/<ec…>_Feed.json                              hand-edited, no build step
+  reports/<slug>/<YYYY-MM-DD>_NGO_report.md          hand-added, no build step
 public/
   insightive_logo_light.png
   products/<substance id>.json   per-substance authorisations (generated)

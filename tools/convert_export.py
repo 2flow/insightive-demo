@@ -2,17 +2,18 @@
 """Compile the data/ folder into the JSON the app bundles.
 
 The app has no backend: the whole dataset is compiled in. Re-run this after
-dropping new files into data/ and the interface picks them up.
+adding a data/updates/data_update_DD_MM_YY/ folder and the interface picks it up.
 
     python3 tools/convert_export.py [path/to/export.xlsx]
 
-Inputs and outputs:
+Source files are named `<name>_DD_MM_YY.<ext>` and found anywhere under data/;
+for each source the most recent date wins (see SOURCES below). Main outputs:
 
-  data/ECHA_*.xlsx        the "Search for Chemicals" export      -> lib/substances.json
-  data/article_95_*.xlsx  the Article 95 approved-supplier list  -> lib/suppliers.json
-  data/biocidal-products-export.xlsx  authorised products        -> lib/products.json
+  ECHA_active-substance-export_*.xlsx       substances           -> lib/substances.json
+  article_95_list_pt18_19_simplified_*.xlsx approved suppliers   -> lib/suppliers.json
+  biocidal-products-export_*.xlsx           authorised products  -> lib/products.json
                                                                  + public/products/<id>.json
-  data/as-rnl_expressions_of_interest_*.xlsx  renewal interest   -> lib/interest.json
+  as-rnl_expressions_of_interest_*.xlsx     renewal interest     -> lib/interest.json
 
 The product export is far too big to bundle (~3 MB of per-product rows), so it is
 split: per-substance *summaries* go into the bundle, and the full per-product
@@ -39,7 +40,31 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-OUT = ROOT / "lib" / "substances.json"
+
+# Every source file is named `<name>_DD_MM_YY.<ext>` — the date it was
+# downloaded — and lives either in data/baseline_DD_MM_YY/ (the first full
+# snapshot) or in data/updates/data_update_DD_MM_YY/ (only the files that
+# changed that round). Each source below is matched on its exact name, and the
+# most recent date wins, wherever it sits.
+SOURCES = {
+    "substances": "ECHA_active-substance-export.xlsx",
+    "suppliers": "article_95_list_pt18_19_simplified.xlsx",
+    "products": "biocidal-products-export.xlsx",
+    "interest": "as-rnl_expressions_of_interest_PT18-PT19.xlsx",
+    "ppp": "EU_Pesticide_Database_PT18_PT19_with_AI_analysis.xlsx",
+    "consultations": "consultations on potential candidates for substitution and on derogations conditions_Current.csv",
+    "pact": "pact-export-filtered_updated_and_other_flags.csv",
+    "edsp": "EPA_2015_EDSP_Tier1_WoE_Conclusions_x_ECHA_PT18-PT19_ED_tags.xlsx",
+    "pan": "PAN_HHP_PT18_PT19.xlsx",
+    "postponementsPT18": "PT18-postponements-open.csv",
+    "postponementsPT19": "PT19-postponements-open.csv",
+    "bpcOpinions": "bpc opinions on active substance approval_and_minority_opinions.csv",
+    "approvals": "BPR_PT18_PT19_approval_conditions_EURLex_AI_Extracted_UPDATED_method_flags.xlsx",
+}
+
+DATED_NAME = re.compile(r"^(?P<name>.+)_(?P<day>\d{2})_(?P<month>\d{2})_(?P<year>\d{2})$")
+
+OUT =ROOT / "lib" / "substances.json"
 SUPPLIER_OUT = ROOT / "lib" / "suppliers.json"
 PRODUCT_OUT = ROOT / "lib" / "products.json"
 PRODUCT_DETAIL_DIR = ROOT / "public" / "products"
@@ -50,6 +75,8 @@ PACT_OUT = ROOT / "lib" / "pact.json"
 POSTPONEMENT_OUT = ROOT / "lib" / "postponements.json"
 BPC_OUT = ROOT / "lib" / "bpcOpinions.json"
 APPROVAL_OUT = ROOT / "lib" / "approvals.json"
+CHANGES_OUT = ROOT / "lib" / "changes.json"
+PRODUCT_CHANGES_OUT = ROOT / "lib" / "productChanges.json"
 
 # The header row sits under a title row + a blank row.
 HEADER_ROW = 3
@@ -59,6 +86,9 @@ def clean(value) -> str:
     """ECHA pads a lot of cells; empty is empty."""
     if value is None:
         return ""
+    # Some exports store whole numbers as floats (BAS 1299.0); ids need 1299.
+    if isinstance(value, float) and value.is_integer():
+        value = int(value)
     return re.sub(r"\s+", " ", str(value)).strip()
 
 
@@ -121,21 +151,63 @@ def bucket(end_iso: str, today: date) -> str:
     return "beyond"
 
 
-def convert(xlsx: Path) -> dict:
+# An approval may not exceed 10 years, or 7 for a candidate for substitution.
+# Shared with tools/flag_postponed.py, which writes the same rule into the sheet.
+MAX_YEARS = 10
+MAX_YEARS_SUBSTITUTION = 7
+DAYS_PER_YEAR = 365.2425
+
+POSTPONED_PREFIX = "Expiry date postponed"
+
+# Columns Pelsis adds to the ECHA export by hand. A fresh download arrives
+# without them, so they are carried over from the latest earlier copy that has them.
+BPC_OPINION_COLUMNS = ("Recent BPC Opinion", "Recent BPC Opinion PDF")
+
+
+def exceeds_cap(start: date, end: date, substitution: bool) -> bool:
+    cap = MAX_YEARS_SUBSTITUTION if substitution else MAX_YEARS
+    return (end - start).days / DAYS_PER_YEAR > cap
+
+
+def echa_records(xlsx: Path) -> tuple[openpyxl.Workbook, list[str], list[dict]]:
     book = openpyxl.load_workbook(xlsx, data_only=True)
-    results = book["results"]
-    rows = list(results.iter_rows(min_row=HEADER_ROW, values_only=True))
+    rows = list(book["results"].iter_rows(min_row=HEADER_ROW, values_only=True))
     header = [clean(h) for h in rows[0]]
+    records = [{header[i]: clean(v) for i, v in enumerate(raw) if i < len(header)} for raw in rows[1:]]
+    return book, header, [r for r in records if r.get("Substance name")]
+
+
+def echa_id(record: dict) -> str:
+    return f'{record.get("BAS number", "")}-{record.get("Product-type", "").split("-", 1)[0]}'
+
+
+def carried_bpc_opinions(earlier: list[Path]) -> tuple[dict[str, tuple[str, str]], str]:
+    """BPC opinions from the newest earlier export that carries the columns."""
+    opinion, pdf = BPC_OPINION_COLUMNS
+    for path in reversed(earlier):
+        _, header, records = echa_records(path)
+        if opinion in header:
+            return {echa_id(r): (r.get(opinion, ""), r.get(pdf, "")) for r in records if r.get(opinion)}, path.name
+    return {}, ""
+
+
+def convert(xlsx: Path, earlier: list[Path] = ()) -> dict:
+    book, header, records = echa_records(xlsx)
 
     export_date = parse_export_date(book["criteria"]) if "criteria" in book.sheetnames else ""
     today = date.fromisoformat(export_date) if export_date else date.today()
 
+    carried, carried_from = ({}, "")
+    if BPC_OPINION_COLUMNS[0] not in header:
+        carried, carried_from = carried_bpc_opinions(list(earlier))
+        print(f"  ~ {xlsx.name} has no BPC opinion columns: {len(carried)} carried over from {carried_from or 'nowhere'}")
+    has_postponed = any(h.startswith(POSTPONED_PREFIX) for h in header)
+    if not has_postponed:
+        print(f'  ~ {xlsx.name} has no "{POSTPONED_PREFIX}" column: computed from the approval dates')
+
     substances = []
-    for raw in rows[1:]:
-        record = {header[i]: clean(v) for i, v in enumerate(raw) if i < len(header)}
-        name = record.get("Substance name", "")
-        if not name:
-            continue
+    for record in records:
+        name = record["Substance name"]
 
         product_type = record.get("Product-type", "")
         pt = product_type.split("-", 1)[0]
@@ -145,10 +217,22 @@ def convert(xlsx: Path) -> dict:
         # ECHA leaves approval status blank while a first application is still
         # running; the interface shows that as its own state rather than a gap.
         status = record.get("Approval status", "") or "Pending"
+        bpc_opinion, bpc_opinion_url = carried.get(echa_id(record)) or (
+            record.get(BPC_OPINION_COLUMNS[0], ""),
+            record.get(BPC_OPINION_COLUMNS[1], ""),
+        )
+        if has_postponed:
+            postponed = next((v for k, v in record.items() if k.startswith(POSTPONED_PREFIX)), "") == "Yes"
+        else:
+            postponed = bool(start and end) and exceeds_cap(
+                date.fromisoformat(start),
+                date.fromisoformat(end),
+                record.get("Candidate for substitution", "") == "Yes",
+            )
 
         substances.append(
             {
-                "id": f'{record.get("BAS number", "")}-{pt}',
+                "id": echa_id(record),
                 "name": name,
                 "pt": pt,
                 "ptName": pt_name,
@@ -177,8 +261,8 @@ def convert(xlsx: Path) -> dict:
 
                 # Added by Pelsis alongside the ECHA export — the BPC's most
                 # recent opinion on this substance, when one has been published.
-                "bpcOpinion": record.get("Recent BPC Opinion", ""),
-                "bpcOpinionUrl": record.get("Recent BPC Opinion PDF", ""),
+                "bpcOpinion": bpc_opinion,
+                "bpcOpinionUrl": bpc_opinion_url,
 
                 # Also added by Pelsis: an approval running longer than the
                 # statutory maximum (10 years, or 7 for a candidate for
@@ -187,9 +271,7 @@ def convert(xlsx: Path) -> dict:
                 # 10-year approvals of substitution candidates, so it is
                 # carried in the data but not yet shown in the interface.
                 # Matched by prefix so the "(WIP)" suffix can be dropped later.
-                "expiryPostponed": next(
-                    (v for k, v in record.items() if k.startswith("Expiry date postponed")), ""
-                ) == "Yes",
+                "expiryPostponed": postponed,
             }
         )
 
@@ -200,8 +282,9 @@ def convert(xlsx: Path) -> dict:
     # before the substance export catches up, so an adopted opinion moves the
     # dossier on to the Commission weeks before this file shows it. Applied on
     # top of the export; lib/bpcMeetingSignals.ts carries the same events as
-    # signals. Retire an entry once the export itself has caught up (the
-    # warning below says when). Source:
+    # signals. Entries are kept even once the export has caught up: the
+    # meeting notes are the most current source, and the signals rely on them.
+    # Source:
     # https://echa.europa.eu/about-us/who-we-are/biocidal-products-committee/meetings-of-the-biocidal-products-committee/2026
     bpc_meeting_updates = {
         # BPC-59, 28 May 2026: approval opinion on peanut butter (PT19) adopted.
@@ -216,7 +299,7 @@ def convert(xlsx: Path) -> dict:
         if s["assessmentSubStatus"] != "Opinion development by BPC":
             print(
                 f'  ~ BPC meeting notes: {s["id"]} sub-status is already '
-                f'"{s["assessmentSubStatus"]}" in the export — the override may be stale, consider retiring it',
+                f'"{s["assessmentSubStatus"]}" in the export — it has caught up with the meeting notes (entry kept)',
                 file=sys.stderr,
             )
         s.update(fields)
@@ -225,12 +308,102 @@ def convert(xlsx: Path) -> dict:
         "meta": {
             "source": "ECHA — Biocidal active substances (Search for Chemicals export)",
             "sourceFile": xlsx.name,
+            "bpcOpinionsFrom": carried_from or xlsx.name,
             "exportDate": export_date,
             "lastUpdated": parse_last_updated(book["criteria"]) if "criteria" in book.sheetnames else "",
             "productTypes": sorted({s["pt"] for s in substances}),
             "count": len(substances),
         },
         "substances": substances,
+    }
+
+
+# ── Changes between ECHA exports ─────────────────────────────
+# Every dated ECHA export is compared with the one before it, so what moved
+# between two downloads is kept as a record of its own rather than lost when
+# the newer file replaces the older. The app turns some of it into signals
+# (lib/changeSignals.ts) and some into status (lib/approvals.ts).
+#
+# Classified changes, per substance:
+#   renewal        the approval end date moved later under a new Regulation, or
+#                  as a running renewal closed — a postponement Decision moves
+#                  the date too, but by Decision and with the renewal still open
+#   extension      the end date moved later for any other reason
+#   renewal-start  the assessment status became "Renewal in progress"
+#   expiry         the approval status became "Expired"
+#   added/removed  the substance appeared in or left the export
+
+TRACKED = ("approvalStatus", "startDate", "endDate", "assessmentStatus", "assessmentSubStatus", "legalAct")
+RENEWING = "Renewal in progress"
+
+
+def echa_snapshot(xlsx: Path) -> tuple[str, dict[str, dict]]:
+    book, _, records = echa_records(xlsx)
+    export_date = parse_export_date(book["criteria"]) if "criteria" in book.sheetnames else ""
+    if not export_date:
+        export_date = file_date(xlsx).isoformat()
+    snapshot = {
+        echa_id(r): {
+            "approvalStatus": r.get("Approval status", "") or "Pending",
+            "startDate": parse_date(r.get("Approval start date", "")),
+            "endDate": parse_date(r.get("Approval end date", "")),
+            "assessmentStatus": r.get("Assessment status", ""),
+            "assessmentSubStatus": blank_dash(r.get("Assessment sub-status", "")),
+            "legalAct": r.get("Legal act", ""),
+            "legalActUrl": r.get("Link to legal act", ""),
+        }
+        for r in records
+    }
+    return export_date, snapshot
+
+
+def change_kinds(before: dict, after: dict) -> list[str]:
+    kinds = []
+    if after["approvalStatus"] == "Expired" and before["approvalStatus"] != "Expired":
+        kinds.append("expiry")
+    if after["assessmentStatus"] == RENEWING and before["assessmentStatus"] != RENEWING:
+        kinds.append("renewal-start")
+    if before["endDate"] and after["endDate"] > before["endDate"]:
+        by_regulation = after["legalAct"] != before["legalAct"] and "regulation" in after["legalAct"].lower()
+        concluded = before["assessmentStatus"] == RENEWING and after["assessmentStatus"] != RENEWING
+        renewed = after["approvalStatus"] == "Approved" and (by_regulation or concluded)
+        kinds.append("renewal" if renewed else "extension")
+    return kinds
+
+
+def compute_changes(paths: list[Path]) -> dict:
+    snapshots = [(path, *echa_snapshot(path)) for path in paths]
+    by_substance: dict[str, list[dict]] = {}
+    for (old_path, since, before_all), (new_path, date_seen, after_all) in zip(snapshots, snapshots[1:]):
+        for sid in sorted(before_all.keys() | after_all.keys()):
+            before, after = before_all.get(sid), after_all.get(sid)
+            if before and after:
+                fields = {f: [before[f], after[f]] for f in TRACKED if before[f] != after[f]}
+                if not fields:
+                    continue
+                kinds = change_kinds(before, after)
+            else:
+                fields, kinds = {}, ["added" if after else "removed"]
+            by_substance.setdefault(sid, []).append(
+                {
+                    "date": date_seen,
+                    "since": since,
+                    "kinds": kinds,
+                    "fields": fields,
+                    "legalAct": (after or before)["legalAct"],
+                    "legalActUrl": (after or before)["legalActUrl"],
+                    "fromFile": old_path.name,
+                    "toFile": new_path.name,
+                }
+            )
+    counts = collections.Counter(k for entries in by_substance.values() for e in entries for k in e["kinds"])
+    return {
+        "meta": {
+            "exports": [{"file": path.name, "exportDate": when} for path, when, _ in snapshots],
+            "kinds": dict(sorted(counts.items())),
+            "count": sum(len(entries) for entries in by_substance.values()),
+        },
+        "bySubstance": by_substance,
     }
 
 
@@ -274,17 +447,43 @@ def canonical_forms(values) -> dict[str, str]:
     return {squashed: counts.most_common(1)[0][0] for squashed, counts in groups.items()}
 
 
+def file_date(path: Path) -> date | None:
+    """`ECHA_active-substance-export_20_10_26.xlsx` -> 2026-10-20."""
+    m = DATED_NAME.match(path.stem)
+    if not m:
+        return None
+    try:
+        return date(2000 + int(m["year"]), int(m["month"]), int(m["day"]))
+    except ValueError:
+        return None
+
+
+def versions(source: str) -> list[Path]:
+    """Every dated copy of a source under data/, oldest first."""
+    target = Path(SOURCES[source])
+    found = []
+    for path in DATA.rglob(f"*{target.suffix}"):
+        m = DATED_NAME.match(path.stem)
+        when = file_date(path)
+        if m and when and m["name"] == target.stem:
+            found.append((when, path))
+    found.sort()
+    for (a, pa), (b, pb) in zip(found, found[1:]):
+        if a == b:
+            sys.exit(f"Two versions of {target.name} dated {a}: {pa.relative_to(ROOT)} and {pb.relative_to(ROOT)}")
+    return [path for _, path in found]
+
+
+def latest(source: str) -> Path | None:
+    found = versions(source)
+    return found[-1] if found else None
+
+
 def list_date_from_name(name: str) -> str:
     """The list's own date lives only in its filename, e.g.
-    `article_95_list_pt18_19_25.09.26_simplified.xlsx` -> 2026-09-25."""
-    m = re.search(r"_(\d{2})\.(\d{2})\.(\d{2})_", name)
-    if not m:
-        return ""
-    day, month, year = (int(g) for g in m.groups())
-    try:
-        return date(2000 + year, month, day).isoformat()
-    except ValueError:
-        return ""
+    `article_95_list_pt18_19_simplified_25_09_26.xlsx` -> 2026-09-25."""
+    when = file_date(Path(name))
+    return when.isoformat() if when else ""
 
 
 def norm_id(value: str) -> str:
@@ -855,7 +1054,8 @@ def convert_consultations(paths: list[Path], substances: dict) -> dict:
     by_substance: dict[str, list[dict]] = {}
     rows_read = unmatched = 0
     for path in paths:
-        state = "open" if path.stem.endswith("Current") else "closed"
+        undated = DATED_NAME.match(path.stem)
+        state = "open" if (undated["name"] if undated else path.stem).endswith("Current") else "closed"
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for record in csv.DictReader(handle):
                 name = clean(record.get("Name"))
@@ -1853,6 +2053,36 @@ def convert_products(xlsx: Path, substances: dict) -> tuple[dict, dict]:
     that exist as substances — a product whose PT14 component isn't in this
     export simply never matches, which is the behaviour we want.
     """
+    export_date, rows = read_products(xlsx, substances)
+    linked: dict[str, list[dict]] = collections.defaultdict(list)
+    for ids, product in rows:
+        for substance_id in ids:
+            linked[substance_id].append(product)
+
+    # The substance's own expiry, so a summary can say how much of the product
+    # estate outlives the approval it depends on.
+    expiry = {s["id"]: s["endDate"] for s in substances["substances"]}
+    summaries = {sid: summarise_products(rows, expiry.get(sid, "")) for sid, rows in linked.items()}
+    detail = {sid: build_product_detail(rows) for sid, rows in linked.items()}
+
+    meta = {
+        "source": "ECHA — Biocidal products (Search for Chemicals export)",
+        "sourceFile": xlsx.name,
+        "exportDate": export_date,
+        "substanceCount": len(summaries),
+        "productCount": sum(len(v) for v in linked.values()),
+    }
+    return {"meta": meta, "bySubstance": summaries}, detail
+
+
+_product_cache: dict[Path, tuple[str, list[tuple[set, dict]]]] = {}
+
+
+def read_products(xlsx: Path, substances: dict) -> tuple[str, list[tuple[set, dict]]]:
+    """(export date, [(substance ids, product)]) for one product export. Cached,
+    since the trend and the change log read the same files again."""
+    if xlsx in _product_cache:
+        return _product_cache[xlsx]
     book = openpyxl.load_workbook(xlsx, data_only=True)
     sheet = book["results"]
     rows = list(sheet.iter_rows(min_row=HEADER_ROW, values_only=True))
@@ -1860,8 +2090,7 @@ def convert_products(xlsx: Path, substances: dict) -> tuple[dict, dict]:
     records = [dict(zip(header, r)) for r in rows[1:] if r and r[0]]
 
     known = {s["id"] for s in substances["substances"]}
-    linked: dict[str, list[dict]] = collections.defaultdict(list)
-
+    out = []
     for record in records:
         ids = {
             f"{bas}-{pt}"
@@ -1885,24 +2114,112 @@ def convert_products(xlsx: Path, substances: dict) -> tuple[dict, dict]:
             "fieldOfUse": unique_cell(record.get("Field of use")),
             "userCategory": unique_cell(record.get("User category")),
         }
-        for substance_id in ids:
-            linked[substance_id].append(product)
-
-    # The substance's own expiry, so a summary can say how much of the product
-    # estate outlives the approval it depends on.
-    expiry = {s["id"]: s["endDate"] for s in substances["substances"]}
-    summaries = {sid: summarise_products(rows, expiry.get(sid, "")) for sid, rows in linked.items()}
-    detail = {sid: build_product_detail(rows) for sid, rows in linked.items()}
+        out.append((ids, product))
 
     export_date = parse_export_date(book["criteria"]) if "criteria" in book.sheetnames else ""
-    meta = {
-        "source": "ECHA — Biocidal products (Search for Chemicals export)",
-        "sourceFile": xlsx.name,
-        "exportDate": export_date,
-        "substanceCount": len(summaries),
-        "productCount": sum(len(v) for v in linked.values()),
+    if not export_date:
+        export_date = file_date(xlsx).isoformat() if file_date(xlsx) else ""
+    _product_cache[xlsx] = (export_date, out)
+    return _product_cache[xlsx]
+
+
+# ── Product trends and cancellations ─────────────────────────
+# The product tiles show how each count moved against the newest product
+# export at least TREND_DAYS older than the latest (by download date), and every
+# pair of consecutive product exports is compared for authorisations that were
+# cancelled in between — one entry per substance per update, which the app
+# turns into one signal (lib/productSignals.ts). Matched on the R4BP asset
+# number, which is unique per authorisation.
+
+TREND_DAYS = 30
+TREND_FIELDS = ("products", "holderGroups", "marketAreasLive")
+
+
+def product_trends(paths: list[Path], substances: dict, summaries: dict) -> dict:
+    """Writes `trend` into each summary in place; returns the trend's meta."""
+    latest_date = file_date(paths[-1])
+    earlier = [p for p in paths[:-1] if file_date(p) and (latest_date - file_date(p)).days >= TREND_DAYS]
+    if not earlier:
+        return {}
+    reference = earlier[-1]
+    since, rows = read_products(reference, substances)
+    linked: dict[str, list[dict]] = collections.defaultdict(list)
+    for ids, product in rows:
+        for substance_id in ids:
+            linked[substance_id].append(product)
+    before = {sid: summarise_products(r) for sid, r in linked.items()}
+    for sid, summary in summaries["bySubstance"].items():
+        old = before.get(sid)
+        summary["trend"] = {"since": since, **{f: old[f] if old else 0 for f in TREND_FIELDS}}
+    return {"since": since, "sourceFile": reference.name, "days": TREND_DAYS}
+
+
+PRODUCT_CHANGE_KIND = {"Cancelled": "cancelled", "Expired": "expired", "Authorised": "authorised"}
+
+
+def annotate_product_changes(paths: list[Path], substances: dict) -> int:
+    """Stamps each authorisation in the latest export with its most recent
+    change — new, or a status move — as `change` {kind, was, date, since}, so the
+    product page can mark what moved recently. Returns how many the latest
+    update changed."""
+    if len(paths) < 2:
+        return 0
+    latest: dict[str, dict] = {}
+    for old_path, new_path in zip(paths, paths[1:]):
+        since, old_rows = read_products(old_path, substances)
+        seen, new_rows = read_products(new_path, substances)
+        before = {p["asset"]: p["status"] for _, p in old_rows if p["asset"]}
+        for _, product in new_rows:
+            asset, was = product["asset"], before.get(product["asset"])
+            if not asset or was == product["status"]:
+                continue
+            kind = "new" if was is None else PRODUCT_CHANGE_KIND.get(product["status"], "status")
+            latest[asset] = {"kind": kind, "was": was or "", "date": seen, "since": since}
+    _, rows = read_products(paths[-1], substances)
+    newest = read_products(paths[-1], substances)[0]
+    stamped = 0
+    for _, product in rows:
+        change = latest.get(product["asset"])
+        if change:
+            product["change"] = change
+            stamped += change["date"] == newest
+    return stamped
+
+
+def product_cancellations(paths: list[Path], substances: dict) -> dict:
+    by_substance: dict[str, list[dict]] = {}
+    for old_path, new_path in zip(paths, paths[1:]):
+        since, old_rows = read_products(old_path, substances)
+        seen, new_rows = read_products(new_path, substances)
+        before = {p["asset"]: p["status"] for _, p in old_rows if p["asset"]}
+        cancelled: dict[str, list[dict]] = collections.defaultdict(list)
+        for ids, product in new_rows:
+            was = before.get(product["asset"])
+            if product["status"] == "Cancelled" and was and was != "Cancelled":
+                for sid in ids:
+                    cancelled[sid].append({
+                        "asset": product["asset"],
+                        "name": product["tradeNames"][0] if product["tradeNames"] else product["asset"],
+                        "market": product["market"],
+                        "holder": product["holder"],
+                        "was": was,
+                    })
+        for sid, products in cancelled.items():
+            products.sort(key=lambda p: (p["name"].lower(), p["market"]))
+            by_substance.setdefault(sid, []).append({
+                "date": seen,
+                "since": since,
+                "fromFile": old_path.name,
+                "toFile": new_path.name,
+                "products": products,
+            })
+    return {
+        "meta": {
+            "exports": [{"file": p.name, "exportDate": read_products(p, substances)[0]} for p in paths],
+            "count": sum(len(e["products"]) for entries in by_substance.values() for e in entries),
+        },
+        "bySubstance": by_substance,
     }
-    return {"meta": meta, "bySubstance": summaries}, detail
 
 
 def summarise_products(rows: list[dict], substance_end: str = "") -> dict:
@@ -1997,30 +2314,41 @@ def build_product_detail(rows: list[dict]) -> dict:
 
 
 def main() -> None:
-    xlsx = Path(sys.argv[1]) if len(sys.argv) > 1 else DATA / "ECHA_all_PT18_PT19_active-substances-export.xlsx"
+    echa_versions = versions("substances")
+    xlsx = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else echa_versions[-1]
+    print(f"Substances from {xlsx.relative_to(ROOT)}")
 
-    substances = convert(xlsx)
+    earlier = echa_versions[: echa_versions.index(xlsx)] if xlsx in echa_versions else echa_versions
+    substances = convert(xlsx, earlier)
     OUT.write_text(json.dumps(substances, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f'{substances["meta"]["count"]} substances -> {OUT.relative_to(ROOT)}')
 
-    article_95 = sorted(DATA.glob("article_95_*.xlsx"))
+    changes = compute_changes(echa_versions)
+    CHANGES_OUT.write_text(json.dumps(changes, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    kinds = ", ".join(f"{n} {k}" for k, n in changes["meta"]["kinds"].items()) or "none classified"
+    print(
+        f'{changes["meta"]["count"]} changes across {len(echa_versions)} ECHA exports ({kinds})'
+        f" -> {CHANGES_OUT.relative_to(ROOT)}"
+    )
+
+    article_95 = latest("suppliers")
     if article_95:
-        suppliers = convert_suppliers(article_95[-1], substances)
+        suppliers = convert_suppliers(article_95, substances)
         SUPPLIER_OUT.write_text(json.dumps(suppliers, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{suppliers["meta"]["supplierCount"]} suppliers / {suppliers["meta"]["count"]} substances'
             f" -> {SUPPLIER_OUT.relative_to(ROOT)}"
         )
 
-    interest_files = sorted(DATA.glob("as-rnl_expressions_of_interest_*.xlsx"))
-    if interest_files:
-        interest = convert_interest(interest_files[-1], substances)
+    interest_file = latest("interest")
+    if interest_file:
+        interest = convert_interest(interest_file, substances)
         INTEREST_OUT.write_text(json.dumps(interest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f'{interest["meta"]["count"]} renewal-interest rows -> {INTEREST_OUT.relative_to(ROOT)}')
 
-    ppp_files = sorted(DATA.glob("EU_Pesticide_Database_*.xlsx"))
-    if ppp_files:
-        ppp = convert_ppp(ppp_files[-1], substances)
+    ppp_file = latest("ppp")
+    if ppp_file:
+        ppp = convert_ppp(ppp_file, substances)
         PPP_OUT.write_text(json.dumps(ppp, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{ppp["meta"]["rows"]} pesticide-database rows / {ppp["meta"]["count"]} substances'
@@ -2030,25 +2358,25 @@ def main() -> None:
     # Only the open consultation. The closed ones are superseded by the
     # conclusions Pelsis holds separately, so carrying them here would show
     # grounds next to a decision that has already answered them.
-    consultations = sorted(DATA.glob("consultations on potential candidates*_Current.csv"))
+    consultations = latest("consultations")
     if consultations:
-        data = convert_consultations(consultations, substances)
+        data = convert_consultations([consultations], substances)
         CONSULTATION_OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{data["meta"]["rows"]} consultation rows / {data["meta"]["count"]} substances'
             f" -> {CONSULTATION_OUT.relative_to(ROOT)}"
         )
 
-    pact_files = sorted(DATA.glob("pact-export*.csv"))
-    if pact_files:
-        pact = convert_pact(pact_files[-1], substances)
-        edsp_files = sorted(DATA.glob("EPA_*EDSP*.xlsx"))
-        if edsp_files:
-            merged = merge_edsp(edsp_files[-1], pact, substances)
+    pact_file = latest("pact")
+    if pact_file:
+        pact = convert_pact(pact_file, substances)
+        edsp_file = latest("edsp")
+        if edsp_file:
+            merged = merge_edsp(edsp_file, pact, substances)
             print(f"{merged} EPA EDSP Tier 1 conclusions merged into the hazard flags")
-        pan_files = sorted(DATA.glob("PAN_HHP*.xlsx"))
-        if pan_files:
-            merged = merge_pan_hhp(pan_files[-1], pact, substances)
+        pan_file = latest("pan")
+        if pan_file:
+            merged = merge_pan_hhp(pan_file, pact, substances)
             print(f"{merged} PAN HHP listings merged into the hazard flags")
         PACT_OUT.write_text(json.dumps(pact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
@@ -2056,7 +2384,7 @@ def main() -> None:
             f' / {pact["meta"]["count"]} substances -> {PACT_OUT.relative_to(ROOT)}'
         )
 
-    postponement_files = sorted(DATA.glob("*postponements*.csv"))
+    postponement_files = [p for p in (latest("postponementsPT18"), latest("postponementsPT19")) if p]
     if postponement_files:
         data = convert_postponements(postponement_files, substances)
         POSTPONEMENT_OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -2065,18 +2393,18 @@ def main() -> None:
             f" -> {POSTPONEMENT_OUT.relative_to(ROOT)}"
         )
 
-    bpc_files = sorted(DATA.glob("bpc opinions*.csv"))
-    if bpc_files:
-        data = convert_bpc_opinions(bpc_files[-1], substances)
+    bpc_file = latest("bpcOpinions")
+    if bpc_file:
+        data = convert_bpc_opinions(bpc_file, substances)
         BPC_OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{data["meta"]["rows"]} BPC opinions ({data["meta"]["minorityCount"]} minority positions)'
             f' / {data["meta"]["count"]} substances -> {BPC_OUT.relative_to(ROOT)}'
         )
 
-    approval_files = sorted(DATA.glob("BPR_PT18_PT19_approval_conditions*.xlsx"))
-    if approval_files:
-        data = convert_approvals(approval_files[-1], substances)
+    approval_file = latest("approvals")
+    if approval_file:
+        data = convert_approvals(approval_file, substances)
         APPROVAL_OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{data["meta"]["withAct"]} approval acts ({data["meta"]["cfsInAct"]} stating candidate'
@@ -2085,9 +2413,24 @@ def main() -> None:
             f' -> {APPROVAL_OUT.relative_to(ROOT)}'
         )
 
-    products_xlsx = DATA / "biocidal-products-export.xlsx"
-    if products_xlsx.exists():
-        summaries, detail = convert_products(products_xlsx, substances)
+    product_versions = versions("products")
+    if product_versions:
+        changed = annotate_product_changes(product_versions, substances)
+        print(f"{changed} authorisations new or changed status in the latest product export")
+        summaries, detail = convert_products(product_versions[-1], substances)
+        trend = product_trends(product_versions, substances, summaries)
+        summaries["meta"]["trend"] = trend
+        print(
+            f'Product trends against {trend["sourceFile"]} (export of {trend["since"]})'
+            if trend
+            else f"No product export {TREND_DAYS}+ days older than the latest: no trends"
+        )
+        cancellations = product_cancellations(product_versions, substances)
+        PRODUCT_CHANGES_OUT.write_text(json.dumps(cancellations, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(
+            f'{cancellations["meta"]["count"]} authorisations cancelled across {len(product_versions)} product exports'
+            f" ({len(cancellations['bySubstance'])} substances) -> {PRODUCT_CHANGES_OUT.relative_to(ROOT)}"
+        )
         PRODUCT_OUT.write_text(json.dumps(summaries, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
         # One file per substance, replacing whatever was there before.

@@ -8,7 +8,8 @@ import {
   actShort,
   approvalFor,
   approvalMeta,
-  renewalGranted,
+  recentlyRenewed,
+  renewalFor,
   splitConditions,
 } from '@/lib/approvals'
 import { minorityCount, opinionsFor } from '@/lib/bpcOpinions'
@@ -294,13 +295,22 @@ function Dashboard({
   // Two tiles are the feed's to answer. Without one they read "—", which is
   // the honest answer: nobody has researched it, not "there is none".
   const renewal = feed?.renewal
+  // A renewal granted starts a new approval period: the track and the
+  // postponements belonged to the one it replaced, so both tiles clear. The
+  // postponements stay in the record as history.
+  const granted = renewalFor(substance.id)
+  const renewed = !!granted
   // The decisions themselves, where we hold them. They outrank the count a feed
   // carries by hand — Indoxacarb's feed says 0 where the register shows 3.
-  const moved = postponementsFor(substance.id)
-  const postponements = moved ? postponementCount(substance.id) : renewal?.postponements
+  const moved = renewed ? null : postponementsFor(substance.id)
+  const postponements = renewed
+    ? undefined
+    : moved
+      ? postponementCount(substance.id)
+      : renewal?.postponements
   // The decisions state the evaluation route; a curated feed may too. The
   // decisions win, being the document rather than a note about it.
-  const track = moved?.track || renewal?.track || ''
+  const track = renewed ? '' : moved?.track || renewal?.track || ''
   // When the renewal was filed. The postponement decisions state it in their
   // recitals, which is the better source; a curated feed may also carry it.
   const filedIso = moved?.applicationSubmittedIso || renewal?.started || ''
@@ -324,7 +334,6 @@ function Dashboard({
   // "submitted" for a substance whose renewal was granted — the entry records
   // the application, not what became of it — and the act that granted it is
   // the later and better word on the same question.
-  const renewed = renewalGranted(substance.id)
   const stated = !filed && !renewed && interest?.state ? interest.state : ''
   // Which leaves the line below to do the one thing the tile cannot: name the
   // companies. Everywhere else it repeats what the value or the note already
@@ -336,7 +345,8 @@ function Dashboard({
     (interest.companies.length > 0 || (filed && interest.state !== 'submitted'))
   // The BPC's published opinion — the one body whose view carries weight in the
   // decision itself, so it belongs on this tile rather than among the signals.
-  const bpc = hasBpcRenewalOpinion(substance)
+  // Once the renewal is granted the recommendation has been acted on.
+  const bpc = hasBpcRenewalOpinion(substance) && !renewed
   // No approval has ever been granted — ECHA leaves the status blank while a
   // first application runs, which the converter writes as "Pending". Nothing
   // about renewal applies yet: no filing deadline, no evaluation track, no
@@ -474,10 +484,12 @@ function Dashboard({
           ) : (
             <>
               <div
-                className={`fp-tile-value ${renewed ? 'ok' : stated ? `${INTEREST_SHORT[stated].length > 10 ? 'sm ' : ''}${interestTone(stated)}` : deadlinePassed ? 'warn' : ''}`}
+                className={`fp-tile-value ${renewed ? `ok ${recentlyRenewed(substance.id) ? 'sm' : ''}` : stated ? `${INTEREST_SHORT[stated].length > 10 ? 'sm ' : ''}${interestTone(stated)}` : deadlinePassed ? 'warn' : ''}`}
               >
                 {renewed
-                  ? 'Renewed'
+                  ? recentlyRenewed(substance.id)
+                    ? 'Recently renewed'
+                    : 'Renewed'
                   : filed
                     ? `${Math.abs(Math.round(elapsed / 12))} yr`
                     : stated
@@ -491,7 +503,7 @@ function Dashboard({
                   13(1) signal, which says what it is measuring. */}
               <div className={`fp-tile-note ${!stated && !renewed && deadlinePassed ? 'warn' : ''}`}>
                 {renewed
-                  ? approvalAct?.name || 'renewal granted'
+                  ? granted.act || 'renewal granted'
                   : stated
                     ? 'ECHA interest list'
                     : deadlinePassed
@@ -556,9 +568,11 @@ function Dashboard({
           <div className="fp-tile-note">
             {firstApproval
               ? 'not applicable before first approval'
-              : track
-                ? 'route the eCA is taking'
-                : 'no evaluation route recorded'}
+              : renewed
+                ? 'cleared by the renewal'
+                : track
+                  ? 'route the eCA is taking'
+                  : 'no evaluation route recorded'}
           </div>
         </div>
 
@@ -575,7 +589,9 @@ function Dashboard({
           <div className="fp-tile-note">
             {firstApproval
               ? 'not applicable before first approval'
-              : moved && moved.postponements.length > 0
+              : renewed
+                ? 'cleared by the renewal'
+                : moved && moved.postponements.length > 0
                 ? `latest ${moved.postponements[moved.postponements.length - 1].decision}` +
                   ` · now to ${formatDate(moved.currentExpiry)}`
                 : 'times the expiry has moved'}

@@ -194,7 +194,18 @@ export interface ProductSummary {
   newestGrant: number
   /** Authorisations whose own end date outlives the substance approval. */
   pastExpiry: { total: number; national: number; union: number; other: number }
+  /** The same counts in the export the trend compares against (meta.trend);
+   *  absent when there is no export old enough. */
+  trend?: ProductTrend
   list: ProductFamily[]
+}
+
+export interface ProductTrend {
+  /** Export date of the export compared against. */
+  since: string
+  products: number
+  holderGroups: number
+  marketAreasLive: number
 }
 
 export interface ProductDataset {
@@ -204,6 +215,8 @@ export interface ProductDataset {
     exportDate: string
     substanceCount: number
     productCount: number
+    /** Which export the trends compare against; empty when none is old enough. */
+    trend: { since?: string; sourceFile?: string; days?: number }
   }
   bySubstance: Record<string, ProductSummary>
 }
@@ -223,6 +236,18 @@ export interface ProductAuthorisation {
   reference: string
   fieldOfUse: string
   userCategory: string
+  /** The latest change between two consecutive product exports, if any. */
+  change?: ProductChange
+}
+
+export interface ProductChange {
+  kind: 'new' | 'cancelled' | 'expired' | 'authorised' | 'status'
+  /** The status in the earlier export; empty for a new authorisation. */
+  was: string
+  /** Export date of the first export to show the change. */
+  date: string
+  /** Export date of the one before. */
+  since: string
 }
 
 export interface ProductFamilyDetail {
@@ -787,4 +812,59 @@ export interface ApprovalDataset {
     unmatched: number
   }
   bySubstance: Record<string, ApprovalRecord>
+}
+
+// ── Changes between ECHA exports (lib/changes.json) ───────────
+
+export type ExportChangeKind = 'renewal' | 'extension' | 'renewal-start' | 'expiry' | 'added' | 'removed'
+
+/** What moved on one substance between two consecutive ECHA exports. */
+export interface ExportChange {
+  /** The export date of the first export to show the change. */
+  date: string
+  /** The export date of the one before it, which did not. */
+  since: string
+  kinds: ExportChangeKind[]
+  /** Each tracked field that changed, as [before, after]. */
+  fields: Partial<Record<'approvalStatus' | 'startDate' | 'endDate' | 'assessmentStatus' | 'assessmentSubStatus' | 'legalAct', string[]>>
+  legalAct: string
+  legalActUrl: string
+  fromFile: string
+  toFile: string
+}
+
+export interface ChangeDataset {
+  meta: {
+    exports: { file: string; exportDate: string }[]
+    kinds: Record<string, number>
+    count: number
+  }
+  bySubstance: Record<string, ExportChange[]>
+}
+
+// ── Product authorisations cancelled between exports (lib/productChanges.json) ──
+
+export interface CancelledProduct {
+  asset: string
+  name: string
+  market: string
+  holder: string
+  /** The status in the earlier export. */
+  was: string
+}
+
+/** Authorisations cancelled between two consecutive product exports. */
+export interface ProductCancellation {
+  /** Export date of the first export to show them cancelled. */
+  date: string
+  /** Export date of the one before. */
+  since: string
+  fromFile: string
+  toFile: string
+  products: CancelledProduct[]
+}
+
+export interface ProductChangeDataset {
+  meta: { exports: { file: string; exportDate: string }[]; count: number }
+  bySubstance: Record<string, ProductCancellation[]>
 }

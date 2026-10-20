@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "exports": [
+      {
+        "file": "biocidal-products-export_20_09_26.xlsx",
+        "exportDate": "2026-09-03"
+      },
+      {
+        "file": "biocidal-products-export_20_10_26.xlsx",
+        "exportDate": "2026-10-20"
+      }
+    ],
+    "count": 32
+  },
+  "bySubstance": {
+    "62-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-03",
+        "fromFile": "biocidal-products-export_20_09_26.xlsx",
+        "toFile": "biocidal-products-export_20_10_26.xlsx",
+        "products": [
+          {
+            "asset": "PL-0027947-0000",
+            "name": "Dimilin 5",
+            "market": "Poland",
+            "holder": "Arysta LifeScience Netherlands B.V.",
+            "was": "Authorised"
+          }
+        ]
+      }
+    ],
+    "15-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-03",
+        "fromFile": "biocidal-products-export_20_09_26.xlsx",
+        "toFile": "biocidal-products-export_20_10_26.xlsx",
+        "products": [
+          {
+            "asset": "CZ-0030292-0000",
+            "name": "Alba",
+            "market": "Czechia",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "SK-0015776-0000",
+            "name": "Alba",
+            "market": "Slovakia",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "HU-0030487-0000",
+            "name": "ALBA légyirtó szer",
+            "market": "Hungary",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "AT-0021600-0000",
+            "name": "Clothianidin Rb1",
+            "market": "Austria",
+            "holder": "Bayer CropScience Deutschland GmbH",
+            "was": "Authorised"
+          },
+          {
+            "asset": "BE-0017141-0000",
+            "name": "Clothianidin Rb1",
+            "market": "Belgium",
+            "holder": "Bayer CropScience SA-NV",
+            "was": "Authorised"
+          },
+          {
+            "asset": "DE-0016670-0000",
+            "name": "Clothianidin Rb1",
+            "market": "Germany",
+            "holder": "Bayer CropScience Deutschland GmbH",
+            "was": "Authorised"
+          },
+          {
+            "asset": "IE-0021634-0000",
+            "name": "Clothianidin Rb1",
+            "market": "Ireland",
+            "holder": "Bayer Limited",
+            "was": "Authorised"
+          },
+          {
+            "asset": "AT-0026340-0000",
+            "name": "DESINTEC AnoEx",
+            "market": "Austria",
+            "holder": "Sumitomo Chemical Agro Europe SAS",
+            "was": "Authorised"
+          },
+          {
+            "asset": "DE-0016891-0000",
+            "name": "DESINTEC AnoEx",
+            "market": "Germany",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "CH-0030377-0000",
+            "name": "Desintec AnoEx",
+            "market": "Switzerland",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "IT-0023750-0000",
+            "name": "Habitro Gel Blatte",
+            "market": "Italy",
+            "holder": "Bayer CropScience S.r.l.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "IT-0028742-0000",
+            "name": "Habitro Gel Scarafaggi Maxx",
+            "market": "Italy",
+            "holder": "Bayer CropScience S.r.l.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "SI-0025750-0000",
+            "name": "K-Alba",
+            "market": "Slovenia",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "CZ-0025786-0000",
+            "name": "Maxforce Platin",
+            "market": "Czechia",
+            "holder": "Bayer s.r.o.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "DK-0015766-0000",
+            "name": "Maxforce Platin",
+            "market": "Denmark",
+            "holder": "Bayer A/S",
+            "was": "Authorised"
+          },
+          {
+            "asset": "EE-0027113-0000",
+            "name": "Maxforce Platin",
+            "market": "Estonia",
+            "holder": "Bayer A/S",
+            "was": "Authorised"
+          },
+          {
+            "asset": "FI-0024331-0000",
+            "name": "Maxforce Platin",
+            "market": "Finland",
+            "holder": "Bayer A/S",
+            "was": "Authorised"
+          },
+          {
+            "asset": "FR-0016970-0000",
+            "name": "Maxforce Platin",
+            "market": "France",
+            "holder": "2022 ENVIRONMENTAL SCIENCE FR SAS",
+            "was": "Authorised"
+          },
+          {
+            "asset": "LV-0033926-0000",
+            "name": "Maxforce Platin",
+            "market": "Latvia",
+            "holder": "Bayer CropScience SA-NV",
+            "was": "Authorised"
+          },
+          {
+            "asset": "LT-0024957-0000",
+            "name": "Maxforce Platin",
+            "market": "Lithuania",
+            "holder": "Bayer A/S",
+            "was": "Authorised"
+          },
+          {
+            "asset": "NO-0023457-0000",
+            "name": "Maxforce Platin",
+            "market": "Norway",
+            "holder": "Bayer A/S",
+            "was": "Authorised"
+          },
+          {
+            "asset": "SK-0026100-0000",
+            "name": "Maxforce Platin",
+            "market": "Slovakia",
+            "holder": "Bayer s.r.o.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "SI-0021273-0000",
+            "name": "Maxforce Platin",
+            "market": "Slovenia",
+            "holder": "Bayer d.o.o.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "CH-0021473-0000",
+            "name": "Maxforce Platin",
+            "market": "Switzerland",
+            "holder": "Bayer CropScience Deutschland GmbH",
+            "was": "Authorised"
+          },
+          {
+            "asset": "HU-0028443-0000",
+            "name": "MAXFORCE PLATIN csótányirtó gél",
+            "market": "Hungary",
+            "holder": "BAYER HUNGARIA Kft.",
+            "was": "Authorised"
+          },
+          {
+            "asset": "BE-0018201-0000",
+            "name": "Moscarex",
+            "market": "Belgium",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "FR-0015630-0000",
+            "name": "Moscarex",
+            "market": "France",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "IT-0027406-0000",
+            "name": "Pesguard CT2.6",
+            "market": "Italy",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          },
+          {
+            "asset": "GR-0029967-0000",
+            "name": "Pesguard® CT 2.6",
+            "market": "Greece",
+            "holder": "SUMITOMO CHEMICAL UK SUCURSAL EN ESPANA",
+            "was": "Authorised"
+          }
+        ]
+      }
+    ],
+    "33-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-03",
+        "fromFile": "biocidal-products-export_20_09_26.xlsx",
+        "toFile": "biocidal-products-export_20_10_26.xlsx",
+        "products": [
+          {
+            "asset": "PL-0011561-0000",
+            "name": "SUBSTRAL na mrówki w domu",
+            "market": "Poland",
+            "holder": "Evergreen Garden Care Poland Sp. z o.o.",
+            "was": "Authorised"
+          }
+        ]
+      }
+    ],
+    "1404-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-03",
+        "fromFile": "biocidal-products-export_20_09_26.xlsx",
+        "toFile": "biocidal-products-export_20_10_26.xlsx",
+        "products": [
+          {
+            "asset": "AT-0022224-0004",
+            "name": "Kollant Motten-Sicher Gel",
+            "market": "Austria",
+            "holder": "SmarTec Solutions Sarl",
+            "was": "Authorised"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "exports": [
+      {
+        "file": "ECHA_active-substance-export_20_09_26.xlsx",
+        "exportDate": "2026-09-01"
+      },
+      {
+        "file": "ECHA_active-substance-export_20_10_26.xlsx",
+        "exportDate": "2026-10-20"
+      }
+    ],
+    "kinds": {
+      "expiry": 1,
+      "renewal": 1,
+      "renewal-start": 1
+    },
+    "count": 6
+  },
+  "bySubstance": {
+    "1314-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [],
+        "fields": {
+          "assessmentSubStatus": [
+            "Opinion development by BPC",
+            "Commission decision"
+          ]
+        },
+        "legalAct": "Commission Implementing Decision (EU) 2024/1285",
+        "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024D1285",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ],
+    "1334-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [
+          "renewal-start"
+        ],
+        "fields": {
+          "assessmentStatus": [
+            "",
+            "Renewal in progress"
+          ],
+          "assessmentSubStatus": [
+            "",
+            "Competent authority evaluation"
+          ]
+        },
+        "legalAct": "Reg (EU)2016/1068",
+        "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32016R1068",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ],
+    "15-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [
+          "expiry"
+        ],
+        "fields": {
+          "approvalStatus": [
+            "Approved",
+            "Expired"
+          ]
+        },
+        "legalAct": "REGULATION (EU) 2015/985",
+        "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32015R0985",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ],
+    "2503-PT19": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [],
+        "fields": {
+          "assessmentSubStatus": [
+            "Opinion development by BPC",
+            "Commission decision"
+          ]
+        },
+        "legalAct": "",
+        "legalActUrl": "",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ],
+    "37-PT18": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [],
+        "fields": {
+          "assessmentSubStatus": [
+            "Competent authority evaluation",
+            "Opinion development by BPC"
+          ]
+        },
+        "legalAct": "Decision (EU) 2025/1791",
+        "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D1791",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ],
+    "65-PT19": [
+      {
+        "date": "2026-10-20",
+        "since": "2026-09-01",
+        "kinds": [
+          "renewal"
+        ],
+        "fields": {
+          "endDate": [
+            "2027-03-31",
+            "2041-06-30"
+          ],
+          "assessmentStatus": [
+            "Renewal in progress",
+            ""
+          ],
+          "assessmentSubStatus": [
+            "Commission decision",
+            ""
+          ],
+          "legalAct": [
+            "Commission Implementing Decision (EU) 2024/1283",
+            "COMMISSION IMPLEMENTING REGULATION (EU) 2026/2247"
+          ]
+        },
+        "legalAct": "COMMISSION IMPLEMENTING REGULATION (EU) 2026/2247",
+        "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2247",
+        "fromFile": "ECHA_active-substance-export_20_09_26.xlsx",
+        "toFile": "ECHA_active-substance-export_20_10_26.xlsx"
+      }
+    ]
+  }
+}

@@ -2,9 +2,7 @@
 
 import { formatPartialDate } from '@/lib/data'
 import { directionTone, type DatedRecord } from '@/lib/feeds'
-import { categoryOf } from '@/lib/categories'
 import { isNgo } from '@/lib/ngoSignals'
-import { CATEGORY_ICON } from './RecordCard'
 import { PulseIcon } from './icons'
 
 // The head of the all-signals timeline, on the home page. Keeping up with what
@@ -55,8 +53,6 @@ export default function LatestSignals({
       ) : (
         <ol className="latest-list">
           {rows.map(({ record, substance }, i) => {
-            const c = categoryOf(record)
-            const Icon = CATEGORY_ICON[c.key]
             const ngo = isNgo(record)
             const tone = ngo ? 'none' : directionTone(record.signal.direction)
             return (
@@ -70,10 +66,6 @@ export default function LatestSignals({
                   <span className={`latest-tone tone-${tone}`} aria-hidden="true" />
                   <span className="latest-date">
                     {formatPartialDate(record.date, record.datePrecision)}
-                  </span>
-                  <span className={`latest-cat band-${c.band}`} title={c.label}>
-                    <Icon />
-                    <span className="latest-cat-label">{c.label}</span>
                   </span>
                   <span className="latest-sub">
                     <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>

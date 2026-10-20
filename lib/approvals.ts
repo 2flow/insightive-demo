@@ -1,4 +1,6 @@
 import raw from './approvals.json'
+import { latestChange } from './changes'
+import { daysUntil } from './data'
 import type { ApprovalCondition, ApprovalDataset, ApprovalMethod, ApprovalRecord } from './types'
 
 // The act that approved each substance, read off EUR-Lex: the candidate-for-
@@ -21,8 +23,9 @@ export function approvalFor(substanceId: string): ApprovalRecord | null {
 /**
  * Whether the act on record is a renewal that has already been granted.
  *
- * Two substances, and the test is exact: `renewed` agrees with the anchor act
- * being a Renewal (BPR) on every row, with no exceptions. Where it is true the
+ * Known two ways (see renewalFor): from the act — `renewed` agrees with the
+ * anchor act being a Renewal (BPR) on every row — or from a renewal seen
+ * between two ECHA exports. Where it is true the
  * latest act is the approval, and anything still describing the substance as
  * awaiting a decision is out of date — ECHA's expressions-of-interest list
  * among them, which goes on reading "submitted" because it records the
@@ -31,7 +34,55 @@ export function approvalFor(substanceId: string): ApprovalRecord | null {
  * The other 41 substances with a list status keep it: nothing supersedes them.
  */
 export function renewalGranted(substanceId: string): boolean {
-  return approvalFor(substanceId)?.renewed ?? false
+  return renewalFor(substanceId) !== null
+}
+
+/** How long a renewal reads as "Recently renewed" before it settles into
+ *  "Renewal granted": a year, long enough to be seen across a few updates. */
+export const RECENTLY_RENEWED_DAYS = 365
+
+export interface Renewal {
+  /** "Implementing Regulation (EU) 2026/2247" */
+  act: string
+  url: string
+  /** The act's adoption date where known; otherwise the date of the first
+   *  ECHA export to show the renewal (`firstSeen`). */
+  date: string
+  firstSeen: boolean
+}
+
+/** "COMMISSION IMPLEMENTING REGULATION (EU) 2026/2247" -> "Implementing Regulation (EU) 2026/2247" */
+export function actName(raw: string): string {
+  const m = raw.match(/(implementing\s+)?(regulation|decision)\s*\(eu\)\s*(?:no\s*)?(\d{4}\/\d+)/i)
+  if (!m) return raw
+  const kind = m[2][0].toUpperCase() + m[2].slice(1).toLowerCase()
+  return `${m[1] ? 'Implementing ' : ''}${kind} (EU) ${m[3]}`
+}
+
+/**
+ * The renewal behind the approval in force, from whichever record is later:
+ * the EUR-Lex act (approvals.json) or a renewal seen between two ECHA exports
+ * (changes.json) — the export usually shows a renewal before the act is
+ * retrieved here.
+ */
+export function renewalFor(substanceId: string): Renewal | null {
+  const record = approvalFor(substanceId)
+  const fromAct: Renewal | null =
+    record?.renewed && record.act
+      ? { act: record.act.name, url: record.act.url, date: record.act.date, firstSeen: false }
+      : null
+  const change = latestChange(substanceId, 'renewal')
+  const fromExport: Renewal | null = change
+    ? { act: actName(change.legalAct), url: change.legalActUrl, date: change.date, firstSeen: true }
+    : null
+  if (!fromAct || !fromExport) return fromAct ?? fromExport
+  return fromExport.date > fromAct.date ? fromExport : fromAct
+}
+
+/** Renewed within RECENTLY_RENEWED_DAYS of the data's own date. */
+export function recentlyRenewed(substanceId: string): boolean {
+  const renewal = renewalFor(substanceId)
+  return !!renewal && -daysUntil(renewal.date) <= RECENTLY_RENEWED_DAYS
 }
 
 export function statesCfs(record: ApprovalRecord): boolean {
