@@ -34,6 +34,12 @@ export function statusLabel(family: ProductFamily): string {
   return parts.join(' · ') || '—'
 }
 
+/** Union (EU-wide) authorisations on one line: how many, and how many still live. */
+export function unionNote(summary: ProductSummary): string {
+  if (summary.unionTotal === 0) return 'no union auth.'
+  return `${summary.unionTotal} union (${summary.unionLive} live)`
+}
+
 const cache = new Map<string, Promise<ProductDetail>>()
 
 /**

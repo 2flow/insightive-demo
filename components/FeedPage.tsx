@@ -25,7 +25,7 @@ import {
 import { postponementCount, postponementsFor } from '@/lib/postponements'
 import { pppApproved, pppFor, pppTone } from '@/lib/ppp'
 import { suppliersFor, supplierShortNames } from '@/lib/suppliers'
-import { productsFor } from '@/lib/products'
+import { productsFor, unionNote } from '@/lib/products'
 import { DEFAULT_ORDER, orderRecords, recordsFor, tallyRecords } from '@/lib/feeds'
 import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
@@ -291,7 +291,6 @@ function Dashboard({
   ]
     .filter(Boolean)
     .slice(0, 2)
-  const past = products?.pastExpiry
   // Two tiles are the feed's to answer. Without one they read "—", which is
   // the honest answer: nobody has researched it, not "there is none".
   const renewal = feed?.renewal
@@ -607,24 +606,21 @@ function Dashboard({
           </div>
         </ActionTile>
 
-        {/* Green: products still authorised beyond the substance approval are
-            market presence, not a hazard. The detail is a page of its own, so
-            this opens it rather than unfolding here. */}
+        {/* Every authorisation, live or not — the past-expiry share sits on the
+            products page itself. The detail is a page of its own, so this
+            opens it rather than unfolding here. */}
         <ActionTile
-          label="Product authorisations past expiry"
+          label="Product authorisations"
           sources={[ECHA_PRODUCTS]}
           leaves
           onActivate={() => onOpenProducts(substance.id)}
           hint="Opens every authorisation for this substance"
         >
-          <div className={`fp-tile-value ${past && past.total > 0 ? 'ok' : ''}`}>
-            {past ? past.total : '—'}
-            {products && <span className="fp-tile-of">of {products.products}</span>}
-          </div>
+          <div className="fp-tile-value">{products ? products.products : '—'}</div>
           <div className="fp-tile-note">
-            {past
-              ? `${past.national} national · ${past.union} union` +
-                (products?.newestGrant ? ` · newest grant ${products.newestGrant}` : '')
+            {products
+              ? unionNote(products) +
+                (products.newestGrant ? ` · newest grant ${products.newestGrant}` : '')
               : 'no authorised products'}
           </div>
         </ActionTile>

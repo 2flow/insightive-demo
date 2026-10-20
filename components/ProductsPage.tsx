@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { formatDate } from '@/lib/data'
-import { loadProductDetail, productMeta, productsFor } from '@/lib/products'
+import { loadProductDetail, productMeta, productsFor, unionNote } from '@/lib/products'
 import type { ProductAuthorisation, ProductDetail, ProductFamilyDetail, Substance } from '@/lib/types'
 import { ArrowLeftIcon, ExternalIcon } from './icons'
 
@@ -143,12 +143,21 @@ export default function ProductsPage({
       </header>
 
       {/* The overview the expanded row used to carry. It belongs with the
-          authorisations it describes, not in a list of substances — and the
-          counts are of *live* authorisations, since a holder or a market whose
-          last one lapsed is not a current route to market. Where the all-time
-          figure is higher it sits alongside as "of N". */}
+          authorisations it describes, not in a list of substances. Holder and
+          market counts are of *live* authorisations, since a holder or a market
+          whose last one lapsed is not a current route to market. Where the
+          all-time figure is higher it sits alongside as "of N". */}
       {summary && (
         <div className="fp-dash">
+          <div className="fp-tile">
+            <div className="fp-tile-label">Authorisations</div>
+            <div className="fp-tile-value">{summary.products}</div>
+            <div className="fp-tile-note">
+              {unionNote(summary)}
+              {summary.newestGrant ? ` · newest grant ${summary.newestGrant}` : ''}
+            </div>
+          </div>
+
           <div className="fp-tile">
             <div className="fp-tile-label">Holder groups</div>
             <div className={`fp-tile-value ${summary.holderGroups === 0 ? 'warn' : ''}`}>
@@ -171,25 +180,18 @@ export default function ProductsPage({
             <div className="fp-tile-note">with a live authorisation</div>
           </div>
 
+          {/* Green: products still authorised beyond the substance approval are
+              market presence, not a hazard. */}
           <div className="fp-tile">
-            <div className="fp-tile-label">Live union auth.</div>
-            {/* No union authorisation at all is "none", not "0 of 0". */}
-            <div
-              className={`fp-tile-value ${summary.unionTotal > 0 && summary.unionLive === 0 ? 'warn' : ''}`}
-            >
-              {summary.unionTotal === 0 ? '—' : summary.unionLive}
-              {summary.unionTotal > 0 && <span className="fp-tile-of">of {summary.unionTotal}</span>}
+            <div className="fp-tile-label">Past expiry</div>
+            <div className={`fp-tile-value ${summary.pastExpiry.total > 0 ? 'ok' : ''}`}>
+              {summary.pastExpiry.total}
+              <span className="fp-tile-of">of {summary.products}</span>
             </div>
             <div className="fp-tile-note">
-              {summary.unionTotal === 0 ? 'none granted' : 'EU-wide, not national'}
-            </div>
-          </div>
-
-          <div className="fp-tile">
-            <div className="fp-tile-label">Newest grant</div>
-            <div className="fp-tile-value">{summary.newestGrant || '—'}</div>
-            <div className="fp-tile-note">
-              {summary.newestGrant ? 'most recent authorisation' : 'no grant year recorded'}
+              {summary.pastExpiry.total > 0
+                ? `${summary.pastExpiry.national} national · ${summary.pastExpiry.union} union`
+                : 'none outlive the approval'}
             </div>
           </div>
         </div>
