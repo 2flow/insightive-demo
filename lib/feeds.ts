@@ -281,6 +281,34 @@ export function allRecords(substances: Substance[]): DatedRecord[] {
   )
 }
 
+/** How far back "recent" reaches on the home page. */
+export const RECENT_DAYS = 30
+
+/**
+ * What has actually happened, newest first, as of `today` (ISO).
+ *
+ * Undated records are standing observations, not news, so they are left out.
+ * So are dates still ahead — a filing deadline worked out from an expiry can
+ * fall in the future, and it would otherwise sit at the top of "the newest".
+ */
+export function latestRecords(records: DatedRecord[], today: string): DatedRecord[] {
+  return records
+    .filter(r => r.record.date && r.record.date <= today)
+    .sort((a, b) => (a.record.date < b.record.date ? 1 : a.record.date > b.record.date ? -1 : 0))
+}
+
+/** Whether a record is dated within the last RECENT_DAYS, up to `today`. */
+export function isRecent(date: string, today: string): boolean {
+  return !!date && date <= today && date > daysBefore(today, RECENT_DAYS)
+}
+
+/** The ISO date `days` before `today`. */
+export function daysBefore(today: string, days: number): string {
+  const d = new Date(`${today}T00:00:00Z`)
+  d.setUTCDate(d.getUTCDate() - days)
+  return d.toISOString().slice(0, 10)
+}
+
 /**
  * The single most weighty record in a feed.
  *

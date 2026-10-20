@@ -11,14 +11,16 @@ import {
   subStatuses,
   substances,
 } from '@/lib/data'
-import { feedFor } from '@/lib/feeds'
+import { RECENT_DAYS, allRecords, feedFor, isRecent, latestRecords } from '@/lib/feeds'
 import { SORTS, type SortKey, matchesQuery, setMatches, sortSubstances, toggleSet } from '@/lib/filters'
 import FeedPage from '@/components/FeedPage'
+import LatestSignals from '@/components/LatestSignals'
 import ProductsPage from '@/components/ProductsPage'
 import SignalsPage from '@/components/SignalsPage'
 import FilterBar, { type FilterProperty } from '@/components/FilterBar'
 import StatRow from '@/components/StatRow'
 import SubstanceTable from '@/components/SubstanceTable'
+import { useToday } from '@/components/useToday'
 import { useWatchlist } from '@/components/useWatchlist'
 import { CalendarIcon, ClockIcon, InfoIcon, LayersIcon, PulseIcon, ShieldIcon } from '@/components/icons'
 
@@ -38,6 +40,14 @@ export default function Page() {
   const [route, setRoute] = useState<{ view: 'feed' | 'products'; id: string } | null>(null)
   const [allSignals, setAllSignals] = useState(false)
   const watched = useWatchlist()
+  const today = useToday()
+
+  const records = useMemo(() => allRecords(substances), [])
+  const latest = useMemo(() => (today ? latestRecords(records, today) : []), [records, today])
+  const recentCount = useMemo(() => {
+    if (!today) return 0
+    return latest.filter(r => isRecent(r.record.date, today)).length
+  }, [latest, today])
 
   // Sub-views live at #feed/<id> and #products/<id>. Hash routing rather than
   // real Next routes so the list keeps its filters, sort and open rows while you
@@ -167,11 +177,39 @@ export default function Page() {
       <header className="sticky top-0 z-20 bg-white">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-3">
           <Image src="/insightive_logo_light.png" alt="Insightive" width={28} height={28} className="shrink-0" />
-          <span className="text-sm font-semibold tracking-tight text-ink">Insightive</span>
-          <span className="h-4 w-px shrink-0 bg-gray-200" />
-          <span className="hidden text-sm font-medium text-gray-500 sm:block">
+          <span className="hidden text-sm font-semibold tracking-tight text-ink sm:inline">Insightive</span>
+          <span className="hidden h-4 w-px shrink-0 bg-gray-200 sm:block" />
+          <span className="hidden text-sm font-medium text-gray-500 md:block">
             Pelsis · Substance Watch
           </span>
+
+          {/* The two ways into the data, as peers: where each substance stands,
+              and what has been happening. A substance's own page sits under
+              Substances, since that is where it is reached from. */}
+          <nav className="app-tabs" aria-label="Views">
+            <button
+              type="button"
+              className={`app-tab ${allSignals ? '' : 'is-on'}`}
+              aria-current={allSignals ? undefined : 'page'}
+              onClick={closeSubView}
+            >
+              Substances
+            </button>
+            <button
+              type="button"
+              className={`app-tab ${allSignals ? 'is-on' : ''}`}
+              aria-current={allSignals ? 'page' : undefined}
+              onClick={openAllSignals}
+            >
+              <PulseIcon />
+              Signals
+              {recentCount > 0 && (
+                <span className="app-tab-badge" title={`${recentCount} in the last ${RECENT_DAYS} days`}>
+                  {recentCount} new
+                </span>
+              )}
+            </button>
+          </nav>
 
           <div className="ml-auto flex items-center gap-3">
             {/* Info add-on — what this list is and how to read it */}
@@ -267,17 +305,23 @@ export default function Page() {
 
       /* ── The list ─────────────────────────────────────────── */
       <main className="mx-auto max-w-7xl px-6 py-6">
-        <div className="mb-5">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <h1 className="text-lg font-bold tracking-tight text-ink">Active substances · PT18 &amp; PT19</h1>
-            {/* The list answers "where does this substance stand"; the timeline
-                answers "what has been happening". Different question, own page. */}
-            <button type="button" className="all-signals-link" onClick={openAllSignals}>
-              <PulseIcon />
-              All signals
-              <span className="all-signals-go">→</span>
-            </button>
+        {/* What changed comes before where things stand: keeping up is the main
+            use. Held back until the reader's date is known (see `today`). */}
+        {today && (
+          <div className="mb-5">
+            <LatestSignals
+              latest={latest}
+              recentCount={recentCount}
+              recentDays={RECENT_DAYS}
+              total={records.length}
+              onOpenSubstance={openFeed}
+              onOpenAll={openAllSignals}
+            />
           </div>
+        )}
+
+        <div className="mb-5">
+          <h1 className="text-lg font-bold tracking-tight text-ink">Active substances · PT18 &amp; PT19</h1>
           <p className="mt-0.5 max-w-3xl text-[13px] leading-snug text-gray-500">
             Approval status and assessment stage for every insecticide/acaricide (PT18) and
             repellent/attractant (PT19) active substance in the EU biocides review programme.

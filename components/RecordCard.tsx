@@ -2,11 +2,12 @@
 
 import { useId, useState } from 'react'
 import { formatPartialDate } from '@/lib/data'
-import { directionTone, signalLabel } from '@/lib/feeds'
+import { RECENT_DAYS, directionTone, isRecent, signalLabel } from '@/lib/feeds'
 import { EVIDENCE_LABEL, EVIDENCE_NOTE, categoryOf, evidenceOf } from '@/lib/categories'
 import type { Evidence, SignalCategory } from '@/lib/categories'
 import type { FeedRecord, FeedSource, Substance } from '@/lib/types'
 import InfoNote from './InfoNote'
+import { useToday } from './useToday'
 import {
   CertificateIcon,
   ExternalIcon,
@@ -132,6 +133,19 @@ function SubstanceLine({ substance, onOpen }: { substance?: Substance; onOpen?: 
   )
 }
 
+/** Marks a record dated in the last RECENT_DAYS, at the top right of the card,
+ *  so what is new stands out while reading down the timeline. */
+function NewTag({ r }: { r: FeedRecord }) {
+  const today = useToday()
+  if (!today || !isRecent(r.date, today)) return null
+  return (
+    <span className="feed-new" title={`Dated within the past ${RECENT_DAYS} days`}>
+      New
+      <span className="feed-new-note">past {RECENT_DAYS} days</span>
+    </span>
+  )
+}
+
 /** The summary, collapsed to its first line with a fade until opened, so the
  *  list reads as a run of headlines. Header, title and sources stay visible. */
 function Summary({ text }: { text: string }) {
@@ -204,6 +218,7 @@ function NgoCard({
         )}
         <EvidenceChip r={r} />
         {ngo.org && <span className="ngo-org">{ngo.org}</span>}
+        <NewTag r={r} />
       </div>
       {/* The report's own tags. The two that put an item squarely on the BPR
           file — the regime itself, or a direct carry-over — are marked. */}
@@ -305,6 +320,7 @@ export default function RecordCard({
             {t}
           </span>
         ))}
+        <NewTag r={r} />
       </div>
       <SubstanceLine substance={substance} onOpen={onOpen} />
 
