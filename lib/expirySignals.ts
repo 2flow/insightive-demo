@@ -1,4 +1,4 @@
-import { asOf, formatDate, meta } from './data'
+import { asOf, formatDate, meta, shortName } from './data'
 import type { FeedRecord, Substance } from './types'
 
 // An approval that has run out, as a dated record.
@@ -17,7 +17,7 @@ export function expiryRecords(s: Substance): FeedRecord[] {
   const sources: FeedRecord['sources'] = [
     {
       citation: `ECHA — biocidal active substances export of ${formatDate(meta.exportDate)}`,
-      pinpoint: `${s.name} — approval end date`,
+      pinpoint: `${shortName(s)} — approval end date`,
       tier: 'PRIMARY',
       verified: true,
       url: s.factsheetUrl || ECHA_DATABASE,

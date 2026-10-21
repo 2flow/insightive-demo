@@ -1,3 +1,4 @@
+import { classNameFor } from './classes'
 import { interestFor } from './interest'
 import raw from './substances.json'
 import type { ApprovalStatus, Dataset, EndBucket, Substance } from './types'
@@ -14,6 +15,22 @@ export const substances: Substance[] = dataset.substances
 export const asOf = meta.exportDate
 
 // ── Display helpers ───────────────────────────────────────────
+
+/** The name to show. ECHA often lists the systematic name with the common one
+ *  in brackets at the end — "(RS)-α-cyano-3-phenoxybenzyl-… (Cypermethrin)" —
+ *  so that bracket is used when it reads as a name (has a capital, no digits
+ *  or ratios: not "(nano)" or "(enantiomeric reaction mass S:R 75:25)").
+ *  Failing that, a long name falls back to data/classes.json's common name.
+ *  Short names, and long ones with neither, are shown as ECHA gives them. */
+export function shortName(s: { name: string; cas?: string }): string {
+  const name = s.name.trim()
+  const bracket = name.match(/\(([^()]+)\)\s*$/)?.[1]?.trim() ?? ''
+  if (bracket && /[A-Z]/.test(bracket) && !/[\d:]/.test(bracket) && bracket.length <= 40) {
+    return bracket
+  }
+  if (name.length > 40) return classNameFor(s.cas) || name
+  return name
+}
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 

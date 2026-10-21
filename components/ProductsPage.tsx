@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { formatDate } from '@/lib/data'
+import { formatDate, shortName } from '@/lib/data'
 import { RECENT_DAYS, isRecent } from '@/lib/feeds'
 import { loadProductDetail, productMeta, productsFor, unionNote } from '@/lib/products'
 import type {
@@ -205,7 +205,7 @@ export default function ProductsPage({
 
       <header className="feed-page-head">
         <div className="feed-page-eyebrow">Product authorisations</div>
-        <h1 className="feed-page-title">{substance.name}</h1>
+        <h1 className="feed-page-title">{shortName(substance)}</h1>
         <div className="feed-page-meta">
           <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
           <span className={`status-pill ${substance.approvalStatus.toLowerCase().replace(/\s+/g, '-')}`}>

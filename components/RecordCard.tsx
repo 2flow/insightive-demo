@@ -1,11 +1,12 @@
 'use client'
 
 import { useId, useState } from 'react'
-import { formatPartialDate } from '@/lib/data'
+import { formatPartialDate, shortName } from '@/lib/data'
 import { RECENT_DAYS, directionTone, isRecent, signalLabel } from '@/lib/feeds'
 import { EVIDENCE_LABEL, EVIDENCE_NOTE, categoryOf, evidenceOf } from '@/lib/categories'
 import type { Evidence, SignalCategory } from '@/lib/categories'
-import type { FeedRecord, FeedSource, Substance } from '@/lib/types'
+import { classMembers, memberLabel, namesSubstance } from '@/lib/ngoSignals'
+import type { FeedRecord, FeedSource, NgoScope, Substance } from '@/lib/types'
 import InfoNote from './InfoNote'
 import { useToday } from './useToday'
 import {
@@ -128,8 +129,98 @@ function SubstanceLine({ substance, onOpen }: { substance?: Substance; onOpen?: 
       title={`Open ${substance.name}`}
     >
       <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
-      <span className="feed-card-sub-name">{substance.name}</span>
+      <span className="feed-card-sub-name">{shortName(substance)}</span>
     </button>
+  )
+}
+
+/** A class's members, one per substance — the PT18 and PT19 rows of the same
+ *  substance would otherwise list it twice. */
+function distinctMembers(scope: NgoScope): Substance[] {
+  const seen = new Set<string>()
+  return classMembers(scope.slug).filter(s => {
+    const k = s.cas || s.name
+    if (seen.has(k)) return false
+    seen.add(k)
+    return true
+  })
+}
+
+/** Says, on the card itself, that an NGO item is about a class or about every
+ *  substance — so it is not read as news about the one in hand. One line; the
+ *  detail, and the class's members, sit behind the ⓘ. `viewing` is the
+ *  substance whose page the card is on; absent on the timeline. */
+function ScopeBox({
+  r,
+  viewing,
+  onOpen,
+}: {
+  r: FeedRecord
+  viewing?: Substance
+  onOpen?: (id: string) => void
+}) {
+  const scope = r.ngo?.scope
+  if (!scope) return null
+  const named = r.ngo?.named ?? []
+
+  if (scope.kind === 'horizontal') {
+    return (
+      <div className="ngo-scope is-horizontal">
+        <span className="ngo-scope-kind">Horizontal signal</span>
+        <span className="ngo-scope-text">Applies to every active substance</span>
+        <InfoNote
+          label="Horizontal signal"
+          text="EU policy that reaches every active substance at once, rather than one substance or class. Shown on the all-signals timeline only, not on substance pages."
+        >
+          {named.length > 0 && (
+            <span className="src-note-text">
+              <b>Named in the item:</b> {named.join(', ')}
+            </span>
+          )}
+        </InfoNote>
+      </div>
+    )
+  }
+
+  const members = distinctMembers(scope)
+  const namesThis = viewing && namesSubstance(r, viewing)
+  return (
+    <div className="ngo-scope is-class">
+      <span className="ngo-scope-kind">Class signal · {scope.label}</span>
+      <span className="ngo-scope-text">
+        Applies to all {members.length} {scope.label}{' '}
+        {members.length === 1 ? 'substance' : 'substances'}
+        {namesThis && ` · names ${memberLabel(viewing!)}`}
+      </span>
+      <InfoNote
+        label={`Class signal · ${scope.label}`}
+        text={`About the ${scope.label} class as a whole, not one substance. Shown once on the all-signals timeline and on the page of each substance in the class.`}
+      >
+        {members.length > 0 && (
+          <span className="ngo-scope-members">
+            {members.map(m => {
+              const isNamed = namesSubstance(r, m)
+              const here = viewing && (viewing.cas ? viewing.cas === m.cas : viewing.id === m.id)
+              return (
+                <button
+                  type="button"
+                  key={m.id}
+                  className={`${isNamed ? 'is-named' : ''} ${here ? 'is-here' : ''}`}
+                  disabled={!onOpen || here}
+                  onClick={() => onOpen?.(m.id)}
+                  title={isNamed ? `Named in the item · ${m.name}` : m.name}
+                >
+                  {memberLabel(m)}
+                </button>
+              )
+            })}
+          </span>
+        )}
+        {named.length > 0 && (
+          <span className="src-note-sub">In bold: named in the item.</span>
+        )}
+      </InfoNote>
+    </div>
   )
 }
 
@@ -176,17 +267,32 @@ function Summary({ text }: { text: string }) {
  * reading of its own — the report's "why it matters" sits behind the tier chip
  * where the reading would be.
  */
+function NgoLink({ s }: { s: FeedSource }) {
+  return s.url ? (
+    <a href={s.url} target="_blank" rel="noopener noreferrer" title={s.citation}>
+      {s.citation}
+      <ExternalIcon />
+    </a>
+  ) : (
+    <span>{s.citation}</span>
+  )
+}
+
 function NgoCard({
   r,
   substance,
+  viewing,
   onOpen,
 }: {
   r: FeedRecord
   substance?: Substance
+  viewing?: Substance
   onOpen?: (id: string) => void
 }) {
   const whyId = useId()
   const ngo = r.ngo!
+  const extra = ngo.extra ?? []
+  const [showExtra, setShowExtra] = useState(false)
   // Reports ranked without tiers give each item its place in the list instead.
   const tierChip = ngo.tier ? `Tier ${ngo.tierName || ngo.tier}` : `#${ngo.rank}`
   return (
@@ -232,22 +338,36 @@ function NgoCard({
         </div>
       )}
       <SubstanceLine substance={substance} onOpen={onOpen} />
+      <ScopeBox r={r} viewing={viewing} onOpen={onOpen} />
 
       <h3 className="feed-card-title">{r.title}</h3>
       {r.summary && <Summary text={r.summary} />}
 
-      {r.sources.length > 0 && (
+      {(r.sources.length > 0 || extra.length > 0) && (
         <div className="ngo-sources">
-          {r.sources.map((s, i) =>
-            s.url ? (
-              <a href={s.url} target="_blank" rel="noopener noreferrer" key={i} title={s.citation}>
-                {s.citation}
-                <ExternalIcon />
-              </a>
-            ) : (
-              <span key={i}>{s.citation}</span>
-            ),
+          {r.sources.map((s, i) => (
+            <NgoLink s={s} key={i} />
+          ))}
+          {/* Supporting material stays folded away: the main source is what
+              the item rests on; these back it up. */}
+          {extra.length > 0 && (
+            <button
+              type="button"
+              className="ngo-extra-toggle"
+              aria-expanded={showExtra}
+              onClick={() => setShowExtra(v => !v)}
+            >
+              {showExtra ? 'Hide supporting' : `+${extra.length} supporting`}
+            </button>
           )}
+        </div>
+      )}
+      {showExtra && (
+        <div className="ngo-sources ngo-extra">
+          <span className="ngo-extra-label">Supporting material</span>
+          {extra.map((s, i) => (
+            <NgoLink s={s} key={i} />
+          ))}
         </div>
       )}
     </li>
@@ -257,17 +377,20 @@ function NgoCard({
 export default function RecordCard({
   r,
   substance,
+  viewing,
   onOpen,
 }: {
   r: FeedRecord
   /** Set on the all-substances timeline, where a record needs to say whose it
    *  is. Omitted on a substance's own page, where that is already the title. */
   substance?: Substance
+  /** The substance whose own page the card is on. */
+  viewing?: Substance
   onOpen?: (id: string) => void
 }) {
   const tone = directionTone(r.signal.direction)
   const whyId = useId()
-  if (r.ngo) return <NgoCard r={r} substance={substance} onOpen={onOpen} />
+  if (r.ngo) return <NgoCard r={r} substance={substance} viewing={viewing} onOpen={onOpen} />
   return (
     <li className={`feed-card tone-${tone}`}>
       <div className="feed-card-head">

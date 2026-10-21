@@ -3,7 +3,7 @@
 import { Fragment, useMemo, useState } from 'react'
 import { formatDate, substances } from '@/lib/data'
 import { DEFAULT_ORDER, allRecords, orderRecords, tallyRecords } from '@/lib/feeds'
-import { BANDS, CATEGORIES, categoryOf } from '@/lib/categories'
+import { BANDS, CATEGORIES, categoryOf, topSources } from '@/lib/categories'
 import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
 import RecordCard, { CATEGORY_ICON } from './RecordCard'
@@ -52,6 +52,9 @@ export default function SignalsPage({
     return n
   }, [all])
 
+  // Over every record, not the filtered few, so a chip's sources stay put.
+  const sources = useMemo(() => topSources(all.map(r => r.record)), [all])
+
   const shown = useMemo(
     () => (kinds.size === 0 ? all : all.filter(r => kinds.has(categoryOf(r.record).key))),
     [all, kinds],
@@ -74,7 +77,7 @@ export default function SignalsPage({
   const ngoCount = shown.filter(r => isNgo(r.record)).length
   const first = dated[0]
   const last = dated[dated.length - 1]
-  const subjects = new Set(shown.map(r => r.substance.id)).size
+  const subjects = new Set(shown.flatMap(r => (r.substance ? [r.substance.id] : []))).size
 
   return (
     <div className="feed-page">
@@ -140,6 +143,14 @@ export default function SignalsPage({
                     <Icon className="sig-chip-icon" />
                     {c.label}
                     <span className="sig-chip-n">{perKind.get(c.key)}</span>
+                    {!!sources.get(c.key)?.length && (
+                      <span
+                        className="sig-chip-src"
+                        title="Main sources only, not an exhaustive list"
+                      >
+                        incl. {sources.get(c.key)!.join(' · ')}
+                      </span>
+                    )}
                   </button>
                 )
               })}
@@ -210,7 +221,7 @@ export default function SignalsPage({
           const month = monthOf(record.date)
           const turned = !prev || monthOf(prev.record.date) !== month
           return (
-            <Fragment key={`${substance.id}-${record.date}-${i}`}>
+            <Fragment key={`${substance?.id ?? record.ngo?.scope?.slug}-${record.date}-${i}`}>
               {turned && (
                 <li className="sig-month">
                   <span className="sig-month-label">{monthLabel(month)}</span>

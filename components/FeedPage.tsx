@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useCallback, useState } from 'react'
-import { formatDate, hasBpcRenewalOpinion, isRenewalAtRisk, monthsUntil } from '@/lib/data'
+import { formatDate, hasBpcRenewalOpinion, isRenewalAtRisk, monthsUntil, shortName } from '@/lib/data'
 import { INTEREST_LABEL, INTEREST_SHORT, companyNames, interestFor, interestTone } from '@/lib/interest'
 import { consultationsFor, openConsultation } from '@/lib/consultations'
 import {
@@ -29,6 +29,7 @@ import { suppliersFor, supplierShortNames } from '@/lib/suppliers'
 import { productsFor, unionNote } from '@/lib/products'
 import { DEFAULT_ORDER, orderRecords, recordsFor, tallyRecords } from '@/lib/feeds'
 import { isNgo } from '@/lib/ngoSignals'
+import { classesFor } from '@/lib/classes'
 import type { RecordOrder } from '@/lib/feeds'
 import type { FeedRecord, Substance, SubstanceFeed } from '@/lib/types'
 import ConsultationPanel from './ConsultationPanel'
@@ -779,7 +780,8 @@ export default function FeedPage({
   const ngoCount = records.filter(isNgo).length
   // The feed carries the common name; ECHA carries the systematic one. Show
   // both only when they actually differ.
-  const showSystematic = feed?.name && feed.name !== substance.name
+  const title = feed?.name || shortName(substance)
+  const showSystematic = title !== substance.name
 
   return (
     <div className="feed-page">
@@ -790,7 +792,7 @@ export default function FeedPage({
 
       <header className="feed-page-head">
         <div className="feed-page-eyebrow">Renewal signals</div>
-        <h1 className="feed-page-title">{feed?.name || substance.name}</h1>
+        <h1 className="feed-page-title">{title}</h1>
         {showSystematic && <p className="feed-page-systematic">{substance.name}</p>}
 
         <div className="feed-page-meta">
@@ -806,6 +808,11 @@ export default function FeedPage({
               {substance.approvalStatus}
             </span>
           )}
+          {classesFor(substance.cas).map(c => (
+            <span key={c} className="fp-badge class" title="Chemical class">
+              {c}
+            </span>
+          ))}
           <span className="sep" />
           <span className="ident">
             <span className="k">EC</span>
@@ -900,7 +907,7 @@ export default function FeedPage({
                       <span className="sig-month-rule" />
                     </li>
                   )}
-                  <RecordCard r={r} />
+                  <RecordCard r={r} viewing={substance} />
                 </Fragment>
               )
             })}

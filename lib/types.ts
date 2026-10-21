@@ -341,8 +341,27 @@ export interface NgoMeta {
   tierLabel: string
   /** The NGO(s) behind the item. */
   org: string
+  /** Supporting material — the report's "Also:" links. The record's own
+   *  sources are the main ones; these sit behind a toggle on the card. */
+  extra?: FeedSource[]
   /** ISO date the report was run. */
   runDate: string
+  /** Set on items from a class watch, or the horizontal one: they are about a
+   *  group, not one substance. Absent on substance-specific items. */
+  scope?: NgoScope
+  /** The substances a class or horizontal item names outright, as the report
+   *  spells them. Empty when it names none. */
+  named?: string[]
+}
+
+export interface NgoScope {
+  /** 'class': a chemical class, shown on each member's page. 'horizontal':
+   *  EU policy reaching every substance, shown on the all-signals timeline only. */
+  kind: 'class' | 'horizontal'
+  /** "pyrethroid", "juvenile-hormone-analogue", "horizontal". */
+  slug: string
+  /** The class as the report names it, e.g. "PFAS". */
+  label: string
 }
 
 /** Standing facts about the renewal, carried on the feed rather than derived

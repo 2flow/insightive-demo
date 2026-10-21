@@ -1,14 +1,27 @@
-import type { FeedRecord, FeedSource, Substance } from './types'
+import { classesFor } from './classes'
+import { shortName, substances } from './data'
+import type { FeedRecord, FeedSource, NgoScope, Substance } from './types'
 
 // ─────────────────────────────────────────────────────────────
-// NGO watch reports — read straight from data/reports/<slug>/*_NGO_report.md.
+// NGO watch reports — read straight from data/reports/.
 //
-// One folder per substance, one Markdown report per run, dated in the
-// filename. Only the newest run is used — latest date, then highest version
-// ("_2" or "_v2"…; an unversioned file counts as v1). Only the Tier A–C (1–3)
-// items under
-// "## 2. Top signals" become records; the summary, lower-relevance items,
-// outlook and method notes stay in the report.
+//   <slug>/<slug>_NGO_combined.md              one per substance
+//   _classes/<class>/<class>_class_combined.md one per chemical class, plus
+//                                              _classes/horizontal for EU
+//                                              policy that hits every substance
+//
+// Each file is rebuilt by the watch after every run, baseline and updates
+// merged. Only the Tier A–C (1–3) items under "## 2." become records; the
+// summary, lower-relevance items, outlook and method notes stay in the report.
+//
+// Three scopes, each shown once where it belongs:
+//   substance  — on that substance's page and on the all-signals timeline;
+//   class      — once on the timeline, and on the page of every class member;
+//   horizontal — on the timeline only.
+// A substance file repeats, marked `via class`, any class item that names the
+// substance; those copies are skipped, since the class item already reaches
+// every member's page. Its section 3 (class items that do not name it) is a
+// digest of the class files and is not read either.
 //
 // These are deliberately second-class: what NGOs say about a substance is
 // indirect, and mostly about other regimes. They are their own kind ('ngo'),
@@ -23,7 +36,7 @@ const context = (require as unknown as {
     keys: () => string[]
     (id: string): string | { default: string }
   }
-}).context('../data/reports', true, /NGO_report[^/]*\.md$/i)
+}).context('../data/reports', true, /_(?:NGO|class)_combined\.md$/i)
 
 const MONTHS = [
   'january', 'february', 'march', 'april', 'may', 'june',
@@ -39,6 +52,13 @@ interface NgoReport {
   slug: string
   cas: string
   runDate: string
+  /** Class slugs the report puts the substance in, besides "horizontal". */
+  classes: string[]
+  records: FeedRecord[]
+}
+
+interface ClassReport {
+  scope: NgoScope
   records: FeedRecord[]
 }
 
@@ -57,7 +77,9 @@ function frontmatter(md: string): Record<string, string> {
  *  the title that follows it. Where an item lists several dates the first —
  *  the newest — stands for it. */
 function splitDate(heading: string): { date: string; precision: string; title: string } {
-  let h = heading.replace(/^\d+\.\s+/, '').trim()
+  // Drop a rank — "1. ", or "2.1 " in combined files — but not the day of
+  // "24 June 2026".
+  let h = heading.replace(/^\d+(?:\.\d+)+\s+|^\d+\.\s+/, '').trim()
   let date = ''
   let precision = 'day'
 
@@ -132,18 +154,52 @@ function parseNgoLine(line: string): { org: string; sources: FeedSource[] } {
   return { org, sources }
 }
 
-function parseReport(md: string, runDate: string): FeedRecord[] {
+/** "deltamethrin, cypermethrin (… note)" → the names; "none (…)" → none. */
+function namedList(v: string): string[] {
+  const list = plain(v).replace(/\s*\(.*$/, '').trim()
+  if (!list || /^none\b/i.test(list)) return []
+  return list.split(/\s*,\s*/).filter(Boolean)
+}
+
+/** "- Also: [BeeLife post: …](https://…) ; [factsheet PDF](https://…)" — the
+ *  supporting material under an item's main source. Each link keeps its own
+ *  text as its label, or its host when it has none. */
+function parseAlsoLine(line: string): FeedSource[] {
+  return Array.from(line.matchAll(URL_RE), m => {
+    const url = m[2] ?? m[3]
+    let label = m[1]?.trim() ?? ''
+    if (!label) {
+      try {
+        label = new URL(url).hostname.replace(/^www\./, '')
+      } catch {
+        label = url
+      }
+    }
+    return { citation: label, pinpoint: '', tier: 'NGO', verified: false, url, note: '' }
+  })
+}
+
+function parseReport(md: string, runDate: string, scope?: NgoScope): FeedRecord[] {
   const section = md.match(/^## 2\.[^\n]*\n([\s\S]*?)(?=^## )/m)?.[1] ?? ''
   const records: FeedRecord[] = []
 
   let tier: number | null = null
   let tierName = ''
   let tierLabel = ''
-  let item: { heading: string; fields: Record<string, string>; tags: string[] } | null = null
+  type Item = { heading: string; fields: Record<string, string>; tags: string[]; provenance: string }
+  let item: Item | null = null
   let field = ''
+  // The `[baseline 2026-10-06]` / `[via class: pyrethroid · …]` line that
+  // stands above each item in a combined file — where the item came from.
+  let provenance = ''
 
   const flush = () => {
     if (!item) return
+    // A class item copied into a member's file: the class record covers it.
+    if (/^via class/i.test(item.provenance)) {
+      item = null
+      return
+    }
     // v1 reports put date and title in one bold heading; v2 reports give
     // each its own "**Date:**" / "**Title:**" field.
     const fromHeading = splitDate(item.fields.date ?? item.heading)
@@ -163,6 +219,7 @@ function parseReport(md: string, runDate: string): FeedRecord[] {
       }
     }
     const { org, sources } = parseNgoLine(item.fields.ngo ?? '')
+    const extra = parseAlsoLine(item.fields.also ?? '')
     records.push({
       kind: 'ngo',
       date,
@@ -180,7 +237,16 @@ function parseReport(md: string, runDate: string): FeedRecord[] {
         rationale: plain(item.fields.why ?? ''),
       },
       sources,
-      ngo: { tier, tierName, tierLabel, rank: records.length + 1, org, runDate },
+      ngo: {
+        tier,
+        tierName,
+        tierLabel,
+        rank: records.length + 1,
+        org,
+        runDate,
+        ...(extra.length ? { extra } : {}),
+        ...(scope && { scope, named: namedList(item.fields.named ?? '') }),
+      },
     })
     item = null
   }
@@ -192,10 +258,17 @@ function parseReport(md: string, runDate: string): FeedRecord[] {
     const tierHead = line.match(/^(?:#{3,}\s*|\*\*)Tier\s*(\d|[A-Z])\b\s*[:.]?\s*(.*?)(?:\*\*.*)?$/i)
     if (tierHead) {
       flush()
+      provenance = ''
       const t = tierHead[1].toUpperCase()
       tier = /\d/.test(t) ? Number(t) : t.charCodeAt(0) - 64
       tierName = t
       tierLabel = tierHead[2].replace(/\*+/g, '').replace(/[.:]$/, '').trim()
+      continue
+    }
+    const prov = line.match(/^`\[([^\]]*)\]`/)
+    if (prov) {
+      flush()
+      provenance = prov[1]
       continue
     }
     // The item's tag line: `PPP` · `EU` · `indirect–hazard` · `litigation`
@@ -209,28 +282,58 @@ function parseReport(md: string, runDate: string): FeedRecord[] {
     // "**NGO / link:** …", "1. **Date:** 2026-07-10". Checked before the bold
     // heading, which a bold label followed by text would otherwise match.
     const f =
-      line.match(/^(?:\d+\.\s*|-\s*)?\*\*([A-Za-z][A-Za-z /]{1,50}?):\*\*\s*(.*)$/) ??
-      line.match(/^-\s*([A-Za-z][A-Za-z /]{1,50}?):\s*(.*)$/)
+      line.match(/^(?:\d+\.\s*|-\s*)?\*\*([A-Za-zÀ-ɏ][A-Za-zÀ-ɏ\d /+&'.()-]{1,60}?):\*\*\s*(.*)$/) ??
+      line.match(/^-\s*([A-Za-zÀ-ɏ][A-Za-zÀ-ɏ\d /+&'.()-]{1,60}?):\s*(.*)$/)
     if (f) {
       const name = f[1].toLowerCase()
       // In v2 reports "Date" opens each item.
       if (name === 'date') {
         flush()
-        item = { heading: '', fields: {}, tags: [] }
+        item = { heading: '', fields: {}, tags: [], provenance }
+        provenance = ''
       }
       if (!item) continue
-      field = name.startsWith('why') ? 'why' : name.startsWith('ngo') ? 'ngo' : name
+      field = name.startsWith('why')
+        ? 'why'
+        : name.startsWith('ngo')
+          ? 'ngo'
+          : name.startsWith('named')
+            ? 'named'
+            : name
+      // Combined files give the source as "- Beyond Pesticides: https://…" —
+      // the organisation as the label. Read it as an NGO line.
+      if (!['summary', 'why', 'ngo', 'also', 'named', 'date', 'title'].includes(field) && /https?:/.test(f[2])) {
+        const src = `${f[1]}: ${f[2]}`
+        item.fields.ngo = item.fields.ngo ? `${item.fields.ngo} ; ${src}` : src
+        field = 'ngo'
+        continue
+      }
       item.fields[field] = f[2]
+      continue
+    }
+    // A bare source line: "- PAN Europe — https://…".
+    if (item && /^-\s/.test(line) && /https?:/.test(line)) {
+      const src = line.replace(/^-\s*/, '')
+      item.fields.ngo = item.fields.ngo ? `${item.fields.ngo} ; ${src}` : src
+      field = 'ngo'
       continue
     }
     // An item heading: "**2025-09-30: …**", "**1. 24 June 2026: …**", or, in
     // reports ranked without tiers, "### 1. 2026-06-24 — …" / "### 2.1 …".
     const head =
-      line.match(/^(?:\d+\.\s*)?\*\*(.+?)\*\*\s*$/) ??
+      // A trailing note after the bold — "(TOP SIGNAL)" — is dropped.
+      line.match(/^(?:\d+\.\s*)?\*\*(.+?)\*\*\s*(?:\([^()]*\))?\s*$/) ??
       line.match(/^#{3,4}\s+(?:\d+(?:\.\d+)*\.?\s+)?(\d.*)$/)
     if (head) {
+      // A date on a bold line of its own, the title on the next:
+      // "**2024-12 (edition date …)**" then "**PAN International keeps …**".
+      if (item && !item.tags.length && !Object.keys(item.fields).length) {
+        item.heading = `${item.heading} — ${head[1]}`
+        continue
+      }
       flush()
-      item = { heading: head[1], fields: {}, tags: [] }
+      item = { heading: head[1], fields: {}, tags: [], provenance }
+      provenance = ''
       field = ''
       continue
     }
@@ -243,39 +346,50 @@ function parseReport(md: string, runDate: string): FeedRecord[] {
   return records
 }
 
-/** How recent a report file is: its run date, then its version — so
- *  "2026-10-05_NGO_report_2.md" (or "…_v2…") beats the unversioned
- *  file of the same day, and a later date beats both. */
-function recency(key: string): [string, number] {
-  const file = key.split('/').pop() ?? key
-  const date = file.match(/\d{4}-\d{2}-\d{2}/)?.[0] ?? ''
-  const version = Number(file.match(/(?:[_\s-]v|NGO_report[_\s-])(\d+)/i)?.[1] ?? 1)
-  return [date, version]
+const read = (key: string) => {
+  const mod = context(key)
+  return (typeof mod === 'string' ? mod : mod.default).replace(/\r\n/g, '\n')
 }
 
-/** Newest run per substance folder. */
-const reports: NgoReport[] = (() => {
-  const latest = new Map<string, string>()
-  for (const key of context.keys()) {
-    const slug = key.replace(/^\.\//, '').split('/')[0]
-    const prev = latest.get(slug)
-    const [d, v] = recency(key)
-    const [pd, pv] = prev ? recency(prev) : ['', 0]
-    if (!prev || d > pd || (d === pd && v > pv)) latest.set(slug, key)
-  }
-  return Array.from(latest.entries()).map(([slug, key]) => {
-    const mod = context(key)
-    const md = (typeof mod === 'string' ? mod : mod.default).replace(/\r\n/g, '\n')
+const isClassKey = (key: string) => /^\.\/_classes\//.test(key)
+
+/** One combined file per substance folder. */
+const reports: NgoReport[] = context
+  .keys()
+  .filter(key => !isClassKey(key))
+  .map(key => {
+    const md = read(key)
     const fm = frontmatter(md)
-    const runDate = fm.run_date || key.match(/(\d{4}-\d{2}-\d{2})/)?.[1] || ''
-    return { slug: fm.slug || slug, cas: fm.cas || '', runDate, records: parseReport(md, runDate) }
+    const slug = fm.slug || key.replace(/^\.\//, '').split('/')[0]
+    const runDate = fm.last_run || fm.combined_on || ''
+    const classes = (fm.classes ?? '')
+      .split(/\s*,\s*/)
+      .map(slugify)
+      .filter(c => c && c !== 'horizontal')
+    return { slug, cas: fm.cas || '', runDate, classes, records: parseReport(md, runDate) }
   })
-})()
+
+/** One combined file per class, horizontal among them. */
+const classReports: ClassReport[] = context
+  .keys()
+  .filter(isClassKey)
+  .map(key => {
+    const md = read(key)
+    const fm = frontmatter(md)
+    const slug = fm.class_slug || key.split('/')[2]
+    const scope: NgoScope = {
+      kind: slug === 'horizontal' ? 'horizontal' : 'class',
+      slug,
+      label: fm.class || slug,
+    }
+    return { scope, records: parseReport(md, fm.last_run || fm.combined_on || '', scope) }
+  })
 
 const byCas = new Map(
   reports.filter(r => casKey(r.cas) && /\d/.test(r.cas)).map(r => [casKey(r.cas), r]),
 )
 const bySlug = new Map(reports.map(r => [r.slug, r]))
+const classBySlug = new Map(classReports.map(c => [c.scope.slug, c]))
 
 /** CAS first; the folder slug against the ECHA name for the ones with none
  *  (micro-organisms, mostly). */
@@ -283,8 +397,48 @@ function reportFor(s: Substance): NgoReport | null {
   return (s.cas && byCas.get(casKey(s.cas))) || bySlug.get(slugify(s.name)) || null
 }
 
-export function ngoRecords(s: Substance): FeedRecord[] {
+/** The classes a substance sits in — data/classes.json by CAS, and whatever
+ *  its own report adds. Horizontal is not a class anyone belongs to. */
+function classSlugsFor(s: Substance): string[] {
+  const out = new Set(classesFor(s.cas).map(slugify))
+  for (const c of reportFor(s)?.classes ?? []) out.add(c)
+  out.delete('horizontal')
+  return Array.from(out)
+}
+
+/** Every substance row in a class, PT18 and PT19 rows alike. */
+export function classMembers(slug: string): Substance[] {
+  return substances.filter(s => classSlugsFor(s).includes(slug))
+}
+
+/** A member's name as the class lists it — "Cypermethrin" rather than ECHA's
+ *  systematic name — else the common name ECHA gives in brackets. */
+export function memberLabel(s: Substance): string {
+  return shortName(s)
+}
+
+/** Whether a class or horizontal item names this substance outright. The
+ *  reports name members by their folder slug, or now and then by name. */
+export function namesSubstance(r: FeedRecord, s: Substance): boolean {
+  const named = (r.ngo?.named ?? []).map(slugify)
+  if (!named.length) return false
+  const own = [reportFor(s)?.slug, slugify(s.name), slugify(memberLabel(s))]
+  return own.some(k => !!k && named.includes(k))
+}
+
+/** Items about this substance alone. */
+export function ngoSubstanceRecords(s: Substance): FeedRecord[] {
   return reportFor(s)?.records ?? []
 }
+
+/** What a substance's own page shows: its items, and its classes' items. */
+export function ngoRecords(s: Substance): FeedRecord[] {
+  const own = ngoSubstanceRecords(s)
+  const shared = classSlugsFor(s).flatMap(c => classBySlug.get(c)?.records ?? [])
+  return shared.length ? [...own, ...shared] : own
+}
+
+/** Class and horizontal items, once each — for the all-signals timeline. */
+export const ngoSharedRecords: FeedRecord[] = classReports.flatMap(c => c.records)
 
 export const isNgo = (r: FeedRecord) => r.kind === 'ngo'

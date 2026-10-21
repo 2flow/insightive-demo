@@ -1084,7 +1084,7 @@ of the card and used by the filter on the All signals page (`lib/categories.ts`)
 |---|---|---|
 | 1 · BPR renewal | Approval status | approval, expiry, postponement |
 | | Renewal progress | interest, filing, deadline, BPC opinion |
-| | Industry backing | Article 95 suppliers, product authorisations |
+| | Industry | Article 95 suppliers, product authorisations |
 | 2 · EU evidence | EU hazard findings | PACT hazard assessments and lists |
 | | Other EU laws | plant-protection approval, REACH |
 | 3 · Context | Non-EU authorities | US EPA carcinogen list, GB |

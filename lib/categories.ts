@@ -54,7 +54,7 @@ export const CATEGORIES: CategoryDef[] = [
   {
     key: 'industry',
     band: 1,
-    label: 'Industry backing',
+    label: 'Industry',
     covers: 'Article 95 suppliers joining or leaving, product authorisations granted or cancelled',
   },
   {
@@ -120,6 +120,80 @@ export function categoryOf(r: FeedRecord): CategoryDef {
     BY_KIND[r.kind ?? ''] ??
     researchCategory(r)
   return BY_KEY.get(key)!
+}
+
+// ── Main sources ────────────────────────────────────────────
+// Who publishes the records in a category, for the filter chips — read from
+// the sources' links, so a new data drop updates it without a list to keep.
+
+/** Publisher by link host. A host not listed reads as itself, minus "www." */
+const PUBLISHER: [RegExp, string][] = [
+  [/(^|\.)eur-lex\.europa\.eu$|^data\.europa\.eu$/, 'EUR-Lex'],
+  [/(^|\.)echa\.europa\.eu$/, 'ECHA'],
+  [/(^|\.)efsa\./, 'EFSA'],
+  [/^ec\.europa\.eu$|^food\.ec\.europa\.eu$/, 'European Commission'],
+  [/(^|\.)npic\.orst\.edu$/, 'NPIC'],
+  [/(^|\.)hse\.gov\.uk$/, 'HSE'],
+  [/(^|\.)epa\.gov$/, 'US EPA'],
+  [/(^|\.)iarc\./, 'IARC'],
+  [/(^|\.)pan-europe\.info$/, 'PAN Europe'],
+  [/(^|\.)pan-international\.org$/, 'PAN International'],
+  [/(^|\.)pan-germany\.org$/, 'PAN Germany'],
+  [/(^|\.)pan-netherlands\.org$/, 'PAN Netherlands'],
+  [/(^|\.)generations-futures\.fr$/, 'Générations Futures'],
+  [/(^|\.)beyondpesticides\.org$/, 'Beyond Pesticides'],
+  [/(^|\.)duh\.de$/, 'DUH'],
+  [/(^|\.)greenpeace\./, 'Greenpeace'],
+]
+
+function publisherOf(url: string): string {
+  let host = ''
+  try {
+    host = new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return ''
+  }
+  return PUBLISHER.find(([re]) => re.test(host))?.[1] ?? host
+}
+
+/** Who a record comes from, in a word — its first source's publisher. NGO
+ *  items say so, since the NGO's name alone may not read as one. */
+export function recordSource(r: FeedRecord): string {
+  const pub = r.sources.map(s => publisherOf(s.url)).find(Boolean) ?? ''
+  // An unlisted host ("eu.boell.org") reads worse than the report's own name
+  // for the NGO.
+  if (r.kind === 'ngo') {
+    const known = pub && !pub.includes('.')
+    return `NGO · ${(known ? pub : r.ngo?.org || pub) || 'report'}`
+  }
+  return pub
+}
+
+/** The main publishers behind each category's records: counted once per
+ *  record however many links it carries, kept if they back at least a tenth
+ *  of the category, at most `max` of them, most frequent first. */
+export function topSources(records: FeedRecord[], max = 3): Map<SignalCategory, string[]> {
+  const counts = new Map<SignalCategory, { n: number; by: Map<string, number> }>()
+  for (const r of records) {
+    const key = categoryOf(r).key
+    const c = counts.get(key) ?? { n: 0, by: new Map<string, number>() }
+    c.n++
+    const pubs = new Set(r.sources.map(s => publisherOf(s.url)).filter(Boolean))
+    pubs.forEach(p => c.by.set(p, (c.by.get(p) ?? 0) + 1))
+    counts.set(key, c)
+  }
+  const out = new Map<SignalCategory, string[]>()
+  counts.forEach(({ n, by }, key) => {
+    out.set(
+      key,
+      Array.from(by.entries())
+        .filter(([, k]) => k >= n / 10)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, max)
+        .map(([p]) => p),
+    )
+  })
+  return out
 }
 
 // ── Evidence ────────────────────────────────────────────────

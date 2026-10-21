@@ -1,6 +1,6 @@
 import { actName, approvalFor } from './approvals'
 import { changesFor } from './changes'
-import { formatDate } from './data'
+import { formatDate, shortName } from './data'
 import { filingRecords } from './filingSignals'
 import type { ExportChange, FeedRecord, Substance } from './types'
 
@@ -36,7 +36,7 @@ function firstSeen(c: ExportChange): Pick<FeedRecord, 'date' | 'datePrecision' |
 function exportSource(s: Substance, c: ExportChange, pinpoint: string): FeedRecord['sources'][number] {
   return {
     citation: `ECHA — biocidal active substances export of ${formatDate(c.date)}`,
-    pinpoint: `${s.name} — ${pinpoint}`,
+    pinpoint: `${shortName(s)} — ${pinpoint}`,
     tier: 'PRIMARY',
     verified: true,
     url: s.factsheetUrl || ECHA_DATABASE,

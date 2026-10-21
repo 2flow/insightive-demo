@@ -7,7 +7,7 @@ import { deadlineRecords } from './deadlineSignals'
 import { expiryRecords } from './expirySignals'
 import { filingRecords } from './filingSignals'
 import { interestRecords } from './interestSignals'
-import { isNgo, ngoRecords } from './ngoSignals'
+import { isNgo, ngoRecords, ngoSharedRecords, ngoSubstanceRecords } from './ngoSignals'
 import { hazardRecords } from './hazardSignals'
 import { postponementRecords } from './postponementSignals'
 import { pppRecords } from './pppSignals'
@@ -246,10 +246,11 @@ export function orderRecords<T>(
   return [...undated, ...dated]
 }
 
-/** A record together with the substance row it belongs to. */
+/** A record together with the substance row it belongs to. Absent for NGO
+ *  class and horizontal items, which belong to a group rather than one row. */
 export interface DatedRecord {
   record: FeedRecord
-  substance: Substance
+  substance?: Substance
 }
 
 /**
@@ -283,8 +284,10 @@ export function allRecords(substances: Substance[]): DatedRecord[] {
     for (const record of approvalRecords(substance)) out.push({ record, substance })
     for (const record of changeRecords(substance)) out.push({ record, substance })
     for (const record of cancellationRecords(substance)) out.push({ record, substance })
-    for (const record of ngoRecords(substance)) out.push({ record, substance })
+    for (const record of ngoSubstanceRecords(substance)) out.push({ record, substance })
   }
+  // Class and horizontal NGO items once each, not once per member.
+  for (const record of ngoSharedRecords) out.push({ record })
 
   return out.sort((a, b) =>
     a.record.date < b.record.date ? -1 : a.record.date > b.record.date ? 1 : 0,

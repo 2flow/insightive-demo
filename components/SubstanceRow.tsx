@@ -6,6 +6,7 @@ import {
   hasBpcRenewalOpinion,
   isRenewalAtRisk,
   isSubstitutionCandidate,
+  shortName,
 } from '@/lib/data'
 import { directionTone, recordsFor, tallyRecords } from '@/lib/feeds'
 import {
@@ -417,7 +418,9 @@ export default function SubstanceRow({
         <ChevronDownIcon className="sub-chev" />
 
         <div className="gc gc-name">
-          <div className="sub-name">{s.name}</div>
+          <div className="sub-name" title={s.name}>
+            {shortName(s)}
+          </div>
           <div className="sub-idents">
             <span>
               <span className="k">EC</span> {s.ec || '—'}

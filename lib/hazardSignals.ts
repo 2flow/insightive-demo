@@ -1,3 +1,4 @@
+import { shortName } from './data'
 import {
   cleared,
   edspAdverse,
@@ -43,7 +44,7 @@ function activityRecord(a: PactActivity, s: Substance): FeedRecord {
     title: `${a.areaLabel}: ${a.status}`,
     summary:
       `ECHA's Public Activities Coordination Tool records a ${a.areaLabel.toLowerCase()} ` +
-      `for ${s.name}, with the status “${a.status}”.`,
+      `for ${shortName(s)}, with the status “${a.status}”.`,
     tags: ['hazard assessment', a.area],
     blockers: [],
     signal: {
@@ -84,7 +85,7 @@ function carcinogenRecord(record: PactRecord, s: Substance): FeedRecord[] {
       datePrecision: 'year',
       dateDerived: false,
       title: `US EPA carcinogen list: ${carcinogen}`,
-      summary: `${s.name} carries the US EPA classification “${carcinogen}”, given in ${carcinogenYear}.`,
+      summary: `${shortName(s)} carries the US EPA classification “${carcinogen}”, given in ${carcinogenYear}.`,
       tags: ['hazard list', 'carcinogen'],
       blockers: [],
       signal: {

@@ -1,8 +1,9 @@
 'use client'
 
-import { formatPartialDate } from '@/lib/data'
+import { formatPartialDate, shortName } from '@/lib/data'
 import { directionTone, type DatedRecord } from '@/lib/feeds'
 import { isNgo } from '@/lib/ngoSignals'
+import { recordSource } from '@/lib/categories'
 import { PulseIcon } from './icons'
 
 // The head of the all-signals timeline, on the home page. Keeping up with what
@@ -54,24 +55,40 @@ export default function LatestSignals({
         <ol className="latest-list">
           {rows.map(({ record, substance }, i) => {
             const ngo = isNgo(record)
+            const scope = record.ngo?.scope
             const tone = ngo ? 'none' : directionTone(record.signal.direction)
             return (
-              <li key={`${substance.id}-${record.date}-${i}`}>
+              <li key={`${substance?.id ?? scope?.slug}-${record.date}-${i}`}>
                 <button
                   type="button"
                   className={`latest-row ${ngo ? 'is-ngo' : ''}`}
-                  onClick={() => onOpenSubstance(substance.id)}
-                  title={`Open ${substance.name}`}
+                  // A class or horizontal item has no one page; it opens the timeline.
+                  onClick={() => (substance ? onOpenSubstance(substance.id) : onOpenAll())}
+                  title={substance ? `Open ${substance.name}` : 'Open all signals'}
                 >
                   <span className={`latest-tone tone-${tone}`} aria-hidden="true" />
                   <span className="latest-date">
                     {formatPartialDate(record.date, record.datePrecision)}
                   </span>
                   <span className="latest-sub">
-                    <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
-                    <span className="latest-sub-name">{substance.name}</span>
+                    {substance ? (
+                      <>
+                        <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
+                        <span className="latest-sub-name">{shortName(substance)}</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className={`scope-tag is-${scope?.kind}`}>
+                          {scope?.kind === 'horizontal' ? 'ALL' : 'CLASS'}
+                        </span>
+                        <span className="latest-sub-name">
+                          {scope?.kind === 'horizontal' ? 'Horizontal' : scope?.label}
+                        </span>
+                      </>
+                    )}
                   </span>
                   <span className="latest-row-title">{record.title}</span>
+                  <span className="latest-src">{recordSource(record)}</span>
                 </button>
               </li>
             )

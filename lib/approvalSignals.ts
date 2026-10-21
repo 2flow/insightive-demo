@@ -1,6 +1,6 @@
 import { approvalFor } from './approvals'
 import { opinionsFor } from './bpcOpinions'
-import { formatDate } from './data'
+import { formatDate, shortName } from './data'
 import type { ApprovalRecord, FeedRecord, Substance } from './types'
 
 // The approval itself, as a dated record — the event the rest of the timeline
@@ -145,9 +145,9 @@ export function approvalRecords(s: Substance): FeedRecord[] {
           : `Approved as an active substance for ${s.pt}`) +
         (stated ? ', as a candidate for substitution' : ''),
       summary:
-        `${first.name} ${included ? 'included' : 'approved'} ${s.name} for ${s.pt} from ` +
+        `${first.name} ${included ? 'included' : 'approved'} ${shortName(s)} for ${s.pt} from ` +
         `${formatDate(date)}${until}.${assessedBy}` +
-        substitutionLine(record, first, s.name) +
+        substitutionLine(record, first, shortName(s)) +
         conditionLine +
         dissentLine +
         renewedBy,

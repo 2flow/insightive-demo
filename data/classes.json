@@ -1,0 +1,107 @@
+{
+  "pyrethroid": [
+    { "name": "epsilon-Momfluorothrin", "cas": "1065124-65-3" },
+    { "name": "Cyfluthrin", "cas": "68359-37-5" },
+    { "name": "1R-trans phenothrin", "cas": "26046-85-5" },
+    { "name": "Deltamethrin", "cas": "52918-63-5" },
+    { "name": "Transfluthrin", "cas": "118712-89-3" },
+    { "name": "lambda-Cyhalothrin", "cas": "91465-08-6" },
+    { "name": "Permethrin", "cas": "52645-53-1" },
+    { "name": "alpha-Cypermethrin", "cas": "67375-30-8" },
+    { "name": "Imiprothrin", "cas": "72963-72-5" },
+    { "name": "d-Tetramethrin", "cas": "1166-46-7" },
+    { "name": "Tetramethrin", "cas": "7696-12-0" },
+    { "name": "Cyphenothrin", "cas": "39515-40-7" },
+    { "name": "Cypermethrin", "cas": "52315-07-8" },
+    { "name": "Metofluthrin / epsilon-Metofluthrin", "cas": "240494-71-7" },
+    { "name": "Prallethrin", "cas": "23031-36-9" },
+    { "name": "d-Allethrin", "cas": "231937-89-6" },
+    { "name": "d-Phenothrin", "cas": "188023-86-1" },
+    { "name": "Empenthrin", "cas": "54406-48-3" },
+    { "name": "Esbiothrin", "cas": "260359-57-7" },
+    { "name": "Esfenvalerate", "cas": "66230-04-4" },
+    { "name": "Etofenprox", "cas": "80844-07-1" }
+  ],
+  "neonicotinoid": [
+    { "name": "Clothianidin", "cas": "210880-92-5" },
+    { "name": "Acetamiprid", "cas": "135410-20-7" },
+    { "name": "Imidacloprid", "cas": "138261-41-3" },
+    { "name": "Dinotefuran", "cas": "165252-70-0" },
+    { "name": "Thiamethoxam", "cas": "153719-23-4" }
+  ],
+  "PFAS": [
+    { "name": "Indoxacarb", "cas": "144171-61-9" },
+    { "name": "Hexaflumuron", "cas": "86479-06-3" },
+    { "name": "lambda-Cyhalothrin", "cas": "91465-08-6" },
+    { "name": "Chlorfenapyr", "cas": "122453-73-0" },
+    { "name": "Fipronil", "cas": "120068-37-3" },
+    { "name": "Triflumuron", "cas": "64628-44-0" }
+  ],
+  "benzoylurea": [
+    { "name": "Hexaflumuron", "cas": "86479-06-3" },
+    { "name": "Diflubenzuron", "cas": "35367-38-5" },
+    { "name": "Triflumuron", "cas": "64628-44-0" }
+  ],
+  "juvenile hormone analogue": [
+    { "name": "Pyriproxyfen", "cas": "95737-68-1" },
+    { "name": "S-Methoprene", "cas": "65733-16-6" }
+  ],
+  "organophosphate": [
+    { "name": "Azamethiphos", "cas": "35575-96-3" }
+  ],
+  "carbamate": [
+    { "name": "Bendiocarb", "cas": "22781-23-3" }
+  ],
+  "fumigant": [
+    { "name": "Hydrogen cyanide", "cas": "74-90-8" },
+    { "name": "Aluminium phosphide", "cas": "20859-73-8" },
+    { "name": "Magnesium phosphide", "cas": "12057-74-8" },
+    { "name": "Sulfuryl fluoride", "cas": "2699-79-8" }
+  ],
+  "nanomaterial": [
+    { "name": "Silicon dioxide, synthetic amorphous, nano, surface treated", "cas": "68909-20-6" },
+    { "name": "Synthetic amorphous silicon dioxide (nano)", "cas": "112926-00-8" }
+  ],
+  "arsenic compound": [
+    { "name": "Sodium cacodylate", "cas": "124-65-2" }
+  ],
+  "unclassified": [
+    "deet",
+    "bacillus-thuringiensis-subsp-kurstaki-strain-abts-351",
+    "muscalure-z-9-tricosene",
+    "spinosad",
+    "cyromazine",
+    "bti",
+    "ir3535-ethyl-butylacetylaminopropionate",
+    "lauric-acid",
+    "piperonyl-butoxide-pbo",
+    "kieselguhr-diatomaceous-earth",
+    "bacillus-sphaericus",
+    "margosa-extract-neem",
+    "beauveria-bassiana-r444",
+    "cymbopogon-winterianus-oil-fractionated-hydrated-cyclized",
+    "eucalyptus-citriodora-oil-cyclized",
+    "lavandin-oil",
+    "peanut-butter-seeds-of-the-groundnut-arachis-hypogaea-l-roas",
+    "silicic-acid-aluminium-magnesium-sodium-salt",
+    "sweet-orange-extract",
+    "icaridin",
+    "13z-hexadec-13-en-11-yn-1-yl-acetate",
+    "pyrethrins",
+    "garlic",
+    "9z-12e-tetradeca-9-12-dien-1-yl-acetate",
+    "abamectin",
+    "reaction-mass-of-6e-n-4-hydroxy-3-methoxy-2-methylphenyl-8-m",
+    "capsicum",
+    "carbon-dioxide",
+    "cyanamide",
+    "decanoic-acid",
+    "geraniol",
+    "malt-ext",
+    "methyl-nonyl-ketone",
+    "nitrogen",
+    "nonanoic-acid-pelargonic-acid",
+    "octanoic-acid",
+    "p-menthane-3-8-diol-pmd-citriodiol"
+  ]
+}

@@ -1,5 +1,5 @@
 import { opinionsFor } from './bpcOpinions'
-import { formatDate, hasBpcRenewalOpinion } from './data'
+import { formatDate, hasBpcRenewalOpinion, shortName } from './data'
 import type { BpcOpinion, FeedRecord, FeedSource, Substance } from './types'
 
 // The Biocidal Products Committee's published opinion, as a record.
@@ -51,7 +51,7 @@ function sourcesFor(s: Substance, opinion: BpcOpinion | null): FeedSource[] {
   // the record never quietly drops a link the source published.
   if (s.bpcOpinionUrl && s.bpcOpinionUrl !== matched?.url) {
     out.push({
-      citation: `BPC opinion — ${s.name}`,
+      citation: `BPC opinion — ${shortName(s)}`,
       pinpoint: '',
       tier: 'PRIMARY',
       verified: true,

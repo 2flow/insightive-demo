@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { InfoIcon } from './icons'
 
 // A sentence of explanation behind an ⓘ, for a value that needs one.
@@ -10,7 +10,16 @@ import { InfoIcon } from './icons'
 // the explanation sits beside the thing it explains instead of lengthening
 // every card that carries it.
 
-export default function InfoNote({ label, text }: { label: string; text: string }) {
+export default function InfoNote({
+  label,
+  text,
+  children,
+}: {
+  label: string
+  text?: string
+  /** Richer content under the text — a list, links. */
+  children?: ReactNode
+}) {
   const [open, setOpen] = useState(false)
   const box = useRef<HTMLSpanElement>(null)
 
@@ -48,7 +57,8 @@ export default function InfoNote({ label, text }: { label: string; text: string 
       {open && (
         <span className="src-note-pop" role="dialog" aria-label={label}>
           <span className="src-note-head">{label}</span>
-          <span className="src-note-text">{text}</span>
+          {text && <span className="src-note-text">{text}</span>}
+          {children}
         </span>
       )}
     </span>
