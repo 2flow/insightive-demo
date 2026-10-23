@@ -1,6 +1,7 @@
 import { formatDate } from '@/lib/data'
 import { pppApproved } from '@/lib/ppp'
 import type { PppRecord } from '@/lib/types'
+import AiTag from './AiTag'
 import { ExternalIcon } from './icons'
 
 // The substance under the plant-protection regulation, (EC) No 1107/2009.
@@ -79,7 +80,9 @@ export default function PppPanel({ record }: { record: PppRecord }) {
           field below is a reading of the record rather than the record. */}
       <div className="ppp-ai">
         <div className="ppp-ai-head">
-          <span className="ppp-ai-label">Why this reading (AI)</span>
+          <span className="ppp-ai-label">
+            Why this reading <AiTag source="ppp" />
+          </span>
           {ai.confidence && <span className="ppp-ai-confidence">{ai.confidence} confidence</span>}
         </div>
 

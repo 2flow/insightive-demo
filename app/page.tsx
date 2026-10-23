@@ -13,6 +13,7 @@ import {
 } from '@/lib/data'
 import { RECENT_DAYS, allRecords, feedFor, isRecent, latestRecords } from '@/lib/feeds'
 import { SORTS, type SortKey, matchesQuery, setMatches, sortSubstances, toggleSet } from '@/lib/filters'
+import ExpiringSubstances from '@/components/ExpiringSubstances'
 import FeedPage from '@/components/FeedPage'
 import LatestSignals from '@/components/LatestSignals'
 import ProductsPage from '@/components/ProductsPage'
@@ -28,6 +29,9 @@ const PT_NAME: Record<string, string> = Object.fromEntries(
   substances.map(s => [s.pt, s.ptName]),
 )
 
+/** The app's release, shown in the header beside the export date. Bump it with each release. */
+const APP_VERSION = 'v1.5'
+
 export default function Page() {
   const [query, setQuery] = useState('')
   const [statuses, setStatuses] = useState<Set<string>>(new Set())
@@ -38,7 +42,9 @@ export default function Page() {
   const [watchOnly, setWatchOnly] = useState(false)
   const [infoOpen, setInfoOpen] = useState(false)
   const [route, setRoute] = useState<{ view: 'feed' | 'products'; id: string } | null>(null)
-  const [allSignals, setAllSignals] = useState(false)
+  // The three top-level views. Overview is the default — what has changed and
+  // what is running out — with the full list and the timeline a tab away.
+  const [section, setSection] = useState<'overview' | 'substances' | 'signals'>('overview')
   const watched = useWatchlist()
   const today = useToday()
 
@@ -57,8 +63,9 @@ export default function Page() {
       const hash = window.location.hash.replace(/^#/, '')
       const [view, ...rest] = hash.split('/')
       const id = decodeURIComponent(rest.join('/'))
-      // #signals is the only sub-view without a substance of its own.
-      setAllSignals(view === 'signals')
+      // #signals and #substances are the views without a substance of their
+      // own; no hash at all is the Overview.
+      setSection(view === 'signals' ? 'signals' : view === 'substances' ? 'substances' : 'overview')
       setRoute(id && (view === 'feed' || view === 'products') ? { view, id } : null)
     }
     read()
@@ -72,22 +79,65 @@ export default function Page() {
     }
   }, [])
 
-  const open = useCallback((view: 'feed' | 'products', id: string) => {
+  // A record to bring into view once the page it opens has rendered — set when
+  // a Latest signals row is clicked, so the reader lands on that card rather
+  // than at the top of the page.
+  const [focusRecord, setFocusRecord] = useState<string | null>(null)
+
+  const open = useCallback((view: 'feed' | 'products', id: string, record?: string) => {
     window.location.hash = `${view}/${encodeURIComponent(id)}`
     window.scrollTo({ top: 0 })
+    setFocusRecord(record ?? null)
   }, [])
 
-  const openFeed = useCallback((id: string) => open('feed', id), [open])
+  const openFeed = useCallback(
+    (id: string, record?: string) => open('feed', id, record),
+    [open],
+  )
   const openProducts = useCallback((id: string) => open('products', id), [open])
-  const openAllSignals = useCallback(() => {
+  const openAllSignals = useCallback((record?: string) => {
     window.location.hash = 'signals'
+    window.scrollTo({ top: 0 })
+    setFocusRecord(record ?? null)
+  }, [])
+
+  // Find the card, centre it and mark it briefly. The page may take a frame
+  // or two to render after the route changes, so it looks a few times.
+  useEffect(() => {
+    if (!focusRecord) return
+    let tries = 0
+    let frame = 0
+    const find = () => {
+      const el = document.querySelector<HTMLElement>(
+        `[data-record-key="${CSS.escape(focusRecord)}"]`,
+      )
+      if (el) {
+        el.scrollIntoView({ block: 'center' })
+        el.classList.add('is-focus')
+        // Not cleared with the effect: clearing focusRecord below re-runs it.
+        setTimeout(() => el.classList.remove('is-focus'), 1800)
+        setFocusRecord(null)
+      } else if (tries++ < 20) {
+        frame = requestAnimationFrame(find)
+      } else {
+        setFocusRecord(null)
+      }
+    }
+    frame = requestAnimationFrame(find)
+    return () => cancelAnimationFrame(frame)
+  }, [focusRecord, route, section])
+
+  // Back from a substance's page, its products or the timeline: to the list.
+  const closeSubView = useCallback(() => {
+    window.location.hash = 'substances'
     window.scrollTo({ top: 0 })
   }, [])
 
-  const closeSubView = useCallback(() => {
+  const openOverview = useCallback(() => {
     window.history.pushState(null, '', window.location.pathname + window.location.search)
     setRoute(null)
-    setAllSignals(false)
+    setSection('overview')
+    window.scrollTo({ top: 0 })
   }, [])
 
   const routeSubstance = route ? substances.find(s => s.id === route.id) ?? null : null
@@ -96,7 +146,10 @@ export default function Page() {
   // may be missing, and the page renders without it.
   const openedSignals = route?.view === 'feed' ? routeSubstance : null
   const openedProducts = route?.view === 'products' ? routeSubstance : null
-  const subView = openedSignals || openedProducts || allSignals
+  const allSignals = !route && section === 'signals'
+  const overview = !route && section === 'overview'
+  const substancesTab = !!route || section === 'substances'
+  const subView = openedSignals || openedProducts || allSignals || overview
 
   // Vocabularies come from the data, so a new export can't leave a dead filter.
   const STATUS_OPTIONS = useMemo(() => approvalStatuses(), [])
@@ -189,8 +242,16 @@ export default function Page() {
           <nav className="app-tabs" aria-label="Views">
             <button
               type="button"
-              className={`app-tab ${allSignals ? '' : 'is-on'}`}
-              aria-current={allSignals ? undefined : 'page'}
+              className={`app-tab ${overview ? 'is-on' : ''}`}
+              aria-current={overview ? 'page' : undefined}
+              onClick={openOverview}
+            >
+              Overview
+            </button>
+            <button
+              type="button"
+              className={`app-tab ${substancesTab ? 'is-on' : ''}`}
+              aria-current={substancesTab ? 'page' : undefined}
               onClick={closeSubView}
             >
               Substances
@@ -199,7 +260,7 @@ export default function Page() {
               type="button"
               className={`app-tab ${allSignals ? 'is-on' : ''}`}
               aria-current={allSignals ? 'page' : undefined}
-              onClick={openAllSignals}
+              onClick={() => openAllSignals()}
             >
               <PulseIcon />
               Signals
@@ -212,47 +273,11 @@ export default function Page() {
           </nav>
 
           <div className="ml-auto flex items-center gap-3">
-            {/* Info add-on — what this list is and how to read it */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setInfoOpen(o => !o)}
-                aria-label="About this dataset"
-                aria-expanded={infoOpen}
-                className={`flex h-7 w-7 items-center justify-center rounded-full border transition-colors ${
-                  infoOpen
-                    ? 'border-accent text-accent'
-                    : 'border-gray-200 text-gray-400 hover:bg-gray-50 hover:text-gray-600'
-                }`}
-              >
-                <InfoIcon className="h-4 w-4" />
-              </button>
-              {infoOpen && (
-                <>
-                  <div className="fixed inset-0 z-30" onClick={() => setInfoOpen(false)} />
-                  <div className="absolute right-0 top-full z-40 mt-2 w-[480px] max-w-[88vw] rounded-xl border border-gray-200 bg-white p-5 shadow-lg">
-                    <p className="text-[12.5px] leading-relaxed text-body">
-                      Every PT18 and PT19 active substance in ECHA&apos;s biocidal active substance
-                      database, one row per substance × product type. Click a row for the full
-                      record: identifiers, evaluating competent authority, legal act, programme
-                      flags and links back to ECHA.
-                    </p>
-                    <p className="mt-2.5 text-[12.5px] leading-relaxed text-body">
-                      ECHA leaves <strong>approval status</strong> blank while a first application is
-                      still running; those records are shown here as{' '}
-                      <span className="font-semibold">Pending</span>. Time-to-expiry is counted from
-                      the export date, not today&apos;s date.
-                    </p>
-                    <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 font-mono text-[10px] uppercase tracking-wider text-gray-400">
-                      <span>{meta.source}</span>
-                      <span>Export {formatDate(meta.exportDate)}</span>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-            <span className="hidden font-mono text-[10.5px] uppercase tracking-wider text-gray-400 sm:block">
-              ECHA export · {formatDate(meta.exportDate)}
+            <span
+              className="hidden font-mono text-[10.5px] uppercase tracking-wider text-gray-400 sm:block"
+              title="The date every source — ECHA, EUR-Lex, the EU Pesticides Database, NGO reports and the rest — was last updated or checked"
+            >
+              {APP_VERSION} · Latest update: {formatDate(meta.exportDate)}
             </span>
           </div>
         </div>
@@ -301,27 +326,68 @@ export default function Page() {
         <main className="mx-auto max-w-6xl px-6 py-7">
           <ProductsPage substance={openedProducts} onBack={closeSubView} />
         </main>
-      ) : (
-
-      /* ── The list ─────────────────────────────────────────── */
-      <main className="mx-auto max-w-7xl px-6 py-6">
-        {/* What changed comes before where things stand: keeping up is the main
-            use. Held back until the reader's date is known (see `today`). */}
-        {today && (
-          <div className="mb-5">
+      ) : overview ? (
+        /* ── Overview: what changed, then what is running out ── */
+        <main className="mx-auto max-w-7xl space-y-5 px-6 py-6">
+          {/* Held back until the reader's date is known (see `today`). */}
+          {today && (
             <LatestSignals
               latest={latest}
               recentCount={recentCount}
               recentDays={RECENT_DAYS}
-              total={records.length}
               onOpenSubstance={openFeed}
               onOpenAll={openAllSignals}
             />
-          </div>
-        )}
+          )}
+          <ExpiringSubstances onOpenSubstance={id => openFeed(id)} onOpenAll={closeSubView} />
+        </main>
+      ) : (
 
+      /* ── The list ─────────────────────────────────────────── */
+      <main className="mx-auto max-w-7xl px-6 py-6">
         <div className="mb-5">
-          <h1 className="text-lg font-bold tracking-tight text-ink">Active substances · PT18 &amp; PT19</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="text-lg font-bold tracking-tight text-ink">Active substances · PT18 &amp; PT19</h1>
+            {/* What this list is and how to read it — about the substance list, so it sits on its heading. */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setInfoOpen(o => !o)}
+                aria-label="About this list"
+                aria-expanded={infoOpen}
+                className={`flex h-7 w-7 items-center justify-center rounded-full border transition-colors ${
+                  infoOpen
+                    ? 'border-accent text-accent'
+                    : 'border-gray-200 text-gray-400 hover:bg-gray-50 hover:text-gray-600'
+                }`}
+              >
+                <InfoIcon className="h-4 w-4" />
+              </button>
+              {infoOpen && (
+                <>
+                  <div className="fixed inset-0 z-30" onClick={() => setInfoOpen(false)} />
+                  <div className="absolute left-0 top-full z-40 mt-2 w-[480px] max-w-[88vw] rounded-xl border border-gray-200 bg-white p-5 shadow-lg">
+                    <p className="text-[12.5px] leading-relaxed text-body">
+                      Every PT18 and PT19 active substance in ECHA&apos;s biocidal active substance
+                      database, one row per substance × product type. Click a row for the full
+                      record: identifiers, evaluating competent authority, legal act, programme
+                      flags and links back to ECHA.
+                    </p>
+                    <p className="mt-2.5 text-[12.5px] leading-relaxed text-body">
+                      ECHA leaves <strong>approval status</strong> blank while a first application is
+                      still running; those records are shown here as{' '}
+                      <span className="font-semibold">Pending</span>. Time-to-expiry is counted from
+                      the export date, not today&apos;s date.
+                    </p>
+                    <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 font-mono text-[10px] uppercase tracking-wider text-gray-400">
+                      <span>{meta.source}</span>
+                      <span>Export {formatDate(meta.exportDate)}</span>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
           <p className="mt-0.5 max-w-3xl text-[13px] leading-snug text-gray-500">
             Approval status and assessment stage for every insecticide/acaricide (PT18) and
             repellent/attractant (PT19) active substance in the EU biocides review programme.
@@ -362,12 +428,6 @@ export default function Page() {
         )}
       </main>
       )}
-
-      <footer className="mx-auto max-w-7xl px-6 pb-10 pt-2">
-        <p className="border-t border-gray-200 pt-4 font-mono text-[10px] uppercase tracking-wider text-gray-400">
-          Source: {meta.source} · Prepared by Insightive for Pelsis
-        </p>
-      </footer>
     </div>
   )
 }

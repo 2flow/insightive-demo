@@ -204,6 +204,8 @@ export interface HazardFlag {
   url: string
   /** The publication's own conclusion, verbatim, where it gives one. */
   quote?: string
+  /** Set where AI read the entry out of the publication. */
+  ai?: import('./types').AiSource
   /** The individual criteria behind the listing, where it is met on several
    *  grounds — PAN's "Highly toxic to bees", "Fatal if inhaled" … */
   criteria?: string[]
@@ -276,6 +278,7 @@ export function flagList(record: PactRecord): HazardFlag[] {
       url: EPA_EDSP,
       quote: flags.edspConclusion,
       adverse: edspAdverse(flags.edspTag),
+      ai: 'epa-ed',
     })
   }
 

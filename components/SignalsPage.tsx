@@ -6,6 +6,7 @@ import { DEFAULT_ORDER, allRecords, orderRecords, tallyRecords } from '@/lib/fee
 import { BANDS, CATEGORIES, categoryOf, topSources } from '@/lib/categories'
 import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
+import InfoNote from './InfoNote'
 import RecordCard, { CATEGORY_ICON } from './RecordCard'
 import { ArrowLeftIcon } from './icons'
 
@@ -28,6 +29,10 @@ function monthLabel(key: string): string {
   const [y, m] = key.split('-')
   return `${MONTHS[Number(m) - 1]} ${y}`
 }
+
+/** Behind the ⓘ beside the tally. */
+const TALLY_NOTE =
+  'Each card’s direction and strength is a reading of that one item — set by the research for researched records, or by a fixed rule for records built from ECHA and EUR-Lex data. These counts just add them up; the app never combines them into an overall verdict.'
 
 export default function SignalsPage({
   onBack,
@@ -177,14 +182,6 @@ export default function SignalsPage({
       {/* At the head of the list it describes, and styled apart from the cards
           so it cannot be mistaken for one of them. */}
       <div className="feed-outlook">
-        <div className="feed-outlook-main">
-          <span className="feed-outlook-label">How the records are tagged (AI)</span>
-          <span className="feed-outlook-note">
-            Each record carries an AI reading of that item alone — the research&apos;s, or
-            the rule stated on the record. They are not combined, here or anywhere else.
-          </span>
-        </div>
-
         <div className="feed-tally">
           {counts.negative > 0 && (
             <span className="feed-tally-item tone-negative">
@@ -205,11 +202,12 @@ export default function SignalsPage({
           {ngoCount > 0 && (
             <span
               className="feed-tally-item feed-outlook-ngo"
-              title="Items from NGO watch reports — indirect context, shown lighter and not tagged"
+              title="Items from NGO watch reports — indirect context, not tagged"
             >
               <b>{ngoCount}</b> NGO
             </span>
           )}
+          <InfoNote label="How the records are tagged" text={TALLY_NOTE} />
         </div>
       </div>
 

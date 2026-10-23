@@ -48,6 +48,7 @@ export function postponementRecords(s: Substance): FeedRecord[] {
     .filter(p => p.adopted)
     .map(p => ({
       kind: 'postponement',
+      ai: 'postponements',
       date: p.adopted,
       datePrecision: p.adoptedPrecision,
       // Year-only entries were read off a later decision rather than their own.

@@ -132,9 +132,10 @@ const PUBLISHER: [RegExp, string][] = [
   [/(^|\.)echa\.europa\.eu$/, 'ECHA'],
   [/(^|\.)efsa\./, 'EFSA'],
   [/^ec\.europa\.eu$|^food\.ec\.europa\.eu$/, 'European Commission'],
-  [/(^|\.)npic\.orst\.edu$/, 'NPIC'],
+  // NPIC republishes the US EPA's carcinogen classifications; EPA is the author.
+  [/(^|\.)npic\.orst\.edu$/, 'EPA'],
   [/(^|\.)hse\.gov\.uk$/, 'HSE'],
-  [/(^|\.)epa\.gov$/, 'US EPA'],
+  [/(^|\.)epa\.gov$/, 'EPA'],
   [/(^|\.)iarc\./, 'IARC'],
   [/(^|\.)pan-europe\.info$/, 'PAN Europe'],
   [/(^|\.)pan-international\.org$/, 'PAN International'],

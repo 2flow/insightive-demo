@@ -9,6 +9,7 @@ import {
 import { minorityCount } from '@/lib/bpcOpinions'
 import { formatDate } from '@/lib/data'
 import type { ApprovalCondition, ApprovalRecord, BpcDocument, BpcOpinion } from '@/lib/types'
+import AiTag from './AiTag'
 import { ExternalIcon } from './icons'
 
 // The act that approved the substance, and what it said.
@@ -450,8 +451,8 @@ export default function ApprovalDataPanel({
 
       {act && (
         <p className="apr-note">
-          What the approving act says, in its own words. The act was located on EUR-Lex and its
-          recitals and Annex conditions extracted by AI (retrieved {formatDate(retrieved)}) — every
+          <AiTag source="approval-act" /> What the approving act says, in its own words. The act comes from EUR-Lex; AI read it
+          and collected its recitals and Annex conditions (retrieved {formatDate(retrieved)}) — every
           block below links to the act, which is the text that governs.
         </p>
       )}

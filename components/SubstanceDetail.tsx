@@ -39,7 +39,6 @@ export default function SubstanceDetail({
   const products = productsFor(s.id)
   const flags = [
     s.reviewProgramme && 'Review programme',
-    s.newActiveSubstance && 'New active substance',
     s.annexI && 'Annex I substance',
     s.inclusionCategory > 0 && `Inclusion category ${s.inclusionCategory}`,
   ].filter(Boolean) as string[]

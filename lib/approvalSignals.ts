@@ -133,6 +133,7 @@ export function approvalRecords(s: Substance): FeedRecord[] {
   return [
     {
       kind: 'approval',
+      ai: 'approval-act',
       date,
       datePrecision: 'day',
       dateDerived: false,
@@ -179,7 +180,7 @@ export function approvalRecords(s: Substance): FeedRecord[] {
               tier: 'PRIMARY',
               verified: true,
               url: first.url,
-              note: 'located and extracted by AI; the act is the text that governs',
+              note: 'read by AI; the act is the text that governs',
             },
           ]
         : [],

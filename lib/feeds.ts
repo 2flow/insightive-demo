@@ -294,6 +294,12 @@ export function allRecords(substances: Substance[]): DatedRecord[] {
   )
 }
 
+/** A record's identity across views — the same item on the home page and on
+ *  the page it opens, so the page can scroll to it. */
+export function recordKey(r: FeedRecord): string {
+  return `${r.kind ?? ''}|${r.date}|${r.title}`
+}
+
 /** How far back "recent" reaches on the home page. */
 export const RECENT_DAYS = 30
 

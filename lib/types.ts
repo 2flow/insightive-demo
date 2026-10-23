@@ -324,6 +324,9 @@ export interface FeedRecord {
   blockers: string[]
   signal: FeedSignal
   sources: FeedSource[]
+  /** Set where the record was read or written by AI rather than taken from
+   *  a datasheet export — which source, for the "AI" tag's note. */
+  ai?: AiSource
   /** Set on records taken from an NGO watch report (kind 'ngo'). These are
    *  indirect, so they are drawn lighter and kept out of the tallies. */
   ngo?: NgoMeta
@@ -353,6 +356,15 @@ export interface NgoMeta {
    *  spells them. Empty when it names none. */
   named?: string[]
 }
+
+/** What AI did, by where the data came from. See components/AiTag.tsx. */
+export type AiSource =
+  | 'ngo'
+  | 'postponements'
+  | 'bpc-meeting'
+  | 'approval-act'
+  | 'ppp'
+  | 'epa-ed'
 
 export interface NgoScope {
   /** 'class': a chemical class, shown on each member's page. 'horizontal':

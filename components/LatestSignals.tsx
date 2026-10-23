@@ -1,7 +1,7 @@
 'use client'
 
 import { formatPartialDate, shortName } from '@/lib/data'
-import { directionTone, type DatedRecord } from '@/lib/feeds'
+import { directionTone, recordKey, type DatedRecord } from '@/lib/feeds'
 import { isNgo } from '@/lib/ngoSignals'
 import { recordSource } from '@/lib/categories'
 import { PulseIcon } from './icons'
@@ -17,7 +17,6 @@ export default function LatestSignals({
   latest,
   recentCount,
   recentDays,
-  total,
   onOpenSubstance,
   onOpenAll,
 }: {
@@ -25,9 +24,9 @@ export default function LatestSignals({
   latest: DatedRecord[]
   recentCount: number
   recentDays: number
-  total: number
-  onOpenSubstance: (id: string) => void
-  onOpenAll: () => void
+  /** `record` is the clicked record's key, for the page to scroll to. */
+  onOpenSubstance: (id: string, record?: string) => void
+  onOpenAll: (record?: string) => void
 }) {
   const rows = latest.slice(0, SHOWN)
 
@@ -43,8 +42,8 @@ export default function LatestSignals({
         <span className={`latest-new ${recentCount > 0 ? 'has-new' : ''}`}>
           <b>{recentCount}</b> in the last {recentDays} days
         </span>
-        <button type="button" className="latest-all" onClick={onOpenAll}>
-          See all {total} signals
+        <button type="button" className="latest-all" onClick={() => onOpenAll()}>
+          See all signals
           <span aria-hidden="true">→</span>
         </button>
       </div>
@@ -63,7 +62,12 @@ export default function LatestSignals({
                   type="button"
                   className={`latest-row ${ngo ? 'is-ngo' : ''}`}
                   // A class or horizontal item has no one page; it opens the timeline.
-                  onClick={() => (substance ? onOpenSubstance(substance.id) : onOpenAll())}
+                  // Either way the page opens on this record, not at its top.
+                  onClick={() =>
+                    substance
+                      ? onOpenSubstance(substance.id, recordKey(record))
+                      : onOpenAll(recordKey(record))
+                  }
                   title={substance ? `Open ${substance.name}` : 'Open all signals'}
                 >
                   <span className={`latest-tone tone-${tone}`} aria-hidden="true" />

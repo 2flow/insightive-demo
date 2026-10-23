@@ -2,11 +2,12 @@
 
 import { useId, useState } from 'react'
 import { formatPartialDate, shortName } from '@/lib/data'
-import { RECENT_DAYS, directionTone, isRecent, signalLabel } from '@/lib/feeds'
+import { RECENT_DAYS, directionTone, isRecent, recordKey, signalLabel } from '@/lib/feeds'
 import { EVIDENCE_LABEL, EVIDENCE_NOTE, categoryOf, evidenceOf } from '@/lib/categories'
 import type { Evidence, SignalCategory } from '@/lib/categories'
 import { classMembers, memberLabel, namesSubstance } from '@/lib/ngoSignals'
 import type { FeedRecord, FeedSource, NgoScope, Substance } from '@/lib/types'
+import AiTag from './AiTag'
 import InfoNote from './InfoNote'
 import { useToday } from './useToday'
 import {
@@ -128,8 +129,8 @@ function SubstanceLine({ substance, onOpen }: { substance?: Substance; onOpen?: 
       onClick={() => onOpen?.(substance.id)}
       title={`Open ${substance.name}`}
     >
-      <span className={`pt-tag ${substance.pt.toLowerCase()}`}>{substance.pt}</span>
       <span className="feed-card-sub-name">{shortName(substance)}</span>
+      <span className="feed-card-sub-pt">{substance.pt}</span>
     </button>
   )
 }
@@ -166,8 +167,8 @@ function ScopeBox({
   if (scope.kind === 'horizontal') {
     return (
       <div className="ngo-scope is-horizontal">
-        <span className="ngo-scope-kind">Horizontal signal</span>
-        <span className="ngo-scope-text">Applies to every active substance</span>
+        <span className="ngo-scope-kind">Horizontal</span>
+        <span className="ngo-scope-name">All substances</span>
         <InfoNote
           label="Horizontal signal"
           text="EU policy that reaches every active substance at once, rather than one substance or class. Shown on the all-signals timeline only, not on substance pages."
@@ -186,10 +187,10 @@ function ScopeBox({
   const namesThis = viewing && namesSubstance(r, viewing)
   return (
     <div className="ngo-scope is-class">
-      <span className="ngo-scope-kind">Class signal · {scope.label}</span>
+      <span className="ngo-scope-kind">Class</span>
+      <span className="ngo-scope-name">{scope.label.charAt(0).toUpperCase() + scope.label.slice(1)}</span>
       <span className="ngo-scope-text">
-        Applies to all {members.length} {scope.label}{' '}
-        {members.length === 1 ? 'substance' : 'substances'}
+        {members.length} {members.length === 1 ? 'substance' : 'substances'}
         {namesThis && ` · names ${memberLabel(viewing!)}`}
       </span>
       <InfoNote
@@ -296,7 +297,7 @@ function NgoCard({
   // Reports ranked without tiers give each item its place in the list instead.
   const tierChip = ngo.tier ? `Tier ${ngo.tierName || ngo.tier}` : `#${ngo.rank}`
   return (
-    <li className={`feed-card is-ngo ${ngo.tier ? `ngo-t${ngo.tier}` : ''}`}>
+    <li className={`feed-card is-ngo ${ngo.tier ? `ngo-t${ngo.tier}` : ''}`} data-record-key={recordKey(r)}>
       <div className="feed-card-head">
         <CategoryTag r={r} />
         <span className="feed-card-date">{formatPartialDate(r.date, r.datePrecision)}</span>
@@ -324,6 +325,7 @@ function NgoCard({
         )}
         <EvidenceChip r={r} />
         {ngo.org && <span className="ngo-org">{ngo.org}</span>}
+        {r.ai && <AiTag source={r.ai} />}
         <NewTag r={r} />
       </div>
       {/* The report's own tags. The two that put an item squarely on the BPR
@@ -392,7 +394,7 @@ export default function RecordCard({
   const whyId = useId()
   if (r.ngo) return <NgoCard r={r} substance={substance} viewing={viewing} onOpen={onOpen} />
   return (
-    <li className={`feed-card tone-${tone}`}>
+    <li className={`feed-card tone-${tone}`} data-record-key={recordKey(r)}>
       <div className="feed-card-head">
         <CategoryTag r={r} />
         {/* Where the date is not the day the thing happened, the emphasis
@@ -438,6 +440,7 @@ export default function RecordCard({
           </span>
         ))}
         <EvidenceChip r={r} />
+        {r.ai && <AiTag source={r.ai} />}
         {r.tags.map(t => (
           <span className={`feed-chip tag ${isMarked(t) ? 'is-marked' : ''}`} key={t}>
             {t}

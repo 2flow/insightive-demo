@@ -43,6 +43,7 @@ export function bpcMeetingRecords(s: Substance): FeedRecord[] {
   return [
     {
       kind: 'bpc',
+      ai: 'bpc-meeting',
       date: adoption.date,
       datePrecision: 'day',
       dateDerived: false,

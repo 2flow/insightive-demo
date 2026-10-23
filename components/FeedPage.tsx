@@ -31,7 +31,9 @@ import { DEFAULT_ORDER, orderRecords, recordsFor, tallyRecords } from '@/lib/fee
 import { isNgo } from '@/lib/ngoSignals'
 import { classesFor } from '@/lib/classes'
 import type { RecordOrder } from '@/lib/feeds'
-import type { FeedRecord, Substance, SubstanceFeed } from '@/lib/types'
+import type { AiSource, FeedRecord, Substance, SubstanceFeed } from '@/lib/types'
+import AiTag from './AiTag'
+import InfoNote from './InfoNote'
 import ConsultationPanel from './ConsultationPanel'
 import PanelDialog from './PanelDialog'
 import ApprovalDataPanel from './ApprovalDataPanel'
@@ -141,7 +143,7 @@ const ECHA_PACT: Source = {
 const EURLEX_APPROVAL: Source = {
   label: 'EUR-Lex — the act that approved the substance',
   url: '',
-  note: 'recitals and Annex conditions extracted by AI; every block links to the act',
+  note: 'recitals and Annex conditions read by AI; every block links to the act',
 }
 const EURLEX_POSTPONEMENTS: Source = {
   label: 'EUR-Lex — Decisions postponing an approval expiry (PT18)',
@@ -171,6 +173,7 @@ function ActionTile({
   label,
   sources,
   sourcesIntro,
+  ai,
   open,
   leaves,
   onActivate,
@@ -180,6 +183,8 @@ function ActionTile({
   label: string
   sources?: Source[]
   sourcesIntro?: string
+  /** Set where what the tile shows was read by AI, not exported. */
+  ai?: AiSource
   open?: boolean
   /** True when it opens another page rather than unfolding in place. */
   leaves?: boolean
@@ -200,6 +205,7 @@ function ActionTile({
       <div className="fp-tile-label">
         {label}
         {sources && <SourceNote label={label} sources={sources} intro={sourcesIntro} />}
+        {ai && <AiTag source={ai} />}
         <span className="fp-tile-go" aria-hidden="true">
           {leaves ? <ArrowRightIcon /> : <ExpandIcon />}
         </span>
@@ -431,6 +437,7 @@ function Dashboard({
           <ActionTile
             label="Approval data"
             sources={[EURLEX_APPROVAL, BPC_OPINIONS]}
+            ai={approvalAct ? 'approval-act' : undefined}
             open={panel === 'opinions'}
             onActivate={() => toggle('opinions')}
             hint={panel === 'opinions' ? 'Hide the approval data' : 'Show the approval data'}
@@ -564,6 +571,7 @@ function Dashboard({
           <div className="fp-tile-label">
             Renewal track
             <SourceNote label="Renewal track" sources={[EURLEX_POSTPONEMENTS]} />
+            {track && <AiTag source="postponements" />}
           </div>
           <div className={`fp-tile-value ${track ? 'sm' : ''}`}>{track || '—'}</div>
           <div className="fp-tile-note">
@@ -581,6 +589,7 @@ function Dashboard({
           <div className="fp-tile-label">
             Postponements
             <SourceNote label="Postponements" sources={[EURLEX_POSTPONEMENTS]} />
+            {!firstApproval && postponements != null && <AiTag source="postponements" />}
           </div>
           <div
             className={`fp-tile-value ${!firstApproval && postponements ? 'warn' : ''}`}
@@ -655,6 +664,7 @@ function Dashboard({
           <ActionTile
             label="Plant-protection status"
             sources={[EU_PESTICIDES]}
+            ai={ppp.ai && Object.values(ppp.ai).some(Boolean) ? 'ppp' : undefined}
             open={panel === 'ppp'}
             onActivate={() => toggle('ppp')}
             hint={panel === 'ppp' ? 'Hide the plant-protection record' : 'Show the plant-protection record'}
@@ -756,6 +766,10 @@ function Dashboard({
   )
 }
 
+/** Behind the ⓘ beside the tally. */
+const TALLY_NOTE =
+  'Each card’s direction and strength is a reading of that one item — set by the research for researched records, or by a fixed rule for records built from ECHA and EUR-Lex data. These counts just add them up; the app never combines them into an overall verdict.'
+
 export default function FeedPage({
   substance,
   feed,
@@ -855,15 +869,6 @@ export default function FeedPage({
               and is styled apart from the cards so it cannot be mistaken for
               one of them. */}
         <div className="feed-outlook">
-          <div className="feed-outlook-main">
-            <span className="feed-outlook-label">How the records are tagged (AI)</span>
-            <span className="feed-outlook-note">
-              Each record carries an AI reading of that item alone — the research&apos;s, or
-              the rule stated on the record. They are not combined into an overall
-              assessment.
-            </span>
-          </div>
-
           <div className="feed-tally">
             {counts.negative > 0 && (
               <span className="feed-tally-item tone-negative">
@@ -884,11 +889,12 @@ export default function FeedPage({
             {ngoCount > 0 && (
               <span
                 className="feed-tally-item feed-outlook-ngo"
-                title="Items from NGO watch reports — indirect context, shown lighter and not tagged"
+                title="Items from NGO watch reports — indirect context, not tagged"
               >
                 <b>{ngoCount}</b> NGO
               </span>
             )}
+            <InfoNote label="How the records are tagged" text={TALLY_NOTE} />
           </div>
         </div>
 

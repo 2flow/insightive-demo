@@ -18,14 +18,12 @@ const tiles = [
     icon: <ShieldIcon />,
     label: 'Currently approved',
     value: substances.filter(s => s.approvalStatus === 'Approved').length,
-    note: 'approval in force',
   },
   {
     tone: 'warning',
     icon: <ClockIcon />,
     label: 'Approval ends within 12 months',
     value: substances.filter(s => s.endBucket === '12m').length,
-    note: 'renewal window',
   },
   {
     tone: 'accent',
@@ -34,7 +32,7 @@ const tiles = [
     value: substances.filter(s => s.assessmentStatus !== '').length,
     note: 'initial or renewal',
   },
-]
+] as { tone: string; icon: JSX.Element; label: string; value: number; note?: string }[]
 
 export default function StatRow() {
   return (
@@ -45,8 +43,12 @@ export default function StatRow() {
             {t.icon}
             {t.label}
           </div>
-          <div className="stat-value">{t.value}</div>
-          <div className="stat-note">{t.note}</div>
+          {/* The detail sits beside the figure, not under it, so the tile
+              stays one line shorter. */}
+          <div className="stat-figure">
+            <span className="stat-value">{t.value}</span>
+            {t.note && <span className="stat-note">{t.note}</span>}
+          </div>
         </div>
       ))}
     </div>

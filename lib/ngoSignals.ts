@@ -222,6 +222,7 @@ function parseReport(md: string, runDate: string, scope?: NgoScope): FeedRecord[
     const extra = parseAlsoLine(item.fields.also ?? '')
     records.push({
       kind: 'ngo',
+      ai: 'ngo',
       date,
       datePrecision: precision,
       dateDerived: false,

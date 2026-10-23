@@ -25,6 +25,7 @@ import { recentlyRenewed, renewalFor, renewalGranted } from '@/lib/approvals'
 import { pppApproved, pppFor } from '@/lib/ppp'
 import { suppliersFor } from '@/lib/suppliers'
 import type { FeedRecord, Substance } from '@/lib/types'
+import AiTag from './AiTag'
 import SubstanceDetail from './SubstanceDetail'
 import { AlertTriangleIcon, ArrowRightIcon, CheckCircleIcon, ChevronDownIcon, PulseIcon } from './icons'
 import { WatchButton, useWatchlist } from './useWatchlist'
@@ -51,7 +52,7 @@ function ApprovalCell({ s }: { s: Substance }) {
  *  sub-status, or — when there is none and the clock is running down — the
  *  fact that nothing is on file. The two are mutually exclusive by
  *  construction, since isRenewalAtRisk() requires a blank assessment status. */
-function RenewalStatusChips({ s }: { s: Substance }) {
+export function RenewalStatusChips({ s }: { s: Substance }) {
   const interest = interestFor(s.id)
   // A renewal already granted answers this column outright, and outranks the
   // interest list, which still reads "submitted" for the two it applies to.
@@ -156,7 +157,17 @@ function SignalStrip({ records }: { records: FeedRecord[] }) {
  *  The signals box states how much evidence exists and what shape it has, then
  *  opens it. It does not reduce the feed to a verdict — reaching a view is the
  *  reader's job, from the record. */
-function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id: string) => void }) {
+/** `compact` (the Overview) keeps the top-signal chips and the Open button,
+ *  and drops the signal count and strip. */
+export function RenewalProspectChips({
+  s,
+  onOpenFeed,
+  compact = false,
+}: {
+  s: Substance
+  onOpenFeed: (id: string) => void
+  compact?: boolean
+}) {
   const substitution = isSubstitutionCandidate(s)
   const risk = isRenewalAtRisk(s)
   // Once the renewal is granted, the opinion recommending it has been acted on:
@@ -205,7 +216,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
   // top-signal chips beneath. The hit area is an overlay button rather than a
   // wrapper, because the BPC chip is a link and a button cannot contain one.
   return (
-    <div className={`sig-box ${hasRecords ? '' : 'is-empty'}`}>
+    <div className={`sig-box ${hasRecords ? '' : 'is-empty'} ${compact ? 'is-compact' : ''}`}>
       <button
         type="button"
         className="sig-box-hit"
@@ -231,7 +242,11 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
       />
 
       <span className="sig-box-head">
-        {hasRecords ? (
+        {/* Compact: the label leads the head, level with Open, and the chips
+            run beneath it. */}
+        {compact ? (
+          chips && <span className="prospect-label">Top signals:</span>
+        ) : hasRecords ? (
           <>
             <PulseIcon />
             Signals
@@ -247,7 +262,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
         </span>
       </span>
 
-      {records.length > 0 && <SignalStrip records={records} />}
+      {!compact && records.length > 0 && <SignalStrip records={records} />}
 
       {/* The chips keep their own pointer events, so their tooltips still work;
           the click is forwarded to the same place the box goes. The BPC chip is
@@ -260,7 +275,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
             onOpenFeed(s.id)
           }}
         >
-          <span className="prospect-label">Top signals:</span>
+          {!compact && <span className="prospect-label">Top signals:</span>}
             {substitution && (
               <span
                 className="alert-chip substitution"
@@ -365,6 +380,7 @@ function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id
                 {meeting.kind === 'renewal' ? 'Renewal' : 'Approval'} opinion adopted ({meeting.meeting})
               </a>
             )}
+            {meeting && <AiTag source="bpc-meeting" />}
         </div>
       )}
     </div>

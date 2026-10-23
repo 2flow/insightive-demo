@@ -24,9 +24,9 @@ export function postponementCount(substanceId: string): number {
  * Every state gets one, including the two that say nothing: a decision giving
  * no cause, and a decision whose text was never retrieved, are different facts
  * and the reader should be able to tell them apart. The reading is Pelsis's,
- * not the Commission's, so anything that *is* a reading says so; "reason not
- * retrieved" does not, because it is a gap in the sources rather than a view
- * taken of them.
+ * not the Commission's; the card's "AI" tag says so for the whole record,
+ * which AI read out of the decision. "reason not retrieved" is a gap in the
+ * sources rather than a view taken of them.
  */
 export function reasonTags(p: Postponement): string[] {
   const raw = p.reason.trim()
@@ -35,5 +35,5 @@ export function reasonTags(p: Postponement): string[] {
     .split(';')
     .map(part => part.trim().toLowerCase())
     .filter(Boolean)
-    .map(part => `reason · AI — ${part}`)
+    .map(part => `reason — ${part}`)
 }

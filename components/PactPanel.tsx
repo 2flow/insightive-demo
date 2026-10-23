@@ -1,6 +1,7 @@
 import { formatDate } from '@/lib/data'
 import { byArea, flagList, hazardAreaActivities, hazardTally, isLive, otherActivities } from '@/lib/pact'
 import type { PactActivity, PactRecord } from '@/lib/types'
+import AiTag from './AiTag'
 import { ExternalIcon, InfoIcon } from './icons'
 
 // What any EU authority is doing about the substance outside the biocides file,
@@ -91,6 +92,7 @@ export function PactHazards({ record }: { record: PactRecord }) {
                 {f.label}
                 <ExternalIcon />
               </a>
+              {f.ai && <AiTag source={f.ai} />}
               <span className="flag-value">{f.value}</span>
               {f.note && <span className="flag-note">{f.note}</span>}
               {f.criteria && f.criteria.length > 0 && (

@@ -300,15 +300,15 @@ outweighs the other, and deciding that it does would be the app forming a view t
 documents do not state. What the reader can weigh is on the card: how often, how
 long, and what the recital says.
 
-`Reason_AI` and `Inference_AI` are a Pelsis reading, not the Commission's, and
-every place they surface says so:
+The postponement list was read out of the decisions by AI, and `Reason_AI` and
+`Inference_AI` are a Pelsis reading, not the Commission's. The card, and the
+Postponements and Renewal track tiles, carry the **AI** tag, which says so:
 
-- the reason is a chip reading **`reason · AI — unexplained delay`**, split on `;`
+- the reason is a chip reading **`reason — unexplained delay`**, split on `;`
   where a decision cites more than one cause;
-- where the reason column says nothing, the chip is **`reason not retrieved`**,
-  *without* the AI marker — a gap in the sources is not a view taken of them, and
-  the reader should be able to tell a decision that gave no cause from one whose
-  text was never read;
+- where the reason column says nothing, the chip is **`reason not retrieved`** —
+  a gap in the sources is not a view taken of them, and the reader should be
+  able to tell a decision that gave no cause from one whose text was never read;
 - `Inference_AI` is **not shown**. It is kept in `lib/postponements.json` if it is
   ever wanted somewhere quieter, but it had a block of its own on the card and
   most of what it held was provenance — "Date from recital (6) of 2024/1285" — so
@@ -556,9 +556,9 @@ reader sees it without having to know the architecture:
 
 | Marked | Where |
 |---|---|
-| **Why this reading (AI)** | the rationale on a record card, and the plant-protection panel's analysis block |
-| **How the records are tagged (AI)** | the tally strip, which counts readings rather than facts — the direction, weight and label on a signal badge are that reading in shorthand |
-| **reason · AI — …** | the cause chip on a postponement |
+| **Why this reading (AI)** | the rationale tooltip on a record card (hover-only, so it keeps the words — a button cannot sit in a tooltip) |
+| ⓘ beside the tally | the tally counts readings rather than facts — set by the research, or by a fixed rule for records built from exports; never combined |
+| **AI** tag (opens a note) | anything not taken straight from a datasheet export — one mark, one note per source, in `components/AiTag.tsx`: NGO cards; postponement cards and the Postponements / Renewal track tiles; BPC meeting-note adoptions (card and list chip); the approval record, Approval data tile and panel (EUR-Lex act extracted by AI); the plant-protection analysis block and tile; the EPA EDSP entry in the hazard lists |
 
 What is *not* marked is the record itself: dates, decision numbers, recital
 quotes, statuses and links are the document, and adding "(AI)" to those would
