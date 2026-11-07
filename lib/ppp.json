@@ -887,7 +887,7 @@
         "qualityFlag": ""
       }
     },
-    "1308-PT19": {
+    "1308-PT18": {
       "name": "Geraniol",
       "euId": "1036",
       "status": "Approved",
@@ -926,7 +926,7 @@
         "qualityFlag": ""
       }
     },
-    "1308-PT18": {
+    "1308-PT19": {
       "name": "Geraniol",
       "euId": "1036",
       "status": "Approved",
@@ -1241,7 +1241,7 @@
         "qualityFlag": ""
       }
     },
-    "1356-PT18": {
+    "1356-PT19": {
       "name": "Pyrethrins",
       "euId": "1092",
       "status": "Approved",
@@ -1290,7 +1290,7 @@
         "qualityFlag": ""
       }
     },
-    "1356-PT19": {
+    "1356-PT18": {
       "name": "Pyrethrins",
       "euId": "1092",
       "status": "Approved",

@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "ECHA — Public Activities Coordination Tool (PACT), with EPA and endocrine-disruptor list flags",
-    "sourceFile": "pact-export-filtered_updated_and_other_flags_20_09_26.csv",
+    "sourceFile": "pact-export-filtered_updated_and_other_flags_07_11_26.csv",
     "rows": 89,
     "empty": 28,
     "count": 74,
@@ -148,6 +148,21 @@
           "note": ""
         }
       ]
+    },
+    "clhSourceFile": "pact-clh-proposals_07_11_26.csv",
+    "clhUnmatched": 0,
+    "exports": [
+      {
+        "file": "pact-export-filtered_updated_and_other_flags_20_09_26.csv",
+        "date": "2026-09-20"
+      },
+      {
+        "file": "pact-export-filtered_updated_and_other_flags_07_11_26.csv",
+        "date": "2026-11-07"
+      }
+    ],
+    "history": {
+      "status": 4
     }
   },
   "bySubstance": {
@@ -161,7 +176,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "2020-01-31",
           "updated": "2026-04-27",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.013.290"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.013.290",
+          "key": "ED:2020-01-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -169,7 +187,38 @@
           "status": "Opinion Adopted",
           "intention": "2013-12-17",
           "updated": "2022-07-25",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.013.290"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.013.290",
+          "key": "CLH:2013-12-17",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2016-09-16",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H332",
+              "Carc. 2, H351",
+              "STOT SE 2, H371",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "Carc. 2, H351",
+              "STOT SE 2, H371"
+            ],
+            "dropped": [],
+            "index": "607-728-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -192,7 +241,24 @@
           "status": "Withdrawn",
           "intention": "2010-04-13",
           "updated": "2025-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.112.543"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.112.543",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "No classification proposed"
+            ],
+            "added": [],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -215,7 +281,44 @@
           "status": "Opinion Adopted",
           "intention": "2017-11-03",
           "updated": "2025-03-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.171"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.171",
+          "key": "CLH:2017-11-03",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2021-09-16",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Repr. 2, H361fd",
+              "STOT SE 1, H370",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=100",
+              "Repr. 2, H361fd",
+              "STOT SE 1, H370"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "index": "613-307-00-5",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -264,7 +367,42 @@
           "status": "Opinion Development",
           "intention": "2016-04-08",
           "updated": "2026-09-08",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.235.064"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.235.064",
+          "key": "CLH:2016-04-08",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Repr. 2, H361d",
+              "STOT SE 1, H370",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "Repr. 2, H361d",
+              "STOT RE 2, H373",
+              "STOT SE 1, H370"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -284,10 +422,45 @@
         {
           "area": "CLH",
           "areaLabel": "Harmonised classification (CLH)",
-          "status": "Consultation",
+          "status": "Opinion Development",
           "intention": "2016-06-21",
-          "updated": "2026-08-25",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.665"
+          "updated": "2026-11-03",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.665",
+          "key": "CLH:2016-06-21",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Repr. 2, H361d",
+              "STOT SE 1, H370",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "Repr. 2, H361d",
+              "STOT RE 2, H373",
+              "STOT SE 1, H370"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-11-07",
+          "since": "2026-09-20"
         }
       ],
       "flags": {
@@ -298,7 +471,21 @@
         "edEffects": "",
         "edspTag": "",
         "edspConclusion": ""
-      }
+      },
+      "past": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Consultation",
+          "intention": "2016-06-21",
+          "updated": "2026-08-25",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.665",
+          "key": "CLH:2016-06-21",
+          "firstSeen": "2026-09-20",
+          "since": "",
+          "until": "2026-11-07"
+        }
+      ]
     },
     "1283-PT18": {
       "name": "(RS)-α-cyano-3phenoxybenzyl-(1RS)-cis, trans-3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropanecarboxylate (Cypermethrin)",
@@ -310,7 +497,44 @@
           "status": "Submitted",
           "intention": "",
           "updated": "2026-09-01",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.567",
+          "key": "CLH:#1",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Belgium",
+            "opinionDate": "",
+            "inForce": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "STOT SE 3, H335",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, M-factor=100 000",
+              "Aquatic Chronic 1, M-factor=100 000"
+            ],
+            "proposed": [
+              "ED HH 2, EUH381",
+              "ED ENV 1, EUH430"
+            ],
+            "added": [
+              "ED ENV 1, EUH430",
+              "ED HH 2, EUH381"
+            ],
+            "dropped": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, M-factor=100 000",
+              "Aquatic Chronic 1, M-factor=100 000",
+              "STOT RE 2, H373",
+              "STOT SE 3, H335"
+            ],
+            "index": "607-421-00-4 | 607-422-00-X | 607-433-00-X",
+            "exclusion": [
+              "ED ENV 1, EUH430"
+            ],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -318,7 +542,46 @@
           "status": "Opinion Adopted",
           "intention": "2015-05-26",
           "updated": "2025-07-28",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.567",
+          "key": "CLH:2015-05-26",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Belgium",
+            "opinionDate": "2019-12-05",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Acute Tox. 4*, H332",
+              "STOT SE 3, H335",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "STOT SE 3, H335",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, M-factor=1000",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302",
+              "Acute Tox. 4*, H332"
+            ],
+            "index": "607-421-00-4 | 607-433-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -326,7 +589,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "",
           "updated": "2025-01-21",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.052.567",
+          "key": "ED:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -375,7 +641,32 @@
           "status": "Opinion Adopted",
           "intention": "2014-02-21",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.333"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.333",
+          "key": "CLH:2014-02-21",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Portugal",
+            "opinionDate": "2015-12-04",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "dropped": [],
+            "index": "616-221-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -424,7 +715,32 @@
           "status": "Withdrawn",
           "intention": "2015-09-15",
           "updated": "2025-10-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.672"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.213.672",
+          "key": "CLH:2015-09-15",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Belgium",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "STOT SE 2, H371",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, M-factor=100",
+              "STOT SE 2, H371"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -447,7 +763,34 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.000.070"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.000.070",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Greece",
+            "opinionDate": "2020-06-11",
+            "inForce": [],
+            "proposed": [
+              "STOT SE 3, H335",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1",
+              "STOT SE 3, H335"
+            ],
+            "dropped": [],
+            "index": "604-096-00-0",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -455,7 +798,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.000.070"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.000.070",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "SEv",
@@ -463,7 +809,10 @@
           "status": "Withdrawn",
           "intention": "",
           "updated": "2020-03-18",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.000.070"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.000.070",
+          "key": "SEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -486,7 +835,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.059.055"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.059.055",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -509,7 +861,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "2024-03-07",
           "updated": "2024-04-04",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.116.332"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.116.332",
+          "key": "ED:2024-03-07",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -517,7 +872,46 @@
           "status": "Submitted",
           "intention": "2015-06-02",
           "updated": "2019-04-02",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.116.332"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.116.332",
+          "key": "CLH:2015-06-02",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Portugal",
+            "opinionDate": "",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Acute Tox. 3*, H331",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "proposed": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H331",
+              "STOT SE 2, H371",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H331",
+              "Aquatic Acute 1, M-factor=100",
+              "STOT RE 2, H373",
+              "STOT SE 2, H371"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H331",
+              "Acute Tox. 4*, H302"
+            ],
+            "index": "608-034-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -606,7 +1000,42 @@
           "status": "Opinion Adopted",
           "intention": "2015-07-13",
           "updated": "2026-05-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.716"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.716",
+          "key": "CLH:2015-07-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2018-03-09",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Repr. 2, H361d",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302"
+            ],
+            "index": "613-259-00-5",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -655,7 +1084,38 @@
           "status": "Opinion Adopted",
           "intention": "2009-01-23",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.113.437"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.113.437",
+          "key": "CLH:2009-01-23",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "2010-03-17",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 1, H330",
+              "Repr. 2, H361d",
+              "STOT RE 1, H372",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10 000",
+              "Aquatic Chronic 1, H410"
+            ],
+            "added": [
+              "Acute Tox. 1, H330",
+              "Acute Tox. 2, H300",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10 000",
+              "Aquatic Chronic 1, H410",
+              "Repr. 2, H361d",
+              "STOT RE 1, H372"
+            ],
+            "dropped": [],
+            "index": "606-143-00-0",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -721,7 +1181,44 @@
           "status": "Opinion Adopted",
           "intention": "2017-09-06",
           "updated": "2025-10-30",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.622"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.622",
+          "key": "CLH:2017-09-06",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "2020-05-04",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Chronic 3, H412"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Carc. 2, H351",
+              "Repr. 2, H361d",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "Carc. 2, H351",
+              "Repr. 2, H361d"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Chronic 3, H412"
+            ],
+            "index": "608-032-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -744,7 +1241,41 @@
           "status": "Submitted",
           "intention": "",
           "updated": "2026-08-11",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [],
+            "index": "015-004-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -752,7 +1283,40 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2026-06-09",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065",
+          "key": "CLH:#1",
+          "clh": {
+            "process": "CLH 3",
+            "submitter": "Germany",
+            "opinionDate": "2026-03-06",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 1, H310",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 1, H310"
+            ],
+            "dropped": [
+              "Acute Tox. 3, H311"
+            ],
+            "index": "015-004-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -760,7 +1324,38 @@
           "status": "Opinion Adopted",
           "intention": "2008-04-15",
           "updated": "2025-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.040.065",
+          "key": "CLH:2008-04-15",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2011-12-02",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2*, H300",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311"
+            ],
+            "dropped": [
+              "Acute Tox. 2*, H300"
+            ],
+            "index": "015-004-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -841,7 +1436,46 @@
           "status": "Opinion Adopted",
           "intention": "2011-11-24",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.041.091"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.041.091",
+          "key": "CLH:2011-11-24",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2015-03-12",
+            "inForce": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 4*, H312",
+              "Acute Tox. 3*, H331",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 2, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 2, H330",
+              "Acute Tox. 3, H311",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H331",
+              "Acute Tox. 4*, H312"
+            ],
+            "index": "006-046-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -880,7 +1514,7 @@
         }
       ]
     },
-    "1983-PT18": {
+    "1983-PT19": {
       "name": "Chrysanthemum cinerariaefolium, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
       "activities": [
@@ -890,7 +1524,38 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "2023-06-08",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "650-059-00-7 | 650-060-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -898,38 +1563,10 @@
           "status": "Concluded (not ED | inconclusive)",
           "intention": "2019-04-02",
           "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
-    "2003-PT19": {
-      "name": "Chrysanthemum cinerariaefolium, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "",
-          "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
-        },
-        {
-          "area": "ED",
-          "areaLabel": "Endocrine disruptor assessment",
-          "status": "Concluded (not ED | inconclusive)",
-          "intention": "2019-04-02",
-          "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -952,7 +1589,38 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "2023-06-08",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "650-059-00-7 | 650-060-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -960,7 +1628,140 @@
           "status": "Concluded (not ED | inconclusive)",
           "intention": "2019-04-02",
           "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "1983-PT18": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "2023-06-08",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "650-059-00-7 | 650-060-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "2003-PT19": {
+      "name": "Chrysanthemum cinerariaefolium, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "",
+          "updated": "2026-08-14",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "2023-06-08",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "650-059-00-7 | 650-060-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (not ED | inconclusive)",
+          "intention": "2019-04-02",
+          "updated": "2025-01-13",
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -983,7 +1784,38 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "2023-06-08",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "650-059-00-7 | 650-060-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -991,38 +1823,10 @@
           "status": "Concluded (not ED | inconclusive)",
           "intention": "2019-04-02",
           "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
-    "1983-PT19": {
-      "name": "Chrysanthemum cinerariaefolium, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Chrysanthemum cinerariaefolium, Compositae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "",
-          "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.081.514"
-        },
-        {
-          "area": "ED",
-          "areaLabel": "Endocrine disruptor assessment",
-          "status": "Concluded (not ED | inconclusive)",
-          "intention": "2019-04-02",
-          "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.081.514",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1045,7 +1849,35 @@
           "status": "Submitted",
           "intention": "2025-03-12",
           "updated": "2026-01-07",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081",
+          "key": "CLH:2025-03-12",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Skin Sens. 1B, H317"
+            ],
+            "proposed": [
+              "Skin Sens. 1B, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [],
+            "index": "601-089-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1053,7 +1885,26 @@
           "status": "Opinion Adopted",
           "intention": "2010-04-13",
           "updated": "2025-07-04",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.044.081",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2012-11-30",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1B, H317"
+            ],
+            "added": [
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "601-089-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1076,7 +1927,52 @@
           "status": "Opinion Adopted",
           "intention": "2011-06-14",
           "updated": "2025-07-04",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.006.358"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.006.358",
+          "key": "CLH:2011-06-14",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2015-06-05",
+            "inForce": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 4*, H312",
+              "Skin Irrit. 2, H315",
+              "Eye Irrit. 2, H319",
+              "Skin Sens. 1, H317"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H311",
+              "Skin Corr. 1B, H314",
+              "Skin Sens. 1B, H317",
+              "Repr. 2, H361fd",
+              "STOT RE 1, H372",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H311",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1",
+              "Repr. 2, H361fd",
+              "STOT RE 1, H372",
+              "Skin Corr. 1B, H314",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 4*, H312",
+              "Eye Irrit. 2, H319",
+              "Skin Irrit. 2, H315",
+              "Skin Sens. 1, H317"
+            ],
+            "index": "615-013-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -1084,7 +1980,10 @@
           "status": "Concluded (ED ENV | ED HH)",
           "intention": "2019-04-02",
           "updated": "2021-03-08",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.006.358"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.006.358",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1122,45 +2021,6 @@
         }
       ]
     },
-    "1287-PT18": {
-      "name": "Decanoic acid",
-      "description": "",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Intention",
-          "intention": "2026-08-25",
-          "updated": "2026-09-01",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
-        },
-        {
-          "area": "DEv",
-          "areaLabel": "Dossier evaluation",
-          "status": "Under assessment",
-          "intention": "",
-          "updated": "2026-05-25",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2010-04-13",
-          "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
     "1287-PT19": {
       "name": "Decanoic acid",
       "description": "",
@@ -1168,10 +2028,37 @@
         {
           "area": "CLH",
           "areaLabel": "Harmonised classification (CLH)",
-          "status": "Intention",
+          "status": "Submitted",
           "intention": "2026-08-25",
-          "updated": "2026-09-01",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+          "updated": "2026-11-03",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2026-08-25",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Skin Irrit. 2, H315",
+              "Eye Irrit. 2, H319",
+              "Aquatic Chronic 3, H412"
+            ],
+            "proposed": [
+              "Skin Irrit. 2, H315",
+              "Eye Dam. 1, H318",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Eye Dam. 1, H318"
+            ],
+            "dropped": [
+              "Eye Irrit. 2, H319"
+            ],
+            "index": "607-709-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-11-07",
+          "since": "2026-09-20"
         },
         {
           "area": "DEv",
@@ -1179,7 +2066,10 @@
           "status": "Under assessment",
           "intention": "",
           "updated": "2026-05-25",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1187,7 +2077,30 @@
           "status": "Opinion Adopted",
           "intention": "2010-04-13",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2013-06-06",
+            "inForce": [],
+            "proposed": [
+              "Skin Irrit. 2, H315",
+              "Eye Dam. 1, H318",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Aquatic Chronic 3, H412",
+              "Eye Dam. 1, H318",
+              "Skin Irrit. 2, H315"
+            ],
+            "dropped": [],
+            "index": "607-709-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1198,7 +2111,127 @@
         "edEffects": "",
         "edspTag": "",
         "edspConclusion": ""
-      }
+      },
+      "past": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-08-25",
+          "updated": "2026-09-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2026-08-25",
+          "firstSeen": "2026-09-20",
+          "since": "",
+          "until": "2026-11-07"
+        }
+      ]
+    },
+    "1287-PT18": {
+      "name": "Decanoic acid",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Submitted",
+          "intention": "2026-08-25",
+          "updated": "2026-11-03",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2026-08-25",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Skin Irrit. 2, H315",
+              "Eye Irrit. 2, H319",
+              "Aquatic Chronic 3, H412"
+            ],
+            "proposed": [
+              "Skin Irrit. 2, H315",
+              "Eye Dam. 1, H318",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Eye Dam. 1, H318"
+            ],
+            "dropped": [
+              "Eye Irrit. 2, H319"
+            ],
+            "index": "607-709-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-11-07",
+          "since": "2026-09-20"
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Under assessment",
+          "intention": "",
+          "updated": "2026-05-25",
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.798",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2010-04-13",
+          "updated": "2024-09-10",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2013-06-06",
+            "inForce": [],
+            "proposed": [
+              "Skin Irrit. 2, H315",
+              "Eye Dam. 1, H318",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Aquatic Chronic 3, H412",
+              "Eye Dam. 1, H318",
+              "Skin Irrit. 2, H315"
+            ],
+            "dropped": [],
+            "index": "607-709-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      },
+      "past": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-08-25",
+          "updated": "2026-09-01",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.005.798",
+          "key": "CLH:2026-08-25",
+          "firstSeen": "2026-09-20",
+          "since": "",
+          "until": "2026-11-07"
+        }
+      ]
     },
     "24-PT18": {
       "name": "deltamethrin",
@@ -1210,7 +2243,51 @@
           "status": "Submitted",
           "intention": "2026-02-20",
           "updated": "2026-07-07",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.943",
+          "key": "CLH:2026-02-20",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Sweden",
+            "opinionDate": "",
+            "inForce": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H331",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1 000 000",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H331",
+              "Repr. 1B, H360D",
+              "STOT RE 1, H372",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1 000 000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100 000",
+              "PBT, EUH440"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H331",
+              "Aquatic Chronic 1, M-factor=100 000",
+              "PBT, EUH440",
+              "Repr. 1B, H360D",
+              "STOT RE 1, H372"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H331"
+            ],
+            "index": "607-319-00-X",
+            "exclusion": [
+              "PBT, EUH440",
+              "Repr. 1B, H360D"
+            ],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1268,7 +2345,32 @@
           "status": "Opinion Adopted",
           "intention": "2022-05-06",
           "updated": "2026-08-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831",
+          "key": "CLH:2022-05-06",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Belgium",
+            "opinionDate": "2023-09-14",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "dropped": [],
+            "index": "612-301-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1276,7 +2378,28 @@
           "status": "Withdrawn",
           "intention": "2017-10-13",
           "updated": "2025-11-21",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.111.831",
+          "key": "CLH:2017-10-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "dropped": [],
+            "index": "612-301-00-X",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -1284,7 +2407,10 @@
           "status": "Concluded (not ED)",
           "intention": "2022-02-07",
           "updated": "2025-01-13",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.111.831"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.111.831",
+          "key": "ED:2022-02-07",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1323,7 +2449,7 @@
         }
       ]
     },
-    "2463-PT18": {
+    "2463-PT19": {
       "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
       "description": "",
       "activities": [
@@ -1333,7 +2459,38 @@
           "status": "Opinion Adopted",
           "intention": "2011-06-08",
           "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770",
+          "key": "CLH:2011-06-08",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2016-06-03",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [],
+            "index": "607-724-00-1",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1346,7 +2503,7 @@
         "edspConclusion": ""
       }
     },
-    "2463-PT19": {
+    "2463-PT18": {
       "name": "2,3,5,6-tetrafluoro-4-(methoxymethyl)benyzl-(1R,3R)-2,2-dimethyl-3-[(Z)-prop-1-enyl] cyclopropane carboxylate",
       "description": "",
       "activities": [
@@ -1356,7 +2513,38 @@
           "status": "Opinion Adopted",
           "intention": "2011-06-08",
           "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770",
+          "key": "CLH:2011-06-08",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2016-06-03",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [],
+            "index": "607-724-00-1",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1379,7 +2567,36 @@
           "status": "Opinion Adopted",
           "intention": "2014-06-16",
           "updated": "2025-06-19",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.249.276"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.249.276",
+          "key": "CLH:2014-06-16",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2015-09-11",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "STOT SE 2, H371",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "STOT SE 2, H371"
+            ],
+            "dropped": [],
+            "index": "607-722-00-0",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1402,7 +2619,46 @@
           "status": "Opinion Adopted",
           "intention": "2017-11-02",
           "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.118.804"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.118.804",
+          "key": "CLH:2017-11-02",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2019-09-20",
+            "inForce": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H331",
+              "Skin Sens. 1, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 2, H330",
+              "Skin Sens. 1, H317",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10 000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "added": [
+              "Acute Tox. 2, H330",
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, M-factor=10 000",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H331"
+            ],
+            "index": "608-058-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1460,7 +2716,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "2024-09-30",
           "updated": "2024-10-14",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.052.560"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.052.560",
+          "key": "ED:2024-09-30",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1483,7 +2742,10 @@
           "status": "Concluded (inconclusive)",
           "intention": "2025-02-04",
           "updated": "2025-10-23",
-          "url": "https://www.echa.europa.eu/web/guest/pbt/-/dislist/substance/external/100.100.942"
+          "url": "https://echa.europa.eu/web/guest/pbt/-/dislist/substance/external/100.100.942",
+          "key": "PBT:2025-02-04",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ED",
@@ -1491,7 +2753,10 @@
           "status": "Concluded (inconclusive)",
           "intention": "2019-04-02",
           "updated": "2025-10-23",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.100.942"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.100.942",
+          "key": "ED:2019-04-02",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1499,7 +2764,36 @@
           "status": "Opinion Adopted",
           "intention": "2010-04-13",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.942"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.942",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2012-11-28",
+            "inForce": [],
+            "proposed": [
+              "Lact., H362",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000",
+              "Lact., H362",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [],
+            "index": "604-091-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1567,7 +2861,26 @@
           "status": "Submitted",
           "intention": "2015-11-09",
           "updated": "2023-09-04",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.226.893"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.226.893",
+          "key": "CLH:2015-11-09",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Czech Republic",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Eye Irrit. 2, H319"
+            ],
+            "added": [
+              "Eye Irrit. 2, H319"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1590,7 +2903,52 @@
           "status": "Opinion Adopted",
           "intention": "2014-05-09",
           "updated": "2025-06-19",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.312"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.312",
+          "key": "CLH:2014-05-09",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "France",
+            "opinionDate": "2015-06-05",
+            "inForce": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H311",
+              "Acute Tox. 3*, H331",
+              "STOT RE 1, H372**",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 3, H331",
+              "STOT RE 1, H372",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10 000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 3, H331",
+              "Aquatic Acute 1, M-factor=10 000",
+              "Aquatic Chronic 1, M-factor=10 000",
+              "STOT RE 1, H372"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H301",
+              "Acute Tox. 3*, H311",
+              "Acute Tox. 3*, H331",
+              "Aquatic Acute 1, M-factor=10",
+              "STOT RE 1, H372**"
+            ],
+            "index": "608-055-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1639,70 +2997,26 @@
           "status": "Opinion Adopted",
           "intention": "2022-08-30",
           "updated": "2024-12-19",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.426"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
-    "1308-PT19": {
-      "name": "Geraniol",
-      "description": "",
-      "activities": [
-        {
-          "area": "ED",
-          "areaLabel": "Endocrine disruptor assessment",
-          "status": "Concluded (inconclusive)",
-          "intention": "2022-09-13",
-          "updated": "2025-12-18",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Intention",
-          "intention": "2024-09-18",
-          "updated": "2025-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "DEv",
-          "areaLabel": "Dossier evaluation",
-          "status": "Information requested",
-          "intention": "",
-          "updated": "2024-11-05",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "DEv",
-          "areaLabel": "Dossier evaluation",
-          "status": "Concluded",
-          "intention": "",
-          "updated": "2023-01-07",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "DEv",
-          "areaLabel": "Dossier evaluation",
-          "status": "Concluded",
-          "intention": "",
-          "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2016-04-25",
-          "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.426",
+          "key": "CLH:2022-08-30",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2024-09-20",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1B, H317"
+            ],
+            "added": [
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1720,20 +3034,47 @@
       "description": "",
       "activities": [
         {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2024-09-18",
+          "updated": "2026-10-20",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071",
+          "key": "CLH:2024-09-18",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Denmark",
+            "opinionDate": "",
+            "inForce": [
+              "Skin Sens. 1, H317"
+            ],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Reproductive toxicity"
+            ],
+            "added": [
+              "Reproductive toxicity"
+            ],
+            "dropped": [],
+            "index": "603-241-00-5",
+            "exclusion": [],
+            "exclusionPending": [
+              "Reproductive toxicity"
+            ]
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
           "area": "ED",
           "areaLabel": "Endocrine disruptor assessment",
           "status": "Concluded (inconclusive)",
           "intention": "2022-09-13",
           "updated": "2025-12-18",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Intention",
-          "intention": "2024-09-18",
-          "updated": "2025-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071",
+          "key": "ED:2022-09-13",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -1741,7 +3082,10 @@
           "status": "Information requested",
           "intention": "",
           "updated": "2024-11-05",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -1749,7 +3093,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2023-01-07",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#1",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -1757,7 +3104,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#2",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1765,7 +3115,144 @@
           "status": "Opinion Adopted",
           "intention": "2016-04-25",
           "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071",
+          "key": "CLH:2016-04-25",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Denmark",
+            "opinionDate": "2018-09-14",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1A, H317"
+            ],
+            "added": [
+              "Skin Sens. 1A, H317"
+            ],
+            "dropped": [],
+            "index": "603-241-00-5",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
+    "1308-PT19": {
+      "name": "Geraniol",
+      "description": "",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2024-09-18",
+          "updated": "2026-10-20",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071",
+          "key": "CLH:2024-09-18",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Denmark",
+            "opinionDate": "",
+            "inForce": [
+              "Skin Sens. 1, H317"
+            ],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Reproductive toxicity"
+            ],
+            "added": [
+              "Reproductive toxicity"
+            ],
+            "dropped": [],
+            "index": "603-241-00-5",
+            "exclusion": [],
+            "exclusionPending": [
+              "Reproductive toxicity"
+            ]
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "ED",
+          "areaLabel": "Endocrine disruptor assessment",
+          "status": "Concluded (inconclusive)",
+          "intention": "2022-09-13",
+          "updated": "2025-12-18",
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.003.071",
+          "key": "ED:2022-09-13",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Information requested",
+          "intention": "",
+          "updated": "2024-11-05",
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2023-01-07",
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#1",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "DEv",
+          "areaLabel": "Dossier evaluation",
+          "status": "Concluded",
+          "intention": "",
+          "updated": "2022-11-26",
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.003.071",
+          "key": "DEv:#2",
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-04-25",
+          "updated": "2022-07-26",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.071",
+          "key": "CLH:2016-04-25",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Denmark",
+            "opinionDate": "2018-09-14",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1A, H317"
+            ],
+            "added": [
+              "Skin Sens. 1A, H317"
+            ],
+            "dropped": [],
+            "index": "603-241-00-5",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1788,7 +3275,10 @@
           "status": "Concluded (Currently no EU RRM action needed)",
           "intention": "2024-03-25",
           "updated": "2025-04-11",
-          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.000.747"
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.000.747",
+          "key": "ARN:2024-03-25",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1841,10 +3331,45 @@
         {
           "area": "CLH",
           "areaLabel": "Harmonised classification (CLH)",
-          "status": "Intention",
+          "status": "Submitted",
           "intention": "2026-09-10",
-          "updated": "2026-09-14",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643"
+          "updated": "2026-11-03",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643",
+          "key": "CLH:2026-09-10",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000",
+              "ED ENV 1, EUH430"
+            ],
+            "added": [
+              "Aquatic Acute 1, M-factor=1000",
+              "ED ENV 1, EUH430"
+            ],
+            "dropped": [
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "index": "612-252-00-4",
+            "exclusion": [
+              "ED ENV 1, EUH430"
+            ],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-11-07",
+          "since": "2026-09-20"
         },
         {
           "area": "ED",
@@ -1852,7 +3377,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "2025-01-28",
           "updated": "2025-02-25",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.102.643"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.102.643",
+          "key": "ED:2025-01-28",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -1860,7 +3388,38 @@
           "status": "Opinion Adopted",
           "intention": "2015-09-21",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643",
+          "key": "CLH:2015-09-21",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2019-06-13",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302"
+            ],
+            "index": "612-252-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1897,6 +3456,20 @@
           ],
           "note": ""
         }
+      ],
+      "past": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Intention",
+          "intention": "2026-09-10",
+          "updated": "2026-09-14",
+          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.643",
+          "key": "CLH:2026-09-10",
+          "firstSeen": "2026-09-20",
+          "since": "",
+          "until": "2026-11-07"
+        }
       ]
     },
     "64-PT18": {
@@ -1909,7 +3482,38 @@
           "status": "Opinion Adopted",
           "intention": "2008-10-30",
           "updated": "2025-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.108.182"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.108.182",
+          "key": "CLH:2008-10-30",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2011-06-01",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "607-700-00-0",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1958,7 +3562,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.075"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.005.075",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -1981,7 +3588,32 @@
           "status": "Submitted",
           "intention": "2017-02-23",
           "updated": "2023-04-03",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.085.846"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.085.846",
+          "key": "CLH:2017-02-23",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Portugal",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1B, H317",
+              "STOT SE 3, H335",
+              "Asp. Tox. 1, H304",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Aquatic Chronic 3, H412",
+              "Asp. Tox. 1, H304",
+              "STOT SE 3, H335",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2004,7 +3636,44 @@
           "status": "Submitted",
           "intention": "",
           "updated": "2026-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "index": "015-005-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2012,7 +3681,40 @@
           "status": "Opinion Adopted",
           "intention": "",
           "updated": "2026-06-08",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827",
+          "key": "CLH:#1",
+          "clh": {
+            "process": "CLH 3",
+            "submitter": "Germany",
+            "opinionDate": "2026-03-06",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 1, H310",
+              "Acute Tox. 1, H330",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 1, H310"
+            ],
+            "dropped": [
+              "Acute Tox. 3, H311"
+            ],
+            "index": "015-005-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2020,7 +3722,38 @@
           "status": "Opinion Adopted",
           "intention": "2010-02-23",
           "updated": "2025-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.031.827",
+          "key": "CLH:2010-02-23",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2011-12-02",
+            "inForce": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2*, H300",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "proposed": [
+              "Water-react. 1, H260",
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 3, H311"
+            ],
+            "dropped": [
+              "Acute Tox. 2*, H300"
+            ],
+            "index": "015-005-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2081,6 +3814,112 @@
         }
       ]
     },
+    "1469-PT18": {
+      "name": "Margosa, ext.",
+      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
+      "activities": [
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Withdrawn",
+          "intention": "",
+          "updated": "2025-10-13",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:#2",
+          "clh": {
+            "process": "CLH 3",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2015-10-30",
+          "updated": "2025-09-05",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2015-10-30",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2018-03-09",
+            "inForce": [],
+            "proposed": [
+              "No classification"
+            ],
+            "added": [],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        },
+        {
+          "area": "CLH",
+          "areaLabel": "Harmonised classification (CLH)",
+          "status": "Opinion Adopted",
+          "intention": "2016-12-14",
+          "updated": "2022-11-29",
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2016-12-14",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Germany",
+            "opinionDate": "2020-12-10",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
+        }
+      ],
+      "flags": {
+        "carcinogen": "",
+        "carcinogenYear": "",
+        "edList": "",
+        "edStatus": "",
+        "edEffects": "",
+        "edspTag": "",
+        "edspConclusion": ""
+      }
+    },
     "1469-PT19": {
       "name": "Margosa, ext.",
       "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
@@ -2091,7 +3930,32 @@
           "status": "Withdrawn",
           "intention": "",
           "updated": "2025-10-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:#2",
+          "clh": {
+            "process": "CLH 3",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2099,7 +3963,24 @@
           "status": "Opinion Adopted",
           "intention": "2015-10-30",
           "updated": "2025-09-05",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2015-10-30",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2018-03-09",
+            "inForce": [],
+            "proposed": [
+              "No classification"
+            ],
+            "added": [],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2107,7 +3988,32 @@
           "status": "Opinion Adopted",
           "intention": "2016-12-14",
           "updated": "2022-11-29",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2016-12-14",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Germany",
+            "opinionDate": "2020-12-10",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2130,7 +4036,32 @@
           "status": "Withdrawn",
           "intention": "",
           "updated": "2025-10-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:#2",
+          "clh": {
+            "process": "CLH 3",
+            "submitter": "Germany",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2138,7 +4069,24 @@
           "status": "Opinion Adopted",
           "intention": "2015-10-30",
           "updated": "2025-09-05",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2015-10-30",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2018-03-09",
+            "inForce": [],
+            "proposed": [
+              "No classification"
+            ],
+            "added": [],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2146,46 +4094,32 @@
           "status": "Opinion Adopted",
           "intention": "2016-12-14",
           "updated": "2022-11-29",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        }
-      ],
-      "flags": {
-        "carcinogen": "",
-        "carcinogenYear": "",
-        "edList": "",
-        "edStatus": "",
-        "edEffects": "",
-        "edspTag": "",
-        "edspConclusion": ""
-      }
-    },
-    "1469-PT18": {
-      "name": "Margosa, ext.",
-      "description": "Extractives and their physically modified derivatives such as tinctures, concretes, absolutes, essential oils, oleoresins, terpenes, terpene-free fractions, distillates, residues, etc., obtained from Azadirachta indica, Meliaceae.",
-      "activities": [
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Withdrawn",
-          "intention": "",
-          "updated": "2025-10-13",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2015-10-30",
-          "updated": "2025-09-05",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
-        },
-        {
-          "area": "CLH",
-          "areaLabel": "Harmonised classification (CLH)",
-          "status": "Opinion Adopted",
-          "intention": "2016-12-14",
-          "updated": "2022-11-29",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.076.012",
+          "key": "CLH:2016-12-14",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Germany",
+            "opinionDate": "2020-12-10",
+            "inForce": [],
+            "proposed": [
+              "Skin Sens. 1, H317",
+              "Repr. 2, H361d",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10",
+              "Repr. 2, H361d",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "650-057-00-6",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2208,15 +4142,43 @@
           "status": "Withdrawn",
           "intention": "2018-07-24",
           "updated": "2023-01-24",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.579",
+          "key": "CLH:2018-07-24",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Spain",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ARN",
           "areaLabel": "Assessment of regulatory needs",
-          "status": "Under development",
+          "status": "Under development (Currently no EU RRM action needed)",
           "intention": "2020-08-31",
           "updated": "2021-12-08",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.003.579",
+          "key": "ARN:2020-08-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2239,7 +4201,38 @@
           "status": "Opinion Adopted",
           "intention": "2011-06-08",
           "updated": "2022-07-26",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.278.770",
+          "key": "CLH:2011-06-08",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2016-06-03",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100"
+            ],
+            "added": [
+              "Acute Tox. 3, H301",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [],
+            "index": "607-724-00-1",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2262,7 +4255,36 @@
           "status": "Opinion Adopted",
           "intention": "2013-01-14",
           "updated": "2022-07-26",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.682"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.682",
+          "key": "CLH:2013-01-14",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Sweden",
+            "opinionDate": "2017-06-09",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Skin Irrit. 2, H315",
+              "Eye Irrit. 2, H319",
+              "Aquatic Chronic 3, H412"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Skin Irrit. 2, H315",
+              "Eye Irrit. 2, H319"
+            ],
+            "added": [
+              "Acute Tox. 4, H302"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Chronic 3, H412"
+            ],
+            "index": "616-018-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2285,7 +4307,26 @@
           "status": "Intention",
           "intention": "2018-06-26",
           "updated": "2023-08-01",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.060.215"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.060.215",
+          "key": "CLH:2018-06-26",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Greece",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2308,7 +4349,10 @@
           "status": "Concluded (Currently no EU RRM action needed)",
           "intention": "2024-06-03",
           "updated": "2025-06-24",
-          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.895"
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.895",
+          "key": "ARN:2024-06-03",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2331,7 +4375,34 @@
           "status": "Opinion Adopted",
           "intention": "2010-04-13",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.574"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.003.574",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2013-06-06",
+            "inForce": [
+              "Skin Corr. 1B, H314"
+            ],
+            "proposed": [
+              "Skin Irrit. 2, H315",
+              "Eye Dam. 1, H318",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Aquatic Chronic 3, H412",
+              "Eye Dam. 1, H318",
+              "Skin Irrit. 2, H315"
+            ],
+            "dropped": [
+              "Skin Corr. 1B, H314"
+            ],
+            "index": "607-197-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2354,7 +4425,28 @@
           "status": "Opinion Adopted",
           "intention": "2010-04-13",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.253"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.004.253",
+          "key": "CLH:2010-04-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "2013-06-06",
+            "inForce": [],
+            "proposed": [
+              "Skin Corr. 1C, H314",
+              "Aquatic Chronic 3, H412"
+            ],
+            "added": [
+              "Aquatic Chronic 3, H412",
+              "Skin Corr. 1C, H314"
+            ],
+            "dropped": [],
+            "index": "607-708-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -2362,7 +4454,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.004.253"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.004.253",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2385,7 +4480,10 @@
           "status": "Under assessment",
           "intention": "",
           "updated": "2026-02-16",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2393,7 +4491,34 @@
           "status": "Intention",
           "intention": "2021-06-10",
           "updated": "2024-07-01",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.480"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.029.480",
+          "key": "CLH:2021-06-10",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [],
+            "proposed": [
+              "Flam. Liq. 3, H226",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1B, H317",
+              "Asp. Tox. 1, H304",
+              "Aquatic Chronic 2, H411"
+            ],
+            "added": [
+              "Acute Tox. 4, H332",
+              "Aquatic Chronic 2, H411",
+              "Asp. Tox. 1, H304",
+              "Flam. Liq. 3, H226",
+              "Skin Sens. 1B, H317"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -2401,7 +4526,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2022-11-26",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.029.480",
+          "key": "DEv:#1",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2424,7 +4552,10 @@
           "status": "Withdrawn",
           "intention": "2025-02-27",
           "updated": "2026-05-05",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.371.393"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.371.393",
+          "key": "CLH:2025-02-27",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2447,7 +4578,50 @@
           "status": "Submitted",
           "intention": "2014-08-14",
           "updated": "2025-05-27",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.771"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.052.771",
+          "key": "CLH:2014-08-14",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Ireland",
+            "opinionDate": "",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Acute Tox. 4*, H332",
+              "Skin Sens. 1, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Skin Sens. 1, H317",
+              "STOT SE 1, H370",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, M-factor=100",
+              "Aquatic Chronic 1, M-factor=10 000",
+              "STOT RE 2, H373",
+              "STOT SE 1, H370"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302",
+              "Acute Tox. 4*, H332",
+              "Aquatic Acute 1, M-factor=1000"
+            ],
+            "index": "613-058-00-2",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2470,7 +4644,34 @@
           "status": "Opinion Adopted",
           "intention": "2019-07-29",
           "updated": "2024-08-19",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.814"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.814",
+          "key": "CLH:2019-07-29",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "2024-03-14",
+            "inForce": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "added": [
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=10 000"
+            ],
+            "dropped": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "index": "613-303-00-3",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2493,7 +4694,10 @@
           "status": "Under development (Currently no EU RRM action needed)",
           "intention": "2022-01-31",
           "updated": "2024-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.066.069"
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.066.069",
+          "key": "ARN:2022-01-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2501,7 +4705,26 @@
           "status": "Opinion Adopted",
           "intention": "2017-03-03",
           "updated": "2023-05-02",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.066.069"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.066.069",
+          "key": "CLH:2017-03-03",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "France",
+            "opinionDate": "2019-12-05",
+            "inForce": [],
+            "proposed": [
+              "STOT RE 2, H373"
+            ],
+            "added": [
+              "STOT RE 2, H373"
+            ],
+            "dropped": [],
+            "index": "014-052-00-7",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2524,7 +4747,38 @@
           "status": "Opinion Adopted",
           "intention": "2015-07-13",
           "updated": "2023-04-28",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.047.827"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.047.827",
+          "key": "CLH:2015-07-13",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "United Kingdom",
+            "opinionDate": "2019-06-13",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Acute Tox. 3, H331",
+              "Skin Sens. 1, H317",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, M-factor=1",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "added": [
+              "Acute Tox. 3, H331",
+              "Acute Tox. 4, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, M-factor=1",
+              "Aquatic Chronic 1, M-factor=1000",
+              "Skin Sens. 1, H317"
+            ],
+            "dropped": [],
+            "index": "613-338-00-4",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2573,7 +4827,32 @@
           "status": "Opinion Adopted",
           "intention": "2013-12-04",
           "updated": "2022-07-25",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.133.782"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.133.782",
+          "key": "CLH:2013-12-04",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Ireland",
+            "opinionDate": "2016-06-03",
+            "inForce": [],
+            "proposed": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "dropped": [],
+            "index": "607-725-00-7",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2596,7 +4875,10 @@
           "status": "Under development (Currently no EU RRM action needed)",
           "intention": "2022-01-31",
           "updated": "2024-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.122.196"
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.122.196",
+          "key": "ARN:2022-01-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2619,7 +4901,38 @@
           "status": "Intention",
           "intention": "2018-02-20",
           "updated": "2025-05-12",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.254"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.103.254",
+          "key": "CLH:2018-02-20",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "",
+            "inForce": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Repr. 2, H361f",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, M-factor=1",
+              "Repr. 2, H361f",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2668,7 +4981,44 @@
           "status": "Opinion Development",
           "intention": "",
           "updated": "2026-06-15",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437",
+          "key": "CLH:#0",
+          "clh": {
+            "process": "CLH 2",
+            "submitter": "Austria",
+            "opinionDate": "",
+            "inForce": [
+              "Press. Gas, H280",
+              "Acute Tox. 3*, H331",
+              "STOT RE 2, H373**",
+              "Aquatic Acute 1, H400"
+            ],
+            "proposed": [
+              "Press. Gas, H280",
+              "Acute Tox. 2, H330",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Acute Tox. 2, H330",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H331",
+              "STOT RE 2, H373**"
+            ],
+            "index": "009-015-00-7",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2676,7 +5026,44 @@
           "status": "Withdrawn",
           "intention": "2020-10-05",
           "updated": "2023-10-03",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.018.437",
+          "key": "CLH:2020-10-05",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Sweden",
+            "opinionDate": "",
+            "inForce": [
+              "Press. Gas, H280",
+              "Acute Tox. 3*, H331",
+              "STOT RE 2*, H373**",
+              "Aquatic Acute 1, H400"
+            ],
+            "proposed": [
+              "Press. Gas, H280",
+              "Acute Tox. 2, H330",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1"
+            ],
+            "added": [
+              "Acute Tox. 2, H330",
+              "Aquatic Acute 1, M-factor=1",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1",
+              "STOT RE 2, H373"
+            ],
+            "dropped": [
+              "Acute Tox. 3*, H331",
+              "STOT RE 2*, H373**"
+            ],
+            "index": "009-015-00-7",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2699,7 +5086,26 @@
           "status": "Opinion Adopted",
           "intention": "2013-03-01",
           "updated": "2025-12-17",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.678",
+          "key": "CLH:2013-03-01",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "2025-03-07",
+            "inForce": [],
+            "proposed": [
+              "STOT RE 1, H372"
+            ],
+            "added": [
+              "STOT RE 1, H372"
+            ],
+            "dropped": [],
+            "index": "",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -2707,7 +5113,10 @@
           "status": "Under assessment",
           "intention": "",
           "updated": "2025-11-21",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678",
+          "key": "DEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -2715,7 +5124,10 @@
           "status": "Under assessment",
           "intention": "",
           "updated": "2024-10-25",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678",
+          "key": "DEv:#2",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "ARN",
@@ -2723,7 +5135,10 @@
           "status": "Under development (Currently no EU RRM action needed | No hypothesis yet)",
           "intention": "2022-01-31",
           "updated": "2024-09-09",
-          "url": "https://www.echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/assessment-regulatory-needs/-/dislist/substance/external/100.028.678",
+          "key": "ARN:2022-01-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "DEv",
@@ -2731,7 +5146,10 @@
           "status": "Follow-up",
           "intention": "",
           "updated": "2024-04-05",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/dossier-evaluation-status/-/dislist/substance/external/100.028.678",
+          "key": "DEv:#3",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "SEv",
@@ -2739,7 +5157,10 @@
           "status": "Concluded",
           "intention": "",
           "updated": "2021-08-25",
-          "url": "https://www.echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.028.678"
+          "url": "https://echa.europa.eu/web/guest/information-on-chemicals/evaluation/community-rolling-action-plan/corap-table/-/dislist/substance/external/100.028.678",
+          "key": "SEv:#0",
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2762,7 +5183,10 @@
           "status": "Under development (Under development (BPR))",
           "intention": "2020-01-31",
           "updated": "2026-04-27",
-          "url": "https://www.echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.028.829"
+          "url": "https://echa.europa.eu/web/guest/ed-assessment/-/dislist/substance/external/100.028.829",
+          "key": "ED:2020-01-31",
+          "firstSeen": "2026-09-20",
+          "since": ""
         },
         {
           "area": "CLH",
@@ -2770,7 +5194,34 @@
           "status": "Opinion Adopted",
           "intention": "2013-12-17",
           "updated": "2022-07-25",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.829"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.028.829",
+          "key": "CLH:2013-12-17",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2016-09-16",
+            "inForce": [],
+            "proposed": [
+              "Acute Tox. 4, H332",
+              "Carc. 2, H351",
+              "STOT SE 2, H371",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "added": [
+              "Acute Tox. 4, H332",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410",
+              "Carc. 2, H351",
+              "STOT SE 2, H371"
+            ],
+            "dropped": [],
+            "index": "607-727-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2819,7 +5270,42 @@
           "status": "Opinion Adopted",
           "intention": "2017-11-08",
           "updated": "2024-09-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.703"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.102.703",
+          "key": "CLH:2017-11-08",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "France",
+            "opinionDate": "2019-12-05",
+            "inForce": [
+              "Acute Tox. 4*, H302",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Flam. Sol. 1, H228",
+              "Acute Tox. 4, H302",
+              "Repr. 2, H361",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=10",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=10"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Aquatic Chronic 1, M-factor=10",
+              "Flam. Sol. 1, H228",
+              "Repr. 2, H361"
+            ],
+            "dropped": [
+              "Acute Tox. 4*, H302"
+            ],
+            "index": "613-267-00-9",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2868,7 +5354,44 @@
           "status": "Opinion Adopted",
           "intention": "2014-04-09",
           "updated": "2025-03-10",
-          "url": "https://www.echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.666"
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.100.666",
+          "key": "CLH:2014-04-09",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Netherlands",
+            "opinionDate": "2021-03-18",
+            "inForce": [
+              "Skin Irrit. 2, H315",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410"
+            ],
+            "proposed": [
+              "Acute Tox. 4, H302",
+              "Carc. 2, H351",
+              "STOT SE 1, H370",
+              "STOT RE 2, H373",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "added": [
+              "Acute Tox. 4, H302",
+              "Aquatic Acute 1, M-factor=1000",
+              "Aquatic Chronic 1, M-factor=1000",
+              "Carc. 2, H351",
+              "STOT RE 2, H373",
+              "STOT SE 1, H370"
+            ],
+            "dropped": [
+              "Skin Irrit. 2, H315"
+            ],
+            "index": "607-223-00-8",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {
@@ -2891,7 +5414,48 @@
           "status": "Opinion Adopted",
           "intention": "2016-03-22",
           "updated": "2025-07-04",
-          "url": ""
+          "url": "https://echa.europa.eu/web/guest/registry-of-clh-intentions-until-outcome/-/dislist/substance/external/100.063.485",
+          "key": "CLH:2016-03-22",
+          "clh": {
+            "process": "CLH 1",
+            "submitter": "Germany",
+            "opinionDate": "2020-05-04",
+            "inForce": [
+              "Acute Tox. 2*, H300",
+              "Acute Tox. 3*, H331",
+              "Aquatic Acute 1, H400",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "proposed": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 2, H330",
+              "Lact., H362",
+              "STOT SE 3, H335",
+              "Aquatic Acute 1, H400",
+              "Aquatic Acute 1, M-factor=1 000 000",
+              "Aquatic Chronic 1, H410",
+              "Aquatic Chronic 1, M-factor=100 000"
+            ],
+            "added": [
+              "Acute Tox. 2, H300",
+              "Acute Tox. 2, H330",
+              "Aquatic Acute 1, M-factor=1 000 000",
+              "Aquatic Chronic 1, M-factor=100 000",
+              "Lact., H362",
+              "STOT SE 3, H335"
+            ],
+            "dropped": [
+              "Acute Tox. 2*, H300",
+              "Acute Tox. 3*, H331",
+              "Aquatic Chronic 1, M-factor=1000"
+            ],
+            "index": "607-253-00-1",
+            "exclusion": [],
+            "exclusionPending": []
+          },
+          "firstSeen": "2026-09-20",
+          "since": ""
         }
       ],
       "flags": {

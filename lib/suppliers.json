@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "ECHA — Article 95 list of approved active substance suppliers",
-    "sourceFile": "article_95_list_pt18_19_simplified_25_09_26.xlsx",
-    "listDate": "2026-09-25",
-    "count": 59,
-    "supplierCount": 118,
+    "sourceFile": "article_95_list_pt18_19_simplified_07_11_26.xlsx",
+    "listDate": "2026-11-07",
+    "count": 58,
+    "supplierCount": 116,
     "unmatchedGroups": 0
   },
   "bySubstance": {
@@ -58,24 +58,6 @@
         "reason": "Art. 95 submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2015-07-16"
-      }
-    ],
-    "15-PT18": [
-      {
-        "entity": "Bayer S.A.S",
-        "country": "France",
-        "type": "Substance Supplier",
-        "reason": "Art. 95 submission",
-        "listedAsPt": "2014-09-24",
-        "listedSupplier": "2015-07-24"
-      },
-      {
-        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
-        "country": "Spain",
-        "type": "Substance Supplier",
-        "reason": "RP Participant",
-        "listedAsPt": "2014-09-24",
-        "listedSupplier": "2014-09-24"
       }
     ],
     "1283-PT18": [
@@ -201,7 +183,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-02-19"
       }
@@ -519,7 +501,7 @@
         "entity": "ARMOSA TECH SA",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-05-28"
       },
@@ -527,7 +509,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-06-12"
       },
@@ -545,7 +527,7 @@
         "entity": "ARMOSA TECH SA",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-05-28"
       },
@@ -553,7 +535,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-06-12"
       },
@@ -899,7 +881,7 @@
         "entity": "Citrefine EU Ltd [Acting for Citrefine International Limited (United Kingdom)]",
         "country": "Ireland",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2023-12-11",
         "listedSupplier": "2026-04-22"
       },
@@ -907,7 +889,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2023-12-11",
         "listedSupplier": "2026-06-02"
       }
@@ -917,7 +899,7 @@
         "entity": "Arthur Schopf Hygiene GmbH & Co. KG",
         "country": "Germany",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-02-19"
       },
@@ -957,7 +939,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-03-20"
       },
@@ -965,7 +947,7 @@
         "entity": "Simdeo GmbH",
         "country": "Austria",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-02-19"
       }
@@ -1001,7 +983,7 @@
         "entity": "ARMOSA TECH SA",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-05-28"
       },
@@ -1009,7 +991,7 @@
         "entity": "LIMARU NV",
         "country": "Belgium",
         "type": "Substance & Product Supplier",
-        "reason": "Art. 95(5) submission",
+        "reason": "Art.95(5) submission",
         "listedAsPt": "2014-09-24",
         "listedSupplier": "2026-06-12"
       },
@@ -1068,6 +1050,30 @@
         "reason": "RP Participant",
         "listedAsPt": "2020-04-29",
         "listedSupplier": "2020-04-29"
+      }
+    ]
+  },
+  "formerBySubstance": {
+    "15-PT18": [
+      {
+        "entity": "Bayer S.A.S",
+        "country": "France",
+        "type": "Substance Supplier",
+        "reason": "Art. 95 submission",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2015-07-24",
+        "lastListed": "2026-09-25",
+        "leftBy": "2026-11-07"
+      },
+      {
+        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
+        "country": "Spain",
+        "type": "Substance Supplier",
+        "reason": "RP Participant",
+        "listedAsPt": "2014-09-24",
+        "listedSupplier": "2014-09-24",
+        "lastListed": "2026-09-25",
+        "leftBy": "2026-11-07"
       }
     ]
   }

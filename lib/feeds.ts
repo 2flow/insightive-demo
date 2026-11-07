@@ -212,6 +212,7 @@ export const RECORD_KINDS: { kind: string; label: string }[] = [
   { kind: 'supplier', label: 'Article 95 supplier' },
   { kind: 'cancellation', label: 'Products cancelled' },
   { kind: 'hazard', label: 'Hazard list or assessment' },
+  { kind: 'reach', label: 'REACH procedure' },
   { kind: 'ppp', label: 'Plant-protection approval ended' },
   { kind: 'research', label: 'Researched record' },
   { kind: 'ngo', label: 'NGO report' },

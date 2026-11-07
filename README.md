@@ -653,6 +653,52 @@ data/
 2. `npm run data` — or `python3 tools/convert_export.py path/to/export.xlsx` to
    force a specific ECHA export (needs `openpyxl`: `pip install openpyxl`). It
    prints which ECHA file it used, rewrites `lib/*.json` and prints the counts.
+   It then runs the **signal-history check** (next section). If the check fails,
+   the update has removed records from the timeline. Fix that before going
+   further.
+
+### Keeping signal history
+
+A signal is a record of something that happened. It stays on the timeline when
+a status later changes, and when a newer source file no longer carries the row
+it was built from. Two mechanisms make sure of it.
+
+**1. The converter keeps earlier versions.** Wherever a source has more than
+one dated file, it compares them and carries forward what the latest dropped:
+
+| Source | What is kept | Where |
+| --- | --- | --- |
+| ECHA substance export | every change between exports | `lib/changes.json` |
+| Product export | cancellations and status changes | `lib/productChanges.json`, `public/products/` |
+| Article 95 list | suppliers no longer listed; their "entered the list" record stays, noting the edition that dropped them | `formerBySubstance` in `lib/suppliers.json` |
+| Renewal interest list | each entry dated by the **first** edition showing it (not the latest); earlier states and entries that left | `firstRecorded`, `pastBySubstance` in `lib/interest.json` |
+| PACT | earlier statuses, dropped activities, moved list flags | `past`, `flagChanges` in `lib/pact.json` |
+
+The other sources have one file each for now: postponements, BPC opinions,
+plant-protection, approval acts, PAN and EDSP. When a second version arrives,
+check what it drops.
+
+**2. A ledger catches anything else.** `tools/check_history.mjs` runs after the
+converter as part of `npm run data`.
+- It compiles `lib/`, lists every record the app shows (`recordsFor()` for every
+  substance, plus the class and horizontal NGO items) and compares the list with
+  `data/record-ledger.json`.
+- A record in the ledger that is no longer produced **fails the check** and is
+  named, so the cause can be fixed in the converter before the update goes out.
+- A record that was only reworded (same substance, kind and date) counts as the
+  same one.
+- New records are added to the ledger automatically.
+
+Removing records on purpose, as a rule change agreed with Pelsis, is
+`npm run history:accept`. It prints what it drops. Commit
+`data/record-ledger.json` with each update. Running
+`node tools/check_history.mjs --root <dir>` compares another checkout against
+the ledger without changing it.
+
+On 07.11.26 the check found the renewal-interest and "application submitted"
+records for 11 substances re-dated from 30 Jun to 30 Sep 2026 (the newest list).
+They are now dated by the first edition. The only records removed on purpose
+are the two "no EU RRM action needed" ARN conclusions (PACT rule B).
 
 A fresh ECHA download arrives **without the columns Pelsis adds by hand**. The
 converter fills them in on its own and says so: the `Recent BPC Opinion` /
@@ -766,7 +812,8 @@ A harmonised classification proposal or a dossier compliance check is procedure.
 It may end in a hazard class, but the activity is a step, not a finding, and
 colouring it amber would say more than it does — hence the separate container
 below, in blue. `HAZARD_AREAS` in [`lib/pact.ts`](lib/pact.ts) is the whole of the
-rule.
+rule for the panels. Which activities become **signals** is a separate rule; see
+"PACT signals" below.
 
 None of it decides a renewal. An assessment still running is the kind of thing
 that can land on one while it is being evaluated; a concluded one names what was
@@ -802,6 +849,53 @@ adopted belongs with the finished ones — the committee has reported and ECHA's
 is over, even though a Commission decision may follow. Counting it as running put
 55 of 116 activities in the wrong bucket and made almost every substance look
 active; the true figure is **34 open across 24 substances**.
+
+### PACT signals: which activities become timeline records
+
+Decided 07.11.26. The rules live in [`lib/pactSignals.ts`](lib/pactSignals.ts):
+the panels above show every activity, but only these become signals.
+
+| | Area | What becomes a signal | Strength |
+|---|---|---|---|
+| A | `SEv`, `PBT`, `ED` | every status | **strong** (against) where something was identified; otherwise weak: against while open, for where it concluded "not ED / not PBT", neutral where inconclusive, bare "Concluded" or withdrawn |
+| B | `ARN` | opened (still running), or concluded proposing action | weak, against. "No EU RRM action needed" is not a signal |
+| C | `SVHC`, `Recom`, `Restriction` | every status | **strong** (against) for intention, submission, Candidate List, recommendation, opinion or adoption; weak for the steps between; withdrawal weak, for |
+| D | `CLH` | only a proposal that **adds a class able to trigger a BPR exclusion criterion**: when it was filed, and when RAC adopted its opinion | weak, against |
+| E | `DEv` | every status | weak, neutral |
+| F | EPA carcinogen and ED-list columns | a value that moved between exports: newly listed, or moved into List I | **strong**, against; removed: weak, for |
+
+**D: the exclusion test.** The classes that count are Carc., Muta. or Repr. in
+category 1A/1B, ED HH / ED ENV category 1, and PBT / vPvB, all BPR Article 5(1)
+exclusion criteria. Category 2 classes and Lact. don't count. A proposal still
+at intention that names the hazard without a category (geraniol's
+"Reproductive toxicity") counts until the category is published. The test reads
+**"Classes added by the proposal"** from `pact-clh-proposals_DD_MM_YY.csv`, which
+is compiled from ECHA's registry of CLH intentions. PACT itself carries only the
+status. It runs in the converter (`exclusion_classes()`) and arrives as
+`clh.exclusion` / `clh.exclusionPending` on each CLH activity. Each proposal is
+matched to its PACT activity by substance, status and date of intention. The
+panel lists the classes each proposal adds, with the exclusion-relevant ones in
+red. On 07.11.26 this rule picks out deltamethrin (Repr. 1B, PBT), cypermethrin and
+imidacloprid (ED ENV 1), and geraniol (reproductive toxicity, category not given).
+
+**History.** Every PACT export under `data/` is compared with the one before
+(`pact_history()`):
+- An activity is identified across exports by its area and date of intention,
+  or by its slot in the cell where there is no date.
+- A status that moves leaves its earlier value in `past`, so the timeline keeps
+  it. An activity the export stops carrying is kept in `past` too, marked
+  `dropped`.
+- A rewording that doesn't change the status is ignored: both still open, same
+  opening word.
+- Moved list values go to `flagChanges`.
+
+**Dates.** A record takes ECHA's own date: the latest update for a status, the
+date of intention for a CLH filing, the opinion date for a RAC opinion. Where
+ECHA gives none, the record is dated to the **first PACT export that shows it**
+and says so ("First recorded date"), like the ECHA export changes.
+
+**Kinds.** `DEv`, `Recom` and `Restriction` records are of kind `reach`
+("REACH procedure", category Other EU laws). The rest stay `hazard`.
 
 ## Substitution consultations
 

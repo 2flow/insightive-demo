@@ -1,0 +1,3402 @@
+{
+ "note": "Every signal record the app has shown. Written by tools/check_history.mjs — see README \"Keeping signal history\".",
+ "updated": "2026-11-07",
+ "records": [
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-02-27",
+   "title": "Inf'OGM and AVICENN call for mandatory nano risk assessment and checks of pesticides, citing nanoparticles found in nearly all products tested"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-03-05",
+   "title": "PAN Europe asks the Commission's BPR evaluation to fix the incomplete review programme and rejects unlimited biocide approvals, citing products never assessed under BPR criteria"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-03-06",
+   "title": "Générations Futures lists 34 biocidal active substances that would get unlimited approval under the Omnibus and demands periodic BPR renewal be kept, citing the review backlog and a vague Article 12"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-05-18",
+   "title": "Beyond Pesticides urges a halt to the manufacture and use of all organophosphate pesticides, citing nervous-system and brain damage at low exposure"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "foodwatch files a complaint with the EU Ombudsman over the Commission's handling of the Omnibus, which includes biocide assessments, citing no impact assessment and minimal consultation"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-07",
+   "title": "PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-09-30",
+   "title": "Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-10-13",
+   "title": "PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "1-PT18",
+   "kind": "approval",
+   "date": "2013-07-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "1-PT18",
+   "kind": "expiry",
+   "date": "2023-06-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "approval",
+   "date": "2020-02-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "deadline",
+   "date": "2025-07-30",
+   "title": "Filing deadline for renewal passed with nothing on record"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2025-05-20",
+   "title": "Générations Futures publishes a science dossier arguing acetamiprid should be banned in France and the EU, citing developmental neurotoxicity, endocrine disruption, persistence in water and unacceptable risks from biocide uses"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2025-05-21",
+   "title": "PAN Europe and Générations Futures ask the Commission to suspend acetamiprid at once and classify it as toxic to reproduction (Cat. 1B) and a candidate for substitution, citing 16 new studies on harm to the developing brain"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2025-05-22",
+   "title": "Générations Futures fact-checks the French agriculture minister and stresses that the 213 acetamiprid household biocides in France have never been assessed and are unlikely to be approved under the stricter toxicity values"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2025-09-30",
+   "title": "Générations Futures says acetamiprid will not be re-approved as a biocide because no renewal was requested, and demands an EU-wide ban on all agricultural and biocide uses, citing neurotoxicity and endocrine-disruption concerns"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-02-05",
+   "title": "PAN and Générations Futures warn that the EU \"Omnibus\" would give acetamiprid and 48 other pesticides unlimited approval, citing its toxicity to the foetal brain"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-05-20",
+   "title": "Bee NGOs ask the EU for a new safety check on acetamiprid's risk to bees, including wild bees, and point out that the EU's own biocide assessment calls it very persistent"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "1235-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "NISSO CHEMICAL EUROPE GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1237-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1237-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "approval",
+   "date": "2016-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "filing",
+   "date": "2024-12-12",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "hazard",
+   "date": "1988-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ngo",
+   "date": "2025-06-27",
+   "title": "Générations Futures demands enforcement after banned alpha-cypermethrin insecticide is found at a BASF plant, citing neurotoxicity and harm to aquatic life and pollinators"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ngo",
+   "date": "2026-02-09",
+   "title": "French NGOs take BASF to court over banned alpha-cypermethrin stocks made for export, and ask for the export ban to cover biocides with the same active substance, citing its neurotoxicity and harm to aquatic life and pollinators"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "postponement",
+   "date": "2026-02-13",
+   "title": "Approval expiry postponed to 31 Dec 2028"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ppp",
+   "date": "2021-06-07",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "BASF Agro B.V. Arnhem (NL) Freienbach Branch entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "supplier",
+   "date": "2021-08-18",
+   "title": "Sharda Cropchem España S.L. (Acting for Sharda Cropchem Limited (India)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1243-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1243-PT18",
+   "kind": "ngo",
+   "date": "2026-05-18",
+   "title": "Beyond Pesticides urges a halt to the manufacture and use of all organophosphate pesticides, citing nervous-system and brain damage at low exposure"
+  },
+  {
+   "substance": "1243-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1244-PT18",
+   "kind": "approval",
+   "date": "2016-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1244-PT18",
+   "kind": "filing",
+   "date": "2024-12-20",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1244-PT18",
+   "kind": "postponement",
+   "date": "2026-02-20",
+   "title": "Approval expiry postponed to 31 Dec 2028"
+  },
+  {
+   "substance": "1244-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical Agro Europe SAS entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1246-PT18",
+   "kind": "approval",
+   "date": "2016-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1246-PT18",
+   "kind": "expiry",
+   "date": "2026-06-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1247-PT18",
+   "kind": "approval",
+   "date": "2017-03-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1247-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1247-PT18",
+   "kind": "ngo",
+   "date": "2026-06-13",
+   "title": "German nature NGO asks its district to spray Bacillus thuringiensis against oak processionary moth only where people are proven to be at risk, citing the killing of other butterfly and moth caterpillars and fly species"
+  },
+  {
+   "substance": "1247-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical Agro Europe SAS entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1268-PT18",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED | inconclusive)"
+  },
+  {
+   "substance": "1272-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1272-PT19",
+   "kind": "supplier",
+   "date": "2016-03-29",
+   "title": "Chemian Technology SARL (Acting for Chemian Technology Limited (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1272-PT19",
+   "kind": "supplier",
+   "date": "2023-11-14",
+   "title": "Citrefine EU Ltd (Acting for Citrefine International Limited (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1272-PT19",
+   "kind": "supplier",
+   "date": "2026-02-19",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1272-PT19",
+   "kind": "supplier",
+   "date": "2026-03-20",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1280-PT18",
+   "kind": "hazard",
+   "date": "1993-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1280-PT18",
+   "kind": "hazard",
+   "date": "2016-12-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1280-PT18",
+   "kind": "hazard",
+   "date": "2021-03-08",
+   "title": "Endocrine disruptor assessment: Concluded (ED ENV | ED HH)"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "approval",
+   "date": "2018-03-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "deadline",
+   "date": "2026-08-27",
+   "title": "Filing deadline for renewal passed with nothing on record"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "ngo",
+   "date": "2026-01-07",
+   "title": "German NGOs call for a Europe-wide export stop for EU-banned pesticides, singling out Bayer's exports of the acutely toxic insecticide cyfluthrin"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "ngo",
+   "date": "2026-09-30",
+   "title": "Heinrich Böll Foundation calls for an EU-wide ban on exporting pesticides banned in the EU, naming Bayer's exports of cyfluthrin as an example of an insecticide that is \"acutely toxic even at low doses\""
+  },
+  {
+   "substance": "1282-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Bayer S.A.S entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "approval",
+   "date": "2020-06-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "hazard",
+   "date": "1988-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "hazard",
+   "date": "2025-01-21",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "hazard",
+   "date": "2026-09-20",
+   "title": "Classification proposal: ED ENV 1"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "interest",
+   "date": "2026-06-30",
+   "title": "Companies interested in renewal"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2025-11-20",
+   "title": "PAN Germany calls for less pyrethroid use and tighter, harmonised rules across pesticide and biocide uses, citing extreme toxicity to aquatic life and cypermethrin's status as a Water Framework Directive priority substance"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2025-12-18",
+   "title": "PAN Europe wins at the EU's highest court: the 2021 re-approval of cypermethrin as a pesticide was unlawful, citing gaps in the dossier, unrealistic risk-mitigation measures for insects and no assessment of long-term toxicity"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-03-06",
+   "title": "Générations Futures warns against weakening biocide rules under Omnibus X and against unlimited approvals, using cypermethrin to show that most biocidal products on the French market have never been fully evaluated"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-05-20",
+   "title": "Bee NGOs ask the Commission to carry out the court ruling on cypermethrin at once, citing hormone disruption, acute toxicity to bees and EFSA's view that spray-drift mitigation cannot bring risks to safe levels"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-05-22",
+   "title": "PAN Europe writes to the Commission's food-safety directorate demanding it carry out the cypermethrin ruling and stop approving pesticides with no long-term toxicity assessment, citing the court's findings and a 2026 Belgian emergency derogation for cypermethrin uses banned since 2021"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-07-14",
+   "title": "PAN Europe accuses the Commission of stalling: it wants cypermethrin banned now rather than put through a lengthy new review, citing the court ruling and its bee-toxic and endocrine-disrupting properties"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "supplier",
+   "date": "2015-10-19",
+   "title": "LIMARU NV (Acting for Tagros Chemicals India Private Limited) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1283-PT18",
+   "kind": "supplier",
+   "date": "2015-12-15",
+   "title": "Arysta LifeScience Benelux SPRL entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "approval",
+   "date": "2020-02-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "interest",
+   "date": "2026-06-30",
+   "title": "Company interested in renewal"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1287-PT18",
+   "kind": "approval",
+   "date": "2015-09-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1287-PT18",
+   "kind": "expiry",
+   "date": "2025-08-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1287-PT18",
+   "kind": "reach",
+   "date": "2026-05-25",
+   "title": "Dossier evaluation: Under assessment"
+  },
+  {
+   "substance": "1287-PT19",
+   "kind": "approval",
+   "date": "2015-09-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1287-PT19",
+   "kind": "expiry",
+   "date": "2025-08-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1287-PT19",
+   "kind": "reach",
+   "date": "2026-05-25",
+   "title": "Dossier evaluation: Under assessment"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "approval",
+   "date": "2015-06-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "hazard",
+   "date": "2011-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED)"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2024-10-22",
+   "title": "PAN UK campaigns for a UK ban on crop-banned insecticides in pet flea and tick medicines, naming dinotefuran as one of five highly bee-toxic substances (campaign page last updated on this date)"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2026-01-29",
+   "title": "Beyond Pesticides calls for neonicotinoids, including dinotefuran, to be phased out, citing a study showing dinotefuran makes honeybees overheat and speeds the carrying of contaminated nectar into hives"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "1293-PT18",
+   "kind": "supplier",
+   "date": "2023-08-30",
+   "title": "LKC Chem-Regs Ltd (Acting for Mitsui Chemicals Crop & Life Solutions, Inc. (Japan)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1298-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1298-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "hazard",
+   "date": "1989-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "hazard",
+   "date": "2026-04-27",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "ngo",
+   "date": "2025-04-07",
+   "title": "PAN Netherlands asks retailers to stop selling home-and-garden insect sprays containing tetramethrin and the government to ban such products for consumers, saying tetramethrin is endocrine-disrupting and possibly neurotoxic and carcinogenic"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "13-PT18",
+   "kind": "approval",
+   "date": "2012-11-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "13-PT18",
+   "kind": "expiry",
+   "date": "2022-10-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1300-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1300-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1301-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1301-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1302-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1302-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1302-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1308-PT18",
+   "kind": "hazard",
+   "date": "2024-09-18",
+   "title": "Classification proposal: reproductive toxicity (category not yet given)"
+  },
+  {
+   "substance": "1308-PT18",
+   "kind": "hazard",
+   "date": "2025-12-18",
+   "title": "Endocrine disruptor assessment: Concluded (inconclusive)"
+  },
+  {
+   "substance": "1308-PT18",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1308-PT18",
+   "kind": "reach",
+   "date": "2023-01-07",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1308-PT18",
+   "kind": "reach",
+   "date": "2024-11-05",
+   "title": "Dossier evaluation: Information requested"
+  },
+  {
+   "substance": "1308-PT19",
+   "kind": "hazard",
+   "date": "2024-09-18",
+   "title": "Classification proposal: reproductive toxicity (category not yet given)"
+  },
+  {
+   "substance": "1308-PT19",
+   "kind": "hazard",
+   "date": "2025-12-18",
+   "title": "Endocrine disruptor assessment: Concluded (inconclusive)"
+  },
+  {
+   "substance": "1308-PT19",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1308-PT19",
+   "kind": "reach",
+   "date": "2023-01-07",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1308-PT19",
+   "kind": "reach",
+   "date": "2024-11-05",
+   "title": "Dossier evaluation: Information requested"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "approval",
+   "date": "2017-04-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "bpc",
+   "date": "2026-09-10",
+   "title": "BPC renewal opinion adopted (BPC-60)"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "postponement",
+   "date": "2021-08-04",
+   "title": "Approval expiry postponed to 30 Sep 2024"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "postponement",
+   "date": "2024-05-13",
+   "title": "2nd postponement — expiry moved to 31 Mar 2027"
+  },
+  {
+   "substance": "1314-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Corteva Agriscience International Sarl entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1316-PT19",
+   "kind": "approval",
+   "date": "2022-02-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1316-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Saltigo GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "approval",
+   "date": "2019-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "hazard",
+   "date": "2013-06-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "interest",
+   "date": "2026-06-30",
+   "title": "Company interested in renewal"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "ngo",
+   "date": "2024-12-01",
+   "title": "PAN International keeps imiprothrin on its global list of Highly Hazardous Pesticides to be phased out, citing its high toxicity to bees"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1318-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "approval",
+   "date": "2015-11-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "filing",
+   "date": "2024-04-25",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "hazard",
+   "date": "2024-10-14",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "ngo",
+   "date": "2026-06-15",
+   "title": "Belgian consumer group Test-Aankoop/Test-Achats warns that its three failing mosquito products all contain IR3535, citing weaker protection than DEET, icaridin or eucalyptus citriodora oil"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "ngo",
+   "date": "2026-08-07",
+   "title": "Italian consumer group Altroconsumo tells parents to avoid IR3535 repellents for children, citing the open EU check on whether it disrupts hormones and its weak protection against mosquitoes"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "postponement",
+   "date": "2025-09-10",
+   "title": "Approval expiry postponed to 30 Apr 2028"
+  },
+  {
+   "substance": "1320-PT19",
+   "kind": "supplier",
+   "date": "2025-08-06",
+   "title": "SUSONITY Commercial GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "approval",
+   "date": "2015-11-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "filing",
+   "date": "2024-04-26",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "postponement",
+   "date": "2025-09-11",
+   "title": "Approval expiry postponed to 30 Apr 2028"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1323-PT19",
+   "kind": "supplier",
+   "date": "2015-10-29",
+   "title": "Athenion GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "approval",
+   "date": "2018-01-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "ppp",
+   "date": "2019-12-31",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "research",
+   "date": "2025-02-06",
+   "title": "Union authorisation granted for Neporex 2SG, valid to 2035"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "supplier",
+   "date": "2015-11-05",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1334-PT18",
+   "kind": "supplier",
+   "date": "2017-12-08",
+   "title": "Elanco Animal Health Inc. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1336-PT18",
+   "kind": "approval",
+   "date": "2015-09-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1336-PT18",
+   "kind": "expiry",
+   "date": "2025-08-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1336-PT18",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "approval",
+   "date": "2016-05-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "hazard",
+   "date": "2020-01-01",
+   "title": "US EPA carcinogen list: Suggestive Evidence of Carcinogenic Potential"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2025-04-07",
+   "title": "PAN Netherlands puts permethrin on a blacklist of 10 insecticides sold to households and gardeners, and wants harmful pesticides kept out of non-professional hands, citing hormone-disrupting and neurotoxic effects"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2025-11-20",
+   "title": "PAN Germany says permethrin is still used in biocidal wood preservatives and insecticides 25 years after being banned on crops, and calls for cutting pyrethroid use and emissions to surface waters, citing extreme toxicity to aquatic life"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2026-07-16",
+   "title": "PAN Europe points to permethrin as one of the most common and highest-measured insecticides on wristbands worn by farmers and citizens, and asks the EU to enforce pesticide law instead of weakening it, citing widespread non-food exposure to toxic pesticide mixtures"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Limaru NV (Acting for Tagros Chemicals India Private Limited (India)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "supplier",
+   "date": "2014-12-22",
+   "title": "TANATEX Chemicals B.V. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "supplier",
+   "date": "2015-09-02",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "supplier",
+   "date": "2015-10-22",
+   "title": "Bayer S.A.S entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "approval",
+   "date": "2018-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "hazard",
+   "date": "1995-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "hazard",
+   "date": "2020-03-18",
+   "title": "Substance evaluation (CoRAP): Withdrawn"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "interest",
+   "date": "2026-06-30",
+   "title": "Company interested in renewal"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "ngo",
+   "date": "2024-12-11",
+   "title": "BUND labels PBO \"neurotoxic and a hormone poison\" after finding it in supermarket lentil chips, and calls for endocrine-disrupting pesticides to be banned outright"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "ngo",
+   "date": "2025-06-11",
+   "title": "Consumer and pesticide NGOs single out PBO in household insect sprays as problematic, citing possible harm to the hormone system and to nervous-system development"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Endura S.p.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1344-PT18",
+   "kind": "supplier",
+   "date": "2026-02-19",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "approval",
+   "date": "2026-03-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "hazard",
+   "date": "2011-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1356-PT18",
+   "kind": "hazard",
+   "date": "2019-03-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1356-PT19",
+   "kind": "hazard",
+   "date": "2019-03-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1377-PT18",
+   "kind": "approval",
+   "date": "2018-11-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1377-PT18",
+   "kind": "hazard",
+   "date": "2024-09-09",
+   "title": "Assessment of regulatory needs: Under development (Currently no EU RRM action needed)"
+  },
+  {
+   "substance": "1377-PT18",
+   "kind": "interest",
+   "date": "2026-06-30",
+   "title": "Company interested in renewal"
+  },
+  {
+   "substance": "1377-PT18",
+   "kind": "supplier",
+   "date": "2015-07-31",
+   "title": "Biofa GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1377-PT18",
+   "kind": "supplier",
+   "date": "2024-12-13",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "approval",
+   "date": "2015-11-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "expiry",
+   "date": "2025-10-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "hazard",
+   "date": "2021-08-25",
+   "title": "Substance evaluation (CoRAP): Concluded"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "hazard",
+   "date": "2024-09-09",
+   "title": "Assessment of regulatory needs: Under development (Currently no EU RRM action needed | No hypothesis yet)"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "ngo",
+   "date": "2026-02-27",
+   "title": "Inf'OGM and AVICENN call for mandatory nano risk assessment and checks of pesticides, citing nanoparticles found in nearly all products tested"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "reach",
+   "date": "2024-04-05",
+   "title": "Dossier evaluation: Follow-up"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "reach",
+   "date": "2024-10-25",
+   "title": "Dossier evaluation: Under assessment"
+  },
+  {
+   "substance": "1378-PT18",
+   "kind": "reach",
+   "date": "2025-11-21",
+   "title": "Dossier evaluation: Under assessment"
+  },
+  {
+   "substance": "1386-PT18",
+   "kind": "approval",
+   "date": "2015-09-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1386-PT18",
+   "kind": "filing",
+   "date": "2024-02-28",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1386-PT18",
+   "kind": "postponement",
+   "date": "2025-05-22",
+   "title": "Approval expiry postponed to 29 Feb 2028"
+  },
+  {
+   "substance": "1386-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Bábolna Bioenvironmental Centre Private Limited Company entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1386-PT18",
+   "kind": "supplier",
+   "date": "2021-10-01",
+   "title": "DiReg Solutions GmbH [Acting for Central Garden & Pet Company (USA) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1389-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Luxembourg Pamol (Cyprus) Ltd. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "hazard",
+   "date": "1989-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "hazard",
+   "date": "2026-04-27",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "ngo",
+   "date": "2025-04-07",
+   "title": "PAN Netherlands wants tetramethrin and 9 other insecticides banned from consumer pest-control products, citing hormone-disrupting, neurotoxic and ecotoxic hazards"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1400-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "approval",
+   "date": "2015-11-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "cancellation",
+   "date": "2026-10-20",
+   "title": "1 product authorisation cancelled"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "filing",
+   "date": "2024-04-26",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "postponement",
+   "date": "2025-09-11",
+   "title": "Approval expiry postponed to 30 Apr 2028"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "supplier",
+   "date": "2023-03-01",
+   "title": "2022 ENVIRONMENTAL SCIENCE FR SAS (Acting for Environmental Science US LLC (US)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "supplier",
+   "date": "2024-12-11",
+   "title": "Endura S.p.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "ppp",
+   "date": "2021-03-31",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "1407-PT18",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "1418-PT18",
+   "kind": "supplier",
+   "date": "2019-01-17",
+   "title": "GRACE Silica GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "approval",
+   "date": "2017-07-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "deadline",
+   "date": "2025-12-27",
+   "title": "Filing deadline for renewal passed with nothing on record"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1449-PT18",
+   "kind": "approval",
+   "date": "2018-11-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1449-PT18",
+   "kind": "hazard",
+   "date": "2024-09-09",
+   "title": "Assessment of regulatory needs: Under development (Currently no EU RRM action needed)"
+  },
+  {
+   "substance": "1449-PT18",
+   "kind": "ngo",
+   "date": "2026-02-27",
+   "title": "Inf'OGM and AVICENN call for mandatory nano risk assessment and checks of pesticides, citing nanoparticles found in nearly all products tested"
+  },
+  {
+   "substance": "1449-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Evonik Operations GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Terra Nostra entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT18",
+   "kind": "supplier",
+   "date": "2026-05-28",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT18",
+   "kind": "supplier",
+   "date": "2026-06-12",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT19",
+   "kind": "approval",
+   "date": "2019-04-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1469-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Terra Nostra entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT19",
+   "kind": "supplier",
+   "date": "2026-05-28",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1469-PT19",
+   "kind": "supplier",
+   "date": "2026-06-12",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "approval",
+   "date": "2016-10-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "expiry",
+   "date": "2026-09-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2024-10-24",
+   "title": "Beyond Pesticides asks the US EPA to cancel clothianidin, imidacloprid and thiamethoxam, citing developmental neurotoxicity, endocrine disruption and risks to workers, bees and aquatic life"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2025-01-16",
+   "title": "Buglife asks UK Parliament to ban pesticides like clothianidin, already banned in farming, in every other use including domestic products, because of their toxicity to bees and other insects"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "ppp",
+   "date": "2019-01-31",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "research",
+   "date": "2024-09-12",
+   "title": "SchwabEX-Guard Union authorisation cancelled at Sumitomo's own request, for business reasons"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "15-PT18",
+   "kind": "supplier",
+   "date": "2015-07-24",
+   "title": "Bayer S.A.S entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1923-PT19",
+   "kind": "approval",
+   "date": "2023-06-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1923-PT19",
+   "kind": "supplier",
+   "date": "2018-04-18",
+   "title": "M2i Biocontrol entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "approval",
+   "date": "2025-02-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED | inconclusive)"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "supplier",
+   "date": "2017-05-17",
+   "title": "exeo Strategic Consulting AG (Acting for Horizon Sopyrwa Ltd. (Rwanda)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "supplier",
+   "date": "2018-06-13",
+   "title": "VdG Consulting International Lda. (Acting for the Pyrethrum Processing Company of Kenya (PPCK) (Kenya)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "supplier",
+   "date": "2020-01-23",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT18",
+   "kind": "supplier",
+   "date": "2024-03-11",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT19",
+   "kind": "approval",
+   "date": "2024-02-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "1983-PT19",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED | inconclusive)"
+  },
+  {
+   "substance": "1983-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT19",
+   "kind": "supplier",
+   "date": "2020-01-23",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "1983-PT19",
+   "kind": "supplier",
+   "date": "2024-03-11",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2003-PT18",
+   "kind": "approval",
+   "date": "2025-02-01",
+   "title": "Approved as an active substance for PT18"
+  },
+  {
+   "substance": "2003-PT18",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED | inconclusive)"
+  },
+  {
+   "substance": "2003-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2003-PT18",
+   "kind": "supplier",
+   "date": "2020-01-23",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2003-PT19",
+   "kind": "approval",
+   "date": "2024-02-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "2003-PT19",
+   "kind": "hazard",
+   "date": "2025-01-13",
+   "title": "Endocrine disruptor assessment: Concluded (not ED | inconclusive)"
+  },
+  {
+   "substance": "2003-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "SC Johnson Europe Sàrl (Acting for SC Johnson EurAFNE (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2003-PT19",
+   "kind": "supplier",
+   "date": "2020-01-23",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2083-PT19",
+   "kind": "supplier",
+   "date": "2023-12-11",
+   "title": "Chemian Technology SARL (acting for CHEMIAN TECHNOLOGY LIMITED (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2083-PT19",
+   "kind": "supplier",
+   "date": "2026-04-22",
+   "title": "Citrefine EU Ltd [Acting for Citrefine International Limited (United Kingdom)] entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2083-PT19",
+   "kind": "supplier",
+   "date": "2026-06-02",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2203-PT19",
+   "kind": "reach",
+   "date": "2022-11-26",
+   "title": "Dossier evaluation: Concluded"
+  },
+  {
+   "substance": "2203-PT19",
+   "kind": "reach",
+   "date": "2026-02-16",
+   "title": "Dossier evaluation: Under assessment"
+  },
+  {
+   "substance": "2203-PT19",
+   "kind": "supplier",
+   "date": "2021-03-26",
+   "title": "Oro Agri International Ltd. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "approval",
+   "date": "2012-08-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT19"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "filing",
+   "date": "2021-01-26",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "ngo",
+   "date": "2026-06-04",
+   "title": "French consumer group UFC-Que Choisir tests DEET repellents against tiger mosquitoes and keeps them among the best-performing products"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "ngo",
+   "date": "2026-07-10",
+   "title": "Beyond Pesticides (US) questions whether DEET is safe and promotes alternatives, citing skin absorption, effects on a nervous-system enzyme and seizures in over-exposed children"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "postponement",
+   "date": "2021-12-03",
+   "title": "Approval expiry postponed to 31 Jan 2025"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "postponement",
+   "date": "2024-11-29",
+   "title": "2nd postponement — expiry moved to 31 Jan 2027"
+  },
+  {
+   "substance": "23-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "2 suppliers entered the Article 95 list"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "approval",
+   "date": "2013-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "filing",
+   "date": "2022-03-27",
+   "title": "Renewal applications submitted"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "hazard",
+   "date": "2026-02-20",
+   "title": "Classification proposal: PBT, Repr. 1B"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2025-02-26",
+   "title": "PAN Europe asks the Commission for an emergency ban on deltamethrin and says it should also be prohibited as a biocide, citing studies showing brain damage in offspring at the EU's \"safe\" dose"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2025-04-25",
+   "title": "Générations Futures demands that all deltamethrin and pyrethroid products (farm, household biocide and veterinary) be withdrawn quickly, citing ANSES's warning on brain-development risks for children exposed in the womb"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2025-11-20",
+   "title": "PAN Germany calls for pyrethroids including deltamethrin to become EU priority water pollutants and to be regulated in all uses, including biocides and veterinary medicines, citing extreme toxicity to aquatic life"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-03-06",
+   "title": "Générations Futures urges the EU to keep regular safety re-checks for biocides under the \"Omnibus\" simplification, and names deltamethrin as a heavily used biocidal insecticide linked to child behavioural disorders"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-04-13",
+   "title": "Deutsche Umwelthilfe sues Germany's pesticide authority to revoke two deltamethrin insecticides, citing nerve damage at very low doses and risks to unborn children's brains"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-04-24",
+   "title": "PAN Germany asks Bayer at its AGM to withdraw deltamethrin worldwide, citing evidence linking it to Parkinson's disease"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-04-30",
+   "title": "PAN Europe asks EU member states to vote against a tenth extension of deltamethrin's farm-pesticide approval to June 2028, citing evidence that it harms children's brain development"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-05-13",
+   "title": "PAN Europe tells the Commission that its own court wins make repeated extensions of substances like deltamethrin unlawful, because their approvals have \"more than doubled\""
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "postponement",
+   "date": "2023-06-02",
+   "title": "Approval expiry postponed to 31 Mar 2026"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "postponement",
+   "date": "2025-11-14",
+   "title": "2nd postponement — expiry moved to 31 Mar 2028"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Bayer S.A.S entered the Article 95 supplier list"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "supplier",
+   "date": "2015-05-26",
+   "title": "Sharda Europe B.V.B.A (Acting for Sharda Cropchem Limited (India)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "supplier",
+   "date": "2015-11-02",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "24-PT18",
+   "kind": "supplier",
+   "date": "2024-03-11",
+   "title": "LIMARU NV (Acting for Tagros Chemicals India Private Limited) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2463-PT18",
+   "kind": "approval",
+   "date": "2011-05-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "2463-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "2463-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "2463-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2463-PT19",
+   "kind": "bpc",
+   "date": "2024-11-25",
+   "title": "BPC opinion: May be renewed"
+  },
+  {
+   "substance": "2463-PT19",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "2463-PT19",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "2463-PT19",
+   "kind": "supplier",
+   "date": "2023-04-21",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2503-PT19",
+   "kind": "bpc",
+   "date": "2026-05-28",
+   "title": "BPC approval opinion adopted (BPC-59)"
+  },
+  {
+   "substance": "2503-PT19",
+   "kind": "supplier",
+   "date": "2024-01-18",
+   "title": "SWISSINNO SOLUTIONS AG entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2523-PT19",
+   "kind": "approval",
+   "date": "2025-07-01",
+   "title": "Approved as an active substance for PT19"
+  },
+  {
+   "substance": "2523-PT19",
+   "kind": "supplier",
+   "date": "2020-04-29",
+   "title": "W. Neudorff GmbH KG (Acting for Ecospray Limited (UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "2643-PT18",
+   "kind": "supplier",
+   "date": "2025-06-23",
+   "title": "Andermatt Biocontrol Suisse AG entered the Article 95 supplier list"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "approval",
+   "date": "2015-07-01",
+   "title": "Approved as an active substance for PT18, as a candidate for substitution"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "expiry",
+   "date": "2026-03-14",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "hazard",
+   "date": "2025-10-23",
+   "title": "Endocrine disruptor assessment: Concluded (inconclusive)"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "hazard",
+   "date": "2025-10-23",
+   "title": "PBT / vPvB assessment: Concluded (inconclusive)"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "approval",
+   "date": "2013-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "expiry",
+   "date": "2023-09-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "hazard",
+   "date": "1995-01-01",
+   "title": "US EPA carcinogen list: Group C — Possible Human Carcinogen"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "33-PT18",
+   "kind": "ppp",
+   "date": "2017-09-30",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "approval",
+   "date": "2013-07-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "filing",
+   "date": "2021-12-23",
+   "title": "Renewal applications submitted"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "hazard",
+   "date": "2025-02-25",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "hazard",
+   "date": "2026-09-10",
+   "title": "Classification proposal: ED ENV 1"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2025-04-08",
+   "title": "PAN Netherlands and PAN Europe want toxic insecticides, including imidacloprid baits for ants, flies and cockroaches, banned from sale to amateur users, citing the toxicity of a \"bee-killer\" already banned in farming"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2025-07-15",
+   "title": "foodwatch finds imidacloprid among the banned pesticides most often found in EU food and calls for zero tolerance for such residues in imports, citing its classification as highly hazardous"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2025-12-16",
+   "title": "Greenpeace's investigative unit maps EU exports of banned pesticides, naming imidacloprid as a \"bee-killing\" neonicotinoid still made in the EU for export"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2026-06-11",
+   "title": "PAN Germany says imidacloprid levels even in the North Sea are too high to meet future EU water-quality limits, and criticises weak federal action on pesticide and biocide inputs to water"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "postponement",
+   "date": "2023-03-02",
+   "title": "Approval expiry postponed to 31 Dec 2025"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "postponement",
+   "date": "2025-09-10",
+   "title": "2nd postponement — expiry moved to 31 Dec 2027"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "ppp",
+   "date": "2020-12-01",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Bayer S.A.S entered the Article 95 supplier list"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sharda Europe B.V.B.A entered the Article 95 supplier list"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "supplier",
+   "date": "2015-01-09",
+   "title": "ADAMA Agriculture España S.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "supplier",
+   "date": "2015-07-16",
+   "title": "ZAPI S.p.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "37-PT18",
+   "kind": "supplier",
+   "date": "2023-01-23",
+   "title": "MYLVA S.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "approval",
+   "date": "2012-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "bpc",
+   "date": "2026-05-27",
+   "title": "Renewal recommended by BPC"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "ngo",
+   "date": "2025-12-08",
+   "title": "PAN Europe urges EU Member States not to renew phosphine as a pesticide after EFSA flagged it as genotoxic"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "ngo",
+   "date": "2026-04-30",
+   "title": "PAN Europe asks EU Member States to reject the Commission's proposal to renew phosphine, citing clear evidence that it breaks chromosomes"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to vote down the renewal of phosphine as a pesticide, citing EFSA's finding that it may damage DNA with no safe threshold"
+  },
+  {
+   "substance": "4-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Detia Freyberg GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "approval",
+   "date": "2013-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "filing",
+   "date": "2022-03-24",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2025-04-07",
+   "title": "PAN Netherlands puts lambda-cyhalothrin on a \"black list\" of 10 home-and-garden insecticides and calls for a legal ban on synthetic pesticides for non-professional users. It cites PFAS status, neurotoxicity, bioaccumulation and possible endocrine disruption."
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2025-07-24",
+   "title": "PAN Europe files a formal Aarhus request asking the Commission to review and ban all approved PFAS pesticides, which its annex lists as including lambda-cyhalothrin, because they break down into the reprotoxic \"forever chemical\" TFA."
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2025-11-20",
+   "title": "PAN Germany warns that pyrethroid insecticides, including lambda-cyhalothrin, are extremely toxic to aquatic life and calls for less use and stricter water-quality rules. It notes that pyrethroids also come from biocide and medicine uses."
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-03-10",
+   "title": "PAN Europe criticises the Commission for proposing to extend lambda-cyhalothrin and four other hazardous pesticides despite a court ruling, and repeats that lambda-cyhalothrin should be banned immediately."
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-04-30",
+   "title": "PAN Europe asks EU Member States to reject another extension of lambda-cyhalothrin's pesticide approval, citing its PFAS status, PBT properties and high aquatic toxicity, and court rulings against routine extensions. (TOP SIGNAL)"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-05-20",
+   "title": "Greenpeace UK blockades Syngenta's UK headquarters and calls lambda-cyhalothrin a bee-killing \"forever chemical\", calling for deep cuts in pesticide use and a ban on garden pesticides."
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "postponement",
+   "date": "2023-06-02",
+   "title": "Approval expiry postponed to 31 Mar 2026"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "postponement",
+   "date": "2025-11-13",
+   "title": "2nd postponement — expiry moved to 30 Sep 2028"
+  },
+  {
+   "substance": "41-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Syngenta Crop Protection AG entered the Article 95 supplier list"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "approval",
+   "date": "2012-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "bpc",
+   "date": "2026-05-27",
+   "title": "Renewal recommended by BPC"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "filing",
+   "date": "2020-07-28",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "hazard",
+   "date": "2013-06-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "ngo",
+   "date": "2025-12-08",
+   "title": "PAN Europe first flags phosphine as \"potentially genotoxic\" and asks Member States to block its renewal after EFSA's peer review"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "ngo",
+   "date": "2026-03-05",
+   "title": "PAN Europe urges Member States to \"urgently\" non-renew phosphine, citing clear evidence that it breaks chromosomes"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to vote against renewing the grain fumigant phosphine, saying EFSA found it may damage DNA and EU law bans mutagenic pesticides"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "postponement",
+   "date": "2021-01-01",
+   "title": "Approval expiry postponed to 31 Jul 2024"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "postponement",
+   "date": "2024-02-28",
+   "title": "2nd postponement — expiry moved to 31 Jan 2026"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "postponement",
+   "date": "2025-11-13",
+   "title": "3rd postponement — expiry moved to 31 Jul 2027"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Detia Freyberg GmbH entered the Article 95 supplier list"
+  },
+  {
+   "substance": "42-PT18",
+   "kind": "supplier",
+   "date": "2024-03-11",
+   "title": "UPL Holdings Coöperatief U.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "43-PT18",
+   "kind": "approval",
+   "date": "2014-05-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "43-PT18",
+   "kind": "expiry",
+   "date": "2024-04-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "43-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Terra Nostra entered the Article 95 supplier list"
+  },
+  {
+   "substance": "43-PT18",
+   "kind": "supplier",
+   "date": "2026-05-28",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "43-PT18",
+   "kind": "supplier",
+   "date": "2026-06-12",
+   "title": "LIMARU NV entered the Article 95 supplier list"
+  },
+  {
+   "substance": "44-PT19",
+   "kind": "approval",
+   "date": "2014-05-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT19"
+  },
+  {
+   "substance": "44-PT19",
+   "kind": "expiry",
+   "date": "2024-04-30",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "44-PT19",
+   "kind": "hazard",
+   "date": "2021-12-08",
+   "title": "Assessment of regulatory needs: Under development (Currently no EU RRM action needed)"
+  },
+  {
+   "substance": "45-PT19",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "45-PT19",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "45-PT19",
+   "kind": "supplier",
+   "date": "2023-04-21",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "46-PT18",
+   "kind": "approval",
+   "date": "2011-09-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "46-PT18",
+   "kind": "expiry",
+   "date": "2021-08-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "47-PT19",
+   "kind": "approval",
+   "date": "2013-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT19"
+  },
+  {
+   "substance": "47-PT19",
+   "kind": "expiry",
+   "date": "2023-01-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "approval",
+   "date": "2012-11-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "filing",
+   "date": "2021-04-27",
+   "title": "Renewal applications submitted"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "ngo",
+   "date": "2025-04-07",
+   "title": "PAN Netherlands puts spinosad on a \"black list\" of 10 insecticides it says are too dangerous for home and garden use, and asks retailers to stop selling them by 2027, citing bee toxicity and possible reproductive and thyroid effects"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "ngo",
+   "date": "2026-04-23",
+   "title": "PAN Netherlands finds spinosad residues on garden-centre plants, calls it a \"highly hazardous pesticide\" and asks the government to phase out all such pesticides, citing harm to insects"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "postponement",
+   "date": "2022-09-07",
+   "title": "Approval expiry postponed to 30 Apr 2025"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "postponement",
+   "date": "2025-02-21",
+   "title": "2nd postponement — expiry moved to 31 Oct 2027"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Corteva Agriscience France S.A.S. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "supplier",
+   "date": "2022-06-09",
+   "title": "Vebi Istituto Biochimico s.r.l. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "supplier",
+   "date": "2025-07-22",
+   "title": "Sharda Europe B.V.B.A entered the Article 95 supplier list"
+  },
+  {
+   "substance": "49-PT18",
+   "kind": "supplier",
+   "date": "2025-07-25",
+   "title": "UPL Holdings Coöperatief U.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "approval",
+   "date": "2013-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "filing",
+   "date": "2022-03-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "postponement",
+   "date": "2023-06-02",
+   "title": "Approval expiry postponed to 31 Mar 2026"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "postponement",
+   "date": "2025-11-14",
+   "title": "2nd postponement — expiry moved to 31 Mar 2028"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical Agro Europe SAS entered the Article 95 supplier list"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "supplier",
+   "date": "2016-12-16",
+   "title": "CERA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "5-PT18",
+   "kind": "supplier",
+   "date": "2025-12-09",
+   "title": "Sharda Europe B.V.B.A entered the Article 95 supplier list"
+  },
+  {
+   "substance": "50-PT18",
+   "kind": "approval",
+   "date": "2011-07-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "50-PT18",
+   "kind": "expiry",
+   "date": "2024-10-03",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "50-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "50-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "approval",
+   "date": "2015-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "expiry",
+   "date": "2025-01-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "ngo",
+   "date": "2026-01-22",
+   "title": "Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "ngo",
+   "date": "2026-09-16",
+   "title": "PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "ngo",
+   "date": "2026-09-18",
+   "title": "Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "ngo",
+   "date": "2026-10-14",
+   "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
+  },
+  {
+   "substance": "54-PT18",
+   "kind": "ppp",
+   "date": "2019-04-30",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "approval",
+   "date": "2015-09-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "cancellation",
+   "date": "2026-11-07",
+   "title": "1 product authorisation cancelled"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "filing",
+   "date": "2024-02-27",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "ngo",
+   "date": "2026-04-03",
+   "title": "Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "ngo",
+   "date": "2026-04-04",
+   "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "postponement",
+   "date": "2025-05-22",
+   "title": "Approval expiry postponed to 29 Feb 2028"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "supplier",
+   "date": "2016-12-14",
+   "title": "ENDURA S.p.A. entered the Article 95 supplier list"
+  },
+  {
+   "substance": "60-PT18",
+   "kind": "approval",
+   "date": "2014-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "60-PT18",
+   "kind": "filing",
+   "date": "2026-06-30",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "60-PT18",
+   "kind": "hazard",
+   "date": "2018-03-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "60-PT18",
+   "kind": "ngo",
+   "date": "2026-06-24",
+   "title": "PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold"
+  },
+  {
+   "substance": "60-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Lučební závody Draslovka a.s. Kolín entered the Article 95 supplier list"
+  },
+  {
+   "substance": "61-PT18",
+   "kind": "approval",
+   "date": "2015-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "61-PT18",
+   "kind": "filing",
+   "date": "2023-07-31",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "61-PT18",
+   "kind": "postponement",
+   "date": "2024-09-13",
+   "title": "Approval expiry postponed to 31 Jul 2027"
+  },
+  {
+   "substance": "61-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "62-PT18",
+   "kind": "approval",
+   "date": "2015-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "62-PT18",
+   "kind": "expiry",
+   "date": "2025-01-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "62-PT18",
+   "kind": "ppp",
+   "date": "2020-12-31",
+   "title": "Plant-protection approval ended"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "approval",
+   "date": "2010-01-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2025-10-15",
+   "title": "Dutch Bee Foundation lists indoxacarb among the nine pesticides behind nearly all the risk to bumblebee colonies and calls for less pesticide use and monitoring after approval"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "postponement",
+   "date": "2019-01-01",
+   "title": "Approval expiry postponed to 30 Jun 2022"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "postponement",
+   "date": "2021-01-01",
+   "title": "2nd postponement — expiry moved to 30 Jun 2024"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "postponement",
+   "date": "2024-02-28",
+   "title": "3rd postponement — expiry moved to 31 Dec 2026"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "research",
+   "date": "2018-06-28",
+   "title": "Renewal filed — but France routed it to full evaluation"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "research",
+   "date": "2021-11-26",
+   "title": "PPP approval not renewed on mammal risk; reference values cut"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "research",
+   "date": "2022",
+   "title": "Field resistance is eroding every bait active, indoxacarb included"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "research",
+   "date": "2023-09-19",
+   "title": "France names the blockers: substance identity and endocrine disruption testing needed"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "research",
+   "date": "2025-06-30",
+   "title": "GB retains PT18 approval to 31/01/2027 — no biocidal divergence"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Syngenta Crop Protection AG entered the Article 95 supplier list"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "supplier",
+   "date": "2025-10-10",
+   "title": "Sharda Europe B.V.B.A entered the Article 95 supplier list"
+  },
+  {
+   "substance": "64-PT18",
+   "kind": "supplier",
+   "date": "2026-04-13",
+   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "approval",
+   "date": "2014-10-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT19"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "bpc",
+   "date": "2025-11-27",
+   "title": "Renewal recommended by BPC"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "filing",
+   "date": "2023-04-06",
+   "title": "Renewal application submitted"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "postponement",
+   "date": "2024-05-13",
+   "title": "Approval expiry postponed to 31 Mar 2027"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "renewal",
+   "date": "2026-10-20",
+   "title": "Approval renewed"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "Denka REGISTRATIONS bv entered the Article 95 supplier list"
+  },
+  {
+   "substance": "65-PT19",
+   "kind": "supplier",
+   "date": "2024-04-05",
+   "title": "Kerona Scientific Limited (Acting for Bedoukian Research Inc. (US)) entered the Article 95 supplier list"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "hazard",
+   "date": "2024-04-04",
+   "title": "Endocrine disruptor assessment: Under development (Under development (BPR))"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2025-12-04",
+   "title": "PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-02-09",
+   "title": "French NGOs take BASF to court over banned pesticides, including chlorfenapyr, stored at its Genay plant, and ask that the export/production ban cover biocides with the same active substance, citing a \"toxic trade\" double standard"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-06-10",
+   "title": "PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-06-25",
+   "title": "Générations Futures publishes a list of 80 TFA-forming PFAS pesticide products still authorised in France and demands an Art. 44 review by ANSES, citing TFA's reprotoxicity"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-07-22",
+   "title": "PAN Europe and Générations Futures demand an immediate ban on all PFAS pesticides, citing EFSA's 72% cut in the TFA safe intake value"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-09-04",
+   "title": "Deutsche Umwelthilfe sues to revoke a TFA-forming herbicide and demands a halt to all TFA-forming pesticide approvals, citing EFSA's stricter TFA assessment"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-09-15",
+   "title": "PAN Europe and GLOBAL 2000 demand an EU-wide phase-out of PFAS pesticides, citing a doubling of TFA in Austrian groundwater in five years"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-10-01",
+   "title": "PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-10-05",
+   "title": "More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "ngo",
+   "date": "2026-10-07",
+   "title": "Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier)"
+  },
+  {
+   "substance": "66-PT18",
+   "kind": "supplier",
+   "date": "2014-09-24",
+   "title": "BASF Agro B.V. Arnhem (NL) Freienbach Branch entered the Article 95 supplier list"
+  },
+  {
+   "substance": "7-PT18",
+   "kind": "approval",
+   "date": "2014-02-01",
+   "title": "Included in Annex I to Directive 98/8/EC for PT18"
+  },
+  {
+   "substance": "7-PT18",
+   "kind": "expiry",
+   "date": "2024-01-31",
+   "title": "Approval expired"
+  },
+  {
+   "substance": "7-PT18",
+   "kind": "hazard",
+   "date": "2009-01-01",
+   "title": "Added to the PAN Highly Hazardous Pesticides list"
+  }
+ ]
+}

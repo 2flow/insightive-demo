@@ -8,6 +8,10 @@
       {
         "file": "ECHA_active-substance-export_20_10_26.xlsx",
         "exportDate": "2026-10-20"
+      },
+      {
+        "file": "ECHA_active-substance-export_07_11_26.xlsx",
+        "exportDate": "2026-11-07"
       }
     ],
     "kinds": {

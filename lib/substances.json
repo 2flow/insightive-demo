@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "ECHA — Biocidal active substances (Search for Chemicals export)",
-    "sourceFile": "ECHA_active-substance-export_20_10_26.xlsx",
+    "sourceFile": "ECHA_active-substance-export_07_11_26.xlsx",
     "bpcOpinionsFrom": "ECHA_active-substance-export_20_09_26.xlsx",
-    "exportDate": "2026-10-20",
-    "lastUpdated": "2026-10-19",
+    "exportDate": "2026-11-07",
+    "lastUpdated": "2026-11-06",
     "productTypes": [
       "PT18",
       "PT19"
@@ -1028,7 +1028,7 @@
       "newActiveSubstance": false,
       "annexI": false,
       "inclusionCategory": 0,
-      "products": 104,
+      "products": 105,
       "factsheetUrl": "https://echa.europa.eu/information-on-chemicals/biocidal-active-substances/-/disas/factsheet/24/PT18",
       "substanceUrl": "https://echa.europa.eu/substance-information/-/substanceinfo/100.052.943?_disssubsinfo_WAR_disssubsinfoportlet_substanceId=100.052.943",
       "bpcOpinion": "",
@@ -1077,7 +1077,7 @@
       "rml": "100.111.831",
       "startDate": "2015-06-01",
       "endDate": "2031-11-30",
-      "endBucket": "beyond",
+      "endBucket": "60m",
       "authority": "Belgium",
       "approvalStatus": "Approved",
       "assessmentStatus": "",
@@ -2356,7 +2356,7 @@
       "legalAct": "COMMISSION IMPLEMENTING REGULATION (EU) 2026/2247",
       "legalActUrl": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2247",
       "r4bp": "EU-0005417-0000",
-      "substitution": "Under assessment",
+      "substitution": "No",
       "reviewProgramme": true,
       "newActiveSubstance": false,
       "annexI": false,

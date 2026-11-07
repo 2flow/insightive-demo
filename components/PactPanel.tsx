@@ -1,5 +1,14 @@
 import { formatDate } from '@/lib/data'
-import { byArea, flagList, hazardAreaActivities, hazardTally, isLive, otherActivities } from '@/lib/pact'
+import {
+  byArea,
+  exclusionClassList,
+  exclusionRelevant,
+  flagList,
+  hazardAreaActivities,
+  hazardTally,
+  isLive,
+  otherActivities,
+} from '@/lib/pact'
 import type { PactActivity, PactRecord } from '@/lib/types'
 import AiTag from './AiTag'
 import { ExternalIcon, InfoIcon } from './icons'
@@ -17,7 +26,7 @@ import { ExternalIcon, InfoIcon } from './icons'
 function Activity({ a, tone }: { a: PactActivity; tone: 'hazard' | 'plain' }) {
   const live = isLive(a.status)
   return (
-    <li className="pact-row">
+    <li className={`pact-row ${exclusionRelevant(a) ? 'is-excl' : ''}`}>
       <span className={`pact-status ${tone} ${live ? 'live' : 'done'}`}>{a.status}</span>
       <span className="pact-dates">
         {a.intention && <span>intention {formatDate(a.intention)}</span>}
@@ -29,7 +38,46 @@ function Activity({ a, tone }: { a: PactActivity; tone: 'hazard' | 'plain' }) {
           <ExternalIcon />
         </a>
       )}
+      {a.clh && <ClhClasses a={a} />}
     </li>
+  )
+}
+
+/** What a classification proposal adds, with the classes that can trigger a
+ *  BPR exclusion criterion picked out — those are what make it a signal. */
+function ClhClasses({ a }: { a: PactActivity }) {
+  const p = a.clh!
+  const flagged = new Set([...p.exclusion, ...p.exclusionPending])
+  const meta = [p.process, p.submitter, p.opinionDate ? `RAC opinion ${formatDate(p.opinionDate)}` : '']
+    .filter(Boolean)
+    .join(' · ')
+  return (
+    <div className="pact-clh">
+      {meta && <span className="pact-clh-meta">{meta}</span>}
+      {p.added.length > 0 ? (
+        <span className="pact-clh-classes">
+          <span className="pact-clh-lead">Adds</span>
+          {p.added.map(c => (
+            <span
+              key={c}
+              className={`pact-clh-class ${flagged.has(c) ? 'is-excl' : ''}`}
+              title={
+                p.exclusion.includes(c)
+                  ? 'Can trigger a BPR exclusion criterion (Article 5(1))'
+                  : p.exclusionPending.includes(c)
+                    ? 'Category not given yet: would trigger a BPR exclusion criterion at 1A/1B'
+                    : undefined
+              }
+            >
+              {c.split(',')[0].trim()}
+              {p.exclusionPending.includes(c) && ' (category tbc)'}
+            </span>
+          ))}
+        </span>
+      ) : (
+        <span className="pact-clh-meta">No new class proposed</span>
+      )}
+    </div>
   )
 }
 
@@ -145,6 +193,7 @@ export function PactHazards({ record }: { record: PactRecord }) {
 export function PactActivities({ record }: { record: PactRecord }) {
   const items = otherActivities(record.activities)
   const live = items.filter(a => isLive(a.status)).length
+  const excl = items.filter(exclusionRelevant)
 
   return (
     <section className="pact-block">
@@ -162,6 +211,20 @@ export function PactActivities({ record }: { record: PactRecord }) {
         hazard class, but the activity itself is a step in a procedure, not a finding —
         and none of it decides the renewal.
       </p>
+
+      {excl.length > 0 && (
+        <div className="pact-excl-callout" role="note">
+          <strong>
+            {excl.length === 1 ? 'A classification proposal' : `${excl.length} classification proposals`} would
+            add {exclusionClassList(excl).join(', ')}, which can stand in the way of renewal.
+          </strong>
+          <span>
+            {exclusionClassList(excl).length === 1 ? 'This class is' : 'These classes are'} BPR exclusion
+            criteria (Article 5(1)). If adopted, the substance could only be renewed under a derogation
+            (Article 5(2)). Unlike the rest of this panel, this is not routine procedure.
+          </span>
+        </div>
+      )}
 
       <Areas items={items} tone="plain" />
     </section>

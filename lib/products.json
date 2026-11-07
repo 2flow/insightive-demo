@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "ECHA — Biocidal products (Search for Chemicals export)",
-    "sourceFile": "biocidal-products-export_20_10_26.xlsx",
-    "exportDate": "2026-10-20",
+    "sourceFile": "biocidal-products-export_07_11_26.xlsx",
+    "exportDate": "2026-11-07",
     "substanceCount": 48,
-    "productCount": 5788,
+    "productCount": 5825,
     "trend": {
       "since": "2026-09-03",
       "sourceFile": "biocidal-products-export_20_09_26.xlsx",
@@ -61,7 +61,7 @@
         },
         {
           "reference": "NL-0032500-0000",
-          "name": "Systora Fly Bait",
+          "name": "Seclira Fly Bait",
           "holder": "BASF",
           "markets": [
             "Austria",
@@ -185,7 +185,7 @@
       }
     },
     "23-PT19": {
-      "products": 791,
+      "products": 792,
       "families": 197,
       "holderGroups": 44,
       "holderGroupsEver": 69,
@@ -195,8 +195,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 484,
-        "national": 484,
+        "total": 489,
+        "national": 489,
         "union": 0,
         "other": 0
       },
@@ -1545,6 +1545,21 @@
           "end": "2027-01-31"
         },
         {
+          "reference": "FR-0021483-0000",
+          "name": "Deet10",
+          "holder": "ARMOSA",
+          "markets": [
+            "France",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-02-26"
+        },
+        {
           "reference": "SI-0034340-0000",
           "name": "Mg25 Lq",
           "holder": "BROS",
@@ -2100,20 +2115,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2035-10-20"
-        },
-        {
-          "reference": "FR-0021483-0000",
-          "name": "Repulsif Anti Tiques",
-          "holder": "ARMOSA",
-          "markets": [
-            "France"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2036-02-26"
         },
         {
           "reference": "IT-0037537-0000",
@@ -3631,8 +3632,8 @@
       }
     },
     "1320-PT19": {
-      "products": 597,
-      "families": 367,
+      "products": 599,
+      "families": 368,
       "holderGroups": 61,
       "holderGroupsEver": 65,
       "marketAreas": 30,
@@ -3641,8 +3642,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 278,
-        "national": 278,
+        "total": 279,
+        "national": 279,
         "union": 0,
         "other": 0
       },
@@ -4043,6 +4044,24 @@
           "end": "2033-01-30"
         },
         {
+          "reference": "NL-0015633-0000",
+          "name": "BiteProtect",
+          "holder": "Success",
+          "markets": [
+            "Germany",
+            "Netherlands",
+            "Portugal",
+            "Spain",
+            "United Kingdom"
+          ],
+          "kind": "National",
+          "live": 4,
+          "expired": 1,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2029-04-05"
+        },
+        {
           "reference": "FR-0013218-0001",
           "name": "Marie Rose Aérosol",
           "holder": "Laboratoires",
@@ -4095,23 +4114,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2028-06-10"
-        },
-        {
-          "reference": "NL-0015633-0000",
-          "name": "BiteProtect",
-          "holder": "Success",
-          "markets": [
-            "Netherlands",
-            "Portugal",
-            "Spain",
-            "United Kingdom"
-          ],
-          "kind": "National",
-          "live": 3,
-          "expired": 1,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2029-04-05"
         },
         {
           "reference": "CZ-0031370-0001",
@@ -4379,20 +4381,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "DE-0027358-0000",
-          "name": "Anti Bite",
-          "holder": "UNIFARCO",
-          "markets": [
-            "Germany"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-05-16"
-        },
-        {
           "reference": "AT-0027094-0000",
           "name": "Anti Bite",
           "holder": "UNIFARCO",
@@ -4412,6 +4400,20 @@
           "holder": "UNIFARCO",
           "markets": [
             "Switzerland"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
+        },
+        {
+          "reference": "DE-0027358-0000",
+          "name": "Anti Bite",
+          "holder": "UNIFARCO",
+          "markets": [
+            "Germany"
           ],
           "kind": "National",
           "live": 1,
@@ -4687,20 +4689,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "DE-0028655-0000",
-          "name": "Autan® Clean Feel",
-          "holder": "Johnson",
-          "markets": [
-            "Germany"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-05-16"
-        },
-        {
           "reference": "BE-0032818-0000",
           "name": "Autan® Clean Feel",
           "holder": "Johnson",
@@ -4727,6 +4715,20 @@
           "cancelled": 0,
           "state": "live",
           "end": "2027-10-19"
+        },
+        {
+          "reference": "DE-0028655-0000",
+          "name": "Autan® Clean Feel",
+          "holder": "Johnson",
+          "markets": [
+            "Germany"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
         },
         {
           "reference": "NL-0033563-0000",
@@ -4771,11 +4773,11 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "SI-0028763-0000",
+          "reference": "HR-0028873-0000",
           "name": "Autan® Family",
           "holder": "Johnson",
           "markets": [
-            "Slovenia"
+            "Croatia"
           ],
           "kind": "National",
           "live": 1,
@@ -4785,11 +4787,11 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "HR-0028873-0000",
+          "reference": "SI-0028763-0000",
           "name": "Autan® Family",
           "holder": "Johnson",
           "markets": [
-            "Croatia"
+            "Slovenia"
           ],
           "kind": "National",
           "live": 1,
@@ -6297,20 +6299,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "DE-0013740-0000",
-          "name": "Ir 35/10",
-          "holder": "Arthur",
-          "markets": [
-            "Germany"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-05-16"
-        },
-        {
           "reference": "AT-0018138-0000",
           "name": "Ir 35/10",
           "holder": "Arthur",
@@ -6330,6 +6318,20 @@
           "holder": "Arthur",
           "markets": [
             "Czechia"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
+        },
+        {
+          "reference": "DE-0013740-0000",
+          "name": "Ir 35/10",
+          "holder": "Arthur",
+          "markets": [
+            "Germany"
           ],
           "kind": "National",
           "live": 1,
@@ -6451,20 +6453,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "ES-0019282-0000",
-          "name": "Kill Paff 3 En 1 Repelente",
-          "holder": "ZELNOVA",
-          "markets": [
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-05-16"
-        },
-        {
           "reference": "ES-0025632-0000",
           "name": "Kill-Paff Repelente De Insectos",
           "holder": "ZELNOVA",
@@ -6568,6 +6556,20 @@
           "holder": "ZOBELE",
           "markets": [
             "Italy"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
+        },
+        {
+          "reference": "ES-0038164-0000",
+          "name": "Loción anti mosquitos",
+          "holder": "Fareva",
+          "markets": [
+            "Spain"
           ],
           "kind": "National",
           "live": 1,
@@ -7123,20 +7125,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "FI-0028728-0000",
-          "name": "OFF! Napero Hyttyssuihke",
-          "holder": "Johnson",
-          "markets": [
-            "Finland"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-05-16"
-        },
-        {
           "reference": "CZ-0028354-0000",
           "name": "OFF! ® Clean Feel",
           "holder": "Johnson",
@@ -7156,6 +7144,20 @@
           "holder": "Johnson",
           "markets": [
             "Slovakia"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
+        },
+        {
+          "reference": "FI-0028728-0000",
+          "name": "OFF! ® Hyttyssuihke",
+          "holder": "Johnson",
+          "markets": [
+            "Finland"
           ],
           "kind": "National",
           "live": 1,
@@ -8089,6 +8091,20 @@
           "end": "2027-05-16"
         },
         {
+          "reference": "ES-0019282-0000",
+          "name": "W5 Repelente Insectos",
+          "holder": "ZELNOVA",
+          "markets": [
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-05-16"
+        },
+        {
           "reference": "ES-0021298-0000",
           "name": "Wild at Ease® Repelente de Insectos para Aplicación textil",
           "holder": "Wild",
@@ -8257,20 +8273,6 @@
           "end": "2027-05-16"
         },
         {
-          "reference": "DE-0034940-0000",
-          "name": "Zanzof Family",
-          "holder": "Pharmamillennium",
-          "markets": [
-            "Germany"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2027-07-16"
-        },
-        {
           "reference": "CH-0035722-0000",
           "name": "Zanzof Family",
           "holder": "Pharmamillennium",
@@ -8339,6 +8341,20 @@
           "cancelled": 0,
           "state": "live",
           "end": "2027-05-16"
+        },
+        {
+          "reference": "DE-0034940-0000",
+          "name": "Zanzof Family",
+          "holder": "Pharmamillennium",
+          "markets": [
+            "Germany"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2027-07-16"
         },
         {
           "reference": "IT-0022270-0000",
@@ -9032,8 +9048,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 158,
-        "national": 158,
+        "total": 159,
+        "national": 159,
         "union": 0,
         "other": 0
       },
@@ -9245,8 +9261,8 @@
             "Switzerland"
           ],
           "kind": "National",
-          "live": 29,
-          "expired": 1,
+          "live": 28,
+          "expired": 2,
           "cancelled": 0,
           "state": "live",
           "end": "2035-09-26"
@@ -10720,7 +10736,7 @@
       }
     },
     "1342-PT18": {
-      "products": 240,
+      "products": 241,
       "families": 76,
       "holderGroups": 34,
       "holderGroupsEver": 37,
@@ -10730,8 +10746,8 @@
       "unionTotal": 2,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 217,
-        "national": 209,
+        "total": 218,
+        "national": 210,
         "union": 8,
         "other": 0
       },
@@ -11116,6 +11132,23 @@
           "end": "2028-09-21"
         },
         {
+          "reference": "GR-0026725-0000",
+          "name": "Perblu",
+          "holder": "Bleu",
+          "markets": [
+            "Czechia",
+            "Greece",
+            "Hungary",
+            "Italy"
+          ],
+          "kind": "National",
+          "live": 4,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2031-07-29"
+        },
+        {
           "reference": "CZ-0031042-0000",
           "name": "Formitox",
           "holder": "Papírna",
@@ -11130,22 +11163,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2033-06-07"
-        },
-        {
-          "reference": "GR-0026725-0000",
-          "name": "Perblu",
-          "holder": "Bleu",
-          "markets": [
-            "Czechia",
-            "Greece",
-            "Hungary"
-          ],
-          "kind": "National",
-          "live": 3,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2031-07-29"
         },
         {
           "reference": "FR-0014441-0000",
@@ -11973,8 +11990,8 @@
       }
     },
     "24-PT18": {
-      "products": 520,
-      "families": 105,
+      "products": 524,
+      "families": 106,
       "holderGroups": 11,
       "holderGroupsEver": 14,
       "marketAreas": 31,
@@ -11983,8 +12000,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 191,
-        "national": 191,
+        "total": 197,
+        "national": 197,
         "union": 0,
         "other": 0
       },
@@ -12609,6 +12626,28 @@
           "end": "2036-03-02"
         },
         {
+          "reference": "PL-0018852-0000",
+          "name": "SOLFAC® Flexx",
+          "holder": "2022",
+          "markets": [
+            "Germany",
+            "Hungary",
+            "Italy",
+            "Luxembourg",
+            "Netherlands",
+            "Poland",
+            "Slovenia",
+            "Spain",
+            "Sweden"
+          ],
+          "kind": "National",
+          "live": 9,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-03-31"
+        },
+        {
           "reference": "SE-0017827-0002",
           "name": "Fastion Insect Poeder-Poudre",
           "holder": "Bayer",
@@ -12669,7 +12708,7 @@
         {
           "reference": "SE-0017827-0001",
           "name": "K-Othrine Deltamethrin DP 0.05",
-          "holder": "Bayer",
+          "holder": "SBM",
           "markets": [
             "Belgium",
             "Luxembourg",
@@ -12686,28 +12725,9 @@
           "end": "2027-09-07"
         },
         {
-          "reference": "PL-0018852-0000",
-          "name": "SOLFAC® Flexx",
-          "holder": "2022",
-          "markets": [
-            "Germany",
-            "Hungary",
-            "Luxembourg",
-            "Poland",
-            "Slovenia",
-            "Sweden"
-          ],
-          "kind": "National",
-          "live": 6,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2036-03-31"
-        },
-        {
           "reference": "SE-0017828-0002",
           "name": "K-Othrine Insect Spray",
-          "holder": "Bayer",
+          "holder": "SBM",
           "markets": [
             "Belgium",
             "Luxembourg",
@@ -12724,8 +12744,8 @@
         },
         {
           "reference": "SE-0017828-0001",
-          "name": "K-Othrine DELTAMETHRIN EW 0.15",
-          "holder": "Bayer",
+          "name": "K-Othrine Deltamethrin EW 0.15",
+          "holder": "SBM",
           "markets": [
             "Belgium",
             "Luxembourg",
@@ -12769,7 +12789,7 @@
           "expired": 0,
           "cancelled": 1,
           "state": "live",
-          "end": "2026-11-14"
+          "end": "2028-12-31"
         },
         {
           "reference": "FR-0002121-0000",
@@ -12886,9 +12906,23 @@
           "end": "2027-09-07"
         },
         {
+          "reference": "ES-0024632-0000",
+          "name": "Atomic Gr",
+          "holder": "Sharda",
+          "markets": [
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-10-28"
+        },
+        {
           "reference": "FI-0018170-0001",
           "name": "Baition D Muurahaisspray",
-          "holder": "Bayer",
+          "holder": "SBM",
           "markets": [
             "Finland"
           ],
@@ -12902,7 +12936,7 @@
         {
           "reference": "FI-0018171-0001",
           "name": "Baition D Pölyte",
-          "holder": "Bayer",
+          "holder": "SBM",
           "markets": [
             "Finland"
           ],
@@ -13320,8 +13354,8 @@
           "end": "2027-09-07"
         },
         {
-          "reference": "DK-0018111-0001",
-          "name": "Kvit D mod myrer (18-621-1-1)",
+          "reference": "DK-0018109-0001",
+          "name": "Kvit D Insektpudder",
           "holder": "Bayer",
           "markets": [
             "Denmark"
@@ -13334,8 +13368,8 @@
           "end": "2027-09-07"
         },
         {
-          "reference": "DK-0018109-0001",
-          "name": "Kvit Insektpudder (18-633-1-1)",
+          "reference": "DK-0018111-0001",
+          "name": "Kvit D mod myrer (18-621-1-1)",
           "holder": "Bayer",
           "markets": [
             "Denmark"
@@ -13420,7 +13454,7 @@
         {
           "reference": "FI-0018170-0002",
           "name": "Myrr Muurahaisspray",
-          "holder": "Bayer",
+          "holder": "SBM",
           "markets": [
             "Finland"
           ],
@@ -14129,7 +14163,7 @@
           "expired": 0,
           "cancelled": 0,
           "state": "live",
-          "end": "2026-11-30"
+          "end": "2027-03-31"
         },
         {
           "reference": "FR-0008545-0000",
@@ -14673,6 +14707,20 @@
           "end": "2031-01-20"
         },
         {
+          "reference": "FR-0021863-0000",
+          "name": "Auto-Flea",
+          "holder": "BRUNEL",
+          "markets": [
+            "France"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2032-04-19"
+        },
+        {
           "reference": "HR-0026090-0000",
           "name": "Baycidal Gr4",
           "holder": "Bábolna",
@@ -14741,20 +14789,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2030-12-04"
-        },
-        {
-          "reference": "FR-0021863-0000",
-          "name": "Difcont A",
-          "holder": "BRUNEL",
-          "markets": [
-            "France"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2032-04-19"
         },
         {
           "reference": "IT-0028161-0000",
@@ -15648,7 +15682,7 @@
       }
     },
     "1404-PT18": {
-      "products": 547,
+      "products": 548,
       "families": 136,
       "holderGroups": 35,
       "holderGroupsEver": 45,
@@ -15658,12 +15692,44 @@
       "unionTotal": 2,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 530,
-        "national": 522,
+        "total": 531,
+        "national": 523,
         "union": 8,
         "other": 0
       },
       "list": [
+        {
+          "reference": "NL-0018955-0000",
+          "name": "Transfluthrin Liquid Electric",
+          "holder": "Johnson",
+          "markets": [
+            "Belgium",
+            "Bulgaria",
+            "Croatia",
+            "Cyprus",
+            "Czechia",
+            "Estonia",
+            "Finland",
+            "France",
+            "Greece",
+            "Hungary",
+            "Italy",
+            "Luxembourg",
+            "Netherlands",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Slovakia",
+            "Slovenia",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 19,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2031-03-05"
+        },
         {
           "reference": "NL-0016419-0001",
           "name": "Raid Night&Day",
@@ -15725,37 +15791,6 @@
           "cancelled": 2,
           "state": "live",
           "end": "2030-12-16"
-        },
-        {
-          "reference": "NL-0018955-0000",
-          "name": "Transfluthrin Liquid Electric",
-          "holder": "Johnson",
-          "markets": [
-            "Belgium",
-            "Bulgaria",
-            "Croatia",
-            "Cyprus",
-            "Czechia",
-            "Estonia",
-            "France",
-            "Greece",
-            "Hungary",
-            "Italy",
-            "Luxembourg",
-            "Netherlands",
-            "Poland",
-            "Portugal",
-            "Romania",
-            "Slovakia",
-            "Slovenia",
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 18,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2031-03-05"
         },
         {
           "reference": "NL-0018843-0000",
@@ -18180,18 +18215,18 @@
       }
     },
     "1344-PT18": {
-      "products": 103,
-      "families": 47,
-      "holderGroups": 26,
-      "holderGroupsEver": 27,
+      "products": 105,
+      "families": 48,
+      "holderGroups": 27,
+      "holderGroupsEver": 28,
       "marketAreas": 23,
       "marketAreasLive": 22,
       "unionLive": 0,
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 102,
-        "national": 102,
+        "total": 104,
+        "national": 104,
         "union": 0,
         "other": 0
       },
@@ -18338,10 +18373,11 @@
           "markets": [
             "Czechia",
             "Greece",
-            "Hungary"
+            "Hungary",
+            "Italy"
           ],
           "kind": "National",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -18402,6 +18438,20 @@
           "cancelled": 0,
           "state": "live",
           "end": "2031-07-29"
+        },
+        {
+          "reference": "ES-0024632-0000",
+          "name": "Atomic Gr",
+          "holder": "Sharda",
+          "markets": [
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-10-28"
         },
         {
           "reference": "IT-0030560-0000",
@@ -20154,8 +20204,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 28,
-        "national": 28,
+        "total": 29,
+        "national": 29,
         "union": 0,
         "other": 0
       },
@@ -20282,7 +20332,7 @@
       }
     },
     "1283-PT18": {
-      "products": 274,
+      "products": 277,
       "families": 171,
       "holderGroups": 40,
       "holderGroupsEver": 40,
@@ -20292,8 +20342,8 @@
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 264,
-        "national": 264,
+        "total": 267,
+        "national": 267,
         "union": 0,
         "other": 0
       },
@@ -20488,6 +20538,25 @@
           "end": "2033-03-08"
         },
         {
+          "reference": "DE-0033772-0000",
+          "name": "Silberfischchen-Köderdose",
+          "holder": "Aeroxon",
+          "markets": [
+            "Austria",
+            "Belgium",
+            "France",
+            "Germany",
+            "Luxembourg",
+            "Netherlands"
+          ],
+          "kind": "National",
+          "live": 6,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2034-12-06"
+        },
+        {
           "reference": "DE-0034534-0000",
           "name": "Sticker Vitre Anti-Mouches",
           "holder": "Aeroxon",
@@ -20505,24 +20574,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2035-03-18"
-        },
-        {
-          "reference": "DE-0033772-0000",
-          "name": "Silberfischchen-Köderdose",
-          "holder": "Aeroxon",
-          "markets": [
-            "Austria",
-            "Belgium",
-            "Germany",
-            "Luxembourg",
-            "Netherlands"
-          ],
-          "kind": "National",
-          "live": 5,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2034-12-06"
         },
         {
           "reference": "FR-0030179-0000",
@@ -20647,6 +20698,36 @@
           "cancelled": 0,
           "state": "live",
           "end": "2033-12-05"
+        },
+        {
+          "reference": "GR-0030654-0001",
+          "name": "Cypermethrin 0.5% - Dp",
+          "holder": "Kaeltia",
+          "markets": [
+            "Greece",
+            "Netherlands"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-08-26"
+        },
+        {
+          "reference": "GR-0030654-0002",
+          "name": "Cypermethrin 1% - Sg",
+          "holder": "Kaeltia",
+          "markets": [
+            "Greece",
+            "Netherlands"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2036-08-26"
         },
         {
           "reference": "FR-0025027-0008",
@@ -21787,34 +21868,6 @@
           "end": "2033-01-18"
         },
         {
-          "reference": "GR-0030654-0001",
-          "name": "Cypermethrin 0.5% - Dp",
-          "holder": "Kaeltia",
-          "markets": [
-            "Greece"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2036-08-26"
-        },
-        {
-          "reference": "GR-0030654-0002",
-          "name": "Cypermethrin 1% - Sg",
-          "holder": "Kaeltia",
-          "markets": [
-            "Greece"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2036-08-26"
-        },
-        {
           "reference": "IT-0031389-0000",
           "name": "Cyperthor",
           "holder": "NEWPHARM",
@@ -22802,6 +22855,332 @@
         "marketAreasLive": 26
       }
     },
+    "62-PT18": {
+      "products": 34,
+      "families": 10,
+      "holderGroups": 3,
+      "holderGroupsEver": 3,
+      "marketAreas": 19,
+      "marketAreasLive": 6,
+      "unionLive": 0,
+      "unionTotal": 0,
+      "newestGrant": 2024,
+      "pastExpiry": {
+        "total": 31,
+        "national": 31,
+        "union": 0,
+        "other": 0
+      },
+      "list": [
+        {
+          "reference": "IT-0014947-0000",
+          "name": "Device GR2",
+          "holder": "Arysta",
+          "markets": [
+            "Croatia",
+            "Cyprus",
+            "Czechia",
+            "France",
+            "Greece",
+            "Italy",
+            "Poland",
+            "Slovakia",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 5,
+          "expired": 0,
+          "cancelled": 4,
+          "state": "live",
+          "end": "2033-08-07"
+        },
+        {
+          "reference": "IT-0014948-0000",
+          "name": "Dimilin G4",
+          "holder": "Arysta",
+          "markets": [
+            "Belgium",
+            "Czechia",
+            "Estonia",
+            "Germany",
+            "Italy",
+            "Latvia",
+            "Netherlands"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 1,
+          "cancelled": 5,
+          "state": "live",
+          "end": "2033-08-09"
+        },
+        {
+          "reference": "ES-0012803-0000",
+          "name": "Termigard",
+          "holder": "QUIMICA",
+          "markets": [
+            "France",
+            "Greece",
+            "Italy",
+            "Portugal",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 4,
+          "state": "live",
+          "end": "2029-03-26"
+        },
+        {
+          "reference": "PT-0022096-0000",
+          "name": "Labyrinth",
+          "holder": "QUIMUNSA",
+          "markets": [
+            "Portugal"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2029-03-26"
+        },
+        {
+          "reference": "DK-0012214-0000",
+          "name": "Dimilin 5",
+          "holder": "Arysta",
+          "markets": [
+            "Denmark",
+            "Estonia",
+            "Finland",
+            "Norway",
+            "Poland",
+            "Sweden"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 0,
+          "cancelled": 6,
+          "state": "dead",
+          "end": "2027-06-20"
+        },
+        {
+          "reference": "FR-0011988-0000",
+          "name": "Labyrinth+",
+          "holder": "QUIMICA",
+          "markets": [
+            "France",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 1,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2027-01-16"
+        },
+        {
+          "reference": "ES-0020998-0000",
+          "name": "Labyrinth",
+          "holder": "QUIMUNSA",
+          "markets": [
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 0,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2029-03-26"
+        },
+        {
+          "reference": "FR-0011989-0000",
+          "name": "Labyrinth",
+          "holder": "QUIMUNSA",
+          "markets": [
+            "France"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 0,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2029-03-26"
+        },
+        {
+          "reference": "IT-0027337-0000",
+          "name": "Labyrinth",
+          "holder": "QUIMUNSA",
+          "markets": [
+            "Italy"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 0,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2029-03-26"
+        },
+        {
+          "reference": "ES-0023719-0000",
+          "name": "Termigard Ultra",
+          "holder": "QUIMICA",
+          "markets": [
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 1,
+          "cancelled": 0,
+          "state": "dead",
+          "end": "2025-01-31"
+        }
+      ],
+      "trend": {
+        "since": "2026-09-03",
+        "products": 34,
+        "holderGroups": 3,
+        "marketAreasLive": 6
+      }
+    },
+    "15-PT18": {
+      "products": 48,
+      "families": 5,
+      "holderGroups": 2,
+      "holderGroupsEver": 3,
+      "marketAreas": 27,
+      "marketAreasLive": 4,
+      "unionLive": 0,
+      "unionTotal": 2,
+      "newestGrant": 2025,
+      "pastExpiry": {
+        "total": 33,
+        "national": 33,
+        "union": 0,
+        "other": 0
+      },
+      "list": [
+        {
+          "reference": "BE-0017141-0000",
+          "name": "Maxforce Platin",
+          "holder": "Bayer",
+          "markets": [
+            "Austria",
+            "Belgium",
+            "Bulgaria",
+            "Croatia",
+            "Czechia",
+            "Denmark",
+            "Estonia",
+            "Finland",
+            "France",
+            "Germany",
+            "Greece",
+            "Hungary",
+            "Ireland",
+            "Italy",
+            "Latvia",
+            "Lithuania",
+            "Norway",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Slovakia",
+            "Slovenia",
+            "Spain",
+            "Switzerland"
+          ],
+          "kind": "National",
+          "live": 4,
+          "expired": 4,
+          "cancelled": 17,
+          "state": "live",
+          "end": "2029-07-15"
+        },
+        {
+          "reference": "DE-0016891-0000",
+          "name": "K-Alba",
+          "holder": "SUMITOMO",
+          "markets": [
+            "Austria",
+            "Belgium",
+            "Croatia",
+            "Czechia",
+            "France",
+            "Germany",
+            "Greece",
+            "Hungary",
+            "Italy",
+            "Poland",
+            "Slovakia",
+            "Slovenia",
+            "Spain",
+            "Switzerland"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 1,
+          "cancelled": 11,
+          "state": "live",
+          "end": "2027-12-07"
+        },
+        {
+          "reference": "EU-0024951-0000",
+          "name": "Pesguard® Gel",
+          "holder": "SUMITOMO",
+          "markets": [
+            "Austria | Luxembourg | Cyprus | France | Romania | Lithuania | Portugal | Poland | Greece | Hungary | Sweden | Finland | Netherlands | Spain | Ireland | Slovenia | Malta | Latvia | Slovakia | Belgium | Denmark | Croatia | Italy | Czechia | Germany | Estonia | Bulgaria",
+            "Iceland",
+            "Norway",
+            "Switzerland"
+          ],
+          "kind": "Union",
+          "live": 0,
+          "expired": 4,
+          "cancelled": 0,
+          "state": "dead",
+          "end": "2026-06-30"
+        },
+        {
+          "reference": "EU-0025436-0000",
+          "name": "SchwabEX-Guard",
+          "holder": "SUMITOMO",
+          "markets": [
+            "Iceland",
+            "Malta | Slovenia | France | Finland | Hungary | Italy | Luxembourg | Greece | Czechia | Portugal | Poland | Croatia | Romania | Slovakia | Austria | Denmark | Germany | Ireland | Latvia | Sweden | Lithuania | Spain | Cyprus | Belgium | Bulgaria | Estonia | Netherlands",
+            "Norway",
+            "Switzerland"
+          ],
+          "kind": "Union",
+          "live": 0,
+          "expired": 3,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2026-06-30"
+        },
+        {
+          "reference": "IT-0028742-0000",
+          "name": "Imagel Plus",
+          "holder": "Bayer",
+          "markets": [
+            "Italy"
+          ],
+          "kind": "National",
+          "live": 0,
+          "expired": 0,
+          "cancelled": 1,
+          "state": "dead",
+          "end": "2029-07-15"
+        }
+      ],
+      "trend": {
+        "since": "2026-09-03",
+        "products": 48,
+        "holderGroups": 2,
+        "marketAreasLive": 23
+      }
+    },
     "1377-PT18": {
       "products": 206,
       "families": 56,
@@ -23761,195 +24140,6 @@
         "marketAreasLive": 26
       }
     },
-    "62-PT18": {
-      "products": 34,
-      "families": 10,
-      "holderGroups": 3,
-      "holderGroupsEver": 3,
-      "marketAreas": 19,
-      "marketAreasLive": 6,
-      "unionLive": 0,
-      "unionTotal": 0,
-      "newestGrant": 2024,
-      "pastExpiry": {
-        "total": 31,
-        "national": 31,
-        "union": 0,
-        "other": 0
-      },
-      "list": [
-        {
-          "reference": "IT-0014947-0000",
-          "name": "Device GR2",
-          "holder": "Arysta",
-          "markets": [
-            "Croatia",
-            "Cyprus",
-            "Czechia",
-            "France",
-            "Greece",
-            "Italy",
-            "Poland",
-            "Slovakia",
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 5,
-          "expired": 0,
-          "cancelled": 4,
-          "state": "live",
-          "end": "2033-08-07"
-        },
-        {
-          "reference": "IT-0014948-0000",
-          "name": "Dimilin G4",
-          "holder": "Arysta",
-          "markets": [
-            "Belgium",
-            "Czechia",
-            "Estonia",
-            "Germany",
-            "Italy",
-            "Latvia",
-            "Netherlands"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 1,
-          "cancelled": 5,
-          "state": "live",
-          "end": "2033-08-09"
-        },
-        {
-          "reference": "ES-0012803-0000",
-          "name": "Termigard",
-          "holder": "QUIMICA",
-          "markets": [
-            "France",
-            "Greece",
-            "Italy",
-            "Portugal",
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 4,
-          "state": "live",
-          "end": "2029-03-26"
-        },
-        {
-          "reference": "PT-0022096-0000",
-          "name": "Labyrinth",
-          "holder": "QUIMUNSA",
-          "markets": [
-            "Portugal"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2029-03-26"
-        },
-        {
-          "reference": "DK-0012214-0000",
-          "name": "Dimilin 5",
-          "holder": "Arysta",
-          "markets": [
-            "Denmark",
-            "Estonia",
-            "Finland",
-            "Norway",
-            "Poland",
-            "Sweden"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 0,
-          "cancelled": 6,
-          "state": "dead",
-          "end": "2027-06-20"
-        },
-        {
-          "reference": "FR-0011988-0000",
-          "name": "Labyrinth+",
-          "holder": "QUIMICA",
-          "markets": [
-            "France",
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 1,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2027-01-16"
-        },
-        {
-          "reference": "ES-0020998-0000",
-          "name": "Labyrinth",
-          "holder": "QUIMUNSA",
-          "markets": [
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 0,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2029-03-26"
-        },
-        {
-          "reference": "FR-0011989-0000",
-          "name": "Labyrinth",
-          "holder": "QUIMUNSA",
-          "markets": [
-            "France"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 0,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2029-03-26"
-        },
-        {
-          "reference": "IT-0027337-0000",
-          "name": "Labyrinth",
-          "holder": "QUIMUNSA",
-          "markets": [
-            "Italy"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 0,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2029-03-26"
-        },
-        {
-          "reference": "ES-0023719-0000",
-          "name": "Termigard Ultra",
-          "holder": "QUIMICA",
-          "markets": [
-            "Spain"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 1,
-          "cancelled": 0,
-          "state": "dead",
-          "end": "2025-01-31"
-        }
-      ],
-      "trend": {
-        "since": "2026-09-03",
-        "products": 34,
-        "holderGroups": 3,
-        "marketAreasLive": 6
-      }
-    },
     "59-PT18": {
       "products": 197,
       "families": 46,
@@ -24035,9 +24225,9 @@
             "United Kingdom"
           ],
           "kind": "National",
-          "live": 20,
+          "live": 19,
           "expired": 1,
-          "cancelled": 0,
+          "cancelled": 1,
           "state": "live",
           "end": "2027-11-29"
         },
@@ -24766,143 +24956,6 @@
         "products": 196,
         "holderGroups": 17,
         "marketAreasLive": 31
-      }
-    },
-    "15-PT18": {
-      "products": 48,
-      "families": 5,
-      "holderGroups": 2,
-      "holderGroupsEver": 3,
-      "marketAreas": 27,
-      "marketAreasLive": 4,
-      "unionLive": 0,
-      "unionTotal": 2,
-      "newestGrant": 2025,
-      "pastExpiry": {
-        "total": 33,
-        "national": 33,
-        "union": 0,
-        "other": 0
-      },
-      "list": [
-        {
-          "reference": "BE-0017141-0000",
-          "name": "Maxforce Platin",
-          "holder": "Bayer",
-          "markets": [
-            "Austria",
-            "Belgium",
-            "Bulgaria",
-            "Croatia",
-            "Czechia",
-            "Denmark",
-            "Estonia",
-            "Finland",
-            "France",
-            "Germany",
-            "Greece",
-            "Hungary",
-            "Ireland",
-            "Italy",
-            "Latvia",
-            "Lithuania",
-            "Norway",
-            "Poland",
-            "Portugal",
-            "Romania",
-            "Slovakia",
-            "Slovenia",
-            "Spain",
-            "Switzerland"
-          ],
-          "kind": "National",
-          "live": 4,
-          "expired": 4,
-          "cancelled": 17,
-          "state": "live",
-          "end": "2029-07-15"
-        },
-        {
-          "reference": "DE-0016891-0000",
-          "name": "K-Alba",
-          "holder": "SUMITOMO",
-          "markets": [
-            "Austria",
-            "Belgium",
-            "Croatia",
-            "Czechia",
-            "France",
-            "Germany",
-            "Greece",
-            "Hungary",
-            "Italy",
-            "Poland",
-            "Slovakia",
-            "Slovenia",
-            "Spain",
-            "Switzerland"
-          ],
-          "kind": "National",
-          "live": 2,
-          "expired": 1,
-          "cancelled": 11,
-          "state": "live",
-          "end": "2027-12-07"
-        },
-        {
-          "reference": "EU-0024951-0000",
-          "name": "Pesguard® Gel",
-          "holder": "SUMITOMO",
-          "markets": [
-            "Austria | Luxembourg | Cyprus | France | Romania | Lithuania | Portugal | Poland | Greece | Hungary | Sweden | Finland | Netherlands | Spain | Ireland | Slovenia | Malta | Latvia | Slovakia | Belgium | Denmark | Croatia | Italy | Czechia | Germany | Estonia | Bulgaria",
-            "Iceland",
-            "Norway",
-            "Switzerland"
-          ],
-          "kind": "Union",
-          "live": 0,
-          "expired": 4,
-          "cancelled": 0,
-          "state": "dead",
-          "end": "2026-06-30"
-        },
-        {
-          "reference": "EU-0025436-0000",
-          "name": "SchwabEX-Guard",
-          "holder": "SUMITOMO",
-          "markets": [
-            "Iceland",
-            "Malta | Slovenia | France | Finland | Hungary | Italy | Luxembourg | Greece | Czechia | Portugal | Poland | Croatia | Romania | Slovakia | Austria | Denmark | Germany | Ireland | Latvia | Sweden | Lithuania | Spain | Cyprus | Belgium | Bulgaria | Estonia | Netherlands",
-            "Norway",
-            "Switzerland"
-          ],
-          "kind": "Union",
-          "live": 0,
-          "expired": 3,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2026-06-30"
-        },
-        {
-          "reference": "IT-0028742-0000",
-          "name": "Imagel Plus",
-          "holder": "Bayer",
-          "markets": [
-            "Italy"
-          ],
-          "kind": "National",
-          "live": 0,
-          "expired": 0,
-          "cancelled": 1,
-          "state": "dead",
-          "end": "2029-07-15"
-        }
-      ],
-      "trend": {
-        "since": "2026-09-03",
-        "products": 48,
-        "holderGroups": 2,
-        "marketAreasLive": 23
       }
     },
     "1238-PT18": {
@@ -26355,18 +26408,18 @@
       }
     },
     "1316-PT19": {
-      "products": 218,
-      "families": 125,
-      "holderGroups": 40,
-      "holderGroupsEver": 40,
-      "marketAreas": 23,
-      "marketAreasLive": 23,
+      "products": 233,
+      "families": 130,
+      "holderGroups": 41,
+      "holderGroupsEver": 41,
+      "marketAreas": 24,
+      "marketAreasLive": 24,
       "unionLive": 0,
       "unionTotal": 0,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 218,
-        "national": 218,
+        "total": 231,
+        "national": 231,
         "union": 0,
         "other": 0
       },
@@ -26384,6 +26437,7 @@
             "Finland",
             "France",
             "Germany",
+            "Greece",
             "Hungary",
             "Italy",
             "Latvia",
@@ -26395,7 +26449,7 @@
             "Switzerland"
           ],
           "kind": "National",
-          "live": 17,
+          "live": 18,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -26414,12 +26468,13 @@
             "Ireland",
             "Luxembourg",
             "Netherlands",
+            "Norway",
             "Slovenia",
             "Sweden",
             "Switzerland"
           ],
           "kind": "National",
-          "live": 11,
+          "live": 12,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -26438,12 +26493,13 @@
             "Ireland",
             "Luxembourg",
             "Netherlands",
+            "Norway",
             "Slovenia",
             "Sweden",
             "Switzerland"
           ],
           "kind": "National",
-          "live": 11,
+          "live": 12,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -26665,10 +26721,101 @@
           "name": "Active shield skin repellent lotion",
           "holder": "Henkel",
           "markets": [
-            "Belgium"
+            "Belgium",
+            "Spain"
           ],
           "kind": "National",
-          "live": 1,
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0006",
+          "name": "Anti-Mosquito Familly Lotion Aloe Vera",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0007",
+          "name": "Anti-Moustiques répulsif Aerosol",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0001",
+          "name": "Anti-Moustiques répulsif Invisible",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0004",
+          "name": "Anti-Moustiques Sport Xtreme defense Aerosol",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0005",
+          "name": "Anti-Moustiques Zero Lotion protection habituelle",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2035-08-31"
+        },
+        {
+          "reference": "BE-0035089-0003",
+          "name": "Locion Tropical",
+          "holder": "Henkel",
+          "markets": [
+            "Belgium",
+            "Spain"
+          ],
+          "kind": "National",
+          "live": 2,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -26689,25 +26836,25 @@
           "end": "2034-10-21"
         },
         {
-          "reference": "BE-0035089-0003",
-          "name": "Anti Insect Tropical Xtreme defense Lotion",
-          "holder": "Henkel",
+          "reference": "DE-0028647-0000",
+          "name": "Anti-Brumm Family Protect",
+          "holder": "Verfora",
           "markets": [
-            "Belgium"
+            "Germany"
           ],
           "kind": "National",
           "live": 1,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
-          "end": "2035-08-31"
+          "end": "2034-10-21"
         },
         {
-          "reference": "DE-0028647-0000",
+          "reference": "AT-0037470-0000",
           "name": "Anti-Brumm Family Protect",
           "holder": "Verfora",
           "markets": [
-            "Germany"
+            "Austria"
           ],
           "kind": "National",
           "live": 1,
@@ -26729,76 +26876,6 @@
           "cancelled": 0,
           "state": "live",
           "end": "2035-11-28"
-        },
-        {
-          "reference": "BE-0035089-0006",
-          "name": "Anti-Mosquito Familly Lotion Aloe Vera",
-          "holder": "Henkel",
-          "markets": [
-            "Belgium"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2035-08-31"
-        },
-        {
-          "reference": "BE-0035089-0007",
-          "name": "Anti-Moustiques répulsif Aerosol",
-          "holder": "Henkel",
-          "markets": [
-            "Belgium"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2035-08-31"
-        },
-        {
-          "reference": "BE-0035089-0001",
-          "name": "Anti-Moustiques répulsif Invisible",
-          "holder": "Henkel",
-          "markets": [
-            "Belgium"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2035-08-31"
-        },
-        {
-          "reference": "BE-0035089-0004",
-          "name": "Anti-Moustiques Sport Xtreme defense Aerosol",
-          "holder": "Henkel",
-          "markets": [
-            "Belgium"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2035-08-31"
-        },
-        {
-          "reference": "BE-0035089-0005",
-          "name": "Anti-Moustiques Zero Lotion protection habituelle",
-          "holder": "Henkel",
-          "markets": [
-            "Belgium"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2035-08-31"
         },
         {
           "reference": "HU-0038302-0000",
@@ -26834,6 +26911,20 @@
           "holder": "JoCos",
           "markets": [
             "Switzerland"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2034-10-21"
+        },
+        {
+          "reference": "AT-0037467-0000",
+          "name": "BiteStop protect classic",
+          "holder": "JoCos",
+          "markets": [
+            "Austria"
           ],
           "kind": "National",
           "live": 1,
@@ -27030,6 +27121,20 @@
           "holder": "Medicis",
           "markets": [
             "Germany"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2034-10-21"
+        },
+        {
+          "reference": "AT-0028768-0001",
+          "name": "Doctan Active",
+          "holder": "Medicis",
+          "markets": [
+            "Austria"
           ],
           "kind": "National",
           "live": 1,
@@ -27529,6 +27634,20 @@
           "end": "2034-10-21"
         },
         {
+          "reference": "AT-0037654-0000",
+          "name": "kik FAMILY",
+          "holder": "Martec",
+          "markets": [
+            "Austria"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2034-10-21"
+        },
+        {
           "reference": "DE-0028555-0000",
           "name": "kik SENSITIVE",
           "holder": "Martec",
@@ -27548,6 +27667,20 @@
           "holder": "Martec",
           "markets": [
             "France"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2034-10-21"
+        },
+        {
+          "reference": "BE-0038307-0001",
+          "name": "Kruidvat Anti-Insect Icaridin 20% Spray",
+          "holder": "Vaco",
+          "markets": [
+            "Belgium"
           ],
           "kind": "National",
           "live": 1,
@@ -28336,7 +28469,7 @@
         "marketAreasLive": 1
       }
     },
-    "1336-PT18": {
+    "1287-PT18": {
       "products": 2,
       "families": 1,
       "holderGroups": 0,
@@ -28376,7 +28509,7 @@
         "marketAreasLive": 0
       }
     },
-    "1287-PT18": {
+    "1336-PT18": {
       "products": 2,
       "families": 1,
       "holderGroups": 0,
@@ -28453,6 +28586,45 @@
         "products": 0,
         "holderGroups": 0,
         "marketAreasLive": 0
+      }
+    },
+    "1318-PT18": {
+      "products": 1,
+      "families": 1,
+      "holderGroups": 1,
+      "holderGroupsEver": 1,
+      "marketAreas": 1,
+      "marketAreasLive": 1,
+      "unionLive": 0,
+      "unionTotal": 0,
+      "newestGrant": 2022,
+      "pastExpiry": {
+        "total": 1,
+        "national": 1,
+        "union": 0,
+        "other": 0
+      },
+      "list": [
+        {
+          "reference": "FR-0021863-0000",
+          "name": "Auto-Flea",
+          "holder": "BRUNEL",
+          "markets": [
+            "France"
+          ],
+          "kind": "National",
+          "live": 1,
+          "expired": 0,
+          "cancelled": 0,
+          "state": "live",
+          "end": "2032-04-19"
+        }
+      ],
+      "trend": {
+        "since": "2026-09-03",
+        "products": 1,
+        "holderGroups": 1,
+        "marketAreasLive": 1
       }
     },
     "1-PT18": {
@@ -28615,19 +28787,19 @@
       }
     },
     "1469-PT19": {
-      "products": 34,
+      "products": 42,
       "families": 18,
       "holderGroups": 2,
       "holderGroupsEver": 2,
-      "marketAreas": 11,
-      "marketAreasLive": 11,
+      "marketAreas": 12,
+      "marketAreasLive": 12,
       "unionLive": 8,
       "unionTotal": 8,
       "newestGrant": 2026,
       "pastExpiry": {
-        "total": 34,
+        "total": 42,
         "national": 10,
-        "union": 24,
+        "union": 32,
         "other": 0
       },
       "list": [
@@ -28636,12 +28808,13 @@
           "name": "Effectis 0,4%M Repellent Cats Foam",
           "holder": "Agrobiothers",
           "markets": [
-            "Germany | Czechia | Italy | Cyprus | Estonia | Lithuania | Poland | Portugal | Ireland | France | Luxembourg | Slovenia | Greece | Austria | Belgium | Romania | Finland | Bulgaria | Sweden | Denmark | Malta | Croatia | Slovakia | Latvia | Spain | Hungary | Netherlands",
+            "Germany | Spain | Belgium | Poland | Slovenia | Slovakia | Greece | Croatia | Cyprus | Denmark | Italy | Czechia | Romania | Latvia | Netherlands | Luxembourg | Malta | Sweden | Ireland | Portugal | Hungary | Bulgaria | Finland | France | Austria | Estonia | Lithuania",
             "Iceland",
+            "Norway",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28653,11 +28826,12 @@
           "holder": "Agrobiothers",
           "markets": [
             "Iceland",
-            "Spain | Finland | Cyprus | Malta | Italy | Germany | Estonia | Hungary | Sweden | Latvia | Lithuania | Bulgaria | Czechia | Denmark | Poland | Slovakia | Luxembourg | Slovenia | France | Austria | Ireland | Netherlands | Greece | Belgium | Romania | Portugal | Croatia",
+            "Lithuania | Italy | Belgium | Ireland | Finland | Portugal | Spain | Netherlands | Poland | Romania | Malta | Hungary | Luxembourg | Austria | Croatia | Sweden | Latvia | Czechia | Bulgaria | Denmark | Greece | Cyprus | Estonia | Germany | Slovakia | France | Slovenia",
+            "Norway",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28668,12 +28842,13 @@
           "name": "Effectis 0.5%M Repellent Dogs Spray",
           "holder": "Agrobiothers",
           "markets": [
-            "Finland | Bulgaria | Cyprus | Poland | Czechia | Italy | Spain | Latvia | Romania | Croatia | Estonia | Malta | Belgium | Netherlands | Portugal | Germany | Luxembourg | Lithuania | Sweden | Hungary | Greece | Ireland | Denmark | Austria | France | Slovenia | Slovakia",
             "Iceland",
+            "Norway",
+            "Portugal | Romania | Estonia | Czechia | Slovenia | Finland | Malta | Netherlands | Poland | Croatia | Italy | Austria | Sweden | Ireland | Cyprus | Greece | Lithuania | Luxembourg | Bulgaria | Belgium | Spain | Slovakia | Germany | Hungary | Denmark | France | Latvia",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28684,12 +28859,13 @@
           "name": "Effectis 10%M Repellent Spot-On Solution For Cats",
           "holder": "Agrobiothers",
           "markets": [
-            "Germany | Finland | Romania | Slovakia | Denmark | Hungary | Austria | Luxembourg | Slovenia | Italy | Lithuania | Sweden | Greece | Portugal | Malta | Spain | Czechia | Netherlands | France | Cyprus | Belgium | Latvia | Ireland | Croatia | Estonia | Poland | Bulgaria",
             "Iceland",
+            "Norway",
+            "Romania | Belgium | Spain | Lithuania | Germany | Bulgaria | Netherlands | Czechia | Portugal | Malta | Croatia | Austria | France | Greece | Sweden | Slovenia | Finland | Slovakia | Poland | Cyprus | Latvia | Hungary | Italy | Estonia | Ireland | Denmark | Luxembourg",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28700,12 +28876,13 @@
           "name": "Effectis 10%M Repellent Spot-On Solution For Kittens",
           "holder": "Agrobiothers",
           "markets": [
+            "France | Estonia | Lithuania | Romania | Hungary | Finland | Italy | Poland | Austria | Czechia | Germany | Belgium | Portugal | Slovenia | Latvia | Slovakia | Denmark | Sweden | Spain | Croatia | Cyprus | Malta | Netherlands | Bulgaria | Greece | Ireland | Luxembourg",
             "Iceland",
-            "Malta | Slovakia | Denmark | Estonia | Spain | Slovenia | Cyprus | Austria | France | Germany | Ireland | Croatia | Bulgaria | Poland | Lithuania | Luxembourg | Portugal | Latvia | Hungary | Finland | Sweden | Romania | Netherlands | Italy | Greece | Belgium | Czechia",
+            "Norway",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28717,11 +28894,12 @@
           "holder": "Agrobiothers",
           "markets": [
             "Iceland",
-            "Malta | Slovakia | Germany | Austria | France | Cyprus | Lithuania | Luxembourg | Croatia | Greece | Netherlands | Estonia | Denmark | Belgium | Romania | Hungary | Sweden | Slovenia | Bulgaria | Poland | Ireland | Spain | Italy | Latvia | Finland | Czechia | Portugal",
+            "Norway",
+            "Portugal | Slovenia | Denmark | Czechia | Bulgaria | Poland | Latvia | Lithuania | Romania | Belgium | Netherlands | Sweden | Finland | Estonia | Slovakia | Ireland | Italy | Luxembourg | Austria | France | Hungary | Malta | Croatia | Greece | Spain | Germany | Cyprus",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28733,11 +28911,12 @@
           "holder": "Agrobiothers",
           "markets": [
             "Iceland",
-            "Poland | Spain | Luxembourg | Latvia | Germany | Ireland | Lithuania | Slovakia | Czechia | Austria | Malta | Romania | Greece | Croatia | Slovenia | Hungary | Estonia | Belgium | Netherlands | Italy | Denmark | France | Finland | Sweden | Cyprus | Bulgaria | Portugal",
+            "Latvia | Slovakia | Italy | Croatia | Belgium | Netherlands | Poland | Greece | Finland | Cyprus | Hungary | Portugal | Sweden | Denmark | Czechia | Romania | Luxembourg | Germany | Slovenia | Spain | Malta | France | Estonia | Bulgaria | Lithuania | Ireland | Austria",
+            "Norway",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28749,11 +28928,12 @@
           "holder": "Agrobiothers",
           "markets": [
             "Iceland",
-            "Malta | Hungary | Croatia | Greece | Netherlands | Luxembourg | Germany | Poland | Slovakia | Czechia | Lithuania | Italy | Finland | France | Austria | Portugal | Latvia | Cyprus | Romania | Estonia | Slovenia | Denmark | Spain | Bulgaria | Belgium | Ireland | Sweden",
+            "Malta | Spain | Germany | Cyprus | Estonia | Belgium | Sweden | France | Romania | Finland | Slovakia | Netherlands | Denmark | Slovenia | Poland | Bulgaria | Czechia | Italy | Luxembourg | Ireland | Portugal | Croatia | Austria | Hungary | Greece | Lithuania | Latvia",
+            "Norway",
             "Switzerland"
           ],
           "kind": "Union",
-          "live": 3,
+          "live": 4,
           "expired": 0,
           "cancelled": 0,
           "state": "live",
@@ -28995,45 +29175,6 @@
         "products": 28,
         "holderGroups": 0,
         "marketAreasLive": 0
-      }
-    },
-    "1318-PT18": {
-      "products": 1,
-      "families": 1,
-      "holderGroups": 1,
-      "holderGroupsEver": 1,
-      "marketAreas": 1,
-      "marketAreasLive": 1,
-      "unionLive": 0,
-      "unionTotal": 0,
-      "newestGrant": 2022,
-      "pastExpiry": {
-        "total": 1,
-        "national": 1,
-        "union": 0,
-        "other": 0
-      },
-      "list": [
-        {
-          "reference": "FR-0021863-0000",
-          "name": "Difcont A",
-          "holder": "BRUNEL",
-          "markets": [
-            "France"
-          ],
-          "kind": "National",
-          "live": 1,
-          "expired": 0,
-          "cancelled": 0,
-          "state": "live",
-          "end": "2032-04-19"
-        }
-      ],
-      "trend": {
-        "since": "2026-09-03",
-        "products": 1,
-        "holderGroups": 1,
-        "marketAreasLive": 1
       }
     },
     "1449-PT18": {

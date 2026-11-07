@@ -98,6 +98,7 @@ const BY_KIND: Record<string, SignalCategory> = {
   supplier: 'industry',
   cancellation: 'industry',
   hazard: 'hazard',
+  reach: 'other-eu',
   ppp: 'other-eu',
   ngo: 'ngo',
 }

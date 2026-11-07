@@ -1,6 +1,5 @@
 import { shortName } from './data'
 import {
-  cleared,
   edspAdverse,
   hasEdAssessment,
   hazardActivities,
@@ -8,9 +7,9 @@ import {
   isLive,
   pactFor,
   pactMeta,
-  recordedActivities,
 } from './pact'
-import type { FeedRecord, PactActivity, PactRecord, PanListing, Substance } from './types'
+import { pactRecords } from './pactSignals'
+import type { FeedRecord, PactRecord, PanListing, Substance } from './types'
 
 // Hazard listings and hazard assessments, as dated records.
 //
@@ -28,40 +27,6 @@ import type { FeedRecord, PactActivity, PactRecord, PanListing, Substance } from
  *  is where the classification and its year are read from. Checked — it
  *  answers and serves the PDF. */
 const NPIC_CARCINOGEN = 'https://npic.orst.edu/chemicals_evaluated.pdf'
-
-function activityRecord(a: PactActivity, s: Substance): FeedRecord {
-  const open = isLive(a.status)
-  const adverse = identified(a.status)
-  // An authority asked whether the substance meets the criteria and concluded
-  // that it does not. Weak, and positive: it closes a question that was open
-  // against the substance, without being an argument for renewal by itself.
-  const found_nothing = !open && !adverse && cleared(a.status)
-  return {
-    kind: 'hazard',
-    date: a.updated || a.intention,
-    datePrecision: 'day',
-    dateDerived: false,
-    title: `${a.areaLabel}: ${a.status}`,
-    summary:
-      `ECHA's Public Activities Coordination Tool records a ${a.areaLabel.toLowerCase()} ` +
-      `for ${shortName(s)}, with the status “${a.status}”.`,
-    tags: ['hazard assessment', a.area],
-    blockers: [],
-    signal: {
-      // Adverse where something was identified; a live question weighs less
-      // than a finding; a conclusion that the criteria are not met is a point
-      // in the substance's favour; anything inconclusive weighs neither way.
-      direction: adverse || open ? 'NEGATIVE' : found_nothing ? 'POSITIVE' : 'NEUTRAL',
-      strength: adverse ? 2 : 1,
-      label: adverse ? 'Strong' : found_nothing ? 'Weak' : '',
-      basis: 'documented',
-      rationale: '',
-    },
-    sources: a.url
-      ? [{ citation: `ECHA — ${a.areaLabel}`, pinpoint: '', tier: 'PRIMARY', verified: true, url: a.url, note: '' }]
-      : [],
-  }
-}
 
 /** The EPA listing, dated by the year it was classified. The endocrine-disruptor
  *  lists carry no date field — only a year inside free text about something
@@ -185,9 +150,8 @@ export function hazardRecords(s: Substance): FeedRecord[] {
   return [
     ...carcinogenRecord(record, s),
     ...(record.pan ?? []).flatMap(l => panRecord(l, s)),
-    ...recordedActivities(record.activities)
-      .filter(a => a.updated || a.intention)
-      .map(a => activityRecord(a, s)),
+    // Activity statuses, CLH proposals and list changes: lib/pactSignals.ts.
+    ...pactRecords(record, s),
   ]
 }
 

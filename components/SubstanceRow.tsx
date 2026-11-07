@@ -157,17 +157,7 @@ function SignalStrip({ records }: { records: FeedRecord[] }) {
  *  The signals box states how much evidence exists and what shape it has, then
  *  opens it. It does not reduce the feed to a verdict — reaching a view is the
  *  reader's job, from the record. */
-/** `compact` (the Overview) keeps the top-signal chips and the Open button,
- *  and drops the signal count and strip. */
-export function RenewalProspectChips({
-  s,
-  onOpenFeed,
-  compact = false,
-}: {
-  s: Substance
-  onOpenFeed: (id: string) => void
-  compact?: boolean
-}) {
+function RenewalProspectChips({ s, onOpenFeed }: { s: Substance; onOpenFeed: (id: string) => void }) {
   const substitution = isSubstitutionCandidate(s)
   const risk = isRenewalAtRisk(s)
   // Once the renewal is granted, the opinion recommending it has been acted on:
@@ -216,7 +206,7 @@ export function RenewalProspectChips({
   // top-signal chips beneath. The hit area is an overlay button rather than a
   // wrapper, because the BPC chip is a link and a button cannot contain one.
   return (
-    <div className={`sig-box ${hasRecords ? '' : 'is-empty'} ${compact ? 'is-compact' : ''}`}>
+    <div className={`sig-box ${hasRecords ? '' : 'is-empty'}`}>
       <button
         type="button"
         className="sig-box-hit"
@@ -242,11 +232,7 @@ export function RenewalProspectChips({
       />
 
       <span className="sig-box-head">
-        {/* Compact: the label leads the head, level with Open, and the chips
-            run beneath it. */}
-        {compact ? (
-          chips && <span className="prospect-label">Top signals:</span>
-        ) : hasRecords ? (
+        {hasRecords ? (
           <>
             <PulseIcon />
             Signals
@@ -262,7 +248,7 @@ export function RenewalProspectChips({
         </span>
       </span>
 
-      {!compact && records.length > 0 && <SignalStrip records={records} />}
+      {records.length > 0 && <SignalStrip records={records} />}
 
       {/* The chips keep their own pointer events, so their tooltips still work;
           the click is forwarded to the same place the box goes. The BPC chip is
@@ -275,7 +261,7 @@ export function RenewalProspectChips({
             onOpenFeed(s.id)
           }}
         >
-          {!compact && <span className="prospect-label">Top signals:</span>}
+          <span className="prospect-label">Top signals:</span>
             {substitution && (
               <span
                 className="alert-chip substitution"

@@ -54,6 +54,7 @@ SOURCES = {
     "ppp": "EU_Pesticide_Database_PT18_PT19_with_AI_analysis.xlsx",
     "consultations": "consultations on potential candidates for substitution and on derogations conditions_Current.csv",
     "pact": "pact-export-filtered_updated_and_other_flags.csv",
+    "pactClh": "pact-clh-proposals.csv",
     "edsp": "EPA_2015_EDSP_Tier1_WoE_Conclusions_x_ECHA_PT18-PT19_ED_tags.xlsx",
     "pan": "PAN_HHP_PT18_PT19.xlsx",
     "postponementsPT18": "PT18-postponements-open.csv",
@@ -656,6 +657,45 @@ def convert_suppliers(xlsx: Path, substances: dict) -> dict:
     }
 
 
+def former_suppliers(paths: list[Path], latest_suppliers: dict, substances: dict) -> int:
+    """Suppliers an earlier Article 95 list carried and the latest does not.
+
+    Entering the list is a dated event that happened, so it stays on the
+    timeline when the supplier later leaves (clothianidin, whose approval
+    expired, left the 07.11.26 list). Kept in `formerBySubstance` with the
+    last list showing them and the first one that did not — not shown in the
+    supplier table, which is the current list.
+    """
+    import contextlib
+    import io
+
+    squash = lambda v: re.sub(r"[^a-z0-9]", "", v.lower())  # noqa: E731
+    fingerprint = lambda s: (squash(s["entity"]), s["listedSupplier"])  # noqa: E731
+    current = {
+        sid: {fingerprint(s) for s in rows} for sid, rows in latest_suppliers["bySubstance"].items()
+    }
+    former: dict[str, dict] = {}
+    for older, newer in zip(paths, paths[1:] + [None]):
+        if newer is None:
+            break  # the latest list is the current one
+        with contextlib.redirect_stderr(io.StringIO()):
+            data = convert_suppliers(older, substances)
+        for sid, rows in data["bySubstance"].items():
+            for s in rows:
+                key = fingerprint(s)
+                if key in current.get(sid, set()):
+                    continue
+                entry = former.setdefault(sid, {}).get(key)
+                # The latest list that still carried it, and the one after.
+                listed = list_date_from_name(older.name)
+                if not entry or entry["lastListed"] < listed:
+                    former[sid][key] = {**s, "lastListed": listed, "leftBy": list_date_from_name(newer.name)}
+    latest_suppliers["formerBySubstance"] = {
+        sid: sorted(rows.values(), key=lambda s: s["entity"].lower()) for sid, rows in sorted(former.items())
+    }
+    return sum(len(v) for v in former.values())
+
+
 # ── Expressions of interest in renewal ───────────────────────
 
 # ECHA states the outcome in the same column as the company name.
@@ -756,6 +796,50 @@ def convert_interest(xlsx: Path, substances: dict) -> dict:
         },
         "bySubstance": by_substance,
     }
+
+
+def interest_history(paths: list[Path], latest_interest: dict, substances: dict) -> int:
+    """Date each entry by the first list that showed it, and keep what left.
+
+    The list gives no date per entry, only its own "prepared as of" date, so a
+    record is dated to the first edition carrying it. Without this, every new
+    edition would move the date forward (the 30 Jun 2026 entries read 30 Sep
+    once the September list came in). An entry whose state later changes, or
+    which leaves the list, is kept in `pastBySubstance`, so its record stays on
+    the timeline.
+    """
+    import contextlib
+    import io
+
+    editions = []
+    for path in paths:
+        with contextlib.redirect_stderr(io.StringIO()):
+            data = convert_interest(path, substances) if path != paths[-1] else latest_interest
+        editions.append((data["meta"]["preparedAs"] or file_date(path).isoformat(), data["bySubstance"]))
+
+    past: dict[str, list] = {}
+    for sid in set().union(*(set(e) for _, e in editions)):
+        runs = []  # [state, companies, first edition, last edition]
+        for when, entries in editions:
+            entry = entries.get(sid)
+            state = entry["state"] if entry else ""
+            if runs and runs[-1][0] == state:
+                runs[-1][3] = when
+                if entry:
+                    runs[-1][1] = entry["companies"]
+            else:
+                runs.append([state, entry["companies"] if entry else [], when, when])
+        current = latest_interest["bySubstance"].get(sid)
+        if current and runs[-1][0] == current["state"]:
+            current["firstRecorded"] = runs[-1][2]
+        for state, companies, first, last in runs[:-1]:
+            if state:
+                past.setdefault(sid, []).append(
+                    {"state": state, "companies": companies, "firstRecorded": first, "lastRecorded": last}
+                )
+    latest_interest["pastBySubstance"] = dict(sorted(past.items()))
+    latest_interest["meta"]["editions"] = [when for when, _ in editions]
+    return sum(len(v) for v in past.values())
 
 
 # ── Authorised biocidal products ─────────────────────────────
@@ -1187,14 +1271,20 @@ def pact_activities(record: dict) -> list[dict]:
         for i, status in enumerate(statuses):
             if not status:
                 continue
+            intention = iso_date(intentions[i]) if i < len(intentions) else ""
             out.append(
                 {
                     "area": code,
                     "areaLabel": label,
                     "status": status,
-                    "intention": iso_date(intentions[i]) if i < len(intentions) else "",
+                    "intention": intention,
                     "updated": iso_date(updates[i]) if i < len(updates) else "",
                     "url": links[i] if i < len(links) else "",
+                    # Which activity this is, stable from one export to the
+                    # next while its status moves: the date the intention was
+                    # registered never changes, so it identifies the activity.
+                    # Without one, its slot in the area's cell stands in.
+                    "key": f"{code}:{intention}" if intention else f"{code}:#{i}",
                 }
             )
     # A PACT row can cover several ECHA names at once — the three Chrysanthemum
@@ -1207,10 +1297,49 @@ def pact_activities(record: dict) -> list[dict]:
         if key not in seen:
             seen.add(key)
             unique.append(a)
+    # Two activities in one area registered the same day: tell them apart by
+    # order, so each keeps a key of its own.
+    taken: collections.Counter = collections.Counter()
+    for a in unique:
+        taken[a["key"]] += 1
+        if taken[a["key"]] > 1:
+            a["key"] = f'{a["key"]}~{taken[a["key"]]}'
 
     # Newest first, undated last — the same order the signal timeline uses.
     unique.sort(key=lambda a: a["updated"] or "", reverse=True)
     return unique
+
+
+def pact_matcher(substances: dict):
+    """A PACT-style row ("Substance", "EC / List no", "CAS no") -> substance ids.
+    Shared by the PACT export and the CLH proposals file, which use the same
+    three columns."""
+    by_name: dict[str, set] = {}
+    by_ec: dict[str, list[str]] = {}
+    by_cas: dict[str, list[str]] = {}
+    for s in substances["substances"]:
+        for part in [s["name"], *s["name"].split(";")]:
+            if part.strip():
+                by_name.setdefault(loose_name(part), set()).add(s["id"])
+        if s["ec"]:
+            by_ec.setdefault(norm_id(s["ec"]), []).append(s["id"])
+        if s["cas"]:
+            by_cas.setdefault(norm_id(s["cas"]), []).append(s["id"])
+
+    def match(record: dict) -> set:
+        names = [n.strip() for n in clean(record.get("Substance")).split("|") if n.strip()]
+        ids: set = set()
+        for name in names:
+            ids |= by_name.get(loose_name(name), set())
+        if not ids:
+            ec = identifier(clean(record.get("EC / List no")))
+            cas = identifier(clean(record.get("CAS no")))
+            ids = set(by_ec.get(norm_id(ec), []) if ec else []) or set(
+                by_cas.get(norm_id(cas), []) if cas else []
+            )
+        return ids
+
+    return match
 
 
 def convert_pact(path: Path, substances: dict) -> dict:
@@ -1290,6 +1419,203 @@ def convert_pact(path: Path, substances: dict) -> dict:
         },
         "bySubstance": by_substance,
     }
+
+
+# ── CLH proposals: which hazard classes each one adds ────────
+# PACT says only where a harmonised-classification proposal has got to. The
+# proposals file, compiled from ECHA's registry of CLH intentions, says what
+# each one proposes — and so whether it adds a class that can trigger a BPR
+# exclusion criterion (Article 5(1)): carcinogenic, mutagenic or toxic for
+# reproduction in category 1A/1B, an endocrine disruptor (CLP category 1), or
+# PBT / vPvB. Category 2 classes and Lact. do not exclude, so they don't count.
+#
+# A proposal still at intention can name a hazard without its category —
+# geraniol's "Reproductive toxicity". It could end as 1B, so it counts until
+# the category is published.
+
+EXCLUSION_CLASS = re.compile(
+    r"^(?:(?:Carc|Muta|Repr)\.\s*1(?:A|B|A/1B)?\b|ED\s*(?:HH|ENV)\s*1\b|PBT\b|vPvB\b)", re.I
+)
+EXCLUSION_HAZARD = re.compile(
+    r"^(?:carcinogenicity|germ cell mutagenicity|mutagenicity|reproductive toxicity|"
+    r"endocrine disrupt\w*(?: for (?:human health|the environment))?|pbt|vpvb)$",
+    re.I,
+)
+
+
+def clh_classes(value: str) -> list[str]:
+    return [c.strip() for c in clean(value).split("|") if c.strip()]
+
+
+def exclusion_classes(added: list[str]) -> tuple[list[str], list[str]]:
+    """(classes that trigger a BPR exclusion criterion, hazards named without
+    a category that could)."""
+    hits = [c for c in added if EXCLUSION_CLASS.search(c)]
+    pending = [c for c in added if c not in hits and EXCLUSION_HAZARD.match(c.split(",")[0].strip())]
+    return hits, pending
+
+
+def merge_pact_clh(path: Path, pact: dict, substances: dict) -> int:
+    """Attach each CLH proposal to its PACT activity: same substance, same
+    status, same date of intention."""
+    match = pact_matcher(substances)
+    merged = unmatched = 0
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        status = clean(row.get("Status")).lower()
+        intention = iso_date(clean(row.get("Date of intention")))
+        added = clh_classes(row.get("Classes added by the proposal"))
+        hits, pending = exclusion_classes(added)
+        proposal = {
+            "process": clean(row.get("Process")),
+            "submitter": clean(row.get("Submitter")),
+            "opinionDate": iso_date(clean(row.get("Date of opinion"))),
+            "inForce": clh_classes(row.get("Classification in force when filed")),
+            "proposed": clh_classes(row.get("Classification proposed")),
+            "added": added,
+            "dropped": clh_classes(row.get("Classes dropped by the proposal")),
+            "index": clean(row.get("CLP Annex VI index")),
+            "exclusion": hits,
+            "exclusionPending": pending,
+        }
+        found = False
+        # Several substance ids can share one PACT entry (the Margosa and
+        # Chrysanthemum variants); attach to each entry once.
+        entries = {id(e): e for e in (pact["bySubstance"].get(i) for i in match(row)) if e}
+        for entry in entries.values():
+            clh = [a for a in entry["activities"] if a["area"] == "CLH"]
+            same = [a for a in clh if a["status"].lower() == status and "clh" not in a]
+            target = next((a for a in same if a["intention"] == intention), None) or (
+                same[0] if len(same) == 1 and not intention else None
+            )
+            if target:
+                target["clh"] = proposal
+                found = True
+            elif any(
+                a["status"].lower() == status
+                and a.get("clh", {}).get("added") == added
+                and a["clh"]["opinionDate"] == proposal["opinionDate"]
+                for a in clh
+            ):
+                # PACT folds two proposals identical in every column it carries
+                # into one activity, and this one adds nothing the first did not.
+                found = True
+        if found:
+            merged += 1
+        else:
+            unmatched += 1
+            print(
+                f'  ! CLH proposals: "{clean(row.get("Substance"))[:50]}" ({row.get("Process")},'
+                f' {row.get("Status")}) matches no PACT activity',
+                file=sys.stderr,
+            )
+    pact["meta"]["clhSourceFile"] = path.name
+    pact["meta"]["clhUnmatched"] = unmatched
+    return merged
+
+
+# ── PACT history: what moved between exports ─────────────────
+# The app reads only the latest PACT export, so without this an activity that
+# moved on would lose its earlier status from the timeline. Every PACT export
+# under data/ is compared with the one before, and the latest file is annotated:
+#
+#   activity.firstSeen / since   the first export showing its current status,
+#                                and the one before (empty: in the first file)
+#   record.past                  earlier statuses of an activity, and activities
+#                                the export no longer carries (dropped)
+#   record.flagChanges           EPA carcinogen and ED-list values that moved
+#
+# A status reworded without changing (both still open, same opening word —
+# "Under development" -> "Under development (Currently no EU RRM action
+# needed)") is not a change.
+
+TRACKED_FLAGS = ("carcinogen", "edList")
+
+
+def status_base(status: str) -> str:
+    return status.split("(", 1)[0].strip().lower()
+
+
+def same_status(a: str, b: str) -> bool:
+    if a == b:
+        return True
+    finished = ("concluded", "withdrawn", "opinion adopted")
+    live = lambda s: not s.lower().startswith(finished)  # noqa: E731
+    return live(a) and live(b) and status_base(a) == status_base(b)
+
+
+def pact_history(paths: list[Path], latest_pact: dict, substances: dict) -> dict:
+    import contextlib
+    import io
+
+    snapshots = []
+    for path in paths[:-1]:
+        with contextlib.redirect_stderr(io.StringIO()):  # warnings were printed for the latest
+            snapshots.append((file_date(path).isoformat(), convert_pact(path, substances)))
+    snapshots.append((file_date(paths[-1]).isoformat(), latest_pact))
+
+    counts = collections.Counter()
+    final = latest_pact["bySubstance"]
+    ids = set().union(*(set(p["bySubstance"]) for _, p in snapshots))
+    for sid in ids:
+        # key -> (activity as last seen, export date its status was first seen, export before that)
+        current: dict[str, tuple[dict, str, str]] = {}
+        past: list[dict] = []
+        flag_changes: list[dict] = []
+        prev_flags: dict = {}
+        prev_date = ""
+        for when, pact in snapshots:
+            entry = pact["bySubstance"].get(sid)
+            acts = {a["key"]: a for a in (entry["activities"] if entry else [])}
+            for key, a in acts.items():
+                if key in current:
+                    old, seen, since = current[key]
+                    if same_status(old["status"], a["status"]):
+                        current[key] = (a, seen, since)
+                        continue
+                    past.append({**old, "firstSeen": seen, "since": since, "until": when})
+                    counts["status"] += 1
+                current[key] = (a, when, prev_date)
+            for key in list(current):
+                if key not in acts:
+                    old, seen, since = current.pop(key)
+                    past.append({**old, "firstSeen": seen, "since": since, "until": when, "dropped": True})
+                    counts["dropped"] += 1
+            flags = entry["flags"] if entry else {}
+            if prev_date:
+                for field in TRACKED_FLAGS:
+                    before, after = prev_flags.get(field, ""), flags.get(field, "")
+                    if before != after:
+                        flag_changes.append(
+                            {"field": field, "before": before, "after": after, "date": when, "since": prev_date}
+                        )
+                        counts["flag"] += 1
+            prev_flags, prev_date = flags, when
+
+        if sid not in final:
+            # Nothing current, but what it had is still history.
+            if not (past or flag_changes):
+                continue
+            first = next(s for s in substances["substances"] if s["id"] == sid)
+            final[sid] = {
+                "name": first["name"],
+                "description": "",
+                "activities": [],
+                "flags": {"carcinogen": "", "carcinogenYear": "", "edList": "", "edStatus": "",
+                          "edEffects": "", "edspTag": "", "edspConclusion": ""},
+            }
+        for a in final[sid]["activities"]:
+            _, seen, since = current.get(a["key"], (a, snapshots[-1][0], ""))
+            a["firstSeen"], a["since"] = seen, since
+        if past:
+            final[sid]["past"] = past
+        if flag_changes:
+            final[sid]["flagChanges"] = flag_changes
+
+    latest_pact["meta"]["exports"] = [{"file": p.name, "date": file_date(p).isoformat()} for p in paths]
+    latest_pact["meta"]["history"] = dict(counts)
+    return dict(counts)
 
 
 # ── US EPA EDSP Tier 1 screening ─────────────────────────────
@@ -2334,6 +2660,8 @@ def main() -> None:
     article_95 = latest("suppliers")
     if article_95:
         suppliers = convert_suppliers(article_95, substances)
+        former = former_suppliers(versions("suppliers"), suppliers, substances)
+        print(f"{former} suppliers on an earlier Article 95 list but not the latest, kept as history")
         SUPPLIER_OUT.write_text(json.dumps(suppliers, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{suppliers["meta"]["supplierCount"]} suppliers / {suppliers["meta"]["count"]} substances'
@@ -2343,6 +2671,8 @@ def main() -> None:
     interest_file = latest("interest")
     if interest_file:
         interest = convert_interest(interest_file, substances)
+        kept = interest_history(versions("interest"), interest, substances)
+        print(f"{kept} renewal-interest entries from earlier lists kept as history")
         INTEREST_OUT.write_text(json.dumps(interest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f'{interest["meta"]["count"]} renewal-interest rows -> {INTEREST_OUT.relative_to(ROOT)}')
 
@@ -2378,6 +2708,21 @@ def main() -> None:
         if pan_file:
             merged = merge_pan_hhp(pan_file, pact, substances)
             print(f"{merged} PAN HHP listings merged into the hazard flags")
+        clh_file = latest("pactClh")
+        if clh_file:
+            merged = merge_pact_clh(clh_file, pact, substances)
+            hits = sum(
+                1
+                for entry in pact["bySubstance"].values()
+                for a in entry["activities"]
+                if a.get("clh") and (a["clh"]["exclusion"] or a["clh"]["exclusionPending"])
+            )
+            print(f"{merged} CLH proposals merged ({hits} adding a class that can trigger BPR exclusion)")
+        moved = pact_history(versions("pact"), pact, substances)
+        print(
+            f'PACT history across {len(versions("pact"))} exports: '
+            + (", ".join(f"{n} {k}" for k, n in moved.items()) or "nothing moved")
+        )
         PACT_OUT.write_text(json.dumps(pact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(
             f'{pact["meta"]["rows"]} PACT rows ({pact["meta"]["empty"]} with nothing recorded)'

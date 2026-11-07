@@ -1,6 +1,6 @@
 import { renewalGranted } from './approvals'
 import { formatDate } from './data'
-import { interestFor, interestMeta } from './interest'
+import { interestEntries, type InterestEntry } from './interest'
 import { postponementsFor } from './postponements'
 import type { FeedRecord, Substance } from './types'
 
@@ -77,9 +77,12 @@ function datedFiling(s: Substance): FeedRecord[] {
 /** Filed on a date nothing published states — only that it had been, by the
  *  time ECHA drew up its list. */
 function firstRecordedFiling(s: Substance): FeedRecord[] {
-  const interest = interestFor(s.id)
-  if (interest?.state !== 'submitted' || !interestMeta.preparedAs) return []
+  // Each edition of the list that recorded the application, dated to the first
+  // one — an entry the list stops showing stays on the timeline.
+  return interestEntries(s.id, 'submitted').flatMap(e => firstRecordedFilingEntry(s, e))
+}
 
+function firstRecordedFilingEntry(s: Substance, interest: InterestEntry): FeedRecord[] {
   // A renewal that has been granted settles the question the list was asked.
   // ECHA's entry still reads "submitted" — it records the application, not
   // what became of it — and the act that granted the renewal is the later word
@@ -95,7 +98,10 @@ function firstRecordedFiling(s: Substance): FeedRecord[] {
   // position: Indoxacarb and hexaflumuron.
   if ((postponementsFor(s.id)?.postponements.length ?? 0) > 0) return []
 
-  const asOfList = formatDate(interestMeta.preparedAs)
+  const asOfList = formatDate(interest.firstRecorded)
+  const gone = interest.lastRecorded
+    ? ` The list prepared as of ${formatDate(interest.lastRecorded)} was the last to show it.`
+    : ''
   const by = interest.deadline
     ? ` Article 13(1) requires the application at least 550 days before expiry, so it was filed ` +
       `on or before ${formatDate(interest.deadline)}.`
@@ -104,7 +110,7 @@ function firstRecordedFiling(s: Substance): FeedRecord[] {
   return [
     {
       kind: 'filing',
-      date: interestMeta.preparedAs,
+      date: interest.firstRecorded,
       // Shown to the month: the day belongs to the list, not to the filing, so
       // printing it claims a precision the record does not have. The ISO date
       // keeps the full value, so ordering is unaffected.
@@ -123,7 +129,7 @@ function firstRecordedFiling(s: Substance): FeedRecord[] {
       summary:
         `ECHA's expressions-of-interest list records that an application for renewal of the ` +
         `${s.pt} approval has been submitted. First recorded with the list prepared as of ` +
-        `${asOfList}; the list gives no date for the entry itself.${by}`,
+        `${asOfList}; the list gives no date for the entry itself.${by}${gone}`,
       tags: ['renewal', 'application'],
       blockers: [],
       signal: {

@@ -1,5 +1,5 @@
 import { formatDate } from './data'
-import { supplierMeta, suppliersFor, supplierType } from './suppliers'
+import { formerSuppliersFor, supplierMeta, suppliersFor, supplierType } from './suppliers'
 import type { FeedRecord, Supplier } from './types'
 
 // Article 95 listings, read as dated signal records.
@@ -45,6 +45,11 @@ function rationale(group: Supplier[]): string {
 
 function toRecord(group: Supplier[]): FeedRecord {
   const submission = isSubmission(group[0].reason)
+  // A supplier no longer on the list: its entry still happened, so the record
+  // stays, and says the list has since dropped it. Read as before — leaving
+  // is not a signal of its own (clothianidin's left as its approval expired).
+  const left = group[0].leftBy
+  const edition = left ? group[0].lastListed : supplierMeta.listDate
   return {
     kind: 'supplier',
     date: group[0].listedSupplier,
@@ -54,7 +59,12 @@ function toRecord(group: Supplier[]): FeedRecord {
       group.length === 1
         ? `${group[0].entity} entered the Article 95 supplier list`
         : `${group.length} suppliers entered the Article 95 list`,
-    summary: summarise(group),
+    summary:
+      summarise(group) +
+      (left
+        ? ` ${group.length === 1 ? 'It is' : 'They are'} no longer on the list: the edition of ` +
+          `${formatDate(left)} does not carry ${group.length === 1 ? 'it' : 'them'}.`
+        : ''),
     tags: ['Article 95 list'],
     blockers: [],
     signal: {
@@ -68,8 +78,8 @@ function toRecord(group: Supplier[]): FeedRecord {
     },
     sources: [
       {
-        citation: supplierMeta.listDate
-          ? `ECHA — Article 95 list of approved active substance suppliers, edition of ${formatDate(supplierMeta.listDate)}`
+        citation: edition
+          ? `ECHA — Article 95 list of approved active substance suppliers, edition of ${formatDate(edition)}`
           : 'ECHA — Article 95 list of approved active substance suppliers',
         pinpoint: group.length === 1 ? group[0].entity : '',
         tier: 'PRIMARY',
@@ -91,9 +101,9 @@ export function supplierRecords(substanceId: string): FeedRecord[] {
   if (hit) return hit
 
   const groups = new Map<string, Supplier[]>()
-  for (const s of suppliersFor(substanceId)) {
+  for (const s of [...suppliersFor(substanceId), ...formerSuppliersFor(substanceId)]) {
     if (!s.listedSupplier) continue
-    const key = `${s.listedSupplier}|${s.reason}`
+    const key = `${s.listedSupplier}|${s.reason}|${s.leftBy ?? ''}`
     const group = groups.get(key)
     if (group) group.push(s)
     else groups.set(key, [s])

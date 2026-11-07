@@ -13,6 +13,11 @@ export function suppliersFor(substanceId: string): Supplier[] {
   return dataset.bySubstance[substanceId] ?? []
 }
 
+/** Suppliers on an earlier list edition but not the latest. */
+export function formerSuppliersFor(substanceId: string): Supplier[] {
+  return dataset.formerBySubstance?.[substanceId] ?? []
+}
+
 /** The column already says "supplier", so the value needn't repeat it:
  *  "Substance & Product Supplier" -> "Substance & Product". */
 export function supplierType(type: string): string {

@@ -1,5 +1,5 @@
 import { formatDate } from './data'
-import { companyNames, interestFor, interestMeta } from './interest'
+import { companyNames, interestEntries, type InterestEntry } from './interest'
 import type { FeedRecord, Substance } from './types'
 
 // A company saying it intends to apply for renewal, as a dated record.
@@ -13,18 +13,26 @@ import type { FeedRecord, Substance } from './types'
 // as much: what it supports is that the interest was on the record by then. The
 // list carries no per-entry date to do better with.
 
+// Dated to the first list edition carrying the entry, not the latest one —
+// otherwise each new edition would move it forward. An entry the list no
+// longer shows stays, and says so (tools/convert_export.py interest_history).
 export function interestRecords(s: Substance): FeedRecord[] {
-  const interest = interestFor(s.id)
-  if (!interest || interest.state !== 'interested' || interest.companies.length === 0) return []
-  if (!interestMeta.preparedAs) return []
+  return interestEntries(s.id, 'interested')
+    .filter(e => e.companies.length > 0)
+    .flatMap(e => interestRecord(s, e))
+}
 
+function interestRecord(s: Substance, interest: InterestEntry): FeedRecord[] {
   const many = interest.companies.length > 1
-  const asOfList = formatDate(interestMeta.preparedAs)
+  const asOfList = formatDate(interest.firstRecorded)
+  const gone = interest.lastRecorded
+    ? ` The list prepared as of ${formatDate(interest.lastRecorded)} was the last to show it.`
+    : ''
 
   return [
     {
       kind: 'interest',
-      date: interestMeta.preparedAs,
+      date: interest.firstRecorded,
       // Shown to the month: the day is the list's own, not the event's, so
       // printing it to the day would claim a precision the record lacks.
       // The ISO date keeps the full value, so ordering is unaffected.
@@ -43,7 +51,7 @@ export function interestRecords(s: Substance): FeedRecord[] {
         `${companyNames(interest)} ${many ? 'are' : 'is'} recorded as interested in renewing ` +
         `the ${s.pt} approval. First recorded with the expressions-of-interest list prepared ` +
         `as of ${asOfList}; the list gives no date for the entry itself, so the interest was ` +
-        `on the record by then rather than on that day.`,
+        `on the record by then rather than on that day.${gone}`,
       tags: ['renewal', 'interest'],
       blockers: [],
       signal: {

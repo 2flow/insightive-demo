@@ -14,6 +14,7 @@ import {
 } from '@/lib/approvals'
 import { minorityCount, opinionsFor } from '@/lib/bpcOpinions'
 import {
+  exclusionClassList,
   flagList,
   hazardAreaActivities,
   hazardShown,
@@ -258,6 +259,10 @@ function Dashboard({
   const hazards = pact ? hazardAreaActivities(pact) : []
   const activities = pact ? otherActivities(pact.activities) : []
   const liveActivities = activities.filter(a => isLive(a.status)).length
+  // A classification proposal adding a class that is a BPR exclusion
+  // criterion is not routine procedure: it can stand in the way of the
+  // renewal, so the tile says which classes, in red.
+  const exclusionClasses = exclusionClassList(activities)
   const flags = pact ? flagList(pact) : []
   // What the tile counts, against what the panel has to show: an assessment
   // that concluded the substance is not an endocrine disruptor appears on the
@@ -717,6 +722,12 @@ function Dashboard({
               {pactAreas(activities).join(' · ')}
               {liveActivities > 0 && ` · ${liveActivities} running`}
             </div>
+            {exclusionClasses.length > 0 && (
+              <div className="fp-tile-alert">
+                <span className="fp-tile-alert-head">CLH proposes {exclusionClasses.join(', ')}</span>
+                <span className="fp-tile-alert-note">BPR exclusion criteria · can block renewal</span>
+              </div>
+            )}
           </ActionTile>
         )}
           </div>

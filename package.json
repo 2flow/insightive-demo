@@ -7,7 +7,8 @@
     "build": "next build",
     "preview": "npx --yes serve out",
     "lint": "next lint",
-    "data": "python3 tools/convert_export.py"
+    "data": "python3 tools/convert_export.py && node tools/check_history.mjs",
+    "history:accept": "node tools/check_history.mjs --accept"
   },
   "engines": {
     "node": ">=18.17"

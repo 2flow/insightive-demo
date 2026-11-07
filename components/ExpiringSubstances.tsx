@@ -2,7 +2,7 @@
 
 import { daysUntil, endCountdown, formatDate, shortName, substances } from '@/lib/data'
 import type { Substance } from '@/lib/types'
-import { RenewalProspectChips, RenewalStatusChips } from './SubstanceRow'
+import { RenewalStatusChips } from './SubstanceRow'
 import { BugIcon, ClockIcon, LeafIcon } from './icons'
 
 // The Overview's second card, beside Latest signals: the approvals running out
@@ -108,11 +108,6 @@ function ExpiringRow({ s, onOpen }: { s: Substance; onOpen: (id: string) => void
       </span>
       <div className="exp-status">
         <RenewalStatusChips s={s} />
-      </div>
-      {/* The list's own top-signals box, compact: its chips and Open button
-          handle their own clicks. */}
-      <div className="exp-prospects">
-        <RenewalProspectChips s={s} onOpenFeed={onOpen} compact />
       </div>
     </div>
   )

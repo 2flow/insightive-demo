@@ -8,9 +8,13 @@
       {
         "file": "biocidal-products-export_20_10_26.xlsx",
         "exportDate": "2026-10-20"
+      },
+      {
+        "file": "biocidal-products-export_07_11_26.xlsx",
+        "exportDate": "2026-11-07"
       }
     ],
-    "count": 32
+    "count": 33
   },
   "bySubstance": {
     "62-PT18": [
@@ -272,6 +276,23 @@
             "name": "Kollant Motten-Sicher Gel",
             "market": "Austria",
             "holder": "SmarTec Solutions Sarl",
+            "was": "Authorised"
+          }
+        ]
+      }
+    ],
+    "59-PT18": [
+      {
+        "date": "2026-11-07",
+        "since": "2026-10-20",
+        "fromFile": "biocidal-products-export_20_10_26.xlsx",
+        "toFile": "biocidal-products-export_07_11_26.xlsx",
+        "products": [
+          {
+            "asset": "SK-0034572-0000",
+            "name": "Doff Formi-Ex",
+            "market": "Slovakia",
+            "holder": "DP Multipurpose Products (Ireland) Limited",
             "was": "Authorised"
           }
         ]

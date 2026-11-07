@@ -35,19 +35,27 @@ export function otherActivities(activities: PactActivity[]): PactActivity[] {
   return activities.filter(a => !HAZARD_AREAS.has(a.area))
 }
 
-/**
- * The areas whose activities become dated records.
- *
- * Wider than the hazard areas by one: an assessment of regulatory needs is
- * shown as procedure, because it decides nothing about the substance, but its
- * conclusions are still dated events on the file — "no EU risk management
- * action needed" among them — and dropping them off the timeline would lose
- * six real records to a change of container.
- */
-const RECORDED_AREAS = new Set(['SEv', 'PBT', 'ED', 'SVHC', 'ARN'])
+// Which activities become dated records, and how strong: lib/pactSignals.ts.
 
-export function recordedActivities(activities: PactActivity[]): PactActivity[] {
-  return activities.filter(a => RECORDED_AREAS.has(a.area))
+/** Whether a CLH proposal adds a class that can trigger a BPR exclusion
+ *  criterion (Art. 5(1)): CMR 1A/1B, ED category 1, PBT/vPvB — or names such
+ *  a hazard without its category yet. Decided by the converter. */
+export function exclusionRelevant(a: PactActivity): boolean {
+  return !!a.clh && (a.clh.exclusion.length > 0 || a.clh.exclusionPending.length > 0)
+}
+
+/** "Repr. 1B, H360D" -> "Repr. 1B" */
+export const shortClass = (c: string) => c.split(',')[0].trim()
+
+/** The exclusion-relevant classes across some activities, short and once each:
+ *  ["Repr. 1B", "PBT"], with an uncategorised hazard marked as such. */
+export function exclusionClassList(activities: PactActivity[]): string[] {
+  const out: string[] = []
+  for (const a of activities.filter(exclusionRelevant)) {
+    for (const c of a.clh!.exclusion) out.push(shortClass(c))
+    for (const c of a.clh!.exclusionPending) out.push(`${shortClass(c)} (category tbc)`)
+  }
+  return Array.from(new Set(out))
 }
 
 /** The distinct areas with something recorded, in the order they appear. */

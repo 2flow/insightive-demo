@@ -15,6 +15,28 @@ export function interestFor(substanceId: string): RenewalInterest | null {
   return dataset.bySubstance[substanceId] ?? null
 }
 
+/** One state an entry has had, for the timeline: the current one and any
+ *  earlier ones, each with the first list edition that showed it. */
+export interface InterestEntry {
+  state: InterestState
+  companies: RenewalInterest['companies']
+  deadline: string
+  /** "Prepared as of" date of the first edition showing it. */
+  firstRecorded: string
+  /** Set where the list no longer shows it: the last edition that did. */
+  lastRecorded?: string
+}
+
+export function interestEntries(substanceId: string, state: InterestState): InterestEntry[] {
+  const current = interestFor(substanceId)
+  const out: InterestEntry[] = []
+  if (current && current.state === state && (current.firstRecorded || dataset.meta.preparedAs))
+    out.push({ ...current, firstRecorded: current.firstRecorded || dataset.meta.preparedAs })
+  for (const p of dataset.pastBySubstance?.[substanceId] ?? [])
+    if (p.state === state) out.push({ ...p, deadline: current?.deadline ?? '' })
+  return out
+}
+
 /** How each state reads on screen. */
 export const INTEREST_LABEL: Record<Exclude<InterestState, ''>, string> = {
   submitted: 'Renewal application submitted',

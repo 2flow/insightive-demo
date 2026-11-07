@@ -100,6 +100,10 @@ export interface Supplier {
   listedAsPt: string
   /** ISO date this supplier entered the list. */
   listedSupplier: string
+  /** Former suppliers only: the last list edition that carried it… */
+  lastListed?: string
+  /** …and the first that did not. */
+  leftBy?: string
 }
 
 export interface SupplierDataset {
@@ -114,6 +118,10 @@ export interface SupplierDataset {
   }
   /** Keyed by substance id — matching is resolved at build time. */
   bySubstance: Record<string, Supplier[]>
+  /** Suppliers an earlier list carried and the latest does not. Their entry
+   *  onto the list stays on the timeline; the supplier table shows only the
+   *  current list. */
+  formerBySubstance?: Record<string, Supplier[]>
 }
 
 // ── Expressions of interest in renewal ───────────────────────
@@ -138,6 +146,17 @@ export interface RenewalInterest {
   /** ISO date — ECHA's own stated AS-RNL filing deadline. */
   deadline: string
   companies: InterestCompany[]
+  /** "Prepared as of" date of the first list edition showing this state. */
+  firstRecorded?: string
+}
+
+/** A state an entry had on earlier list editions and no longer has. */
+export interface PastInterest {
+  state: InterestState
+  companies: InterestCompany[]
+  firstRecorded: string
+  /** The last edition that still showed it. */
+  lastRecorded: string
 }
 
 export interface InterestDataset {
@@ -150,6 +169,8 @@ export interface InterestDataset {
     unmatched: number
   }
   bySubstance: Record<string, RenewalInterest>
+  /** Earlier states and entries that left the list — kept for the timeline. */
+  pastBySubstance?: Record<string, PastInterest[]>
 }
 
 // ── Authorised biocidal products ─────────────────────────────
@@ -527,6 +548,51 @@ export interface PactActivity {
   /** ISO date ECHA last touched it. */
   updated: string
   url: string
+  /** Stable across exports while the status moves: area + date of intention. */
+  key: string
+  /** Export date of the first PACT export showing this status. */
+  firstSeen?: string
+  /** Export date of the one before; empty when it was already in the first. */
+  since?: string
+  /** CLH only: what the proposal classifies, from the CLH proposals file. */
+  clh?: ClhProposal
+}
+
+export interface ClhProposal {
+  /** "CLH 1", "CLH 2" … the registry's own numbering per substance. */
+  process: string
+  submitter: string
+  /** ISO date RAC adopted its opinion; empty before that. */
+  opinionDate: string
+  inForce: string[]
+  proposed: string[]
+  /** Classes the proposal adds to what was in force. */
+  added: string[]
+  dropped: string[]
+  index: string
+  /** Added classes that can trigger a BPR exclusion criterion (Art. 5(1)):
+   *  CMR 1A/1B, ED category 1, PBT/vPvB. */
+  exclusion: string[]
+  /** Hazards named without a category yet ("Reproductive toxicity") that
+   *  could turn out to be one of those. */
+  exclusionPending: string[]
+}
+
+/** A status an activity no longer has, or an activity the export no longer
+ *  carries. Kept so the timeline does not lose it. */
+export interface PactPastActivity extends PactActivity {
+  /** Export date of the first export showing it changed or gone. */
+  until: string
+  dropped?: boolean
+}
+
+/** An EPA carcinogen or ED-list value that moved between two PACT exports. */
+export interface PactFlagChange {
+  field: 'carcinogen' | 'edList'
+  before: string
+  after: string
+  date: string
+  since: string
 }
 
 /** Membership of lists kept outside PACT, carried in the same export. */
@@ -553,6 +619,9 @@ export interface PactRecord {
   /** Newest first. */
   activities: PactActivity[]
   flags: PactFlags
+  /** Earlier statuses and dropped activities, across every PACT export on file. */
+  past?: PactPastActivity[]
+  flagChanges?: PactFlagChange[]
   /** PAN International HHP listings. Usually one; aluminium and magnesium
    *  phosphide are listed in their own name and again as phosphine. */
   pan?: PanListing[]
@@ -613,6 +682,11 @@ export interface PactDataset {
     count: number
     unmatched: number
     edspSourceFile?: string
+    clhSourceFile?: string
+    clhUnmatched?: number
+    /** Every PACT export compared, oldest first. */
+    exports?: { file: string; date: string }[]
+    history?: Record<string, number>
     pan?: { sourceFile: string; edition: string; sources: PanSource[] }
   }
   bySubstance: Record<string, PactRecord>

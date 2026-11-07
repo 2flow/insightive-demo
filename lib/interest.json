@@ -1,16 +1,21 @@
 {
   "meta": {
     "source": "ECHA — Expressions of interest in the renewal of active substances",
-    "sourceFile": "as-rnl_expressions_of_interest_PT18-PT19_20_09_26.xlsx",
-    "preparedAs": "2026-06-30",
+    "sourceFile": "as-rnl_expressions_of_interest_PT18-PT19_07_11_26.xlsx",
+    "preparedAs": "2026-09-30",
     "count": 43,
-    "unmatched": 1
+    "unmatched": 1,
+    "editions": [
+      "2026-06-30",
+      "2026-09-30"
+    ]
   },
   "bySubstance": {
     "15-PT18": {
       "state": "none-received",
       "deadline": "2025-03-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1283-PT18": {
       "state": "interested",
@@ -24,7 +29,8 @@
           "name": "Tagros Chemicals India Private Limited",
           "country": "India"
         }
-      ]
+      ],
+      "firstRecorded": "2026-06-30"
     },
     "1284-PT18": {
       "state": "interested",
@@ -34,22 +40,26 @@
           "name": "Sumitomo Chemical (UK) Ltd",
           "country": "UK"
         }
-      ]
+      ],
+      "firstRecorded": "2026-06-30"
     },
     "1282-PT18": {
       "state": "",
       "deadline": "2026-08-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1314-PT18": {
       "state": "submitted",
       "deadline": "2023-03-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "59-PT18": {
       "state": "submitted",
       "deadline": "2024-02-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1344-PT18": {
       "state": "interested",
@@ -59,12 +69,14 @@
           "name": "Endura S.p.A",
           "country": "Italy"
         }
-      ]
+      ],
+      "firstRecorded": "2026-06-30"
     },
     "1238-PT18": {
       "state": "submitted",
       "deadline": "2024-12-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1318-PT18": {
       "state": "interested",
@@ -74,112 +86,134 @@
           "name": "Sumitomo Chemical (UK) Ltd",
           "country": "UK"
         }
-      ]
+      ],
+      "firstRecorded": "2026-06-30"
     },
     "1235-PT18": {
       "state": "none-received",
       "deadline": "2025-07-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "4-PT18": {
       "state": "submitted",
       "deadline": "2023-01-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1244-PT18": {
       "state": "submitted",
       "deadline": "2024-12-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "5-PT18": {
       "state": "submitted",
       "deadline": "2022-03-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1246-PT18": {
       "state": "none-received",
       "deadline": "2024-12-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1247-PT18": {
       "state": "submitted",
       "deadline": "2025-08-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1287-PT18": {
       "state": "none-received",
       "deadline": "2024-02-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "24-PT18": {
       "state": "submitted",
       "deadline": "2022-03-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1293-PT18": {
       "state": "submitted",
       "deadline": "2023-05-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "60-PT18": {
       "state": "submitted",
       "deadline": "2023-03-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "37-PT18": {
       "state": "submitted",
       "deadline": "2021-12-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "64-PT18": {
       "state": "submitted",
       "deadline": "2022-12-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "41-PT18": {
       "state": "submitted",
       "deadline": "2022-03-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "42-PT18": {
       "state": "submitted",
       "deadline": "2023-01-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "2463-PT18": {
       "state": "submitted",
       "deadline": "2019-10-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1334-PT18": {
       "state": "submitted",
       "deadline": "2026-06-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1336-PT18": {
       "state": "none-received",
       "deadline": "2024-02-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1342-PT18": {
       "state": "submitted",
       "deadline": "2024-10-27",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "61-PT18": {
       "state": "submitted",
       "deadline": "2023-07-31",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1449-PT18": {
       "state": "no-interest",
       "deadline": "2027-04-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1386-PT18": {
       "state": "submitted",
       "deadline": "2024-02-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1377-PT18": {
       "state": "interested",
@@ -189,67 +223,81 @@
           "name": "Biofa GmbH",
           "country": "Germany"
         }
-      ]
+      ],
+      "firstRecorded": "2026-06-30"
     },
     "49-PT18": {
       "state": "submitted",
       "deadline": "2021-04-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "50-PT18": {
       "state": "submitted",
       "deadline": "2019-12-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1378-PT18": {
       "state": "none-received",
       "deadline": "2024-04-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "54-PT18": {
       "state": "none-received",
       "deadline": "2023-07-31",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1404-PT18": {
       "state": "submitted",
       "deadline": "2024-04-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "65-PT19": {
       "state": "submitted",
       "deadline": "2023-03-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1287-PT19": {
       "state": "none-received",
       "deadline": "2024-02-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1320-PT19": {
       "state": "submitted",
       "deadline": "2024-04-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1323-PT19": {
       "state": "submitted",
       "deadline": "2024-04-29",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1469-PT19": {
       "state": "no-interest",
       "deadline": "2027-09-28",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "23-PT19": {
       "state": "submitted",
       "deadline": "2023-07-31",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     },
     "1316-PT19": {
       "state": "no-interest",
       "deadline": "2030-07-30",
-      "companies": []
+      "companies": [],
+      "firstRecorded": "2026-06-30"
     }
-  }
+  },
+  "pastBySubstance": {}
 }
