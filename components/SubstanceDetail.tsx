@@ -1,9 +1,7 @@
 import { formatDate } from '@/lib/data'
-import { recordsFor } from '@/lib/feeds'
-import { isNgo } from '@/lib/ngoSignals'
 import { productsFor } from '@/lib/products'
 import type { Substance } from '@/lib/types'
-import { ArrowRightIcon, ExternalIcon, PulseIcon } from './icons'
+import { ArrowRightIcon, ExternalIcon } from './icons'
 
 // Everything ECHA publishes about a record that isn't already in the collapsed
 // row: identifiers, who evaluated it, the legal act behind the decision, the
@@ -26,16 +24,11 @@ const SUBSTITUTION_CLASS: Record<string, string> = {
 
 export default function SubstanceDetail({
   s,
-  onOpenFeed,
   onOpenProducts,
 }: {
   s: Substance
-  onOpenFeed: (id: string) => void
   onOpenProducts: (id: string) => void
 }) {
-  // NGO report items are indirect context — never the headline or the count.
-  const records = recordsFor(s).filter(r => !isNgo(r))
-  const headline = records[0] ?? null // newest record
   const products = productsFor(s.id)
   const flags = [
     s.reviewProgramme && 'Review programme',
@@ -130,24 +123,6 @@ export default function SubstanceDetail({
           </button>
         )}
       </div>
-
-      {headline && (
-        <button type="button" className="feed-open" onClick={() => onOpenFeed(s.id)}>
-          <span className="feed-open-icon">
-            <PulseIcon />
-          </span>
-          <span className="feed-open-text">
-            <span className="feed-open-title">
-              Renewal signals
-              <span className="feed-open-count">{records.length}</span>
-            </span>
-            <span className="feed-open-sub">
-              Most recent: {headline.title}
-            </span>
-          </span>
-          <span className="feed-open-go">Open feed →</span>
-        </button>
-      )}
     </div>
   )
 }

@@ -420,8 +420,21 @@ export default function SubstanceRow({
         <ChevronDownIcon className="sub-chev" />
 
         <div className="gc gc-name">
-          <div className="sub-name" title={s.name}>
-            {shortName(s)}
+          <div className="sub-name">
+            {/* The name opens the substance's full page — status and feed —
+                while the rest of the row still expands it in place. */}
+            <button
+              type="button"
+              className="sub-name-link"
+              title={`${s.name}: open the full record`}
+              onClick={e => {
+                e.stopPropagation()
+                onOpenFeed(s.id)
+              }}
+              onKeyDown={e => e.stopPropagation()}
+            >
+              {shortName(s)}
+            </button>
           </div>
           <div className="sub-idents">
             <span>
@@ -465,7 +478,7 @@ export default function SubstanceRow({
         </span>
       </div>
 
-      {open && <SubstanceDetail s={s} onOpenFeed={onOpenFeed} onOpenProducts={onOpenProducts} />}
+      {open && <SubstanceDetail s={s} onOpenProducts={onOpenProducts} />}
     </div>
   )
 }
