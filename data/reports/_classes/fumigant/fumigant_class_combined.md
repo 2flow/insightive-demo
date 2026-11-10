@@ -1,10 +1,10 @@
 ---
 class: fumigant
 class_slug: fumigant
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline_2.md
-updates: none
-last_run: 2026-10-21
+updates: 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: medium
 signals_total: 1
 signals_new_since_baseline: 0
@@ -17,6 +17,10 @@ Class watch for fumigants: phosphine generators, hydrogen cyanide, sulfuryl fluo
 Built automatically from the class baseline and its updates. Do not edit: it is rebuilt after every run. A signal whose `Named substances` line lists a member is also copied into that member's combined file as a substance-specific signal.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-21. There are 0 new top signals. No NGO published anything in the window on fumigants as a class, on phosphine, or on EU policy specific to fumigants. PAN Europe has published no reaction to the EU renewal of phosphine as a plant protection product (Regulation (EU) 2026/1968), and no NGO request for internal review of it was found. Deutsche Umwelthilfe (DUH) published nothing new on sulfuryl fluoride in the window; that topic is single-member in any case.
 
 ### Baseline 2026-10-21
 
@@ -43,7 +47,20 @@ None.
 
 None.
 
-## 3. Lower-relevance items
+## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- 2026-06-24 PAN Europe phosphine SCoPAFF letter (Tier B): no news found. PAN Europe's letters page has two entries after June: the 2026-09-24/25 SCoPAFF letter and an October 2026 CAP letter. Neither concerns phosphine according to the page summaries. No PAN Europe press release on phosphine appeared in the window.
+- Phosphine PPP renewal, possible Aarhus internal review request (due roughly early November 2026): no NGO publication found. The Commission's public register of internal review requests (checked for context only, not as a source) lists no request on Regulation 2026/1968 among its 2026 entries. The register may lag.
+- Sulfuryl fluoride (single member): the EU approval expires 2027-01-31. Cases are pending in Hamburg, at the BVL in Braunschweig and at the General Court (T-467/24), and DUH's objection to the transition periods is also pending. No news was found. DUH's press releases dated 2026-11-02 to 2026-11-10 contain nothing on sulfuryl fluoride. Its newest lawsuit overview found is dated 2026-09-23, before the window.
+- No NGO has announced action on the BPR approvals of the class or on fumigants as a group: still none found.
+
+## 4. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Baseline 2026-10-21
 
@@ -55,14 +72,15 @@ The first two are PAN Europe's earlier letters in the phosphine series behind th
 - `PPP` · `national:DE` — 2026-04-29: DUH reports that, after its lawsuit, the BVL revoked the ProFume authorisation for fumigating export timber in large German seaports. DUH objected on 2026-04-28 to the 6-month sell-off and 18-month use-up periods (as described by the NGO). https://www.duh.de/presse/pressemitteilungen/pressemitteilung/nach-klage-der-deutschen-umwelthilfe-behoerde-widerruft-zulassung-fuer-zentrale-anwendung-des-klimasc/
 - `PPP` · `national:DE` — 2026-02-25: DUH, supported by Umweltinstitut München, files a failure-to-act suit at the Hamburg administrative court against city authorities over ProFume fumigation of export wood in leaky containers. It cites the F-gas Regulation. https://www.duh.de/presse/pressemitteilungen/pressemitteilung/skandal-am-hamburger-hafen-deutsche-umwelthilfe-reicht-untaetigkeitsklage-wegen-begasung-von-exporth/
 
-## 4. What NGOs say is coming next
+## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_baseline_2.md._
+_From the latest run, 2026-11-10_class_update.md._
 
-- Phosphine PPP renewal: PAN Europe asked Member States to reject it. Non-NGO sources report renewal by Regulation (EU) 2026/1968 (signed 2026-09-07, approval 2026-10-01 to 2041-09-30, confirmatory genotoxicity data due 2028-09-28). Watch for an NGO request for internal review under the Aarhus Regulation, which would be due within about 8 weeks of publication (roughly early November 2026), or for any public NGO reaction. None was found as of 2026-10-21.
-- Sulfuryl fluoride (single member, for its substance report): the EU approval expires 2027-01-31 and DUH and partners demand non-renewal. Cases are pending at the Hamburg administrative court, at Braunschweig (BVL) and at the EU General Court (T-467/24), and the DUH objection to the transition periods is also pending.
+- Phosphine PPP renewal (Regulation (EU) 2026/1968, approval 2026-10-01 to 2041-09-30; confirmatory genotoxicity data due 2028-09-28, per non-NGO sources): watch for a late-published PAN Europe internal review request or any NGO reaction. The likely deadline has now passed with nothing visible. Also watch for NGO comment when the confirmatory genotoxicity data are assessed.
+- Sulfuryl fluoride (single member, for its substance report): the EU approval expires 2027-01-31, and DUH and partners demand non-renewal. The Hamburg, Braunschweig (BVL) and General Court (T-467/24) cases are pending, as is the DUH objection to the transition periods. An EU renewal decision or a further extension before January 2027 would probably prompt a DUH reaction.
 - No NGO has announced action on the BPR approvals of the phosphine generators, hydrogen cyanide or sulfuryl fluoride, or on fumigants as a group.
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_baseline_2.md

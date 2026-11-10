@@ -2,10 +2,10 @@
 substance: Aluminium phosphide
 slug: aluminium-phosphide
 cas: 20859-73-8
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: PAN Europe asks EU Member States to reject renewing phosphine, the gas aluminium phosphide releases, as a pesticide, citing EFSA's genotoxicity critical area of concern (2026-06-24)
@@ -18,11 +18,15 @@ class_signal_levels: fumigant medium; horizontal medium
 
 # NGO signals, combined: Aluminium phosphide (CAS 20859-73-8)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for fumigant, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for fumigant, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Aluminium phosphide. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Aluminium phosphide; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are 0 new top signals, and none target the biocide approval. I found no NGO publication on aluminium phosphide or phosphine dated inside the window. The level stays medium because of PAN Europe's hazard-based (genotoxicity) campaign against phosphine in the PPP regime, last expressed on 2026-06-24.
 
 ### Update 2026-10-20 (change: none)
 
@@ -76,12 +80,14 @@ None.
 
 ## 3. Class-level signals (do not name Aluminium phosphide)
 
-### fumigant · class signal level: medium · last run 2026-10-21 · [class file](../_classes/fumigant/fumigant_class_combined.md)
+### fumigant · class signal level: medium · last run 2026-11-10 · [class file](../_classes/fumigant/fumigant_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-06-24 — PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold · `PPP` · `EU` · `indirect–hazard` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -97,6 +103,16 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Europe SCoPAFF letter, 2026-06-24 (phosphine non-renewal, genotoxicity): no news found. PAN Europe's [letters page](https://www.pan-europe.info/resources/letters) has added only an October 2026 letter on the CAP post-2027, which does not concern phosphine. Its [press releases](https://www.pan-europe.info/media/press-releases) from 2026-10-13 to 2026-11-05 (the UN experts on the Omnibus, Flemish classroom dust, the fludioxonil case in the Netherlands, an Omnibus poll) do not mention phosphine. The on-site search for "phosphine" returns nothing new.
+- PAN Europe SCoPAFF letter, 2026-04-30: no news found.
+- PAN Europe SCoPAFF letter, 2025-12-08: no news found.
+- groundWork comments to South Africa on aluminium phosphide (baseline date 2026-09-15): no news found. groundWork's [site search](https://groundwork.org.za/?s=phosphide) still shows only the same comments document, with no date displayed.
+- Coming next, outcome of the phosphine PPP renewal and any NGO reaction: I found no NGO source describing the outcome, and no NGO reaction. Background from non-NGO sources (not a finding): the renewal was adopted as Implementing Regulation (EU) 2026/1968 of 7 September 2026, with confirmatory genotoxicity data due by 2028. I found no NGO request for internal review of it. The Commission's Aarhus register lists none, and PAN Europe's site shows none.
+- Coming next, South Africa's final regulatory action (Rotterdam notification): no news found from NGOs.
+- Coming next, NGO action on the BPR PT18 renewal or CLH: none found.
+
 ### Update 2026-10-20
 
 - PAN Europe SCoPAFF letter, 2026-06-24 (phosphine non-renewal, genotoxicity): no news found. PAN Europe's letters page has nothing new after the 24–25 September 2026 SCoPAFF letter, which does not mention phosphine (https://www.pan-europe.info/resources/letters). A site search for "phosphine" also returns nothing new.
@@ -109,6 +125,10 @@ None.
 
 ## 5. Lower-relevance items
 
+### Update 2026-11-10
+
+None.
+
 ### Update 2026-10-20
 
 None.
@@ -119,13 +139,14 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Phosphine PPP renewal: PAN Europe asked Member States to reject it (December 2025, May 2026 and June 2026 letters). No NGO has yet published the outcome or a reaction, such as a request for internal review or litigation against an adopted renewal regulation. Watch for this.
+- Phosphine PPP renewal: PAN Europe asked Member States to reject it (letters of December 2025, May 2026 and June 2026). According to non-NGO sources the renewal has since been adopted (Reg. 2026/1968). No NGO has published a reaction, a request for internal review or litigation. The 8-week deadline for an internal review request seems to have run out in early November 2026, so check once more for a late-published request or a statement. If none appears, this item can be treated as closed with no NGO challenge.
 - South Africa: groundWork's comments feed into a pending final regulatory action (Rotterdam Convention notification) on aluminium phosphide. No deadline is given.
-- No NGO has announced action on the BPR PT18 renewal (Commission decision pending), or on the CLH process for aluminium phosphide.
+- No NGO has announced action on the BPR PT18 renewal (Commission decision pending) or on the CLH process for aluminium phosphide.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

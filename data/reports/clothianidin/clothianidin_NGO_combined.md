@@ -2,10 +2,10 @@
 substance: Clothianidin
 slug: clothianidin
 cas: 210880-92-5
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Buglife asks UK Parliament to ban pesticides like clothianidin, already banned in farming, in every other use including domestic products, because of their toxicity to bees and other insects (2025-01-16)
@@ -18,11 +18,15 @@ class_signal_levels: neonicotinoid medium; horizontal medium
 
 # NGO signals, combined: Clothianidin (CAS 210880-92-5)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Clothianidin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Clothianidin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals, and no NGO item in the window targets the clothianidin biocide approval or campaigns on clothianidin specifically. The only in-window NGO items that name clothianidin are two Beyond Pesticides (US) blog posts on non-EU monitoring studies (Ecuador surface water, Chinese residential soil). In both, clothianidin is one detected neonicotinoid among several. Signal level stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -119,7 +123,7 @@ None.
 
 ## 3. Class-level signals (do not name Clothianidin)
 
-### neonicotinoid · class signal level: medium · last run 2026-10-21 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
+### neonicotinoid · class signal level: medium · last run 2026-11-10 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-10-14 — Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier B `[baseline 2026-10-21]` 2026-09-16 — PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity · `food residues` · `EU` · `indirect–hazard` · `campaign`
@@ -127,8 +131,10 @@ None.
 - Tier C `[baseline 2026-10-21]` 2026-08-14 — Générations Futures vows court action against French derogations from the national neonicotinoid ban, citing persistence and risks to wild bees and groundwater · `PPP` · `national:FR` · `indirect–use` · `litigation`
 - Tier C `[baseline 2026-10-21]` 2026-07-02 — ClientEarth and Butterfly Conservation hail a watchdog finding that the UK government broke the law on neonicotinoid emergency authorisations and press for a complete ban, citing harm to protected sites and pollinators · `PPP` · `UK` · `indirect–use` · `formal request`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -143,6 +149,21 @@ None.
 - Tier C `[baseline 2026-10-21]` 2025-11-19 — PAN Europe, Pollinis and Aurelia win CJEU rulings that the Commission cannot routinely extend pesticide approvals while reassessment is delayed, citing the precautionary principle · `PPP` · `EU` · `indirect–use` · `litigation`
 
 ## 4. Follow-ups on known items
+
+### Update 2026-11-10
+
+- Buglife UK briefing (ban farm-banned pesticides in all sectors, including domestic): no news found. Buglife's 2026 vet-medicine work (flea treatments, prescription-only status) concerns fipronil and imidacloprid, not clothianidin.
+- Beyond Pesticides comments to US EPA (clothianidin, imidacloprid, thiamethoxam): no follow-up on the EPA file. Two in-window blog posts name clothianidin (see section 4).
+- foodwatch residue tests in tea, rice and spices / zero-residue demand: no news found. foodwatch's in-window items (sugar tax, groundwater, staffing) do not concern clothianidin.
+- CFS FOIA suit on treated-seed disposal: no news found. CFS's in-window press releases do not concern neonicotinoids.
+- Greenpeace/Unearthed export investigation: no news found. Unearthed has published nothing since 2026-10-07.
+- PAN UK GB/EU MRL divergence briefing: no news found (search only; site not read directly).
+- PAN Europe imported-residue report: no clothianidin-specific follow-up. PAN Europe's in-window items (Velt classroom-dust study, 2026-10-22; Omnibus poll, 2026-11-05) do not name clothianidin or neonicotinoids.
+- Coming next, Omnibus: activity continues at class level (PAN Europe/PAN Germany/Générations Futures poll, 2026-11-05; French Assemblée European Affairs Committee resolution reported by Générations Futures, 2026-10-26). None of it names clothianidin, so the class watch covers it. Dropped from this file's checklist.
+- Coming next, export ban: no news found in the window.
+- Coming next, derogations / further infringement procedures after Romania: no news found.
+- Coming next, US: CFS/PANNA Ninth Circuit treated-seed appeal has no NGO-published ruling news. The NRDC tolerance petition settlement (EPA decision due by 2027-04-30) has no NGO update found; the NRDC page returned 403.
+- Coming next, UK (Buglife all-sector ban, National Action Plan): no news found.
 
 ### Update 2026-10-20
 
@@ -160,6 +181,13 @@ None.
 - Coming next, UK (Buglife all-sector ban, National Action Plan): no news found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `international` — 2026-10-30: Beyond Pesticides blog "Pesticide Treadmill Results in Wide Residential Exposure to Newest Toxic Insecticides, Diamides and Neonics" reports a Chinese study (200 urban residential soil samples, 10 provinces). Clothianidin is one of six neonicotinoids detected in more than half of the samples, and children's estimated intake was higher than adults'. Beyond Pesticides asks for a move to organic land management. It is a non-EU monitoring study with no demand on clothianidin specifically. https://beyondpesticides.org/dailynewsblog/2026/10/pesticide-treadmill-results-in-wide-residential-exposure-to-newest-toxic-insecticides-diamides-and-neonics/
+- `water` · `international` — 2026-10-28: Beyond Pesticides blog "Industrial Floriculture Affects Ecosystem Stability and Health in Ecuador, Major U.S. Flower Supplier" reports a study of surface water near cut-flower farms (2022–2025). It found clothianidin in 35% of samples (thiamethoxam 46%, imidacloprid 71%) and calls for an overhaul of industry practices. Use-specific (agricultural runoff) and non-EU. https://beyondpesticides.org/dailynewsblog/2026/10/industrial-floriculture-affects-ecosystem-stability-and-health-in-ecuador-a-major-cut-flower-supplier-to-u-s/
+
+_1 item(s) left out here because they are class-level signals, listed in section 3._
 
 ### Update 2026-10-20
 
@@ -185,15 +213,16 @@ _3 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- **Food and Feed Safety Omnibus:** the Council position was adopted on 2026-09-30, and the file is now in the European Parliament. PAN Europe, foodwatch, CEO, Générations Futures and BeeLife are lobbying MEPs to halt it or reject it. foodwatch reports more than 160,000 consumer messages to MEPs. The UN experts' letter adds a human-rights and biocides angle. Watch the Parliament committee and plenary votes, then trilogues. PAN Europe earlier said 49 pesticides could get unlimited approval from 2027-01-01.
-- **Export ban:** the coalition keeps pressing the Commission and Council presidencies after the Commission's reported June 2026 reversal. A clothianidin PPP export ban now looks less likely.
+- **Export ban:** the End Toxic Pesticide Trade Coalition keeps pressing for an EU export ban on EU-banned pesticides, which would cover clothianidin PPP exports. The Commission reportedly reversed course in June 2026. Pending.
 - **Derogations:** PAN Europe wants further infringement procedures after the Romania case. Pending.
-- **US:** CFS FOIA suit pending. CFS/PANNA Ninth Circuit treated-seed appeal awaiting ruling. EPA decision on NRDC tolerance petition due by 2027-04-30 (unverified on NGO page).
-- **UK:** Buglife's push for an all-sector ban on farm-banned pesticides, and for the UK National Action Plan. Pending.
+- **US:** CFS FOIA suit pending. CFS/PANNA Ninth Circuit treated-seed appeal awaiting a ruling. EPA decision on NRDC's tolerance-revocation petition (clothianidin included) due by 2027-04-30 (unverified on the NGO's page).
+- **UK:** Buglife's push for an all-sector ban on farm-banned pesticides (including domestic products), and for the UK National Action Plan. Pending.
+- (Omnibus dropped from this list: class-level, followed by the class watch.)
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

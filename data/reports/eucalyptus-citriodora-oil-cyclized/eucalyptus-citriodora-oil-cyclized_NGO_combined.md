@@ -2,10 +2,10 @@
 substance: Eucalyptus citriodora oil, hydrated, cyclized
 slug: eucalyptus-citriodora-oil-cyclized
 cas: -; 1245629-80-4
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Eucalyptus citriodora oil, hydrated, cyclized (CAS -; 1245629-80-4)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Eucalyptus citriodora oil, hydrated, cyclized. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Eucalyptus citriodora oil, hydrated, cyclized; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime. No NGO material published in the window and naming Eucalyptus citriodora oil, hydrated, cyclized (Citriodiol, PMD or oil of lemon eucalyptus) was found. One supportive consumer article from June 2026 that the earlier reports missed is listed under lower relevance. It is not a new signal.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Eucalyptus citriodora oil, hydrated, cyclized)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,6 +71,13 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Earlier top signals: there were none, so there is nothing to follow up.
+- PAN Germany call (2025-06-11) to bring PT19 repellents under Germany's biocide sales and advice rules: no news found. The newest entry on PAN Germany's biocides page is still dated 2026-07-02 and is about rodenticides (https://pan-germany.org/biozide/).
+- Which? repellent testing (2026-07-01, 2026-08-25): no new Which? item on PMD or Citriodiol found in the window.
+- Verbraucherzentrale Hamburg, Umweltinstitut München and Test-Achats consumer advice pages: no new or updated pages dated in the window found.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so there is nothing to follow up.
@@ -73,6 +86,10 @@ None.
 - Verbraucherzentrale Hamburg, Umweltinstitut München and Test-Achats consumer advice pages: no new or updated pages dated in the window found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `BPR` · `national:BE` — 2026-06-15 (pre-window, missed earlier): Test-Aankoop (Belgian consumer organisation) news article "Wat is de beste muggenspray?" reports its repellent test. It says citriodiol can be natural or synthetic, that "natural" does not mean safe, and that 20–30% citriodiol sprays are likely safe from six months of age with correct use. A HEMA 30% citriodiol spray scored well. The article criticises "natural" claims and labelling faults, but makes no demand against the substance. It is supportive overall. https://www.test-aankoop.be/gezond/dagelijkse-verzorging/antimuggenmiddelen/nieuws/het-beste-middel-tegen-muggen
 
 ### Update 2026-10-20
 
@@ -91,11 +108,12 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Nothing specific to this substance. Still pending: PAN Germany's class-level call (2025-06-11) to make PT19 repellents subject to Germany's biocide sales advice rules. If adopted, this would affect point-of-sale rules in Germany for all repellents, including Citriodiol/PMD products. It would not affect EU approval. No NGO has announced a campaign, case or deadline targeting this substance.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

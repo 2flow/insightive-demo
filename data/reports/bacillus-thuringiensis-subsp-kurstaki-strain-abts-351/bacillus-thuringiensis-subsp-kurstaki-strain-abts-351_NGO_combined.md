@@ -2,10 +2,10 @@
 substance: Bacillus thuringiensis subsp. kurstaki (Btk)
 slug: bacillus-thuringiensis-subsp-kurstaki-strain-abts-351
 cas: -
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: NABU Minden-Lübbecke (2026-06-13) asks that Bacillus thuringiensis spraying against oak processionary moth be limited to places with a documented human-health risk, citing harm to non-target caterpillars; local, use-specific, no EU-level ask
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Bacillus thuringiensis subsp. kurstaki (Btk) (CAS -)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Bacillus thuringiensis subsp. kurstaki (Btk). Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Bacillus thuringiensis subsp. kurstaki (Btk); they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No new top signals were found in any regime, and none target the biocide approval. The known items (NABU Minden-Lübbecke on oak processionary moth control, and KCSA on aerial Btk spraying in British Columbia) had no follow-up in the window. Pressure on the BPR renewal (CA France, expiry 2027-02-28) stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -70,8 +74,10 @@ None.
 
 ## 3. Class-level signals (do not name Bacillus thuringiensis subsp. kurstaki (Btk))
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -87,6 +93,13 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- NABU Minden-Lübbecke, 2026-06-13 press release on oak processionary moth control: no news found. Its news page shows nothing newer than 2026-10-01, which is the item about storks. https://www.nabu-minden-luebbecke.de/aktuelles/
+- NABU Minden-Lübbecke, the 2027 spraying season as the next decision point: no news found. This is still pending.
+- KCSA, monitoring of BC aerial Btk programmes: no news found. The latest programme update on its page is still "January 2026", and no 2027 programme is mentioned. Its only October 2026 content concerns geoengineering laws, not Btk. https://kelownacsa.org/aerial-spraying-local-and-provincal
+- EU-level NGO campaign, litigation, access-to-documents request or consultation response on the Btk ABTS-351 BPR renewal: none found.
+
 ### Update 2026-10-20
 
 - NABU Minden-Lübbecke, 2026-06-13 press release on oak processionary moth control: no news found. The article has no update note, and the group's news page shows no later item on the topic. Its only in-window entry, dated 2026-10-01, is about storks. https://www.nabu-minden-luebbecke.de/aktuelles/
@@ -95,6 +108,10 @@ None.
 - EU-level NGO campaign, litigation, access-to-documents request or consultation response on the Btk ABTS-351 BPR renewal: none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -108,7 +125,7 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - NABU Minden-Lübbecke is pressing its district for better-targeted oak processionary moth treatment. The next decision point is the 2027 spraying season (spring 2027).
 - KCSA says it will monitor BC aerial Btk programmes and inform communities (Canada only). No 2027 programme has been announced on its page so far.
@@ -116,5 +133,6 @@ _From the latest run, 2026-10-20_NGO_update.md._
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

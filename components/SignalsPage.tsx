@@ -8,7 +8,6 @@ import { isNgo } from '@/lib/ngoSignals'
 import type { RecordOrder } from '@/lib/feeds'
 import InfoNote from './InfoNote'
 import RecordCard, { CATEGORY_ICON } from './RecordCard'
-import { ArrowLeftIcon } from './icons'
 
 // Every signal across every substance on one timeline, oldest first. The
 // per-substance pages answer "what has happened to this substance"; this one
@@ -35,10 +34,8 @@ const TALLY_NOTE =
   'Each card’s direction and strength is a reading of that one item — set by the research for researched records, or by a fixed rule for records built from ECHA and EUR-Lex data. These counts just add them up; the app never combines them into an overall verdict.'
 
 export default function SignalsPage({
-  onBack,
   onOpenSubstance,
 }: {
-  onBack: () => void
   onOpenSubstance: (id: string) => void
 }) {
   const [order, setOrder] = useState<RecordOrder>(DEFAULT_ORDER)
@@ -86,11 +83,6 @@ export default function SignalsPage({
 
   return (
     <div className="feed-page">
-      <button type="button" className="feed-back" onClick={onBack}>
-        <ArrowLeftIcon />
-        All substances
-      </button>
-
       <header className="feed-page-head">
         <div className="feed-page-eyebrow">Renewal signals</div>
         <h1 className="feed-page-title">All signals</h1>

@@ -2,10 +2,10 @@
 substance: Muscalure ((Z)-9-tricosene)
 slug: muscalure-z-9-tricosene
 cas: 27519-02-4
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Muscalure ((Z)-9-tricosene) (CAS 27519-02-4)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Muscalure ((Z)-9-tricosene). Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Muscalure ((Z)-9-tricosene); they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are 0 new top signals, and no NGO item in the window names Muscalure ((Z)-9-tricosene) in any regime. No NGO has reacted to the EU renewal of the PT19 approval (see Method notes), and NGO pressure on the file is still nil.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Muscalure ((Z)-9-tricosene))
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,6 +71,11 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals from the earlier reports: there were none, so nothing needed a follow-up.
+- "What NGOs say is coming next" from the earlier reports: they listed nothing. No NGO announcement, campaign, legal step or consultation response on muscalure was found in the window, and no NGO commented on the renewal decision.
+
 ### Update 2026-10-20
 
 - Top signals from the baseline: there were none, so nothing needed a follow-up.
@@ -72,6 +83,10 @@ None.
 - Class-level PAN Europe biocontrol/semiochemicals item from the baseline's lower-relevance list (2025-10-15): no new PAN Europe item on semiochemicals or pheromones found in the window.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -83,11 +98,12 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Nothing. No NGO has announced anything concerning Muscalure.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

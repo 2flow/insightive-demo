@@ -2,10 +2,10 @@
 substance: Tetramethrin
 slug: tetramethrin
 cas: 7696-12-0
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN Netherlands blacklists tetramethrin among 10 insecticides it wants banned for consumer use (2025-04-07)
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: Tetramethrin (CAS 7696-12-0)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Tetramethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Tetramethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO item published in the window that names tetramethrin, in any regime. The NGOs active earlier (PAN Netherlands, Générations Futures) published only on other substances or on horizontal topics.
 
 ### Update 2026-10-20 (change: none)
 
@@ -63,12 +67,15 @@ None.
 
 ## 3. Class-level signals (do not name Tetramethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -84,6 +91,13 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Netherlands black list of 10 home-and-garden insecticides, tetramethrin included (2025-04-07): no news found. PAN-NL's news page has no October 2026 items. Its November items (2026-11-04 Pitcher/fludioxonil court outcome, 2026-11-05 water-board handbook, 2026-11-08 bird-food residue test) do not concern consumer insecticides or tetramethrin. https://www.pan-netherlands.org/nieuws/
+- PAN-NL's willingness to escalate through legal steps at the Ctgb: it continued in the window (Pitcher/fludioxonil, 2026-11-04), but on plant protection products only. Nothing on tetramethrin.
+- Générations Futures wants all pyrethroids withdrawn, biocidal uses included: no news found. Its news items from 2026-10-12 to 2026-11-09 cover the Omnibus, spreading registers, an RNAi pesticide and the diffuse-pollution levy, and none mention pyrethroids, biocides or tetramethrin. https://www.generations-futures.fr/actualites/
+- Omnibus and BPR evaluation items (horizontal, do not name tetramethrin): dropped from this checklist as the brief requires. The class watch follows them.
+
 ### Update 2026-10-20
 
 - PAN Netherlands black list of 10 home-and-garden insecticides, tetramethrin included (2025-04-07): no news found. PAN-NL's news page has no item in the window; its newest item is dated 2026-09-14 and none concerns consumer insecticides or tetramethrin. https://www.pan-netherlands.org/nieuws/
@@ -92,6 +106,10 @@ None.
 - Générations Futures wants all pyrethroids withdrawn, biocidal uses included: no news found in the window. Its October 2026 news items do not mention pyrethroids, biocides or tetramethrin.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -113,14 +131,13 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- PAN-NL wants harmful insecticides, tetramethrin included, banned for non-professional users. It has announced no tetramethrin-specific step or date. It remains active in litigation at the Ctgb (PFAS pesticides, deltamethrin, the 50-product ED withdrawal request), which shows it is willing to escalate.
-- The Food and Feed Safety Omnibus, which PAN Europe says covers biocide rules: NGOs plan a gathering in Strasbourg on 2026-11-24 to push MEPs to reject the text; the Parliament vote has been postponed to the end of 2026. Horizontal, not naming tetramethrin.
-- The Commission's BPR evaluation, which PAN Europe, PAN Germany and Générations Futures contributed to, is expected to be finalised around mid-2027. Horizontal.
-- Générations Futures continues to push for all pyrethroids, biocidal uses included, to be withdrawn in France.
+- PAN-NL wants harmful insecticides, tetramethrin included, banned for non-professional users. It has announced no tetramethrin-specific step or date. It remains active in litigation at the Ctgb (PFAS pesticides, deltamethrin, ED products, and Pitcher/fludioxonil, which is to be withdrawn from May 2027), which shows it is willing to escalate.
+- Générations Futures continues to push for all pyrethroids, biocidal uses included, to be withdrawn in France. It has announced no new step.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

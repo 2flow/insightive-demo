@@ -1,10 +1,10 @@
 ---
 class: juvenile hormone analogue
 class_slug: juvenile-hormone-analogue
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline.md
-updates: none
-last_run: 2026-10-21
+updates: 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: none
 signals_total: 0
 signals_new_since_baseline: 0
@@ -17,6 +17,10 @@ Class watch for juvenile hormone analogues used as insect growth regulators. Mem
 Built automatically from the class baseline and its updates. Do not edit: it is rebuilt after every run. A signal whose `Named substances` line lists a member is also copied into that member's combined file as a substance-specific signal.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-21. 0 new top signals. In the window I found no NGO item, in any regime, on juvenile hormone analogues or insect growth regulators as a class. The UK pet flea-treatment campaign is still the closest related activity, but I found no NGO step dated in the window, and its sources still name only fipronil, imidacloprid and permethrin.
 
 ### Baseline 2026-10-21
 
@@ -36,7 +40,20 @@ None.
 
 None.
 
-## 3. Lower-relevance items
+## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- UK pet parasiticides (Lords "Paws for Concern" general-sale ban, VMD distribution-category review): I found no NGO publication in the window (Buglife, WildFish, Wildlife and Countryside Link, PAN UK, SongBird Survival). I also found no NGO reaction to a government response. No news found.
+- 2024 coalition demand to bar substances not allowed in agriculture from veterinary medicines: no news found.
+- Endocrine-disruption campaigns listing IGRs (PAN Europe, PAN Netherlands, Générations Futures): the PAN Europe EDC material I found covers PPP substances (buprofezin, cyprodinil, fenoxaprop-P-ethyl, fludioxonil, flufenacet) and does not list IGRs. No news found.
+- EU pesticide Omnibus: horizontal item, left to the horizontal watch.
+
+## 4. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Baseline 2026-10-21
 
@@ -44,16 +61,17 @@ None.
 - `vet medicines` · `UK` — 2026 (exact date not confirmed): "Flea Treatment Crisis – Independent Review" by Matt Shardlow, published by Wildlife and Countryside Link. It makes 46 recommendations and centres on fipronil and imidacloprid in rivers. I could not extract the PDF text, so whether it mentions S-methoprene or pyriproxyfen in its product tables is unknown. (unverified) https://wcl.org.uk/docs/2026/Flea%20Treatment%20Crisis%20-%20Independent%20Review%20final%20v2.pdf
 - `cross-regime` · `international` — Beyond Pesticides "Gateway" fact sheets for pyriproxyfen (rated "Toxic"; endocrine disruption and reproductive effects rated "likely") and methoprene. These are standing database pages generated on request, not dated publications or campaigns. They are listed as background because NGOs could cite them. https://www.beyondpesticides.org/gateway-pdf/chem265 · https://www.beyondpesticides.org/gateway-pdf/chem219 (not re-opened in this run)
 
-## 4. What NGOs say is coming next
+## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_baseline.md._
+_From the latest run, 2026-11-10_class_update.md._
 
-No NGO has announced anything about the class. Points to watch:
-- UK pet parasiticides: NGOs (Buglife, WildFish, Wildlife and Countryside Link, SongBird Survival) are pressing for the Lords committee's general-sale ban and for reform of how the VMD assesses environmental risk. The VMD consulted (2026-04-16 to 2026-06-11) on restricting fipronil and imidacloprid products to vets and suitably qualified persons. If the restriction or reform is widened to all pet parasiticides, it could reach IGR-containing products (S-methoprene and pyriproxyfen combinations). Watch for the government response to the Lords report.
-- The 2024 coalition demand (24 organisations, outside the window) that any substance not allowed in agriculture be barred from veterinary medicines. In principle this would cover methoprene, which is not approved as an EU plant protection product, but it has not been named.
-- Endocrine disruption: Beyond Pesticides rates pyriproxyfen as a likely endocrine disruptor. If EU endocrine-disruptor campaigns (PAN Europe, PAN Netherlands, Générations Futures) start listing IGRs, report it here or in the member reports.
-- EU pesticide Omnibus (unlimited approvals): a horizontal item, covered by the horizontal watch.
+No NGO has announced anything about the class. Still pending:
+- UK pet parasiticides: NGOs (Buglife, WildFish, Wildlife and Countryside Link, SongBird Survival) are pressing for the Lords committee's general-sale ban and for VMD reform. The VMD review targets fipronil and imidacloprid products. If it is widened to all pet parasiticides, it could reach fipronil + S-methoprene and pyriproxyfen combination products. Watch for the government response to the Lords report and the outcome of the VMD review, and for NGO reactions to them.
+- 2024 coalition demand to bar substances not allowed in agriculture from veterinary medicines (would in principle cover methoprene; not named).
+- Endocrine disruption: Beyond Pesticides rates pyriproxyfen as a likely endocrine disruptor. Watch for EU ED campaigns that start listing IGRs.
+- EU pesticide Omnibus (horizontal watch).
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_baseline.md

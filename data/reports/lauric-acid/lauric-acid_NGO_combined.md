@@ -2,10 +2,10 @@
 substance: Lauric acid
 slug: lauric-acid
 cas: 143-07-7
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Lauric acid (CAS 143-07-7)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Lauric acid. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Lauric acid; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO material naming Lauric acid was found in any regime in the update window. NGO pressure on the BPR renewal (PT19, Germany as evaluating CA) is still nil.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Lauric acid)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,12 +71,21 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals in the earlier reports: none, so there was nothing to follow up.
+- "Coming next" item (general NGO campaigning against the EU pesticide Omnibus simplification): this is class-level/horizontal and does not name Lauric acid. Under the brief it is left to the class watch and dropped from this checklist. PAN Germany's news feed in the window ([PAN Germany news](https://pan-germany.org/)) has only Omnibus, webinar and chemicals-management items, and none of them names Lauric acid.
+
 ### Update 2026-10-20
 
 - Top signals in the baseline: none, so there was nothing to follow up.
 - "Coming next" item (general NGO work on EU pesticide/biocide Omnibus simplification, not specific to Lauric acid): this work continued in the window. PAN Germany's news feed lists items on member states approving the Council compromise on the pesticide Omnibus (2026-09-30) and on UN human rights experts warning about it (2026-10-14) ([PAN Germany news](https://pan-germany.org/)). These items are class-level and cover PPP rules. They do not name Lauric acid or the BPR, so they are not signals.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -84,11 +99,12 @@ None that concern Lauric acid within the window. For completeness:
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-Nothing announced that is specific to Lauric acid. General NGO campaigning against the EU pesticide Omnibus simplification continues (Council compromise approved 2026-09-30, as PAN Germany reports). It does not name this substance.
+Nothing announced that is specific to Lauric acid.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

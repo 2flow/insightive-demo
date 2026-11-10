@@ -2,10 +2,10 @@
 substance: 1R-trans phenothrin
 slug: 1r-trans-phenothrin
 cas: 26046-85-5
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: 1R-trans phenothrin (CAS 26046-85-5)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name 1R-trans phenothrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name 1R-trans phenothrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals, and no NGO page dated in the window names 1R-trans phenothrin, phenothrin or sumithrin. I found one earlier US item that the previous reports missed: a June 2026 Beyond Pesticides post that names sumithrin. It is listed below as pre-window and is not a signal.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,13 +52,16 @@ None.
 
 ## 3. Class-level signals (do not name 1R-trans phenothrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -70,6 +77,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Générations Futures, call to withdraw all pyrethroid products including biocides (2025-04-25): no news found. Its news page for 2026-10-13 to 2026-11-09 has no item on pyrethroids or phenothrin. The items in the window cover the Omnibus, an RNA-interference insecticide, the pesticide water levy, incineration and a court case (https://www.generations-futures.fr/actualites/).
+- MASSQuito Coalition / NOFA Mass, Massachusetts bills S.547/H.985 (US): no news found. The page is still marked "Updated 6/13/25" and gives no new bill status (https://www.nofamass.org/home/policy/massquito/).
+- Beyond Pesticides tolerance comments (April 2026, unverified): no news found, and the comments are still unverified.
+- No NGO action announced on the EU BPR renewal or on the substance's candidate-for-substitution status: still none found.
+- Générations Futures / PAN Europe campaign against unlimited approvals under the Omnibus: dropped from this checklist. It is class-level and horizontal, none of the items found names phenothrin, and the class watch follows it.
+
 ### Update 2026-10-20
 
 - Générations Futures, call to withdraw all pyrethroid products including biocides (2025-04-25): no news found. Its news page for 2026-10-06 to 2026-10-15 has no item on pyrethroids or phenothrin (https://www.generations-futures.fr/actualites/).
@@ -78,6 +93,10 @@ None.
 - No NGO action announced on the EU BPR renewal or on the substance's candidate-for-substitution status: still none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `international` — 2026-06-25 (pre-window, missed earlier): Beyond Pesticides (US) reports a study of mosquito adulticides that were toxic to honey bee larvae. The study tested "four mosquito adulticide active ingredients (chlorpyrifos, naled, prallethrin, sumithrin)" and the formulation Duet, which "contains prallethrin, sumithrin, and a synergist". The post asks EPA, FDA and Congress to assess pesticides in the context in which they are used, and calls for source reduction of mosquito breeding sites. It concerns US wide-area mosquito control and has no EU route. https://beyondpesticides.org/dailynewsblog/2026/06/registered-pesticides-toxic-to-honey-bee-larvae-study-finds/
 
 ### Update 2026-10-20
 
@@ -91,14 +110,15 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - Générations Futures is still pressing French authorities to withdraw pyrethroid products, biocides included. A follow-up that names individual pyrethroids would be the likeliest route by which phenothrin comes into scope.
-- Générations Futures and PAN Europe continue to campaign against unlimited approvals under the Omnibus, which they say covers some biocides. This is worth watching for any list that names phenothrin. As a candidate for substitution, phenothrin may fall outside unlimited approvals; that is my inference, not an NGO claim.
 - MASSQuito Coalition: Massachusetts bills S.547/H.985 are still pending. This is US-only and has no EU bearing.
+- Beyond Pesticides continues to cover the hazards of sumithrin used in US mosquito control. This is US-only and has no EU bearing.
 - No NGO has announced action on the EU BPR renewal of 1R-trans phenothrin.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

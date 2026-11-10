@@ -2,11 +2,11 @@
 substance: Prallethrin
 slug: prallethrin
 cas: 23031-36-9
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
-signal_level: none
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
+signal_level: low
 baseline_signal_level: none
 baseline_top_signal: none
 signals_total: 0
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: Prallethrin (CAS 23031-36-9)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Prallethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Prallethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals, and none targets the biocide approval or any other regime. No NGO item published in the window names Prallethrin. Two earlier NGO items that name Prallethrin were found; the previous reports missed them (see section 4). The more relevant one is PAN Netherlands' April 2025 "black list" of 10 insecticides, which includes Prallethrin and calls for a ban on consumer (non-professional) use. Because of it, `signal_level` moves from none to low, even though nothing new happened in the window.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,13 +52,16 @@ None.
 
 ## 3. Class-level signals (do not name Prallethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -70,6 +77,11 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Baseline and 2026-10-20 update top signals: there were none, so there is nothing to follow up.
+- PAN Europe's push for EU bans on deltamethrin and other pyrethroids, the Food and Feed Safety Omnibus, and Générations Futures' deltamethrin withdrawal calls: these are class-level or horizontal and do not name Prallethrin, so they are left to the class watch and dropped from the list below. As a spot check, PAN Europe's homepage list for October and November 2026 (Omnibus polling, a Flemish classroom pesticide study, the UN experts' letter) names neither pyrethroids nor Prallethrin.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so there is nothing to follow up.
@@ -78,6 +90,11 @@ None.
 - Générations Futures' calls for cross-regime withdrawal of deltamethrin (PPP, biocide, veterinary): no news found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `BPR` · `national:NL` — (pre-window, missed earlier) On 2025-04-07 PAN Netherlands published the report "PAN-NL zet 10 insecticiden op de zwarte lijst". It puts Prallethrin on a "black list" of 10 insecticides it calls too harmful for home and garden use, citing endocrine-disrupting and neurotoxic properties of the pyrethroids it names. It also notes that Praxis sells products containing Prallethrin. PAN-NL asks retailers to stop selling non-professional products containing these substances by 2027, and asks the government to regulate towards a ban on synthetic pesticides for non-professional use. This is part of a multi-substance consumer campaign, but it names Prallethrin explicitly. It is hazard-based, but it targets consumer use, not the EU approval. NGO: PAN Netherlands, [report (PDF)](https://www.pan-netherlands.org/wp-content/uploads/2025/04/onderzoeksrapport.pdf) · Also: [web page](https://www.pan-netherlands.org/zeer-giftige-bestrijdingsmiddelen-voor-huis-en-tuin/) (this page does not itself name Prallethrin)
+- `cross-regime` · `national:US` — (pre-window, missed earlier) On 2026-06-25 the Beyond Pesticides blog reported a University of Florida/Auburn study of mosquito adulticides on honey bee larvae. The study found the Prallethrin + sumithrin + PBO formulation (Duet) highly toxic to larvae in dose-response tests. Beyond Pesticides urges EPA and Congress to assess products as actually used and to favour non-chemical alternatives. This is the one post the baseline saw tagged "Prallethrin" but could not retrieve. It is about US vector-control use, so it carries over weakly. https://beyondpesticides.org/dailynewsblog/2026/06/registered-pesticides-toxic-to-honey-bee-larvae-study-finds/
 
 ### Update 2026-10-20
 
@@ -96,14 +113,13 @@ Outside the window, noted for context only: GLOBAL 2000's biocides background pa
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-No NGO has announced anything specific to Prallethrin. The items to watch for spillover are unchanged:
-- PAN Europe's push for EU bans on deltamethrin and other pyrethroids after the cypermethrin court win.
-- The Food and Feed Safety Omnibus: Council position agreed (per PAN Europe, 2026-09-30) and Parliament vote pending. PAN Europe is campaigning for MEPs to reject it, and the biocide rules are now also in scope per the UN experts' letter. Watch for whether the biocontrol definition or the biocide changes are linked to pyrethroids.
-- Générations Futures' calls for cross-regime withdrawal of deltamethrin products.
+- PAN Netherlands' target, from its April 2025 report: retailers stop selling "black-listed" insecticides, including Prallethrin, to non-professional users by 2027, and the Dutch government regulates towards a ban on synthetic pesticides for non-professional use. Watch for PAN-NL follow-ups, such as retailer checks or a renewed black list.
+- No NGO has announced anything else specific to Prallethrin.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

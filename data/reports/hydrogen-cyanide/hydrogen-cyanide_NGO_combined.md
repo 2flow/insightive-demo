@@ -2,10 +2,10 @@
 substance: Hydrogen cyanide
 slug: hydrogen-cyanide
 cas: 74-90-8
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: fumigant medium; horizontal medium
 
 # NGO signals, combined: Hydrogen cyanide (CAS 74-90-8)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for fumigant, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for fumigant, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Hydrogen cyanide. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Hydrogen cyanide; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are 0 new top signals, and none target the biocide approval or any other regime. Inside the 2026-10-13 to 2026-11-10 window we found no NGO press release, campaign, report, letter or legal filing that names hydrogen cyanide (HCN).
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,12 +52,14 @@ None.
 
 ## 3. Class-level signals (do not name Hydrogen cyanide)
 
-### fumigant · class signal level: medium · last run 2026-10-21 · [class file](../_classes/fumigant/fumigant_class_combined.md)
+### fumigant · class signal level: medium · last run 2026-11-10 · [class file](../_classes/fumigant/fumigant_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-06-24 — PAN Europe asks EU Member States to reject renewing phosphine as a pesticide, citing EFSA's finding that it is genotoxic with no safe threshold · `PPP` · `EU` · `indirect–hazard` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -69,6 +75,13 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Earlier top signals: there were none in the baseline or the 2026-10-20 update, so nothing to follow up.
+- (a) An NGO response to any consultation on HCN as a candidate for substitution: no news found. The search results show no ECHA consultation on HCN in the window; the latest ones listed are TCMTB (closed 2026-10-05), zineb and alphachloralose. We found no NGO comment.
+- (b) A PAN HHP list update or a PAN Europe MRL/PIC briefing naming HCN: no news found. December 2024 is still the newest PAN HHP list edition we can find. Whether HCN is on it is still unverified, because the PDF could not be parsed.
+- (c) PAN Europe's general BPR evaluation campaigning: no news found that names HCN or fumigants. PAN Europe's homepage items for October and November 2026 cover the pesticides Omnibus, polling, classroom pesticide cocktails and UN experts. None mentions HCN, fumigants or biocides.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so nothing to follow up.
@@ -76,6 +89,10 @@ None.
 - Coming next (b), a PAN HHP list update or a PAN Europe MRL/PIC briefing naming HCN: no news found. We found no new PAN HHP list edition in the window. The PAN UK copy of the 2024 list (https://www.pan-uk.org/site/wp-content/uploads/PAN_HHP_List_2024.pdf) still would not parse, so HCN's listing status is still unverified.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -88,14 +105,16 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-Nothing announced by any NGO. These items are still pending:
-- (a) Any public consultation on HCN as a candidate for substitution (the ECHA status is "under assessment"). This is the most likely trigger for NGO comment.
+No NGO has announced anything. These items are still pending:
+- (a) Any public consultation on HCN as a candidate for substitution (ECHA status: "under assessment"). This is the most likely trigger for NGO comment.
 - (b) Any PAN HHP list update or PAN Europe MRL/PIC briefing that names HCN. Whether HCN is on the December 2024 PAN HHP list should still be checked by hand.
-- (c) New, low priority: PAN Europe's general campaigning on the BPR evaluation and review programme (its call-for-evidence submission is linked in Method notes). Watch for any later step that names HCN or fumigants.
+- (c) Low priority: PAN Europe's general campaigning on the BPR evaluation. Watch for a later step that names HCN.
+- (d) New, low priority: the DUH campaign against sulfuryl fluoride timber fumigation, which includes a call not to renew its approval. If the campaign later names alternative fumigants, it could mention HCN (marketed as Bluefume). So far it does not name HCN.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

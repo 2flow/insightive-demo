@@ -2,10 +2,10 @@
 substance: Acetamiprid
 slug: acetamiprid
 cas: 135410-20-7
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: Générations Futures reports that no BPR renewal application was filed for acetamiprid and demands a total EU ban, biocide uses included (2025-09-30)
@@ -18,11 +18,15 @@ class_signal_levels: neonicotinoid medium; horizontal medium
 
 # NGO signals, combined: Acetamiprid (CAS 135410-20-7)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Acetamiprid. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Acetamiprid; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO item in the window names acetamiprid, and nothing targets the biocide approval directly. The French political follow-up (La France insoumise's bill to repeal the hazelnut derogation, rejected in committee on 2026-10-21 and due in plenary on 2026-10-29) appears only in press coverage. I found no NGO page on it. No NGO has reported news on the DUH litigation in Germany or on an Anses derogation decision.
 
 ### Update 2026-10-20 (change: none)
 
@@ -156,13 +160,15 @@ Of the 8 top signals, 5 target the PPP approval or national PPP derogations, 1 i
 
 ## 3. Class-level signals (do not name Acetamiprid)
 
-### neonicotinoid · class signal level: medium · last run 2026-10-21 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
+### neonicotinoid · class signal level: medium · last run 2026-11-10 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-10-14 — Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier C `[baseline 2026-10-21]` 2026-07-02 — ClientEarth and Butterfly Conservation hail a watchdog finding that the UK government broke the law on neonicotinoid emergency authorisations and press for a complete ban, citing harm to protected sites and pollinators · `PPP` · `UK` · `indirect–use` · `formal request`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -175,6 +181,19 @@ Of the 8 top signals, 5 target the PPP approval or national PPP derogations, 1 i
 - Tier C `[baseline 2026-10-21]` 2025-11-19 — PAN Europe, Pollinis and Aurelia win CJEU rulings that the Commission cannot routinely extend pesticide approvals while reassessment is delayed, citing the precautionary principle · `PPP` · `EU` · `indirect–use` · `litigation`
 
 ## 4. Follow-ups on known items
+
+### Update 2026-11-10
+
+- **BPR phase-out (Générations Futures, 2025-09-30):** No new NGO item. Générations Futures' news from 2026-10-13 to 2026-11-09 does not mention acetamiprid or biocides. Reporterre published pieces on acetamiprid household biocides (one says the state gave up banning self-service sales to consumers), but they are press, not NGO pages, and the dates could not be confirmed (403).
+- **Générations Futures fact-check on 213 French household biocides (2025-05-22):** No news found.
+- **PAN Europe/BeeLife World Bee Day letter, EFSA bee mandate request and the vP inconsistency (2026-05-20):** No news found. BeeLife has posted nothing since 2026-09-24. PAN Europe's releases in the window (2026-10-13, 10-22, 11-04, 11-05) do not name acetamiprid.
+- **EU Article 21 review (DNT/ED):** No NGO item found. A Commission draft MRL regulation for acetamiprid was sent to the Council in late October 2026 (keeping the honey MRL, raising barley). I found no NGO reaction to it.
+- **PAN Europe/Générations Futures request for suspension and Repr. 1B classification (2025-05-21):** No news found.
+- **Générations Futures science dossier (2025-05-20):** No news found.
+- **French hazelnut derogations under the loi d'urgence agricole (UNAF, Générations Futures, POLLINIS):** No NGO report of an Anses decision, a granted derogation or a court filing. UNAF's press page has nothing after 2026-10-06 (honey harvest). POLLINIS's 2026-11-04 item backs a tribune by about 100 scientists on Anses's independence and resources. It mentions the loi d'urgence agricole and flupyradifurone but not acetamiprid (https://www.pollinis.org/publications/anses-sous-pression-pollinis-mobilisee-aux-cotes-de-100-scientifiques/). I found no NGO page on the LFI repeal bill (committee rejection 2026-10-21, plenary 2026-10-29) and could not confirm the plenary outcome.
+- **German litigation (DUH, Leptostar lawsuit and Leaxo objection):** No news found. DUH's press releases from 2026-11-02 to 2026-11-10 are on other topics, and its pesticide-litigation page shows no update. The latest overview found is still the one dated 2026-09-23.
+- **Germany, beekeeper/BUND alliance against emergency authorisations:** No news found. DBIB's (berufsimker.de) items from 2026-10-16 (beekeeper associations meeting in Dresden) and its marketplace posts do not mention acetamiprid.
+- **Omnibus (class-level):** Covered by the class watch and dropped from this checklist. Générations Futures' Omnibus items of 2026-10-26 and 2026-11-06 do not name acetamiprid. Neither do PAN Europe's (2026-11-05 poll) or GLOBAL 2000's (2026-10-19).
 
 ### Update 2026-10-20
 
@@ -189,6 +208,10 @@ Of the 8 top signals, 5 target the PPP approval or national PPP derogations, 1 i
 - **Germany, beekeeper/BUND alliance against emergency authorisations:** Nothing new from DBIB (berufsimker.de) or BUND Naturschutz in Bayern in the window. Separately, DUH started litigation on 2026-09-22 (see lower relevance, pre-window).
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -219,16 +242,16 @@ Of the 8 top signals, 5 target the PPP approval or national PPP derogations, 1 i
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- **BPR phase-out:** Générations Futures expects household biocides with acetamiprid to leave the market progressively from 2027, with full discontinuation by early 2028. It wants the same outcome for agricultural uses.
-- **French hazelnut derogations:** Anses must decide each request within two months, and silence counts as refusal. Générations Futures, UNAF and POLLINIS say they will challenge any granted derogation in court. As of 2026-10-20 no NGO has reported a decision. La France insoumise's repeal proposal (2026-10-29) is a party initiative; watch for NGO support.
-- **German litigation (new):** DUH's lawsuit against the Leptostar authorisation and its objection against Leaxo are pending, with a stated intent to go "bis in die letzte Instanz".
-- **EU Article 21 review (DNT/ED):** EFSA's review is pending. PAN Europe and BeeLife still want a second EFSA mandate on bees, including wild bees, and a resolution of the vP versus non-persistent inconsistency between the BPR and PPP dossiers.
-- **Omnibus:** NGOs report that the Council compromise was reached in Coreper on 2026-09-30 and that the Parliament has not yet voted. Générations Futures says the compromise extends approval periods for pesticide and biocide active substances to 15 and 25 years. NGOs are pushing for a blocking minority and an impact study.
+- **BPR phase-out:** Générations Futures expects household biocides with acetamiprid to leave the market progressively from 2027 (the approval expires 2027-01-31), with full discontinuation by early 2028. It wants the same outcome for agricultural uses.
+- **French hazelnut derogations:** Anses must decide each request within two months, and silence counts as refusal. Générations Futures, UNAF and POLLINIS say they will challenge any granted derogation in court. As of 2026-11-10 no NGO has reported a decision. Watch for NGO reactions to the outcome of the LFI repeal bill (plenary 2026-10-29).
+- **German litigation:** DUH's lawsuit against the Leptostar authorisation and its objection against Leaxo are pending, with a stated intent to go "bis in die letzte Instanz".
+- **EU Article 21 review (DNT/ED):** EFSA's review is pending. PAN Europe and BeeLife still want a second EFSA mandate on bees, including wild bees, and a resolution of the vP versus non-persistent inconsistency between the BPR and PPP dossiers. Watch also for NGO reactions to the Commission's draft acetamiprid MRL regulation (late October 2026).
 - **Germany:** the beekeeper/BUND alliance continues to oppose seasonal emergency authorisations for acetamiprid sprays.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

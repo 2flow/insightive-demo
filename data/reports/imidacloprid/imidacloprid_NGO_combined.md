@@ -2,10 +2,10 @@
 substance: imidacloprid
 slug: imidacloprid
 cas: 138261-41-3
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report_2.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: PAN Netherlands/PAN Europe blacklist imidacloprid ant, fly and cockroach baits sold to consumers and demand a ban on sales of such insecticides to non-professionals (2025-04)
@@ -18,11 +18,15 @@ class_signal_levels: neonicotinoid medium; horizontal medium
 
 # NGO signals, combined: imidacloprid (CAS 138261-41-3)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name imidacloprid. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name imidacloprid; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO publication naming imidacloprid was found inside the window, in the biocide, PPP, veterinary-medicine, water or food-residue regimes. The UK VMD decision on the sales category of fipronil and imidacloprid pet medicines, which SongBird Survival said was due at the end of October 2026, was not found to have been published, and no NGO reaction to it was found. Two NGO items from before the window that earlier reports missed are listed under lower relevance (both unverified).
 
 ### Update 2026-10-20 (change: new)
 
@@ -144,15 +148,17 @@ Section 2 holds only items that name imidacloprid. Those found by a class watch 
 
 ## 3. Class-level signals (do not name imidacloprid)
 
-### neonicotinoid · class signal level: medium · last run 2026-10-21 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
+### neonicotinoid · class signal level: medium · last run 2026-11-10 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-09-16 — PAN Europe and Générations Futures welcome the EU Parliament veto on higher flupyradifurone residues and demand acetamiprid be classified Repr. 1B, citing neonicotinoids' placental transfer and developmental neurotoxicity · `food residues` · `EU` · `indirect–hazard` · `campaign`
 - Tier C `[baseline 2026-10-21]` 2026-09-09 — The Wildlife Trusts challenge a secret emergency authorisation of a neonicotinoid on sugar beet and demand transparency and a full ban, citing harm to bees · `PPP` · `UK` · `indirect–use` · `litigation`
 - Tier C `[baseline 2026-10-21]` 2026-08-14 — Générations Futures vows court action against French derogations from the national neonicotinoid ban, citing persistence and risks to wild bees and groundwater · `PPP` · `national:FR` · `indirect–use` · `litigation`
 - Tier C `[baseline 2026-10-21]` 2026-07-02 — ClientEarth and Butterfly Conservation hail a watchdog finding that the UK government broke the law on neonicotinoid emergency authorisations and press for a complete ban, citing harm to protected sites and pollinators · `PPP` · `UK` · `indirect–use` · `formal request`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -167,6 +173,23 @@ Section 2 holds only items that name imidacloprid. Those found by a class watch 
 - Tier C `[baseline 2026-10-21]` 2025-11-19 — PAN Europe, Pollinis and Aurelia win CJEU rulings that the Commission cannot routinely extend pesticide approvals while reassessment is delayed, citing the precautionary principle · `PPP` · `EU` · `indirect–use` · `litigation`
 
 ## 4. Follow-ups on known items
+
+### Update 2026-11-10
+
+- PAN Netherlands/PAN Europe amateur-use insecticide blacklist (2025-04-08): no news found. Searches turned up only the April 2025 coverage. A Dutch government notice of 2026-08-07 grants a temporary exemption for an imidacloprid ant bait, but no PAN-NL reaction was found.
+- PAN Germany statement on imidacloprid in the North Sea (2026-06-11): no news found. PAN Germany's posts in the window (2026-10-14, 10-20, 11-02, 11-03, 11-05) cover the pesticide omnibus, UN experts, a children's-exposure webinar and chemicals management, and do not name imidacloprid.
+- Greenpeace/Unearthed banned-pesticide export map (2025-12-16): no news found.
+- foodwatch zero-tolerance campaign on banned-pesticide residues (2025-07-15): no imidacloprid-specific news found in the window.
+- SongBird Survival on the Lords report (2026-08-05) and on the government reply (2026-10-19): no further post. The SongBird Survival research-news feed shows nothing after 2026-10-19.
+- WildFish regulator-records and legal pressure (2026-04-24): no news found.
+- 30+ group open letter on prescription-only status (2026-04-21): no news found.
+- Buglife report on freshwater invertebrates (2026-02-20): no news found. Buglife news pages returned 403.
+- Coming next, VMD review of fipronil/imidacloprid pet medicines (results due end of October 2026, per SongBird Survival): no outcome found and no NGO reaction found. Still pending as far as could be established.
+- Coming next, SongBird Survival asks (Phase II risk-assessment timetable, advice-based supply, debate on the Lords report expected early 2027): no news found.
+- Coming next, WildFish regulatory-change recommendations and transparency dispute: no news found.
+- Coming next, End Toxic Pesticide Trade coalition and foodwatch export ban / zero tolerance: nothing in the window that names imidacloprid.
+- Coming next, PAN Netherlands ban on non-professional insecticides: no news found.
+- Coming next, NGO action on the EU PT18 renewal or CLH: none found.
 
 ### Update 2026-10-20
 
@@ -186,6 +209,11 @@ Section 2 holds only items that name imidacloprid. Those found by a class watch 
 - Coming next, any NGO action on the EU PT18 renewal or CLH: none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `vet medicines` · `UK` — WildFish (2026-06-10, pre-window, missed earlier) response to the VMD call for evidence on veterinary medicines containing fipronil or imidacloprid. According to search snippets it asks for these products to be withdrawn and banned. (unverified: PDF not text-extractable.) [Link](https://wildfish.org/wp-content/uploads/2026/06/10.06.26_WildFish-Response-to-VMD-Consultationpdf.pdf)
+- `food residues` · `national:FR` — Agir pour l'environnement (2026-07-13/16, pre-window, missed earlier) analyses of ten honeys and two Nutella spreads. According to press coverage, imidacloprid and acetamiprid were found in all samples, and the NGO calls for an EU moratorium on neonicotinoids (class campaign naming imidacloprid). (unverified: the NGO's own page was not found; the only copy of its report located is hosted on a third-party site, so it is not linked here.) [Press coverage, Reporterre](https://reporterre.net/Des-traces-d-acetamipride-dans-le-Nutella-et-des-miels-importes)
 
 ### Update 2026-10-20
 
@@ -208,9 +236,9 @@ Section 2 holds only items that name imidacloprid. Those found by a class watch 
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- UK VMD review of fipronil/imidacloprid pet medicines: consultation results are due at the end of October 2026, per SongBird Survival. The government reply defers any change to sales channels until the review ends. SongBird Survival, Buglife, WildFish and Wildlife & Countryside Link want at least advice-based supply or prescription-only status. Wildlife & Countryside Link seeks suspension (unverified).
+- UK VMD review of fipronil/imidacloprid pet medicines: SongBird Survival said results were due at the end of October 2026; no outcome found by 2026-11-10. The government reply defers any change to sales channels until the review ends. SongBird Survival, Buglife, WildFish and Wildlife & Countryside Link want at least advice-based supply or prescription-only status. WildFish (June 2026 response, unverified) and Wildlife & Countryside Link (unverified) seek withdrawal or suspension.
 - SongBird Survival wants a timetable for Phase II environmental risk assessments, advice-based supply, stronger public advice on bathing and swimming after spot-on treatment, and independent scrutiny of the VMD. A parliamentary debate on the Lords report is reportedly expected in early 2027 (trade press, unverified).
 - WildFish: broader recommendations on authorisation and monitoring of veterinary medicines, and its transparency dispute with the VMD.
 - End Toxic Pesticide Trade coalition and foodwatch: continuing to push for an EU export ban and zero tolerance for banned-pesticide residues in imports, which would cover imidacloprid as a non-approved PPP substance.
@@ -219,5 +247,6 @@ _From the latest run, 2026-10-20_NGO_update.md._
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report_2.md

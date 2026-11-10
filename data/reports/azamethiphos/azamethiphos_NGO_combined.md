@@ -2,10 +2,10 @@
 substance: Azamethiphos
 slug: azamethiphos
 cas: 35575-96-3
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: WildFish report (2025-02-10) flags Mowi doubling its azamethiphos use on Scottish salmon farms 2018-2023, as part of its campaign to get farmed salmon off menus (UK vet-medicine use, not BPR)
@@ -18,11 +18,15 @@ class_signal_levels: organophosphate low; horizontal medium
 
 # NGO signals, combined: Azamethiphos (CAS 35575-96-3)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for organophosphate, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for organophosphate, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Azamethiphos. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Azamethiphos; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. We found no NGO item in the window that names azamethiphos, in any regime. One known storyline moved forward: WildFish reports that Soil Association Certification will stop setting organic salmon standards. That item does not name azamethiphos, and the substance was already banned under those standards, so it is not listed as a signal. Pressure on the BPR (PT18) file stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -55,12 +59,14 @@ None.
 
 ## 3. Class-level signals (do not name Azamethiphos)
 
-### organophosphate · class signal level: low · last run 2026-10-21 · [class file](../_classes/organophosphate/organophosphate_class_combined.md)
+### organophosphate · class signal level: low · last run 2026-11-10 · [class file](../_classes/organophosphate/organophosphate_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-05-18 — Beyond Pesticides urges a halt to the manufacture and use of all organophosphate pesticides, citing nervous-system and brain damage at low exposure · `PPP` · `international` · `indirect–hazard` · `campaign`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -76,6 +82,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- WildFish "Reality of Scottish Farmed Salmon" report / Off the Table campaign (top signal, 2025-02-10): no news found that names azamethiphos. WildFish's in-window news items (2026-10-23 HSE pesticide case on glyphosate data, 2026-11-05 drought report, 2026-11-10 Soil Association item) do not mention it. https://wildfish.org/
+- Soil Association decision on organic salmon standards: resolved. WildFish (2026-11-10) reports that Soil Association Certification announced "yesterday" that it will stop setting standards under which salmon farms can be certified organic. The WildFish article does not mention azamethiphos or any sea-lice treatment. The Soil Association's own news listing, as checked, did not yet show the announcement. Azamethiphos was already banned in its standards, so the decision changes nothing for this substance. https://wildfish.org/latest-news/a-win-for-transparency-soil-association-certification-withdraws-logo-from-organic-farmed-salmon/
+- WildFish and the Soil Association Certification inspection reports: WildFish says SAC is still appealing the disclosure order, with a hearing set for February 2027. This is not specific to azamethiphos (same link as above).
+- WildFish and Animal Equality: Off the Table campaign and the dispute over "farmed" wording in the PGI: no new item naming azamethiphos found.
+- NGO action on the EU BPR PT18 evaluation (Italy as evaluating CA) or on the CLH: none found.
+
 ### Update 2026-10-20
 
 - WildFish "Reality of Scottish Farmed Salmon" report / Off the Table campaign (top signal, 2025-02-10): no news found. WildFish news items in the window are dated 2026-09-28 (fundraising auction) and 2026-10-06 (sewage and Environmental Delivery Plans). Neither concerns azamethiphos. https://wildfish.org/
@@ -84,6 +98,10 @@ None.
 - NGO action on the EU BPR PT18 evaluation or on the CLH: none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -99,13 +117,15 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Soil Association: trustees' final decision in October 2026 on whether to keep setting organic salmon standards, including the phased elimination of deltamethrin. Azamethiphos is already excluded, so no direct change is expected for it.
-- WildFish: analysis of the Soil Association Certification inspection reports it won under environmental information rules (WildFish 2026-07-20 says SAC sought permission to appeal). Off the Table campaign continues. Neither is specific to azamethiphos.
-- We found no NGO-announced action on the EU BPR PT18 evaluation (Italy as evaluating CA) or on azamethiphos's harmonised classification.
+- WildFish v Soil Association Certification: the appeal hearing over disclosure of the organic salmon farm inspection reports is set for February 2027, according to WildFish. It is not specific to azamethiphos. Watch for any released reports that cite azamethiphos treatments on certified farms.
+- WildFish: the Off the Table campaign continues. It is not specific to azamethiphos.
+- We found no NGO-announced action on the EU BPR PT18 evaluation or on azamethiphos's harmonised classification.
+- Dropped: the Soil Association trustees' decision on organic salmon standards (resolved, see Follow-ups).
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

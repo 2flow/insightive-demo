@@ -164,18 +164,20 @@ export function splitConditions(record: ApprovalRecord): {
  * typically 18 months to 2 years apart. The start is the year that matters to
  * a reader working out where a substance is in its cycle.
  *
- * A renewed approval gets both, because one year cannot carry it: the approval
- * has run since its original start, and a later act renewed it.
+ * A renewed approval leads with the renewal, dated by the renewing act: the
+ * tile describes the act in force, whose conditions and findings fill the
+ * panel. The original approval stays in the panel and on the timeline.
  */
 export function actShort(record: ApprovalRecord): string {
   const { act, initial } = record
   if (!act) return ''
 
-  const began = (initial?.approvalIso || record.approvalIso || act.date).slice(0, 4)
   if (initial) {
     const renewed = act.date.slice(0, 4)
-    return renewed ? `Approved ${began}, renewed ${renewed}` : `Approved ${began}`
+    return renewed ? `Renewed ${renewed}` : 'Renewed'
   }
+
+  const began = (record.approvalIso || act.date).slice(0, 4)
 
   const kind = act.type.startsWith('Annex I') ? 'Annex I inclusion' : 'Initial approval'
   return began ? `${kind}, ${began}` : kind

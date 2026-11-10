@@ -2,10 +2,10 @@
 substance: Pyrethrins / pyrethrum extract
 slug: pyrethrins
 cas: 8003-34-7; 89997-63-7
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN Netherlands (2025-04-07) puts pyrethrin on a 10-insecticide "black list" for home and garden use and asks retailers to drop such products by 2027, naming pyrethrin fly/mosquito sprays and ant powders
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Pyrethrins / pyrethrum extract (CAS 8003-34-7; 89997-63-7)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Pyrethrins / pyrethrum extract. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Pyrethrins / pyrethrum extract; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO page in the window was confirmed to name pyrethrins or pyrethrum. PAN Netherlands published a new bird-food residue test (2026-11-08). Its 2024 edition found pyrethrins, but the new article names only pirimiphos-methyl and PBO. One missed pre-window item was found: a June 2025 Verbraucherzentrale NRW release that asks for chrysanthemum extract (pyrethrins) not to be approved as a repellent (listed below). Pressure on the pyrethrins BPR file stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -65,8 +69,10 @@ None.
 
 ## 3. Class-level signals (do not name Pyrethrins / pyrethrum extract)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -81,6 +87,16 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN-NL "zwarte lijst" of 10 insecticides, including pyrethrin (2025-04-07): no news found. PAN-NL's news page has no item on the black list, insecticides in garden centres or retailer responses between 2026-10-13 and 2026-11-10. https://www.pan-netherlands.org/nieuws/
+- PAN-NL 2027 retail phase-out and call for a ban on non-professional use: no news found.
+- PAN-NL annual garden-plant residue tests (pyrethrins/PBO): no news found. The next edition is expected around April 2027.
+- PAN-NL bird-seed residue testing (the 2024 edition found pyrethrins; lower relevance in the baseline): a new edition was published on 2026-11-08 (12 products tested in October 2026). The article names pirimiphos-methyl (in 3 samples) and PBO (in 4 samples), plus one unnamed second insecticide in the Intratuin sample. It does not mention pyrethrins, and the report PDF tables could not be read, so it is not listed as an item. https://www.pan-netherlands.org/vogelvoertest2026/
+- PAN-NL ED-based moves after the Pitcher ruling: on 2026-11-04 PAN-NL reported that Pitcher (fludioxonil) is withdrawn after its lawsuit, with sale allowed until May 2027. It does not name pyrethrins, and no ED request on pyrethrin products was found. https://www.pan-netherlands.org/succes-hormoonverstorend-bestrijdingsmiddel-uit-de-handel-na-rechtszaak/
+- Omnibus deregulation (Food and Feed Safety Omnibus, Omnibus X): campaigning continued but did not name pyrethrins. Générations Futures posted Omnibus items on 2026-10-13 (two), 10-14, 10-26 and 11-06. No NGO item was found that names pyrethrins in the biocontrol or renewal-exemption debate. This is a horizontal item, so the class watch covers it. https://www.generations-futures.fr/actualites/
+- Spillover of pyrethroid health and aquatic-toxicity campaigns to natural pyrethrins: no news found.
+
 ### Update 2026-10-20
 
 - PAN-NL "zwarte lijst" of 10 insecticides, including pyrethrin (2025-04-07): no news found. PAN-NL's news page has no item after 2026-09-14 and nothing on the black list. No retailer, garden-centre or government response was found. https://www.pan-netherlands.org/nieuws/
@@ -90,6 +106,10 @@ None.
 - Spillover of pyrethroid health and aquatic-toxicity campaigns to natural pyrethrins: no news found. No in-window NGO item groups pyrethrins with synthetic pyrethroids.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `BPR` · `national:DE` (pre-window, missed earlier): 2025-06-11. Verbraucherzentrale NRW (a consumer organisation) reviewed the new German counter-sale rules for insect sprays. It says products sold as repellents can contain chrysanthemum extract with "sogenannte Pyrethrine" ("so-called pyrethrins"), which it calls harmful to bees and toxic to aquatic organisms. It asks that insect-killing substances such as chrysanthemum extract not be approved as repellents, to close a loophole that lets insecticides be sold as repellents. The demand concerns PT19 use of pyrethrins and is use- and labelling-based. https://www.verbraucherzentrale.nrw/pressemitteilungen/insektenspray-beim-kauf-jetzt-besser-beraten-107953
 
 ### Update 2026-10-20
 
@@ -109,15 +129,15 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- PAN-NL asks Dutch retailers, garden centres and webshops to stop selling products with harmful insecticides (including pyrethrin) to private users by 2027, and asks the Dutch government to regulate toward a ban on chemical pesticides for non-professional use. Watch for retail delisting announcements or a Dutch parliamentary or Ctgb follow-up.
-- PAN-NL runs annual garden-plant residue tests and calls for EU maximum residue limits for ornamental plants. Pyrethrins/PBO may appear again in the 2027 edition (expected around April 2027).
-- PAN-NL is moving against endocrine-disrupting product authorisations through the Ctgb after the Pitcher ruling (the 50-product request, 2026-09). Its 2025 black list called pyrethrin "possibly endocrine-disrupting", so watch whether later ED-based requests extend to pyrethrin products. None does so far.
-- Omnibus deregulation (Food and Feed Safety Omnibus, Omnibus X for biocides): NGO mobilisation is intensifying (French rallies on 9 to 11 October 2026). If natural or "biocontrol" substances such as pyrethrins end up on the side that is exempt from renewal, NGOs may start naming them. So far they name only synthetic pyrethroids or no substances at all.
-- The pyrethroid health alerts (ANSES-based ED and neurodevelopment concerns) and the aquatic-toxicity campaign could spill over to pyrethrins if NGOs stop distinguishing natural from synthetic products.
+- PAN-NL asks Dutch retailers, garden centres and webshops to stop selling products with harmful insecticides (including pyrethrin) to private users by 2027, and asks the government to regulate toward a ban on chemical pesticides for non-professional use. Watch for retail delisting announcements or a Dutch parliamentary or Ctgb follow-up.
+- PAN-NL annual garden-plant residue tests: pyrethrins/PBO may appear again in the 2027 edition (expected around April 2027). PAN-NL also says it will repeat the bird-food test next year.
+- PAN-NL is pursuing ED-based withdrawals of product authorisations after the Pitcher ruling (Pitcher withdrawn, announced 2026-11-04). Its 2025 black list called pyrethrin "possibly endocrine-disrupting", so watch whether later ED-based requests extend to pyrethrin products.
+- Verbraucherzentrale NRW (2025) wants insect-killing substances such as chrysanthemum extract (pyrethrins) kept out of repellent (PT19) approvals. Watch whether it, or PAN Germany, takes this up again in German biocide sales-rule reviews.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

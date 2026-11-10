@@ -1,10 +1,10 @@
 ---
 class: neonicotinoid
 class_slug: neonicotinoid
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline_2.md
-updates: none
-last_run: 2026-10-21
+updates: 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: medium
 signals_total: 7
 signals_new_since_baseline: 0
@@ -17,6 +17,10 @@ Class watch for neonicotinoid insecticides as a group. Members (5): Clothianidin
 Built automatically from the class baseline and its updates. Do not edit: it is rebuilt after every run. A signal whose `Named substances` line lists a member is also copied into that member's combined file as a substance-specific signal.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-21. No new top signals were found in the window: 0 target biocides directly, and 0 target other regimes. The only new class-level NGO items are two US-facing Beyond Pesticides blog posts on environmental monitoring studies from China and Ecuador, listed under lower relevance. In the window, EU NGO campaigning (PAN Europe, Générations Futures) went almost entirely to the horizontal Food & Feed / "Pesticides" Omnibus, which the horizontal class report covers. None of the pending items from the baseline produced a published NGO follow-up. Signal level stays medium.
 
 ### Baseline 2026-10-21
 
@@ -97,7 +101,30 @@ None.
 - NGO: ClientEarth, [press release](https://www.clientearth.org/latest/press-office/press-releases/defra-found-in-breach-of-environmental-law-over-bee-killing-pesticide-impacts-on-protected-nature-areas/)
 - Also: [Butterfly Conservation news on the same OEP finding](https://butterfly-conservation.org/news-and-blog/investigation-reveals-government-failed-to-comply-with-law-over-banned-pesticides)
 
-## 3. Lower-relevance items
+## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- 2026-10-14 Beyond Pesticides, sperm-count study: no follow-up found. This blog post was already in the baseline.
+- 2026-09-18 Beyond Pesticides, early puberty study: no news found.
+- 2026-09-16 PAN Europe / Générations Futures, flupyradifurone veto and the call for acetamiprid Repr. 1B: no news found. PAN Europe's October–November press releases cover the Omnibus, a Flemish classroom pesticide study (no neonicotinoids named) and UN experts on the Omnibus.
+- 2026-01-22 Beyond Pesticides, rodent reproductive review: no news found.
+- 2026-09-09 The Wildlife Trusts, secret sugar beet emergency authorisation: no news found. The Wildlife Trusts neonicotinoid tag shows nothing newer.
+- 2026-08-14 Générations Futures, threatened court action against French derogations: no news found. The GF news feed for 2026-10-12 to 2026-11-09 has no item on neonicotinoids, acetamiprid or derogations. LFI's bill to repeal the acetamiprid/flupyradifurone derogations (Assembly bill no. 3172, rejected in committee on 2026-10-21, due in plenary on 2026-10-29) was reported only in the press. No NGO page on it was found, and the plenary outcome could not be confirmed.
+- 2026-07-02 ClientEarth / Butterfly Conservation, OEP finding on emergency authorisations: no news found. No NGO statement was found on the revised UK emergency-authorisation process (reportedly due by November 2026).
+- Coming next, France: no published NGO item on ANSES derogation opinions or on court action.
+- Coming next, EU acetamiprid Repr. 1B and flupyradifurone review: no news found.
+- Coming next, EU biocides acetamiprid non-renewal (single-member item): no news found in the window.
+- Coming next, UK permanent legislative ban and flea-treatment imidacloprid: no NGO news found in the window.
+- Coming next, US NRDC tolerance petition: no NGO news found. Third-party sources still give a decision deadline of 2027-04-30 under the proposed settlement (unverified on an NGO page).
+- Coming next, EU horizontal Omnibus: active (PAN Europe poll, November 2026; GF items on 2026-10-13, 10-14, 10-26 and 11-06). See the horizontal class report.
+
+## 4. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `international` — 2026-10-30: Beyond Pesticides blog on a Chinese study of 200 urban residential soil samples from ten provinces. It reports neonicotinoid and diamide residues in nearly all samples, with imidacloprid, nitenpyram, clothianidin, imidacloprid-urea, thiamethoxam and acetamiprid each detected in more than half, and children's intake higher than adults'. The post frames neonics as part of a "pesticide treadmill" and calls for organic land management, not for regulatory action. It does not mention biocidal sources such as flea or structural treatments. This is an exposure-monitoring post with no demand, so it is not a top signal. https://beyondpesticides.org/dailynewsblog/2026/10/pesticide-treadmill-results-in-wide-residential-exposure-to-newest-toxic-insecticides-diamides-and-neonics/
+- `water` · `international` — 2026-10-28: Beyond Pesticides blog on an Environmental Pollution study of floriculture in Pedro Moncayo, Ecuador. It reports detections of imidacloprid (71% of samples), thiamethoxam (46%) and clothianidin (35%), with neonicotinoid levels above an EU water-quality maximum and high risk to crustaceans and aquatic insects. The context is agricultural and post-harvest use, and the post asks for an industry overhaul, not a regulatory ban. https://beyondpesticides.org/dailynewsblog/2026/10/industrial-floriculture-affects-ecosystem-stability-and-health-in-ecuador-a-major-cut-flower-supplier-to-u-s/
 
 ### Baseline 2026-10-21
 
@@ -110,17 +137,18 @@ None.
 - `food residues` · `national:US` — 2025-10-29 suit and 2026-08-20 proposed settlement (unverified on NGO page): NRDC sued EPA over its 2020 petition to revoke all food tolerances for acetamiprid, clothianidin, dinotefuran, imidacloprid and thiamethoxam, on neurodevelopmental grounds. The proposed settlement sets a decision deadline of 2027-04-30. NRDC's pages returned 403: https://www.nrdc.org/court-battles/unreasonably-delayed-agency-action-epa-neonics
 - `PPP` · `national:FR` — 2025-12-05: Beyond Pesticides reports weak bird recovery after France's neonic ban with exceptions, citing persistence. https://beyondpesticides.org/dailynewsblog/2025/12/weak-recovery-of-bird-species-after-neonic-ban-with-exceptions-in-france-persistence-cited/
 
-## 4. What NGOs say is coming next
+## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_baseline_2.md._
+_From the latest run, 2026-11-10_class_update.md._
 
-- France: ANSES must give opinions on the acetamiprid (hazelnut) and flupyradifurone derogation requests within two months of each request. Générations Futures says it will go to court if any derogation is granted.
+- France: ANSES must give opinions on the acetamiprid (hazelnut) and flupyradifurone derogation requests within two months of each request. Générations Futures says it will go to court if any derogation is granted. Press reports say LFI's repeal bill was due in plenary on 2026-10-29. This is political, not NGO, and the outcome was not confirmed.
 - EU: PAN Europe and Générations Futures continue to push for acetamiprid to be classified Repr. 1B and withdrawn. The flupyradifurone EU review is ongoing.
 - EU biocides: Générations Futures has said acetamiprid will drop out of biocidal products in January 2027 because no renewal was sought. This is a single-member item; see the acetamiprid report.
-- UK: Defra's permanent legislative ban on clothianidin, imidacloprid and thiamethoxam is still pending. Defra and HSE are to revise the emergency authorisation process after the OEP finding. The Wildlife Trusts want HSE to publish applications on receipt, ahead of 2027 sugar beet applications. UK groups also continue to campaign on flea-treatment imidacloprid.
+- UK: Defra's permanent legislative ban on clothianidin, imidacloprid and thiamethoxam is still pending. The revised emergency-authorisation process is reportedly due by November 2026. The Wildlife Trusts want HSE to publish applications on receipt, ahead of 2027 sugar beet applications. UK groups continue to campaign on flea-treatment imidacloprid.
 - US (unverified): EPA must decide on NRDC's petition to revoke neonicotinoid food tolerances by 2027-04-30.
-- EU horizontal: Food & Feed Safety Omnibus negotiations (longer or unlimited approvals, including biocides) continue; see the horizontal class report.
+- EU horizontal: the Food & Feed Safety ("Pesticides") Omnibus negotiations continue; see the horizontal class report.
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_baseline_2.md

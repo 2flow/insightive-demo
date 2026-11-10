@@ -2,10 +2,10 @@
 substance: Citronella oil, fractionated, hydrated, cyclized
 slug: cymbopogon-winterianus-oil-fractionated-hydrated-cyclized
 cas: -
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Citronella oil, fractionated, hydrated, cyclized (CAS -)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Citronella oil, fractionated, hydrated, cyclized. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Citronella oil, fractionated, hydrated, cyclized; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime, and none target the biocide approval directly. No NGO published anything in the window that names Java citronella oil or Cymbopogon winterianus oil (fractionated, hydrated, cyclized). The PT19 initial approval (evaluating CA Czechia) still faces no NGO pressure.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Citronella oil, fractionated, hydrated, cyclized)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,6 +71,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals in the baseline and the 2026-10-20 update: there were none, so there is nothing to follow up.
+- Baseline lower-relevance item (UFC-Que Choisir, 2025-06-06, article on natural repellents that names Java citronella oil): no news found. There was no new Que Choisir article or test in the window that names this substance.
+- "Coming next" item (nothing announced; NGOs may engage if an ECHA consultation opens, e.g. on candidate-for-substitution status): no news found. No NGO response to a consultation on this substance turned up.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so nothing to follow up.
@@ -72,6 +84,10 @@ None.
 - Baseline "coming next" (nothing announced; NGO engagement possible once an ECHA consultation opens, e.g. on candidate-for-substitution status): no news found. No NGO response to a consultation on this substance was found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -85,11 +101,12 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-Nothing announced. The PT19 initial approval is still at competent-authority evaluation (Czechia). NGO engagement is most likely if an ECHA public consultation opens, for example on candidate-for-substitution status. Consumer NGO material so far supports the substance on efficacy.
+No NGO has announced anything. The PT19 initial approval is still at competent-authority evaluation (Czechia). NGOs are most likely to engage if an ECHA public consultation opens, for example on candidate-for-substitution status. So far, consumer NGO material supports the substance on efficacy.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

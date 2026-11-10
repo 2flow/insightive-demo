@@ -287,6 +287,18 @@ function parseReport(md: string, runDate: string, scope?: NgoScope): FeedRecord[
       line.match(/^-\s*([A-Za-zÀ-ɏ][A-Za-zÀ-ɏ\d /+&'.()-]{1,60}?):\s*(.*)$/)
     if (f) {
       const name = f[1].toLowerCase()
+      // Combined files since 2026-11 restate the date under the item's bold
+      // heading and tag line: "**2026-10-22 — Title**", then "- Date: …".
+      // That date belongs to the item just opened, which has no fields yet.
+      if (name === 'date' && item?.heading && !Object.keys(item.fields).length) {
+        // The heading's own date stands; take this one only if it has none.
+        if (!splitDate(item.heading).date) {
+          item.fields.date = f[2]
+          item.fields.title = item.heading
+        }
+        field = ''
+        continue
+      }
       // In v2 reports "Date" opens each item.
       if (name === 'date') {
         flush()

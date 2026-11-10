@@ -2,15 +2,15 @@
 substance: Permethrin
 slug: permethrin
 cas: 52645-53-1
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN Germany flags permethrin as still used in biocidal wood preservatives and insecticides 25 years after its farm ban and calls for cutting pyrethroid use and emissions to surface waters (2025-11-20)
-signals_total: 5
-signals_new_since_baseline: 0
+signals_total: 6
+signals_new_since_baseline: 1
 signals_via_class: 1
 classes: pyrethroid, horizontal
 class_signal_levels: pyrethroid low; horizontal medium
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: Permethrin (CAS 52645-53-1)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Permethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Permethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: new)
+
+1 new top signal, cross-regime (indoor exposure), aimed at EU pesticide policy and the Omnibus. None targets the biocide approval directly. A PAN Europe press release on Velt's study of dust in Flemish classrooms names permethrin among the pesticides found at the highest concentrations, and notes that it is banned in farming but still allowed as a biocide. This repeats the "banned on farms, still a biocide" framing seen in the baseline. Overall pressure on the BPR file is unchanged and low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -46,6 +50,16 @@ Of the 4 top signals, 1 targets biocides directly (a Dutch campaign against cons
 - Also: [press release (PDF)](https://www.pan-netherlands.org/wp-content/uploads/2025/04/persbericht.pdf)
 
 ### Tier B: indirect, hazard-based
+
+`[NEW · update 2026-11-10]` from 2026-11-10_NGO_update.md
+
+**2026-10-22 — PAN Europe and Velt find permethrin among the top pesticides in classroom dust and call for stronger EU pesticide rules, citing children's exposure to hazardous mixtures**
+`cross-regime` · `EU` · `indirect–hazard` · `study/report`
+- Date: 2026-10-22
+- Summary: Velt, the Flemish ecological gardening association and a PAN Europe member, tested dust from 10 primary-school classrooms in Flanders for 540 pesticides. It found 63 pesticides, an average of 18 per classroom and up to 36 in two classrooms. PAN Europe's release names permethrin, "banned for crop protection use, because of its risks for biodiversity and human health" but "still allowed as biocide", among the substances found at the highest concentrations, alongside propiconazole, captan, dodine and tebuconazole. The NGOs use the results to oppose the Omnibus and to call for stronger risk assessment and authorisation frameworks. Velt's own pages do not name permethrin, but they list indoor insect sprays and pet flea and tick products as possible sources.
+- Why it matters: this is a second exposure dataset from PAN Europe that names permethrin (after the July 2026 wristband study). This time it explicitly links the substance's current legal status to its biocide approval, and the exposed group is children indoors. The concern is hazard-based (risks to human health and biodiversity, mixture exposure), which carries over to the BPR human-exposure assessment and the candidate-for-substitution debate. It is indirect: the demands are aimed at PPP rules and the Omnibus, not at the permethrin BPR renewal, and the data cover one Belgian region.
+- NGO: PAN Europe, [press release](https://www.pan-europe.info/press-releases/2026/10/school-alarm-cocktails-36-pesticides-found-flemish-classrooms)
+- Also: [Velt campaign page (NL)](https://velt.nu/pesticidevrijescholen) · [Velt report summary (NL)](https://velt.nu/nieuws/rapport-sos-scholen)
 
 `[baseline 2026-10-06]` from 2026-10-06_NGO_baseline_report.md
 
@@ -84,12 +98,15 @@ Of the 4 top signals, 1 targets biocides directly (a Dutch campaign against cons
 
 ## 3. Class-level signals (do not name Permethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -105,6 +122,15 @@ Of the 4 top signals, 1 targets biocides directly (a Dutch campaign against cons
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Germany, pyrethroids in surface waters (2025-11-20, top signal): no news found. PAN Germany's items from 2026-10-14 to 2026-11-05 cover the Omnibus, a poll, international chemicals management and a children's exposure webinar. None names pyrethroids or permethrin.
+- PAN Europe, SPRINT wristband blog (2026-07-16) and the Omnibus campaign ("coming next"): new related step. The 2026-10-22 classroom-dust release (above) is a further PAN Europe exposure study that names permethrin and is used against the Omnibus. The 2026-11-05 poll release does not name permethrin.
+- PAN Netherlands, blacklist of consumer insecticides (2025-04-07) and pressure on retailers ("coming next"): no news found. PAN-NL's 2026-11-08 bird-feed test names pirimiphos-methyl and PBO, not permethrin.
+- SongBird Survival, bird-nest study (2025-01-27) and the UK flea-treatment coalition ("coming next": VMD consultation outcome due end of October 2026): no NGO news found in the window. SongBird Survival's only newer post (2026-11-05) is about Christmas cards. No NGO page reporting the VMD outcome was found.
+- PAN Germany, WFD priority-substance listing and harmonised pyrethroid rules ("coming next"): no NGO news found.
+- No NGO litigation, formal request or consultation response on the permethrin BPR renewal ("coming next"): still none found.
+
 ### Update 2026-10-20
 
 - PAN Germany, pyrethroids in surface waters (2025-11-20, top signal): no news found. PAN Germany's news items from 2026-09-24 to 2026-10-20 cover TFA, PFAS, the Omnibus, residues and a children's exposure webinar, none about pyrethroids or permethrin.
@@ -116,6 +142,10 @@ Of the 4 top signals, 1 targets biocides directly (a Dutch campaign against cons
 - No NGO litigation, formal request or consultation response on the permethrin BPR renewal ("coming next"): still none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -134,15 +164,16 @@ _2 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- UK flea-treatment coalition (SongBird Survival, WildFish and others): SongBird Survival says the results of the VMD consultation on how pet parasiticides are sold are due at the end of October 2026. It wants sales restricted to at least the NFA-VPS category (or advice-based supply), Phase II environmental risk assessments, and stronger warnings about dogs swimming after spot-on treatment. Class-level, but any change to how products are sold would also cover permethrin vet products.
-- PAN Europe, Générations Futures and PAN Germany: continuing to campaign against the Food and Feed Safety Omnibus, which also touches biocide rules, now that the Council has its position and the Parliament is next. PAN Europe can still use the wristband data (which names permethrin) as evidence.
-- PAN Germany: wants pyrethroid use and emissions reduced and pyrethroid rules harmonised. It describes permethrin as proposed for WFD priority-substance listing. Still pending.
+- PAN Europe (with Velt and other members): continuing to use exposure studies (the wristbands, classroom dust) that name permethrin as evidence against the Food and Feed Safety Omnibus as it moves to the European Parliament. Velt wants pesticide-free schools and children's development made the starting point for pesticide evaluation.
+- UK flea-treatment coalition (SongBird Survival, WildFish and others): waiting for the VMD's response to its consultation on how pet parasiticides are sold, which SongBird Survival said was due at the end of October 2026. No outcome reported by an NGO yet. Class-level, but any change to how products are sold would also cover permethrin vet products.
+- PAN Germany: wants pyrethroid use and emissions reduced and pyrethroid rules harmonised, and describes permethrin as proposed for WFD priority-substance listing. No new step seen.
 - PAN Netherlands: continuing to press for high-hazard insecticides (including permethrin) to be taken off amateur shelves. No new step seen.
 - No NGO has announced litigation, a formal request or a consultation response on the permethrin BPR renewal.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

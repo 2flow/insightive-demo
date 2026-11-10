@@ -2,10 +2,10 @@
 substance: S-Methoprene
 slug: s-methoprene
 cas: 65733-16-6
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: juvenile hormone analogue none; horizontal medium
 
 # NGO signals, combined: S-Methoprene (CAS 65733-16-6)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for juvenile hormone analogue, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for juvenile hormone analogue, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name S-Methoprene. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name S-Methoprene; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO item dated in the window (2026-10-13 to 2026-11-10) that names S-methoprene or methoprene, in any regime. The UK pet parasiticide campaign still names only fipronil and imidacloprid. The Long Island groups that oppose methoprene published nothing new that I could find.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,12 +52,14 @@ None.
 
 ## 3. Class-level signals (do not name S-Methoprene)
 
-### juvenile hormone analogue · class signal level: none · last run 2026-10-21 · [class file](../_classes/juvenile-hormone-analogue/juvenile-hormone-analogue_class_combined.md)
+### juvenile hormone analogue · class signal level: none · last run 2026-11-10 · [class file](../_classes/juvenile-hormone-analogue/juvenile-hormone-analogue_class_combined.md)
 
 No class-level signals.
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -69,6 +75,13 @@ No class-level signals.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- UK pet parasiticide coalition (WildFish, Buglife, SongBird Survival and others): no news found. Searches surfaced only the known February to April 2026 items (Buglife report, open letter), which name fipronil and imidacloprid only.
+- US (Long Island): opposition from Save The Great South Bay, Defend H2O and Sierra Club LI to methoprene in Suffolk County vector control: no news found. Searches returned only older pages (2015 to 2024).
+- EU BPR renewal of S-methoprene: I found no NGO plans, cases or statements.
+- Beyond Pesticides "Methoprene"-tagged blog post (2026-03, unverified in the baseline): no follow-up found. A site search returned only the 2001 factsheet and older blog posts.
+
 ### Update 2026-10-20
 
 - UK pet parasiticide coalition (WildFish, Buglife, SongBird Survival and others): I found no NGO publication in the window. The most recent NGO items are the April 2026 open letter (already known) and WildFish's 10 June 2026 response to the VMD consultation (before the window). Both cover fipronil and imidacloprid. I could not read the PDF text to check whether it mentions S-methoprene, so I did not list it. No news found.
@@ -77,6 +90,10 @@ No class-level signals.
 - Beyond Pesticides 2026-03 blog post tagged "Methoprene" (unverified in the baseline): no follow-up found. Search did not surface any newer Beyond Pesticides item on methoprene.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -92,13 +109,14 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- UK: the pet parasiticide coalition (WildFish, Buglife, SongBird Survival and others) is still pressing for a review timeline and prescription-only status for fipronil and imidacloprid pet products, and for broader reform of veterinary medicine environmental assessment. WildFish's June 2026 consultation response asks for withdrawal of fipronil and imidacloprid veterinary products. This could reach fipronil + S-methoprene combination spot-ons through their fipronil component, but S-methoprene itself is not named. A UK government response to the House of Lords committee inquiry is pending; it is not an NGO item, so it is noted only as context.
+- UK: the pet parasiticide coalition (WildFish, Buglife, SongBird Survival and others) is still pressing for prescription-only status or withdrawal of fipronil and imidacloprid pet products, and for reform of how the environmental impact of veterinary medicines is assessed. The VMD distribution-category review is pending. That review is an authority process, noted here as context only. It could reach fipronil + S-methoprene combination spot-ons through their fipronil component, but S-methoprene is not named.
 - US (Long Island): local groups continue to oppose methoprene in Suffolk County's annual vector control plans. This is use-specific and has no EU link.
 - I found no NGO plans, cases or deadlines concerning the EU BPR renewal of S-methoprene.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

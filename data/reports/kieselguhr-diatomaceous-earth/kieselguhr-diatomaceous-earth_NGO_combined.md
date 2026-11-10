@@ -2,10 +2,10 @@
 substance: Kieselguhr (diatomaceous earth)
 slug: kieselguhr-diatomaceous-earth
 cas: 61790-53-2
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Kieselguhr (diatomaceous earth) (CAS 61790-53-2)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Kieselguhr (diatomaceous earth). Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Kieselguhr (diatomaceous earth); they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are 0 new top signals, and none targets the biocide approval or any other regime. No NGO item naming kieselguhr (diatomaceous earth) was found in the window. The NGO stance is unchanged, neutral to supportive: NGOs present it as a low-toxicity alternative.
 
 ### Update 2026-10-20 (change: none)
 
@@ -64,8 +68,10 @@ None.
 
 ## 3. Class-level signals (do not name Kieselguhr (diatomaceous earth))
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -79,6 +85,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals: the earlier reports had none, so there are none to follow up.
+- "Nothing announced by NGOs" (2026-10-20 coming next): still true. No NGO announcement, campaign or case on kieselguhr was found in the window.
+- Renewal context (BPR expiry 2028-10-31; renewal application due around 2027-04-30): no NGO comment on the renewal found.
+- Watch item, NGO comment on crystalline silica content or dust/inhalation: no news found.
+- Baseline lower-relevance stance (Beyond Pesticides, PAN Germany, PAN UK, GLOBAL 2000): no new material on kieselguhr from any of them found.
+
 ### Update 2026-10-20
 
 - The baseline had no top signals, so there are no signals to follow up.
@@ -86,6 +100,10 @@ None.
 - Baseline lower-relevance stance (Beyond Pesticides, PAN Germany, PAN UK, GLOBAL 2000): none of them published new material on kieselguhr in the window.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -102,12 +120,13 @@ All items below fall outside the time window or are undated. They are listed onl
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - Nothing announced by NGOs.
-- From the regulatory context (not an NGO finding), the BPR approval expires on 2028-10-31. A renewal application is due 550 days before that, around 2027-04-30, so a renewal evaluation and public consultation could follow. Based on their positioning so far, NGOs are more likely to put kieselguhr forward as an alternative than to target it. The next update should watch for any NGO comment on crystalline silica content or on dust and inhalation.
+- From the regulatory context (not an NGO finding), the BPR approval expires on 2028-10-31, with a renewal application due around 2027-04-30. A renewal evaluation and public consultation could follow. Based on their positioning so far, NGOs are more likely to put kieselguhr forward as an alternative than to target it. Keep watching for any NGO comment on crystalline silica content (calcined DE) or on dust and inhalation.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

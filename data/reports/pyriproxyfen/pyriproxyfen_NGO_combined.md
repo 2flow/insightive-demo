@@ -2,10 +2,10 @@
 substance: pyriproxyfen
 slug: pyriproxyfen
 cas: 95737-68-1
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: juvenile hormone analogue none; horizontal medium
 
 # NGO signals, combined: pyriproxyfen (CAS 95737-68-1)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for juvenile hormone analogue, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for juvenile hormone analogue, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name pyriproxyfen. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name pyriproxyfen; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime, and none target the biocide approval. In the window, no NGO publication I could find names pyriproxyfen. The NGOs active in the window (PAN Netherlands, Générations Futures) published on other substances or on class-level and horizontal topics.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,12 +52,14 @@ None.
 
 ## 3. Class-level signals (do not name pyriproxyfen)
 
-### juvenile hormone analogue · class signal level: none · last run 2026-10-21 · [class file](../_classes/juvenile-hormone-analogue/juvenile-hormone-analogue_class_combined.md)
+### juvenile hormone analogue · class signal level: none · last run 2026-11-10 · [class file](../_classes/juvenile-hormone-analogue/juvenile-hormone-analogue_class_combined.md)
 
 No class-level signals.
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -69,6 +75,15 @@ No class-level signals.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Earlier top signals: there were none in the baseline or the 2026-10-20 update, so there is nothing to follow up.
+- UK coalition on pet flea and tick treatments (WildFish, Buglife, SongBird Survival et al., April 2026): no news found in the window. The Wildlife and Countryside Link independent review page on flea-treatment pollution is dated May 2026, before the window, and names only fipronil and imidacloprid (https://wcl.org.uk/flea-treatment-poisoned-landscapes-fixing-the-regulatory-failure.asp). Pyriproxyfen is still not named.
+- PAN Netherlands' call for EU residue limits on ornamental plants and phase-out of highly hazardous pesticides (April 2026): no news found.
+- PAN Netherlands' withdrawal requests for about 50 products containing endocrine-disrupting or reprotoxic substances (September 2026): there was a follow-up in the window, but not for pyriproxyfen. On 2026-11-04 PAN-NL reported that the Dutch regulator (Ctgb) had decided on 2026-10-28 to withdraw the fludioxonil product Pitcher, effective May 2027. The page does not name pyriproxyfen, and PAN-NL announced no decisions on the other products (https://www.pan-netherlands.org/succes-hormoonverstorend-bestrijdingsmiddel-uit-de-handel-na-rechtszaak/).
+- Générations Futures' call for faster phase-out of endocrine-disrupting pesticides (December 2025): no news found specific to pyriproxyfen. Its posts from 12 October to 9 November 2026 cover the pesticide Omnibus, a pollution levy, an RNA-interference insecticide and other topics, and none names pyriproxyfène.
+- The baseline's unverified incidental mentions (foodwatch, GLOBAL 2000, PAN International HHP list, Beyond Pesticides hive study): no new material found. The Beyond Pesticides pyriproxyfen category lists nothing newer than 2026-01-29.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so there is nothing to follow up.
@@ -78,6 +93,10 @@ No class-level signals.
 - The baseline's unverified incidental mentions (foodwatch, GLOBAL 2000, PAN International HHP list, Beyond Pesticides hive study): no new material found, and still unverified.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -95,16 +114,17 @@ No class-level signals.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Nothing specific to pyriproxyfen. These related campaigns are still pending and could later take it in:
-- UK coalition (WildFish, Buglife et al.): prescription-only status, sales review and river monitoring for veterinary flea and tick products (April 2026). It currently names only fipronil and imidacloprid.
-- PAN Netherlands: EU residue limits on ornamental plants and phase-out of highly hazardous pesticides (April 2026). Its withdrawal requests to the Dutch regulator for products containing endocrine-disrupting or reprotoxic substances (September 2026) cover seven other substances. PAN-NL says it will go to court if the regulator refuses; watch whether the list is widened.
-- Générations Futures: faster phase-out of endocrine-disrupting pesticides (December 2025), and the campaign against unlimited approvals under the pesticide Omnibus (October 2026).
+- UK coalition (WildFish, Buglife et al.) and Wildlife and Countryside Link: prescription-only status, a sales review and river monitoring for veterinary flea and tick products. The campaign still names only fipronil and imidacloprid.
+- PAN Netherlands: EU residue limits on ornamental plants and phase-out of highly hazardous pesticides. Its withdrawal requests to the Ctgb cover about 50 products with endocrine-disrupting or reprotoxic substances (not pyriproxyfen). PAN-NL expects the Pitcher decision to lead to more withdrawals; watch whether the list is widened.
+- Générations Futures: faster phase-out of endocrine-disrupting pesticides.
 
 No pending NGO litigation, internal review request or consultation response on pyriproxyfen was found.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

@@ -2,10 +2,10 @@
 substance: alpha-Cypermethrin
 slug: alpha-cypermethrin
 cas: 67375-30-8
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Générations Futures, Alerte Planète and Extinction Rebellion file criminal complaints in Lyon over BASF's stock of banned alpha-cypermethrin for export, and ask for the export ban to cover biocides with the same active substance (2026-02-09)
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: alpha-Cypermethrin (CAS 67375-30-8)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name alpha-Cypermethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name alpha-Cypermethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO page naming alpha-cypermethrin was published in the window. The Lyon complaints against BASF have no published follow-up. No NGO has yet put out its own material on the reported 2026-06-29 Genay action (Stedfast, an alpha-cypermethrin termite biocide).
 
 ### Update 2026-10-20 (change: none)
 
@@ -62,13 +66,16 @@ None.
 
 ## 3. Class-level signals (do not name alpha-Cypermethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -84,6 +91,15 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- 2026-02-09 Lyon criminal complaints against BASF (Générations Futures, Alerte Planète, Extinction Rebellion): no news found. None of the Générations Futures news items from 2026-10-13 to 2026-11-09 concern BASF or Fastac. https://www.generations-futures.fr/actualites/basf-fastac-pesticides/
+- 2025-06-27 Générations Futures call for enforcement on Fastac at Genay: no news found.
+- Push for France to argue at EU level for a production and export ban that also covers biocides with the same active substance: no NGO news found. (Parliamentary activity on banned-pesticide exports exists, but it is not an NGO source; see Method notes.)
+- Générations Futures' call to withdraw all pyrethroid products, biocides included (2025-04): no news found.
+- NGO material on the reported 2026-06-29 Genay action (Stedfast): no news found. The Faucheurs volontaires home page has nothing on BASF, Genay or Stedfast, and no Générations Futures or Confédération paysanne page was found.
+- Expected EU regulation setting separate alpha-cypermethrin MRLs (regulatory, not NGO): its publication could not be confirmed, and no NGO reaction was found.
+
 ### Update 2026-10-20
 
 - 2026-02-09 Lyon criminal complaints against BASF (Générations Futures, Alerte Planète, Extinction Rebellion): no news found. The Générations Futures page has not been updated, and it gives no hearing date or ruling. https://www.generations-futures.fr/actualites/basf-fastac-pesticides/
@@ -92,6 +108,10 @@ None.
 - Générations Futures' call to withdraw all pyrethroid products, biocides included (2025-04): no news found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -106,15 +126,16 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - The Lyon judicial court complaints against BASF (filed 2026-02-09) are pending, with no hearing date published. Press reports say BASF has filed its own administrative appeal (press, not NGO).
 - Générations Futures and partners want France to argue at EU level for a production and export ban on all prohibited pesticides, extended to biocides with the same active substance. This would apply directly to alpha-cypermethrin (approved for PT18, not for PPP).
 - Générations Futures' call to withdraw all pyrethroid-based products, biocides included (2025-04), remains open.
-- To check next run: whether any NGO (Faucheurs volontaires, Générations Futures, Confédération paysanne) publishes its own material on the reported 2026-06-29 Genay action. Press says the action found Stedfast, an alpha-cypermethrin termite biocide. If it is confirmed on an NGO page, it would be the first NGO action aimed at an alpha-cypermethrin biocide product.
-- To watch (regulatory, not NGO): an EU regulation setting separate alpha-cypermethrin MRLs is expected around 2026-10. NGOs may react to it.
+- To check next run: whether any NGO (Faucheurs volontaires, Générations Futures, Confédération paysanne) publishes its own material on the reported 2026-06-29 Genay action, where press says Stedfast, an alpha-cypermethrin termite biocide, was found.
+- To watch (regulatory, not NGO): publication of the EU regulation setting separate alpha-cypermethrin MRLs (expected around 2026-10, not yet confirmed), and any NGO reaction to it.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

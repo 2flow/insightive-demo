@@ -2,10 +2,10 @@
 substance: IR3535 (ethyl butylacetylaminopropionate)
 slug: ir3535-ethyl-butylacetylaminopropionate
 cas: 52304-36-6
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Altroconsumo (IT consumer NGO) advises against IR3535 repellents for children and pregnant women until the EU endocrine-disruptor evaluation is concluded (2026-08-07)
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: IR3535 (ethyl butylacetylaminopropionate) (CAS 52304-36-6)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name IR3535 (ethyl butylacetylaminopropionate). Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name IR3535 (ethyl butylacetylaminopropionate); they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO published anything naming IR3535, ethyl butylacetylaminopropionate or EBAAP in the window (2026-10-13 to 2026-11-10). Altroconsumo's ED-based caution still stands and is unchanged. Overall pressure stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -64,8 +68,10 @@ None.
 
 ## 3. Class-level signals (do not name IR3535 (ethyl butylacetylaminopropionate))
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -81,6 +87,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Altroconsumo advises against IR3535 for children and pregnant women (2026-08-07): no news found. The undated buying guide was re-opened on 2026-11-10 and is unchanged. It still advises against IR3535 for children and pregnant women while the endocrine evaluation, opened in 2024, is pending. It says Altroconsumo will wait for the outcome before changing its position, and it reports no outcome ([buying guide](https://www.altroconsumo.it/salute/repellenti-zanzare/come-scegliere)).
+- Test-Aankoop/Test-Achats: IR3535 products fail its 2026 repellent test (2026-06-15, updated 2026-08-07): no news found. Its newest mosquito-related item (2026-09-21, on West Nile virus) is pre-window and does not name IR3535.
+- Coming next: Altroconsumo may revise its position once the ED assessment ends, and other Euroconsumers members might follow: no news found. No Euroconsumers member (Test-Aankoop/Test-Achats, OCU, DECO Proteste) has taken up the ED caution.
+- Coming next: summer 2027 consumer repellent tests: not due yet.
+- Coming next: no NGO campaign, litigation or formal request on IR3535: still none found.
+
 ### Update 2026-10-20
 
 - Altroconsumo advice against IR3535 for children and pregnant women (2026-08-07): no news found. The buying guide still says "lo sconsigliamo per i bambini e le donne in gravidanza, finché non sarà conclusa la valutazione", with no new date and no revision ([buying guide](https://www.altroconsumo.it/salute/repellenti-zanzare/come-scegliere)).
@@ -90,6 +104,10 @@ None.
 - Coming next: no NGO campaign, litigation or formal request on IR3535: still none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -106,7 +124,7 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - Altroconsumo advises against IR3535 for children and pregnant women only "until the evaluation is concluded". If the BPR ED assessment finds ED properties, this caution could harden into a general "avoid" message, and other Euroconsumers members (Test-Aankoop/Test-Achats, OCU, DECO Proteste) might take it up.
 - Consumer repellent tests come out every summer (June to August). The next round is expected in summer 2027, before the 2028-04-30 approval expiry.
@@ -114,5 +132,6 @@ _From the latest run, 2026-10-20_NGO_update.md._
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

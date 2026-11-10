@@ -1,13 +1,13 @@
 ---
 class: horizontal
 class_slug: horizontal
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline.md
-updates: none
-last_run: 2026-10-21
+updates: 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: medium
-signals_total: 12
-signals_new_since_baseline: 0
+signals_total: 14
+signals_new_since_baseline: 2
 ---
 
 # NGO signals, class: horizontal
@@ -18,6 +18,10 @@ Built automatically from the class baseline and its updates. Do not edit: it is 
 
 ## 1. Summary
 
+### Update 2026-11-10 (change: new)
+
+2 new top signals: 1 targets biocides and pesticides together (direct) and 1 targets the PPP regime on procedural grounds. Both are campaign steps against the Food and Feed Safety Omnibus ahead of the European Parliament vote, which NGOs now expect in December 2026 after the 5 October committee vote was postponed. PAN Germany started an MEP-contact action that names the longer biocide approval periods in the Council text. PAN Europe and ten partner groups published a YouGov poll in seven countries showing little voter support for unlimited approvals. No NGO item in the window analyses the BPR side in its own right or names a watch-list member. Overall pressure on member approvals from this class stays medium.
+
 ### Baseline 2026-10-21
 
 11 top signals: 5 target biocides or the BPR directly (4 aimed at the BPR provisions of the Food and Feed Safety Omnibus, 1 a consultation submission on the BPR evaluation), 1 is hazard-based and targets the PPP regime, and 5 target the PPP regime on procedural or use-specific grounds. Nearly all horizontal NGO activity in the window concerns the Commission's Food and Feed Safety Omnibus ("Omnibus X", proposed 2025-12-16). It would make unlimited approval the default for pesticide and biocidal active substances. The Council's position (2026-09-30) replaces that with 15-year first approvals and 25-year renewals, and unlimited approval only for low-risk substances. Générations Futures is the only NGO found that analysed the BPR side in detail: its list of 34 biocidal substances names 8 watch-list members. NGOs want periodic renewal kept, which matters to members' renewals. They are not targeting the approvals themselves, so pressure on member approvals from this class is medium. The European Parliament has not yet voted.
@@ -25,6 +29,15 @@ Built automatically from the class baseline and its updates. Do not edit: it is 
 ## 2. Class-level signals
 
 ### Tier A: direct
+
+`[NEW · update 2026-11-10]` from 2026-11-10_class_update.md
+
+**2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances**
+`cross-regime` · `EU` · `direct` · `campaign`
+- Summary: PAN Germany's "Stopp den Omnibus X" page asks readers to contact EPP and ECR MEPs through an online tool. It says the Council position (late September) limits unlimited approval to low-risk substances, but that most Member States accept "significantly longer approval periods for pesticides and biocides", wider exemptions for banned pesticides and longer sell-off periods. It says the Parliament rapporteurs' proposals go further than the Commission's. It also says the Parliament is handling about 1,500 amendments and, on the current timetable, will vote in December. This follows up the known 2026-09-30 Council-compromise signal and PAN Germany's earlier Omnibus work: it is a new mobilisation step aimed at the Parliament vote.
+- Why it matters: the Parliament's position is the open variable for BPR approval periods. The Council text would lengthen first approvals and renewals for all members, and unlimited approval would remain possible for low-risk members. The grounds are procedural (review frequency, derogations), not the hazard of any substance.
+- Named substances: none
+- NGO: PAN Germany, [campaign page (DE)](https://pan-germany.org/pestizide/stopp-den-omnibus-x-gefahr-fuer-gesundheit-umwelt-und-bauern/)
 
 `[baseline 2026-10-21]` from 2026-10-21_class_baseline.md
 
@@ -86,6 +99,16 @@ Built automatically from the class baseline and its updates. Do not edit: it is 
 
 ### Tier C: indirect, use-specific
 
+`[NEW · update 2026-11-10]` from 2026-11-10_class_update.md
+
+**2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment**
+`PPP` · `EU` · `indirect–use` · `study/report`
+- Summary: PAN Europe commissioned the poll with Ecologistas en Acción, Eco Ruralis, Romapis, Générations Futures, Greenpeace Poland, an Irish environmental forum, PAN Germany, Umweltinstitut München, WWF Italy and Greenpeace Italy. YouGov polled 1,000 adults each in France, Germany, Ireland, Italy, Poland, Romania and Spain. Results: 50-72% want approvals reassessed more often, support for unlimited approval is at most 10% in every political group (5% of EPP voters, 7% of ECR voters), and 68-76% rank human health first. The NGOs ask MEPs to reject the proposal. Générations Futures' French version targets the far-right rapporteur and calls a rally in Strasbourg on 24 November. This follows up the October 2026 Générations Futures Cluster17 poll (baseline lower relevance), now at EU scale and aimed at the right-wing groups that decide the Parliament majority.
+- Why it matters: it is designed to move EPP and ECR MEPs before the Parliament vote. The parallel BPR provisions would probably follow the PPP outcome. The release does not mention biocides. The grounds are procedural (review frequency).
+- Named substances: none
+- NGO: PAN Europe, [press release](https://www.pan-europe.info/press-releases/2026/11/new-poll-voters-across-political-spectrum-reject-flagship-measures-eu)
+- Also: [Générations Futures version (FR)](https://www.generations-futures.fr/actualites/sondage-europeen-omnibus/) · [PAN Germany version (DE)](https://pan-germany.org/pestizide/grosse-umfrage-menschen-in-europa-lehnen-eu-pestizid-omnibus-ab/)
+
 `[baseline 2026-10-21]` from 2026-10-21_class_baseline.md
 
 **2026-07-06 — foodwatch urges MEPs to rework the Parliament's draft Omnibus report, citing unlimited EU and national approvals and rapporteurs' reliance on agro-industry input**
@@ -141,7 +164,39 @@ Built automatically from the class baseline and its updates. Do not edit: it is 
 - Named substances: none
 - NGO: PAN Europe, [Eu court severely limits possibilities european commission extend…](https://www.pan-europe.info/press-releases/2025/11/eu-court-severely-limits-possibilities-european-commission-extend-pesticide)
 
-## 3. Lower-relevance items
+## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- 2026-10-13 UN experts' warning (PAN Europe/CRIN): relayed by PAN Germany on 2026-10-14 (https://pan-germany.org/pestizide/un-experten-warnen-geplante-schwaechung-des-eu-pestizidrechts-gefaehrdet-menschenrechte/) and cited by GLOBAL 2000 (2026-10-19). No reply from the institutions reported by NGOs.
+- 2026-09-30 Council compromise (GF/PAN Europe): the NGOs have moved on to the Parliament, with the PAN Germany campaign (Tier A) and the PAN Europe poll (Tier C).
+- 2026-06-10 foodwatch Ombudsman complaint: no news found. foodwatch's EN and DE news pages show no Omnibus item after 2026-09-30.
+- 2026-03-06 GF list of 34 biocidal substances: no follow-up found.
+- 2026-03-05 PAN Europe BPR evaluation submission: no follow-up found.
+- 2026-09-07 PAN Germany / endocrine societies letter: no follow-up found.
+- 2026-07-06 foodwatch on the Parliament draft report: per PAN Germany (2026-11-03), about 1,500 amendments are still being handled. The vote has not taken place.
+- 2026-03-25 ClientEarth comitology transparency ruling: no news found.
+- 2026-02-05 GF/PAN 49-pesticide list: no new analysis. The 49-substance spreadsheet was not re-read.
+- 2026-01-27 legal opinion: on 2026-10-21 the French Assemblée nationale European Affairs Committee adopted a resolution asking France to seek referral to the CJEU and to oppose the text (see below). No NGO annulment action announced.
+- 2025-12-16 PAN Europe reaction and 2025-11-19 CJEU extension rulings: no follow-up found.
+- Coming next, ENVI-AGRI committee vote: still not held. PAN Germany (2026-11-03) says the Parliament vote is planned for December 2026.
+- Coming next, trilogues: not started. No NGO date found.
+- Coming next, GF ask that France oppose formal validation and build a blocking minority: no news found. GF (2026-10-26) asks the government to reserve its vote in the Council and oppose adoption in trilogue.
+- Coming next, French National Assembly resolution (Biteau): adopted unanimously by the European Affairs Committee on 2026-10-21, reported by GF on 2026-10-26 (https://www.generations-futures.fr/actualites/omnibus-x-reso/). It now goes to the Economic Affairs Committee or to plenary.
+- Coming next, possible annulment challenge: nothing announced.
+- Coming next, Commission BPR evaluation: no NGO news found.
+- Coming next, UK-EU SPS agreement: no NGO reaction found in the window. Trade press reports an agreement in principle (early November) and an EU-UK summit on 2026-11-20.
+
+## 4. Lower-relevance items
+
+### Update 2026-11-10
+
+- `PPP` · `national:FR` — 2026-10-26 Générations Futures reports that the Assemblée nationale European Affairs Committee unanimously adopted the Biteau resolution against Omnibus X. The resolution asks for withdrawal, an independent impact study, CJEU referral and time-limited approvals with periodic review: https://www.generations-futures.fr/actualites/omnibus-x-reso/
+- `PPP` · `national:FR` — 2026-10-14 Générations Futures criticises France's support for Amendment 1205 to the Omnibus, which would remove third parties' right to request pesticide use registers (Art. 67, Reg. 1107/2009): https://www.generations-futures.fr/actualites/registres-depandage-la-france-soutient-la-suppression-de-la-possibilite-dacces-aux-registres-dutilisation-de-pesticides-dans-le-cadre-de-lomnibus-x/
+- `PPP` · `EU` — 2026-10-21 Friends of the Earth Europe, "There is a bee killer on the loose in Europe", a campaign piece against "lifetime approval" for pesticides that cites Denmark's PFAS-pesticide ban as an example of national action the Omnibus could block: https://friendsoftheearth.eu/news/there-is-a-bee-killer-on-the-loose-in-europe/
+- `PPP` · `national:AT` — 2026-10-19 GLOBAL 2000 relays the CEO lobbying report and says Austria abstained in the Council votes. It cites a foodwatch leak that Austria backed longer intervals and asks Austrian MEPs to reject unlimited approvals (names glyphosate and acetamiprid in passing): https://www.global2000.at/presse/pestizidlobby-schreibt-eu-gesetzesvorlagen
+- `PPP` · `national:NL` — 2026-11-04 PAN Europe: the Dutch authority will withdraw the fludioxonil product Pitcher (an endocrine disruptor) from May 2027 after PAN Europe's litigation. PAN Europe asks for the 12 EU-approved ED pesticides to be banned and says the topic is on the SCoPAFF agenda of 12-13 November. This follows up the baseline's 2026-08-12 item. Fludioxonil is not a member: https://www.pan-europe.info/press-releases/2026/11/dutch-authority-withdraws-endocrine-disrupting-pesticide-following-legal
+- `PPP` · `UK` — (pre-window, missed earlier) 2026-02-18 Greenpeace Unearthed reports that CropLife UK is lobbying to delay UK alignment with EU pesticide bans under the SPS deal. PAN UK and WCL back full alignment. No members named: https://unearthed.greenpeace.org/?p=24479
 
 ### Baseline 2026-10-21
 
@@ -165,19 +220,21 @@ Built automatically from the class baseline and its updates. Do not edit: it is 
 - `PPP` · `UK` — April 2026 Wildlife and Countryside Link briefing asks for full dynamic alignment with EU pesticide standards under the UK-EU SPS deal (whose scope, per other sources, includes biocides) as a floor, flagging the Omnibus as a risk: https://www.wcl.org.uk/docs/Link%20briefing%20-%20dynamic%20alignment%20on%20pesticide%20standards.pdf
 - `cross-regime` · `national:DE` — (unverified) PAN Germany letters to the federal government (January, 2026-02-10 and before COREPER on 2026-06-12) rejecting unlimited approval under both 1107/2009 and BPR 528/2012, as summarised in search results; filed in the Bundestag lobby register and not opened: https://www.lobbyregister.bundestag.de/media/16/ca/758285/Stellungnahme-Gutachten-SG2606150009.pdf
 
-## 4. What NGOs say is coming next
+## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_baseline.md._
+_From the latest run, 2026-11-10_class_update.md._
 
-- European Parliament ENVI-AGRI committee vote on the Omnibus report: about 1,500 amendments, no date fixed as of mid-October 2026. A plenary vote then follows.
-- Trilogues on the Omnibus: the Council mandate was agreed 2026-09-30. The NGOs (GF, PAN Germany) do not give a date, while other sources cite an end-2026 target for a deal. The original proposal assumed entry into force on 2027-01-01.
-- Générations Futures asks France to oppose formal validation of the Coreper compromise at the next Agriculture Council and to build a blocking minority.
-- French National Assembly resolution (Biteau) against Omnibus X was due for examination 2026-10-10 to 14. Outcome not found.
-- foodwatch Ombudsman complaint (2026-06-10): pending. Whether an inquiry was opened is not known.
-- Possible annulment challenge to the adopted Omnibus, built on the 2026-01-27 legal opinion (not announced).
-- Commission BPR evaluation (consultation closed 2026-03-05, completion expected around mid-2027): NGOs (PAN Europe, PAN Germany, GF) want it to address the review backlog, Article 5(2) derogations and Article 15 reviews.
-- UK-EU SPS agreement (target mid-2027), whose scope reportedly includes biocides: WCL wants EU standards as a floor, not a ceiling.
+- European Parliament vote on the Omnibus: the ENVI-AGRI committee vote was postponed from 5 October. PAN Germany and AFP-reported sources give December 2026 (committee in early December, plenary in mid-December). About 1,500 amendments are pending.
+- NGO rally in front of the European Parliament in Strasbourg on 2026-11-24 (Générations Futures).
+- Trilogues on the Omnibus follow the Parliament vote. The Council presidency's end-2026 target looks unlikely.
+- French Biteau resolution: the Economic Affairs Committee has one month to take it up, otherwise it can go to plenary. GF wants the government to reserve its Council vote and oppose adoption in trilogue.
+- foodwatch Ombudsman complaint (2026-06-10): pending. No inquiry outcome known.
+- Possible annulment challenge to the adopted Omnibus, built on the 2026-01-27 legal opinion (not announced). The French resolution also calls for CJEU referral.
+- SCoPAFF 12-13 November 2026: PAN Europe expects a discussion, but no vote yet, on banning fludioxonil and other EFSA-identified endocrine-disrupting pesticides (PPP, not members).
+- Commission BPR evaluation (completion expected around mid-2027): PAN Europe, PAN Germany and GF want it to address the review backlog, Article 5(2) derogations and Article 15 reviews.
+- UK-EU SPS agreement: agreed in principle per trade press, summit 2026-11-20. WCL and PAN UK want EU standards as a floor. Biocides are reportedly in scope.
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_baseline.md

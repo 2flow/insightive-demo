@@ -1,4 +1,4 @@
-import { actName, approvalFor } from './approvals'
+import { actName } from './approvals'
 import { changesFor } from './changes'
 import { formatDate, shortName } from './data'
 import { filingRecords } from './filingSignals'
@@ -44,12 +44,11 @@ function exportSource(s: Substance, c: ExportChange, pinpoint: string): FeedReco
   }
 }
 
-function renewalRecord(s: Substance, c: ExportChange): FeedRecord | null {
-  // The act itself is already on file as the approval record; one record of
-  // the renewal is enough.
-  const celex = approvalFor(s.id)?.act?.celex
-  if (approvalFor(s.id)?.renewed && celex && c.legalActUrl.includes(celex)) return null
-
+function renewalRecord(s: Substance, c: ExportChange): FeedRecord {
+  // Kept even once the approval workbook carries the renewing act: the
+  // approval record is dated to the *first* approval (approvalSignals.ts) and
+  // only mentions the renewal in passing, so this is the timeline's one record
+  // of the renewal itself.
   const act = actName(c.legalAct)
   const [oldEnd, newEnd] = c.fields.endDate ?? ['', s.endDate]
   return {
@@ -108,8 +107,7 @@ export function changeRecords(s: Substance): FeedRecord[] {
   const out: FeedRecord[] = []
   for (const c of changesFor(s.id)) {
     if (c.kinds.includes('renewal')) {
-      const record = renewalRecord(s, c)
-      if (record) out.push(record)
+      out.push(renewalRecord(s, c))
     }
     // One signal per renewal: where the application is already on the record
     // (the expressions-of-interest list, or a postponement Decision's recitals),

@@ -2,10 +2,10 @@
 substance: Spinosad
 slug: spinosad
 cas: 168316-95-8
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN Netherlands puts spinosad on a 10-insecticide "black list" for home and garden use and asks retailers to stop selling products with it (incl. spinosad ant baits) by 2027
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Spinosad (CAS 168316-95-8)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Spinosad. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Spinosad; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO publication, campaign step, filing or statement naming spinosad in the update window, under BPR, PPP or any other regime. NGO pressure on the file stays low, and what exists is national (NL, AT).
 
 ### Update 2026-10-20 (change: none)
 
@@ -67,8 +71,10 @@ None of the 3 top signals targets the EU biocide approval itself. One cross-regi
 
 ## 3. Class-level signals (do not name Spinosad)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -84,6 +90,16 @@ None of the 3 top signals targets the EU biocide approval itself. One cross-regi
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Netherlands black list of 10 home-and-garden insecticides (2025-04-07; spinosad ant products named): no news found. PAN-NL's news items in the window (2026-11-04 fludioxonil court success, 2026-11-05 water-board handbook, 2026-11-08 bird-food test) do not name spinosad. [PAN-NL news](https://www.pan-netherlands.org/nieuws/)
+- PAN Netherlands garden-plant residue report naming spinosad as an HHP (2026-04-23): no news found.
+- GLOBAL 2000 "bee-friendly" plants test listing spinosad (2026-05-20): no news found. GLOBAL 2000's pesticide press releases in the window (2026-10-13 lawsuit over pesticide claims, 2026-10-19 lobby influence on EU draft law) do not name spinosad in their headlines or teasers. [GLOBAL 2000 press](https://www.global2000.at/presse)
+- Coming next: PAN-NL target of no harmful insecticides in non-professional retail by 2027, and its call for a legal ban on non-professional use: no news found.
+- Coming next: a likely PAN-NL garden-plant test in spring 2027: not yet due, no news.
+- Coming next: GLOBAL 2000 demand for a ban on insect-hazardous pesticides on "bee-friendly" plants: no news found.
+- Coming next: no pending litigation or formal requests on spinosad: still none found.
+
 ### Update 2026-10-20
 
 - PAN Netherlands black list of 10 home-and-garden insecticides (2025-04-07; spinosad ant products named): no news found. PAN-NL's news page has no item in the window (its latest items are dated 2026-09-03 and 2026-09-14, and neither concerns spinosad). [PAN-NL news](https://www.pan-netherlands.org/nieuws/)
@@ -96,6 +112,10 @@ None of the 3 top signals targets the EU biocide approval itself. One cross-regi
 
 ## 5. Lower-relevance items
 
+### Update 2026-11-10
+
+None.
+
 ### Update 2026-10-20
 
 None.
@@ -107,7 +127,7 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - PAN Netherlands wants retailers, garden centres and webshops to stop selling harmful insecticides, spinosad included, for non-professional use by 2027. It also wants a Dutch legal ban on chemical pesticides for non-professional use.
 - PAN Netherlands will probably test garden plants again in spring 2027 and measure retailers against the sector's target of 70% "chemical-free" plants by 2030.
@@ -116,5 +136,6 @@ _From the latest run, 2026-10-20_NGO_update.md._
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

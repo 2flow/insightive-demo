@@ -2,10 +2,10 @@
 substance: Piperonyl butoxide (PBO)
 slug: piperonyl-butoxide-pbo
 cas: 51-03-6
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Verbraucherzentrale NRW and PAN Germany single out PBO in insect sprays as a problematic ingredient with possible hormone and nervous-system effects (DE market check of biocide sales rules, 2025-06-11)
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Piperonyl butoxide (PBO) (CAS 51-03-6)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Piperonyl butoxide (PBO). Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Piperonyl butoxide (PBO); they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO item naming PBO was found in the window (2026-10-13 to 2026-11-10). Most NGO pesticide activity in the window concerned the Food and Feed Safety Omnibus, with campaign items, polls and the run-up to European Parliament votes. None of the items screened names PBO or synergists. The overall signal level stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -77,8 +81,10 @@ Of the 4 top signals, 1 targets biocidal products directly (Germany), 2 are food
 
 ## 3. Class-level signals (do not name Piperonyl butoxide (PBO))
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -94,6 +100,17 @@ Of the 4 top signals, 1 targets biocidal products directly (Germany), 2 are food
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Verbraucherzentrale NRW / PAN Germany, PBO in insect sprays (2025-06-11): no news found. PAN Germany's in-window news (2026-10-14 to 2026-11-05) covers only the Omnibus, a children's exposure webinar and the Geneva chemicals conference, with nothing on biocides or insect sprays. Searches found no new Verbraucherzentrale item.
+- BUND ToxFox, PBO labelled "neurotoxic and a hormone poison" (2024-12-11): no news found. BUND's press releases from 2026-10-26 to 2026-11-09 contain nothing on pesticides, biocides or ToxFox.
+- PAN Europe wristband study (2026-07-16): no news found. The new PAN Europe blog posts in the window (2026-10-20, 2026-10-21, 2026-11-09) are about the Omnibus, food-chain chemicals and periodic review, and none mentions PBO or synergists in its listing.
+- Générations Futures cereal residue report (2024-12-17): no news found. The in-window actualités (2026-10-13 to 2026-11-09) cover the Omnibus, an RNAi insecticide, the diffuse-pollution levy and use registers, with no residue report naming PBO.
+- Synergist review under Reg. (EU) 2024/1487 (PAN Europe): no news found. Searches turned up no new PAN Europe item on safeners or synergists.
+- German biocide sales rules (ChemBiozidDV enforcement): no news found.
+- Sherpa Duo (cypermethrin + PBO; DUH, Braunschweig): no news found. Searches found no in-window DUH or foodwatch update, and foodwatch DE news from 2026-10-14 to 2026-11-09 has nothing on pesticides.
+- Endocrine disruptors / CLP ED hazard classes (BUND ED-ban demand): no PBO-specific NGO item found. PAN Netherlands' request to withdraw 50 ED products (PAN Europe blog, 2026-09-09, before the window) names other active substances, not PBO.
+
 ### Update 2026-10-20
 
 - Verbraucherzentrale NRW / PAN Germany, PBO in insect sprays (2025-06-11): no news found. PAN Germany's in-window news (2026-09-30 to 2026-10-20) covers the Omnibus, TFA, PFAS and a children's exposure webinar, with nothing on biocides or insect sprays.
@@ -107,6 +124,10 @@ Of the 4 top signals, 1 targets biocidal products directly (Germany), 2 are food
 - Sherpa Duo case (DUH / foodwatch, Braunschweig): no news found. No in-window DUH or foodwatch update was located.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -123,15 +144,16 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Synergist review: PAN Europe is tracking the EU work programme for reviewing synergists under Reg. (EU) 2024/1487 (list adopted in 2025, review due by about 2030). It wants a shorter timeline, MRLs and groundwater limits for synergists, and withdrawal of products containing synergists excluded from the programme. This remains the most likely venue for NGO comment on PBO hazard data.
-- Omnibus: PAN Europe, PAN Germany, Générations Futures, GLOBAL 2000 and CEO continue to campaign against the Food and Feed Safety Omnibus, now at the European Parliament stage after the Council position (late September 2026, as the NGOs describe it). PAN Europe's July 2026 demand to assess mixture and synergistic effects may bring PBO into the argument.
-- Endocrine disruptors: BUND demands a complete ban on endocrine-active pesticides. The CLP ED hazard classes become binding in November 2026 (PAN's description). An ED classification debate remains the main route toward the BPR file.
+- Synergist review: PAN Europe is tracking the EU work programme for reviewing synergists under Reg. (EU) 2024/1487. It wants a shorter timeline, MRLs and groundwater limits for synergists, and withdrawal of products containing synergists excluded from the programme. This remains the most likely venue for NGO comment on PBO hazard data.
+- Endocrine disruptors: BUND demands a complete ban on endocrine-active pesticides. PAN describes the CLP ED hazard classes as becoming binding in November 2026. An ED classification debate is still the main route by which these items could reach the BPR file.
 - German biocide sales rules: Verbraucherzentrale NRW and PAN Germany want stricter ChemBiozidDV enforcement, closure of the "repellent" loophole, and stricter scrutiny of insect-killing actives in sprays.
 - Sherpa Duo (cypermethrin + PBO): DUH's intervention in the Braunschweig case is still described as ongoing. No ruling has been reported.
+- (Dropped: the Omnibus item. It is class-level/horizontal, does not name PBO, and is left to the class watch.)
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

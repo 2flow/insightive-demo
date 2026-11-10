@@ -2,10 +2,10 @@
 substance: Cypermethrin
 slug: cypermethrin
 cas: 52315-07-8
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: PAN Europe wins at the EU Court of Justice (2025-12-18): the 2021 PPP re-approval of cypermethrin was unlawful; NGOs now press the Commission to ban it
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: Cypermethrin (CAS 52315-07-8)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Cypermethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Cypermethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No European NGO named cypermethrin in a page published in the window. PAN Europe, PAN Germany, Générations Futures and PAN Netherlands spent the window on the Omnibus and on other substances. The only in-window mentions come from PAN Asia Pacific and concern Asia, so they are listed under lower relevance. PANAP's 2025 statements on the Philippine school poisoning were missed by the baseline and are now listed as pre-window items.
 
 ### Update 2026-10-20 (change: none)
 
@@ -109,12 +113,15 @@ Nothing new since 2026-10-05. No NGO named cypermethrin in a page published in t
 
 ## 3. Class-level signals (do not name Cypermethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -128,6 +135,17 @@ Nothing new since 2026-10-05. No NGO named cypermethrin in a page published in t
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- CJEU ruling C-316/24 P (2025-12-18, PAN Europe) and the Commission's Article 21 review (PAN Europe, 2026-07-14): no news found. None of PAN Europe's press releases in the window (2026-10-13, 10-22, 11-04, 11-05) or its blog posts (2026-10-20, 10-21, 11-09) mention cypermethrin. Index: https://www.pan-europe.info/media/press-releases
+- PAN Europe letters to DG SANTE and EFSA (2026-05-13) and the question about Belgium's 2026 cypermethrin derogation and possible infringement proceedings: no news found. The 2026 Belgian derogation litigation by Nature & Progrès and PAN Europe that turned up in searches concerns spirotetramat, not cypermethrin.
+- PAN Europe and BeeLife World Bee Day letter (2026-05-20): no news found. No cypermethrin item was visible on BeeLife's news page.
+- Générations Futures biocides and Omnibus X statement (2026-03-06): no follow-up naming cypermethrin. All of its news items from 2026-10-12 to 2026-11-09 are about the Omnibus, the diffuse-pollution levy, an RNAi insecticide and other subjects. https://www.generations-futures.fr/actualites/
+- ClientEarth comitology transparency ruling (2026-03-25): no news found. None of ClientEarth's press releases from 2026-10-23 to 2026-11-10 concern pesticides.
+- PAN Germany pyrethroid water standards (2025-11-20): no news found. PAN Germany's items from 2026-10-01 to 2026-11-05 are about the Omnibus, PFAS/TFA and chemicals management.
+- Dutch CBb appeal by PAN Netherlands and Milieufederatie Zuid-Holland (hearing 2026-03-11): no outcome found. PAN Netherlands' 2026-11-04 litigation success concerns a fludioxonil product (Pitcher), not cypermethrin: https://www.pan-netherlands.org/succes-hormoonverstorend-bestrijdingsmiddel-uit-de-handel-na-rechtszaak/
+- Omnibus fights and pyrethroid water standards: these are class-level or horizontal, and nothing in the window named cypermethrin. They are left to the class watch and dropped from the list below.
+
 ### Update 2026-10-20
 
 - CJEU ruling C-316/24 P (2025-12-18, PAN Europe) and the Commission's Article 21 review: no news found. PAN Europe's blog entries in the window (2026-10-01, 10-05, 10-07, 10-20) do not mention cypermethrin. Its 2026-10-05 post on delays in EU pesticide decisions names buprofezin, fludioxonil, flutolanil and pirimicarb, but not cypermethrin: https://www.pan-europe.info/blog/more-delay-eu%E2%80%99s-protection-against-hazardous-pesticides
@@ -140,6 +158,14 @@ Nothing new since 2026-10-05. No NGO named cypermethrin in a page published in t
 - Omnibus fights (unlimited approvals): continued at class level. The Council agreed its position on 2026-09-30, and NGOs mobilised in October (see lower relevance). Neither item names cypermethrin.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `international` — 2026-10-23: PAN Asia Pacific's documentary "Pesticide-Free Schools", made with the Cambodian NGOs CEDAC and SRD, names "highly hazardous pesticides such as chlorpyrifos, glyphosate, lambda-cyhalothrin, and cypermethrin" as a concern for children in Cambodia and Vietnam. It is a mention, not an EU action. https://panap.net/videos/pesticide-free-schools/
+- `PPP` · `international` — date unverified (page suggests October 2026): PAN Asia Pacific's publication on a comprehensive chlorpyrifos ban in Pakistan mentions cypermethrin only as part of imported "formulations containing chlorpyrifos combined with cypermethrin". It makes no demand on cypermethrin. https://panap.net/publications/beyond-crop-specific-restrictions-why-pakistan-needs-a-comprehensive-ban-on-chlorpyrifos-and-a-transition-to-agroecology/
+- `PPP` · `international` — 2025-08-02 (pre-window, missed earlier): after cypermethrin was found to have caused the mass poisoning of pupils at a school in Sibalom, Antique (Philippines), PAN Asia Pacific demanded an urgent probe. It called on governments to "immediately phase out HHPs, including cypermethrin" and to identify the manufacturer and seller. https://panap.net/updates/demand-for-urgent-probe-and-accountability-over-pesticide-poisoning-of-children-in-the-philippines/
+- `PPP` · `international` — 2025-12-08 (pre-window, missed earlier): a PAN Asia Pacific and MASIPAG fact-finding mission on the Sibalom poisoning confirms cypermethrin on classroom walls, doors and plants and lists it among PANAP's "Terrible Twenty" pesticides most toxic to children. It calls for a ban on HHPs and 1 km pesticide-free buffer zones around schools. https://panap.net/updates/fact-finding-mission-exposes-systemic-failures-behind-mass-school-poisoning-in-the-philippines/
+- `water` · `UK` — undated (unverified): an Afonydd Cymru (Welsh rivers trusts) page on soil and chemicals notes increasing concern about "cypermethrin (used in forestry)" in Natural Resources Wales' 2025 interim WFD classification. It makes no demand, and the page date could not be confirmed. https://afonyddcymru.org/soil-chemicals/
 
 ### Update 2026-10-20
 
@@ -162,15 +188,15 @@ Excluded as out of scope: the Générations Futures and BUND items on alpha-cype
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Article 21 review of the PPP approval: still pending. PAN Europe wants an immediate ban and cites Article 266 TFEU compliance. Further pressure, or a legal step over non-compliance, is possible while EFSA reassesses.
-- National derogations: PAN Europe's question to DG SANTE about infringement proceedings over Belgium's 2026 emergency derogation is still unanswered publicly.
-- Dutch litigation: no outcome found yet for the CBb appeal by PAN Netherlands and Milieufederatie Zuid-Holland against Ctgb's refusal to withdraw cypermethrin products (hearing 2026-03-11).
-- Omnibus X / Food and Feed Safety Omnibus: the Council position was agreed on 2026-09-30 and Parliament has not yet voted. Générations Futures, PAN Europe, PAN Germany and BeeLife oppose longer or unlimited approvals and deregulation of biocides. The outcome bears on whether cypermethrin's BPR approval faces a full renewal by 2030.
-- Pyrethroid water standards: PAN Germany is pushing for group and mixture-based quality standards for pyrethroids in surface waters, which would also cover emissions from biocides.
+- Article 21 review of the PPP approval: still pending. PAN Europe wants an immediate ban and cites the duty to comply with the judgment "within a reasonable time" (Article 266 TFEU). Further pressure, or a legal step over non-compliance, is possible while the review runs.
+- National derogations: PAN Europe's question to DG SANTE about infringement proceedings over Belgium's 2026 emergency derogation for cypermethrin is still unanswered publicly.
+- Dutch litigation: there is still no outcome for the CBb appeal by PAN Netherlands and Milieufederatie Zuid-Holland against Ctgb's refusal to withdraw cypermethrin products (hearing 2026-03-11).
+- PAN Asia Pacific (international): it calls for phasing out cypermethrin as an HHP and for buffer zones around schools in Asia. This is unlikely to bear on the EU file except as hazard rhetoric.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

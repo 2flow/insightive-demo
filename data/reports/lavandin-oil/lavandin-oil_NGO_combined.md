@@ -2,10 +2,10 @@
 substance: Lavandin oil
 slug: lavandin-oil
 cas: 91722-69-9
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Lavandin oil (CAS 91722-69-9)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Lavandin oil. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Lavandin oil; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime. No NGO activity on lavandin oil, or on lavender oil as a substance, was found in the update window 2026-10-13 to 2026-11-10. Overall NGO pressure remains none.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Lavandin oil)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,12 +71,22 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals from the baseline and from the 2026-10-20 update: none were listed, so there was nothing to follow up.
+- "What NGOs say is coming next" from the baseline and from the 2026-10-20 update: "Nothing", so there was nothing to follow up.
+- The 2026-10-20 lower-relevance item (UFC-Que Choisir rates the Arko Essentiel lavandin wristband "Totalement inefficace"): no news found. The comparison still has no date and no new entry was found.
+
 ### Update 2026-10-20
 
 - Baseline top signals: none were listed, so there was nothing to follow up.
 - Baseline "What NGOs say is coming next": "Nothing", so there was nothing to follow up.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -82,11 +98,12 @@ None in the time window. (Items outside the window or not about the substance ar
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Nothing. No NGO has announced campaigns, cases or deadlines concerning lavandin oil.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

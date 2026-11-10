@@ -2,10 +2,10 @@
 substance: Icaridin
 slug: icaridin
 cas: 119515-38-7
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Icaridin (CAS 119515-38-7)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Icaridin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Icaridin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime: no NGO published anything on Icaridin (picaridin, KBR 3023) in the update window. NGOs are still not pushing against the BPR approval. One consumer-association item from before the window, missed earlier, is listed under lower relevance.
 
 ### Update 2026-10-20 (change: none)
 
@@ -56,8 +60,10 @@ None.
 
 ## 3. Class-level signals (do not name Icaridin)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -72,6 +78,13 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals in the earlier reports: none, so there was nothing to follow up.
+- "Coming next" item, whether NGOs take up the academic evidence on amphibian and aquatic toxicity and on persistence or transformation products: no news found. No NGO page in the window cites these findings.
+- Umweltinstitut München consumer page (lower relevance, undated): no new or updated item found.
+- Verbraucherzentrale Hamburg, EWG and Beyond Pesticides consumer guidance (lower relevance): no new items found.
+
 ### Update 2026-10-20
 
 - Top signals in the baseline: none listed, so there was nothing to follow up.
@@ -80,6 +93,10 @@ None.
 - Verbraucherzentrale Hamburg, EWG, Beyond Pesticides consumer guidance (lower relevance): no new items found. The Beyond Pesticides chemical factsheet (chem246) is still the old "least-toxic" entry.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `BPR` · `national:BE`: Test-Aankoop/Test-Achats (Belgian consumer association), 2026-06-15, "Beste muggenspray 2026". This consumer test recommends products with 20–25% icaridine for children over six months. It notes there is limited data for pregnancy and that icaridine is more effective than IR3535. It mentions environmental risk only in general terms and raises no aquatic concern and no regulatory demand. It is neutral to favourable. (pre-window, missed earlier) https://www.test-aankoop.be/gezond/dagelijkse-verzorging/antimuggenmiddelen/nieuws/beste-muggenspray-2026
 
 ### Update 2026-10-20
 
@@ -94,11 +111,12 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-Nothing announced. No NGO campaign, pending case, consultation response or deadline concerning Icaridin is known. The watch item stays open: whether NGOs take up the academic evidence on amphibian and aquatic toxicity in wastewater-receiving waters and on photostable, more toxic transformation products. These are hazard and persistence grounds, which would carry over strongly to a BPR review.
+Nothing announced. No NGO campaign, pending case, consultation response or deadline concerning Icaridin is known. The watch item stays open: whether NGOs take up the academic evidence on amphibian and aquatic toxicity in waters that receive wastewater, and on photostable, more toxic transformation products (icaridin-acid is described as P/vP in EU assessment documents). These are hazard and persistence grounds, which would carry over strongly to a BPR review.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

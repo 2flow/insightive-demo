@@ -2,10 +2,10 @@
 substance: Dinotefuran
 slug: dinotefuran
 cas: 165252-70-0
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN UK campaigns for dinotefuran and four other crop-banned insecticides to be banned from UK pet flea medicines, citing high bee toxicity (campaign page last updated 2024-10-22)
@@ -18,11 +18,15 @@ class_signal_levels: neonicotinoid medium; horizontal medium
 
 # NGO signals, combined: Dinotefuran (CAS 165252-70-0)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for neonicotinoid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Dinotefuran. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Dinotefuran; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO published a top signal on dinotefuran in the window. The only in-window NGO page that names it is a Beyond Pesticides blog post of 2026-10-28 on an Ecuadorian floriculture study. It names dinotefuran only in a list of the neonicotinoids analysed and reports no result for it, so it is listed as lower relevance. There is still no NGO activity on the PT18 file.
 
 ### Update 2026-10-20 (change: none)
 
@@ -69,7 +73,7 @@ None.
 
 ## 3. Class-level signals (do not name Dinotefuran)
 
-### neonicotinoid · class signal level: medium · last run 2026-10-21 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
+### neonicotinoid · class signal level: medium · last run 2026-11-10 · [class file](../_classes/neonicotinoid/neonicotinoid_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-10-14 — Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier B `[baseline 2026-10-21]` 2026-09-18 — Beyond Pesticides publicises a study linking prenatal neonicotinoid exposure to early puberty in girls, citing endocrine disruption · `cross-regime` · `international` · `indirect–hazard` · `study/report`
@@ -79,8 +83,10 @@ None.
 - Tier C `[baseline 2026-10-21]` 2026-07-02 — ClientEarth and Butterfly Conservation hail a watchdog finding that the UK government broke the law on neonicotinoid emergency authorisations and press for a complete ban, citing harm to protected sites and pollinators · `PPP` · `UK` · `indirect–use` · `formal request`
 - Tier B `[baseline 2026-10-21]` 2026-01-22 — Beyond Pesticides publicises a review finding male reproductive toxicity from neonicotinoids in rodents, calling the class a widespread hazard · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -96,6 +102,17 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN UK campaign to ban crop-banned insecticides, including dinotefuran, from pet medicines (top signal): no news found. The PAN UK REST API search for "dinotefuran" still returns only the 2023 open letter and an FAQ item. PAN UK's in-window posts (2026-10-22 on emergency authorisations, 2026-11-06 on UK-EU realignment) are not about pet medicines. https://www.pan-uk.org/uk-eu-realignment-pesticides/
+- Beyond Pesticides bee-thermoregulation post of 2026-01-29 (top signal): no follow-up found. The only new post under the "dinotefuron" category is the 2026-10-28 Ecuador floriculture post (see lower relevance).
+- Beyond Pesticides Indiana household biomonitoring post of 2025-07-15 (top signal): no news found.
+- UK pet parasiticide debate and the VMD consultation results due at the end of October 2026 (coming next): no NGO item on the results was found. The SongBird Survival news page has nothing after its 2026-10-19 response apart from a 2026-11-05 Christmas cards post. Coalition asks still name only fipronil and imidacloprid.
+- EU Food and Feed Safety Omnibus campaign (coming next): class-level; no item naming dinotefuran found. Left to the class watch.
+- US: NRDC petition to revoke neonicotinoid food tolerances, including dinotefuran, with an EPA decision due by 2027-04-30 under the proposed settlement (coming next): no NGO item found in the window on finalisation of the settlement (nrdc.org not checked directly; it returned 403 in earlier runs).
+- Kenya Petition E048 of 2022, which seeks a ban on 11 pesticides including dinotefuran (coming next): no in-window NGO item found. The latest reported court step (confirmation of public notice, mention set for 2026-02-05) predates the window and comes from press only.
+- No NGO action on the PT18 renewal, CLH or Candidate for Substitution status (coming next): still none found.
+
 ### Update 2026-10-20
 
 - PAN UK campaign to ban crop-banned insecticides, including dinotefuran, from pet medicines (top signal): no news found. The PAN UK REST API search for "dinotefuran" still returns only the 2023-11-01 open letter. PAN UK's only in-window post ("The pesticide data gap and why it matters", 2026-09-30) does not mention dinotefuran, neonicotinoids or pet medicines. https://www.pan-uk.org/the-pesticide-data-gap-and-why-it-matters/
@@ -107,6 +124,11 @@ None.
 - No NGO action on the PT18 renewal, CLH or Candidate for Substitution status (coming next): still none found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `international` — 2026-10-28: A Beyond Pesticides blog post on a study in *Environmental Pollution* of pesticide contamination around the flower industry in Pedro Moncayo, Ecuador (a major cut-flower supplier to the US). Dinotefuran is named only in the list of seven neonicotinoids analysed; the post reports detection rates for imidacloprid (71%), thiamethoxam (46%) and clothianidin (35%), not for dinotefuran. The call to action is the Parks for a Sustainable Future programme and the 2026 US midterm candidate questionnaire. https://beyondpesticides.org/dailynewsblog/2026/10/industrial-floriculture-affects-ecosystem-stability-and-health-in-ecuador-a-major-cut-flower-supplier-to-u-s/
+- `food residues` · `national:FR` — 2026-07 (pre-window, missed earlier; unverified): Agir pour l'Environnement tested ten honeys and two Nutella spreads for neonicotinoids, opposed the reauthorisation of acetamiprid and asked for a European moratorium. A search summary of the report PDF says dinotefuran was among the detected compounds (about 50 ng/kg), but the PDF could not be read and no copy on the NGO's own site was found. Press coverage names acetamiprid and imidacloprid, not dinotefuran. Report copy (third-party host): https://cibum.gr/wp-content/uploads/2026/07/APE-Compte-rendu-analyses-NNI-VF-1.pdf
 
 ### Update 2026-10-20
 
@@ -132,15 +154,16 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- UK: The VMD consultation results on the sale of pet parasiticides are due at the end of October 2026. SongBird Survival hopes they will move products to at least the NFA-VPS category, and is asking the Government for a timetable for Phase II environmental risk assessment and advice-based supply. Trade press expects a parliamentary debate in early 2027. The coalition's asks still name only fipronil and imidacloprid. PAN UK's standing ask to ban all crop-banned pesticides, including dinotefuran, from pet medicines remains open.
-- EU: PAN Europe, Générations Futures and foodwatch continue to campaign against the Food and Feed Safety Omnibus as Council and Parliament negotiate, with a possible entry into force on 2027-01-01. None of them has said anything about biocides or dinotefuran.
-- US: EPA must decide on NRDC's petition to revoke food tolerances for five neonicotinoids, including dinotefuran, by 2027-04-30 under the proposed settlement (unverified on the NRDC site). Beyond Pesticides continues to call for neonicotinoids to be phased out ahead of EPA's neonicotinoid registration review decisions.
-- Kenya: Petition E048 of 2022 (ACCPA and Kelvin Kubai, backed by a Greenpeace Africa blog), which seeks a ban on 11 pesticides including dinotefuran, continues as a class action. No in-window NGO item was found.
+- UK: NGOs are waiting for the VMD's consultation outcome on the sale of pet parasiticides (expected around the end of October 2026; no NGO reaction found yet) and for a timetable for Phase II environmental risk assessment. The coalition's asks name only fipronil and imidacloprid. PAN UK's standing ask to ban all crop-banned pesticides, including dinotefuran, from pet medicines remains open.
+- US: Under the proposed settlement, EPA must decide on NRDC's petition to revoke food tolerances for five neonicotinoids, including dinotefuran, by 2027-04-30 (unverified on the NRDC site). Beyond Pesticides continues to call for neonicotinoids to be phased out ahead of the EPA registration review decisions.
+- Kenya: Petition E048 of 2022 (ACCPA and Kelvin Kubai, backed by a Greenpeace Africa blog), which seeks a ban on 11 pesticides including dinotefuran, continues as a class action.
+- France: Agir pour l'Environnement's call for an EU moratorium on neonicotinoids (July 2026) may name dinotefuran in its residue data (unverified).
 - No NGO has announced any action on the PT18 dinotefuran renewal, the EU CLH process or the Candidate for Substitution status.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

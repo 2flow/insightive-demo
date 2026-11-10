@@ -1,10 +1,10 @@
 ---
 class: nanomaterial
 class_slug: nanomaterial
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline.md
-updates: none
-last_run: 2026-10-21
+updates: 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: low
 signals_total: 1
 signals_new_since_baseline: 0
@@ -17,6 +17,10 @@ Class watch for nanomaterials in biocides and pesticides (e.g. synthetic amorpho
 Built automatically from the class baseline and its updates. Do not edit: it is rebuilt after every run. A signal whose `Named substances` line lists a member is also copied into that member's combined file as a substance-specific signal.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-21. No NGO item in the window dealt with nanomaterials in biocides or pesticides, or with nano silica. The baseline's only top signal (Inf'OGM/AVICENN on nanopesticides) had no follow-up. One missed pre-window item was found: an EEB/HEAL REACH letter that mentions nanoform data gaps only in passing. It is listed under lower relevance. Pressure on the BPR approvals of the two silica members stays low.
 
 ### Baseline 2026-10-21
 
@@ -44,20 +48,35 @@ None.
 
 None.
 
-## 3. Lower-relevance items
+## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- Inf'OGM / AVICENN call for mandatory nano risk assessment and checks of pesticides (2026-02-27): no news found. Inf'OGM published no new nano item, and AVICENN's site (veillenanos.fr) returned HTTP 500 again.
+- Coming next, AVICENN demand for systematic nano risk assessment of pesticides and fertilisers: no news found.
+- Coming next, REACH revision and nanoform provisions: no Commission proposal and no new NGO position on nanoforms in the window. The only related NGO text is the pre-window EEB/HEAL letter of 2026-06-29 (see lower relevance), which says the full reform has stalled.
+- Coming next, chemicals/cosmetics omnibus nano notification: no NGO reaction found.
+
+## 4. Lower-relevance items
+
+### Update 2026-11-10
+
+- `REACH/CLP` · `EU` — EEB and HEAL letter to the Commission (2026-06-29) asking for complementary measures because the REACH reform has stalled. Among its enforcement points it cites ECHA's finding of "persistent data gaps for key hazards such as endocrine disruption and nanoforms". It is a passing mention, makes no nano demand and names no member. It is mainly a horizontal item. (pre-window, missed earlier) [letter (PDF)](https://eeb.org/wp-content/uploads/2026/07/2026-06-29-EEB-and-HEAL-letter-REACH-revision-002.pdf)
 
 ### Baseline 2026-10-21
 
 None.
 
-## 4. What NGOs say is coming next
+## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_baseline.md._
+_From the latest run, 2026-11-10_class_update.md._
 
-- AVICENN wants mandatory, systematic nano risk assessment for pesticides and fertilisers and regular official checks (Inf'OGM, 2026-02-27). No dated campaign step was given.
-- The EU REACH revision is still pending. Germany's federal review of the REACH nano rules (August 2025) and a proposed downstream-user nanoform article are being debated, but in the window this debate was seen only in industry and authority material, not NGO material. Watch for NGO positions on nanoforms when the Commission proposal appears. A 36-NGO open letter on REACH (2026-02-19) did not mention nano and belongs to the horizontal watch.
-- Chemicals/cosmetics omnibus: a provisional deal (2026-06-17) keeps a lighter nano notification for cosmetics. This is not the class regime and no NGO reaction was verified.
+- AVICENN wants mandatory, systematic nano risk assessment for pesticides and fertilisers and regular official checks (Inf'OGM, 2026-02-27). No dated campaign step has been given.
+- The REACH revision is stalled (EEB/HEAL, 2026-06-29). Watch for NGO positions on nanoforms if the Commission proposal or the complementary measures the NGOs ask for appear.
+- BPR evaluation: the Commission's evaluation is expected around mid-2027. No NGO nano-specific input has been found so far. Watch for NGO submissions that raise nanomaterials.
+- Chemicals/cosmetics omnibus nano notification: still no NGO reaction verified. This is not the class regime.
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_baseline.md

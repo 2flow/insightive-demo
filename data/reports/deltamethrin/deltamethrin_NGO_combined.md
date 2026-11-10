@@ -2,10 +2,10 @@
 substance: deltamethrin
 slug: deltamethrin
 cas: 52918-63-5
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: PAN Europe asks the Commission for an emergency ban of deltamethrin on developmental-neurotoxicity grounds and says it "should also be prohibited as a biocide" (2025-02-26)
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: deltamethrin (CAS 52918-63-5)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name deltamethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name deltamethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO page published in the window names deltamethrin. NGO activity in the window was class-level or horizontal: the Omnibus X campaign (UN experts' warning, YouGov poll, French parliament resolution), the Velt/PAN Europe study of pesticides in Flemish classroom dust, and PAN Europe's fludioxonil win in the Netherlands. None of these names deltamethrin in the text that could be read. The known items (the DUH case, PAN Europe's DNT campaign, the Swiss water limit) had no reported next step. One older PAN Europe/PAN Netherlands item that the earlier reports missed is listed under lower relevance.
 
 ### Update 2026-10-20 (change: none)
 
@@ -124,12 +128,15 @@ Of the 9 top signals, 4 target the PPP approval or PPP products, 2 are cross-reg
 
 ## 3. Class-level signals (do not name deltamethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -143,6 +150,21 @@ Of the 9 top signals, 4 target the PPP approval or PPP products, 2 are cross-reg
 - Tier C `[baseline 2026-10-21]` 2025-11-19 — PAN Europe, Pollinis and Aurelia win CJEU rulings that the Commission cannot routinely extend pesticide approvals while reassessment is delayed, citing the precautionary principle · `PPP` · `EU` · `indirect–use` · `litigation`
 
 ## 4. Follow-ups on known items
+
+### Update 2026-11-10
+
+- PAN Europe emergency-ban letter and "Save our brain" deltamethrin campaign (2025-02-26): no news found. PAN Europe's four press releases in the window (13 Oct, 22 Oct, 4 Nov and 5 Nov 2026) do not mention deltamethrin ([PAN Europe press releases](https://www.pan-europe.info/media/press-releases)).
+- Générations Futures, biocides Omnibus X (2026-03-06): no deltamethrin-specific news. GF's posts from 13 Oct to 9 Nov 2026 cover Omnibus X, an RNAi insecticide and the diffuse-pollution levy. None names deltamethrin, pyrethroids or vector-control spraying ([GF actualités](https://www.generations-futures.fr/actualites/)).
+- Générations Futures, call to withdraw pyrethroids (2025-04-25): no news found.
+- PAN Europe, extensions unlawful after T-412/22 (2026-05-13): no news found. No internal review request or legal challenge against the PPP extension has been published.
+- PAN Europe, opposition to the tenth PPP extension (2026-04-30): no news found.
+- PAN Germany at Bayer's AGM (2026-04-24): no news found.
+- DUH v BVL, Decis Forte and GAT DECLINE 2.5 EC (2026-04-13): no news found. DUH's pesticide-lawsuits page still links the 2026-09-23 overview as the latest, and it shows no hearing or ruling ([DUH Pestizidklagen](https://www.duh.de/informieren/verbraucherschutz/pestizidklagen/)).
+- PAN Germany, pyrethroids as WFD priority substances (2025-11-20): no news found. PAN Germany's news from 1 Oct to 5 Nov 2026 (Omnibus X, PFAS/TFA, chemicals conference, children webinar) does not mention deltamethrin or pyrethroids.
+- Swiss water-limit campaign by Pro Natura, BirdLife Switzerland and WWF Switzerland (2026-03-12): no news found. No NGO item on a final Federal Council decision.
+- "Coming next", DNT and Parkinson testing requirements: no news found.
+- "Coming next", Omnibus X: active in the window but class-level only (no deltamethrin mention). The class watch follows it.
+- "Coming next", France (ANSES deltamethrin work, local opposition to mosquito spraying): no NGO page found in the window.
 
 ### Update 2026-10-20
 
@@ -160,6 +182,10 @@ Of the 9 top signals, 4 target the PPP approval or PPP products, 2 are cross-reg
 
 ## 5. Lower-relevance items
 
+### Update 2026-11-10
+
+- `PPP` · `national:NL` — 2025-04-08 (pre-window, missed earlier): PAN Europe, using research by PAN Netherlands, reports that highly toxic pesticides are sold to amateur users. It names a 5 g/l deltamethrin product as "a neurotoxic pesticide, toxic to reproduction and a beekiller", repeats the call for an immediate EU ban, and asks for harmful pesticides to be banned for non-professional use. [PAN Europe, "Highly toxic pesticides on sale for inexpert users"](https://www.pan-europe.info/node/4126)
+
 ### Update 2026-10-20
 
 - `cross-regime` · `EU` — 2026-09-30: PAN Germany criticises the Council's Omnibus X position. The position would raise approval periods to 15 years for first approvals and 25 for renewals, extend grace periods and loosen derogations, and PAN Germany says it lacks a fast review route when new risk evidence emerges. Class-level: it does not name deltamethrin and, per its text, covers plant protection products. [PAN Germany](https://pan-germany.org/pestizide/trotz-warnungen-eu-rat-stimmt-schwaechung-von-pestizidregeln-zu/)
@@ -175,16 +201,18 @@ Of the 9 top signals, 4 target the PPP approval or PPP products, 2 are cross-reg
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - **DUH v BVL (Germany):** pending at the VG Braunschweig. DUH says it will go to the court of last instance.
-- **EU PPP extension and renewal:** PAN Europe argues that repeated extensions, now to 2028, conflict with T-412/22. An internal review request or legal challenge is possible but not announced. PAN Europe can be expected to push its DNT dossier at the EFSA and SCoPAFF renewal stage.
+- **EU PPP extension and renewal:** PAN Europe argues that repeated extensions, now to 2028, conflict with T-412/22. An internal review request or legal challenge is possible but has not been announced. PAN Europe can be expected to push its DNT dossier at the EFSA and SCoPAFF renewal stage.
 - **DNT and Parkinson testing:** PAN Europe and PAN Germany want these made mandatory across regimes.
-- **Omnibus X (PPP and biocides):** the Council adopted its position on 2026-09-30, and trilogues are targeted to conclude by the end of 2026. NGOs (PAN Germany, Générations Futures) are campaigning against longer approvals and weaker review. Watch for any text on BPR periodic review that names or affects deltamethrin.
 - **France:** ANSES phytopharmacovigilance work on deltamethrin, and local opposition to vector-control spraying.
 - **Water:** PAN Germany is pushing for pyrethroid priority-substance status under the WFD. The Swiss Federal Council's decision on a deltamethrin water limit is still pending.
+- **Netherlands:** PAN Netherlands' call to end amateur sales of deltamethrin products, and its 2025 request for an Article 21 review. Per Dutch government replies, not NGO pages, the Ctgb was to examine the 2025 studies PAN cited.
+- Omnibus X has been dropped from this list: it is class-level and does not name deltamethrin, so the class watch follows it.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

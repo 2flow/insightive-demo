@@ -2,10 +2,10 @@
 substance: d-Tetramethrin
 slug: d-tetramethrin
 cas: 1166-46-7
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN-NL (2025-04-07) puts tetramethrin on a 10-insecticide "black list" and asks Dutch retailers to stop selling consumer biocide sprays containing it by 2027, citing endocrine, neurotoxic and possible carcinogenic effects
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: d-Tetramethrin (CAS 1166-46-7)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name d-Tetramethrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name d-Tetramethrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO published anything naming d-tetramethrin or tetramethrin in the window. PAN Netherlands' retail "black list" campaign, still the only known signal, had no follow-up. Overall NGO pressure on the BPR file stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -56,13 +60,16 @@ None.
 
 ## 3. Class-level signals (do not name d-Tetramethrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -78,6 +85,15 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Netherlands' 2025-04-07 black list, which asks retailers to drop consumer insect sprays containing tetramethrin: no news found. PAN-NL's news page has three items in the window and none names tetramethrin or insect-spray biocides. [PAN-NL news](https://www.pan-netherlands.org/nieuws/)
+  - 2026-11-04: fludioxonil product Pitcher to be withdrawn after a lawsuit.
+  - 2026-11-05: pesticide handbook for water boards.
+  - 2026-11-08: bird-food test that found pirimiphos-methyl and PBO.
+- PAN-NL's 2027 retail phase-out target and its call for a Dutch ban on synthetic pesticides for non-professional use: no news found.
+- NGO action on the EU evaluation of d-tetramethrin (ED assessment, candidate-for-substitution decision, BPC stage): no news found.
+
 ### Update 2026-10-20
 
 - PAN Netherlands' 2025-04-07 black list and its call for retailers to drop consumer insect sprays containing tetramethrin: no news found. PAN-NL's news page has no item in the window (newest is 2026-09-14), and nothing since April 2025 names tetramethrin or insect-spray biocides. [PAN-NL news](https://www.pan-netherlands.org/nieuws/)
@@ -86,6 +102,10 @@ None.
 - PAN Germany's class-level push on pyrethroid water standards: no news found. PAN Germany's biocide section has no item after 2026-07-02, and its general news in the window does not mention pyrethroids. [PAN Germany Biozide](https://pan-germany.org/biozide/)
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -101,12 +121,14 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- PAN-NL has set 2027 as the target year for retailers and webshops to stop offering consumers products containing the black-listed insecticides, tetramethrin among them. It also wants Dutch legislation banning synthetic pesticides for non-professional use. Still pending, and PAN-NL has posted no follow-up.
-- No NGO has announced action on the EU evaluation of d-tetramethrin (evaluating CA Germany), its ED assessment or the candidate-for-substitution decision. Possible triggers: the competent-authority assessment reaching the ECHA Biocidal Products Committee, or PAN Germany's class-level pyrethroid water-standards work.
+- PAN-NL has set 2027 as the target year for retailers and webshops to stop selling consumers products that contain the black-listed insecticides, tetramethrin among them. It also wants a Dutch ban on synthetic pesticides for non-professional use. Both are still pending; PAN-NL has published no follow-up naming tetramethrin since April 2025.
+- No NGO has announced action on the EU evaluation of d-tetramethrin (evaluating CA Germany), its ED assessment or the candidate-for-substitution decision. A possible trigger is the competent-authority assessment reaching the ECHA Biocidal Products Committee.
+- Dropped from the list: PAN Germany's pyrethroid water-standards work. It is class-level, does not name tetramethrin, and is followed by the pyrethroid class watch.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

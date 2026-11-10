@@ -2,10 +2,10 @@
 substance: DEET
 slug: deet
 cas: 134-62-3
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Beyond Pesticides (US) blog questions DEET's safety (skin absorption, nervous-system enzyme effects, child seizures) and promotes alternatives (2026-07-10); no EU NGO is targeting the BPR renewal
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: DEET (CAS 134-62-3)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name DEET. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name DEET; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO published anything naming DEET in the update window, in any regime (BPR, PPP, REACH/CLP, water, food residues or vet medicines). Health Canada's final re-evaluation decision on DEET (RVD2026-05) is now online, but no NGO reaction to it was found. Overall NGO pressure on the BPR renewal stays low.
 
 ### Update 2026-10-20 (change: none)
 
@@ -62,8 +66,10 @@ None.
 
 ## 3. Class-level signals (do not name DEET)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -79,6 +85,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- UFC-Que Choisir repellent test (2026-06-04): no news found. No new test edition or DEET article in the window.
+- Beyond Pesticides blog on DEET safety (2026-07-10): no news found. Its mosquito category page has one post in the window (2026-10-08, on a household insecticide), and DEET is not named in it. The July post is still the only 2026 post tagged DEET.
+- Coming next: no NGO campaign, legal action or consultation response on DEET had been announced. Still none found.
+- Coming next: Health Canada re-evaluation (PRVD2025-09). A final decision, RVD2026-05, is now on the Government of Canada publications site and is consistent with the proposed decision (label changes). Its publication date could not be confirmed, and no NGO reaction or comment was found. This is a regulatory item, not an NGO finding, and it is dropped from the watch list. https://publications.gc.ca/collections/collection_2026/sc-hc/h113-28/H113-28-2026-5-eng.pdf
+- Coming next: consumer groups republishing repellent tests in the 2027 season. Nothing in the window, as expected in the off-season.
+
 ### Update 2026-10-20
 
 - UFC-Que Choisir repellent test (2026-06-04): no news found. No new test edition or DEET article in the window.
@@ -88,6 +102,10 @@ None.
 - Coming next: consumer groups republishing repellent tests each summer. None in the window, which is the off-season.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -104,13 +122,13 @@ Outside the window, for background only (not findings): PAN Europe / PAN NL foun
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- No NGO has announced a campaign, legal action, consultation response or deadline on DEET. No NGO mentions the EU BPR renewal (expiry postponed to 2027-01-31, France evaluating).
-- Watch for any NGO reaction to Health Canada's final re-evaluation decision on DEET (PRVD2025-09) when it is published. This is a regulatory trigger, not an NGO item.
+- No NGO has announced a campaign, legal action, consultation response or deadline on DEET. No NGO mentions the EU BPR renewal (expiry postponed to 2027-01-31, France evaluating). A further postponement or a draft renewal decision around the January 2027 expiry could prompt comment.
 - Consumer groups (UFC-Que Choisir, Test-Aankoop, Consumentenbond, Tænk) are likely to republish repellent tests in the 2027 season, probably May–July. Past editions endorse DEET on efficacy and flag short-term side effects at high strengths.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

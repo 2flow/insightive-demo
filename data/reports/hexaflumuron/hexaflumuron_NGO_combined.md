@@ -2,10 +2,10 @@
 substance: Hexaflumuron
 slug: hexaflumuron
 cas: 86479-06-3
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: benzoylurea none; PFAS medium; horizontal medium
 
 # NGO signals, combined: Hexaflumuron (CAS 86479-06-3)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for benzoylurea, PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for benzoylurea, PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Hexaflumuron. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Hexaflumuron; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals in any regime. No NGO named Hexaflumuron in the window. NGO output in the window was about the Omnibus, other insecticides and water levies, none of which names this substance.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,12 +52,13 @@ None.
 
 ## 3. Class-level signals (do not name Hexaflumuron)
 
-### benzoylurea · class signal level: none · last run 2026-10-21 · [class file](../_classes/benzoylurea/benzoylurea_class_combined.md)
+### benzoylurea · class signal level: none · last run 2026-11-10 · [class file](../_classes/benzoylurea/benzoylurea_class_combined.md)
 
 No class-level signals.
 
-### PFAS · class signal level: medium · last run 2026-10-21 · [class file](../_classes/pfas/pfas_class_combined.md)
+### PFAS · class signal level: medium · last run 2026-11-10 · [class file](../_classes/pfas/pfas_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-10-22 — Velt and PAN Europe demand stronger pesticide protection around schools and rejection of the Omnibus, citing 12 PFAS pesticides (including fipronil) and TFA's reprotoxicity found in Flemish classroom dust · `cross-regime` · `national:BE` · `indirect–use` · `study/report`
 - Tier B `[NEW · update 2026-10-21]` 2026-10-07 — Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier) · `water` · `UK` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-10-05 — More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-10-01 — PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested · `cross-regime` · `EU` · `indirect–hazard` · `study/report`
@@ -66,8 +71,10 @@ No class-level signals.
 - Tier C `[baseline 2026-10-21]` 2026-01-29 — PAN Europe and 13 partner NGOs demand stricter enforcement and oppose the Omnibus, citing PFAS pesticide residues in 64% of European apples · `food residues` · `EU` · `indirect–use` · `study/report`
 - Tier B `[baseline 2026-10-21]` 2025-12-04 — PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries · `food residues` · `EU` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -83,6 +90,14 @@ No class-level signals.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Earlier top signals: none in the baseline or the 2026-10-20 update, so there was nothing to follow up.
+- BPC opinion and Commission renewal decision under the exclusion derogation (expiry 2027-03-31): no NGO news found.
+- Further French or Belgian emergency authorisations of termite baits: no NGO reaction found. The October 2026 French derogation (diflubenzuron baits, which names Hexaflumuron only as the alternative) and the Belgian Pairi Daiza extension to August 2027 are still reported only by non-NGO sources.
+- PFAS angle: no news found. No EU NGO named Hexaflumuron in PFAS-pesticide material in the window.
+- Food and Feed Safety Omnibus: dropped from this checklist. It is class-level and names no substance, so the class watch follows it.
+
 ### Update 2026-10-20
 
 - Baseline top signals: none, so there was nothing to follow up.
@@ -91,6 +106,10 @@ No class-level signals.
 - PFAS angle (Hexaflumuron's tetrafluoroethoxy group): no news found. No EU NGO named Hexaflumuron in PFAS-pesticide material in the window. Générations Futures' October 2026 PFAS items (the SEB formal notice and PFAS water discharges) do not concern pesticides or biocides.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `cross-regime` · `national:US` — (pre-window, missed earlier; unverified) A June 2023 EWG news release on Maine's data on PFAS-related pesticide ingredients reportedly lists Hexaflumuron as a termiticide among 55 PFAS-related chemicals. The detail comes from a search snippet only, because the page returned HTTP 403. It is a US item from 2023, not a signal. https://www.ewg.org/news-insights/news-release/2023/06/maine-data-unveils-troubling-trend-55-pfas-related-chemicals
 
 ### Update 2026-10-20
 
@@ -108,15 +127,15 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Still nothing NGO-specific. These possible triggers carry over:
 - the BPC opinion and the Commission's renewal decision under the exclusion derogation (approval expires 2027-03-31);
-- further French or Belgian emergency authorisations of termite baits. The Belgian Pairi Daiza derogation now runs to August 2027, and a French derogation was granted in October 2026 (non-NGO sources);
-- the PFAS angle (no EU NGO has named Hexaflumuron yet);
-- the outcome of the Food and Feed Safety Omnibus. NGOs are campaigning against it at class level, and it covers biocide rules.
+- further French, Belgian or Dutch emergency authorisations of termite baits. The Belgian Pairi Daiza derogation runs to August 2027, and the French diflubenzuron derogation from October 2026 runs for 180 days (non-NGO sources);
+- the PFAS angle: no EU NGO has named Hexaflumuron yet, although US lists (Minnesota's agency list, and reportedly EWG) include it.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

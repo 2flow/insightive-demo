@@ -2,10 +2,10 @@
 substance: Indoxacarb
 slug: indoxacarb
 cas: 144171-61-9
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-05_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Dutch Bee Foundation (Bijenstichting) names indoxacarb among the nine pesticides that cause almost all the risk to bumblebees, and calls for cutting pesticide use and monitoring after approval (2025-10-15)
@@ -18,11 +18,15 @@ class_signal_levels: PFAS medium; horizontal medium
 
 # NGO signals, combined: Indoxacarb (CAS 144171-61-9)
 
-Built automatically from the baseline report of 2026-10-05 and 1 update(s) since, plus the class watch for PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-05 and 2 update(s) since, plus the class watch for PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Indoxacarb. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Indoxacarb; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. We found no NGO item in the window that names indoxacarb, and still no NGO comment on the BPR PT18 renewal (expiry 2026-12-31, France evaluating). One in-window NGO study, Velt and PAN Europe's test of dust in Flemish classrooms (2026-10-22, 63 pesticides found), may list indoxacarb in its full report. We could not read the report PDF, and the pages we could read do not name it (see Method notes).
 
 ### Update 2026-10-20 (change: none)
 
@@ -55,8 +59,9 @@ None.
 
 ## 3. Class-level signals (do not name Indoxacarb)
 
-### PFAS · class signal level: medium · last run 2026-10-21 · [class file](../_classes/pfas/pfas_class_combined.md)
+### PFAS · class signal level: medium · last run 2026-11-10 · [class file](../_classes/pfas/pfas_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-10-22 — Velt and PAN Europe demand stronger pesticide protection around schools and rejection of the Omnibus, citing 12 PFAS pesticides (including fipronil) and TFA's reprotoxicity found in Flemish classroom dust · `cross-regime` · `national:BE` · `indirect–use` · `study/report`
 - Tier B `[NEW · update 2026-10-21]` 2026-10-07 — Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier) · `water` · `UK` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-10-05 — More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-10-01 — PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested · `cross-regime` · `EU` · `indirect–hazard` · `study/report`
@@ -69,8 +74,10 @@ None.
 - Tier C `[baseline 2026-10-21]` 2026-01-29 — PAN Europe and 13 partner NGOs demand stricter enforcement and oppose the Omnibus, citing PFAS pesticide residues in 64% of European apples · `food residues` · `EU` · `indirect–use` · `study/report`
 - Tier B `[baseline 2026-10-21]` 2025-12-04 — PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries · `food residues` · `EU` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -86,6 +93,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Bijenstichting bumblebee-risk article (2025-10-15), with its call for pesticide reduction and post-approval monitoring ("pesticidovigilantie"): no news found. The Bijenstichting news page has no item after 2026-09-19 (https://bijenstichting.nl/nieuws/).
+- Greenpeace Austria paprika residue test (2025-05-19, unverified for indoxacarb): no news found.
+- BPR PT18 renewal and the CLH outcome: still no NGO comment found.
+- Wildlife and Countryside Link "Flea Treatment Crisis – Independent Review" PDF (carried over from the last update to check for indoxacarb): still could not be read (only compressed PDF data came back). Searches on UK flea-treatment river pollution in the window name only fipronil, imidacloprid and permethrin. No news found for indoxacarb.
+- The class-level checklist items in the earlier reports (import tolerances for banned-pesticide residues, "Return to Sender" exports, PFAS pesticides/TFA, the Food and Feed Safety Omnibus) do not name indoxacarb. As the brief instructs, they were not followed up and are dropped from the list below; the class watch tracks them.
+
 ### Update 2026-10-20
 
 - Bijenstichting bumblebee-risk article (2025-10-15), with its call for pesticide reduction and post-approval monitoring: no news found. The Bijenstichting news page has no item after 2026-09-19 (https://bijenstichting.nl/nieuws/).
@@ -96,6 +111,10 @@ None.
 - BPR renewal (expiry 2026-12-31) and CLH outcome: still no NGO comment found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -112,17 +131,14 @@ _2 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - No NGO has announced any action on indoxacarb, and none mentions the BPR PT18 renewal (expiry 2026-12-31) or the CLH outcome.
-- Class-level campaigns that could pick up indoxacarb:
-  - PAN Europe, foodwatch and Veblen's push to end import tolerances for residues of banned pesticides.
-  - PAN Europe's "Return to Sender" campaign on exports of banned pesticides.
-  - PAN Europe and GLOBAL 2000's campaign to ban PFAS pesticides and TFA. Indoxacarb has a trifluoromethoxy group but has not been named.
-- NGO opposition to the Food and Feed Safety Omnibus continues after the Council position of 2026-09-30, and the next stage is the Parliament and trilogues. PAN Europe now explicitly links the Omnibus to biocide rules, which could affect how BPR renewals are handled. It does not single out any substance.
 - The Bijenstichting is still calling for post-approval monitoring ("pesticidovigilantie") and pesticide reduction in the Netherlands.
+- To check next time: whether the full list of substances in Velt's classroom dust report includes indoxacarb (https://velt.nu/nieuws/rapport-sos-scholen). Indoxacarb is used indoors in gel baits and in a veterinary flea product, so an indoor-dust finding would be use-relevant for PT18.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-05_NGO_baseline_report.md

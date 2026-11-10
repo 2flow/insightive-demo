@@ -2,10 +2,10 @@
 substance: lambda-cyhalothrin
 slug: lambda-cyhalothrin
 cas: 91465-08-6
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: medium
 baseline_signal_level: medium
 baseline_top_signal: PAN Europe asks EU Member States (2026-04-30) to reject another PPP approval extension for lambda-cyhalothrin, citing PFAS status, 2 PBT criteria and high aquatic toxicity
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; PFAS medium; horizontal medium
 
 # NGO signals, combined: lambda-cyhalothrin (CAS 91465-08-6)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name lambda-cyhalothrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name lambda-cyhalothrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO item in the window (2026-10-13 to 2026-11-10) that names lambda-cyhalothrin. NGO activity in the window was mostly horizontal: the Food and Feed Omnibus (PAN Europe, PAN Germany, Générations Futures), the Dutch fludioxonil withdrawal and a Flemish classroom-dust study. One older item the earlier reports missed came to light: Deutsche Umwelthilfe (DUH) is litigating against a German lambda-cyhalothrin PPP product, Ercole. It is listed below as pre-window. The overall level stays medium.
 
 ### Update 2026-10-20 (change: none)
 
@@ -111,13 +115,15 @@ Nothing new since 2026-10-06. I found no NGO item in the window that names lambd
 
 ## 3. Class-level signals (do not name lambda-cyhalothrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### PFAS · class signal level: medium · last run 2026-10-21 · [class file](../_classes/pfas/pfas_class_combined.md)
+### PFAS · class signal level: medium · last run 2026-11-10 · [class file](../_classes/pfas/pfas_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-10-22 — Velt and PAN Europe demand stronger pesticide protection around schools and rejection of the Omnibus, citing 12 PFAS pesticides (including fipronil) and TFA's reprotoxicity found in Flemish classroom dust · `cross-regime` · `national:BE` · `indirect–use` · `study/report`
 - Tier B `[NEW · update 2026-10-21]` 2026-10-07 — Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier) · `water` · `UK` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-10-05 — More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-10-01 — PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested · `cross-regime` · `EU` · `indirect–hazard` · `study/report`
@@ -128,8 +134,10 @@ Nothing new since 2026-10-06. I found no NGO item in the window that names lambd
 - Tier B `[baseline 2026-10-21]` 2026-06-10 — PAN Europe, PAN Germany and Générations Futures demand a ban on all PFAS pesticides after ECHA's risk committee classifies TFA as toxic to reproduction · `REACH/CLP` · `EU` · `indirect–hazard` · `statement`
 - Tier B `[baseline 2026-10-21]` 2025-12-04 — PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries · `food residues` · `EU` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -145,6 +153,20 @@ Nothing new since 2026-10-06. I found no NGO item in the window that names lambd
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN Europe letter to SCoPAFF of 2026-04-30 opposing the PPP extension (top signal): no news found. The October 2026 letters on PAN Europe's letters page are on the CAP post-2027 and the 24–25 September SCoPAFF meeting. I could not read the text of either PDF (image-based), and neither is described as concerning lambda-cyhalothrin.
+- PAN Europe blog of 2026-03-10 on extensions despite the court ruling: no news found. No PAN Europe blog or press release in the window mentions extensions or lambda-cyhalothrin ([blog list](https://www.pan-europe.info/blog), [press releases](https://www.pan-europe.info/media/press-releases)).
+- Greenpeace UK Syngenta/bees campaign (2026-05-20): no news found. Greenpeace UK's news items from 2026-10-13 to 2026-11-10 cover oil, oceans and climate. None is on pesticides ([news](https://www.greenpeace.org.uk/news/)).
+- PAN Germany pyrethroids in water (2025-11-20): no news found. PAN Germany's items from 14 October to 5 November cover the Omnibus, UN experts, a children's-exposure webinar and international chemicals management.
+- PAN Europe Aarhus request on PFAS pesticides (2025-07-24) and the related court action (T-388/26, unverified): no step found in the window. No PAN Europe page confirming the case number was found.
+- PAN-NL home-and-garden black list (2025-04-07) and the PAN Europe/PAN-NL garden insecticides blog (2025-04-08): no news found. PAN-NL's recent items are a bird-feed test (2026-11-08, which found pirimiphos-methyl, not lambda-cyhalothrin), the fludioxonil (Pitcher) withdrawal and a manual for water boards ([bird-feed test](https://www.pan-netherlands.org/vogelvoertest2026/)).
+- PFAS pesticides / TFA: no new NGO item naming lambda-cyhalothrin. The Velt/PAN Europe classroom-dust study (2026-10-22) mentions 12 PFAS pesticides but does not name them on its public pages (see Method notes).
+- PPP extension, NGO reaction or internal review request: no news found.
+- Food and Feed Safety Omnibus: horizontal, so the class watch follows it. PAN Europe (2026-11-05 poll, 2026-11-09 Parkinson's Europe blog), PAN Germany and Générations Futures continued the campaign. None of these items names lambda-cyhalothrin.
+- UK reduction targets / garden pesticide ban (Greenpeace UK): no news found.
+- NL ban on non-professional use (PAN-NL): no news found.
+
 ### Update 2026-10-20
 
 - PAN Europe letter to SCoPAFF of 2026-04-30 opposing the PPP extension (top signal): no NGO follow-up found in the window. Non-NGO sources indicate the extension was adopted in mid-2026 (see Method notes), but I found no PAN Europe reaction naming lambda-cyhalothrin.
@@ -159,6 +181,12 @@ Nothing new since 2026-10-06. I found no NGO item in the window that names lambd
 - NL ban on non-professional use (PAN-NL): no news found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+- `PPP` · `national:DE` — Deutsche Umwelthilfe (pre-window, missed earlier): DUH's pesticide-litigation project page names lambda-cyhalothrin. It describes the substance as a TFA-forming PFAS that is very toxic to mammals, fish, aquatic invertebrates and honeybees, and says DUH is challenging the approval of the insecticide Ercole (SIPCAM OXON), partly over effects on earthworms and other soil organisms. DUH's case overview PDFs (newest dated 2026-09-23) are reported to list a DUH objection filed on 2024-05-10 and a later action before the Administrative Court of Braunschweig aiming to revoke the authorisation. I could not read the PDF text myself, so these dates and the procedural stage are unverified. The concern is use-specific (earthworm and soil risk from a PPP product), but the PFAS framing is hazard-based. Not a new signal: [DUH pesticide lawsuits page](https://www.duh.de/projekte/pestizidklagen/) · [case overview 2026-09-23 (PDF)](https://www.duh.de/fileadmin/user_upload/download/Projektinformation/Naturschutz/Pestizide/2026-09-23_Uebersicht_Pestizidklagen_der_DUH.pdf).
+- `PPP` · `national:CH` — WWF Switzerland, about 2025-02 (pre-window, missed earlier, unverified): a lambda-cyhalothrin factsheet. Its links point to Swiss monitoring of pyrethroids in surface waters. I could not read the text, and the date comes from the PDF metadata: [factsheet (PDF)](https://www.wwf.ch/sites/default/files/doc-2025-02/Lambda-Cyhalothrin_Faktenblatt.pdf).
+- `water` · `national:CH` — Doctors for the Environment Switzerland (AefU), 2026-02-26 (pre-window, missed earlier, unverified): a consultation response on the Swiss Water Protection Ordinance. Per the search-index extract, it asks for water-quality limit values for lambda-cyhalothrin and deltamethrin and says lambda-cyhalothrin dominates the greatest impacts on flowing waters. I could not read the PDF text: [statement (PDF)](https://www.aefu.ch/wp-content/uploads/2026/03/20260226_AefU_Stellungnahme_Vernehmlassung_Aenderung_GSchutzVerodnung_Anhang_2_Ziffer_11_Absatz_3_Gewaesserschutzverordnung.pdf).
 
 ### Update 2026-10-20
 
@@ -177,16 +205,18 @@ _2 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- PFAS-pesticides litigation: PAN Europe's action against the Commission's rejection of its review requests on 28 PFAS active substances is pending. A PAN Europe page (2026-08-18) refers to it; press reports give the case number T-388/26 (unverified). Whether lambda-cyhalothrin is among the 28 is still inferred. This remains the main legal risk to watch.
-- PFAS pesticides / TFA: PAN Europe, GLOBAL 2000, PAN Germany and Greenpeace UK keep calling for a ban on all TFA-forming PFAS pesticides (strengthened by the TFA blood and groundwater findings). Watch for any NGO list or letter that names lambda-cyhalothrin.
+- PFAS-pesticides litigation: PAN Europe's action against the Commission's rejection of its review requests on 28 PFAS active substances is pending. The case number T-388/26 is unverified, and whether lambda-cyhalothrin is among the 28 is still inferred. This remains the main legal risk to watch.
+- PFAS pesticides / TFA: PAN Europe, GLOBAL 2000, PAN Germany and Greenpeace UK keep calling for a ban on all TFA-forming PFAS pesticides. Watch for any NGO list or letter that names lambda-cyhalothrin.
 - PPP extension: PAN Europe is likely to keep contesting further extensions using the General Court case law on extensions. Watch for an NGO reaction or an internal review request naming lambda-cyhalothrin.
-- Food and Feed Safety Omnibus: the Council position was agreed (per PAN Europe, 2026-09-30) and the file is now in the European Parliament. Horizontal, but longer approval periods and grace periods could affect how long the substance stays on the market.
+- Germany: DUH's challenge to the lambda-cyhalothrin product Ercole (Administrative Court of Braunschweig, per DUH's overview, unverified) is pending. Watch for a ruling or a DUH press release.
 - UK: Greenpeace UK is pushing for pesticide reduction targets of 50% by 2030 and 80% by 2040, and a ban on garden pesticides.
 - Netherlands: PAN-NL is calling for a legal ban on synthetic pesticides for non-professional users, including household insect and ant products.
+- Dropped as horizontal (followed by the class watch): Food and Feed Safety Omnibus.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

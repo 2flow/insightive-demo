@@ -2,10 +2,10 @@
 substance: Chlorfenapyr
 slug: chlorfenapyr
 cas: 122453-73-0
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: Générations Futures and Alerte Planète (backed by Extinction Rebellion) file a criminal complaint over banned pesticides, including chlorfenapyr formulations, found at BASF's Genay plant, and ask that the French export/production ban be extended to biocides that share an active substance with a banned pesticide (2026-02-09)
@@ -18,11 +18,15 @@ class_signal_levels: PFAS medium; horizontal medium
 
 # NGO signals, combined: Chlorfenapyr (CAS 122453-73-0)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for PFAS, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Chlorfenapyr. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Chlorfenapyr; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO item in the window that names chlorfenapyr, in any regime. The French BASF Genay complaint and the foodwatch residue demands have had no substance-specific follow-up. NGO activity in the window was class-level and horizontal (the Omnibus, indoor-dust monitoring), and none of the items I could read name chlorfenapyr.
 
 ### Update 2026-10-20 (change: none)
 
@@ -63,8 +67,9 @@ None.
 
 ## 3. Class-level signals (do not name Chlorfenapyr)
 
-### PFAS · class signal level: medium · last run 2026-10-21 · [class file](../_classes/pfas/pfas_class_combined.md)
+### PFAS · class signal level: medium · last run 2026-11-10 · [class file](../_classes/pfas/pfas_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-10-22 — Velt and PAN Europe demand stronger pesticide protection around schools and rejection of the Omnibus, citing 12 PFAS pesticides (including fipronil) and TFA's reprotoxicity found in Flemish classroom dust · `cross-regime` · `national:BE` · `indirect–use` · `study/report`
 - Tier B `[NEW · update 2026-10-21]` 2026-10-07 — Greenpeace UK and Unearthed demand action at source on TFA and on chemicals that break down into it, citing TFA above the EU pesticide-metabolite limit in most groundwater tested in England (missed earlier) · `water` · `UK` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-10-05 — More than 120 NGOs demand an EU-wide PFAS restriction by 2030 and a ban on PFAS uses in pesticides and biocides, citing rising PFAS and TFA contamination · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-10-01 — PAN Europe, Générations Futures and PAN Germany demand an immediate ban on PFAS pesticides, citing TFA found in the blood of all 110 Europeans tested · `cross-regime` · `EU` · `indirect–hazard` · `study/report`
@@ -77,8 +82,10 @@ None.
 - Tier C `[baseline 2026-10-21]` 2026-01-29 — PAN Europe and 13 partner NGOs demand stricter enforcement and oppose the Omnibus, citing PFAS pesticide residues in 64% of European apples · `food residues` · `EU` · `indirect–use` · `study/report`
 - Tier B `[baseline 2026-10-21]` 2025-12-04 — PAN Europe and members demand an immediate ban on PFAS pesticides, citing TFA in 82% of cereal products from 16 countries · `food residues` · `EU` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -94,6 +101,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Générations Futures / Alerte Planète complaint against BASF Genay (2026-02-09, demand to extend the ban to biocides): no news found. The Générations Futures news listing (items 2026-10-12 to 2026-11-09) has nothing on BASF, Genay, chlorfénapyr, biocides or pesticide exports. https://www.generations-futures.fr/actualites/
+- foodwatch residue test (2026-05-19), plus its demands for technical-zero MRLs for non-approved pesticides, an export ban and tighter import controls: no news found. The foodwatch EN news listing shows no item after 2026-09-30. The 2026-07-03 item on the Commission dropping the export ban is before the window and does not name chlorfenapyr. https://www.foodwatch.org/en/news
+- PAN Europe and coalition, ending exports of banned pesticides: no news found. PAN Europe's press releases in the window (2026-10-13, 10-22, 11-04, 11-05) do not mention exports or chlorfenapyr. https://www.pan-europe.info/media/press-releases
+
 ### Update 2026-10-20
 
 - Générations Futures / Alerte Planète complaint against BASF Genay (2026-02-09, biocide "loophole" demand): no news found. The Générations Futures news page (items 2026-10-06 to 2026-10-15) has nothing on BASF, Genay, chlorfénapyr or biocides. https://www.generations-futures.fr/actualites/
@@ -101,6 +114,10 @@ None.
 - PAN Europe and coalition, end exports of banned pesticides: no new chlorfenapyr-specific item. The September and October 2026 PAN Europe press releases do not discuss exports or name chlorfenapyr. https://pan-europe.info/media/press-releases
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -118,13 +135,14 @@ _1 item(s) left out here because they are class-level signals, listed in section
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Générations Futures / Alerte Planète: the complaints at the Lyon judicial court are still pending (no reported outcome). The NGOs want an EU-level ban on producing and exporting banned pesticides, extended to biocides with the same active substance.
-- foodwatch: the Omnibus is now in the Council/Parliament negotiation stage, after the Council position of 2026-09-30. foodwatch keeps pushing for MRLs of non-approved pesticides to be cut to technical zero, an EU export ban, and stronger import controls.
-- PAN Europe and coalition, plus Générations Futures: they continue to campaign against the Omnibus, including its biocide provisions, ahead of the Parliament vote. They also continue to press for an end to exports of banned pesticides. All of this is class-level.
+- Générations Futures / Alerte Planète: the complaints at the Lyon judicial court are still pending, with no reported outcome. The NGOs want a ban on producing and exporting banned pesticides, extended to biocides with the same active substance, and want France to push for it at EU level.
+- foodwatch: continues to call for MRLs of non-approved pesticides (chlorfenapyr was its most frequent finding in May 2026) to be cut to technical zero, an EU export ban, and stronger import controls. An NGO reaction is possible when the EU decides on the pending chlorfenapyr tea MRL cut. That cut is a regulatory item, not an NGO one.
+- The class-level Omnibus and export-ban items were dropped from this list, as the brief directs: they do not name chlorfenapyr and the class watch follows them.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

@@ -1,13 +1,13 @@
 ---
 class: PFAS
 class_slug: pfas
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-21_class_baseline_2.md
-updates: 2026-10-21_class_update_2.md
-last_run: 2026-10-21
+updates: 2026-10-21_class_update_2.md, 2026-11-10_class_update.md
+last_run: 2026-11-10
 signal_level: medium
-signals_total: 11
-signals_new_since_baseline: 1
+signals_total: 12
+signals_new_since_baseline: 2
 ---
 
 # NGO signals, class: PFAS
@@ -17,6 +17,10 @@ Class watch for PFAS active substances, i.e. with at least one fully fluorinated
 Built automatically from the class baseline and its updates. Do not edit: it is rebuilt after every run. A signal whose `Named substances` line lists a member is also copied into that member's combined file as a substance-specific signal.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: new)
+
+1 new top signal, a cross-regime study that reaches biocides and indoor uses through measurements of classroom dust. Velt (a PAN Europe member) and PAN Europe found 63 pesticides in dust from 10 Flemish classrooms. Twelve of them are PFAS pesticides, which the report links to TFA's reprotoxicity. Fipronil, classed in the report as PFAS and as having agricultural, veterinary and indoor (biocide) origins, was found in 4 of 10 schools. Otherwise the core NGOs' output in the window was about the Food and Feed Safety Omnibus, with no PFAS angle. No known item moved: there was no ruling, vote or Commission adoption on TFA. Pressure stays at medium.
 
 ### Update 2026-10-21 (change: none)
 
@@ -122,6 +126,16 @@ Nothing new since 2026-10-21. No NGO item on PFAS pesticides, PFAS biocides or T
 
 ### Tier C: indirect, use-specific
 
+`[NEW · update 2026-11-10]` from 2026-11-10_class_update.md
+
+**2026-10-22 — Velt and PAN Europe demand stronger pesticide protection around schools and rejection of the Omnibus, citing 12 PFAS pesticides (including fipronil) and TFA's reprotoxicity found in Flemish classroom dust**
+`cross-regime` · `national:BE` · `indirect–use` · `study/report`
+- Summary: Velt tested dust from one classroom in each of 10 Flemish nursery and primary schools (sampled June 2026, 540 analytes). It found 63 pesticides, with up to 36 per school. A dedicated section says 12 of the 63 are PFAS pesticides. It notes that some form TFA, which ECHA judged this year to be toxic to reproduction. The report's PFAS table (Table 3) and its Annex 3 list fipronil in 4 of 10 schools (maximum 0.094 mg/kg), with possible origins in agriculture, veterinary medicine and indoor biocide use. The other PFAS pesticides found are fludioxonil, diflufenican, fluazinam, flutolanil, mefentrifluconazole, trifloxystrobin, bifenthrin, flufenacet, fluopyram, fluxapyroxad and tetraconazole. PAN Europe's release links the findings to the Omnibus and to its campaign to ban PFAS pesticides and TFA. The demands are stronger risk assessment, rejection of the Omnibus, buffer zones near schools, and a risk assessment of mixture exposure in house dust. This is not a follow-up to a known signal.
+- Why it matters: it is the first NGO item in the class watch to measure PFAS actives in indoor dust. It explicitly sorts the sources into agriculture, pet treatments and indoor biocides, and fipronil (a member) falls in all three. That gives NGOs an indoor-exposure argument that could be raised at the BPR review of fipronil and other indoor PFAS insecticides. The demands, however, target PPP spraying near schools and the Omnibus (use-specific and procedural). The PFAS/TFA point is hazard-based but secondary. The other members (lambda-cyhalothrin, chlorfenapyr, indoxacarb, triflumuron) were in the analyte list but were not detected, and hexaflumuron was not analysed.
+- Named substances: fipronil
+- NGO: PAN Europe, [press release](https://www.pan-europe.info/press-releases/2026/10/school-alarm-cocktails-36-pesticides-found-flemish-classrooms)
+- Also: [Velt report, "Verkennend onderzoek pesticiden op school" (PDF, NL)](https://velt.nu/system/files/media/documenten/eindrapportonderzoekpesticidenopschool.pdf) · [Velt report page (NL)](https://velt.nu/nieuws/rapport-sos-scholen)
+
 `[baseline 2026-10-21]` from 2026-10-21_class_baseline_2.md
 
 **2026-03-10 — PAN Europe opposes extending approvals of hazardous pesticides, lambda-cyhalothrin among them, and protests the stalled bans on PFAS pesticides, citing a recent EU court ruling**
@@ -142,6 +156,30 @@ Nothing new since 2026-10-21. No NGO item on PFAS pesticides, PFAS biocides or T
 - Also: [results table (PDF)](https://www.pan-europe.info/sites/pan-europe.info/files/public/resources/reports/PAN_2025%20Apple_sampling_result_table%20-%20Result_table.pdf)
 
 ## 3. Follow-ups on known items
+
+### Update 2026-11-10
+
+- 2026-10-07 Greenpeace UK/Unearthed, TFA in English rivers and groundwater: no news found. Greenpeace UK news and Unearthed have no further TFA item up to 2026-11-02.
+- 2026-10-05 Ban PFAS Manifesto (PAN Germany and 120+ NGOs): no news found. The PAN Germany news list from 2026-10-14 to 2026-11-05 has no PFAS item.
+- 2026-10-01 TFA in the blood of 110 Europeans (PAN Europe, Générations Futures, PAN Germany): no news found.
+- 2026-09-15 doubling of TFA in Austrian groundwater (PAN Europe, GLOBAL 2000): no news found. GLOBAL 2000 press releases from 2026-10-14 to 2026-11-06 have no TFA item.
+- 2026-09-04 DUH lawsuits against TFA-forming pesticides: no news found, and no rulings reported. DUH's only PFAS items in the window concern consumer products and refrigerants (see lower relevance).
+- 2026-07-22 NGO response to EFSA's TFA ADI: no news found.
+- 2026-06-25 Générations Futures' list of 80 products and its Art. 44 request to ANSES: no news found. Générations Futures' 2026-11-09 item on the pesticide levy restates TFA's reprotoxicity (see lower relevance) but says nothing on the ANSES request.
+- 2026-06-10 RAC Repr. 1B classification of TFA: no NGO reported Commission adoption in the window.
+- 2025-12-04 TFA in cereals (PAN Europe): no news found.
+- 2026-03-10 PAN Europe on extensions, lambda-cyhalothrin and stalled PFAS bans: no news found. The latest PAN Europe SCoPAFF letter on its letters page is for 24-25 September 2026, and no October or November letter was found.
+- 2026-01-29 PFAS residues in apples (PAN Europe): no news found.
+- Coming next, Commission adoption of TFA Repr. 1B: no news found.
+- Coming next, SEAC final opinion on the universal PFAS restriction: no NGO statement found in the window.
+- Coming next, Food and Feed Safety Omnibus: NGO activity continued, but none of it was PFAS-specific. PAN Europe and Générations Futures published a YouGov poll (2026-11-05/06) with no PFAS mention. PAN Germany (2026-11-03) says the Council position means longer approval periods "for pesticides and biocides" and that the Parliament vote is scheduled for December. Both are left to the horizontal watch.
+- Coming next, flutolanil non-renewal and penoxsulam: no news found.
+- Coming next, DUH cases at the Braunschweig court and the river-basin suits: no rulings reported.
+- Coming next, Générations Futures' Art. 44 demand and its Conseil d'Etat action on flufenacet: no news found.
+- Coming next, GLOBAL 2000's call for a binding Austrian parliamentary position on TFA-forming pesticides: no news found.
+- Coming next, Greenpeace UK's call for UK TFA limits: no news found.
+- Coming next, PAN Netherlands' procedure against Ctgb on 27 PFAS actives: no news found (still unverified; PAN-NL's own page still not found).
+- Coming next, NGO calls for EFSA carcinogenicity and DNT studies on TFA: no news found.
 
 ### Update 2026-10-21
 
@@ -166,6 +204,13 @@ Nothing new since 2026-10-21. No NGO item on PFAS pesticides, PFAS biocides or T
 
 ## 4. Lower-relevance items
 
+### Update 2026-11-10
+
+- `PPP` · `national:FR` — 2026-11-09 Générations Futures says the French pesticide diffuse-pollution levy under-taxes hazardous substances. It asks that substances degrading into hazardous metabolites, explicitly PFAS pesticides forming TFA ("classé reprotoxique probable de catégorie 1B"), be taxed at the highest rate, and it reserves legal action. The item concerns a fiscal measure, not approvals. https://www.generations-futures.fr/actualites/redevance-pollution-diffuse-pesticides/
+- `REACH/CLP` · `EU` — 2026-11-04 Deutsche Umwelthilfe study (by Öko-Recherche) on about 40,000 t/yr of PFAS refrigerants outside F-gas rules. It asks for the REACH PFAS restriction to cover them and cites TFA's reprotoxicity. PFAS pesticides are mentioned only in passing, as the other main TFA source. https://www.duh.de/presse/pressemitteilungen/pressemitteilung/studie-der-deutschen-umwelthilfe-entlarvt-falschaussagen-der-chemieindustrie-zur-beschraenkung-von-pf/
+- `PPP` · `EU` — 2026-09 (file dated 2026-09-09) Umweltinstitut München analysis "Träge Verfahren, ewige Folgen". It estimates about 12,850 t of potential TFA from about 60,000 t of fluorinated pesticides sold in Germany over 30 years, and says technical extensions of flufenacet, fluazinam and diflufenican added about 3,400 t. No members are named, and the argument is procedural (pre-window, missed earlier). https://umweltinstitut.org/wp-content/uploads/2026/09/260909_Analyse_TFA_Umweltinstitut_Muenchen.pdf
+- `BPR` · `EU` — 2026-03-05 PAN Europe submission to the call for evidence on the BPR evaluation. It lists "metabolite formation (e.g., TFA from PFAS)" among emerging risks that BPR evaluations must fully consider, and rejects unlimited BPR approvals under the Omnibus. TFA appears as one item in a general list, so the main subject is horizontal (pre-window, missed earlier). https://www.pan-europe.info/sites/pan-europe.info/files/public/resources/briefings/PAN%20Europe%27s%20submission%20to%20the%20call%20for%20evidence%20on%20the%20BPR%20evalution.pdf
+
 ### Update 2026-10-21
 
 - `PPP` · `national:AT` — 2026-10-01 GLOBAL 2000 says the Austrian agriculture ministry's Green Report and water report leave out or play down TFA (a mean of 24 times the 0.1 µg/L limit in 2024), criticises AGES's risk communication and Austria's failure to back the flutolanil non-renewal, and demands a review of TFA-forming pesticides approved in Austria, full publication of TFA data, and a binding parliamentary position on future EU TFA decisions. No members named (pre-window, missed earlier). https://www.global2000.at/presse/tfa-im-grundwasser-verharmlost
@@ -186,20 +231,23 @@ Nothing new since 2026-10-21. No NGO item on PFAS pesticides, PFAS biocides or T
 
 ## 5. What NGOs say is coming next
 
-_From the latest run, 2026-10-21_class_update_2.md._
+_From the latest run, 2026-11-10_class_update.md._
 
 - Commission adoption of the harmonised Repr. 1B classification of TFA. NGOs say adoption should trigger non-approval or non-renewal of TFA-forming actives.
 - ECHA SEAC final opinion on the universal PFAS restriction (expected by end-2026), then a Commission proposal (2027). The manifesto campaign is pushing for pesticide and biocide uses to be covered.
-- Food and Feed Safety Omnibus: Parliament and trilogue stages pending. NGOs warn that PFAS pesticides would receive unlimited approvals.
+- Food and Feed Safety Omnibus: per PAN Germany, about 1,500 amendments are under negotiation and the European Parliament vote is scheduled for December 2026. NGOs warn that PFAS pesticides would receive unlimited approvals, and that the Council position lengthens approval periods for pesticides and biocides.
 - Flutolanil non-renewal still blocked at the pesticide committee; penoxsulam renewal pending.
 - DUH cases at the Administrative Court of Braunschweig (Banjo, Brodal, Luna Experience, Joystick) and the river-basin suits: no rulings yet.
 - Générations Futures' demand for an ANSES Art. 44 review of 80 TFA-forming products, and its Conseil d'Etat action on flufenacet.
-- GLOBAL 2000's call for a binding Austrian parliamentary position on EU decisions about TFA-forming pesticides, and for a national review of TFA-forming products (new).
-- Greenpeace UK's call for UK TFA limits and action at source on TFA-forming chemicals, including flufenacet, which is still used in GB (new).
+- Générations Futures' possible legal action if PFAS/TFA-forming pesticides are not moved to the highest French levy rate (new).
+- Velt's Flemish petition and demands for wider buffer zones around schools and a mixture risk assessment for house dust (new).
+- GLOBAL 2000's call for a binding Austrian parliamentary position on EU decisions about TFA-forming pesticides, and for a national review of TFA-forming products.
+- Greenpeace UK's call for UK TFA limits and action at source on TFA-forming chemicals.
 - PAN Netherlands' procedure against Ctgb on 27 PFAS actives (unverified).
 - NGO calls for EFSA to commission carcinogenicity and DNT studies on TFA.
 
 ## Sources
 
+- 2026-11-10_class_update.md
 - 2026-10-21_class_update_2.md
 - 2026-10-21_class_baseline_2.md

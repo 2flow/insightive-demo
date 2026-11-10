@@ -2,10 +2,10 @@
 substance: Silicon dioxide, synthetic amorphous, nano, surface treated
 slug: silicon-dioxide-synthetic-amorphous-nano-surface-treated
 cas: 68909-20-6
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: nanomaterial low; horizontal medium
 
 # NGO signals, combined: Silicon dioxide, synthetic amorphous, nano, surface treated (CAS 68909-20-6)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for nanomaterial, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for nanomaterial, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Silicon dioxide, synthetic amorphous, nano, surface treated. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Silicon dioxide, synthetic amorphous, nano, surface treated; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. There are no new top signals, either on the biocide approval or on any other regime for this substance. No NGO page dated inside the window names synthetic amorphous or nano silica, let alone the surface-treated PT18 active substance.
 
 ### Update 2026-10-20 (change: none)
 
@@ -56,12 +60,14 @@ None.
 
 ## 3. Class-level signals (do not name Silicon dioxide, synthetic amorphous, nano, surface treated)
 
-### nanomaterial · class signal level: low · last run 2026-10-21 · [class file](../_classes/nanomaterial/nanomaterial_class_combined.md)
+### nanomaterial · class signal level: low · last run 2026-11-10 · [class file](../_classes/nanomaterial/nanomaterial_class_combined.md)
 
 - Tier B `[baseline 2026-10-21]` 2026-02-27 — Inf'OGM and AVICENN call for mandatory nano risk assessment and checks of pesticides, citing nanoparticles found in nearly all products tested · `PPP` · `national:FR` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -76,6 +82,14 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals from earlier reports: none were recorded, so there is nothing to follow up.
+- UFC-Que Choisir E551 rating ("peu recommandable"): no news found. Searches return the same comparison page and no newer dated entry.
+- Inf'OGM article on nanotechnologies in agriculture: no news found.
+- Avicenn/VeilleNanos silica nanoparticles dossier: still unverifiable. Both the dossier and the home page returned HTTP 500 on 2026-11-10, and searches showed no dated Avicenn item in the window.
+- "Coming next" item, the SCCS re-assessment of nano silica, silica silylate and silica dimethyl silylate in cosmetics: no NGO comment found. Searches also turned up no published SCCS preliminary opinion, so the trigger for an NGO reaction seems not to have happened yet (context, not a finding).
+
 ### Update 2026-10-20
 
 - Baseline top signals: none were recorded, so there is nothing to follow up.
@@ -85,6 +99,10 @@ None.
 - "Coming next" item, the SCCS re-assessment of nano silica, silica silylate and silica dimethyl silylate in cosmetics: no NGO comment found in the window. Context only, not a finding: a trade-press source says the preliminary SCCS opinion is planned for the end of October 2026, so NGO reaction could follow just after this window.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -100,13 +118,14 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - No NGO has announced a campaign, case or deadline on this substance.
-- Watch item (context, not an NGO finding): the SCCS preliminary opinion on nano silica forms in cosmetics, including silica silylate and silica dimethyl silylate (close relatives of the surface-treated form), is reportedly due around the end of October 2026. Check whether Avicenn, UFC-Que Choisir, BEUC or Agir pour l'Environnement react to it.
+- Watch item (context, not an NGO finding): the SCCS preliminary opinion on nano silica forms in cosmetics, including silica silylate and silica dimethyl silylate (close relatives of the surface-treated form). The trade press expected it around the end of October 2026, but no publication was found by 2026-11-10. Once it appears, check whether Avicenn, UFC-Que Choisir, BEUC or Agir pour l'Environnement react.
 - Re-check the Avicenn/VeilleNanos silica dossier once the site is reachable.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

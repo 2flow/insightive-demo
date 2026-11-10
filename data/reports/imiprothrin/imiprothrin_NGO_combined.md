@@ -2,10 +2,10 @@
 substance: Imiprothrin
 slug: imiprothrin
 cas: 72963-72-5
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: low
 baseline_signal_level: low
 baseline_top_signal: PAN International keeps imiprothrin on its Highly Hazardous Pesticides list (bee toxicity); December 2024 edition, no EU campaign attached
@@ -18,11 +18,15 @@ class_signal_levels: pyrethroid low; horizontal medium
 
 # NGO signals, combined: Imiprothrin (CAS 72963-72-5)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for pyrethroid, horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Imiprothrin. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Imiprothrin; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. I found no NGO publication, campaign, letter, legal action or test in the window that names imiprothrin. Imiprothrin is still not an NGO target. The only standing NGO item is still its listing as a PAN International Highly Hazardous Pesticide, and that has not changed.
 
 ### Update 2026-10-20 (change: none)
 
@@ -64,13 +68,16 @@ None.
 
 ## 3. Class-level signals (do not name Imiprothrin)
 
-### pyrethroid · class signal level: low · last run 2026-10-21 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
+### pyrethroid · class signal level: low · last run 2026-11-10 · [class file](../_classes/pyrethroid/pyrethroid_class_combined.md)
 
+- Tier B `[NEW · update 2026-11-10]` 2026-11-05 — Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 - Tier A `[baseline 2026-10-21]` 2026-04-04 — German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats · `BPR` · `national:DE` · `direct` · `statement`
 - Tier B `[baseline 2026-10-21]` 2026-04-03 — Beyond Pesticides highlights review linking pyrethroid insecticide exposure to heart damage, citing inflammation, oxidative stress and heart muscle injury · `cross-regime` · `international` · `indirect–hazard` · `study/report`
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -85,6 +92,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- PAN International HHP list (imiprothrin listed for bee toxicity; December 2024 edition): no news found. The newest item on the PAN International homepage is dated 2026-10-30 (a briefing for CBD COP17), and the homepage shows no new HHP list edition. PesticideInfo still shows imiprothrin as a PAN HHP, without an edition date. https://pan-international.org/ · https://www.pesticideinfo.org/chemical/PRI3642/
+- Pending CLH outcome (Repr. 2 proposed), the likely trigger for NGO attention: no NGO reaction found.
+- The class-level checklist items carried in the earlier reports have been dropped here, as the brief requires, because none of them name imiprothrin. These are: PAN Germany/Verbraucherzentrale NRW on insect-spray sales rules, PAN Netherlands on household insecticides, PAN Europe on the cypermethrin judgment, and the Omnibus. The class watch follows them. As a spot check, PAN Germany's Biozide page has no item newer than 2026-07-02 (https://pan-germany.org/biozide/).
+
 ### Update 2026-10-20
 
 - PAN International HHP list (imiprothrin listed, bee toxicity; December 2024 edition): no news found. The PAN International homepage shows no new HHP list edition; its newest release is dated 2026-09-02 (pesticide poisoning study) and does not concern imiprothrin. https://pan-international.org/
@@ -95,6 +108,10 @@ None.
 - Pending CLH outcome (Repr. 2 proposed), the likely trigger for NGO attention: no NGO reaction found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -112,17 +129,14 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-None of them say anything about imiprothrin specifically. Class-level items to watch:
-- PAN Germany and Verbraucherzentrale NRW want Germany's insect-spray sales rules enforced and the "repellent" loophole closed.
-- PAN Netherlands wants household insecticides banned for non-professional users.
-- PAN Europe is following up on the cypermethrin judgment.
-- PAN Europe, PAN Germany and CEO oppose the Omnibus. With the member states' position adopted around 2026-09-30, the next step is the Parliament position and trilogue. Watch whether NGOs start covering its biocide-approval provisions (Regulation 528/2012 is in scope, according to PAN Germany's June 2026 statement as described in search results).
-- PAN International updates the HHP list every year. No new edition was found yet, and the next one would confirm whether imiprothrin stays on it.
-- The pending CLH outcome (Repr. 2 proposed) remains the most likely trigger for NGO attention before the 2029 BPR expiry.
+No NGO says anything about imiprothrin specifically. Items to watch:
+- PAN International updates the HHP list every year. No new edition has been found since December 2024; the next one would confirm whether imiprothrin stays on it.
+- The CLH outcome (Repr. 2 proposed) remains the most likely trigger for NGO attention before the BPR approval expires on 2029-06-30.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

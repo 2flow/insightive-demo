@@ -2,10 +2,10 @@
 substance: Beauveria bassiana R444
 slug: beauveria-bassiana-r444
 cas: -
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Beauveria bassiana R444 (CAS -)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Beauveria bassiana R444. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Beauveria bassiana R444; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO item in the window names Beauveria bassiana R444, its products (Bb-Protec, Bassidor, Eco-Bb, Beauvisan) or the species, under any regime. NGO pressure on the BPR file is still nil.
 
 ### Update 2026-10-20 (change: none)
 
@@ -48,8 +52,10 @@ None.
 
 ## 3. Class-level signals (do not name Beauveria bassiana R444)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -65,6 +71,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Baseline and 2026-10-20 update top signals: there were none, so there was nothing to follow up.
+- PAN Europe biocontrol fast-track briefing (2025-10-15, class-level): no news found. PAN Europe's latest items for October and November 2026 (checked 2026-11-10) are a poll on the Pesticides Omnibus, a citizens' report, a release on pesticide residues in Flemish classrooms, and a release on UN experts' warning. None of them mentions biocontrol, microorganisms or Beauveria.
+- PAN UK Beauveria coffee berry borer case study (species-level, unverified): no news found.
+
 ### Update 2026-10-20
 
 - Baseline top signals: there were none, so there was nothing to follow up.
@@ -72,6 +84,10 @@ None.
 - PAN UK Beauveria coffee berry borer case study (species-level, unverified): no news found.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -84,12 +100,13 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
-- Still pending, class-level: PAN Europe says it will follow the Commission's plan to fast-track biocontrol approvals under the Food & Feed Safety Omnibus. It supports more assessment capacity but opposes lower safety standards and any delay to reassessing synthetic pesticides. The omnibus is still going through the Parliament and Council, and PAN Europe's wider campaign against it is active. That campaign does not target microbial biocides under the BPR.
+- Still pending, class-level: PAN Europe says it will follow the Commission's plan to fast-track biocontrol approvals under the Food & Feed Safety Omnibus. It supports more assessment capacity but opposes lower safety standards. The omnibus is still going through the legislative process. The campaign does not name this strain or microbial biocides under the BPR.
 - No NGO has announced anything specific to Beauveria bassiana R444.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

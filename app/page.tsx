@@ -311,7 +311,7 @@ export default function Page() {
       {/* ── Sub-views — replace the list while open ──────────── */}
       {allSignals ? (
         <main className="mx-auto max-w-4xl px-6 py-7">
-          <SignalsPage onBack={closeSubView} onOpenSubstance={openFeed} />
+          <SignalsPage onOpenSubstance={openFeed} />
         </main>
       ) : openedSignals ? (
         <main className="mx-auto max-w-4xl px-6 py-7">

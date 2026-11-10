@@ -2,10 +2,10 @@
 substance: Garlic extract
 slug: garlic
 cas: -; 8008-99-9
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: Garlic extract (CAS -; 8008-99-9)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name Garlic extract. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name Garlic extract; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. 0 new top signals: I found no NGO item in the window that names garlic extract, garlic juice or thermally treated garlic juice, in the biocide regime or any other. NGO pressure on the BPR file stays nil.
 
 ### Update 2026-10-20 (change: none)
 
@@ -64,8 +68,10 @@ None.
 
 ## 3. Class-level signals (do not name Garlic extract)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -79,6 +85,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Baseline and 2026-10-20 update top signals: none, so there is nothing to follow up.
+- IFOAM Organics Europe's reaction to the Council position on the food and feed safety omnibus, which reportedly names garlic extract (2026-09-30, unverified, class-level): no follow-up found in the window. The NGO's own news page still returns HTTP 403, so I still cannot confirm the garlic mention there.
+- Omnibus trilogue, where IFOAM Organics Europe wants simplified procedures for all biocontrol and PAN Europe opposes a looser biocontrol definition (coming next): I found no NGO statement in the window that names garlic extract. Press coverage suggests Parliament has not yet adopted its position, so the trilogue has not started.
+
 ### Update 2026-10-20
 
 - Baseline top signals: none, so there is nothing to follow up.
@@ -86,6 +98,10 @@ None.
 - PAN Europe and IFOAM Organics Europe tracking the food and feed safety omnibus biocontrol fast track (coming next): the Council reportedly adopted its position around 2026-09-30. IFOAM Organics Europe responded, according to press coverage (see lower relevance). I could not open the NGO's own statement (HTTP 403). I found no PAN Europe reaction in the window.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -97,12 +113,13 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 - Nothing specific to garlic extract in the biocide regime.
-- Class level (PPP): trilogue negotiations on the food and feed safety omnibus now that the Council has a position. IFOAM Organics Europe is pressing MEPs for a narrower biocontrol definition, limited to natural and nature-identical substances, and for simplified procedures for all biocontrol, not only low-risk substances (which would cover garlic extract). PAN Europe opposes unlimited approvals and a looser biocontrol definition. Check next time for any NGO statement that names garlic.
+- Class level (PPP): Parliament's position on the food and feed safety omnibus, then trilogue negotiations, which are aimed at a deal by the end of 2026. IFOAM Organics Europe wants simplified procedures for all biocontrol, not only low-risk substances (which would cover garlic extract). PAN Europe opposes a looser biocontrol definition. Check next time for any NGO statement that names garlic.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md

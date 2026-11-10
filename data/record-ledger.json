@@ -1,6 +1,6 @@
 {
  "note": "Every signal record the app has shown. Written by tools/check_history.mjs — see README \"Keeping signal history\".",
- "updated": "2026-11-07",
+ "updated": "2026-11-10",
  "records": [
   {
    "substance": "*",
@@ -147,6 +147,18 @@
    "title": "Beyond Pesticides publicises a study linking neonicotinoid levels in semen to lower sperm counts, citing male reproductive harm"
   },
   {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-11-03",
+   "title": "PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances"
+  },
+  {
+   "substance": "*",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
    "substance": "1-PT18",
    "kind": "approval",
    "date": "2013-07-01",
@@ -255,6 +267,12 @@
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
   },
   {
+   "substance": "1237-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
    "substance": "1238-PT18",
    "kind": "approval",
    "date": "2016-07-01",
@@ -301,6 +319,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1238-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1238-PT18",
@@ -502,6 +526,12 @@
   },
   {
    "substance": "1282-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "1282-PT18",
    "kind": "supplier",
    "date": "2014-09-24",
    "title": "Bayer S.A.S entered the Article 95 supplier list"
@@ -592,6 +622,12 @@
   },
   {
    "substance": "1283-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "1283-PT18",
    "kind": "supplier",
    "date": "2015-10-19",
    "title": "LIMARU NV (Acting for Tagros Chemicals India Private Limited) entered the Article 95 supplier list"
@@ -625,6 +661,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1284-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1284-PT18",
@@ -741,6 +783,12 @@
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
   },
   {
+   "substance": "1298-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
    "substance": "1299-PT18",
    "kind": "hazard",
    "date": "1989-01-01",
@@ -769,6 +817,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1299-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1299-PT18",
@@ -801,6 +855,12 @@
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
   },
   {
+   "substance": "1300-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
    "substance": "1301-PT18",
    "kind": "ngo",
    "date": "2026-04-03",
@@ -811,6 +871,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1301-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1302-PT18",
@@ -829,6 +895,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1302-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1308-PT18",
@@ -1030,6 +1102,12 @@
   },
   {
    "substance": "1318-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "1318-PT18",
    "kind": "supplier",
    "date": "2014-09-24",
    "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
@@ -1222,6 +1300,18 @@
   },
   {
    "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2026-10-22",
+   "title": "PAN Europe and Velt find permethrin among the top pesticides in classroom dust and call for stronger EU pesticide rules, citing children's exposure to hazardous mixtures"
+  },
+  {
+   "substance": "1342-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "1342-PT18",
    "kind": "supplier",
    "date": "2014-09-24",
    "title": "Limaru NV (Acting for Tagros Chemicals India Private Limited (India)) entered the Article 95 supplier list"
@@ -1321,6 +1411,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1353-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1353-PT18",
@@ -1492,6 +1588,12 @@
   },
   {
    "substance": "1400-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "1400-PT18",
    "kind": "supplier",
    "date": "2014-09-24",
    "title": "2 suppliers entered the Article 95 list"
@@ -1525,6 +1627,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1404-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1404-PT18",
@@ -1639,6 +1747,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "1445-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "1445-PT18",
@@ -2086,6 +2200,12 @@
   },
   {
    "substance": "24-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "24-PT18",
    "kind": "postponement",
    "date": "2023-06-02",
    "title": "Approval expiry postponed to 31 Mar 2026"
@@ -2140,6 +2260,12 @@
   },
   {
    "substance": "2463-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "2463-PT18",
    "kind": "supplier",
    "date": "2014-09-24",
    "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
@@ -2161,6 +2287,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "2463-PT19",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "2463-PT19",
@@ -2239,6 +2371,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "30-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "33-PT18",
@@ -2632,6 +2770,12 @@
   },
   {
    "substance": "41-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
+  },
+  {
+   "substance": "41-PT18",
    "kind": "postponement",
    "date": "2023-06-02",
    "title": "Approval expiry postponed to 31 Mar 2026"
@@ -2791,6 +2935,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "45-PT19",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "45-PT19",
@@ -3031,6 +3181,12 @@
    "kind": "ngo",
    "date": "2026-04-04",
    "title": "German consumer group says pyrethroid insecticide sprays should not be sold to consumers, citing nerve toxicity, suspected hormone effects and fatal poisoning of cats"
+  },
+  {
+   "substance": "59-PT18",
+   "kind": "ngo",
+   "date": "2026-11-05",
+   "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
   },
   {
    "substance": "59-PT18",

@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "EUR-Lex — BPR PT18/PT19 approval acts, conditions extracted by AI",
-    "sourceFile": "BPR_PT18_PT19_approval_conditions_EURLex_AI_Extracted_UPDATED_method_flags_20_09_26.xlsx",
+    "sourceFile": "BPR_PT18_PT19_approval_conditions_EURLex_AI_Extracted_UPDATED_method_flags_10_11_26.xlsx",
     "retrieved": "2026-09-21",
     "rows": 99,
     "count": 99,
     "withAct": 61,
     "cfsInAct": 8,
-    "conditionRows": 210,
+    "conditionRows": 211,
     "conditionsDropped": 0,
     "methodFlags": 427,
     "unmatched": 0
@@ -4801,24 +4801,24 @@
     },
     "65-PT19": {
       "act": {
-        "name": "Directive 2012/38/EU",
-        "type": "Annex I inclusion (Dir. 98/8/EC)",
-        "celex": "32012L0038",
-        "date": "2012-11-23",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012L0038",
-        "title": "Commission Directive 2012/38/EU of 23 November 2012 amending Directive 98/8/EC of the European Parliament and of the Council to include cis -Tricos-9-ene as an active substance in Annex I thereto Text with EEA relevance",
-        "oj": "24.11.2012 L 326/13"
+        "name": "Implementing Regulation (EU) 2026/2247",
+        "type": "Renewal (BPR)",
+        "celex": "32026R2247",
+        "date": "2026-10-12",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2247",
+        "title": "Commission Implementing Regulation (EU) 2026/2247 of 12 October 2026 renewing the approval of the active substance cis-tricos-9-ene for use in biocidal products of product-type 19 in accordance with Regulation (EU) No 528/2012 of the European Parliament and of the Council",
+        "oj": "L series 2026/2247 13.10.2026"
       },
       "authority": "Austria",
-      "opinionDate": "25 May 2012",
-      "opinionType": "SCBP assessment report",
-      "purity": "801 g/kg",
+      "opinionDate": "27 November 2025",
+      "opinionType": "BPC opinion",
+      "purity": "80,1 % weight/weight",
       "approvalDate": "1 October 2014",
       "approvalIso": "2014-10-01",
-      "expiryInAct": "30 September 2024",
-      "expiryIso": "2024-09-30",
-      "currentExpiry": "31 March 2027",
-      "expirySource": "Postponement 32024D1283",
+      "expiryInAct": "30 June 2041",
+      "expiryIso": "2041-06-30",
+      "currentExpiry": "30 June 2041",
+      "expirySource": "Anchor act annex",
       "cfs": {
         "inAct": "No",
         "criterion": "",
@@ -4831,61 +4831,83 @@
         "clause": "",
         "ed": ""
       },
-      "echaCfs": "Under assessment",
-      "renewed": false,
+      "echaCfs": "No",
+      "renewed": true,
       "methods": [
         {
           "label": "BPR approval",
           "short": "BPR",
           "since": "2013-09",
-          "state": "not covered",
-          "note": "Directive-era inclusion"
+          "state": "covered",
+          "note": "Renewal application 6 Apr 2023, after 1 Sep 2013; BPC opinion 27 Nov 2025"
         },
         {
           "label": "ED criteria",
           "short": "ED",
           "since": "2018-06",
-          "state": "not covered",
-          "note": ""
+          "state": "covered",
+          "note": "Procedure started 6 Apr 2023, after 7 Jun 2018, so the criteria apply by law; the act's recitals record no ED assessment"
         },
         {
           "label": "human health",
           "short": "HH",
           "since": "2026-03",
           "state": "not covered",
-          "note": ""
+          "note": "Recommendation to ECHA 20 Mar 2025, before v5.0 was published (Aug 2025)"
         },
         {
           "label": "PT18 emission scenarios",
           "short": "ESD",
           "since": "2025-06",
           "state": "-",
-          "note": "PT18-only guidance"
+          "note": "PT18-only guidance; recommendation to ECHA 20 Mar 2025 also precedes Dec 2024 + 6 months"
         },
         {
           "label": "bee risk",
           "short": "Bee",
           "since": "2026-02",
-          "state": "-",
-          "note": "Not collected yet (mode of action)"
+          "state": "not covered",
+          "note": "Application 6 Apr 2023, before 1 Feb 2026; also outside scope (attractant, Directive 2012/38/EU recital 5)"
         },
         {
           "label": "drinking water treatment",
           "short": "H₂O",
           "since": "2026-04",
-          "state": "-",
-          "note": "Not collected yet (water exposure)"
+          "state": "not covered",
+          "note": "Application 6 Apr 2023, before 1 Apr 2026"
         },
         {
           "label": "resistance",
           "short": "Res",
           "since": "2026-06",
           "state": "not covered",
-          "note": ""
+          "note": "Recommendation to ECHA 20 Mar 2025, before Vol V was published (Dec 2025)"
         }
       ],
-      "initial": null,
+      "initial": {
+        "name": "Directive 2012/38/EU",
+        "type": "Annex I inclusion (Dir. 98/8/EC)",
+        "celex": "32012L0038",
+        "date": "2012-11-23",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012L0038",
+        "approvalDate": "1 October 2014",
+        "approvalIso": "2014-10-01",
+        "expiry": "30 September 2024",
+        "expiryIso": "2024-09-30",
+        "purity": "801 g/kg",
+        "cfsInAct": "No",
+        "cfsCriterion": "",
+        "hazardVerbatim": "",
+        "hazardClause": ""
+      },
       "conditions": [
+        {
+          "bucket": "Other",
+          "tags": [],
+          "text": "When assessing the product in the context of the authorisation procedure of biocidal products containing cis-tricos-9-ene as an active substance, the Member States’ competent authorities or, in the case of a Union authorisation the Commission, shall pay particular attention to the exposures, the risks and the efficacy linked to any uses covered by an application for authorisation, but which were not addressed in the Union level assessment of the active substance.",
+          "role": "Latest renewal",
+          "celex": "32026R2247"
+        },
         {
           "bucket": "Assessed scope",
           "tags": [
@@ -4893,7 +4915,7 @@
             "Product assessment focus"
           ],
           "text": "The Union level risk assessment did not address all potential uses and exposure scenarios; certain uses and exposure scenarios, such as outdoor use and exposure of food or feed, were excluded. When assessing the application for authorisation of a product in accordance with Article 5 and Annex VI, Member States shall assess, where relevant for the particular product, those uses or exposure scenarios and those risks to human populations and to environmental compartments that have not been representatively addressed in the Union level risk assessment.",
-          "role": "Initial approval (= anchor)",
+          "role": "Initial approval",
           "celex": "32012L0038"
         },
         {
@@ -4903,7 +4925,7 @@
             "Risk mitigation measures"
           ],
           "text": "For products containing cis-tricos-9-ene that may lead to residues in food or feed, Member States shall verify the need to set new or to amend existing maximum residue levels (MRLs) according to Regulation (EC) No 470/2009 or Regulation (EC) No 396/2005, and take any appropriate risk mitigation measures ensuring that the applicable MRLs are not exceeded.",
-          "role": "Initial approval (= anchor)",
+          "role": "Initial approval",
           "celex": "32012L0038"
         }
       ]

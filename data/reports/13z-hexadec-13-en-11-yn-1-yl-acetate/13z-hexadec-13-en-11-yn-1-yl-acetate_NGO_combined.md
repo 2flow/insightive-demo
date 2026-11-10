@@ -2,10 +2,10 @@
 substance: (13Z)-Hexadec-13-en-11-yn-1-yl acetate
 slug: 13z-hexadec-13-en-11-yn-1-yl-acetate
 cas: 78617-58-0
-combined_on: 2026-10-21
+combined_on: 2026-11-10
 baseline: 2026-10-06_NGO_baseline_report.md
-updates: 2026-10-20_NGO_update.md
-last_run: 2026-10-20
+updates: 2026-10-20_NGO_update.md, 2026-11-10_NGO_update.md
+last_run: 2026-11-10
 signal_level: none
 baseline_signal_level: none
 baseline_top_signal: none
@@ -18,11 +18,15 @@ class_signal_levels: horizontal medium
 
 # NGO signals, combined: (13Z)-Hexadec-13-en-11-yn-1-yl acetate (CAS 78617-58-0)
 
-Built automatically from the baseline report of 2026-10-06 and 1 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
+Built automatically from the baseline report of 2026-10-06 and 2 update(s) since, plus the class watch for horizontal. Do not edit: it is rebuilt after every run. Signals are copied unchanged from the source files, newest first within each tier.
 
 Section 2 holds only items that name (13Z)-Hexadec-13-en-11-yn-1-yl acetate. Those found by a class watch are marked `via class`. Section 3 lists class-level items that do **not** name (13Z)-Hexadec-13-en-11-yn-1-yl acetate; they apply to every substance in the class, and `signal_level` above does not count them.
 
 ## 1. Summary
+
+### Update 2026-11-10 (change: none)
+
+Nothing new since 2026-10-20. No NGO named (13Z)-Hexadec-13-en-11-yn-1-yl acetate (pityolure, the pine processionary moth sex pheromone) in any regime during the update window. There is still no NGO pressure on the BPR PT19 approval, which runs to 2033-05-31.
 
 ### Update 2026-10-20 (change: none)
 
@@ -56,8 +60,10 @@ None.
 
 ## 3. Class-level signals (do not name (13Z)-Hexadec-13-en-11-yn-1-yl acetate)
 
-### horizontal · class signal level: medium · last run 2026-10-21 · [class file](../_classes/horizontal/horizontal_class_combined.md)
+### horizontal · class signal level: medium · last run 2026-11-10 · [class file](../_classes/horizontal/horizontal_class_combined.md)
 
+- Tier C `[NEW · update 2026-11-10]` 2026-11-05 — PAN Europe and partners publish a seven-country YouGov poll showing voters reject unlimited pesticide approvals, citing majority support for more frequent reassessment · `PPP` · `EU` · `indirect–use` · `study/report`
+- Tier A `[NEW · update 2026-11-10]` 2026-11-03 — PAN Germany urges supporters to lobby EPP and ECR MEPs to stop the Omnibus, citing longer approval periods for pesticides and biocides and wider exemptions for banned substances · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier A `[baseline 2026-10-21]` 2026-10-13 — PAN Europe and CRIN relay UN human-rights experts' warning against the Omnibus's pesticide and biocide changes, citing the precautionary principle and non-retrogression · `cross-regime` · `EU` · `direct` · `statement`
 - Tier A `[baseline 2026-10-21]` 2026-09-30 — Générations Futures and PAN Europe condemn the Council's Omnibus compromise, which lengthens pesticide and biocide approvals to 15 and 25 years, citing lack of rapid review and longer grace periods · `cross-regime` · `EU` · `direct` · `campaign`
 - Tier B `[baseline 2026-10-21]` 2026-09-07 — PAN Germany relays endocrine societies' call on MEPs to keep regular pesticide re-evaluation and refuse derogations for endocrine disruptors, citing reproductive, metabolic and neurodevelopmental harm · `PPP` · `EU` · `indirect–hazard` · `campaign`
@@ -72,6 +78,12 @@ None.
 
 ## 4. Follow-ups on known items
 
+### Update 2026-11-10
+
+- Top signals in the earlier reports: none, so there was nothing to follow up.
+- "Coming next" items in the earlier reports: none were listed, and no news was found.
+- Baseline lower-relevance item, the Ecologistas en Acción pine processionary page (unverified): no new Ecologistas en Acción material on processionary moths or pheromones was found in the window.
+
 ### Update 2026-10-20
 
 - Baseline top signals: none, so there was nothing to follow up.
@@ -79,6 +91,10 @@ None.
 - Baseline lower-relevance item, Ecologistas en Acción pine processionary page (unverified): no new Ecologistas en Acción material on processionary moths or pheromones was found in the window.
 
 ## 5. Lower-relevance items
+
+### Update 2026-11-10
+
+None.
 
 ### Update 2026-10-20
 
@@ -92,11 +108,12 @@ None.
 
 ## 6. What NGOs say is coming next
 
-_From the latest run, 2026-10-20_NGO_update.md._
+_From the latest run, 2026-11-10_NGO_update.md._
 
 Nothing. No NGO campaigns, cases, consultations or deadlines involving this substance were found. The BPR approval expires on 2033-05-31.
 
 ## Sources
 
+- 2026-11-10_NGO_update.md
 - 2026-10-20_NGO_update.md
 - 2026-10-06_NGO_baseline_report.md
