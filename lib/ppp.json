@@ -2,7 +2,7 @@
   "meta": {
     "source": "EU Pesticide Database — active substances under Reg. (EC) No 1107/2009",
     "sourceFile": "EU_Pesticide_Database_PT18_PT19_with_AI_analysis_20_09_26.xlsx",
-    "note": "The AI-analysis fields were added to the export by Pelsis, not by the Commission.",
+    "note": "The AI-analysis fields were added to the export by the client, not by the Commission.",
     "rows": 51,
     "count": 49,
     "unmatched": 0

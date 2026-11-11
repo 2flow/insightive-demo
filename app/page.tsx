@@ -245,7 +245,7 @@ export default function Page() {
           <span className="hidden text-sm font-semibold tracking-tight text-ink sm:inline">Insightive</span>
           <span className="hidden h-4 w-px shrink-0 bg-gray-200 sm:block" />
           <span className="hidden text-sm font-medium text-gray-500 md:block">
-            Pelsis · Substance Watch
+            Substance Watch
           </span>
 
           {/* The two ways into the data, as peers: where each substance stands,

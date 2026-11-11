@@ -56,7 +56,7 @@ export interface Substance {
   factsheetUrl: string
   substanceUrl: string
 
-  // Added by Pelsis alongside the ECHA export
+  // Added by the client alongside the ECHA export
   /** The BPC's most recent published opinion, e.g. "May be renewed". Empty
    *  when none has been published yet. */
   bpcOpinion: string
@@ -431,7 +431,7 @@ export interface FeedDataset {
 // A separate regime from the BPR — different uses, different exposure, a
 // different dossier — so a non-approval there is a precedent, not a verdict.
 
-/** Added to the export by Pelsis, not published by the Commission. Kept in its
+/** Added to the export by the client, not published by the Commission. Kept in its
  *  own object so it can never be mistaken for the EU's own columns. */
 export interface PppAnalysis {
   /** How the approval ended, e.g. "Non-inclusion - no dossier submitted". */
@@ -717,9 +717,9 @@ export interface Postponement {
   recitalQuote: string
   /** False where the decision text could not be retrieved. */
   retrieved: boolean
-  /** Added by Pelsis, not the Commission: why the delay, in a few words. */
+  /** Added by the client, not the Commission: why the delay, in a few words. */
   reason: string
-  /** Also Pelsis's: what the decision implies read against the others. */
+  /** Also the client's: what the decision implies read against the others. */
   inference: string
 }
 

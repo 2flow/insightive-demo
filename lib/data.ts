@@ -120,7 +120,7 @@ export const END_BUCKETS: { value: EndBucket; label: string; short: string }[] =
 // rule. A row can carry any combination of them.
 
 /** How close to the approval end date counts as "at risk" when no renewal
- *  application is yet on file. Pelsis-specified; a placeholder pending
+ *  application is yet on file. Client-specified; a placeholder pending
  *  confirmation — tune it here if the window should be shorter or longer. */
 export const RENEWAL_RISK_WINDOW_DAYS = 550
 

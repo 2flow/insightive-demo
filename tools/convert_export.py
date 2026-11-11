@@ -160,7 +160,7 @@ DAYS_PER_YEAR = 365.2425
 
 POSTPONED_PREFIX = "Expiry date postponed"
 
-# Columns Pelsis adds to the ECHA export by hand. A fresh download arrives
+# Columns the client adds to the ECHA export by hand. A fresh download arrives
 # without them, so they are carried over from the latest earlier copy that has them.
 BPC_OPINION_COLUMNS = ("Recent BPC Opinion", "Recent BPC Opinion PDF")
 
@@ -260,12 +260,12 @@ def convert(xlsx: Path, earlier: list[Path] = ()) -> dict:
                 "factsheetUrl": record.get("Factsheet URL", ""),
                 "substanceUrl": record.get("Substance information page", ""),
 
-                # Added by Pelsis alongside the ECHA export — the BPC's most
+                # Added by the client alongside the ECHA export — the BPC's most
                 # recent opinion on this substance, when one has been published.
                 "bpcOpinion": bpc_opinion,
                 "bpcOpinionUrl": bpc_opinion_url,
 
-                # Also added by Pelsis: an approval running longer than the
+                # Also added by the client: an approval running longer than the
                 # statutory maximum (10 years, or 7 for a candidate for
                 # substitution) implies the expiry date was moved. WORK IN
                 # PROGRESS — the rule also catches renewals and ordinary
@@ -961,7 +961,7 @@ def authorisation_kind(value: str) -> str:
 # the BPR. Whether a substance survived there is not decisive for a biocidal
 # renewal — different uses, different exposure, different dossier — but it is
 # the nearest thing to a precedent, and a non-approval names what the concern
-# was. The AI-analysis columns (AH-AP) were added to this export by Pelsis;
+# was. The AI-analysis columns (AH-AP) were added to this export by the client;
 # they are carried through labelled as such, never merged into the EU's own.
 
 PPP_HEADER_ROW = 3
@@ -1090,7 +1090,7 @@ def convert_ppp(xlsx: Path, substances: dict) -> dict:
         "meta": {
             "source": "EU Pesticide Database — active substances under Reg. (EC) No 1107/2009",
             "sourceFile": xlsx.name,
-            "note": "The AI-analysis fields were added to the export by Pelsis, not by the Commission.",
+            "note": "The AI-analysis fields were added to the export by the client, not by the Commission.",
             "rows": len(records),
             "count": len(by_substance),
             "unmatched": len(unmatched),
@@ -1873,7 +1873,7 @@ def merge_pan_hhp(xlsx: Path, pact: dict, substances: dict) -> int:
 # the acts the substance export names but does not unpack: who asked, how long
 # was granted, and — where the recital says — why the evaluation ran late.
 #
-# The `Reason_AI` and `Inference_AI` columns are a reading added by Pelsis, not
+# The `Reason_AI` and `Inference_AI` columns are a reading added by the client, not
 # the Commission's; `Recital_quote` is the document's own words. They are kept
 # apart on the way in so the interface can label them apart.
 
@@ -1989,7 +1989,7 @@ def convert_postponements(paths: list[Path], substances: dict) -> dict:
                     "recitalRef": clean(record.get("Recital_ref")),
                     "recitalQuote": clean(record.get("Recital_quote")),
                     "retrieved": clean(record.get("Source_retrieved")).lower() == "yes",
-                    # Added by Pelsis, kept separate so it can be labelled.
+                    # Added by the client, kept separate so it can be labelled.
                     "reason": clean(record.get("Reason_AI")),
                     "inference": clean(record.get("Inference_AI")),
                 }
@@ -2020,7 +2020,7 @@ def convert_postponements(paths: list[Path], substances: dict) -> dict:
         "meta": {
             "source": "Commission decisions postponing the expiry date of an approval",
             "sourceFiles": [p.name for p in paths],
-            "note": "Reason and inference are a Pelsis reading; the recital quote is the document's own words.",
+            "note": "Reason and inference are an AI reading added by the client; the recital quote is the document's own words.",
             "rows": rows,
             "count": len(by_substance),
             "unmatched": unmatched,
@@ -2706,7 +2706,7 @@ def main() -> None:
         )
 
     # Only the open consultation. The closed ones are superseded by the
-    # conclusions Pelsis holds separately, so carrying them here would show
+    # conclusions the client holds separately, so carrying them here would show
     # grounds next to a decision that has already answered them.
     consultations = latest("consultations")
     if consultations:

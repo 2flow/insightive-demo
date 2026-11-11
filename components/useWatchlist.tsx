@@ -6,7 +6,7 @@ import { StarIcon } from './icons'
 // A localStorage-backed set of watched substance ids (BAS number + product type).
 // Same store shape as the follow list in the Market Intelligence app.
 
-const KEY = 'pelsis:substance-watch'
+const KEY = 'substance-watch:watchlist'
 const EMPTY: string[] = []
 const listeners = new Set<() => void>()
 let cache: string[] | null = null

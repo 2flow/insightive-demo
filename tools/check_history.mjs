@@ -15,7 +15,7 @@
 //
 // A record whose title was reworded but whose kind and date are unchanged is
 // counted as the same record, not a loss. Removing records on purpose (a rule
-// change decided with Pelsis) is done with --accept, which says what it drops.
+// change decided with the client) is done with --accept, which says what it drops.
 //
 // Runs after the converter: `npm run data` does both.
 

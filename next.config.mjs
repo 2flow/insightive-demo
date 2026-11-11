@@ -16,9 +16,9 @@ const nextConfig = {
     return config
   },
 
-  // If you host under a sub-path (e.g. https://host/pelsis/), uncomment and set:
-  // basePath: '/pelsis',
-  // assetPrefix: '/pelsis/',
+  // If you host under a sub-path (e.g. https://host/substance-watch/), uncomment and set:
+  // basePath: '/substance-watch',
+  // assetPrefix: '/substance-watch/',
   // basePath:
   //   "/api/p/static/f3a12731-1fcc-4b6e-b851-92637671b8ad",
 

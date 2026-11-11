@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Pelsis · Substance Watch · Insightive',
+  title: 'Substance Watch · Insightive',
   description: 'ECHA PT18 & PT19 biocidal active substances — approval status and assessment stage',
 }
 

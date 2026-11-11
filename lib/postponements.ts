@@ -23,7 +23,7 @@ export function postponementCount(substanceId: string): number {
  *
  * Every state gets one, including the two that say nothing: a decision giving
  * no cause, and a decision whose text was never retrieved, are different facts
- * and the reader should be able to tell them apart. The reading is Pelsis's,
+ * and the reader should be able to tell them apart. The reading is the client's,
  * not the Commission's; the card's "AI" tag says so for the whole record,
  * which AI read out of the decision. "reason not retrieved" is a gap in the
  * sources rather than a view taken of them.

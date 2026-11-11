@@ -1,4 +1,4 @@
-# Pelsis · Substance Watch
+# Substance Watch (demo)
 
 An interactive view of ECHA's biocidal **active substances** for **PT18**
 (insecticides, acaricides and products to control other arthropods) and **PT19**
@@ -10,7 +10,7 @@ The whole dataset is compiled into the app — there is **no backend, database, 
 API**. It builds to a fully static site you can host anywhere.
 
 Built by Insightive. Next.js (App Router) + React + Tailwind CSS — the same stack
-and visual language as the Pelsis Nordic Market Intelligence app.
+and visual language as the Insightive Market Intelligence app.
 
 ---
 
@@ -62,7 +62,7 @@ and evaluating authority. Selections combine; an empty group means "all".
 name, or approval status.
 
 **Watchlist.** The ☆ on a row adds that substance to a watchlist stored in the
-browser (`localStorage`, key `pelsis:substance-watch`); the Watchlist pill filters
+browser (`localStorage`, key `substance-watch:watchlist`); the Watchlist pill filters
 the table down to it.
 
 **Each column names its source.** The ⓘ beside a column heading opens a small
@@ -301,7 +301,7 @@ documents do not state. What the reader can weigh is on the card: how often, how
 long, and what the recital says.
 
 The postponement list was read out of the decisions by AI, and `Reason_AI` and
-`Inference_AI` are a Pelsis reading, not the Commission's. The card, and the
+`Inference_AI` are the client's reading, not the Commission's. The card, and the
 Postponements and Renewal track tiles, carry the **AI** tag, which says so:
 
 - the reason is a chip reading **`reason — unexplained delay`**, split on `;`
@@ -316,7 +316,7 @@ Postponements and Renewal track tiles, carry the **AI** tag, which says so:
 
 These records carry **no reading of their own**: no "Why this reading", no
 inference block. The card holds the decision, the dates, the extension and the
-recital's own words, and the reason chip is the single Pelsis judgement on it.
+recital's own words, and the reason chip is the single client judgement on it.
 `Recital_quote` sits in the summary, attributed to its recital.
 
 The `INFERENCE` chip that still appears on three of them is a different thing —
@@ -689,7 +689,7 @@ converter as part of `npm run data`.
   same one.
 - New records are added to the ledger automatically.
 
-Removing records on purpose, as a rule change agreed with Pelsis, is
+Removing records on purpose, as a rule change agreed with the client, is
 `npm run history:accept`. It prints what it drops. Commit
 `data/record-ledger.json` with each update. Running
 `node tools/check_history.mjs --root <dir>` compares another checkout against
@@ -700,7 +700,7 @@ records for 11 substances re-dated from 30 Jun to 30 Sep 2026 (the newest list).
 They are now dated by the first edition. The only records removed on purpose
 are the two "no EU RRM action needed" ARN conclusions (PACT rule B).
 
-A fresh ECHA download arrives **without the columns Pelsis adds by hand**. The
+A fresh ECHA download arrives **without the columns the client adds by hand**. The
 converter fills them in on its own and says so: the `Recent BPC Opinion` /
 `Recent BPC Opinion PDF` values are carried over from the latest earlier export
 that has them (matched by BAS number × product type; `bpcOpinionsFrom` in the
@@ -905,7 +905,7 @@ publicly before deciding whether a substance is a candidate for substitution
 criteria.
 
 **Only `_Current` is converted** — the consultations still taking comments. A
-closed consultation's grounds are superseded by whatever was decided, and Pelsis
+closed consultation's grounds are superseded by whatever was decided, and the client
 holds those conclusions separately; showing grounds beside an answered question
 would only invite re-reading the question. The converter reads only the
 `…_Current_DD_MM_YY.csv` export. The
@@ -953,7 +953,7 @@ uniqueness check — four rows carry "No CAS allocated", and one of them writes
 `loose_name()` compares letters and digits only, and is accepted only when it lands
 on exactly one substance, so it can never pick the wrong Bti strain.
 
-**Columns AH–AP are an AI analysis added to the export by Pelsis, not published by
+**Columns AH–AP are an AI analysis added to the export by the client, not published by
 the Commission.** The converter keeps them in their own `ai` object and the panel
 renders them in their own dashed, labelled block — "Why · AI analysis", with the
 stated confidence. The provenance stays on the dataset's `meta.note` rather than

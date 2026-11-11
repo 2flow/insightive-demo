@@ -11,7 +11,7 @@ import type { FeedRecord, Postponement, Substance } from './types'
 // a view the documents do not state. What the reader can weigh is on the card:
 // how many times it has happened, how long was granted, and the recital's own
 // words about why. So these records carry no reading of their own: no "why this
-// reading", and no inference block. The reason chip is the one Pelsis judgement
+// reading", and no inference block. The reason chip is the one client judgement
 // on the card, and it says so. The inference text stays in
 // lib/postponements.json if it is ever wanted somewhere quieter.
 
