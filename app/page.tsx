@@ -30,7 +30,10 @@ const PT_NAME: Record<string, string> = Object.fromEntries(
 )
 
 /** The app's release, shown in the header beside the export date. Bump it with each release. */
-const APP_VERSION = 'v1.5'
+const APP_VERSION = 'v2'
+
+/** The latest date any source was updated or checked, shown in the header. Bump it with each data update. */
+const LATEST_UPDATE = '2026-11-10'
 
 export default function Page() {
   const [query, setQuery] = useState('')
@@ -286,7 +289,7 @@ export default function Page() {
               className="hidden font-mono text-[10.5px] uppercase tracking-wider text-gray-400 sm:block"
               title="The date every source — ECHA, EUR-Lex, the EU Pesticides Database, NGO reports and the rest — was last updated or checked"
             >
-              {APP_VERSION} · Latest update: {formatDate(meta.exportDate)}
+              {APP_VERSION} · Latest update: {formatDate(LATEST_UPDATE)}
             </span>
           </div>
         </div>
