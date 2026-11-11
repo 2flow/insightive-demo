@@ -29,3 +29,19 @@ export function classesFor(cas: string | undefined | null): string[] {
 export function classNameFor(cas: string | undefined | null): string {
   return cas ? nameByCas.get(cas.trim()) ?? '' : ''
 }
+
+// ── Class feeds ───────────────────────────────────────────────
+// Each class has a feed at #signals/class/<slug>, the same slug the NGO class
+// watch uses for its folder ("PFAS" → pfas, "juvenile hormone analogue" →
+// juvenile-hormone-analogue).
+
+export const classSlug = (name: string) =>
+  name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+
+/** The link to a class's feed, from its name or its slug. */
+export const classHref = (nameOrSlug: string) => `#signals/class/${classSlug(nameOrSlug)}`
+
+/** The class's name as data/classes.json gives it, or '' for an unknown slug. */
+export function classLabel(slug: string): string {
+  return Object.keys(raw).find(k => k !== 'unclassified' && classSlug(k) === slug) ?? ''
+}

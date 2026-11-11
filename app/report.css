@@ -996,6 +996,7 @@
   cursor: pointer;
   transition: border-color 0.12s, color 0.12s, background 0.12s;
 }
+a.feed-back { text-decoration: none; }
 .feed-back:hover { border-color: #cdddf7; background: #f6f9fe; color: var(--accent); }
 .feed-back svg { width: 15px; height: 15px; }
 
@@ -1064,6 +1065,9 @@
   box-shadow: inset 0 0 0 1px #c4b5fd;
   padding: 4px 10px;
 }
+.feed-page .fp-badge.class.is-link { text-decoration: none; cursor: pointer; transition: background 0.12s, box-shadow 0.12s; }
+.feed-page .fp-badge.class.is-link:hover { background: #f5f3ff; box-shadow: inset 0 0 0 1px #8b5cf6; }
+.feed-page .fp-badge.class.is-link:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }
 
 .feed-page-meta .ident {
   font-family: var(--mono);
@@ -2530,15 +2534,46 @@
 .feed-page .sig-chip.is-on .sig-chip-n { color: #1e40af; }
 /* The category's main publishers, after the count — small and grey, so the
    label still leads. */
-.feed-page .sig-chip-src {
-  padding-left: 7px;
-  border-left: 1px solid var(--line);
-  font-size: 10.5px;
+/* The chip's detail — what it covers, its main sources — in an overlay. */
+.feed-page .sig-chip-wrap { position: relative; display: inline-flex; }
+.feed-page .sig-chip-pop {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  z-index: 30;
+  display: block;
+  width: 300px;
+  max-width: min(300px, 80vw);
+  padding: 10px 13px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.13);
+  font-family: var(--sans);
+  font-size: 12px;
   font-weight: 400;
-  color: var(--muted-2);
-  white-space: nowrap;
+  line-height: 1.5;
+  color: var(--body);
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease, visibility 0.12s;
 }
-.feed-page .sig-chip.is-on .sig-chip-src { color: #3b5bdb; border-left-color: #bfd0fb; }
+.feed-page .sig-chip-wrap:hover .sig-chip-pop,
+.feed-page .sig-chip-wrap:focus-within .sig-chip-pop { opacity: 1; visibility: visible; }
+.feed-page .sig-chip-pop-key {
+  display: block;
+  margin: 0 0 2px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feed-page .sig-chip-pop-key:not(:first-child) { margin-top: 8px; }
+.feed-page .sig-chip-pop-note { display: block; margin-top: 6px; font-size: 10.5px; color: var(--muted-2); }
 
 /* One row per band, labelled, so the filter reads in the same order of
    weight as the categories: BPR renewal, EU evidence, context. */
@@ -2559,12 +2594,12 @@
   text-transform: uppercase;
   color: var(--muted-2);
 }
-.feed-page .sig-chip-icon { width: 13px; height: 13px; flex-shrink: 0; color: var(--muted); }
-.feed-page .sig-chip.is-on .sig-chip-icon { color: #1e40af; }
-.feed-page .sig-filter-band.band-3 .sig-chip:not(.is-on) { border-style: dashed; color: var(--muted); }
 @media (max-width: 700px) {
   .feed-page .sig-filter-band-label { width: 100%; }
 }
+.feed-page .sig-chip-icon { width: 13px; height: 13px; flex-shrink: 0; color: var(--muted); }
+.feed-page .sig-chip.is-on .sig-chip-icon { color: #1e40af; }
+.feed-page .sig-chip.band-3:not(.is-on) { border-style: dashed; color: var(--muted); }
 
 /* "12 of 307" beside a filtered count. */
 .feed-page .ident-of {
@@ -2634,6 +2669,22 @@
 .feed-card { transition: box-shadow 0.4s; }
 .feed-card.is-focus { box-shadow: 0 0 0 2px var(--accent), 0 4px 16px rgba(37, 99, 235, 0.18); }
 .feed-card.tone-positive { border-left-color: var(--opport); }
+
+/* Strength on the card, so weak and strong differ at a glance. */
+.feed-card.is-weak { border-left-width: 3px; }
+.feed-card.is-weak.tone-negative { border-left-color: #f1b0b0; }
+.feed-card.is-weak.tone-positive { border-left-color: #9bdcc8; }
+.feed-card.is-strong { border-left-width: 6px; }
+.feed-card.is-strong.tone-negative {
+  border-color: #f6caca;
+  border-left-color: var(--threat);
+  background: linear-gradient(90deg, #fff4f4 0, #fff 55%);
+}
+.feed-card.is-strong.tone-positive {
+  border-color: #bfe8da;
+  border-left-color: var(--opport);
+  background: linear-gradient(90deg, #f0fbf7 0, #fff 55%);
+}
 
 /* Dated in the past 30 days — pushed to the top right of the card's head. */
 .feed-new {
@@ -2751,6 +2802,12 @@
 .feed-signal.tone-negative { background: var(--threat-bg); color: #b42318; }
 .feed-signal.tone-positive { background: var(--opport-bg); color: #0a6b49; }
 .feed-signal.tone-neutral { background: var(--grey-bg); color: var(--muted); }
+/* Weak: outlined. Strong: solid, white on the tone. */
+.feed-signal.is-weak { background: transparent; box-shadow: inset 0 0 0 1px currentColor; }
+.feed-signal.is-strong.tone-negative { background: #c62f30; color: #fff; }
+.feed-signal.is-strong.tone-positive { background: #0b7a5c; color: #fff; }
+.feed-signal.is-strong .sig-pips i { opacity: 0.4; }
+.feed-signal.is-strong .sig-pips i.on { opacity: 1; }
 .sig-pips { display: inline-flex; gap: 2px; }
 .sig-pips i { width: 4px; height: 10px; border-radius: 1px; background: currentColor; opacity: 0.24; }
 .sig-pips i.on { opacity: 1; }
@@ -3123,6 +3180,9 @@
 /* The class kind and the count stay quiet; the class name is what reads. */
 .ngo-scope .ngo-scope-kind { font-size: 8.5px; font-weight: 600; opacity: 0.7; }
 .ngo-scope-name { font-size: 12.5px; font-weight: 700; }
+.ngo-scope-link { color: inherit; text-decoration: none; border-radius: 3px; }
+.ngo-scope-link:hover { color: #5b21b6; text-decoration: underline; text-underline-offset: 3px; }
+.ngo-scope-link:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }
 .ngo-scope-text { font-size: 10.5px; opacity: 0.75; }
 .ngo-scope .src-note { margin-left: 0; }
 /* A lighter tier's opacity would let the next card paint over the open
@@ -3562,4 +3622,54 @@
 @media (max-width: 767px) {
   .exp-row { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; }
   .exp-status { grid-column: 1 / -1; }
+}
+
+/* ---------- Class feed: the member strip under the header ---------- */
+.feed-page .cls-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.feed-page .cls-member {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 12px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, box-shadow 0.12s;
+}
+.feed-page .cls-member:hover { border-color: #c4b5fd; }
+.feed-page .cls-member:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }
+.feed-page .cls-member.is-on { border-color: #8b5cf6; background: #f5f3ff; box-shadow: inset 0 0 0 1px #8b5cf6; }
+.feed-page .cls-member-name {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.feed-page .cls-member-pt { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--muted-2); }
+.feed-page .cls-member-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--muted);
+}
+.feed-page .cls-member-status { font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.feed-page .cls-member-status.st-approved { color: #0a6b49; }
+.feed-page .cls-member-status.st-expired,
+.feed-page .cls-member-status.st-not-approved,
+.feed-page .cls-member-status.st-no-longer-supported { color: #b42318; }
+.feed-page .cls-member-n { font-family: var(--mono); font-size: 9.5px; color: var(--muted-2); }
+@media (max-width: 640px) {
+  .feed-page .cls-members { grid-template-columns: 1fr 1fr; }
 }

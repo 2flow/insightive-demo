@@ -16,8 +16,10 @@ import type { FeedRecord } from './types'
 export type SignalCategory =
   | 'approval'
   | 'renewal'
+  | 'supplier'
   | 'industry'
   | 'hazard'
+  | 'ppp'
   | 'other-eu'
   | 'non-eu'
   | 'ngo'
@@ -30,6 +32,9 @@ export interface CategoryDef {
   label: string
   /** What it covers, for the tooltip and the filter. */
   covers: string
+  /** The sources to name on the filter chip, where the publisher alone says
+   *  too little — both of Industry's feeds are ECHA's. */
+  sources?: string[]
 }
 
 export const BANDS: { band: SignalBand; label: string; note: string }[] = [
@@ -52,10 +57,19 @@ export const CATEGORIES: CategoryDef[] = [
     covers: 'Interest in renewal, application submitted, renewal started, filing deadline passed, BPC opinion',
   },
   {
+    key: 'supplier',
+    band: 1,
+    label: 'Article 95',
+    covers: 'Suppliers joining or leaving ECHA’s Article 95 list for the substance',
+    sources: ['ECHA Article 95 list'],
+  },
+  {
+    // Key kept from when this was "Industry"; Article 95 now has its own.
     key: 'industry',
     band: 1,
-    label: 'Industry',
-    covers: 'Article 95 suppliers joining or leaving, product authorisations granted or cancelled',
+    label: 'Products',
+    covers: 'Biocidal product authorisations containing the substance: granted or cancelled, and market news',
+    sources: ['ECHA biocidal products'],
   },
   {
     key: 'hazard',
@@ -64,15 +78,25 @@ export const CATEGORIES: CategoryDef[] = [
     covers: 'CLH opinions, ED assessments and lists, PBT — graded by the BPR criterion hit',
   },
   {
+    key: 'ppp',
+    band: 2,
+    label: 'Plant protection',
+    covers: 'The EU plant-protection (pesticide) approval of the same substance: ended, not renewed or restricted',
+  },
+  {
+    // Key kept from when this was "Other EU laws"; it now holds the REACH
+    // procedures ECHA lists in PACT.
     key: 'other-eu',
     band: 2,
-    label: 'Other EU laws',
-    covers: 'Plant-protection approval, REACH restrictions, other EU frameworks covering the same substance',
+    label: 'PACT',
+    covers:
+      "ECHA's Public Activities Coordination Tool (PACT): REACH work on the same substance — " +
+      'dossier evaluations of its registrations, Annex XIV (authorisation) recommendations and restrictions',
   },
   {
     key: 'non-eu',
     band: 3,
-    label: 'Non-EU authorities',
+    label: 'Worldwide hazard findings',
     covers: "US EPA, IARC, other countries' bans or classifications",
   },
   {
@@ -95,11 +119,11 @@ const BY_KIND: Record<string, SignalCategory> = {
   'renewal-start': 'renewal',
   deadline: 'renewal',
   bpc: 'renewal',
-  supplier: 'industry',
+  supplier: 'supplier',
   cancellation: 'industry',
   hazard: 'hazard',
   reach: 'other-eu',
-  ppp: 'other-eu',
+  ppp: 'ppp',
   ngo: 'ngo',
 }
 
@@ -107,9 +131,11 @@ const BY_KIND: Record<string, SignalCategory> = {
 function researchCategory(r: FeedRecord): SignalCategory {
   const tags = new Set(r.tags.map(t => t.toLowerCase()))
   const title = r.title.toLowerCase()
-  if (tags.has('ppp') || tags.has('reach')) return 'other-eu'
+  if (tags.has('ppp') || tags.has('plant protection')) return 'ppp'
+  if (tags.has('reach')) return 'other-eu'
   if (['gb', 'uk', 'us', 'epa', 'iarc', 'international'].some(t => tags.has(t))) return 'non-eu'
-  if (tags.has('market') || /\bauthoris|supplier|article 95/.test(title)) return 'industry'
+  if (/supplier|article 95/.test(title)) return 'supplier'
+  if (tags.has('market') || /\bauthoris/.test(title)) return 'industry'
   if (tags.has('renewal')) return 'renewal'
   if (['endocrine', 'hazard', 'clh', 'pbt'].some(t => tags.has(t))) return 'hazard'
   return 'approval'
@@ -186,6 +212,11 @@ export function topSources(records: FeedRecord[], max = 3): Map<SignalCategory, 
   }
   const out = new Map<SignalCategory, string[]>()
   counts.forEach(({ n, by }, key) => {
+    const named = CATEGORIES.find(c => c.key === key)?.sources
+    if (named) {
+      out.set(key, named)
+      return
+    }
     out.set(
       key,
       Array.from(by.entries())

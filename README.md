@@ -895,7 +895,7 @@ ECHA gives none, the record is dated to the **first PACT export that shows it**
 and says so ("First recorded date"), like the ECHA export changes.
 
 **Kinds.** `DEv`, `Recom` and `Restriction` records are of kind `reach`
-("REACH procedure", category Other EU laws). The rest stay `hazard`.
+("REACH procedure", category PACT). The rest stay `hazard`.
 
 ## Substitution consultations
 
@@ -1178,15 +1178,17 @@ of the card and used by the filter on the All signals page (`lib/categories.ts`)
 |---|---|---|
 | 1 · BPR renewal | Approval status | approval, expiry, postponement |
 | | Renewal progress | interest, filing, deadline, BPC opinion |
-| | Industry | Article 95 suppliers, product authorisations |
+| | Article 95 | Article 95 suppliers joining or leaving |
+| | Products | product authorisations granted or cancelled |
 | 2 · EU evidence | EU hazard findings | PACT hazard assessments and lists |
-| | Other EU laws | plant-protection approval, REACH |
-| 3 · Context | Non-EU authorities | US EPA carcinogen list, GB |
+| | Plant protection | EU plant-protection approval ended or not renewed |
+| | PACT (Public Activities Coordination Tool) | REACH dossier evaluation, Annex XIV recommendation, restriction |
+| 3 · Context | Worldwide hazard findings | US EPA carcinogen list, GB |
 | | NGO reports | `data/reports/` |
 
 Derived records map by their kind; a record can override with `category`
 (the US EPA listing does). Curated feed records can set `"category"` to one of
-`approval`, `renewal`, `industry`, `hazard`, `other-eu`, `non-eu`, `ngo`;
+`approval`, `renewal`, `supplier` (Article 95), `industry` (Products), `hazard`, `ppp`, `other-eu` (REACH), `non-eu`, `ngo`;
 without it they are placed from their tags.
 
 Every card also carries an evidence tag: **Documented** (stated by the source),

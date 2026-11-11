@@ -45,6 +45,8 @@ export default function Page() {
   // The three top-level views. Overview is the default — what has changed and
   // what is running out — with the full list and the timeline a tab away.
   const [section, setSection] = useState<'overview' | 'substances' | 'signals'>('overview')
+  // #signals/class/<slug>: the timeline narrowed to one chemical class.
+  const [signalsClass, setSignalsClass] = useState<string | null>(null)
   const watched = useWatchlist()
   const today = useToday()
 
@@ -67,6 +69,7 @@ export default function Page() {
       // own; no hash at all is the Overview.
       setSection(view === 'signals' ? 'signals' : view === 'substances' ? 'substances' : 'overview')
       setRoute(id && (view === 'feed' || view === 'products') ? { view, id } : null)
+      setSignalsClass(view === 'signals' && rest[0] === 'class' && rest[1] ? decodeURIComponent(rest[1]) : null)
     }
     read()
     // hashchange covers in-app links and the back button; popstate covers the
@@ -78,6 +81,12 @@ export default function Page() {
       window.removeEventListener('popstate', read)
     }
   }, [])
+
+  // A class feed is reached by a plain link (#signals/class/<slug>), so it
+  // starts at the top like every other page.
+  useEffect(() => {
+    if (signalsClass) window.scrollTo({ top: 0 })
+  }, [signalsClass])
 
   // A record to bring into view once the page it opens has rendered — set when
   // a Latest signals row is clicked, so the reader lands on that card rather
@@ -311,7 +320,11 @@ export default function Page() {
       {/* ── Sub-views — replace the list while open ──────────── */}
       {allSignals ? (
         <main className="mx-auto max-w-4xl px-6 py-7">
-          <SignalsPage onOpenSubstance={openFeed} />
+          <SignalsPage
+            key={signalsClass ?? 'all'}
+            classSlug={signalsClass ?? undefined}
+            onOpenSubstance={openFeed}
+          />
         </main>
       ) : openedSignals ? (
         <main className="mx-auto max-w-4xl px-6 py-7">

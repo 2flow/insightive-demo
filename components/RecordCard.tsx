@@ -6,6 +6,7 @@ import { RECENT_DAYS, directionTone, isRecent, recordKey, signalLabel } from '@/
 import { EVIDENCE_LABEL, EVIDENCE_NOTE, categoryOf, evidenceOf } from '@/lib/categories'
 import type { Evidence, SignalCategory } from '@/lib/categories'
 import { classMembers, memberLabel, namesSubstance } from '@/lib/ngoSignals'
+import { classHref } from '@/lib/classes'
 import type { FeedRecord, FeedSource, NgoScope, Substance } from '@/lib/types'
 import AiTag from './AiTag'
 import InfoNote from './InfoNote'
@@ -19,6 +20,8 @@ import {
   GlobeIcon,
   MegaphoneIcon,
   RefreshIcon,
+  LayersIcon,
+  LeafIcon,
   ScaleIcon,
   SparkleIcon,
   UserSearchIcon,
@@ -73,8 +76,10 @@ function isMarked(tag: string): boolean {
 export const CATEGORY_ICON: Record<SignalCategory, (p: { className?: string }) => JSX.Element> = {
   approval: CertificateIcon,
   renewal: RefreshIcon,
-  industry: FactoryIcon,
+  supplier: FactoryIcon,
+  industry: LayersIcon,
   hazard: FlaskIcon,
+  ppp: LeafIcon,
   'other-eu': ScaleIcon,
   'non-eu': GlobeIcon,
   ngo: MegaphoneIcon,
@@ -188,7 +193,14 @@ function ScopeBox({
   return (
     <div className="ngo-scope is-class">
       <span className="ngo-scope-kind">Class</span>
-      <span className="ngo-scope-name">{scope.label.charAt(0).toUpperCase() + scope.label.slice(1)}</span>
+      <a
+        className="ngo-scope-name ngo-scope-link"
+        href={classHref(scope.slug)}
+        title={`Open the ${scope.label} class feed: every member's signals on one timeline`}
+      >
+        {scope.label.charAt(0).toUpperCase() + scope.label.slice(1)}
+        <span aria-hidden="true"> →</span>
+      </a>
       <span className="ngo-scope-text">
         {members.length} {members.length === 1 ? 'substance' : 'substances'}
         {namesThis && ` · names ${memberLabel(viewing!)}`}
@@ -391,10 +403,14 @@ export default function RecordCard({
   onOpen?: (id: string) => void
 }) {
   const tone = directionTone(r.signal.direction)
+  // Strength drawn on the card itself, not only in the badge's pips: a strong
+  // reading gets a heavy edge, a tinted card and a solid badge; a weak one a
+  // thin pale edge and an outlined badge. Neutral readings carry no weight.
+  const weight = tone === 'neutral' ? '' : Math.abs(r.signal.strength) >= 2 ? 'is-strong' : 'is-weak'
   const whyId = useId()
   if (r.ngo) return <NgoCard r={r} substance={substance} viewing={viewing} onOpen={onOpen} />
   return (
-    <li className={`feed-card tone-${tone}`} data-record-key={recordKey(r)}>
+    <li className={`feed-card tone-${tone} ${weight}`} data-record-key={recordKey(r)}>
       <div className="feed-card-head">
         <CategoryTag r={r} />
         {/* Where the date is not the day the thing happened, the emphasis
@@ -417,7 +433,7 @@ export default function RecordCard({
           <span className="feed-why">
             <button
               type="button"
-              className={`feed-signal tone-${tone} is-why`}
+              className={`feed-signal tone-${tone} ${weight} is-why`}
               aria-describedby={whyId}
             >
               <StrengthPips strength={r.signal.strength} />
@@ -429,7 +445,7 @@ export default function RecordCard({
             </span>
           </span>
         ) : (
-          <span className={`feed-signal tone-${tone}`}>
+          <span className={`feed-signal tone-${tone} ${weight}`}>
             <StrengthPips strength={r.signal.strength} />
             {signalLabel(r)}
           </span>

@@ -30,7 +30,7 @@ import { suppliersFor, supplierShortNames } from '@/lib/suppliers'
 import { productsFor, unionNote } from '@/lib/products'
 import { DEFAULT_ORDER, orderRecords, recordsFor, tallyRecords } from '@/lib/feeds'
 import { isNgo } from '@/lib/ngoSignals'
-import { classesFor } from '@/lib/classes'
+import { classHref, classesFor } from '@/lib/classes'
 import type { RecordOrder } from '@/lib/feeds'
 import type { AiSource, FeedRecord, Substance, SubstanceFeed } from '@/lib/types'
 import AiTag from './AiTag'
@@ -834,9 +834,10 @@ export default function FeedPage({
             </span>
           )}
           {classesFor(substance.cas).map(c => (
-            <span key={c} className="fp-badge class" title="Chemical class">
+            <a key={c} className="fp-badge class is-link" href={classHref(c)} title={`Chemical class: open the ${c} class feed`}>
               {c}
-            </span>
+              <span aria-hidden="true">→</span>
+            </a>
           ))}
           <span className="sep" />
           <span className="ident">
