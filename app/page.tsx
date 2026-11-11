@@ -23,7 +23,7 @@ import StatRow from '@/components/StatRow'
 import SubstanceTable from '@/components/SubstanceTable'
 import { useToday } from '@/components/useToday'
 import { useWatchlist } from '@/components/useWatchlist'
-import { CalendarIcon, ClockIcon, InfoIcon, LayersIcon, PulseIcon, ShieldIcon } from '@/components/icons'
+import { CalendarIcon, ClockIcon, FlaskIcon, InfoIcon, LayersIcon, PulseIcon, ShieldIcon } from '@/components/icons'
 
 const PT_NAME: Record<string, string> = Object.fromEntries(
   substances.map(s => [s.pt, s.ptName]),
@@ -239,12 +239,32 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-canvas">
       {/* ── Brand header ───────────────────────────────────── */}
-      <header className="sticky top-0 z-20 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-3">
-          <Image src="/insightive_logo_light.png" alt="Insightive" width={28} height={28} className="shrink-0" />
-          <span className="hidden text-sm font-semibold tracking-tight text-ink sm:inline">Insightive</span>
-          <span className="hidden h-4 w-px shrink-0 bg-gray-200 sm:block" />
-          <span className="hidden text-sm font-medium text-gray-500 md:block">
+      <header className="sticky top-0 z-20 bg-white/85 backdrop-blur-md">
+        <div className="mx-auto flex h-[62px] max-w-7xl items-center gap-3 px-6">
+          {/* The Insightive wordmark: the orb and the gradient name, as one image. */}
+          <a href="https://insightive-ai.com" target="_blank" rel="noopener noreferrer" className="shrink-0" aria-label="Insightive">
+            <Image
+              src="/brand/insightive-wordmark.png"
+              alt="Insightive"
+              width={480}
+              height={110}
+              priority
+              className="hidden h-[32px] w-auto sm:block"
+            />
+            <Image
+              src="/brand/insightive-mark.png"
+              alt="Insightive"
+              width={160}
+              height={160}
+              priority
+              className="h-8 w-8 sm:hidden"
+            />
+          </a>
+          <span className="hidden h-6 w-px shrink-0 bg-gray-200 md:block" />
+          <span className="module-pill hidden md:inline-flex">
+            <span className="module-pill-icon">
+              <FlaskIcon />
+            </span>
             Substance Watch
           </span>
 
@@ -286,7 +306,7 @@ export default function Page() {
 
           <div className="ml-auto flex items-center gap-3">
             <span
-              className="hidden font-mono text-[10.5px] uppercase tracking-wider text-gray-400 sm:block"
+              className="hidden font-mono text-[10.5px] uppercase tracking-[0.14em] text-gray-400 sm:block"
               title="The date every source — ECHA, EUR-Lex, the EU Pesticides Database, NGO reports and the rest — was last updated or checked"
             >
               {APP_VERSION} · Latest update: {formatDate(LATEST_UPDATE)}
@@ -300,7 +320,7 @@ export default function Page() {
              filter. Sticky only from lg up: on a phone the pills wrap to three
              rows and would eat most of the viewport. ─────────────────────── */}
       <div
-        className={`static z-10 border-b border-gray-200 bg-white/95 backdrop-blur lg:sticky lg:top-[53px] ${
+        className={`static z-10 border-b border-gray-200 bg-white/95 backdrop-blur lg:sticky lg:top-[64px] ${
           subView ? 'hidden' : ''
         }`}
       >
@@ -363,7 +383,7 @@ export default function Page() {
       <main className="mx-auto max-w-7xl px-6 py-6">
         <div className="mb-5">
           <div className="flex items-center gap-2">
-            <h1 className="text-lg font-bold tracking-tight text-ink">Active substances · PT18 &amp; PT19</h1>
+            <h1 className="font-head text-xl font-bold tracking-[-0.025em] text-ink">Active substances · PT18 &amp; PT19</h1>
             {/* What this list is and how to read it — about the substance list, so it sits on its heading. */}
             <div className="relative">
               <button

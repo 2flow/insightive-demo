@@ -4,21 +4,68 @@
 
 @layer base {
   body {
-    @apply antialiased bg-canvas text-ink;
-    font-feature-settings: "ss01", "cv11", "liga";
+    @apply antialiased text-ink;
+    /* The Insightive page wash: a pale blue-white ground with a soft primary
+       glow at the top and a lavender drift towards the bottom right, as on
+       insightive-ai.com and the outreach deck. */
+    background:
+      radial-gradient(900px 420px at 18% -80px, rgba(48, 126, 245, 0.10), rgba(48, 126, 245, 0) 70%),
+      radial-gradient(1100px 700px at 100% 100%, rgba(122, 127, 216, 0.08), rgba(122, 127, 216, 0) 70%),
+      #fafbfe;
+    background-attachment: fixed;
   }
+  h1, h2, h3, h4 { font-family: theme('fontFamily.head'); }
+  ::selection { color: #fff; background: #307ef5; }
+  :focus-visible { outline: 2px solid #307ef5; outline-offset: 2px; }
 }
 
-/* Thin gradient hairline used under the brand header (matches Insightive template) */
+/* Gradient hairline under the brand header, in the logo's colours:
+   deep blue → sky → lavender. */
 .brand-hairline {
-  height: 1px;
-  background: linear-gradient(to right, #60a5fa, #818cf8, #c084fc);
-  opacity: 0.6;
+  height: 2px;
+  background: linear-gradient(to right, #3a7bd5, #5ea8ee 45%, #8f8ce6 80%, rgba(143, 140, 230, 0));
+}
+
+/* The Insightive wordmark's own gradient, for headline accents. */
+.brand-gradient-text {
+  background: linear-gradient(100deg, #3a7bd5, #5ea8ee 55%, #7a7fd8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Module pill beside the logo — the Substance Watch badge from the deck. */
+@layer components {
+.module-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px 4px 4px;
+  border-radius: 999px;
+  background: #e8eefd;
+  color: #1f5bc4;
+  font-family: theme('fontFamily.head');
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.module-pill-icon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #fff;
+  color: #307ef5;
+  box-shadow: 0 2px 6px rgba(48, 126, 245, 0.18);
+}
+.module-pill-icon svg { width: 14px; height: 14px; }
 }
 
 /* Subtle scrollbar for filter rails */
 .scroll-thin::-webkit-scrollbar { height: 6px; width: 6px; }
-.scroll-thin::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 9999px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #d8dfef; border-radius: 9999px; }
 
 /* The search input's native clear affordance duplicates our own button */
 input[type="search"]::-webkit-search-decoration,

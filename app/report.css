@@ -13,24 +13,24 @@
 /* The dialog is portaled to <body>, so it is outside both — without this its
    own chrome (the close button) resolves no tokens at all. */
 .fp-modal-back {
-  --ink: #0b0f1a;
-  --ink-2: #1f2937;
-  --body: #374151;
-  --muted: #6b7280;
-  --muted-2: #9ca3af;
-  --line: #e5e7eb;
-  --line-2: #f3f4f6;
-  --accent: #2563eb;
-  --accent-bg: #dbeafe;
+  --ink: #101828;
+  --ink-2: #2a3242;
+  --body: #3c4557;
+  --muted: #5a6478;
+  --muted-2: #98a1b2;
+  --line: #e4e8f2;
+  --line-2: #f1f4fa;
+  --accent: #307ef5;
+  --accent-bg: #e8eefd;
   --threat: #d94f50;
   --threat-bg: #fde8e8;
   --opport: #1ab38a;
   --opport-bg: #e0f5ee;
   --mixed: #b45309;
   --mixed-bg: #fef3c7;
-  --grey-bg: #f3f4f6;
-  --sans: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
-  --mono: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  --grey-bg: #f1f4fa;
+  --sans: var(--font-body), 'Inter', system-ui, sans-serif;
+  --mono: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 .report-surface {
@@ -39,7 +39,7 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 26px 30px 30px;
-  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.04);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   font-family: var(--sans);
 }
 
@@ -65,7 +65,7 @@
   font-size: 19px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #0f172a;
+  color: #101828;
 }
 .report-surface .cust-band-sub {
   font-size: 12px;
@@ -128,7 +128,7 @@
 }
 .report-surface .sub-grid-head {
   padding-bottom: 7px;
-  border-bottom: 1.5px solid #cbd2db;
+  border-bottom: 1.5px solid #d8dfef;
   align-items: end;
 }
 .report-surface .sub-grid-hcell {
@@ -179,7 +179,7 @@
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.12);
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.12);
   text-transform: none;
   letter-spacing: 0;
   /* The date note that opens this is nowrap; the popover's prose is not. */
@@ -349,10 +349,10 @@
   white-space: nowrap;
 }
 .report-surface .status-pill.approved { background: #dcf3e8; color: #0a6b49; }
-.report-surface .status-pill.pending { background: var(--accent-bg); color: #1e40af; }
+.report-surface .status-pill.pending { background: var(--accent-bg); color: #1f5bc4; }
 .report-surface .status-pill.expired { background: #fee4e2; color: #b42318; }
 .report-surface .status-pill.not-approved { background: #fce7f3; color: #9d174d; }
-.report-surface .status-pill.no-longer-supported { background: #eef1f5; color: #475569; }
+.report-surface .status-pill.no-longer-supported { background: #f1f4fa; color: #5a6478; }
 
 /* Assessment sub-status — secondary, wraps rather than truncates */
 .report-surface .substatus {
@@ -402,7 +402,7 @@
 .report-surface .interest.ok::before { background: var(--opport); }
 .report-surface .interest.warn { color: #b42318; }
 .report-surface .interest.warn::before { background: var(--threat); }
-.report-surface .substatus.none .dot { background: #dfe3e8; }
+.report-surface .substatus.none .dot { background: #e4e8f2; }
 
 /* Introduces the derived flags under the signals box. */
 .report-surface .prospect-label {
@@ -485,11 +485,11 @@
 /* A failure under the plant-protection regulation. Slate rather than red or
    amber: it happened in a different regime, so it is a precedent to read
    rather than a warning about this approval. */
-.report-surface .alert-chip.ppp { background: #eef1f5; color: #475569; }
+.report-surface .alert-chip.ppp { background: #f1f4fa; color: #5a6478; }
 /* Parked: the "Expiry date postponed (WIP)" flag is carried in the data but
    not shown, pending a rule that can tell a postponement from a renewal.
    Kept so re-enabling is a one-line change in SubstanceRow. */
-.report-surface .alert-chip.postponed { background: var(--accent-bg); color: #1e40af; }
+.report-surface .alert-chip.postponed { background: var(--accent-bg); color: #1f5bc4; }
 .report-surface a.alert-chip.bpc:hover { filter: brightness(0.92); text-decoration: underline; }
 
 /* Signals box — how much evidence exists and what shape it has. One bar per
@@ -510,7 +510,7 @@
   width: 100%;
   height: 100%;
   padding: 6px 8px 7px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d8dfef;
   border-radius: 8px;
   background: #fff;
   font: inherit;
@@ -599,8 +599,8 @@
 /* Nothing researched yet — stated plainly rather than left blank. */
 .report-surface .sig-box.is-empty {
   border-style: dashed;
-  border-color: #e2e6ec;
-  background: #fafbfc;
+  border-color: #e4e8f2;
+  background: #fafbfe;
 }
 .report-surface .sig-box.is-empty .sig-box-head { color: var(--muted-2); font-weight: 600; }
 
@@ -609,7 +609,7 @@
   width: 5px;
   height: 15px;
   border-radius: 2px;
-  background: #cbd5e1;
+  background: #d8dfef;
 }
 /* Depth = strength. Weak readings stay pale so a run of them cannot look
    like a strong finding. */
@@ -643,7 +643,7 @@
   border: 1px solid #e2eaf8;
   border-radius: 12px;
   background: #fcfdff;
-  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.03);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
 }
 .report-surface .det-cols {
   display: grid;
@@ -906,7 +906,7 @@
   color: var(--body);
   white-space: nowrap;
 }
-.feed-page .fam-kind.union { border-color: #c3d9fb; background: var(--accent-bg); color: #1e40af; }
+.feed-page .fam-kind.union { border-color: #c3d9fb; background: var(--accent-bg); color: #1f5bc4; }
 
 .feed-page .auth-table { padding: 4px 16px 14px; }
 .feed-page .auth-row {
@@ -1053,10 +1053,10 @@ a.feed-back { text-decoration: none; }
 .feed-page .fp-badge.pt18 { background: var(--mixed-bg); color: #92400e; }
 .feed-page .fp-badge.pt19 { background: #d1fae5; color: #046c50; }
 .feed-page .fp-badge.approved { background: #dcf3e8; color: #0a6b49; }
-.feed-page .fp-badge.pending { background: var(--accent-bg); color: #1e40af; }
+.feed-page .fp-badge.pending { background: var(--accent-bg); color: #1f5bc4; }
 .feed-page .fp-badge.expired { background: #fee4e2; color: #b42318; }
 .feed-page .fp-badge.not-approved { background: #fce7f3; color: #9d174d; }
-.feed-page .fp-badge.no-longer-supported { background: #eef1f5; color: #475569; }
+.feed-page .fp-badge.no-longer-supported { background: #f1f4fa; color: #5a6478; }
 /* Chemical class — outlined, so it reads as a property of the substance
    rather than a status. */
 .feed-page .fp-badge.class {
@@ -1089,7 +1089,7 @@ a.feed-back { text-decoration: none; }
 /* A named group of tiles. The label is a quiet eyebrow rather than a heading:
    it has to separate four bands without pushing the record further down the
    page than the tiles themselves do. */
-/* Each band sits on its own ground: a shade below the #eceef1 canvas, so the
+/* Each band sits on its own ground: a shade below the #f6f8fd canvas, so the
    white tiles read as belonging to it and the group is legible as a group.
    No colour and no border — the tint alone does it, and the tiles keep their
    own edges.
@@ -1103,7 +1103,7 @@ a.feed-back { text-decoration: none; }
   /* Deepest at the left, gone by two-thirds of the way across — close to
      horizontal, with just enough tilt to carry the eye down the page. The band
      is a ground the tiles sit on rather than a box drawn around them. */
-  background: linear-gradient(113deg, #d3dbe8 0%, #e1e6ee 30%, #eceef1 66%);
+  background: linear-gradient(113deg, #d3dbe8 0%, #e1e6ee 30%, #f6f8fd 66%);
 }
 .feed-page .fp-band-label {
   display: block;
@@ -1215,7 +1215,7 @@ a.feed-back { text-decoration: none; }
   justify-content: center;
   padding: 44px 20px;
   overflow-y: auto;
-  background: rgba(11, 15, 26, 0.46);
+  background: rgba(16, 24, 40, 0.46);
   animation: fp-modal-in 0.14s ease-out;
 }
 .fp-modal {
@@ -1229,7 +1229,7 @@ a.feed-back { text-decoration: none; }
   max-height: calc(100vh - 88px);
   overflow-y: auto;
   padding: 26px 30px 30px;
-  box-shadow: 0 20px 60px rgba(11, 15, 26, 0.3);
+  box-shadow: 0 20px 60px rgba(16, 24, 40, 0.3);
 }
 .fp-modal-close {
   position: absolute;
@@ -1247,7 +1247,7 @@ a.feed-back { text-decoration: none; }
   background: #fff;
   color: var(--body);
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(11, 15, 26, 0.22);
+  box-shadow: 0 2px 10px rgba(16, 24, 40, 0.22);
   transition: background 0.12s, color 0.12s;
 }
 .fp-modal-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -1289,7 +1289,7 @@ a.feed-back { text-decoration: none; }
    see it was considered, not silently dropped. */
 .feed-page .fp-tile.is-muted {
   border-style: dashed;
-  background: #fafbfc;
+  background: #fafbfe;
 }
 .feed-page .fp-tile.is-muted .fp-tile-label,
 .feed-page .fp-tile.is-muted .fp-tile-value,
@@ -1365,7 +1365,7 @@ a.feed-back { text-decoration: none; }
   font-size: 11.5px;
   font-weight: 600;
   line-height: 1.35;
-  color: #1e40af;
+  color: #1f5bc4;
 }
 .feed-page .fp-tile-substate {
   display: block;
@@ -1498,9 +1498,9 @@ a.feed-back { text-decoration: none; }
   align-items: center;
   gap: 6px;
   padding: 22px 24px;
-  border: 1px dashed #e2e6ec;
+  border: 1px dashed #e4e8f2;
   border-radius: 12px;
-  background: #fafbfc;
+  background: #fafbfe;
   text-align: center;
 }
 .feed-page .feed-empty-title {
@@ -1689,7 +1689,7 @@ a.feed-back { text-decoration: none; }
    than the activity does. */
 .report-surface .pact-status.hazard.live { background: var(--mixed-bg); color: #7c4a0e; }
 .report-surface .pact-status.hazard.done { background: var(--grey-bg); color: var(--body); }
-.report-surface .pact-status.plain.live { background: var(--accent-bg); color: #1e40af; }
+.report-surface .pact-status.plain.live { background: var(--accent-bg); color: #1f5bc4; }
 .report-surface .pact-status.plain.done { background: var(--grey-bg); color: var(--body); }
 .report-surface .pact-dates {
   display: inline-flex;
@@ -1809,7 +1809,7 @@ a.feed-back { text-decoration: none; }
    the colour that would read as a finding. */
 .report-surface .flag-card.is-cleared {
   border-color: var(--line);
-  background: #fbfcfd;
+  background: #fafbfe;
 }
 .report-surface .flag-card.is-cleared .flag-label { color: var(--muted); }
 .report-surface .flag-card.is-cleared .flag-value { color: var(--ink-2); }
@@ -1942,7 +1942,7 @@ a.feed-back { text-decoration: none; }
   padding: 15px 17px 16px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #fbfcfd;
+  background: #fafbfe;
 }
 .report-surface .apr-cfs.is-stated {
   border-color: #f3e0a8;
@@ -2302,7 +2302,7 @@ a.feed-back { text-decoration: none; }
   padding: 9px 12px 10px;
   border-radius: 9px;
   background: var(--ink);
-  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.22);
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.22);
   font-family: var(--sans);
   text-align: left;
   white-space: normal;
@@ -2334,7 +2334,7 @@ a.feed-back { text-decoration: none; }
 .report-surface .meth-pop-note {
   font-size: 12px;
   line-height: 1.45;
-  color: #e5e7eb;
+  color: #e4e8f2;
 }
 
 /* ---------- Plant-protection panel ----------
@@ -2375,7 +2375,7 @@ a.feed-back { text-decoration: none; }
   padding: 2px 7px;
   border-radius: 999px;
   background: var(--accent-bg);
-  color: #1e40af;
+  color: #1f5bc4;
   font-family: var(--mono);
   font-size: 8.5px;
   font-weight: 700;
@@ -2435,11 +2435,11 @@ a.feed-back { text-decoration: none; }
   max-width: 100%;
   margin: 0 0 7px;
   padding: 3px 8px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d8dfef;
   border-radius: 4px;
-  background: #f1f5f9;
+  background: #f1f4fa;
   font-family: var(--sans);
-  color: #334155;
+  color: #2a3242;
   cursor: pointer;
   text-align: left;
   transition: border-color 0.12s;
@@ -2522,7 +2522,7 @@ a.feed-back { text-decoration: none; }
 .feed-page .sig-chip.is-on {
   border-color: var(--accent);
   background: var(--accent-bg);
-  color: #1e40af;
+  color: #1f5bc4;
   font-weight: 600;
 }
 .feed-page .sig-chip-n {
@@ -2531,7 +2531,7 @@ a.feed-back { text-decoration: none; }
   font-weight: 600;
   color: var(--muted-2);
 }
-.feed-page .sig-chip.is-on .sig-chip-n { color: #1e40af; }
+.feed-page .sig-chip.is-on .sig-chip-n { color: #1f5bc4; }
 /* The category's main publishers, after the count — small and grey, so the
    label still leads. */
 /* The chip's detail — what it covers, its main sources — in an overlay. */
@@ -2548,7 +2548,7 @@ a.feed-back { text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.13);
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.13);
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 400;
@@ -2598,7 +2598,7 @@ a.feed-back { text-decoration: none; }
   .feed-page .sig-filter-band-label { width: 100%; }
 }
 .feed-page .sig-chip-icon { width: 13px; height: 13px; flex-shrink: 0; color: var(--muted); }
-.feed-page .sig-chip.is-on .sig-chip-icon { color: #1e40af; }
+.feed-page .sig-chip.is-on .sig-chip-icon { color: #1f5bc4; }
 .feed-page .sig-chip.band-3:not(.is-on) { border-style: dashed; color: var(--muted); }
 
 /* "12 of 307" beside a filtered count. */
@@ -2635,7 +2635,7 @@ a.feed-back { text-decoration: none; }
   margin-top: 36px;
   padding-bottom: 9px;
   margin-bottom: 14px;
-  border-bottom: 1.5px solid #cbd2db;
+  border-bottom: 1.5px solid #d8dfef;
 }
 .feed-section-title {
   font-family: var(--mono);
@@ -2662,7 +2662,7 @@ a.feed-back { text-decoration: none; }
   border-left: 3px solid var(--muted-2);
   border-radius: 10px;
   padding: 20px 24px 22px;
-  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.04);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
 .feed-card.tone-negative { border-left-color: var(--threat); }
 /* The card a Latest signals row opened onto, marked for a moment. */
@@ -2901,7 +2901,7 @@ a.feed-back { text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.13);
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.13);
   /* The badge is nowrap and uppercase; the prose is neither. */
   font-family: var(--sans);
   font-size: 12.5px;
@@ -3024,8 +3024,8 @@ a.feed-back { text-decoration: none; }
    a tinted fill, a dashed edge, the sources run inline — but the text is set
    in the same ink as every other record, so it reads as easily. */
 .feed-card.is-ngo {
-  background: #fafbfc;
-  border: 1px dashed #dfe3e8;
+  background: #fafbfe;
+  border: 1px dashed #e4e8f2;
   border-left: 3px solid #e3e6ea;
   box-shadow: none;
   padding: 11px 18px 12px;
@@ -3072,7 +3072,7 @@ a.feed-back { text-decoration: none; }
   opacity: 0.6;
 }
 .ngo-chip.is-why:hover,
-.ngo-chip.is-why:focus-visible { color: var(--muted); border-color: #d1d5db; }
+.ngo-chip.is-why:focus-visible { color: var(--muted); border-color: #d8dfef; }
 .ngo-org {
   font-size: 11px;
   color: var(--body);
@@ -3168,7 +3168,7 @@ a.feed-back { text-decoration: none; }
   line-height: 1.4;
 }
 .ngo-scope.is-class { background: #f5f3ff; border: 1px solid #ddd6fe; color: #4c1d95; }
-.ngo-scope.is-horizontal { background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; }
+.ngo-scope.is-horizontal { background: #f1f4fa; border: 1px solid #d8dfef; color: #2a3242; }
 .ngo-scope-kind {
   font-family: var(--mono);
   font-size: 9px;
@@ -3243,7 +3243,7 @@ a.feed-back { text-decoration: none; }
   padding: 0;
   border: none;
   background: none;
-  color: #cbd5e1;
+  color: #d8dfef;
   cursor: pointer;
   transition: color 0.12s, transform 0.12s;
 }
@@ -3297,19 +3297,19 @@ a.feed-back { text-decoration: none; }
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  color: #2a313d;
+  color: #101828;
 }
 .stat-note {
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 9px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #8b93a1;
+  color: #98a1b2;
 }
 .stat-tile.good .stat-label svg { color: #0a6b49; }
 .stat-tile.warning .stat-label svg { color: #b45309; }
-.stat-tile.accent .stat-label svg { color: #2563eb; }
-.stat-tile.neutral .stat-label svg { color: #6b7280; }
+.stat-tile.accent .stat-label svg { color: #307ef5; }
+.stat-tile.neutral .stat-label svg { color: #5a6478; }
 
 /* ---------- Narrow screens: the grid stops pretending to be a table and the
    date / status cells stack under the substance name. ---------- */
@@ -3348,7 +3348,7 @@ a.feed-back { text-decoration: none; }
   margin-left: 8px;
   padding: 2px;
   border-radius: 8px;
-  background: #f3f4f6;
+  background: #f1f4fa;
 }
 .app-tab {
   display: inline-flex;
@@ -3357,25 +3357,25 @@ a.feed-back { text-decoration: none; }
   height: 24px;
   padding: 0 10px;
   border-radius: 6px;
-  font-family: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
+  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
   font-size: 12.5px;
   font-weight: 600;
-  color: #6b7280;
+  color: #5a6478;
   white-space: nowrap;
   cursor: pointer;
 }
-.app-tab:hover { color: #1f2937; }
+.app-tab:hover { color: #2a3242; }
 .app-tab.is-on {
   background: #fff;
-  color: #0b0f1a;
-  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.08);
+  color: #101828;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
 }
-.app-tab svg { width: 14px; height: 14px; color: #2563eb; }
+.app-tab svg { width: 14px; height: 14px; color: #307ef5; }
 .app-tab-badge {
   padding: 1px 6px;
   border-radius: 999px;
-  background: #2563eb;
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  background: #307ef5;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 10px;
   font-weight: 600;
   color: #fff;
@@ -3383,16 +3383,16 @@ a.feed-back { text-decoration: none; }
 
 /* ---------- Latest signals (home page) ---------- */
 .latest {
-  --line: #e5e7eb;
-  --muted: #6b7280;
-  --muted-2: #9ca3af;
+  --line: #e4e8f2;
+  --muted: #5a6478;
+  --muted-2: #98a1b2;
   background: #fff;
   border: 1px solid var(--line);
-  border-top: 3px solid #2563eb;
+  border-top: 3px solid #307ef5;
   border-radius: 14px;
   padding: 16px 20px 10px;
-  box-shadow: 0 1px 2px rgba(11, 15, 26, 0.04);
-  font-family: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
   /* Keeps the fade below inside the rounded corners. */
   overflow: hidden;
 }
@@ -3410,22 +3410,22 @@ a.feed-back { text-decoration: none; }
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: #dbeafe;
-  color: #2563eb;
+  background: #e8eefd;
+  color: #307ef5;
 }
 .latest-icon svg { width: 16px; height: 16px; }
 .latest-title {
   font-size: 17px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #0b0f1a;
+  color: #101828;
 }
 .latest-new {
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 11px;
   color: var(--muted);
 }
-.latest-new.has-new b { color: #2563eb; }
+.latest-new.has-new b { color: #307ef5; }
 .latest-all {
   display: inline-flex;
   align-items: center;
@@ -3433,16 +3433,16 @@ a.feed-back { text-decoration: none; }
   margin-left: auto;
   padding: 6px 12px;
   border-radius: 8px;
-  background: #2563eb;
+  background: #307ef5;
   font-size: 12.5px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
 }
-.latest-all:hover { background: #1d4ed8; }
+.latest-all:hover { background: #2a6fe0; }
 
 .latest-list { list-style: none; margin: 0; padding: 0; }
-.latest-list li + li { border-top: 1px solid #f3f4f6; }
+.latest-list li + li { border-top: 1px solid #f1f4fa; }
 /* The list runs on past what is shown: the last row fades out to the card's
    bottom edge, from just above it. Clicks pass through to the row. */
 .latest-list:not(.exp-list) li:last-child { position: relative; }
@@ -3468,23 +3468,23 @@ a.feed-back { text-decoration: none; }
   cursor: pointer;
 }
 .latest-row:hover { background: #f7faff; }
-.latest-row:hover .latest-row-title { color: #2563eb; }
-.latest-tone { width: 7px; height: 7px; border-radius: 999px; background: #d1d5db; }
+.latest-row:hover .latest-row-title { color: #307ef5; }
+.latest-tone { width: 7px; height: 7px; border-radius: 999px; background: #d8dfef; }
 .latest-tone.tone-negative { background: #d94f50; }
 .latest-tone.tone-positive { background: #1ab38a; }
-.latest-tone.tone-none { background: transparent; border: 1.5px solid #d1d5db; }
+.latest-tone.tone-none { background: transparent; border: 1.5px solid #d8dfef; }
 .latest-date {
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 10.5px;
   font-weight: 600;
-  color: #1f2937;
+  color: #2a3242;
   white-space: nowrap;
 }
 .latest-sub { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
 .latest-sub .pt-tag {
   padding: 2px 5px;
   border-radius: 3px;
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -3495,20 +3495,20 @@ a.feed-back { text-decoration: none; }
 .latest-sub .scope-tag {
   padding: 2px 5px;
   border-radius: 3px;
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 .latest-sub .scope-tag.is-class { background: #ede9fe; color: #5b21b6; }
-.latest-sub .scope-tag.is-horizontal { background: #e2e8f0; color: #334155; }
+.latest-sub .scope-tag.is-horizontal { background: #e4e8f2; color: #2a3242; }
 .latest-sub-name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12px;
   font-weight: 500;
-  color: #4b5563;
+  color: #475066;
 }
 /* The update itself is what the row is for, so it carries the weight. */
 .latest-row-title {
@@ -3517,7 +3517,7 @@ a.feed-back { text-decoration: none; }
   white-space: nowrap;
   font-size: 12.5px;
   font-weight: 550;
-  color: #0b0f1a;
+  color: #101828;
 }
 /* Who the record comes from — ECHA, EUR-Lex, an NGO — small, at the end. */
 .latest-src {
@@ -3525,7 +3525,7 @@ a.feed-back { text-decoration: none; }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
   font-size: 10px;
   color: var(--muted-2);
   text-align: right;
@@ -3571,7 +3571,7 @@ a.feed-back { text-decoration: none; }
   gap: 8px;
   margin: 0 0 6px;
   padding: 0 6px 8px;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f1f4fa;
 }
 .report-surface .exp-group-head .cust-band-icon { width: 22px; height: 22px; border-radius: 6px; }
 .report-surface .exp-group-head .cust-band-icon svg { width: 13px; height: 13px; }
@@ -3579,7 +3579,7 @@ a.feed-back { text-decoration: none; }
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 700;
-  color: #1f2937;
+  color: #2a3242;
 }
 .exp-group-name { font-size: 12px; color: var(--muted); }
 .exp-group-count {
@@ -3598,8 +3598,8 @@ a.feed-back { text-decoration: none; }
   cursor: pointer;
 }
 .exp-row:hover { background: #f7faff; }
-.exp-row:hover .exp-name { color: #2563eb; }
-.exp-row:focus-visible { outline: 2px solid #2563eb; outline-offset: 1px; }
+.exp-row:hover .exp-name { color: #307ef5; }
+.exp-row:focus-visible { outline: 2px solid #307ef5; outline-offset: 1px; }
 .exp-name {
   /* Up to two lines, then an ellipsis — long names stay readable without
      making a row three lines tall. */
@@ -3610,7 +3610,7 @@ a.feed-back { text-decoration: none; }
   line-height: 1.3;
   font-size: 12.5px;
   font-weight: 600;
-  color: #0b0f1a;
+  color: #101828;
 }
 .exp-end { display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap; }
 .report-surface .exp-end .date-val { display: inline; font-size: 11px; }
@@ -3672,4 +3672,122 @@ a.feed-back { text-decoration: none; }
 .feed-page .cls-member-n { font-family: var(--mono); font-size: 9.5px; color: var(--muted-2); }
 @media (max-width: 640px) {
   .feed-page .cls-members { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   Insightive brand layer — the look of insightive-ai.com and the
+   biocides outreach deck: Sora headings, primary #307ef5, pill
+   controls, soft elevated cards on a pale ground.
+   ============================================================ */
+.report-surface,
+.feed-page,
+.fp-modal-back,
+.latest {
+  --head: var(--font-head), 'Sora', var(--font-body), system-ui, sans-serif;
+}
+
+/* Headings in Sora, tightly tracked. */
+.report-surface .cust-band-label,
+.feed-page-title,
+.feed-page .fp-band-label,
+.feed-card-title,
+.latest-title,
+.stat-value,
+.feed-page .fp-tile-value,
+.feed-outlook-value {
+  font-family: var(--font-head), 'Sora', system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+.latest-title { font-size: 18px; font-weight: 700; }
+.stat-value { font-weight: 700; }
+
+/* Cards: a hairline border and the brand's soft, deep shadow. */
+.report-surface,
+.latest,
+.stat-tile {
+  border-color: #e4e8f2;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 14px 36px -12px rgba(16, 24, 40, 0.12);
+}
+.report-surface { border-radius: 16px; }
+.latest { border-radius: 16px; border-top-width: 1px; border-top-color: #e4e8f2; position: relative; }
+/* The coloured top edge as a gradient strip rather than a flat border. */
+.latest::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3a7bd5, #5ea8ee 55%, #8f8ce6);
+}
+.latest.expiring::before { background: linear-gradient(90deg, #d97706, #f6a94c 60%, #f9c99f); }
+
+/* Section icons: round, tinted, like the deck's module icons. */
+.latest-icon,
+.report-surface .cust-band-icon {
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Primary actions: pill buttons with the brand glow. */
+.latest-all {
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-family: var(--font-head), 'Sora', system-ui, sans-serif;
+  font-size: 12.5px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(100deg, #4b90f7, #307ef5);
+  box-shadow: 0 8px 20px -6px rgba(48, 126, 245, 0.45);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.latest-all:hover {
+  background: linear-gradient(100deg, #3f86f5, #2a6fe0);
+  transform: translateY(-1px);
+}
+.latest.expiring .latest-all {
+  background: linear-gradient(100deg, #c96a0c, #b45309);
+  box-shadow: 0 8px 20px -6px rgba(180, 83, 9, 0.4);
+}
+.latest.expiring .latest-all:hover { background: #92400e; }
+
+.report-surface .cat-expand-all {
+  border-radius: 999px;
+  padding: 5px 11px;
+  background: #fff;
+  border-color: #d8dfef;
+}
+.report-surface .cat-expand-all:hover { background: #f3f6fe; border-color: #c7d3f5; }
+
+/* App tabs: a pill track, the active view filled in primary. */
+.app-tabs {
+  gap: 2px;
+  margin-left: 6px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e4e8f2;
+}
+.app-tab {
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-family: var(--font-head), 'Sora', system-ui, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #5a6478;
+  transition: background 0.15s, color 0.15s;
+}
+.app-tab:hover { color: #101828; background: #f3f6fe; }
+.app-tab.is-on {
+  background: #307ef5;
+  color: #fff;
+  box-shadow: 0 6px 16px -6px rgba(48, 126, 245, 0.6);
+}
+.app-tab.is-on svg { color: #fff; }
+.app-tab.is-on .app-tab-badge { background: #fff; color: #307ef5; }
+
+/* Stat tiles: solid white cards rather than dashed outlines. */
+.stat-tile { background: #fff; border-style: solid; border-radius: 14px; }
+@media (max-width: 640px) {
+  .app-tabs { margin-left: 0; }
+  .app-tab { padding: 0 9px; }
 }

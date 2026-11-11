@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter_Tight, JetBrains_Mono } from 'next/font/google'
+import { IBM_Plex_Mono, Inter, Sora } from 'next/font/google'
 import './globals.css'
 import './report.css'
 
-const interTight = Inter_Tight({
+// The Insightive type system, as on insightive-ai.com: Sora for headings,
+// Inter for body text, IBM Plex Mono for labels, dates and codes.
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-inter-tight',
+  variable: '--font-body',
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-head',
+})
+
+const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-mono',
@@ -23,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${jetbrainsMono.variable} font-sans min-h-screen`}>
+      <body className={`${inter.variable} ${sora.variable} ${plexMono.variable} font-sans min-h-screen`}>
         {children}
       </body>
     </html>
