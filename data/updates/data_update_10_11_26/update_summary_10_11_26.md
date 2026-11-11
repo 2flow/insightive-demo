@@ -66,6 +66,34 @@ showed the act. That stopped being true when the approval record moved to the
 removed, so the renewal stays on the timeline. History check after the fix:
 592 records, none lost.
 
+## Converter fix: Article 95 suppliers on shared identifiers (tools/convert_export.py)
+
+Metofluthrin (45-PT19, no longer supported) showed a current Article 95
+supplier. It shares CAS 240494-71-7 with epsilon-metofluthrin (2463), neither
+has an EC number, and the converter attached the supplier rows to both. The
+Article 95 rows name the epsilon isomer ("…(1R,3R)…(Z)-prop-1-enyl…").
+
+Rule now: where an EC/CAS matches several substances and no name decides, the
+suppliers go to the candidates still Approved or Pending. The Article 95 list
+carries only substances approved or under assessment, and ECHA removes one
+that is no longer supported, not approved or expired. Inclusion reason could
+not decide: ECHA marks both metofluthrin entries as new active substances, and
+both Margosa extracts as review-programme substances. The same matching serves
+the renewal-interest list.
+
+| Substance | Before | After |
+| --- | --- | --- |
+| Metofluthrin 45-PT19 | Sumitomo | none |
+| epsilon-Metofluthrin 2463-PT19 | Sumitomo | Sumitomo (unchanged) |
+| Margosa extract 43-PT18 (expired) | Terra Nostra, ARMOSA TECH, LIMARU | none |
+| Margosa extract 1469-PT18 (pending) | Terra Nostra, ARMOSA TECH, LIMARU | unchanged |
+
+Four supplier signals that had been attached to the wrong substance were
+removed from the ledger on purpose (`check_history.mjs --accept`): Sumitomo on
+45-PT19 (2023-04-21), and Terra Nostra (2014-09-24), ARMOSA TECH SA
+(2026-05-28) and LIMARU NV (2026-06-12) on 43-PT18. The same signals remain on
+2463-PT19 and 1469-PT18. History check: 588 records, none lost otherwise.
+
 # Part 2: NGO reports
 
 The NGO reports are not kept in this folder: each combined file holds the

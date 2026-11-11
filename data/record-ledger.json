@@ -1,6 +1,6 @@
 {
  "note": "Every signal record the app has shown. Written by tools/check_history.mjs — see README \"Keeping signal history\".",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "records": [
   {
    "substance": "*",
@@ -2889,24 +2889,6 @@
    "title": "Approval expired"
   },
   {
-   "substance": "43-PT18",
-   "kind": "supplier",
-   "date": "2014-09-24",
-   "title": "Terra Nostra entered the Article 95 supplier list"
-  },
-  {
-   "substance": "43-PT18",
-   "kind": "supplier",
-   "date": "2026-05-28",
-   "title": "ARMOSA TECH SA entered the Article 95 supplier list"
-  },
-  {
-   "substance": "43-PT18",
-   "kind": "supplier",
-   "date": "2026-06-12",
-   "title": "LIMARU NV entered the Article 95 supplier list"
-  },
-  {
    "substance": "44-PT19",
    "kind": "approval",
    "date": "2014-05-01",
@@ -2941,12 +2923,6 @@
    "kind": "ngo",
    "date": "2026-11-05",
    "title": "Beyond Pesticides highlights study linking prenatal pyrethroid exposure to weaker newborn immune function, citing fewer and dying lymphocytes in cord blood"
-  },
-  {
-   "substance": "45-PT19",
-   "kind": "supplier",
-   "date": "2023-04-21",
-   "title": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK)) entered the Article 95 supplier list"
   },
   {
    "substance": "46-PT18",

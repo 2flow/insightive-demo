@@ -3,8 +3,8 @@
     "source": "ECHA — Article 95 list of approved active substance suppliers",
     "sourceFile": "article_95_list_pt18_19_simplified_07_11_26.xlsx",
     "listDate": "2026-11-07",
-    "count": 58,
-    "supplierCount": 116,
+    "count": 56,
+    "supplierCount": 112,
     "unmatchedGroups": 0
   },
   "bySubstance": {
@@ -522,32 +522,6 @@
         "listedSupplier": "2014-09-24"
       }
     ],
-    "43-PT18": [
-      {
-        "entity": "ARMOSA TECH SA",
-        "country": "Belgium",
-        "type": "Substance & Product Supplier",
-        "reason": "Art.95(5) submission",
-        "listedAsPt": "2014-09-24",
-        "listedSupplier": "2026-05-28"
-      },
-      {
-        "entity": "LIMARU NV",
-        "country": "Belgium",
-        "type": "Substance & Product Supplier",
-        "reason": "Art.95(5) submission",
-        "listedAsPt": "2014-09-24",
-        "listedSupplier": "2026-06-12"
-      },
-      {
-        "entity": "Terra Nostra",
-        "country": "Italy",
-        "type": "Substance Supplier",
-        "reason": "RP Participant",
-        "listedAsPt": "2014-09-24",
-        "listedSupplier": "2014-09-24"
-      }
-    ],
     "1235-PT18": [
       {
         "entity": "NISSO CHEMICAL EUROPE GmbH",
@@ -777,16 +751,6 @@
       }
     ],
     "2463-PT19": [
-      {
-        "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
-        "country": "Spain",
-        "type": "Substance Supplier",
-        "reason": "AS not in the RP",
-        "listedAsPt": "2023-04-21",
-        "listedSupplier": "2023-04-21"
-      }
-    ],
-    "45-PT19": [
       {
         "entity": "Sumitomo Chemical UK Sucursal en España (Acting for Sumitomo Chemical (UK) Ltd(UK))",
         "country": "Spain",

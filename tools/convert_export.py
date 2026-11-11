@@ -531,8 +531,13 @@ def resolve_substances(group: dict, index: dict) -> list[str]:
     one — the two Bacillus thuringiensis subspecies stay separate.
 
     Identifiers are the fallback. Where an EC/CAS covers several substances and
-    no name matched, the suppliers attach to all of them: Article 95 lists
-    suppliers per EC/CAS + PT and genuinely does not distinguish further.
+    no name matched, status decides: the Article 95 list carries only substances
+    approved or still under assessment, and ECHA takes a substance off once it
+    is no longer supported, not approved or expired (clothianidin left the
+    07.11.26 list when its approval ran out). So the suppliers go to the
+    candidates still Approved or Pending. Metofluthrin (no longer supported)
+    and epsilon-metofluthrin share CAS 240494-71-7; the listing is epsilon's.
+    Only where status cannot tell them apart do the suppliers attach to all.
     """
     pt = group["pt"]
     name = group["name"]
@@ -555,6 +560,16 @@ def resolve_substances(group: dict, index: dict) -> list[str]:
         if not hits:
             continue
         if len(hits) > 1:
+            live = [h for h in hits if index["status"].get(h) in LISTABLE_STATUSES]
+            if 0 < len(live) < len(hits):
+                dropped = [h for h in hits if h not in live]
+                print(
+                    f'  ~ Article 95: "{name[:50]}" ({pt}) shares {field.upper()} {group[field]}'
+                    f" with {len(hits)} substances — listed against {', '.join(live)}, the one(s)"
+                    f" still approved or under assessment, not {', '.join(dropped)}",
+                    file=sys.stderr,
+                )
+                return live
             print(
                 f'  ~ Article 95: "{name[:50]}" ({pt}) matched {len(hits)} substances'
                 f" sharing {field.upper()} {group[field]} — suppliers shown on each",
@@ -565,8 +580,13 @@ def resolve_substances(group: dict, index: dict) -> list[str]:
     return []
 
 
+# Statuses a substance can hold and still be on the Article 95 list.
+LISTABLE_STATUSES = {"Approved", "Pending"}
+
+
 def build_index(substances: dict) -> dict:
     index = {k: collections.defaultdict(list) for k in ("ec", "cas", "name", "stripped")}
+    index["status"] = {s["id"]: s["approvalStatus"] for s in substances["substances"]}
     for s in substances["substances"]:
         if s["ec"]:
             index["ec"][(norm_id(s["ec"]), s["pt"])].append(s["id"])
